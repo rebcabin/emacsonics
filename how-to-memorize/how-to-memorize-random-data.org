@@ -117,9 +117,9 @@
 # #+STARTUP: latexpreview inlineimages showall
 # #+STARTUP: showall
 
-#+TITLE: How to Memorize Random Data
+#+TITLE: How to Memorize Random Data -- Revision 2
 #+AUTHOR: Brian Beckman
-#+DATE: 7 May 2022
+#+DATE: 9 May 2022
 
 * COMMENT PRELIMINARIES
 
@@ -160,26 +160,33 @@ get queried about safety on all the other code block in this document.
 
 * Introduction
 
-** Hallucinations
+There is some old stuff and some new stuff in here. Old stuff I
+have been using a long time. New stuff I'm experimenting with.
 
-Most of my methods make mental cartoon movies or pseudo-poems from
-picture words. Others (more talented than I) can make up rhyming
-or musical lyrics on-the-fly!
+** Pegs and Hallucinations
+
+Most of my methods make mental cartoon movies or pseudo-poems ---
+hallucinations -- from picture words. Others (more talented than
+I) can make up rhyming or musical lyrics on-the-fly!
 
 My picture words are phonetically on or near my basic, immutable,
 two-digit peg list (Table 1). Thanks to my Dad, to Bruno and Lotte
-Furst, and to Allan Krill for this list and all others in this
+Furst, and to Allan Krill for that list and all others in this
 document.
+
+I blogged out the basics of the peg method here:
+
+https://rebcabin.wordpress.com/2010/11/21/memory-pegs/
 
 ** Sound-Alikes
 
-Finding a word phonetically near another one is an act of
-"computing" or "calculating" a picture word. For example, the peg
-for 37 is "mike," and I picture a microphone in my hand and feel
-the electrical tingling due to poor grounding in my hand (we've
-all experienced that on stage, haven't we?). Adding some
-synaesthesia or emotion to pegs helps my memory. Others may not
-find that helpful. Do what is best for you!
+Finding a word phonetically near another one is "computing" or
+"calculating" a picture word. For example, the peg for 37 is
+"mike," and I picture a microphone in my hand and feel the
+electrical tingling due to poor grounding in my hand (we've all
+experienced that on stage, haven't we?). Adding some synaesthesia
+or emotion to pegs helps my memory. Others may not find that
+helpful. Do what is best for you!
 
 To calculate some nearby picture words, I get
 
@@ -207,7 +214,7 @@ https://www.getcreditcardnumbers.com
   4716 5752 8659 3825
 #+end_src
 
-From our peg list, we get
+From the peg list, we get
 
 #+begin_example
 rack tissue
@@ -216,6 +223,7 @@ fish lap
 muff rail
 #+end_example
 
+\newpage
 There isn't an obvious narrative, here, but we quickly get better
 by starting with "fish" (picturesque and smelly) and working
 backwards:
@@ -225,15 +233,15 @@ backwards:
 - fish LEAP :: The FISH are LEAPing today, so we
 - MOVE rail :: MOVE the REEL slowly (on the fishing rod).
 
-Krill calls these hallucinations, "phantasmagorishes," a word
-that, itself, encodes 5210 3746, a near pangram of the system,
-missing only the digits 1 and 9.
+Krill calls such hallucinations, "phantasmagorishes," a word that,
+itself, encodes 5210 3746, a near pangram of the system, missing
+only the digits 1 and 9.
 
 ** Building and Revising Chains
 
 The most time-consuming aspect of building hallucinations is to
 chain the associations so that ideas flow across the movie or
-pseudo-poem easily. It's bad to have an idea-chain the breaks
+pseudo-poem easily. It's bad to have an idea-chain that breaks
 part-way-through, causing a pause or even failure in recall. A
 break or even a soft link in a chain is cause for starting over
 and building a new chain.
@@ -243,19 +251,27 @@ and building a new chain.
 It's critical that the peg list be permanent. Pick some pegs that
 work for you, then NEVER CHANGE THEM. Their recall must be
 instantaneous, so that whenever you see or think of a number, you
-recall the peg without effort. I changed a few pegs once for
-teaching purposes because my originals got dated and I regretted
-it. The ones I learned first keep popping up and slowing me down.
+recall the peg without effort.
+
+I regret changing a few pegs once for teaching purposes because my
+originals got dated. For example, 3 for "May" became "me" because
+no one today knows what a May-pole is. Every time I see 3,
+however, I picture a May-pole instead of myself in a mirror
+because I learned May-pole first (from Furst and from my Dad). The
+switch slows me down even though I made it long, long ago.
+
+*DON'T CHANGE PEGS AFTER LOCKING THEM IN*
 
 \clearpage
 * Basic Peg Lists
 <<basic-pegs>>
 
-My basic extended 2-digit peg list appears in Table 1, and the 1-digit
-list with rules for calculating sound-alikes appears in Table 2.
-Vowels and soft consonants like h, w, and y are free when
-calculating new words off the list as you can see in Section
-[[all-pegs]].
+My basic 2-digit peg list appears in Table 1, extended from 99 to
+127 for ASCII and with nine extra pegs for court cards (Section
+[[card-pack]]). The 1-digit list with rules for calculating
+sound-alikes appears in Table 2. Vowels and soft consonants like
+h, w, and y are free when calculating new words off the list as
+you can see in Section [[all-pegs]].
 
 #+ATTR_LATEX: :caption Table 1: Basic Extended 2-digit Pegs
 |-----+----------+-----+--------+-----+-----------+-----+------------|
@@ -267,7 +283,7 @@ calculating new words off the list as you can see in Section
 |  05 | sail     |  15 | tail   |  25 | nail      |  35 | mail       |
 |  06 | sash     |  16 | tissue |  26 | niche     |  36 | match      |
 |  07 | sack     |  17 | tack   |  27 | neck      |  37 | mike       |
-|  08 | safety   |  18 | taffy  |  28 | navy      |  38 | muff       |
+|  08 | safe     |  18 | taffy  |  28 | navy      |  38 | muff       |
 |  09 | sap      |  19 | tap    |  29 | nap       |  39 | map        |
 |-----+----------+-----+--------+-----+-----------+-----+------------|
 |  40 | race     |  50 | lace   |  60 | chess     |  70 | case       |
@@ -322,6 +338,7 @@ calculating new words off the list as you can see in Section
 * Memorizing GUIDs
 
 ** Method 1
+<<method-1>>
 
 One way to encode hex is to map A-F to 010-015:
 
@@ -360,7 +377,7 @@ Consider this random GUID generated by Java:
 
 A picturesque pseudo-poem about wildlife for this one is easiest.
 
-#+begin_quote
+#+begin_verse
 OWL.5 of WISDOM.D and SASSY.00 STARING.E eyes,
 HAWK.7, look SIDEWAYS.A left and SIDEWAYS.A right.
 STAND.C TALL.15 SUDDEN.C HARRIER.44
@@ -369,12 +386,13 @@ and ASSIDUOUS.A OWL.5!
 PUMA.93, STEALthy.F CITIZEN.A, SEDUCE.A the HARE.4,
 STAMP.D! STRIKE.E! SHAKE.67, LASSIE.50!
 Don't HESITATE.B. ENOUGH.28, CITIZEN.!
-#+end_quote
+#+end_verse
 
 Use a little repetition to memorize it. Do it a few times
 and check yourself tomorrow. I easily remembered it overnight.
 
 ** Method 2
+<<method-2>>
 
 Another technique for hex is to exclusively use the single-word
 pegs TOES-TISSUE $[10..15]$ for the hexits $[A..F]$. For decimal
@@ -413,11 +431,12 @@ me SASS [00]. Pulls me over on the TARmac [E] and demands my KEY
 on my TOES [A]!"
 #+end_quote
 
-I prefer method 1. It extends to higher radices, as we see in
-Section [[public-keys]].
+I prefer method 1. It produces more compact hallucinations and It
+extends to higher radices, as we see in Section [[public-keys]].
 
 \clearpage
 * SHA hexes
+<<sha-hexes>>
 
 For git, memorizing thefirst 8 hexits are almost always enough,
 but let's do the whole thing for an athletic exercise, using the
@@ -433,28 +452,28 @@ a638 1b63 d532 69ba 418e
 
 Using Method 1, ignore common grammatical suffixes like "-ing" and
 "-ful;" prepositions like "to" and "of;" pronouns and relative
-adjective,words like "the," "this," and "that;" forms of the verb
-"to be," and other obvious connector words. Let's take a look at
-a statue in the artist's studio:
+adjective,words like "this," and "that;" forms of the verb "to
+be," and other obvious connector words like "the" and "a."
 
-#+begin_quote
+Let's take a look at a statue in the artist's studio:
+
+#+begin_verse
 SIDEWAYS.A CHAMFER.638?
 the TOE.1 of this STATUE.B is a SHAM.63
 SODIUM.D is not ALUMINUM.532!
 its SHAPE.69 in the STUDIO.B is SIDEWAYS.A
-ARTFUL.438 HISTORY.E
+ARTFUL.418 HISTORY.E
 
 LAY.5 a STOOL.F by the STATUE'S.B TOE.1
 the STATUE.B is STAMPED.D "ALICE".50
 MAYBE.39 ALICE.5 VOUCHES.860 for the STAMP.D
-the STAMP.D of a JACOBIAN.679
-#+end_quote
+the STAMP.D of a JACOBIAN.679?
+#+end_verse
 
-Not bad for 15 minutes' time to construct it, using the tables as
-a crutch.
-
-It will take more time to memorize the hallucination above, but
-not much. Memorize and check yourself tomorrow.
+Not bad for 15 minutes' time, using the tables as a crutch. With
+practice, we'll need the tables less and less. It will take more
+time to memorize it, but not much. Memorize and check yourself
+tomorrow.
 
 \clearpage
 * Public Keys
@@ -469,10 +488,10 @@ IFi4 CpLS hSK/ uUux BxM3 6WwK
 C6RD 1/Qn tXQg BV3m pUZq
 #+end_example
 
-** Two Methods, Again
+** Methods 1 and 2, Again
 
-This key is in radix 64. A method-1 encoding of "Rixits,"
-reserving 010 through 064, follows:
+This key is in radix 64 (R64). A method-1 ([[method-1]]) encoding of
+"Rixits," reserving 010 through 064, follows:
 
 #+begin_example
 0       8 010   016     024     032     040     048     056    063
@@ -480,53 +499,68 @@ v       v v     v       v       v       v       v       v      v
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/
 #+end_example
 
-Problems with this encoding:
+*** Advantages of this encoding:
 
-- Problem 1: off-by-one :: you may notice that 24 is "O," but you may
-  remember that "O" is also the 15-th capital glyph of the
-  alphabet (see Table 3). Adding 10 for the first ten digits of
-  the encoding, $15+A = 15+10 = 25$", not 24. This is an
-  opportunity for error at speed. But we can deal with it.
+- There are so many picturesque words in English that begin with S
+  that we have a deep well to draw from.
 
-  To encode O, remembered as the 15-th letter, first subtract 1 to
-  correct the off-by-one error, getting 14. Then add 10 to account
-  for the leading ten digits $0..9$ of the encoding, getting 24.
-  Prepend the leading $s=0$ for the radix to get $024$, say
-  "sunrise."
+- The code for a letter is its numerical value in R64: $A=10,
+  O=24$, etc.
 
-  Encode, subtract 1, add 10, i.e., add 9.
+  - Disadvantage of this advantage: we're working on memory, not
+    on evaluation, so maybe this feature isn't so interesting.
 
-  */Encode, enhance nine/*
+*** Problems with this encoding:
 
-  $O\rightarrow{}15\rightarrow{}24\rightarrow{}024\rightarrow{}\textrm{sunrise}$.
+**** Off-By-One Mental Arithmetic
 
-  To decode $\textrm{sunrise}=024$, remove the leading $s=0$ to
-  get 24. Subtract 10 to get 14. Add 1 to get 15, the 15-th
-  capital letter.
+Notice that 24 is "O," but you may remember that "O" is also the
+15-th capital glyph of the alphabet (see Table 3). Adding 10 for
+the first ten digits of the encoding, $15+A = 15+10 = 25$",
+not 24. This is an opportunity for error at speed. But we can deal
+with it.
 
-  Decode, add 1, subtract 10, i.e., subtract 9.
+To encode O, remembered as the 15-th letter of the alphabet,
+first subtract 1 to correct the off-by-one error, getting 14.
+Then add 10 to account for the leading ten digits $0..9$ of the
+encoding, getting 24. Prepend the leading $s=0$ for the radix to
+get $024$, say "sunrise."
 
-  */Decode, deduct nine./*
+Encode: subtract 1, add 10, i.e., add 9.
 
-  $\textrm{sunrise}\rightarrow{}024\rightarrow{}24\rightarrow{}15\rightarrow{}O$.
+*/Encode: enhance nine./*
 
-  For small letters, add and subtract 26.
+$O\rightarrow{}15\rightarrow{}24\rightarrow{}024\rightarrow{}\textrm{sunrise}$.
 
-  $o\rightarrow{}15\rightarrow{}41\rightarrow{}50\rightarrow{}050\rightarrow{}\textrm{solstice}$.
+To decode $\textrm{sunrise}=024$, remove the leading $s=0$ to
+get 24. Subtract 10 to get 14. Add 1 to get 15, the 15-th
+capital letter.
 
-  $\textrm{solstice}\rightarrow{}050\rightarrow{}50\rightarrow{}24\rightarrow{}15$ in lower case.
+Decode: add 1, subtract 10, i.e., subtract 9.
 
-- Problem 2: ASCII :: If you've memorized ASCII (see Table 3), you
-  already have pegs for A-Z and a-z. They will pop up at speed.
-  You can either force them away or use them as with Method 2
-  above, accepting the trade-off risk of collisions and ambiguity.
+*/Decode: deduct nine./*
 
-Radix-36, by the way, will work similarly in an obvious way for
-either method. Tackling R64 gets you R36 "for free," so we won't
-cover R36.
+$\textrm{sunrise}\rightarrow{}024\rightarrow{}24\rightarrow{}15\rightarrow{}O$.
+
+For small letters, add and subtract 26.
+
+$o\rightarrow{}15\rightarrow{}41\rightarrow{}50\rightarrow{}050\rightarrow{}\textrm{solstice}$.
+
+$\textrm{solstice}\rightarrow{}050\rightarrow{}50\rightarrow{}24\rightarrow{}15$ in lower case.
+
+It's a lot of mental arithmetic, but that's fun, too. Balance
+the fun factor against the need for recall speed and accuracy.
+
+**** ASCII Popups
+
+If you've memorized ASCII (see Table 3 and Section [[method-4]]), you
+already have pegs for A-Z and a-z. They will pop up at speed. You
+can either force them away; use them as with Method 2 above,
+accepting the trade-off risk of collisions and ambiguity; or go
+with my Method 4 ([[method-4]]).
 
 ** Structure in Public Keys
-
+<<key-structure>>
 Here is the original public key from above:
 
 #+begin_example
@@ -556,24 +590,26 @@ article:
 
 https://medium.com/risan/upgrade-your-ssh-key-to-ed25519-c6e8d60d3c54
 
-That's it for cross-checking; on to memorization. We'll tell a
-tale of poisoning an indiscreet lover.
+That's it for cross-checking; on to memorization.
+
+Let's tell a tale of poisoning an indiscreet lover.
 
 ** The Supposed Machine Prefix.
-
+<<machine-prefix>>
 We don't need to bother with the leading and trailing =AAAA=,
 assuming they're always present (TODO: check that!),
 leaving us with =C3Nz aC1l ZDI1 NTE5=:
 
-#+begin_quote
+#+begin_verse
 SATIN.C HEM.3 in a CINEMAtic.N SASH-WEIGHT.z
 SMOOCH.a - STAINED.C, a HOT.1 OATH.1
-a SMALL.z STEAMing.D from the STOVE.I, with TEA.1 brewing
+a SMALL.Z STEAMing.D from the STOVE.I, with TEA.1 brewing
 CYANAMIDE.N for a SNOBbish.T SUITOR's.E ALE.5
-#+end_quote
+#+end_verse
 
+\clearpage
 ** The Unique Parts
-
+<<unique-parts>>
 Now in groups of 3 or 4 quads:
 
 #+begin_example
@@ -582,7 +618,7 @@ BxM3 6WwK C6RD 1/Qn
 tXQg BV3m pUZq
 #+end_example
 
-#+begin_quote
+#+begin_verse
 STUFF.I the STILL.F for his ZERO-HOUR.i HURRAH.4
 SWEETEN.C the SALT.p with a SCENT.L of SNUFF.S
 a SERUM.h SINFUL.S and SINISTER.K for his SASHIMI./
@@ -593,13 +629,255 @@ HUSHed.6 SOMNOLENCE.W, SOULFUL.w SNOOZing.K
 SATIN.C HUSH.6, SNUG.R STOMACH.D
 DIE.1, SWITCHMAN./ ! SNATCH.Q CERBERUS.n
 
-SLOWLY.t SLIP.X, SNITCH.Q ! SURRENDER.g !
+SLOWLY.t SEMIMOBILE.X, SNITCH.Q ! SURRENDER.g !
 SEDATED.B, to the CEMETERY.V HOME.3, SERF.m !
-SLIDE.p into OSMOSIS.U, ASSIMILATE.Z, SLAIN.q !
-#+end_quote
+SLIDE.p into OSMOSIS.U, ASSIMILATE.Z. SLAIN.q !
+#+end_verse
 
 \clearpage
-* ASCII, Playing cards, NATA, Hebrew, Dates
+** Old Old Method
+<<old-old-method>>
+
+I blogged out a more trivial method, similar to method 2 for GUIDs
+some time ago:
+
+https://rebcabin.wordpress.com/2011/03/06/memorizing-in-base-64/
+
+This method maps the Rixits directly to the pegs. The mental
+arithmetic is the same as above: computing a peg number from
+characters A..Z and a..z by adding 9 and-or-26. We just lose the
+leading S, so we lose some richness to the vocabulary.
+
+** Brand-New Methods
+
+*** Method 3
+<<method-3>>
+Another method, which I have not tried, is to map the alphabetic
+letters to their S-enhanced letter numbers, as in
+
+| A   |  01 |
+| B   |  02 |
+| ... | ... |
+| Z   | 026 |
+| a   | 027 |
+| b   | 028 |
+| ... | ... |
+| z   | 052 |
+
+The decimal digits go to their regular pegs, 0..9. This is a
+variation of the old-old-method ([[old-old-method]]).
+
+*** Method 4
+<<method-4>>
+
+Works best for me personally because I already have automatic
+NATO, ASCII, and Hebrew mappings for the alphabet from my daily
+practice regimen ([[daily-practice]]). Requires no mental arithmetic,
+for /me/. Add the pegs for 0..9, plus 62 for "+" and 63 for "/".
+
+|---+----------+-------+---------------------------------------------------|
+|   | NATO     | ASCII | hallucination; ASCII pair refs marked with *      |
+|   |          |       | Hebrew pegs capitalized                           |
+|---+----------+-------+---------------------------------------------------|
+| A | ALPHA    | jail  | the alpha-male lion (Aryeh:1) is in jail          |
+| B | BAKER    | judge | passing judgment on the lion                      |
+| C | CHARLIE  | chalk | hopscotch on the sidewalk                         |
+| D | DELTA    | chef  | PhD-thesis* student's day job                     |
+| E | ECHO     | chip  | a poker chip in a policeman's(5) hand             |
+| F | FOXTROT  | case  | full of a dozen* pink (Vered:6) roses             |
+| G | GOLF     | cat   | on the golf cart with my twosome*                 |
+| H | HOTEL    | can   | ashtray outside in the smoking area               |
+| I | INDIA    | cam   | diesel* Rolls-Royce in a junkyard in India        |
+| J | JULIET   | car   | Juliet walks a wood-sage* to his NASCAR ride      |
+| K | KILO     | coal  | Alice(11) gives coal to a tusked* troll           |
+| L | LIMA     | cage  | containing tanned(12) beach-goers                 |
+|---+----------+-------+---------------------------------------------------|
+| M | MIKE     | cake  | an orca (Mayim:13) flips a cake on its nose       |
+| N | NOVEMBER | cuff  | a snake (Nakhash:14) no arms, cuffs on shirt      |
+| O | OSCAR    | cap   | a teetotaler wearing a Carrie-Nation cap          |
+| P | PAPA     | face  | Dad cries (tissue:16) at Liz Taylor's face        |
+| Q | QUEBEC   | fat   | did Pierre Trudeau get fat?                       |
+| R | ROMEO    | fan   | Romeo hands a fan to a Tatar* beauty              |
+| S | SIERRA   | fame  | on stage at my book-signing, title* Sierra        |
+| T | TANGO    | fare  | a death-watch* soldier gets on the bus            |
+| U | UNIFORM  | fall  | a cadet(club jack) falls into a net(21)           |
+| V | VICTOR   | fish  | the Christian symbol, nun(22), auto-da-fe*        |
+| W | WHISKEY  | fig   | a Few Figs from Thistles; reading it with a dram  |
+| X | X-RAY    | fife  | Nero(24) plays the fife, dances* while Rome burns |
+| Y | YANKEE   | fob   | a watch-fob hanging from a nail(25) on a US map   |
+| Z | ZULU     | base  | an Athenian* ball-player at bat on home base      |
+|---+----------+-------+---------------------------------------------------|
+
+|---+----------+-------------+------------------------------------------------------|
+|   | NATO     | ASCII       | hallucination; ASCII pair refs marked with *         |
+|   |          |             | Hebrew pegs capitalized                              |
+|---+----------+-------------+------------------------------------------------------|
+| a | alpha    | back        | the jailer* has her back turned to the lion          |
+| b | baker    | beef        | the judge* eats a beef dinner in court               |
+| c | charlie  | pipe        | smoking while chalking* the hopscotch grid           |
+| d | delta    | thesis      | the chef* hasn't finished the thesis yet             |
+| e | echo     | toast       | the cop(5) has toast between his fingers             |
+| f | foxtrot  | dozen       | a dozen pink (Vered:6) roses in a case*              |
+| g | golf     | twosome     | on the golf cart with the cat*                       |
+| h | hotel    | dowser      | done smoking outside (ash-can*), dowsing inside      |
+| i | india    | diesel      | holding a camshaft* from diesel Rolls-Royce          |
+| j | juliet   | wood-sage   | Juliet escorts a druid to its NASCAR ride            |
+| k | kilo     | tusk        | Alice(11) gives coal* to a tusked troll              |
+| l | lima     | adhesive    | dangle a fly-paper into the cage*                    |
+| m | mike     | teaspoon    | drip icing onto the cake* in the water (Mayim:13)    |
+|---+----------+-------------+------------------------------------------------------|
+| n | november | tights      | the snake (Nakhash:14) has no legs, wears tights     |
+| o | oscar    | teetotaler  | wearing the Carrie Nation cap*                       |
+| p | papa     | Titan       | protecting Liz Taylor                                |
+| q | quebec   | totem       | a fat* Pierre Trudeau kneels before the totem        |
+| r | romeo    | Tatar       | Romeo hands a fan* to a Tatar beauty                 |
+| s | sierra   | title       | on stage receiving fame* for my book titled Sierra   |
+| t | tango    | death-watch | a soldier gets on the bus paying fare* and dancing   |
+| u | uniform  | hotdog      | a cadet falls* into a net(21) holding a hotdog       |
+| v | victor   | auto-da-fe  | a Christian* nun(22) overlooks the ritual            |
+| w | whiskey  | teddy bear  | while reading a Few Figs* from Thistles              |
+| x | x-ray    | dance       | Nero(24) plays fife*, looks through dancers' clothes |
+| 7 | yankee   | donut       | hangs on the nail(25) next to the fob*               |
+| z | zulu     | Athenian    | on home base* at bat                                 |
+|---+----------+-------------+------------------------------------------------------|
+
+Here is the second key from Section [[key-structure]] above:
+
+\clearpage
+#+begin_example
+ssh-ed25519
+AAAA C3Nz aC1l ZDI1 NTE5 AAAA  <~~~ for the machine?
+IKWf n2B6 AjfK MNwX +Ekt d7mx
+nhwi GALP JfEO oEwk 2X/u
+#+end_example
+
+Skipping the AAAA bits, tell a tale of dressing in the mirror,
+then playing baseball at lunch time.
+
+*MACHINE STANZA*
+
+=C3Nz= a CHALK sketch of ME, putting on CUFF links and looking
+down my ATHENIAN nose.
+
+=aC11= My BACK to the mirror now, another CHALK sketch? My TIE is
+TOO tight. But that's enough time dressing in the mirror.
+
+=ZDI1= I'm on BASE now, a CHEF cooks in the bullpen, flipping
+burgers with a CAMshaft and brewing TEA.
+
+=NTE5= I COUGH; I lack lunch FARE. Perhaps he'll take poker CHIPs?
+But that's against the LAW.
+
+*FIRST STANZA*
+
+=IKWf= The CAMshaft beats the burgers into COAL. FIGs and
+a DOZEN roses comes with lunch. To the ballgame!
+
+=n2B6= My baseball TIGHTS ANNOY; says a JUDGE while I spit my
+CHAW.
+
+=AjfK= "CHILL like a WOOD-SAGE," I shout. "Consider the ROSES
+[dozen], they're COOL!"
+
+=MNwX= The chef adds CAKE and COFFEE, puts everything on a
+TEA-TABLE and marks it HALF-OFF. I'm distracted.
+
+*SECOND STANZA*
+
+=+Ekt= The pitcher throws a CHIN-ball, a CHEAP shot. "TISK!" I
+shout, "I don't have a DEATH-WISH!"
+
+=d7mx= "DESIST, you HACK!" I'm getting DESPERATE and TENSE.
+
+=nhwi= This is TEDIOUS. DESSERT will help. Out comes the
+TEA-TABLE; it's DAZZLING.
+
+=GALP= The KIT is a JEWEL. Do I have the CASH? My FACE turns red.
+
+*LAST STANZA*
+
+=JfEO= JULIET will love the ROSES [dozen], CHEAP to KEEP them?
+
+=oEwk= A TITANic wish! CHEAP still, with a TEDDY-BEAR to the TASK?
+
+=2X/u= NO, a FAVE SHAM DEDICation.
+
+After a few iterations, I can recall this without error. With
+practice, it's becoming fun!
+
+Let's try another, the first key from Section [[key-structure]], with
+method 4.
+
+#+begin_example
+ssh-ed25519
+AAAA C3Nz aC1l ZDI1 NTE5 AAAA  <~~~ for the machine?
+IFi4 CpLS hSK/ uUux BxM3 6WwK
+C6RD 1/Qn tXQg BV3m pUZq
+#+end_example
+
+The machine stanza is the same as before, here abbreviated as
+recalled:
+
+*MACHINE STANZA*
+
+#+begin_example
+C3Nz aC11 ZDI1 NTE5
+#+end_example
+
+#+begin_verse
+chalk me cufflinks Athenian
+back chalk too tight
+base chef cam tea
+cough fare chips law
+#+end_verse
+
+Now for the unique parts:
+
+*FIRST STANZA*
+
+#+begin_example
+IFi4 CpLS hSK/ uUux
+#+end_example
+
+#+begin_verse
+cam eggs dislike raw
+shake tighten catch foam
+tosser foam galley jam
+hotdog fill hotdog dance
+#+end_verse
+
+*SECOND STANZA*
+
+#+begin_example
+BxM3 6WwK C6RD 1/Qn
+#+end_example
+
+#+begin_verse
+judge dance cook ham
+jaw fig toothpick call
+shock jaw harm chef
+doughy gym fat tights
+#+end_verse
+
+*THIRD STANZA*
+
+#+begin_example
+tXQg BV3m pUZq
+#+end_example
+
+#+begin_verse
+hot-dish half-off fat twosome
+judge fish me teaspoon
+titan fall base teatime
+#+end_verse
+
+** Radix 36
+
+Radix 36 works similarly to any method for R64. Tackling R64 gets
+you R36 "for free," so we won't cover R36.
+
+* Daily Practice: ASCII,  Cards, NATO, Hebrew, Dates
+<<daily-practice>>
 
 Table 3 is my daily repetition-reinforcement regimen. It exploits
 the coincidence that there are 52 glyphs in the ASCII Latin
@@ -610,14 +888,17 @@ super-group of 26 are empty in the Hebrew column.
 Table 3 is broken into groups of 13 corresponding to the suits of
 playing cards. It's fortuitous that each group also contains dates
 in a monthly pattern of 5-4-4: 5 weeks in Jan, 4 in Feb, 4 in Mar,
-etc. These are for non-leap years only, so not great for computing
-day-of-the-week. I have another method for that (debugged Furth's)
-in Section [[day-of-week]].
+etc. The first days of the months are in the easy pattern 155,
+274, 263, 153. You may memorize this as a honeymoon tale of
+TAILLIGHTS, NIAGRA, UNASHAMED, HOTELMAN if you like. These are for
+non-leap years only, so not great for computing day-of-the-week. I
+have another method for that (debugged Furst) in Section
+[[day-of-week]].
 
 My daily regimen includes another $156==3\times{}52=2\times{}78$
 three columns of hallucinations for the 156 faces of a standard
 Tarot pack, obverse and reverse. That's a little arcane for now,
-so I don't include it.
+so I don't include it. Maybe in a future Appendix.
 
 I go down Table 3 in my mind when I need to fall asleep. I usually
 get four or five rows before drifting off, so next time through, I
@@ -689,19 +970,569 @@ repetition.
 | teddy-bear  | w | toes       |  49 | DT    | ROPE  | whiskey  |         | DEC 03 |
 | dance       | x | teetotaler |  50 | DJ    | LACE  | x-ray    |         | DEC 10 |
 | doughnut    | y | titan      |  51 | DQ    | LOT   | yankee   |         | DEC 17 |
-| athenian    | z | totem      |  52 | DK    | LANE  | zulu     |         | DEC 24 |
+| Athenian    | z | totem      |  52 | DK    | LANE  | zulu     |         | DEC 24 |
 |-------------+---+------------+-----+-------+-------+----------+---------+--------|
 
+* Memorizing Dates
 
-* TODO: Memorizing Dates
+For most kids, history class is torture because of the need to
+memorize dates. But that's a snap with the peg system. I still
+remember from 11-th grade that
 
-* TODO: Calculating Day of the Week
+RAY TAN CHAT
+
+was the beginning day of the Civil War, because you burned me with
+a a RAY gun and that ended the peace talks. April 12, 1861.
+
+\clearpage
+* Memorizing a Shuffled Card Pack
+
+I blogged this out in December, 2010, starting here:
+
+https://rebcabin.wordpress.com/2010/12/08/take-the-diamonds/
+
+The method is very similar to method 4 above ([[method-4]])
+
+Here is a scrape of the relevant blog posts.
+
+** Take the Diamonds
+
+Do you smell machine oil the instant you see the Diamond Queen from a
+pack of cards? How about cigarette smoke when you see the Diamond Six,
+or baby powder when you see the Diamond Ace? Read on . . .
+
+Take the entire suit of Diamonds out of a pack of cards and lay them out
+in order, from Ace to King, in front of you on a table. Notice that the
+word “diamond” begins with a D, and recall that the consonant sound D
+stands for the number 1 -- or for the digit “1” in combination with
+other digits, as we have been using it so far. Think of the suit,
+diamonds, as the tens digit in combination with the plain digit of each
+card. Then the diamond Ace will be 11 -- 1 for the tens digit from
+“diamonds” and 1 for the Ace itself, since it's the first card in the
+suit. The Ace through the Nine come out with no problem at all and they
+hook up immediately with our memorized, permanent pegs. As you go
+through the list below, really take some time to stare at the card and
+visualize the mental picture right on the face of the card. If the deck
+is one you can write on or draw on, draw a little cartoon or write the
+picture word on the face of the card. You'll be using these cards to
+help you lock in the pegs:
+
+| /Card/ | /Number/ | /Peg/  | /Mental Picture/                                        |
+|--------+----------+--------+---------------------------------------------------------|
+| D A    |       11 | tot    | Alice from Alice in Wonderland.                         |
+|        |          |        | Smell baby-powder in the air.                           |
+| D 2    |       12 | tan    | Someone tanning herself holding a reflective            |
+|        |          |        | tray under her chin. Smell tanning oil.                 |
+| D 3    |       13 | tam    | A tam-o-shanter tartan cap with red pom-pom on the head |
+|        |          |        | of a Scottish warrior in full kilts. Smell heather.     |
+| D 4    |       14 | tar    | A sizzling hot stretch of deserted highway,             |
+|        |          |        | so hot the tar is sticky. Smell the tar, too.           |
+| D 5    |       15 | tail   | The orange-and-black striped tail of an enormous tiger. |
+|        |          |        | Imagine a zoo smell.                                    |
+| D 6    |       16 | tissue | Someone wiping tears from her eyes after remembering    |
+|        |          |        | an emotional event. Smell cigarette smoke and think     |
+|        |          |        | of the song “Smoke Gets in Your Eyes.”                  |
+| D 7    |       17 | tack   | A huge thumbtack or map-pin holding something on a      |
+|        |          |        | big cork board. Smell fresh ink and paper.              |
+| D 8    |       18 | taffy  | A big blob of hot, sweet-smelling pink and green taffy  |
+|        |          |        | candy, stuck to your fingers getting all over the card. |
+| D 9    |       19 | tap    | A beer tap spilling beer all over the card, splashing   |
+|        |          |        | on your clothes and making a smelly mess.               |
+|        |          |        |                                                         |
+
+Notice I've added smell to the associations, and even a song. We can
+really take this idea far and involve taste and touch over all the pegs,
+and we may do that in the future -- it will be an interesting exercise.
+This is one of the things that Eran Katz suggests to do in his books
+(highly recommended), and since smell works very well for my personal
+memory, I'm adding it to my permanent inventory and inviting you along
+for this addition.
+
+We have only four cards to go. The diamond 10 is pretty easy -- I'm just
+going to pick the peg “toes” and picture the woman painting her toenails
+all different colors. And the smell? Toenail Polish! Easy.
+
+And for the last three, let's promote the 1 to the hundreds digit and
+sneak in some three-digit pegs (from the third layer -- a preview).
+Notice we may have some extra consonant sounds on the ends of the
+three-digit pegs. They're throw-aways, because the system doesn't go to
+four or more digits at a time. 1,110 permanent pegs is quite enough!
+
+| /Card/ | /Number/ | /Peg/      | /Mental Picture/                                 |
+|--------+----------+------------+--------------------------------------------------|
+| D J    |      111 | teetotaler | Picture a prissy little man with ill-fitting     |
+|        |          |            | clothes, a crooked bow tie, thick eyeglasses     |
+|        |          |            | and a pocket protector pontificating on the      |
+|        |          |            | virtues of total abstinence from alcohol.        |
+|        |          |            | Smell Lysol (too much cleaning)                  |
+| D Q    |      112 | titan      | Picture an enormous robot with rivets all over   |
+|        |          |            | its shell. Smell machine oil and steel.          |
+| D K    |      113 | totem      | Picture a Native-American totem pole with        |
+|        |          |            | effigies of bears, salmon, and a huge, winged    |
+|        |          |            | eagle on top.                                    |
+|        |          |            | Smell a campfire and the wood of the totem pole. |
+
+That's it. Take your suit of diamonds along with you, pull it out and
+practice the visualization and imaginary smelling exercise whenever you
+find yourself having to kill time. Just a few times over this and you
+won't need the cards any more. You will INSTANTLY smell and see taffy
+when you think of the Diamond-8. The Diamond Queen will INSTANTLY bring
+to mind the smell of machine oil and steel. And vice versa, and through
+the entire suit.
+
+\clearpage
+** Shuffle the Diamonds
+
+... and go through the 13 cards, in order, forming a linked
+sequence of vivid mental pictures. Here's what I came up with
+yesterday
+
+Alice in Wonderland (tot = 11 = DAce) is wiping a tears from her eyes
+with a
+
+tissue (16 = D6). She is standing by a sizzling hot highway and her feet
+are sinking into the
+
+tar (14 = D4). Across the highway, a six-foot tall beer
+
+tap (19 = D9) is gushing beer onto the tarmac. The beer boils on
+contact, releasing a strong beer smell, and runs gently downhill into a
+grid of huge, multicolored
+
+tacks (17 = D7) pushed into the tarmac. These tacks are also piercing
+and holding down a tiger's
+
+tail (15 = D5), and the tiger is roaring in pain and licking a huge lump
+of pink-and-green alcoholic
+
+taffy (18 = D8) by the other side of the road from Alice to soothe his
+pain. In front of the tiger, a
+
+teetotaler (111 = DJ), specially summoned from AA for the situation, is
+wagging his finger at the tiger and delivering a stern warning about the
+evils of alcoholic taffy. The other hand of the teetotaler is exposed to
+the hot sun and is getting quite a
+
+tan (12 = D2). With that overtanning hand, he is holding the right hand
+of a steel robot
+
+titan (112 = Q2) who is wagging his head, clicking and beeping, emitting
+the odor of machine oil, and, with his other hand, painting his
+
+toenails (toes = 10 = D10) and also the toenails of the
+
+totem (113 = DK) standing right next to him (smell the toenail polish).
+The top of the totem is obscured by a huge
+
+tam-o-shanter (13 = D3), which is baking in the hot sun and emitting a
+strong smell of roasting wool
+
+Now, I came up with this phantasmagoria yesterday morning in less than
+one minute, I did not think about it all day, the day was very, very
+busy with other activities, I went out for a couple of drinks after
+work, slept through the night, and didn't think of this for a whole 24
+hours until just now. I remembered it almost perfectly (I forgot the
+tacks, and all that means is that I didn't form the mental picture
+vividly enough -- I had the tiger's tail threaded around the tacks, but
+I recommended to you to imagine the pins pushed THROUGH the tail, adding
+the roaring and pain to the phantasmagoria). If I had been more careful,
+I would have remembered it perfectly.
+
+Think about this: by exploiting the visual imagination and dragging in
+all the other senses -- feeling the heat, smelling the smells, hearing
+the sounds, I was able to remember 24 hours later, after a minute of
+looking, a shuffled suit of cards (and, if I had been more careful, I
+would have remembered it perfectly!). When I am in practice, I can
+memorize an entire shuffled deck in 2 minutes, while you deal them out
+(I'll teach you the other suits later, while we go through the second
+layer of the memory system). When I am out of practice, 4 minutes is
+plenty. Even better, I can memorize 39 of the cards and then tell you
+the remaining 13 cards just by running down the suits in my mind and
+naming the cards that aren't in my phantasmagoria. I can even do it
+tomorrow from yesterday's shuffle.
+
+This is a great party trick. The pros can do this really fast. The
+athletes in the world memory championships
+([[http://en.wikipedia.org/wiki/World_Memory_Championships]]) can do it
+in less than 30 seconds, and they can memorize the order of 8 shuffled
+decks in 15 minutes.
+
+Try this. You will amaze yourself. Then, think of practical
+applications [method 4 for public keys is almost the same].
+
+\clearpage
+
+\clearpage
+** The 40s and Hearts
+
+Back with the 10's we learned pegs to memorize a shuffling of the
+diamond suit, in any order. This time, we'll learn pegs for the 40's and
+for the hearts suit. The reason to associate hearts with the 40's is
+that the first important consonant in ‘hearts' is ‘r,' a digit 4, which
+we promote to the number 40 for the application of memorizing cards.
+Here are my permanent pegs for the 40's. As always, feel free to tailor
+this set to your own memory style
+
+| Num | Sound | Peg  | Description                                     | Others  |
+|  40 | RS    | race | A NASCAR race; colorful cars going around;      | rose  |
+|     |       |      | oil, gasoline, smoke, loud engines              | rice  |
+|     |       |      |                                                 | horse   |
+|  41 | RT    | rat  | huge, greasy rat scurrying through garbage      | road  |
+|     |       |      | in an alley; garbage smell, long teeth          | word  |
+|     |       |      |                                                 | radio   |
+|  42 | RN    | rain | driving rainstorm; soaked clothes; dark street  | huron |
+|     |       |      | trying to hail a taxi; no visibility            | horn  |
+|     |       |      |                                                 | roan    |
+|  43 | RM    | ram  | giant ram with huge, curled horns; it's saddled | arm   |
+|     |       |      | and you're riding it; leather & wool            | worm  |
+|     |       |      |                                                 | room    |
+|  44 | RR    | rear | distinctive rear end of Corvette automobile;    | rare  |
+|     |       |      | driving it with the top down                    | roar  |
+|     |       |      |                                                 | horror  |
+|  45 | RL    | rail | brass rail at a wood-paneled bar; can't reach   | whorl |
+|     |       |      | it with your feet; beer and darts               | whirl |
+|     |       |      |                                                 | reel    |
+|  46 | RJ    | rash | painful, red rash on your forearm               | ridge |
+|     |       |      |                                                 | Raj   |
+|     |       |      |                                                 | rush    |
+|  47 | RK    | rack | rack of antlers on caribou head mounted over    | wreck |
+|     |       |      | the fireplace                                   | rag   |
+|     |       |      |                                                 | rug     |
+|  48 | RF    | reef | coral reef; brightly colored tropical fish;     | roof  |
+|     |       |      | SCUBA diving gear; rubber, seawater             | rave  |
+|     |       |      |                                                 | wharf   |
+|  49 | RP    | rope | heavy burlap or hemp rope in a coil or          | rib   |
+|     |       |      | attached to the thing-to-remember               | robe  |
+|     |       |      |                                                 | harp    |
+
+Those pegs cover the playing cards Heart Ace (41) through Heart Ten
+(40). We need three more for the face cards
+
+Heart Jack: 411, rat-a-tat-tat; picture a machine gun; you're carrying
+it and shooting it at things
+
+Heart Queen: 412, rattan; picture white wicker furniture
+
+Heart King: 413, radium; picture the item-to-remember pulsing with the
+(imaginary) green glow of radioactive radium.
+
+Pick the diamonds and the hearts out of a pack of cards, shuffle them,
+and prepare to memorize the order. Take your time: don't rush it. Go for
+accuracy. The speed will come naturally with practice. Here's an example
+of a run I did just now, building this story in my mind in real time. If
+you follow along and build the miniature movie in your mind, you will no
+trouble recalling the order of the cards. Take special effort to chain
+the pegs one to another (yes, this is a combined application of
+chain-memory and peg-memory):
+
+(D2) I'm outside in the hot sun getting a */tan/*, but I'm really
+burning and it hurts
+
+(H5) There's a tropical drink station on the beach and there is a very
+prominent brass */rail/* where I want to rest my feet while I order a
+cool drink, but I can't quite reach it with my feet
+
+(HQ) I sit in a stool made of white */rattan/*; hear the distinctive
+creaking sound as you sit and try to reach the rail with your feet
+
+(H3) Sitting next to me is a guy holding on to the reins of his riding
+*/ram/* and the ram is chewing the rattan (this is an important
+connection as it's easy to forget the rattan without making the ram do
+something with it)
+
+(H10) he pulls out of his pocket a scale model of a NASCAR */race/*
+track and places it on the counter, and the cars start going around
+
+(DA) Alice from Wonderland (a */tot/*) walks up to take a look at the
+model race track
+
+(DK) she puts a pint-sized */totem/* pole right in the middle of the
+oval racetrack
+
+(HJ) one of the effigies in the totem has a machine gun in its hand and
+starts shooting at the cars (rat-a-tat-tat)
+
+(H4) many of the cars are Corvettes with their distinctive */rear/* ends
+(four circular red lights, 2-by-2). The bullets are shooting out the red
+lights
+
+(DJ) a teetotaler comes up to us at the tropical bar and lectures on the
+violent side-effects of drinking alcohol, using the machine-gunning
+totem as evidence
+
+(H7) he points to a */rack/* of antlers mounted on the wall of the
+tropical bar as further evidence: the hunter must have been drinking to
+go after such a huge caribou
+
+(D9) we all laugh and him and order the bartender to pull us more beers
+from the */tap/*
+
+(H8) some divers out in the */reef/* hear the sound of the enormous beer
+tap pouring beer and pop their heads out of the waves and shout at us to
+pour some for them, too
+
+(D3) we notice that some of the divers are wearing */tam/*-o-shanters
+over their dive helmets
+
+(D5) tigers (with orange-and-black striped */tails/*) run along the
+beach into the waves and snatch the tam-o-shanters in their jaws.
+
+(D6) they run a big circle over toward us, stop and wipe tears from
+their eyes (with */tissues/*) out of regret for stealing the
+tam-o-shanters
+
+(H2) all of a sudden, it clouds over and a driving, tropical rain soaks
+the weeping tigers with tams in their teeth and pounds on the roof of
+the tropical drink station
+
+(HK) the weather radio in the back of the bar starts to blare news at a
+high volume about the storm and pulse very brightly with green
+*/radium/* glow
+
+(HA) huge black */rats/* scurry out from behind the bar, scared out by
+the sudden noise of the radio -- see the radium glistening on their
+greasy, rain-soaked fur
+
+(D4) the rats run all the way out to the */tar/*mac in the parking lots
+near the beach, and the hot tar is steaming from the sudden rain; the
+rats are jumping on the hot tar
+
+(D8) they run over to piles of hot green and white */taffy/* piled up in
+one corner of the tarmac and start eating it voraciously
+
+(D10) on top of the piles of taffy are young women painting their
+*/toe/*nails -- yes, in the driving rain -- and dripping the toenail
+polish on the taffy
+
+(D7) the toenail polish is running down the taffy and flowing around the
+shafts of enormous thumb*/tack/*s embedded in the base of the piles of
+taffy
+
+(H6) under each thumbtack is a doctor's prescription for */rash/*
+medication; it's going to help with all the sunburns we got
+
+(H9) tied to each prescription is a burlap */rope/* (don't know where
+this is going, yet, but just tie them up
+
+(DQ) at the other end of each rope is a */titan/*, a robot, pulling on
+the rope
+
+That's it -- now close your eyes and run through the movie in your mind,
+and the cards will play out in order. Try not to go back and peek. If
+you have to do that, it means that you didn't form a sufficiently strong
+association linking one mental picture with the next. Practice will make
+perfect!
+
+tan, rail, rattan, ram, race, tot (Alice), totem, ratatattat, rear
+(shooting out the Corvette brake lights) teetotaler, rack, tap, reef,
+tam, tail, tissue, rain, radium, rat, tar, taffy, toes, tack, rash,
+rope, titan
+
+D2, H5, HQ, H3, H10, DA, DK, HJ, H4, DJ, H7, D9, H8, D3, D5, D6, H2, HK,
+HA, D4, D8, D10, D7, H6, H9, DQ
+
+I had to really work hard to recall rattan and rear, which means I
+didn't form the connected images strongLY enough first time around.
+practice practice practice.
+
+\clearpage
+** The 70s and Clubs
+
+By now, you know the drill. The 70's are another decade in the regular
+peg list of the second layer of the system. Just as the 10's stand for
+the diamonds (because the ‘D' of ‘diamond' is a sound for 1, and 1 is
+the first digit of each visual memory word for the diamond suit), and
+the 40's stand for hearts (because the ‘R' of ‘heaRts' is a 4-sound),
+the 70's stand for the club suit. You will get three bonus visual-words
+from the third layer for the Jack, Queen, and King of clubs. Practice
+with the club suit alone, locking in the visual words, then mix in the
+hearts and diamonds. You will be able to memorize a shuffled pack of
+these 39 cards and impress yourself. Without further ado, here is my
+list:
+
+| Num | Sounds | Card | Peg       | Description                         | More      |
+|  70 | KS     | C10  | case      | leather attache case with handcuffs | gas       |
+|     |        |      |           |                                     | goose     |
+|     |        |      |           |                                     | wax       |
+|  71 | KT     | CA   | cat       | black cat, green eyes               | coat      |
+|     |        |      |           |                                     | kite      |
+|     |        |      |           |                                     | goat      |
+|  72 | KN     | C2   | can       | empty coffee can, label torn off    | cane      |
+|     |        |      |           |                                     | canoe     |
+|     |        |      |           |                                     | gun       |
+|  73 | KM     | C3   | cam       | camshaft from a big detroit         | cameo     |
+|     |        |      |           | V8 engine                           | comb      |
+|     |        |      |           |                                     | wigwam    |
+|  74 | KR     | C4   | car       | colorful NASCAR race car            | choir     |
+|     |        |      |           |                                     | crew      |
+|     |        |      |           |                                     | curry     |
+|  75 | KL     | C5   | coal      | black messy coal or hot one         | claw      |
+|     |        |      |           |                                     | collie    |
+|     |        |      |           |                                     | eagle     |
+|  76 | KJ     | C6   | cage      | cage for an animal (rabid dog?)     | cash      |
+|     |        |      |           |                                     | gaucho    |
+|     |        |      |           |                                     | gauge     |
+|  77 | KK     | C7   | cake      | over-tall, toppling wedding cake    | gong      |
+|     |        |      |           |                                     | kayak     |
+|     |        |      |           |                                     | keg       |
+|  78 | KF     | C8   | cuff      | dress-shirt cuff hanging out of     | calf      |
+|     |        |      |           | ill-fitting suit                    | coffee    |
+|     |        |      |           |                                     | guava     |
+|  79 | KP     | C9   | cap       | baseball cap                        | cape      |
+|     |        |      |           |                                     | cowboy    |
+|     |        |      |           |                                     | guppy     |
+| 711 | KTT    | CJ   | cadet     | Navy cadet in dress uniform         | cathode   |
+|     |        |      |           |                                     | cathedral |
+|     |        |      |           |                                     | quietude  |
+| 712 | KTN    | CQ   | katana    | samurai chopping with katana sword  | cotton    |
+|     |        |      |           |                                     | catnip    |
+|     |        |      |           |                                     | kidney    |
+| 713 | KTM    | CM   | catamaran | absurd inflated raft catamaran      | academy   |
+|     |        |      |           |                                     | godmother |
+|     |        |      |           |                                     | Gotham    |
+
+\clearpage
+** The 90s and Spades
+
+This is the last set of ten, permanent peg words in the second layer of
+the system, with three bonus words from the third layer so we can
+memorize the last suit of a card deck, the spades. Every number in the
+90's begins with the digit 9, and the consonant cluster for 9 is B and
+P. The word “Spade” encodes to 091; ignore the leading zero and pick the
+9=P to stand for the spades, so the spades will come from the 90's. In
+later blogs, we'll summarize the entire second layer, add a couple of
+odds and ends, and work on applications like card tricks.
+
+| Num | Sounds | Card | Peg    | Description                              | Others      |
+|-----+--------+------+--------+------------------------------------------+-------------|
+|  90 | PS     | S10  | Base   | Home base in a ball field                | abess       |
+|     |        |      |        |                                          | boss        |
+|     |        |      |        |                                          | pizza       |
+|  91 | PT     | SA   | Bat    | baseball bat in the hands of a slugger   | pot         |
+|     |        |      |        |                                          | bath        |
+|     |        |      |        |                                          | pod         |
+|  92 | PN     | S2   | bean   | Steak-size kidney bean steaming on a bed | bun         |
+|     |        |      |        | of lettuce                               | piano       |
+|     |        |      |        |                                          | ebony       |
+|  93 | PM     | S3   | beam   | Huge timber in the low ceiling of a pub; | bum         |
+|     |        |      |        | hit your head on it                      | opium       |
+|     |        |      |        |                                          | puma        |
+|  94 | PR     | S4   | bar    | The pub itself: crowded, loud, stuffy    | pier        |
+|     |        |      |        |                                          | bear        |
+|     |        |      |        |                                          | opera       |
+|  95 | PL     | S5   | ball   | Baseball: stitches, tacky leather,       | pool        |
+|     |        |      |        | autographs                               | belly       |
+|     |        |      |        |                                          | bowl        |
+|  96 | PJ     | S6   | badge  | Heavy, bronze sheriff's badge pulling    | bush        |
+|     |        |      |        | your clothes                             | pasha       |
+|     |        |      |        |                                          | peach       |
+|  97 | PK     | S7   | back   | exposed back of ballerina                | beak        |
+|     |        |      |        |                                          | book        |
+|     |        |      |        |                                          | bug         |
+|  98 | PF     | S8   | beef   | Steak dinner (don't confuse with bean)   | beehive     |
+|     |        |      |        |                                          | buffet      |
+|     |        |      |        |                                          | puff        |
+|  99 | PP     | S9   | pipe   | Rene Magritte's famous painting;         | babe        |
+|     |        |      |        | or Einstein                              | bobby       |
+|     |        |      |        |                                          | pope        |
+| 911 | PTT    | SJ   | potato | baked potato with all the fixin's;       | habitat     |
+|     |        |      |        | see 92, 98                               | beatitude   |
+|     |        |      |        |                                          | pas de deux |
+| 912 | PTN    | SQ   | baton  | relay race; pass the baton               | beatnik     |
+|     |        |      |        |                                          | bedouin     |
+|     |        |      |        |                                          | petunia     |
+| 913 | PTM    | SK   | podium | lecturer or preacher at the podium       | badminton   |
+|     |        |      |        |                                          | speedometer |
+|     |        |      |        |                                          | epidemic    |
+
+
+* Calculating Day of the Week
 <<day-of-week>>
 
-* All Pegs and Soundalikes
+I blogged this out here:
+
+https://rebcabin.wordpress.com/2015/07/03/590/
+
+Here is a scrape:
+
+Remember Dustin Hoffman's character in the movie “Rainman,” who can
+instantly say the day of the week for a given date?  Of course, he was
+an autistic savant and probably didn't know and certainly couldn't teach
+how he does it, but here is a method I learned from my Dad [Furst
+has the same method].
+
+Preliminaries:
+
+Do all math mod 7, that is, you only need to keep the remainder of the
+results of any calculation after dividing by 7.  Thus, 15 is 1, 33 is 5,
+49 is 0, etc.
+
+Every day of the week has a number, starting with 1 for Sunday and
+ending with 0 for Saturday.  Your goal is to convert any Gregorian
+calendar date into such a number.
+
+Jan and Feb belong to the year BEFORE. The reason is that leap years add
+a day at the end of Feb and it makes all the math easier to think that
+Jan and Feb 1963 are really part of 1962, for example.  Also remember
+that the Romans started their year with the month of March.  Maybe it
+was for a similar reason.
+
+Example:
+
+29 Nov 1872.
+
+First convert the century.  1900 happens to be a 0, so that's
+really really easy and convenient.  The numbers for all other
+centuries go in a cycle 6 4 2 0, which is also really easy to
+remember.  If you want peg words, say “ages run in sequence.”  To
+learn more about pegs, search for “peg” in my blog.  Because 1900
+is 0, 2000 is 6, 2100 will be 4, 2200 will be 2, etc.  1800 is 2.
+
+Keep 2 in your head and move forward.
+
+Now convert the year, and there are two steps.  First, the year mod 7
+because each year is one day longer than a multiple of 7, namely 364. 72
+mod 7 is 2.  Add 2 to the 2 we're carrying to get 4 so far.
+
+Now get the number of leap years in the century.  That's 72 / 4, or 18,
+which is 4.  Add it to the 4 we're keeping, which is 8, which is 1.
+
+Now get the month.  Here are peg mnemonics for months:
+
+| Mar     | Irish           | 4 |  St. Patrick's Day                 |
+| Apr     | Easter          | 0 |                                    |
+| May     | National        | 2 |  Memorial Day                      |
+| Jun     | Altar           | 5 |  Lots of weddings in June          |
+| Jul     | Sun or Summer   | 0 |  First full sunny month of summer  |
+| Aug     | Moon            | 3 |  Start seeing harvest moons in Aug |
+| Sep     | Job             | 6 |  Labor Day                         |
+| Oct     | Travel          | 1 |  Columbus Day                      |
+| Nov     | Restaurant      | 4 |  Eat turkey in a restaurant        |
+| Dec     | Church          | 6 |  Christmas in a church             |
+| Jan     | New             | 2 |  New-Year's Day                    |
+| Feb     | Love            | 5 |  St. Valentine's Day               |
+
+If you forget one, you can recalculate a month number by just adding up
+the 30 = 2 and 31 = 3 days from the beginning of the year in March (mod
+7, of course). The day counts for the months go like this:
+32323/32323/30, nice easy pattern, or you can sing the “30 days hath
+September, April, June, and November” ditty if you prefer. Whatever
+works.
+
+We're carrying a 1 in head.  Add a 4 for Nov, giving 5.  Almost done.
+
+29 mod 7 is 1; add our 5, we get 6.  29 Nov 1872 was a Friday.
+
+Do this a few times and check yourself against Google or
+timeanddate.com.  You'll make a few mistakes when getting started, but
+after a little while you'll be able to do it quickly and reliably.
+
+\clearpage
+* APPENDIX: All Pegs and Sound-Alikes
 <<all-pegs>>
 
-Letters for hex and Radix-64 are included in the row headers.
+Letters for hex, ASCII, and Radix-64 method-1 are included in the
+row headers.
 
 |----+---------+--------+-----------+----------+----------+----------|
 | 00 | sauce   | say-so | seas      | seesaw   | seize    | sissy    |
@@ -713,7 +1544,7 @@ Letters for hex and Radix-64 are included in the row headers.
 |    | soda    | sot    | stay      | stew     | suede    | suet     |
 |    | suit    | suite  | swat      | Swede    | sweet    | city     |
 |    | aside   | asset  | acid      | east     | haste    | host     |
-|    | waste   | west   |           |          |          |          |
+|    | waste   | west   | whist     |          |          |          |
 |----+---------+--------+-----------+----------+----------+----------|
 | 02 | sane    | scene  | seen      | sign     | sin      | soon     |
 |    | son     | snow   | sun       | swan     | swine    | sinew    |
@@ -815,8 +1646,7 @@ Letters for hex and Radix-64 are included in the row headers.
 |   P |             |            |            |           |           |             |
 |-----+-------------+------------+------------+-----------+-----------+-------------|
 | 026 | sensual     | singe      | snatch     | snitch    | snowshoe  | snow-job    |
-|     | sunshine    | censure    | cinch      | century   | ascension |             |
-|   Q |             |            |            |           |           |             |
+|   Q | sunshine    | censure    | cinch      | century   | ascension |             |
 |-----+-------------+------------+------------+-----------+-----------+-------------|
 | 027 | scenic      | sink       | sea-anchor | snack     | snake     | sneak       |
 |   R | snug        | synagogue  | zinc       | isinglass | cynic     |             |
@@ -926,7 +1756,7 @@ Letters for hex and Radix-64 are included in the row headers.
 |-----+------------+-----------+-----------+-----------+-------------+-----------|
 | 058 | salve      | salvo     | saliva    | salvage   | salvation   | slave     |
 |   w | sleeve     | self      | solve     | silver    | sliver      | sylph     |
-|     | soulfood   | soulful   | sulfur    |           |             |           |
+|     | soulfood   | soulful   | sulfur    | sluff     |             |           |
 |-----+------------+-----------+-----------+-----------+-------------+-----------|
 | 059 | sailboat   | slab      | slap      | sleep     | slip        | slipper   |
 |   x | sloop      | slop      | slope     | slowpoke  | celibacy    | celebrate |
@@ -943,8 +1773,8 @@ Letters for hex and Radix-64 are included in the row headers.
 | 062 | sash-window   | sashoon     | seashine      | sea-change  | sedge-hen   | session     |
 |   + | scission      | suasion     | switch-knife  | cession     |             |             |
 |-----+---------------+-------------+---------------+-------------+-------------+-------------|
-| 063 | sachem        | sashimi     | switchman     |             |             |             |
-|   / |               |             |               |             |             |             |
+| 063 | sashimi       | satchem     | switchman     | sea-chime   | sea-chum    |             |
+| ' / |               |             |               |             |             |             |
 |-----+---------------+-------------+---------------+-------------+-------------+-------------|
 | 064 | seashore      | saw-shark   | saw-sharpener | seizure     | sojourn     | suture      |
 |     | switcheroo    |             |               |             |             |             |
@@ -1427,10 +2257,11 @@ Letters for hex and Radix-64 are included in the row headers.
 |----+-------------+---------+---------+----------+----------+---------|
 | 62 | chain       | chin    | chine   | China    | gin      | Jane    |
 |    | John        | June    | join    | shine    | shown    | shun    |
-|    | Shawnee     | hygiene | ocean   | widgeon  |          |         |
+|  + | Shawnee     | hygiene | ocean   | widgeon  |          |         |
 |----+-------------+---------+---------+----------+----------+---------|
 | 63 | chime       | chamois | chum    | gem      | gym      | jam     |
 |    | jamb        | Jim     | sham    | shame    | shammy   | shimmy  |
+| '/ | sham        |         |         |          |          |         |
 |----+-------------+---------+---------+----------+----------+---------|
 | 64 | chair       | cheer   | cherry  | chore    | char     | edger   |
 |    | jar         | jeer    | jury    | osier    | share    | shear   |
@@ -1439,25 +2270,25 @@ Letters for hex and Radix-64 are included in the row headers.
 |    | Hoosier     |         |         |          |          |         |
 |----+-------------+---------+---------+----------+----------+---------|
 | 65 | jail        | chill   | Chile   | chili    | jelly    | jewel   |
-|    | jolly       | jowl    | July    | shall    | shell    | shawl   |
+|  A | jolly       | jowl    | July    | shall    | shell    | shawl   |
 |    | shallow     | shoal   | shill   | shyly    | agile    | usual   |
 |----+-------------+---------+---------+----------+----------+---------|
 | 66 | judge       | cha-cha | chichi  | choochoo | chowchow | jaygee  |
-|    | Jewish      | josh    | juju    | shush    | shoji    | hashish |
+|  B | Jewish      | josh    | juju    | shush    | shoji    | hashish |
 |    | wishy-washy |         |         |          |          |         |
 |----+-------------+---------+---------+----------+----------+---------|
 | 67 | check       | chalk   | cheek   | choke    | chug     | chick   |
-|    | chuck       | chic    | jack    | jock     | jockey   | Django  |
+|  C | chuck       | chic    | jack    | jock     | jockey   | Django  |
 |    | jingo       | joke    | jug     | shag     | shako    | shack   |
 |    | shake       | shock   | shuck   | sheik    | aging    | itching |
 |    | etching     | washing | wishing | watching |          |         |
 |----+-------------+---------+---------+----------+----------+---------|
 | 68 | chef        | chafe   | chaff   | chief    | chive    | Chevy   |
-|    | Java        | jayvee  | Jehovah | jiffy    | jive     | shave   |
+|  D | Java        | jayvee  | Jehovah | jiffy    | jive     | shave   |
 |    | sheaf       | shove   | achieve | wash-off |          |         |
 |----+-------------+---------+---------+----------+----------+---------|
 | 69 | chip        | chap    | chapeau | cheap    | chop     | chubby  |
-|    | GP          | gyp     | jab     | jib      | jibe     | jeep    |
+|  E | GP          | gyp     | jab     | jib      | jibe     | jeep    |
 |    | job         | Job     | shabby  | shape    | sheep    | ship    |
 |    | shop        |         |         |          |          |         |
 |----+-------------+---------+---------+----------+----------+---------|
@@ -1465,12 +2296,12 @@ Letters for hex and Radix-64 are included in the row headers.
 \clearpage
 |----+---------+---------+----------+--------+---------+-----------|
 | 70 | case    | cause   | causeway | cozy   | cuss    | chaos     |
-|    | gas     | gauze   | gaze     | goose  | guess   | guise     |
+|  F | gas     | gauze   | gaze     | goose  | guess   | guise     |
 |    | guys    | kiss    | quasi    | ax     | accuse  | acquiesce |
 |    | eggs    | hex     | hoax     | ox     | wax     |           |
 |----+---------+---------+----------+--------+---------+-----------|
 | 71 | cat     | caddie  | co-ed    | coat   | code    | cot       |
-|    | cut     | cute    | gate     | gait   | gaiety  | gat       |
+|  G | cut     | cute    | gate     | gait   | gaiety  | gat       |
 |    | gaudy   | get     | goat     | God    | good    | gout      |
 |    | guide   | goad    | ghetto   | Kate   | kid     | kite      |
 |    | kitty   | kit     | quiet    | quit   | quite   | quote     |
@@ -1478,46 +2309,46 @@ Letters for hex and Radix-64 are included in the row headers.
 |    | wicket  |         |          |        |         |           |
 |----+---------+---------+----------+--------+---------+-----------|
 | 72 | can     | cane    | canoe    | coin   | coon    | cone      |
-|    | gain    | gown    | gun      | guinea | keen    | kin       |
+|  H | gain    | gown    | gun      | guinea | keen    | kin       |
 |    | queen   | again   | acne     | agony  | awaken  | icon      |
 |    | oaken   | wagon   |          |        |         |           |
 |----+---------+---------+----------+--------+---------+-----------|
-| 73 | comb    | cam     | calm     | cameo  | coma    | comma     |
-|    | come    | game    | gam      | gum    | acme    | hokum     |
+| 73 | cam     | comb    | calm     | cameo  | coma    | comma     |
+|  I | come    | game    | gam      | gum    | acme    | hokum     |
 |    | oakum   | wigwam  |          |        |         |           |
 |----+---------+---------+----------+--------+---------+-----------|
 | 74 | car     | care    | carry    | coheir | cohere  | core      |
-|    | cower   | crew    | crow     | cry    | cur     | cure      |
+|  J | cower   | crew    | crow     | cry    | cur     | cure      |
 |    | curry   | choir   | grey     | grow   | gory    | gear      |
 |    | guru    | quarry  | queer    | quire  | acre    | agree     |
 |    | agar    | acquire | accrue   | anger  | eager   | eagre     |
 |    | ecru    | euchre  | occur    | ogre   | okra    | hiker     |
-|    | hooker  | hugger  |          |        |         |           |
+|    | hooker  | hugger  | hogger   |        |         |           |
 |----+---------+---------+----------+--------+---------+-----------|
 | 75 | coal    | call    | clay     | coil   | cool    | coolie    |
-|    | collie  | clew    | claw     | clue   | gale    | gall      |
+|  K | collie  | clew    | claw     | clue   | gale    | gall      |
 |    | gal     | galley  | glee     | glow   | glue    | goal      |
 |    | gully   | Gaul    | kale     | keel   | keyhole | kill      |
 |    | quail   | quill   | eagle    | equal  | haggle  | hackle    |
 |    | heckle  | ogle    | ugly     | weekly |         |           |
 |----+---------+---------+----------+--------+---------+-----------|
-| 76 | cash    | cage    | catch    | cache  | cachet  | cashew    |
-|    | coach   | couch   | gash     | gage   | gauge   | gush      |
+| 76 | cage    | cash    | catch    | cache  | cachet  | cashew    |
+|  L | coach   | couch   | gash     | gage   | gauge   | gush      |
 |    | gauche  | gaucho  | ketch    | kedge  | hoggish | hogwash   |
 |    | waggish |         |          |        |         |           |
 |----+---------+---------+----------+--------+---------+-----------|
 | 77 | cake    | calk    | caulk    | cock   | coke    | cook      |
-|    | cacao   | cuckoo  | cookie   | gag    | gangway | gang      |
+|  M | cacao   | cuckoo  | cookie   | gag    | gangway | gang      |
 |    | gong    | going   | goo-goo  | gook   | kaka    | kayak     |
 |    | khaki   | kick    | king     | keg    | quack   | quake     |
 |    | quick   | aching  | agog     |        |         |           |
 |----+---------+---------+----------+--------+---------+-----------|
 | 78 | cuff    | calf    | cave     | cafe   | coffee  | cough     |
-|    | cove    | covey   | gaff     | give   | goof    | guff      |
+|  N | cove    | covey   | gaff     | give   | goof    | guff      |
 |    | guffaw  | guava   | quaff    | agave  |         |           |
 |----+---------+---------+----------+--------+---------+-----------|
 | 79 | cap     | cab     | cabby    | cape   | cop     | cope      |
-|    | coop    | copy    | cowboy   | cub    | cube    | cup       |
+|  O | coop    | copy    | cowboy   | cub    | cube    | cup       |
 |    | gab     | guppy   | gap      | gape   | keep    | quip      |
 |    | hang-up | hiccup  | occupy   | okapi  | wickiup | wicopy    |
 |----+---------+---------+----------+--------+---------+-----------|
@@ -1525,25 +2356,26 @@ Letters for hex and Radix-64 are included in the row headers.
 \clearpage
 |----+--------+----------+----------+---------+-----------+---------|
 | 80 | face   | fizz     | fuse     | fusee   | fuss      | fuzz    |
-|    | vase   | vice     | vise     | visa    | voice     | phase   |
+|  P | vase   | vice     | vise     | visa    | voice     | phase   |
 |    | efface | effuse   | office   |         |           |         |
 |----+--------+----------+----------+---------+-----------+---------|
 | 81 | fat    | fate     | feat     | feed    | fade      | faith   |
-|    | fad    | feud     | fete     | fiat    | fight     | fit     |
+|  Q | fad    | feud     | fete     | fiat    | fight     | fit     |
 |    | food   | foot     | photo    | veto    | void      | voodoo  |
 |    | vote   | aft      | aphid    | avid    | afoot     | aviate  |
 |    | avoid  | evade    | effete   | ovate   | off-white | waft    |
 |----+--------+----------+----------+---------+-----------+---------|
 | 82 | fan    | fain     | fawn     | fanny   | feign     | fen     |
-|    | fin    | fine     | fun      | phone   | phony     | vain    |
+|  R | fin    | fine     | fun      | phone   | phony     | vain    |
 |    | van    | vane     | vein     | Vienna  | vine      | haven   |
 |    | heaven | hyphen   | avenue   | euphony | even      | often   |
 |    | oven   | ovine    | woven    |         |           |         |
 |----+--------+----------+----------+---------+-----------+---------|
 | 83 | fame   | foam     | fume     | vim     | ovum      |         |
+|  S |        |          |          |         |           |         |
 |----+--------+----------+----------+---------+-----------+---------|
 | 84 | fare   | fair     | fairway  | fairy   | far       | fear    |
-|    | faro   | ferry    | fiery    | fir     | fire      | fray    |
+|  T | faro   | ferry    | fiery    | fir     | fire      | fray    |
 |    | free   | fry      | fur      | furrow  | fury      | foray   |
 |    | four   | for      | foyer    | Pharaoh | vary      | very    |
 |    | viewer | veer     | afar     | affair  | affray    | aviary  |
@@ -1552,7 +2384,7 @@ Letters for hex and Radix-64 are included in the row headers.
 |    | woofer |          |          |         |           |         |
 |----+--------+----------+----------+---------+-----------+---------|
 | 85 | fall   | fail     | feel     | fell    | fellow    | file    |
-|    | fill   | filly    | flaw     | flea    | flee      | flow    |
+|  U | fill   | filly    | flaw     | flea    | flee      | flow    |
 |    | fly    | foal     | foil     | follow  | folly     | fool    |
 |    | foul   | fowl     | fuel     | full    | phial     | valley  |
 |    | value  | veal     | vial     | veil    | vail      | vile    |
@@ -1560,22 +2392,23 @@ Letters for hex and Radix-64 are included in the row headers.
 |    | hovel  | offal    | oval     | waffle  |           |         |
 |----+--------+----------+----------+---------+-----------+---------|
 | 86 | fish   | fetch    | fichu    | fuchsia | fudge     | vetch   |
-|    | vouch  | voyage   | affiche  | effigy  | offish    |         |
+|  V | vouch  | voyage   | affiche  | effigy  | offish    |         |
 |----+--------+----------+----------+---------+-----------+---------|
 | 87 | fig    | fag      | fake     | fang    | fog       | foggy   |
-|    | fogie  | vague    | viewing  | vic     | vogue     | havoc   |
+|  W | fogie  | vague    | viewing  | vic     | vogue     | havoc   |
 |    | having | heaving  | evoke    | offing  | waving    | weaving |
 |----+--------+----------+----------+---------+-----------+---------|
 | 88 | fife   | five     | fief     | viva    | half-off  |         |
+|  X |        |          |          |         |           |         |
 |----+--------+----------+----------+---------+-----------+---------|
 | 89 | fob    | faux-pas | fib      | fop     | phobia    | Phoebe  |
-|    | veep   | VIP      | half-pay |         |           |         |
+|  Y | veep   | VIP      | half-pay |         |           |         |
 |----+--------+----------+----------+---------+-----------+---------|
 
 \clearpage
 |----+---------+---------+--------+---------+--------+----------|
 | 90 | base    | pace    | pass   | pause   | peace  | piece    |
-|    | piazza  | pious   | poise  | pose    | PS     | pussy    |
+|  a | piazza  | pious   | poise  | pose    | PS     | pussy    |
 |    | bass    | basso   | bias   | boss    | booze  | boys     |
 |    | bus     | busy    | buzz   | abuse   | abyss  | apiece   |
 |    | appease | apis    | epos   | obese   | oppose | opus     |
@@ -1625,118 +2458,122 @@ Letters for hex and Radix-64 are included in the row headers.
 |    | botch   | abash    | apish  | apogee  | Apache  | hibachi |
 |----+---------+----------+--------+---------+---------+---------|
 | 97 | back    | pack     | pang   | peak    | peek    | peck    |
-|    | peg     | pick     | pig    | pike    | poke    | puck    |
+|  a | peg     | pick     | pig    | pike    | poke    | puck    |
 |    | pique   | bag      | bake   | bang    | beak    | beck    |
 |    | beg     | being    | big    | book    | bouquet | bogey   |
 |    | bog     | buck     | bug    | buggy   | aback   | epic    |
 |    | epoch   | opaque   |        |         |         |         |
 |----+---------+----------+--------+---------+---------+---------|
 | 98 | beef    | pave     | peeve  | payoff  | puff    | beehive |
-|    | behalf  | behave   | bevy   | biff    | buff    | buffo   |
+|  b | behalf  | behave   | bevy   | biff    | buff    | buffo   |
 |    | buffet  | above    | ab-ovo |         |         |         |
 |----+---------+----------+--------+---------+---------+---------|
-| 99 | baby    | pap      | peep   | pipe    | pip     | pop     |
-|    | pope    | papa     | poppy  | puppy   | babe    | bib     |
+| 99 | pipe    | pap      | peep   | baby    | pip     | pop     |
+|  c | pope    | papa     | poppy  | puppy   | babe    | bib     |
 |    | bob     | bobby    | boob   | boo-boo | booby   | bop     |
 |    | hubbub  |          |        |         |         |         |
 |----+---------+----------+--------+---------+---------+---------|
 
 \clearpage
-|-----+--------------+-------------+--------------+--------------+----------------+-------------|
-| 100 | thesis       | decease     | decisive     | desist       | disaster       | disease     |
-|     | disuse       | dissuasive  | daisies      | deuces       | doses          | diocese     |
-|-----+--------------+-------------+--------------+--------------+----------------+-------------|
-| 101 | toast        | tacit       | taste        | test         | testimony      | Tuesday     |
-|     | twist        | deceit      | decide       | deist        | destiny        | destitute   |
-|     | destruct     | distance    | distaste     | distinct     | distinguish    | distract    |
-|     | distress     | distribute  | district     | distrust     | disturb        | dust        |
-|     | atheist      | attest      | audacity     | outside      |                |             |
-|-----+--------------+-------------+--------------+--------------+----------------+-------------|
-| 102 | dozen        | decent      | descent      | design       | dishonest      | disinclined |
-|     | disinfect    | disinterest | disown       | dissent      | dissonant      | dizziness   |
-|     | Whitsunday   | Docent      |              |              |                |             |
-|-----+--------------+-------------+--------------+--------------+----------------+-------------|
-| 103 | twosome      | theism      | deism        | decimal      | disembark      | dismay      |
-|     | dismember    | December    | dismiss      | dismount     | dissemble      | dissimilar  |
-|     | atheism      | decimeter   | decimate     |              |                |             |
-|-----+--------------+-------------+--------------+--------------+----------------+-------------|
-| 104 | dicer        | thesaurus   | desert       | dessert      | deserve        | desire      |
-|     | disarm       | disarrange  | discern      | dishearten   | disorder       | disregard   |
-|     | disreputable | disroot     | dissertation | disrobe      | disrupt        | douser      |
-|     | dowser       |             |              |              |                |             |
-|-----+--------------+-------------+--------------+--------------+----------------+-------------|
-| 105 | tassel       | diesel      | dazzle       | desolate     | disillusion    | dislike     |
-|     | dislocate    | dissolve    | docile       | deciliter    | disloyal       | white-sale  |
-|-----+--------------+-------------+--------------+--------------+----------------+-------------|
-| 106 | dosage       | decision    | discharge    | dissuasion   | autosuggestion | wood-sage   |
-|-----+--------------+-------------+--------------+--------------+----------------+-------------|
-| 107 | tusk         | task        | desk         | disk         | discolor       | discomfort  |
-|     | disclose     | disconnect  | discontent   | discord      | discount       | discourage  |
-|     | discourse    | discover    | discrete     | discriminate | discuss        | disgrace    |
-|     | disguise     | disgust     | disquiet     | dusk         | outskirts      | doeskin     |
-|-----+--------------+-------------+--------------+--------------+----------------+-------------|
-| 108 | tea-sieve    | theosophy   | deceive      | decipher     | disaffect      | disavow     |
-|     | disfigure    | disfavor    | adhesive     | satisfaction |                |             |
-|-----+--------------+-------------+--------------+--------------+----------------+-------------|
-| 109 | teaspoon     | thespian    | toss-up      | despot       | despair        | deception   |
-|     | decibel      | despite     | despond      | disabled     | diaspora       | disappear   |
-|     | disappoint   | disapprove  | disciple     | disobey      | dispatch       | dispense    |
-|     | dispel       | disperse    | display      | displace     | displease      | disposal    |
-|     | disposition  | dissipate   |              |              |                |             |
-|-----+--------------+-------------+--------------+--------------+----------------+-------------|
+|-----+--------------+-------------+--------------+--------------+-------------+-------------|
+| 100 | thesis       | decease     | decisive     | desist       | disaster    | disease     |
+|   d | disuse       | dissuasive  | daisies      | deuces       | doses       | diocese     |
+|-----+--------------+-------------+--------------+--------------+-------------+-------------|
+| 101 | toast        | tacit       | taste        | test         | testimony   | Tuesday     |
+|   e | twist        | deceit      | decide       | deist        | destiny     | destitute   |
+|     | destruct     | distance    | distaste     | distinct     | distinguish | distract    |
+|     | distress     | distribute  | district     | distrust     | disturb     | dust        |
+|     | atheist      | attest      | audacity     | outside      |             |             |
+|-----+--------------+-------------+--------------+--------------+-------------+-------------|
+| 102 | dozen        | decent      | descent      | design       | dishonest   | disinclined |
+|   f | disinfect    | disinterest | disown       | dissent      | dissonant   | dizziness   |
+|     | Whitsunday   | Docent      | dissonance   |              |             |             |
+|-----+--------------+-------------+--------------+--------------+-------------+-------------|
+| 103 | twosome      | theism      | deism        | decimal      | disembark   | dismay      |
+|   g | dismember    | December    | dismiss      | dismount     | dissemble   | dissimilar  |
+|     | atheism      | decimeter   | decimate     |              |             |             |
+|-----+--------------+-------------+--------------+--------------+-------------+-------------|
+| 104 | dowser       | thesaurus   | desert       | dessert      | deserve     | desire      |
+|   h | disarm       | disarrange  | discern      | dishearten   | disorder    | disregard   |
+|     | disreputable | disroot     | dissertation | disrobe      | disrupt     | douser      |
+|     | dicer        |             |              |              |             |             |
+|-----+--------------+-------------+--------------+--------------+-------------+-------------|
+| 105 | diesel       | tassel      | dazzle       | desolate     | disillusion | dislike     |
+|   i | dislocate    | dissolve    | docile       | deciliter    | disloyal    | white-sale  |
+|-----+--------------+-------------+--------------+--------------+-------------+-------------|
+| 106 | wood-sage    | dosage      | decision     | discharge    | dissuasion  | autosuggest |
+|   j |              |             |              |              |             |             |
+|-----+--------------+-------------+--------------+--------------+-------------+-------------|
+| 107 | tusk         | task        | desk         | disk         | discolor    | discomfort  |
+|   k | disclose     | disconnect  | discontent   | discord      | discount    | discourage  |
+|     | discourse    | discover    | discrete     | discriminate | discuss     | disgrace    |
+|     | disguise     | disgust     | disquiet     | dusk         | outskirts   | doeskin     |
+|-----+--------------+-------------+--------------+--------------+-------------+-------------|
+| 108 | adhesive     | theosophy   | deceive      | decipher     | disaffect   | disavow     |
+|   l | disfigure    | disfavor    | tea-sieve    | satisfaction |             |             |
+|-----+--------------+-------------+--------------+--------------+-------------+-------------|
+| 109 | teaspoon     | thespian    | toss-up      | despot       | despair     | deception   |
+|   m | decibel      | despite     | despond      | disabled     | diaspora    | disappear   |
+|     | disappoint   | disapprove  | disciple     | disobey      | dispatch    | dispense    |
+|     | dispel       | disperse    | display      | displace     | displease   | disposal    |
+|     | disposition  | dissipate   | desperate    | desperation  |             |             |
+|-----+--------------+-------------+--------------+--------------+-------------+-------------|
 
 \clearpage
-|-----+--------------+-------------+-------------+------------+------------+-------------|
-| 110 | tights       | tedious     | toothsome   | tootsy     | deduce     | detest      |
-|     | statesman    | status      | statistical | studious   |            |             |
-|-----+--------------+-------------+-------------+------------+------------+-------------|
-| 111 | teetotaler   | tete-a-tete | tidied      | dietetic   | day-duty   | deadwood    |
-|     | doodad       | dotted      | doubted     | attitude   | audited    | outwitted   |
-|-----+--------------+-------------+-------------+------------+------------+-------------|
-| 112 | Titan        | Titanic     | tetanus     | tea-dance  | two-tone   | tidiness    |
-|     | tighten      | deaden      | detain      | detonate   | dead-end   | sedateness  |
-|     | steadiness   | stoutness   | student     |            |            |             |
-|-----+--------------+-------------+-------------+------------+------------+-------------|
-| 113 | diadem       | teatime     | two-timer   | tedium     | TeDeum     | totem       |
-|     | datum        | daytime     | stadium     |            |            |             |
-|-----+--------------+-------------+-------------+------------+------------+-------------|
-| 114 | Tatar        | tater       | tea-tray    | tatter     | theater    | thither     |
-|     | tooter       | totter      | tutor       | dater      | daughter   | deter       |
-|     | deteriorate  | determine   | detract     | detriment  | daydreamer | diatribe    |
-|     | auditor      | editor      | headwater   | hot-water  | stutter    |             |
-|-----+--------------+-------------+-------------+------------+------------+-------------|
-| 115 | tattle       | title       | tittle      | tidal      | tootle     | titillate   |
-|     | total        | dawdle      | doodle      | dateline   | deadline   | dead-letter |
-|     | deadly       | detail      | thoughtless | state-line |            |             |
-|-----+--------------+-------------+-------------+------------+------------+-------------|
-| 116 | detach       | deathwatch  | death-wish  | dotage     | hot-dish   | dead-issue  |
-|-----+--------------+-------------+-------------+------------+------------+-------------|
-| 117 | tie-tack     | toothache   | dating      | dedicate   | deduct     | detect      |
-|     | detective    | tidings     | hot-dog     | idiotic    |            |             |
-|-----+--------------+-------------+-------------+------------+------------+-------------|
-| 118 | tutti-frutti | thoughtful  | dative      | dutiful    | dutyfree   | deadfall    |
-|     | additive     | auditive    | auto-da-fe  | sedative   |            |             |
-|-----+--------------+-------------+-------------+------------+------------+-------------|
-| 119 | tadpole      | tea-table   | teddy-bear  | toothpick  | tidbit     | toothbrush  |
-|     | deadbeat     | deadpan     | deathbed    | ditty-bag  |            |             |
-|-----+--------------+-------------+-------------+------------+------------+-------------|
+|-----+-------------+-------------+----------------+------------+------------+-------------|
+| 110 | tights      | tedious     | toothsome      | tootsy     | deduce     | detest      |
+|   n | statesman   | status      | statistical    | studious   |            |             |
+|-----+-------------+-------------+----------------+------------+------------+-------------|
+| 111 | teetotaler  | tete-a-tete | tidied         | dietetic   | day-duty   | deadwood    |
+|   o | doodad      | dotted      | doubted        | attitude   | audited    | outwitted   |
+|     | autodidact  |             |                |            |            |             |
+|-----+-------------+-------------+----------------+------------+------------+-------------|
+| 112 | Titan       | Titanic     | tetanus        | tea-dance  | two-tone   | tidiness    |
+|   p | tighten     | deaden      | detain         | detonate   | dead-end   | sedateness  |
+|     | steadiness  | stoutness   | student        |            |            |             |
+|-----+-------------+-------------+----------------+------------+------------+-------------|
+| 113 | totem       | teatime     | two-timer      | tedium     | TeDeum     | diadem      |
+|   q | datum       | daytime     | stadium        |            |            |             |
+|-----+-------------+-------------+----------------+------------+------------+-------------|
+| 114 | Tatar       | tater       | tea-tray       | tatter     | theater    | thither     |
+|   r | tooter      | totter      | tutor          | dater      | daughter   | deter       |
+|     | deteriorate | determine   | detract        | detriment  | daydreamer | diatribe    |
+|     | auditor     | editor      | headwater      | hot-water  | stutter    |             |
+|-----+-------------+-------------+----------------+------------+------------+-------------|
+| 115 | title       | tattle      | tittle         | tidal      | tootle     | titillate   |
+|   s | total       | dawdle      | doodle         | dateline   | deadline   | dead-letter |
+|     | deadly      | detail      | thoughtless    | state-line |            |             |
+|-----+-------------+-------------+----------------+------------+------------+-------------|
+| 116 | deathwatch  | detach      | death-wish     | dotage     | hot-dish   | dead-issue  |
+|   t |             |             |                |            |            |             |
+|-----+-------------+-------------+----------------+------------+------------+-------------|
+| 117 | hotdog      | toothache   | dating (Krill) | dedicate   | deduct     | detect      |
+|   u | detective   | tidings     | tie-tack       | idiotic    | dedication | didact      |
+|     | didactic    |             |                |            |            |             |
+|-----+-------------+-------------+----------------+------------+------------+-------------|
+| 118 | auto-da-fe  | thoughtful  | dative         | dutiful    | dutyfree   | deadfall    |
+|   v | additive    | auditive    | tutti-frutti   | sedative   |            |             |
+|-----+-------------+-------------+----------------+------------+------------+-------------|
+| 119 | teddy-bear  | tea-table   | tadpole        | toothpick  | tidbit     | toothbrush  |
+|   w | deadbeat    | deadpan     | deathbed       | ditty-bag  |            |             |
+|-----+-------------+-------------+----------------+------------+------------+-------------|
 
 \clearpage
 |-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 120 | tinsel       | tenacity    | tennis      | tense        | thence       | tonsil       |
-|     | dance        | dense       | dunce       | ad-nauseam   | Adonis       | Athens       |
+| 120 | dance        | tenacity    | tennis      | tense        | thence       | tonsil       |
+|   x | tinsel       | dense       | dunce       | ad-nauseam   | Adonis       | Athens       |
 |     | audience     | haughtiness | dynasty     | utensil      | whiteness    | witness      |
 |     | sadness      |             |             |              |              |              |
 |-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 121 | tent         | taint       | taunt       | tenth        | tendon       | tend         |
-|     | thunder      | tint        | tender      | twenty       | TNT          | twi-night    |
+| 121 | donut        | taint       | taunt       | tenth        | tendon       | tend         |
+|   y | thunder      | tint        | tender      | twenty       | TNT          | twi-night    |
 |     | tantalize    | dainty      | dandy       | denote       | dent         | dentist      |
-|     | denude       | dint        | doughnut    | dwindle      | attend       | authentic    |
+|     | denude       | dint        | tent        | dwindle      | attend       | authentic    |
 |     | addendum     | identical   | identify    | whodunit     | stand        | stint        |
 |     | astound      |             |             |              |              |              |
 |-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 122 | tenant       | tenon       | teeny-weeny | denounce     | adonian      | Athenian     |
-|     | hootenanny   |             |             |              |              |              |
+| 122 | Athenian     | tenon       | teeny-weeny | denounce     | adonian      | tenant       |
+|   z | hootenanny   |             |             |              |              |              |
 |-----+--------------+-------------+-------------+--------------+--------------+--------------|
 | 123 | thin-man     | tonometer   | tenement    | town-meeting | denim        | Denmark      |
 |     | denomination | dynamo      | dynamite    | atonement    | attainment   | autonomy     |
@@ -1959,7 +2796,7 @@ Letters for hex and Radix-64 are included in the row headers.
 | 171 | teakettle    | tact       | thicket     | ticktack   | ticket      | together       |
 |     | teakwood     | tag-day    | decadent    | decade     | decode      | docket         |
 |     | dictate      | decathlon  | doctor      | ductile    | dogwood     | adequate       |
-|     | edict        | etiquette  | educator    |            |             |                |
+|     | edict        | etiquette  | educator    | tactic     | tactical    |                |
 |-----+--------------+------------+-------------+------------+-------------+----------------|
 | 172 | token        | tea-wagon  | tycoon      | taken      | thicken     | thickness      |
 |     | technical    | toucan     | deacon      | decanter   | dignity     | stagnant       |
