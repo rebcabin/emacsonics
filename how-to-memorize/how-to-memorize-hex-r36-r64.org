@@ -117,9 +117,55 @@
 # #+STARTUP: latexpreview inlineimages showall
 # #+STARTUP: showall
 
-#+TITLE: How to Memorize Credit Cards, GUIDs, Hashes, Public Keys, and More
+#+TITLE: How to Memorize Credit Cards, GUIDs, Hashes, Public Keys, and More --- Revision 4
 #+AUTHOR: Brian Beckman
-#+DATE: 12 May 2022
+#+DATE: 17 May 2022
+
+#+BEGIN_SRC elisp :exports none
+  (setq org-babel-python-command "python3")
+  (setq org-image-actual-width nil)
+  (setq org-confirm-babel-evaluate nil)
+  (setq org-src-yfontify-natively t)
+  (add-to-list 'org-latex-packages-alist '("" "listingsutf8"))
+  (setq org-export-latex-listings 'minted)
+  (setq org-latex-listings 'minted
+        org-latex-packages-alist '(("" "minted"))
+        org-latex-pdf-process
+        '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+          "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
+          "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((ditaa . t) (latex . t)))
+  (setq org-plantuml-jar-path
+      (expand-file-name "/usr/share/plantuml/plantuml.jar"))
+
+  ; (conda-env-activate "whl-meson-build")
+
+  (princ (concat (format "Emacs version: %s\n" (emacs-version))
+                 (format "org version: %s\n" (org-version))))
+#+END_SRC
+
+#+RESULTS:
+: Emacs version: GNU Emacs 28.1 (build 2, aarch64-apple-darwin21.4.0, NS appkit-2113.40 Version 12.3.1 (Build 21E258))
+:  of 2022-04-12
+: org version: 9.5.2
+
+* Change log
+
+- Revision 3
+
+  - includes some sound-alikes and peg candidates from John D.
+    Cook, plus a hint from him that science fiction is a
+    worthwhile fount of sound-alikes
+
+  - begins promoting the first row in each table to "preferred sound
+    alikes"
+
+- Revision 4
+
+  - includes remarks about passwords and mental hash functions from John
+    D. Cook
 
 * Introduction
 
@@ -128,24 +174,31 @@ or mental cartoon movies via the Mnemonic Major System:
 
 https://en.wikipedia.org/wiki/Mnemonic_major_system
 
-which I call the "peg system."
+which I merged with the "peg system."
 
 My hallucinations come with synaesthesia: smells, heat, texture, colors,
-brightness, etc. I use only imagination, no drugs. Many memory athletes
-do not use synaesthesia.
+brightness, etc. I use only imagination, no drugs. Many memory
+practitioners do not use synaesthesia, but they help me.
 
 Krill calls the inputs for such hallucinations "phantasmagorishables,"
 a portmanteau that encodes the digits 8210 3746 95.
 
 https://folk.ntnu.no/krill/pseudonumerology.htm
 
-My methods are based on the table of pegs (permanent, immutable
-picture words) and sound-alikes in Section [[all-pegs]] of this
-document, after the Appendices.
+My methods are based on the table of
+
+- pegs :: permanent, immutable picture words in one-to-one
+  correspondence to the numbers
+
+- sound-alikes :: fluid, mutable list of picture words that are similar
+  in consonant sounds to the pegs and in many-to-one correspondence to
+  the numbers.
+
+See Section [[all-pegs]] of this document, after the Appendices.
 
 For radices beyond decimal, I choose a mapping from alphabetic glyphs to
-ASCII because I already have the mapping memorized for instant, bidirectional
-recall (Section [[daily-practice]]).
+ASCII because I already have the mapping memorized for instant,
+bidirectional recall (Section [[daily-practice]]).
 
 In appendices, I show some alternative mappings for people who
 don't have ASCII memorized.
@@ -154,20 +207,20 @@ don't have ASCII memorized.
 
 This is the easiest example in this document. For decimal, the pegs are:
 
-|-------+------+---------------------------------------------------+-------------------------|
-| digit | peg  | mnemonic                                          | sound-alike rules       |
-|-------+------+---------------------------------------------------+-------------------------|
-|     0 | saw  | circular saw, round like "0"                      | s, z                    |
-|     1 | tea  | giant Disneyland teacup; "t" looks like "1"       | d, th, dh (them)        |
-|     2 | Noah | ... and the Ark; "n" has 2 legs                   | ng (Krill, nk is 27)    |
-|     3 | me   | ... in the mirror tying a bow tie; "m" has 3 legs |                         |
-|     4 | ray  | this one is har to remember; just brute-force it  |                         |
-|     5 | law  | 5 fingers as the cop holds up his hand            |                         |
-|     6 | jaw  | "6" looks like Lurch's lantern jaw                | sh, ch, zh (pleasure)   |
-|     7 | key  | "7" looks like an Allen key                       | g, ng (Furst, nk is 27) |
-|     8 | fee  | "8" looks like a dollar sign                      | f, v                    |
-|     9 | pea  | The Princess and the Pea: 9 mattresses            | p, b                    |
-|-------+------+---------------------------------------------------+-------------------------|
+|-------+------+-----------------------------------------------------+-------------------------|
+| digit | peg  | mnemonic                                            | sound-alike rules       |
+|-------+------+-----------------------------------------------------+-------------------------|
+|     0 | saw  | circular saw, segment of sawed log; round like "0"  | s, z                    |
+|     1 | tea  | giant Disneyland teacup; "t" looks like "1"         | d, th, dh (them)        |
+|     2 | Noah | ... and the Ark; "n" has 2 legs                     | ng (Krill, nk is 27)    |
+|     3 | me   | ... in the mirror tying a bow tie; "m" has 3 legs   |                         |
+|     4 | ray  | this one is hard to remember; just brute-force it   |                         |
+|     5 | law  | 5 fingers as the cop holds up his hand              |                         |
+|     6 | jaw  | "6" looks like Lurch's lantern jaw                  | sh, ch, zh (pleasure)   |
+|     7 | key  | "7" looks like an Allen key                         | g, ng (Furst, nk is 27) |
+|     8 | fee  | "8" looks like a dollar sign                        | f, v                    |
+|     9 | pea  | The Princess and the Pea: 9 mattresses              | p, b                    |
+|-------+------+-----------------------------------------------------+-------------------------|
 
 Find specific sound-alikes in Section [[all-pegs]].
 
@@ -281,7 +334,7 @@ Hallucinate a "hell-chef sauce," a recipe for a naive (28),
 gullible, unsuspecting victim. We seeded this hallucination from that
 one word, "naive."
 
-| 5D00E7AA | HELL-chef sauce: CHOP, HACK, and CHILL the JELLY. |
+| 5D00E7AA | HELL-chef SAUCE: CHOP, HACK, and CHILL the JELLY. |
 | C15C     | SHAKE with TALLOW, CHECK                          |
 | 44A5     | the RARE CHILI OIL.                               |
 | 93FA     | "BE-MY HAGGIS, JILL!"                             |
@@ -294,11 +347,11 @@ From https://onlinehashtools.com, consider the following, 160-bit
 hash: For git, it practically suffices to remember the first 8
 hexits. Let's do them all as a workout:
 
-| a638 1b63 | jail camel tea judge chime     |
-| d532 69ba | chef lemon jaw pea judge jail  |
-| 418e 5fb1 | artful chip law case judge tea |
-| bd50 3950 | judge chef wholesome pillows   |
-| 860d d679 | fishes chef chef checkup       |
+| A638 | 1B63 | jail camel tea judge chime     |
+| D532 | 69BA | chef lemon jaw pea judge jail  |
+| 418E | 5FB1 | artful chip law case judge tea |
+| BD50 | 3950 | judge chef wholesome pillows   |
+| 860D | D679 | fishes chef chef checkup       |
 
 *Notes*
 
@@ -314,11 +367,11 @@ hexits. Let's do them all as a workout:
 Let's bribe a judge and put him to sleep with hash (puns help the
 memory), then summon middle-Eastern heavenly dreams.
 
-| a638 1b63 | with SHAWL and CAMEL, TEA for the JUDGE, JIM. |
-| d532 69ba | SHAVE a LEMON WEDGE, PAY the JUDGE to CHILL.  |
-| 418e 5fb1 | an ARTFUL SHAPE of this LAW CASE, SHUSH THEE! |
-| bd50 3950 | HASHISH ACHIEVES ELYSIUM BLESSINGS            |
-| 860d d679 | FETCH the CHIEF, JEHOVAH for JACOB!           |
+| A638 | 1B63 | with SHAWL and CAMEL, TEA for the JUDGE, JIM. |
+| D532 | 69BA | SHAVE a LEMON WEDGE, PAY the JUDGE to CHILL.  |
+| 418E | 5FB1 | an ARTFUL SHAPE of this LAW CASE, SHUSH THEE! |
+| BD50 | 3950 | HASHISH ACHIEVES ELYSIUM BLESSINGS            |
+| 860D | D679 | FETCHES the CHIEF, JEHOVAH for JACOB!         |
 
 \clearpage
 * Radix 36: Spack
@@ -331,7 +384,7 @@ case-sensitive, so Radix-64 is overkill and sucks up alternatives.
 For encoding /rixits/ in radix-36 (or biscuits in base-36?), add the
 remaining capital letters and their sound-alikes from Section [[all-pegs]].
 Radix-36 is case-insensitive, by design, so we only need one set of
-letters. In Radix-64, we need both cases.
+letters. For Radix-64, we need both cases.
 
 |---+----------+----+------+---------------------------------------------------|
 | G | GOLF     | 71 | cat  | on the golf cart with my twosome*                 |
@@ -395,17 +448,17 @@ linux-ubuntu18.04-haswell/gcc-7.5.0/gdbm-1.19-rdt674nck5k5hbawjaywb4mv4r72osnq
 Pegs first, except cheat on pronounceable subsequences or others
 that appeal to your personal memory!
 
-| RDT6 74NC | REDDIT jaw key ray cuff chalk               |
-| K5K5 HBAW | coal law coal law, can judge jail fig       |
-| JAYW B4MV | JAY fig, BEFORE MOVIE (judge ray cake fish) |
-| 4R72 OSNQ | ray fan key Noah, face fame cuff fat.       |
+| RDT6 | 74NC | REDDIT jaw key ray cuff chalk               |
+| K5K5 | HBAW | coal law coal law, can judge jail fig       |
+| JAYW | B4MV | JAY fig, BEFORE MOVIE (judge ray cake fish) |
+| 4R72 | OSNQ | ray fan key Noah, face fame cuff fat.       |
 
 How about a tale of canceling on social media?
 
-| RDT6 74NC | REDDIT is AHUSH, a COY WAR, GOOFY and SHOCKING.      |
-| K5K5 HBAW | KILL ILL, UGLY WILL; AGONY SHUSH the SHILL, the FAKE |
-| JAYW B4MV | JAY-bird FAKE, BEFORE MOVIE                          |
-| 4R72 OSNQ | OUR FAN GUY NOAH, with VOICE FAIR, GIVE FIGHT!       |
+| RDT6 | 74NC | REDDIT is AHUSH, a COY WAR, GOOFY and SHOCKING.      |
+| K5K5 | HBAW | KILL ILL, UGLY WILL; AGONY SHUSH the SHILL, the FAKE |
+| JAYW | B4MV | JAY-bird FAKE, BEFORE MOVIE                          |
+| 4R72 | OSNQ | OUR FAN GUY NOAH, with VOICE FAIR, GIVE FIGHT!       |
 
 *Notes*
 
@@ -466,7 +519,7 @@ special cases for "+", 62, and "/", 63.
 Don't bother encoding AAAA, which precede and follow a canonical
 prefix of 16 rixits for (supposedly) a machine-specific part of
 the key. With the remaining 44 rixits and 8 for the two AAAAs, we
-get the required 68. We have 60 to encode
+get the required 68 rixits. We have 60 rixits to encode.
 
 #+begin_example
 ssh-ed25519
@@ -477,44 +530,106 @@ C6RD 1/Qn tXQg BV3m pUZq
 
 Pegs first, then try sound-alikes:
 
-| C3Nz aC1l | chalk me cuff Athenian, back chalk tea tea          |
-| ZDI1 NTE5 | base chef cam tea, cuff fare chip law               |
-| IFi4 CpLS | cam case diesel ray, chalk titan cage fame          |
-| hSK/ uUux | dowser fame coal chime, hotdog fall hotdog dance    |
-| BxM3 6WwK | judge dance cake me, jaw fig teddy-bear coal        |
-| C6RD 1/Qn | chalk jaw fan chef, tea chime fat tights            |
-| tXQg BV3m | deathwatch fife fat twosome, judge fish me teaspoon |
-| pUZq      | titan fall base totem                               |
+| C3Nz | aC1l | chalk me cuff Athenian, back chalk tea tea          |
+| ZDI1 | NTE5 | base chef cam tea, cuff fare chip law               |
+| IFi4 | CpLS | cam case diesel ray, chalk titan cage fame          |
+| hSK/ | uUux | dowser fame coal chime, hotdog fall hotdog dance    |
+| BxM3 | 6WwK | judge dance cake me, jaw fig teddy-bear coal        |
+| C6RD | 1/Qn | chalk jaw fan chef, tea chime fat tights            |
+| tXQg | BV3m | deathwatch fife fat twosome, judge fish me teaspoon |
+| pUZq |      | titan fall base totem                               |
 
-A tale of overeating
+A tale of overeating:
 
-| C3Nz aC1l | CHALK picture, ME adjusting CUFFS, looking down my ATHENIAN nose. |
-|           | Turn my BACK, another CHALK picture; my TIE is TOO tight.         |
-|           |                                                                   |
-| ZDI1 NTE5 | On BASE, now. A CHEF flips burgers with a CAMSHAFT and brews TEA. |
-|           | COFFEE, FAIR-traded! SHOPPED WELL.                                |
-|           |                                                                   |
-| IFi4 CpLS | The CAMSHAFT stirs EGGS, a DAZZLING omelet, ROE and               |
-|           | JACK. I'll be a TWO-TON and KEDGE to bed: HEAVE-HIM!              |
-|           |                                                                   |
-| hSK/ uUux | DESSERTS? WHIFF-EM! CALL a dentist, JIM! my TOOTHACHE             |
-|           | JIM! My TOOTHACHE FEELS like a TOOTHACHE, DUNCE!                  |
-|           |                                                                   |
-| BxM3 6WwK | CHOW-CHOW! DUNCE CAKE for ME.                                     |
-|           | JAW a FIG and a TOOTHPICK, COOL!                                  |
-|           |                                                                   |
-| C6RD 1/Qn | CHECK my JAW OFTEN, FAWN CHEF. TO SHAME FOOD TADS.                |
-|           |                                                                   |
-| tXQg BV3m | DEATH-WISH? VIVA my FAT TWOSOME. SHUSH, VETCH, MY TEASPIT.        |
-|           |                                                                   |
-| pUZq      | I'm a TWO-TON, I'll FALL BESIDE the DAYTIME.                      |
+| C3Nz | aC1l | CHALK picture, ME adjusting CUFFS, looking down my ATHENIAN nose. |
+|      |      | Turn my BACK, another CHALK picture; my TIE is TOO tight.         |
+|      |      |                                                                   |
+| ZDI1 | NTE5 | On BASE, now. A CHEF flips burgers with a CAMSHAFT and brews TEA. |
+|      |      | COFFEE, FAIR-traded! SHOPPED WELL.                                |
+|      |      |                                                                   |
+| IFi4 | CpLS | The CAMSHAFT stirs EGGS, a DAZZLING omelet, ROE and               |
+|      |      | JACK. I'll be a TWO-TON and KEDGE to bed: HEAVE-HIM!              |
+|      |      |                                                                   |
+| hSK/ | uUux | DESSERTS? WHIFF-EM! CALL a dentist, JIM! my TOOTHACHE             |
+|      |      | JIM! My TOOTHACHE FEELS like a TOOTHACHE, DUNCE!                  |
+|      |      |                                                                   |
+| BxM3 | 6WwK | CHOW-CHOW! DUNCE CAKE for ME.                                     |
+|      |      | JAW a FIG and a TOOTHPICK, COOL!                                  |
+|      |      |                                                                   |
+| C6RD | 1/Qn | CHECK my JAW OFTEN, FAWN CHEF. TO SHAME FOOD TADS.                |
+|      |      |                                                                   |
+| tXQg | BV3m | DEATH-WISH? VIVA my FAT TWOSOME. SHUSH, VETCH, MY TEASPIT.        |
+|      |      |                                                                   |
+| pUZq |      | I'm a TWO-TON, I'll FALL BESIDE the DAYTIME.                      |
 
 \clearpage
+* P
+* COMMENT Mental Hash Functions
+
+John D. Cook recently blogged about Manuel Blum's proposed hash
+function that can be computed mentally:
+
+\vskip 0.26cm
+#+begin_src python :results output :exports both
+  from numpy.random import default_rng
+  from pprint import pprint
+  rng = default_rng(20220516)
+  fdata = rng.integers(10, size=26)
+  # pprint({"alphadigits": list(zip(range(1, 27), fdata))})
+  def f(ch):
+      r"""Map a character to a random number in [0..9]."""
+      ch = ch.lower()
+      return fdata[ord(ch) - ord('a')]
+  gdata = rng.permutation(10)
+  print({"permutation": gdata})
+  def g(n):
+      r"""Get from gdata the character after
+      the given one, wrapping. This permutation
+      has no fixed points."""
+      i = list(gdata).index(n % 10)
+      result = gdata[(i+1) % 10]
+      assert result != n
+      return result
+  def hash(text):
+      digits = [f(c) for c in text]
+      print({"digits": list(digits)})
+      N = len(text)
+      out = [0] * N
+      out[0] = g(digits[0] + digits[-1])
+      for i in range(1, N):
+          out[i] = g(out[i-1] + digits[i])
+      return "".join(str(d) for d in out)
+
+  print({"hash": hash("hello")})
+#+end_src
+
+#+RESULTS:
+: {'permutation': array([6, 5, 7, 9, 0, 8, 4, 2, 1, 3])}
+: {'digits': [5, 1, 9, 9, 9]}
+: {'hash': '26752'}
+
+#+begin_comment
+  def fp_free_permutation(i, p, n):
+      result = i
+      for j in range(n):
+          result = gdata[(result + p) % 10]
+      # assert result != i, {"result": result, "i": i, "p": p, "n": n}
+      if result == i:
+          print({"i": i, "p": p, "n": n})
+      return result
+
+  for i in rng.integers(10, size=26):
+      for p in range(1, 10):
+          for n in range(1, 10):
+              fp_free_permutation(i, p, n)
+
+#+end_comment
+
 * APPENDICES
 
 ** Pegs and Hallucinations
 
-I blogged out the basics of the peg method here:
+I blogged out the basics of my peg method here:
 
 https://rebcabin.wordpress.com/2010/11/21/memory-pegs/
 
@@ -1534,63 +1649,66 @@ after a little while you'll be able to do it quickly and reliably.
 
 Letters for hex, ASCII, and R36, R64 alternative methods are
 included in the row headers. My personal permanent peg words are
-first in each block and in all-caps. I don't (yet) have a
-memorized peg for every number, just for the useful ones. I pick
-pegs that don't collide visually with the most frequent ones. I
-already have CHAIR for 64 (used all the time), so SEAT for 01 and
-THRONE for 142, both rare, are not good ideas because they might
-incorrectly recall 64 at speed.
+first in each block and in all-caps. My short-list of preferred
+sound-alikes are in the first row of each table.
 
-|----+---------+--------+-----------+----------+------------+----------|
-| 00 | SAUCE   | say-so | seas      | seesaw   | seize      | sissy    |
-|    | size    | assess | assize    | houses   | icehouse   | oasis    |
-|    | sass    | sassy  |           |          |            |          |
-|----+---------+--------+-----------+----------+------------+----------|
-| 01 | SOD     | sad    | seedy     | seat     | side       | sight    |
-|    | sit     | site   | settee    | soot     | sooth      | south    |
-|    | soda    | sot    | stay      | stew     | suede      | suet     |
-|    | suit    | suite  | swat      | Swede    | sweet      | city     |
-|    | aside   | asset  | acid      | east     | haste      | host     |
-|    | waste   | west   | whist     | seed     | seedy      |          |
-|----+---------+--------+-----------+----------+------------+----------|
-| 02 | SIGN    | scene  | seen      | sun      | sin        | soon     |
-|    | son     | snow   | sane      | swan     | swine      | sinew    |
-|    | hosanna | zone   | ozone     | assign   |            |          |
-|----+---------+--------+-----------+----------+------------+----------|
-| 03 | SEAM    | seem   | seem      | semi     | some       | somehow  |
-|    | sum     | swami  | swim      | assume   | asthma     | psalm    |
-|----+---------+--------+-----------+----------+------------+----------|
-| 04 | SOAR    | sewer  | sir       | soiree   | sore       | sorry    |
-|    | sorrow  | sour   | zero      | czar     | eyesore    | hawser   |
-|    | hussar  | wiser  | seer      |          |            |          |
-|----+---------+--------+-----------+----------+------------+----------|
-| 05 | SAIL    | sale   | seal      | sell     | sill       | silly    |
-|    | slay    | slaw   | sleigh    | slow     | sly        | soil     |
-|    | sole    | solo   | soul      | cell     | assail     | easel    |
-|    | easily  | hazel  | hassle    | swallow  | weasel     | whistle  |
-|----+---------+--------+-----------+----------+------------+----------|
-| 06 | SASH    | sage   | sashay    | sedge    | sewage     | siege    |
-|    | such    | swatch | switch    | assuage  | ice-age    | ice-show |
-|    | usage   |        |           |          |            |          |
-|----+---------+--------+-----------+----------+------------+----------|
-| 07 | SACK    | sake   | seek      | sea-cow  | sick       | scow     |
-|    | sago    | ski    | sky       | suck     | soak       | soggy    |
-|    | sock    | squaw  | assegai   | ask      | hoosegow   | housing  |
-|    | husky   | icing  | whiskey   | wise-guy | sake (wine |          |
-|----+---------+--------+-----------+----------+------------+----------|
-| 08 | SAFE    | save   | savoy     | sieve    | sofa       | Sufi     |
-|    | suave   | savvy  | housewife | ossify   |            |          |
-|----+---------+--------+-----------+----------+------------+----------|
-| 09 | SOAP    | soup   | sob       | sap      | spa        | spy      |
-|    | sop     | swab   | swap      | swipe    | sweep      | swoop    |
-|    | subway  | zebu   | zip       | asp      | espy       | wasp     |
-|    | wisp    |        |           |          |            |          |
-|----+---------+--------+-----------+----------+------------+----------|
+I don't (yet) have a memorized peg for every number, just for the
+most useful ones. I pick pegs that don't collide visually with the
+most frequent ones. I already have CHAIR for 64 (used all the
+time), so SEAT for 01 and THRONE for 142, both rare, are not good
+ideas because they might incorrectly recall 64 at speed.
+
+|----+---------------+--------+-----------+----------+------------+----------|
+| 00 | SAUCE         | say-so | seas      | seesaw   | seize      | sissy    |
+|    | size          | assess | assize    | houses   | icehouse   | oasis    |
+|    | sass          | sassy  |           |          |            |          |
+|----+---------------+--------+-----------+----------+------------+----------|
+| 01 | SOD           | sad    | seedy     | seat     | side       | sight    |
+|    | sit           | site   | settee    | soot     | sooth      | south    |
+|    | soda          | sot    | stay      | stew     | suede      | suet     |
+|    | suit          | suite  | swat      | Swede    | sweet      | city     |
+|    | aside         | asset  | acid      | east     | haste      | host     |
+|    | waste         | west   | whist     | seed     | seedy      |          |
+|----+---------------+--------+-----------+----------+------------+----------|
+| 02 | SIGN          | scene  | seen      | sun      | sin        | soon     |
+|    | son           | snow   | sane      | swan     | swine      | sinew    |
+|    | hosanna       | zone   | ozone     | assign   |            |          |
+|----+---------------+--------+-----------+----------+------------+----------|
+| 03 | SEAM          | seem   | seem      | semi     | some       | somehow  |
+|    | sum           | swami  | swim      | assume   | asthma     | psalm    |
+|----+---------------+--------+-----------+----------+------------+----------|
+| 04 | SOAR          | sewer  | sir       | soiree   | sore       | sorry    |
+|    | sorrow        | sour   | zero      | czar     | eyesore    | hawser   |
+|    | hussar        | wiser  | seer      |          |            |          |
+|----+---------------+--------+-----------+----------+------------+----------|
+| 05 | SAIL          | sale   | seal      | sell     | sill       | silly    |
+|    | slay          | slaw   | sleigh    | slow     | sly        | soil     |
+|    | sole          | solo   | soul      | cell     | assail     | easel    |
+|    | easily        | hazel  | hassle    | swallow  | weasel     | whistle  |
+|    | sawzall (005) |        |           |          |            |          |
+|----+---------------+--------+-----------+----------+------------+----------|
+| 06 | SASH          | sage   | sashay    | sedge    | sewage     | siege    |
+|    | such          | swatch | switch    | assuage  | ice-age    | ice-show |
+|    | usage         |        |           |          |            |          |
+|----+---------------+--------+-----------+----------+------------+----------|
+| 07 | SACK          | sake   | seek      | sea-cow  | sick       | scow     |
+|    | sago          | ski    | sky       | suck     | soak       | soggy    |
+|    | sock          | squaw  | assegai   | ask      | hoosegow   | housing  |
+|    | husky         | icing  | whiskey   | wise-guy | sake (wine |          |
+|----+---------------+--------+-----------+----------+------------+----------|
+| 08 | SAFE          | save   | savoy     | sieve    | sofa       | Sufi     |
+|    | suave         | savvy  | housewife | ossify   |            |          |
+|----+---------------+--------+-----------+----------+------------+----------|
+| 09 | SOAP          | soup   | sob       | sap      | spa        | spy      |
+|    | sop           | swab   | swap      | swipe    | sweep      | swoop    |
+|    | subway        | zebu   | zip       | asp      | espy       | wasp     |
+|    | wisp          |        |           |          |            |          |
+|----+---------------+--------+-----------+----------+------------+----------|
 
 \clearpage
 |-----+-----------+-----------+------------+------------+-----------+------------|
 | 010 | SAWDUST   | seduce    | sideways   | stays      | South-Sea | assets     |
-|   A | assiduous | citizen   | cities     | hostess    |           |            |
+|   A | assiduous | citizen   | cities     | hostess    | sweets    |            |
 |-----+-----------+-----------+------------+------------+-----------+------------|
 | 011 | STATUE    | state     | steady     | sedate     | steed     | stout      |
 |   B | studio    | sit-down  | astute     | estate     | hesitate  | iced-tea   |
@@ -1702,13 +1820,13 @@ incorrectly recall 64 at speed.
 \clearpage
 |-----+------------+--------------+--------------+------------+-----------+-----------|
 | 040 | SEA-HORSE  | series       | serious      | sewers     | source    | Circe     |
-|   e |            |              |              |            |           |           |
+|   e | sarcen     |              |              |            |           |           |
 |-----+------------+--------------+--------------+------------+-----------+-----------|
 | 041 | SARDINE    | sardonic     | seaward      | seaworthy  | sort      | sortie    |
 |   f | swarthy    | assert       | assort       | certain    | hazard    | wizard    |
 |-----+------------+--------------+--------------+------------+-----------+-----------|
 | 042 | SIREN      | serene       | serenade     | Syrian     | surname   | surrender |
-|   g | sworn      |              |              |            |           |           |
+|   g | sworn      | Sauron       |              |            |           |           |
 |-----+------------+--------------+--------------+------------+-----------+-----------|
 | 043 | SERUM      | sermon       | swarm        | ceramic    | ceremony  |           |
 |   h |            |              |              |            |           |           |
@@ -1801,11 +1919,11 @@ incorrectly recall 64 at speed.
 \clearpage
 |-----+-----------+-----------+-----------+----------+-------------+-----------|
 | 070 | seacoast  | sea-goose | sex       | six      | saxophone   | success   |
-|     | Saxon     | squeeze   |           |          |             |           |
+|     | Saxon     | squeeze   | sax       | socks    |             |           |
 |-----+-----------+-----------+-----------+----------+-------------+-----------|
 | 071 | squid     | scatter   | scat      | squatter | skid        | skit      |
 |     | skeet     | scout     | scuttle   | skate    | sect        | sea-god   |
-|     | socket    | Scot      | ascot     | weskit   |             |           |
+|     | socket    | Scot      | ascot     | weskit   | Scottie     |           |
 |-----+-----------+-----------+-----------+----------+-------------+-----------|
 | 072 | scan      | scanty    | scandal   | sequin   | second      | sicken    |
 |     | sickness  | schooner  | scoundrel | signal   | skin        | sea-gown  |
@@ -1895,6 +2013,7 @@ incorrectly recall 64 at speed.
 |-----+--------------+-----------+------------+-------------+-------------+--------------|
 | 097 | sawbuck      | speak     | speck      | spike       | spook       | spectacle    |
 |     | zip-code     | aspic     | aspect     | ice-pick    | ice-bag     | ice-pack     |
+|     | Spock        |           |            |             |             |              |
 |-----+--------------+-----------+------------+-------------+-------------+--------------|
 | 098 | spiff        | spoof     | soap-flake | soupfin     | subfreezing | subaverage   |
 |     | subway-fare  |           |            |             |             |              |
@@ -2528,43 +2647,43 @@ incorrectly recall 64 at speed.
 |-----+--------------+-------------+--------------+--------------+-------------+-------------|
 
 \clearpage
-|-----+-------------+-------------+--------------+------------+------------+-------------|
-| 110 | TIGHTS      | tedious     | toothsome    | tootsy     | deduce     | detest      |
-|   n | statesman   | status      | statistical  | studious   |            |             |
-|-----+-------------+-------------+--------------+------------+------------+-------------|
-| 111 | TEETOTALER  | tete-a-tete | tidied       | dietetic   | day-duty   | deadwood    |
-|   o | doodad      | dotted      | doubted      | attitude   | audited    | outwitted   |
-|     | autodidact  |             |              |            |            |             |
-|-----+-------------+-------------+--------------+------------+------------+-------------|
-| 112 | TITAN       | Titanic     | tetanus      | tea-dance  | two-tone   | tidiness    |
-|   p | tighten     | deaden      | detain       | detonate   | dead-end   | sedateness  |
-|     | steadiness  | stoutness   | student      |            |            |             |
-|-----+-------------+-------------+--------------+------------+------------+-------------|
-| 113 | TOTEM       | teatime     | two-timer    | tedium     | TeDeum     | diadem      |
-|   q | datum       | daytime     | stadium      |            |            |             |
-|-----+-------------+-------------+--------------+------------+------------+-------------|
-| 114 | TATAR       | tater       | tea-tray     | tatter     | theater    | thither     |
-|   r | tooter      | totter      | tutor        | dater      | daughter   | deter       |
-|     | deteriorate | determine   | detract      | detriment  | daydreamer | diatribe    |
-|     | auditor     | editor      | headwater    | hot-water  | stutter    |             |
-|-----+-------------+-------------+--------------+------------+------------+-------------|
-| 115 | TITLE       | tattle      | tittle       | tidal      | tootle     | titillate   |
-|   s | total       | dawdle      | doodle       | dateline   | deadline   | dead-letter |
-|     | deadly      | detail      | thoughtless  | state-line |            |             |
-|-----+-------------+-------------+--------------+------------+------------+-------------|
-| 116 | DEATHWATCH  | detach      | death-wish   | dotage     | hot-dish   | dead-issue  |
-|   t |             |             |              |            |            |             |
-|-----+-------------+-------------+--------------+------------+------------+-------------|
-| 117 | HOTDOG      | toothache   | dating       | dedicate   | deduct     | detect      |
-|   u | detective   | tidings     | tie-tack     | idiotic    | dedication | didact      |
-|     | didactic    |             |              |            |            |             |
-|-----+-------------+-------------+--------------+------------+------------+-------------|
-| 118 | AUTO-DA-FE  | thoughtful  | dative       | dutiful    | dutyfree   | deadfall    |
-|   v | additive    | auditive    | tutti-frutti | sedative   |            |             |
-|-----+-------------+-------------+--------------+------------+------------+-------------|
-| 119 | TEDDY-BEAR  | tea-table   | tadpole      | toothpick  | tidbit     | toothbrush  |
-|   w | deadbeat    | deadpan     | deathbed     | ditty-bag  |            |             |
-|-----+-------------+-------------+--------------+------------+------------+-------------|
+|-----+-------------+----------------+--------------+------------+------------+-------------|
+| 110 | TIGHTS      | tedious        | toothsome    | tootsy     | deduce     | detest      |
+|   n | statesman   | status         | statistical  | studious   | Adidas     |             |
+|-----+-------------+----------------+--------------+------------+------------+-------------|
+| 111 | TEETOTALER  | tete-a-tete    | tidied       | dietetic   | day-duty   | deadwood    |
+|   o | doodad      | dotted         | doubted      | attitude   | audited    | outwitted   |
+|     | autodidact  | Douthat (Ross) |              |            |            |             |
+|-----+-------------+----------------+--------------+------------+------------+-------------|
+| 112 | TITAN       | Titanic        | tetanus      | tea-dance  | two-tone   | tidiness    |
+|   p | tighten     | deaden         | detain       | detonate   | dead-end   | sedateness  |
+|     | steadiness  | stoutness      | student      |            |            |             |
+|-----+-------------+----------------+--------------+------------+------------+-------------|
+| 113 | TOTEM       | teatime        | two-timer    | tedium     | TeDeum     | diadem      |
+|   q | datum       | daytime        | stadium      |            |            |             |
+|-----+-------------+----------------+--------------+------------+------------+-------------|
+| 114 | TATAR       | tater          | tea-tray     | tatter     | theater    | thither     |
+|   r | tooter      | totter         | tutor        | dater      | daughter   | deter       |
+|     | deteriorate | determine      | detract      | detriment  | daydreamer | diatribe    |
+|     | auditor     | editor         | headwater    | hot-water  | stutter    |             |
+|-----+-------------+----------------+--------------+------------+------------+-------------|
+| 115 | TITLE       | tattle         | tittle       | tidal      | tootle     | titillate   |
+|   s | total       | dawdle         | doodle       | dateline   | deadline   | dead-letter |
+|     | deadly      | detail         | thoughtless  | state-line | Dudley     |             |
+|-----+-------------+----------------+--------------+------------+------------+-------------|
+| 116 | DEATHWATCH  | detach         | death-wish   | dotage     | hot-dish   | dead-issue  |
+|   t |             |                |              |            |            |             |
+|-----+-------------+----------------+--------------+------------+------------+-------------|
+| 117 | HOTDOG      | toothache      | dating       | dedicate   | deduct     | detect      |
+|   u | detective   | tidings        | tie-tack     | idiotic    | dedication | didact      |
+|     | didactic    |                |              |            |            |             |
+|-----+-------------+----------------+--------------+------------+------------+-------------|
+| 118 | AUTO-DA-FE  | thoughtful     | dative       | dutiful    | dutyfree   | deadfall    |
+|   v | additive    | auditive       | tutti-frutti | sedative   |            |             |
+|-----+-------------+----------------+--------------+------------+------------+-------------|
+| 119 | TEDDY-BEAR  | tea-table      | tadpole      | toothpick  | tidbit     | toothbrush  |
+|   w | deadbeat    | deadpan        | deathbed     | ditty-bag  |            |             |
+|-----+-------------+----------------+--------------+------------+------------+-------------|
 
 \clearpage
 |-----+--------------+-------------+-------------+--------------+--------------+--------------|
@@ -2666,6 +2785,7 @@ incorrectly recall 64 at speed.
 |     | dirt      | dread       | drought   | druid       | adroit    | authority   |
 |     | iterate   | outright    | yesterday | Saturday    | start     | strait      |
 |     | straight  | stratagem   | street    | stride      | strut     | sturdy      |
+|     | Darth     |             |           |             |           |             |
 |-----+-----------+-------------+-----------+-------------+-----------+-------------|
 | 142 | train     | trainee     | thorn     | throne      | torrent   | terrain     |
 |     | trance    | translation | transport | trench      | turn      | tourney     |
@@ -2786,7 +2906,7 @@ incorrectly recall 64 at speed.
 | 166 | touch-watch  | dishwasher   | dodge-chain  | Dutch-cheese | head-judge  |               |
 |-----+--------------+--------------+--------------+--------------+-------------+---------------|
 | 167 | thatch-grass | teaching     | touching     | dashing      | dodging     | deject        |
-|     | hatcheck     | woodchuck    | staging      | stagecoach   |             |               |
+|     | hatcheck     | woodchuck    | staging      | stagecoach   | dashiki     |               |
 |-----+--------------+--------------+--------------+--------------+-------------+---------------|
 | 168 | touch-off    | Dutch-oven   | Dutch-wife   | dash-off     | disheveled  | dishful       |
 |     | wheat-chaff  | stage-fright |              |              |             |               |
@@ -2940,6 +3060,7 @@ incorrectly recall 64 at speed.
 | 205 | nacelle     | nozzle         | nuzzle       | nestle       | nasal          | noiseless     |
 |     | nicely      | enslave        | insolence    | insolvent    | insulin        | insular       |
 |     | insult      | ancillary      | oneself      | unselfish    | wine-cellar    | senseless     |
+|     | Han Solo    |                |              |              |                |               |
 |-----+-------------+----------------+--------------+--------------+----------------+---------------|
 | 206 | news-agency | nose-job       | incision     | ionization   | unsociable     | sensation     |
 |-----+-------------+----------------+--------------+--------------+----------------+---------------|
@@ -2959,7 +3080,7 @@ incorrectly recall 64 at speed.
 | 210 | notice          | Nazi        | nowadays     | nudist       | no-dice        | antacid       |
 |     | anticipate      | antiseptic  | enthusiasm   | entice       | indecent       | indistinct    |
 |     | induce          | industry    | hind-sight   | handsaw      | undeserved     | undesirable   |
-|     | undisturbed     |             |              |              |                |               |
+|     | undisturbed     | Ents        |              |              |                |               |
 |-----+-----------------+-------------+--------------+--------------+----------------+---------------|
 | 211 | nitwit          | nudity      | night-duty   | noted        | needed         | antitrust     |
 |     | annotate        | antidote    | entity       | entitle      | handed         | haunted       |
@@ -3758,6 +3879,7 @@ incorrectly recall 64 at speed.
 |-----+--------------+-------------+-----------+-----------+------------+-------------|
 | 431 | remedy       | remit       | remodel   | remote    | rheumatism | roomette    |
 |     | armada       | aromatic    | armed     | eremite   | hermit     | warmth      |
+|     | Harry Mudd   |             |           |           |            |             |
 |-----+--------------+-------------+-----------+-----------+------------+-------------|
 | 432 | raiment      | remain      | remind    | reminisce | remnant    | remonstrate |
 |     | remunerate   | Roman       | romantic  | Romania   | ruminant   | airman      |
@@ -4015,7 +4137,7 @@ incorrectly recall 64 at speed.
 |     | elsewhere     | illusory      | ulcer         |              |             |              |
 |-----+---------------+---------------+---------------+--------------+-------------+--------------|
 | 505 | lazily        | leasehold     | low-slung     | luzula       | oil-seal    | wholesale    |
-|     | whole-souled  |               |               |              |             |              |
+|     | whole-souled  | Lysol         |               |              |             |              |
 |-----+---------------+---------------+---------------+--------------+-------------+--------------|
 | 506 | loose-jointed | Alsatian      | oil-switch    | wall-switch  | yellow-sage | yellow-sedge |
 |-----+---------------+---------------+---------------+--------------+-------------+--------------|
@@ -4072,12 +4194,12 @@ incorrectly recall 64 at speed.
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 520 | lance       | lens          | lioness     | linseed    | lonesome  | lunacy        |
 |     | lyonnaise   | alliance      | aliens      | allowance  | holiness  | illness       |
-|     | silence     |               |             |            |           |               |
+|     | silence     | Linus         |             |            |           |               |
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 521 | land        | lend          | lent        | lint       | lintel    | lean-to       |
 |     | laundry     | lentil        | lindy       | linden     | lunatic   | London        |
 |     | alienate    | island        | eland       | Holland    | oleander  | walnut        |
-|     | wall-unit   | well-knit     | cylinder    | assailant  |           |               |
+|     | wall-unit   | well-knit     | cylinder    | assailant  | Lando     |               |
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 522 | lenient     | Lenin         | leonine     | linen      | linin     | alanine       |
 |     | all-in-one  | hole-in-one   | illanun     | Illinoian  | wellknown |               |
@@ -4301,39 +4423,39 @@ incorrectly recall 64 at speed.
 |-----+--------------+--------------+------------+-----------------+---------------+--------------|
 
 \clearpage
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 590 | labs        | laps           | lapse        | lips       | loops       | lopsided  |
-|     | lobbies     | lobster        | alabaster    | alibis     | alps        | ellipse   |
-|     | elopes      | helps          | wall-base    | celibacy   |             |           |
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 591 | lapidary    | lappet         | leaped       | libido     | lipid       | looped    |
-|     | law-abiding | albatross      | albeit       | eloped     | allopathy   | halibut   |
-|     | ill-boding  | well-paid      | whaleboat    |            |             |           |
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 592 | lupine      | albino         | Albion       | alpine     | hell-bent   | olibanum  |
-|     | whalebone   | well-appointed | sleepiness   |            |             |           |
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 593 | low-beam    | album          | Alabama      | albumin    | elopement   | helpmate  |
-|     | oil-palm    |                |              |            |             |           |
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 594 | labor       | laboratory     | lawbreaker   | leopard    | leap-year   | leprosy   |
-|     | liberal     | liberty        | Libra        | librarian  | looper      | lowbrow   |
-|     | lubricant   | elaborate      | elbow-room   | eloper     | helper      | ill-bred  |
-|     | wellborn    | wellbred       | sleeper      | slipper    | celebrate   |           |
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 595 | label       | lapel          | liable       | libel      | lobelia     | loblolly  |
-|     | lobule      | tube-oil       | loophole     | lowbell    | allowable   | helpless  |
-|     | hillbilly   | hullabaloo     | well-beloved | soluble    | syllable    |           |
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 596 | libation    | lobation       | low-budget   | lowbush    | lowpitched  | slipshod  |
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 597 | lawbook     | leaping        | lobbying     | looping    | alpaca      | eloping   |
-|     | helping     | ill-being      | oil-bag      | well-being | sleeping    |           |
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 598 | leapfrog    | lop-off        | all-beef     | helpful    | wellbehaved | lapful    |
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 599 | lap-up      | leap-up        | ale-pub      | Ali-Baba   | oil-pipe    | wallpaper |
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
+|-----+-------------+----------------+--------------+------------+-------------+-------------|
+| 590 | labs        | laps           | lapse        | lips       | loops       | lopsided    |
+|     | lobbies     | lobster        | alabaster    | alibis     | alps        | ellipse     |
+|     | elopes      | helps          | wall-base    | celibacy   |             |             |
+|-----+-------------+----------------+--------------+------------+-------------+-------------|
+| 591 | lapidary    | lappet         | leaped       | libido     | lipid       | looped      |
+|     | law-abiding | albatross      | albeit       | eloped     | allopathy   | halibut     |
+|     | ill-boding  | well-paid      | whaleboat    |            |             |             |
+|-----+-------------+----------------+--------------+------------+-------------+-------------|
+| 592 | lupine      | albino         | Albion       | alpine     | hell-bent   | olibanum    |
+|     | whalebone   | well-appointed | sleepiness   |            |             |             |
+|-----+-------------+----------------+--------------+------------+-------------+-------------|
+| 593 | low-beam    | album          | Alabama      | albumin    | elopement   | helpmate    |
+|     | oil-palm    |                |              |            |             |             |
+|-----+-------------+----------------+--------------+------------+-------------+-------------|
+| 594 | labor       | laboratory     | lawbreaker   | leopard    | leap-year   | leprosy     |
+|     | liberal     | liberty        | Libra        | librarian  | looper      | lowbrow     |
+|     | lubricant   | elaborate      | elbow-room   | eloper     | helper      | ill-bred    |
+|     | wellborn    | wellbred       | sleeper      | slipper    | celebrate   | wheelbarrow |
+|-----+-------------+----------------+--------------+------------+-------------+-------------|
+| 595 | label       | lapel          | liable       | libel      | lobelia     | loblolly    |
+|     | lobule      | tube-oil       | loophole     | lowbell    | allowable   | helpless    |
+|     | hillbilly   | hullabaloo     | well-beloved | soluble    | syllable    |             |
+|-----+-------------+----------------+--------------+------------+-------------+-------------|
+| 596 | libation    | lobation       | low-budget   | lowbush    | lowpitched  | slipshod    |
+|-----+-------------+----------------+--------------+------------+-------------+-------------|
+| 597 | lawbook     | leaping        | lobbying     | looping    | alpaca      | eloping     |
+|     | helping     | ill-being      | oil-bag      | well-being | sleeping    |             |
+|-----+-------------+----------------+--------------+------------+-------------+-------------|
+| 598 | leapfrog    | lop-off        | all-beef     | helpful    | wellbehaved | lapful      |
+|-----+-------------+----------------+--------------+------------+-------------+-------------|
+| 599 | lap-up      | leap-up        | ale-pub      | Ali-Baba   | oil-pipe    | wallpaper   |
+|-----+-------------+----------------+--------------+------------+-------------+-------------|
 
 \clearpage
 |-----+--------------+----------------+---------------+--------------+-------------+------------|
@@ -4442,37 +4564,37 @@ incorrectly recall 64 at speed.
 |-----+-------------+--------------+------------+--------------+------------+------------|
 
 \clearpage
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 630 | chemise    | chimes      | chums        | gems        | James      | jams        |
-|     | shames     | shamus      |              |             |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 631 | geometry   | jammed      | jamwood      | jimdandy    | jimmyweed  | ashamed     |
-|     | age-mate   |             |              |             |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 632 | chimney    | chow-mein   | G-man        | Gemini      | geminate   | gymnasium   |
-|     | gymnast    | shaman      | showman      | ashman      | hegemony   | hatchman    |
-|     | hush-money | wash-woman  | watchman     |             |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 633 | Jemima     | gym-master  | jam-maker    | show-member |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 634 | chimer     | chimere     | gemmary      | jammer      | shamir     | shammer     |
-|     | shamrock   | shimmer     | shomer       |             |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 635 | chummily   | gemlike     | gemmologist  | gemmule     | gym-hall   | schmaltz    |
-|     | shameless  | Ishmael     |              |             |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 636 | gemmieeous | gemmation   | gym-shoe     | Jamshid     | jimjams    | shim-sham   |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 637 | chiming    | gemming     | gimcrack     | gymkhana    | Jamaica    | jamming     |
-|     | jamoke     | shoemaker   | watchmaker   | yashmak     |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 638 | gem-fruit  | gemmiferous | shamefaced   | shamefast   | shameful   | sham-feed   |
-|     | chamfer    | chamfron    |              |             |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 639 | chamber    | champagne   | champion     | champignon  | chimpanzee | chump       |
-|     | jambeau    | jambalaya   | jambone      | jam-pack    | jam-up     | jamboree    |
-|     | jumbo      | jumble      | jump         | shambles    | shampoo    |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
+|-----+------------+-------------+-------------+-------------+------------+-----------|
+| 630 | chemise    | chimes      | chums       | gems        | James      | jams      |
+|     | shames     | shamus      |             |             |            |           |
+|-----+------------+-------------+-------------+-------------+------------+-----------|
+| 631 | geometry   | jammed      | jamwood     | jimdandy    | jimmyweed  | ashamed   |
+|     | age-mate   |             |             |             |            |           |
+|-----+------------+-------------+-------------+-------------+------------+-----------|
+| 632 | chimney    | chow-mein   | G-man       | Gemini      | geminate   | gymnasium |
+|     | gymnast    | shaman      | showman     | ashman      | hegemony   | hatchman  |
+|     | hush-money | wash-woman  | watchman    |             |            |           |
+|-----+------------+-------------+-------------+-------------+------------+-----------|
+| 633 | Jemima     | gym-master  | jam-maker   | show-member |            |           |
+|-----+------------+-------------+-------------+-------------+------------+-----------|
+| 634 | chimer     | chimere     | gemmary     | jammer      | shamir     | shammer   |
+|     | shamrock   | shimmer     | shomer      |             |            |           |
+|-----+------------+-------------+-------------+-------------+------------+-----------|
+| 635 | chummily   | gemlike     | gemmologist | gemmule     | gym-hall   | schmaltz  |
+|     | shameless  | Ishmael     | Gimli       |             |            |           |
+|-----+------------+-------------+-------------+-------------+------------+-----------|
+| 636 | gemmieeous | gemmation   | gym-shoe    | Jamshid     | jimjams    | shim-sham |
+|-----+------------+-------------+-------------+-------------+------------+-----------|
+| 637 | chiming    | gemming     | gimcrack    | gymkhana    | Jamaica    | jamming   |
+|     | jamoke     | shoemaker   | watchmaker  | yashmak     |            |           |
+|-----+------------+-------------+-------------+-------------+------------+-----------|
+| 638 | gem-fruit  | gemmiferous | shamefaced  | shamefast   | shameful   | sham-feed |
+|     | chamfer    | chamfron    |             |             |            |           |
+|-----+------------+-------------+-------------+-------------+------------+-----------|
+| 639 | chamber    | champagne   | champion    | champignon  | chimpanzee | chump     |
+|     | jambeau    | jambalaya   | jambone     | jam-pack    | jam-up     | jamboree  |
+|     | jumbo      | jumble      | jump        | shambles    | shampoo    | chimp     |
+|-----+------------+-------------+-------------+-------------+------------+-----------|
 
 \clearpage
 |-----+------------+-------------+--------------+-------------+------------+-------------|
@@ -4485,7 +4607,7 @@ incorrectly recall 64 at speed.
 |-----+------------+-------------+--------------+-------------+------------+-------------|
 | 642 | charnel    | churn       | gerent       | Geronimo    | gerund     | geranium    |
 |     | journal    | journey     | shrine       | shrink      | shorn      | shoehorn    |
-|     | sojourn    | sureness    | adjourn      | assurance   | usher-in   |             |
+|     | sojourn    | sureness    | adjourn      | assurance   | usher-in   | Gorn        |
 |-----+------------+-------------+--------------+-------------+------------+-------------|
 | 643 | chairman   | charm       | charwoman    | germ        | German     | germane     |
 |     | germinate  | gerrymander | jeremiad     | juryman     | jurywoman  | ashram      |
@@ -4519,7 +4641,7 @@ incorrectly recall 64 at speed.
 |     | joyless     | Julius      | shells     | shoelace     | ageless       | socialism  |
 |-----+-------------+-------------+------------+--------------+---------------+------------|
 | 651 | child       | gelatin     | gelid      | jilt         | jolt          | shallot    |
-|     | shelter     | shield      | shoulder   | age-old      | agility       |            |
+|     | shelter     | shield      | shoulder   | age-old      | agility       | Shalob     |
 |-----+-------------+-------------+------------+--------------+---------------+------------|
 | 652 | challenge   | chalone     | chilliness | chow-line    | jawline       | jillion    |
 |     | jolliness   | julienne    | shalloon   | shallowness  | show-line     | echelon    |
@@ -4576,7 +4698,7 @@ incorrectly recall 64 at speed.
 |-----+-----------------+-------------+-------------+--------------+------------+-------------|
 | 670 | checks          | checkstones | checkstrap  | cheeks       | chicks     | jackass     |
 |     | jockeys         | jokes       | shakes      | showcase     | Ajax       | hedgehogs   |
-|     | watchcase       |             |             |              |            |             |
+|     | watchcase       | jacks       |             |              |            |             |
 |-----+-----------------+-------------+-------------+--------------+------------+-------------|
 | 671 | checked         | checkout    | chickadee   | Chiquito     | chickweed  | choked      |
 |     | gigot           | jackdaw     | jacket      | jagged       | shakedown  | shake-out   |
@@ -4607,6 +4729,7 @@ incorrectly recall 64 at speed.
 |-----+-----------------+-------------+-------------+--------------+------------+-------------|
 | 678 | checkoff        | check-over  | check-weave | chock-full   | choke-full | jackfish    |
 |     | jackfruit       | jugful      | shakefork   | shake-off    | shake-wave | shockwave   |
+|     | Chekhov         |             |             |              |            |             |
 |-----+-----------------+-------------+-------------+--------------+------------+-------------|
 | 679 | cheekbone       | cheekpiece  | checkback   | checkbite    | checkbook  | checkpoint  |
 |     | check-up        | chick-pea   | chockablock | Jacob        | Jacobin    | shakeproof  |
@@ -4627,7 +4750,7 @@ incorrectly recall 64 at speed.
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 684 | chafer             | chaffer    | chaffron     | chauffeur   | chevron    | shofar        |
 |     | shaver             | shivaree   | shiver       | achiever    | ashiver    | watch-fire    |
-|     | witch-fire         | whichever  | Jefferson    |             |            |               |
+|     | witch-fire         | whichever  | Jefferson    | shofar      |            |               |
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 685 | chevalier          | chiefless  | chiefly      | chivalry    | javelin    | jovial        |
 |     | joyful             | shaveling  | sheaflike    | shoeflower  | shoofly    | shovel        |
@@ -4645,42 +4768,43 @@ incorrectly recall 64 at speed.
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 
 \clearpage
-|-----+--------------+-------------+-------------+-------------+-------------+------------|
-| 690 | chaps        | chapstick   | chips       | chops       | chopsuey    | chophouse  |
-|     | gypsy        | gypsum      | jabs        | jobs        | gyps        | ships      |
-|     | shops        | showbiz     | showpiece   |             |             |            |
-|-----+--------------+-------------+-------------+-------------+-------------+------------|
-| 691 | chapter      | chopped     | gibbet      | shipped     | shopped     | showboat   |
-|     | ashpit       | hashpot     | hotchpot    | Egypt       | Jupiter     |            |
-|-----+--------------+-------------+-------------+-------------+-------------+------------|
-| 692 | cheapen      | chip-in     | Chippendale | Chopin      | chubbiness  | chupon     |
-|     | Japan        | jawbone     | shabbiness  | sheepnose   | sheepnut    | shipowner  |
-|     | ashpan       | hash-pan    | watchband   | wishbone    |             |            |
-|-----+--------------+-------------+-------------+-------------+-------------+------------|
-| 693 | chapman      | chapwoman   | chipmunk    | sheepman    | sheepmaster | sheepmint  |
-|     | shipment     | shipmaster  | shipmate    | shopman     | hatch-beam  |            |
-|-----+--------------+-------------+-------------+-------------+-------------+------------|
-| 694 | chaparral    | chaperon    | cheaper     | chipper     | chopper     | gibber     |
-|     | gypper       | jabber      | jabberwocky | jobber      | jawbreaker  | jabiru     |
-|     | jeopardize   | shipper     | shopper     | shepherd    | shipwreck   | shipwright |
-|     | shipyard     | hatch-bar   | washboard   | switchboard |             |            |
-|-----+--------------+-------------+-------------+-------------+-------------+------------|
-| 695 | chapel       | chaplain    | Chablis     | giblets     | jobless     | jubilee    |
-|     | shapely      | shoeblack   | shoebill    | showbill    | shibboleth  | shoplifter |
-|     | ash-blonde   | washable    | sociable    |             |             |            |
-|-----+--------------+-------------+-------------+-------------+-------------+------------|
-| 696 | chippage     | chop-cherry | chop-chop   | jib-o-jib   | she-beech   | sheepish   |
-|     | sheepshearer | sheepwash   | shipshape   | hodgepodge  | Egyptian    |            |
-|-----+--------------+-------------+-------------+-------------+-------------+------------|
-| 697 | chapping     | chipping    | chopping    | jabbing     | shaping     | sheepgate  |
-|     | shipping     | shoepack    | shopping    | shopkeeper  | shebang     | hedgepig   |
-|-----+--------------+-------------+-------------+-------------+-------------+------------|
-| 698 | chapfallen   | chop-off    | shapeful    | sheepfaced  | shipfitter  | sheepfold  |
-|     | sheepfoot    | shopful     |             |             |             |            |
-|-----+--------------+-------------+-------------+-------------+-------------+------------|
-| 699 | chapbook     | chip-blower | chip-proof  | jibboom     | shapable    | shape-up   |
-|     | sheep-pod    | shipboard   | shipbuilder | hushpuppy   |             |            |
-|-----+--------------+-------------+-------------+-------------+-------------+------------|
+|-----+--------------+-------------+-------------+-------------+-------------+---------------|
+| 690 | chaps        | chapstick   | chips       | chops       | chopsuey    | chophouse     |
+|     | gypsy        | gypsum      | jabs        | jobs        | gyps        | ships         |
+|     | shops        | showbiz     | showpiece   |             |             |               |
+|-----+--------------+-------------+-------------+-------------+-------------+---------------|
+| 691 | chapter      | chopped     | gibbet      | shipped     | shopped     | showboat      |
+|     | ashpit       | hashpot     | hotchpot    | Egypt       | Jupiter     | Jabba the Hut |
+|-----+--------------+-------------+-------------+-------------+-------------+---------------|
+| 692 | cheapen      | chip-in     | Chippendale | Chopin      | chubbiness  | chupon        |
+|     | Japan        | jawbone     | shabbiness  | sheepnose   | sheepnut    | shipowner     |
+|     | ashpan       | hash-pan    | watchband   | wishbone    |             |               |
+|-----+--------------+-------------+-------------+-------------+-------------+---------------|
+| 693 | chapman      | chapwoman   | chipmunk    | sheepman    | sheepmaster | sheepmint     |
+|     | shipment     | shipmaster  | shipmate    | shopman     | hatch-beam  |               |
+|-----+--------------+-------------+-------------+-------------+-------------+---------------|
+| 694 | chaparral    | chaperon    | cheaper     | chipper     | chopper     | gibber        |
+|     | gypper       | jabber      | jabberwocky | jobber      | jawbreaker  | jabiru        |
+|     | jeopardize   | shipper     | shopper     | shepherd    | shipwreck   | shipwright    |
+|     | shipyard     | hatch-bar   | washboard   | switchboard |             |               |
+|-----+--------------+-------------+-------------+-------------+-------------+---------------|
+| 695 | chapel       | chaplain    | Chablis     | giblets     | jobless     | jubilee       |
+|     | shapely      | shoeblack   | shoebill    | showbill    | shibboleth  | shoplifter    |
+|     | ash-blonde   | washable    | sociable    |             |             |               |
+|-----+--------------+-------------+-------------+-------------+-------------+---------------|
+| 696 | chippage     | chop-cherry | chop-chop   | jib-o-jib   | she-beech   | sheepish      |
+|     | sheepshearer | sheepwash   | shipshape   | hodgepodge  | Egyptian    |               |
+|-----+--------------+-------------+-------------+-------------+-------------+---------------|
+| 697 | chapping     | chipping    | chopping    | jabbing     | shaping     | sheepgate     |
+|     | shipping     | shoepack    | shopping    | shopkeeper  | shebang     | hedgepig      |
+|     | Chewbacca    |             |             |             |             |               |
+|-----+--------------+-------------+-------------+-------------+-------------+---------------|
+| 698 | chapfallen   | chop-off    | shapeful    | sheepfaced  | shipfitter  | sheepfold     |
+|     | sheepfoot    | shopful     |             |             |             |               |
+|-----+--------------+-------------+-------------+-------------+-------------+---------------|
+| 699 | chapbook     | chip-blower | chip-proof  | jibboom     | shapable    | shape-up      |
+|     | sheep-pod    | shipboard   | shipbuilder | hushpuppy   |             |               |
+|-----+--------------+-------------+-------------+-------------+-------------+---------------|
 
 \clearpage
 |-----+--------------+---------------+-------------------+------------+----------------+-------------|
@@ -4775,7 +4899,7 @@ incorrectly recall 64 at speed.
 |     | concentration | consent      | consequence   | conserve   | consider     | consign     |
 |     | consist       | console      | conspire      | constable  | constitution | consul      |
 |     | consume       | counsel      | gunhouse      | gainsay    | gunnysack    | queens      |
-|     | agonize       | Kiwanis      |               |            |              |             |
+|     | agonize       | Kiwanis      | Aquinas       |            |              |             |
 |-----+---------------+--------------+---------------+------------+--------------+-------------|
 | 721 | candid        | candle       | candy         | cant       | canter       | condense    |
 |     | condition     | conductor    | contact       | content    | contest      | context     |
@@ -4859,6 +4983,7 @@ incorrectly recall 64 at speed.
 |     | Christian | Christmas | chrysanthemum | charisma   | chorus     | garcon    |
 |     | garrison  | grace     | grasp         | grass      | graze      | grease    |
 |     | Greece    | grocer    | gross         | accuracy   | across     | Aquarius  |
+|     | Icarus    |           |               |            |            |           |
 |-----+-----------+-----------+---------------+------------+------------+-----------|
 | 741 | carat     | card      | cardinal      | carrot     | cart       | cartoon   |
 |     | cord      | cordial   | corridor      | courtesy   | court      | coward    |
@@ -4903,7 +5028,7 @@ incorrectly recall 64 at speed.
 |     | crack       | crackle    | crag       | creak       | creek       | crick        |
 |     | cricket     | croak      | crock      | crocket     | crocodile   | crocus       |
 |     | crook       | croquet    | co-worker  | curriculum  | gargle      | Greek        |
-|     | grog        | gherkin    | aggregate  | segregate   |             |              |
+|     | grog        | gherkin    | aggregate  | segregate   | Kirk        |              |
 |-----+-------------+------------+------------+-------------+-------------+--------------|
 | 748 | carafe      | caravan    | careful    | carryover   | carve       | corvette     |
 |     | craft       | cravat     | crave      | crevice     | curfew      | curve        |
@@ -4942,6 +5067,7 @@ incorrectly recall 64 at speed.
 |     | clemency    | climate    | climb        | clump        | clumsy      | column       |
 |     | culminate   | glamour    | gleam        | glimmer      | glimpse     | gloam        |
 |     | gloom       | glum       | acclaim      | acclimate    | kilometer   | schoolmaster |
+|     | golem       | Gollum     |              |              |             |              |
 |-----+-------------+------------+--------------+--------------+-------------+--------------|
 | 754 | caller      | calorie    | chlorite     | claret       | clarify     | clarinet     |
 |     | clarion     | clear      | clergy       | clerk        | collar      | color        |
@@ -5076,7 +5202,7 @@ incorrectly recall 64 at speed.
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 790 | cabs        | caboose    | capacity   | capes      | capsize    | capstan     |
 |     | capstone    | capsule    | copious    | copies     | cowboys    | gaps        |
-|     | keepsake    | hiccups    |            |            |            |             |
+|     | keepsake    | hiccups    | cabasa     | Cupid      |            |             |
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 791 | capital     | capitol    | capitulate | captain    | captivate  | copied      |
 |     | cop-out     | cupid      | kept       | equipped   | sickbed    |             |
@@ -5089,7 +5215,7 @@ incorrectly recall 64 at speed.
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 794 | caper       | caprice    | cooper     | cooperate  | copper     | copra       |
 |     | copyreader  | copyright  | cooper     | gabardine  | gabber     | keeper      |
-|     | keyboard    | kipper     | aquapura   | skipper    |            |             |
+|     | keyboard    | kipper     | aquapura   | skipper    | cobra      |             |
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 795 | cabal       | cable      | capelet    | capelin    | Capella    | cobbler     |
 |     | cobblestone | cobalt     | copilot    | couple     | copula     | cowbell     |
@@ -5129,7 +5255,7 @@ incorrectly recall 64 at speed.
 |     | Ophism      |                |               |                  |                 |              |
 |-----+-------------+----------------+---------------+------------------+-----------------+--------------|
 | 804 | facer       | facework       | fossorial     | fusser           | vasoreflex      | viceroy      |
-|     | visor       | vizier         | officer       |                  |                 |              |
+|     | visor       | vizier         | officer       | phaser           |                 |              |
 |-----+-------------+----------------+---------------+------------------+-----------------+--------------|
 | 805 | faceless    | face-lift      | face-wall     | facility         | fizzle          | fossil       |
 |     | fusillade   | fuselage       | foozie        | vacillate        | vaseline        | vassal       |
@@ -5167,7 +5293,7 @@ incorrectly recall 64 at speed.
 | 814 | father     | fatter       | feather      | fedora     | feeder         | federal        |
 |     | fetter     | fitter       | fighter      | fodder     | footrest       | footwear       |
 |     | footwork   | veteran      | veterinarian | vetoer     | voter          | after          |
-|     | aviator    | evader       | heavy-water  |            |                |                |
+|     | aviator    | evader       | heavy-water  | Vader      |                |                |
 |-----+------------+--------------+--------------+------------+----------------+----------------|
 | 815 | fatal      | fee-tail     | fettle       | feudal     | fiddle         | fidelity       |
 |     | foothill   | foothold     | footlights   | footlocker | footloose      | footwall       |
@@ -5267,7 +5393,7 @@ incorrectly recall 64 at speed.
 |     | froth      | fruit        | further   | furtive    | fjord      | variety      |
 |     | vertebra   | verdict      | vertigo   | afford     | afraid     | avert        |
 |     | effort     | everything   | overdo    | overdue    | overtake   | overthrow    |
-|     | overturn   |              |           |            |            |              |
+|     | overturn   | Frodo        |           |            |            |              |
 |-----+------------+--------------+-----------+------------+------------+--------------|
 | 842 | farina     | fairness     | fern      | foreign    | forename   | forenoon     |
 |     | forehand   | France       | franchise | frantic    | friend     | front        |
@@ -5314,8 +5440,9 @@ incorrectly recall 64 at speed.
 
 \clearpage
 |-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 850 | fallacy     | FALSE          | felicitate   | fail-safe  | fleece      | fleas     |
+| 850 | FLEECE      | false          | felicitate   | fail-safe  | fallacy     | fleas     |
 |     | fogies      | philosophy     | valise       | velocity   | avulse      | civilize  |
+|     | floss       |                |              |            |             |           |
 |-----+-------------+----------------+--------------+------------+-------------+-----------|
 | 851 | fallout     | falter         | fault        | felt       | field       | filter    |
 |     | filth       | flat           | flatter      | fleet      | flight      | flitter   |
@@ -5521,7 +5648,7 @@ incorrectly recall 64 at speed.
 |-----+---------------+---------------+------------+-------------+------------+-------------|
 | 903 | pacemaker     | peacemaker    | pessimist  | baseman     | basement   | beseem      |
 |     | besmear       | besmirch      | besom      | bosom       | aposematic | appeasement |
-|     | opossum       | spasm         | specimen   |             |            |             |
+|     | opossum       | spasm         | specimen   | possum      |            |             |
 |-----+---------------+---------------+------------+-------------+------------+-------------|
 | 904 | pacer         | passer        | piecework  | bazaar      | bizarre    | boozer      |
 |     | buzzer        | absorb        | absurd     | abuser      | observe    | opposer     |
@@ -5599,7 +5726,7 @@ incorrectly recall 64 at speed.
 | 920 | panacea    | pans         | pains       | pansy       | pence         | pencil      |
 |     | pensive    | pianist      | pincers     | pounce      | puns          | banister    |
 |     | benzine    | bonus        | bounce      | bunnies     | buoyancy      | abeyance    |
-|     | happiness  | hypnosis     |             |             |               |             |
+|     | happiness  | hypnosis     | Bones       |             |               |             |
 |-----+------------+--------------+-------------+-------------+---------------+-------------|
 | 921 | paint      | panda        | pant        | panther     | pendant       | penetrate   |
 |     | penitent   | penthouse    | pint        | point       | pond          | pontoon     |
@@ -5674,7 +5801,7 @@ incorrectly recall 64 at speed.
 | 939 | pampas        | pamper         | pimp        | pimpernel | pimple     | pomp      |
 |     | pompadour     | pom-pom        | pompon      | pump      | Bambi      | bamboo    |
 |     | bamboozle     | bimbo          | bimeby      | bombard   | bombast    | bumblebee |
-|     | bumper        |                |             |           |            |           |
+|     | bumper        | bump           |             |           |            |           |
 |-----+---------------+----------------+-------------+-----------+------------+-----------|
 
 \clearpage
@@ -5695,7 +5822,7 @@ incorrectly recall 64 at speed.
 |     | board       | braid     | bread     | breath      | breed       | bride        |
 |     | bridle      | British   | broad     | broth       | brother     | brutal       |
 |     | burden      | aboard    | abroad    | apart       | apparatus   | Opart        |
-|     | operate     |           |           |             |             |              |
+|     | operate     | parrot    |           |             |             |              |
 |-----+-------------+-----------+-----------+-------------+-------------+--------------|
 | 942 | parent      | paranoid  | paranymph | parentheses | prank       | principle    |
 |     | print       | pronoun   | prune     | barn        | barren      | baron        |
@@ -5768,7 +5895,7 @@ incorrectly recall 64 at speed.
 |     | ballot     | behold     | belt         | bewilder  | billet    | bladder     |
 |     | blade      | bleed      | bloat        | blood     | blot      | bold        |
 |     | bolt       | build      | bulldog      | bullet    | bulletin  | ability     |
-|     | applaud    | uphold     | obliterate   |           |           |             |
+|     | applaud    | uphold     | obliterate   | Pluto     |           |             |
 |-----+------------+------------+--------------+-----------+-----------+-------------|
 | 952 | paleness   | plain      | plaint       | plane     | plank     | plankton    |
 |     | plant      | plenty     | plunder      | pollen    | balance   | balloon     |
@@ -5810,7 +5937,7 @@ incorrectly recall 64 at speed.
 |     | pliable    | plop       | polyp        | pulp      | pulpit    | ballplayer  |
 |     | bellboy    | blip       | blooper      | blowup    | blueberry | bluebird    |
 |     | bulb       | bluebonnet | bullpen      | bullpup   | bullwhip  | bullyboy    |
-|     | applepie   | epileptic  |              |           |           |             |
+|     | applepie   | epileptic  | Bilbo        |           |           |             |
 |-----+------------+------------+--------------+-----------+-----------+-------------|
 
 \clearpage
@@ -5936,6 +6063,7 @@ incorrectly recall 64 at speed.
 |-----+--------------+------------+------------+--------------+------------+------------|
 | 990 | papacy       | papistry   | papoose    | pip-squeak   | poppies    | puppies    |
 |     | PPS          | babies     | biopsy     | bobbysoxer   | bobsled    | bypass     |
+|     | Pepsi        |            |            |              |            |            |
 |-----+--------------+------------+------------+--------------+------------+------------|
 | 991 | pipe-die     | pipit      | pipette    | Poppy-Day    | puppet     | babbitt    |
 |     | babyhood     | baptism    | biped      | bobtail      | booby-trap | bypath     |
@@ -5963,47 +6091,25 @@ incorrectly recall 64 at speed.
 | 998 | papaver      | pepful     | pipefish   | pipeful      | pop-off    | popover    |
 |     | poppyfish    | baby-faced | bobfly     | bubby-flower | pupfish    | pupiform   |
 |-----+--------------+------------+------------+--------------+------------+------------|
-| 999 | pep-up       | pipable    | pipe-band  | pipe-opener  | poppy-bee  | pop-up     |
-|     | baby-boy     | baobab     | bebop      | bubbybush    |            |            |
+| 999 | BEBOP        | pipable    | pipe-band  | pipe-opener  | poppy-bee  | pop-up     |
+|     | baby-boy     | baobab     | pep-up     | bubbybush    |            |            |
 |-----+--------------+------------+------------+--------------+------------+------------|
 
 |------+----------+----------+---------+
 | 1000 | dioceses | diseases | disuses |
 |------+----------+----------+---------+
 
-* COMMENT PRELIMINARIES
+\clearpage
+** Picture Words from John D. Cook
 
-This section won't export to PDF because the string =COMMENT= appears
-before the name =PRELIMINARIES=. However, please evaluate the code block
-below (=Ctrl-c Ctrl-c= with the cursor inside the block) so you don't
-get queried about safety on all the other code block in this document.
-
-#+BEGIN_SRC elisp
-  (setq org-babel-python-command "python3")
-  (setq org-image-actual-width nil)
-  (setq org-confirm-babel-evaluate nil)
-  (setq org-src-yfontify-natively t)
-  (add-to-list 'org-latex-packages-alist '("" "listingsutf8"))
-  (setq org-export-latex-listings 'minted)
-  (setq org-latex-listings 'minted
-        org-latex-packages-alist '(("" "minted"))
-        org-latex-pdf-process
-        '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-          "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
-          "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
-  (org-babel-do-load-languages
-   'org-babel-load-languages
-   '((ditaa . t) (latex . t)))
-  (setq org-plantuml-jar-path
-      (expand-file-name "/usr/share/plantuml/plantuml.jar"))
-
-  ; (conda-env-activate "whl-meson-build")
-
-  (princ (concat (format "Emacs version: %s\n" (emacs-version))
-                 (format "org version: %s\n" (org-version))))
-#+END_SRC
-
-#+RESULTS:
-: Emacs version: GNU Emacs 28.1 (build 2, aarch64-apple-darwin21.4.0, NS appkit-2113.40 Version 12.3.1 (Build 21E258))
-:  of 2022-04-12
-: org version: 9.5.2
+| Adidas         | Aquinas     | Bilbo            |         |           |        |
+| Bones          | bump        | cabasa           | Chekhov | Chewbacca | chimp  |
+| cobra          | Cupid       | Darth            | dashiki |           |        |
+| Douthat (Ross) | Dudley      | Ents             | floss   |           |        |
+| Frodo          | Gimli       | Gollum           | Gorn    | Han Solo  |        |
+| Harry Mudd     | Icarus      | Jabba (the) Hutt | jacks   | Kirk      | Lando  |
+| Linus          | Lysol       |                  |         |           |        |
+| parrot         | Pepsi       | phaser           | Pluto   | possum    |        |
+| Sauron         | sawzall     | sax              | Scottie | Shelob    | shofar |
+| socks          | Spock       | sweets           |         |           |        |
+| Vader          | wheelbarrow |                  |         |           |        |
