@@ -69,9 +69,9 @@
 #+LATEX_HEADER: \usepackage{fancyhdr}
 #+LATEX_HEADER: \pagestyle{fancyplain}
 #+LATEX_HEADER: \lhead{}
-#+LATEX_HEADER: \chead{\textbf{Do Not Distribute}}
+#+LATEX_HEADER: \chead{\textbf{(c) Brian Beckman, 2022; Creative Commons Attribution-ShareAlike CC-BY-SA}}
 #+LATEX_HEADER: \rhead{}
-#+LATEX_HEADER: \lfoot{Do Not Distribute}
+#+LATEX_HEADER: \lfoot{(c) Brian Beckman, 2022; CC-BY-SA}
 #+LATEX_HEADER: \cfoot{\thepage}
 #+LATEX_HEADER: \rfoot{}
 #+LATEX_HEADER: \usepackage{lineno}
@@ -117,9 +117,9 @@
 # #+STARTUP: latexpreview inlineimages showall
 # #+STARTUP: showall
 
-#+TITLE: How to Memorize Credit Cards, GUIDs, Hashes, Public Keys, and More --- Revision 4
+#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 6
 #+AUTHOR: Brian Beckman
-#+DATE: 17 May 2022
+#+DATE: 21 May 2022
 
 #+BEGIN_SRC elisp :exports none
   (setq org-babel-python-command "python3")
@@ -150,7 +150,7 @@
 : Emacs version: GNU Emacs 28.1 (build 2, aarch64-apple-darwin21.4.0, NS appkit-2113.40 Version 12.3.1 (Build 21E258))
 :  of 2022-04-12
 : org version: 9.5.2
-
+\clearpage
 * Change log
 
 - Revision 3
@@ -167,64 +167,244 @@
   - includes remarks about passwords and mental hash functions from John
     D. Cook
 
+- Revision 5
+
+  - include Tarot images
+
+- Revision 6
+
+  - automate production of tables with Clojure program
+
+\clearpage
 * Introduction
 
-I memorize numbers in any radix (base) by hallucinating poems, stories,
-or mental cartoon movies via the Mnemonic Major System:
+I memorize numbers in any radix (base) by hallucinating poems,
+stories, or mental cartoon movies via the Mnemonic Major System:
 
 https://en.wikipedia.org/wiki/Mnemonic_major_system
 
-which I merged with the "peg system."
+My hallucinations come with synaesthesia: smells, heat, texture,
+colors, brightness, etc. I use only imagination, no drugs. Many
+memory practitioners do not use synaesthesia, but they help me.
 
-My hallucinations come with synaesthesia: smells, heat, texture, colors,
-brightness, etc. I use only imagination, no drugs. Many memory
-practitioners do not use synaesthesia, but they help me.
-
-Krill calls the inputs for such hallucinations "phantasmagorishables,"
-a portmanteau that encodes the digits 8210 3746 95.
+Krill calls the hallucinations "phantasmagorias" and the inputs
+for them "phantasmagorishables," which itself encodes the digits
+8210 3746 95.
 
 https://folk.ntnu.no/krill/pseudonumerology.htm
 
-My methods are based on the table of
+My methods are based on tables of
 
-- pegs :: permanent, immutable picture words in one-to-one
-  correspondence to the numbers
+- pegs :: permanent, immutable hallucinogens in one-to-one
+  correspondence to numbers. For instance, the number 68 is a
+  chef, and I smell the kitchen and hear the sounds of boiling and
+  sizzling. Whenever I see a chef or think of one, I instantly
+  think of the number 68. That's 1-to-1 correspondence.
 
-- sound-alikes :: fluid, mutable list of picture words that are similar
-  in consonant sounds to the pegs and in many-to-one correspondence to
-  the numbers.
+- sound-alikes :: fluid, mutable list of hallucinogenic words that
+  are similar in their consonant sounds to the pegs and in
+  many-to-one correspondence to the numbers. 68's "chef" sounds
+  like "chief," "sheaf," "Java," "chaff," amongst others. While 68
+  always means "chef," first, a chef might not fit well into an
+  ongoing hallucination. For instance, if we're memorizing 276872,
+  the pegs are NECK, CHEF, and CAN. That sequence does not invoke
+  an obvious story, so we start looking for sound-alikes. How
+  about INCA CHIEF COIN? Just picture a coin with an Inca chief
+  embossed on it, and we're done. It took a little time to devise
+  INCA CHIEF COIN from NECK CHEF CAN, but the other direction is
+  instantaneous. It's many-to-one because there are many words
+  that map to each number.
 
-See Section [[all-pegs]] of this document, after the Appendices.
+See the last section, Section [[all-pegs]] of this document, after the
+Appendices, for the complete maps of numbers to pegs and
+sound-alikes.
 
-For radices beyond decimal, I choose a mapping from alphabetic glyphs to
-ASCII because I already have the mapping memorized for instant,
-bidirectional recall (Section [[daily-practice]]).
+For radices beyond decimal, I choose a mapping from alphabetic
+glyphs to ASCII because I already have the mapping memorized for
+instant, bidirectional recall (Section [[daily-practice]]). In
+appendices, I show some alternative mappings for people who don't
+have ASCII memorized.
 
-In appendices, I show some alternative mappings for people who
-don't have ASCII memorized.
 \clearpage
-* Decimal Credit-Card Numbers
+* The System of Sound-Alikes
+<<basic-pegs>>
 
-This is the easiest example in this document. For decimal, the pegs are:
+The pegs for the decimal digits, with some mnemonic hints, are
 
-|-------+------+-----------------------------------------------------+-------------------------|
-| digit | peg  | mnemonic                                            | sound-alike rules       |
-|-------+------+-----------------------------------------------------+-------------------------|
-|     0 | saw  | circular saw, segment of sawed log; round like "0"  | s, z                    |
-|     1 | tea  | giant Disneyland teacup; "t" looks like "1"         | d, th, dh (them)        |
-|     2 | Noah | ... and the Ark; "n" has 2 legs                     | ng (Krill, nk is 27)    |
-|     3 | me   | ... in the mirror tying a bow tie; "m" has 3 legs   |                         |
-|     4 | ray  | this one is hard to remember; just brute-force it   |                         |
-|     5 | law  | 5 fingers as the cop holds up his hand              |                         |
-|     6 | jaw  | "6" looks like Lurch's lantern jaw                  | sh, ch, zh (pleasure)   |
-|     7 | key  | "7" looks like an Allen key                         | g, ng (Furst, nk is 27) |
-|     8 | fee  | "8" looks like a dollar sign                        | f, v                    |
-|     9 | pea  | The Princess and the Pea: 9 mattresses              | p, b                    |
-|-------+------+-----------------------------------------------------+-------------------------|
+|-------+------+----------------------------------------------------+-------------------------|
+| digit | peg  | mnemonic                                           | sound-alike rules       |
+|-------+------+----------------------------------------------------+-------------------------|
+|     0 | saw  | circular saw, segment of sawed log; round like "0" | s, z                    |
+|     1 | tea  | giant Disneyland teacup; "t" looks like "1"        | d, th, dh (them)        |
+|     2 | Noah | ... and the Ark; "n" has 2 legs                    | ng (Krill, nk is 27)    |
+|     3 | me   | ... in the mirror tying a bow tie; "m" has 3 legs  |                         |
+|     4 | ray  | this one is hard to remember; just brute-force it  |                         |
+|     5 | law  | 5 fingers as the cop holds up his hand             |                         |
+|     6 | jaw  | "6" looks like Lurch's lantern jaw                 | sh, ch, zh (pleasure)   |
+|     7 | key  | "7" looks like an Allen key                        | g, ng (Furst, nk is 27) |
+|     8 | fee  | "8" looks like a dollar sign                       | f, v                    |
+|     9 | pea  | The Princess and the Pea: 9 mattresses             | p, b                    |
+|-------+------+----------------------------------------------------+-------------------------|
 
-Find specific sound-alikes in Section [[all-pegs]].
+Memorize this table, or one like it, by whatever means, by brute
+force if necessary. The rest of the system relies on it. If you
+don't like these specific pegs, pick some others out of the rows
+for 0 through 9 in Section [[all-pegs]]. Pick your own peg for each
+digit, make your own table, memorize it, and stick with it
+forever. NEVER, EVER CHANGE ANYTHING IN IT. I did that once more
+than 50 years ago, and I continue to regret it. This table must
+become an internal, effortless vocabulary like your native
+language.
 
-** Example Credit-Card Number
+Make up pegs and sound-alikes for longer numbers by combining
+consonant sounds. For example, here is the peg and sound-alikes
+for 32:
+
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 132 133)
+#+end_src
+
+#+RESULTS:
+:results:
+|----+-------+---------+--------+--------+------+-------|
+| 32 | MAN   | mane    | mine   | minnow | moon | woman |
+|    | amen  | ammonia | human  | hymen  | main | mana  |
+|    | mania | manna   | many   | mean   | mien | moan  |
+|    | money | omen    | yeoman |        |      |       |
+:end:
+
+*/Notes on such tables/*:
+
+- the peg is capitalized and in first position
+
+- the first line contains preferred sound-alikes in preference
+  order
+
+- and the remaining sound-alikes appear in alphabetical order
+
+"MAN" is the peg: it is /equal/ to 32 in your mind. I hallucinate
+Superman flying out of the phone booth or arriving to Save the
+Day. The Sound-Alikes help you create phantasmagorias from long
+strings of numbers by devising a story. With practice, you can get
+fast. Eran Katz, who teaches this method professionally, often
+opens his lectures with a stunt wherein he memorizes hundreds of
+digits as quickly as the audience calls them out and his assistant
+writes them down.
+
+We go to three digits in this document. That means that every
+number from 00 through 099 and 0 through 1000 has a peg and a list
+of sound-alikes. For instance, here is the list for 352:
+
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 452 453)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+--------+------------+------------+----------+----------+----------|
+| 352 | MELON  | Himalayans | hemline    | semolina | milliner | homeland |
+|     | malign | melancholy | millennium | million  |          |          |
+:end:
+
+For words with three internal consonants, leading zeros and all
+sounds after the third consonant do not count. "Semolina" encodes
+352 despite the leading "s." "Semolina" does not encode 035
+because the "n" in "...ina" is a third internal consonant. For
+035, indeed, we have the following.
+
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 35 36)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+------------+----------+--------+---------+--------+----------|
+| 035 | SAWMILL    | smile    | smell  | small   | simile | sea-mile |
+|     | assimilate | seamless | seemly | similar |        |          |
+:end:
+
+#+begin_comment
+
+Test babomorph.
+
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 164 166)
+#+end_src
+
+#+RESULTS:
+:results:
+|----+---------+---------+--------+--------+--------+--------|
+| 64 | CHAIR   | jar     | sherry | washer | usher  | cherry |
+|    | Hoosier | assure  | azure  | char   | cheer  | chore  |
+|    | edger   | hosiery | jeer   | jury   | osier  | share  |
+|    | shear   | sheer   | shire  | shore  | shower | sure   |
+|    | wager   |         |        |        |        |        |
+|----+---------+---------+--------+--------+--------+--------|
+| 65 | JAIL    | chili   | jelly  | jewel  | shell  | shawl  |
+|  A | Chile   | July    | agile  | chill  | jolly  | jowl   |
+|    | shall   | shallow | shill  | shoal  | shyly  | usual  |
+:end:
+#+end_comment
+
+
+"Millenium" encodes 352 despite the trailing "...ium."
+
+Vowels and the weak consonants "h," "w," "wh," "y," and so on, do
+not count. Thus, "Himalayans" is 352 because the first non-weak
+consonant is "m" for 3.
+
+My basic 2-digit peg list appears below, extended from 99 to
+127 for ASCII and with nine extra pegs for court cards (Section
+[[card-pack]]). I know this table by heart. My Dad and many memory
+experts know pegs for 3 digits by heart and "compute" sound-alikes
+on-the-fly.
+
+|-----+----------+-----+--------+-----+-----------+-----+------------|
+|  00 | sauce    |  10 | toes   |  20 | nose      |  30 | mass       |
+|  01 | sod      |  11 | tot    |  21 | net       |  31 | mat        |
+|  02 | sun      |  12 | tan    |  22 | nun       |  32 | man        |
+|  03 | seam     |  13 | tam    |  23 | name      |  33 | mama       |
+|  04 | soar     |  14 | tar    |  24 | Nero      |  34 | mare       |
+|  05 | sail     |  15 | tail   |  25 | nail      |  35 | mail       |
+|  06 | sash     |  16 | tissue |  26 | niche     |  36 | match      |
+|  07 | sack     |  17 | tack   |  27 | neck      |  37 | mike       |
+|  08 | safe     |  18 | taffy  |  28 | navy      |  38 | muff       |
+|  09 | sap      |  19 | tap    |  29 | nap       |  39 | map        |
+|-----+----------+-----+--------+-----+-----------+-----+------------|
+|  40 | race     |  50 | lace   |  60 | chess     |  70 | case       |
+|  41 | rat      |  51 | lot    |  61 | jet       |  71 | cat        |
+|  42 | rain     |  52 | lane   |  62 | chain     |  72 | can        |
+|  43 | ram      |  53 | lime   |  63 | chime     |  73 | cam        |
+|  44 | rear     |  54 | lair   |  64 | chair     |  74 | car        |
+|  45 | rail     |  55 | lily   |  65 | jail      |  75 | coal       |
+|  46 | rash     |  56 | lash   |  66 | judge     |  76 | cage       |
+|  47 | rack     |  57 | lake   |  67 | chalk     |  77 | cake       |
+|  48 | reef     |  58 | leaf   |  68 | chef      |  78 | cuff       |
+|  49 | rope     |  59 | lap    |  69 | chip      |  79 | cap        |
+|-----+----------+-----+--------+-----+-----------+-----+------------|
+|  80 | face     |  90 | base   | 100 | thesis    | 110 | tights     |
+|  81 | fat      |  91 | bat    | 101 | toast     | 111 | teetotaler |
+|  82 | fan      |  92 | bean   | 102 | dozen     | 112 | titan      |
+|  83 | fame     |  93 | beam   | 103 | twosome   | 113 | totem      |
+|  84 | fare     |  94 | bar    | 104 | dowser    | 114 | Tatar      |
+|  85 | fall     |  95 | ball   | 105 | diesel    | 115 | title      |
+|  86 | fish     |  96 | badge  | 106 | wood-sage | 116 | deathwatch |
+|  87 | fig      |  97 | back   | 107 | tusk      | 117 | hot dog    |
+|  88 | fife     |  98 | beef   | 108 | adhesive  | 118 | auto-da-fe |
+|  89 | fob      |  99 | pipe   | 109 | teaspoon  | 119 | teddy bear |
+|-----+----------+-----+--------+-----+-----------+-----+------------|
+| 120 | dance    | 911 | potato | 411 | rat-a-tat | 711 | cadet      |
+| 121 | donut    | 912 | baton  | 412 | rattan    | 712 | katana     |
+| 122 | Athenian | 913 | podium | 413 | radium    | 713 | catamaran  |
+| 123 | tenement |     |        |     |           |     |            |
+| 124 | tenor    |     | spades |     | hearts    |     | clubs      |
+| 125 | toenail  |     | court  |     | court     |     | court      |
+| 126 | tension  |     | cards  |     | cards     |     | cards      |
+| 127 | tank     |     |        |     |           |     |            |
+|-----+----------+-----+--------+-----+-----------+-----+------------|
+
+\clearpage
+* Credit-Card Numbers
 
 Consider the following, fake VISA number from
 
@@ -251,10 +431,11 @@ some sound-alikes backwards:
 | 8659 | fish LEAP | The FISH are LEAPing today, so we          |
 | 3825 | MOVE REEL | MOVE the REEL slowly (on the fishing rod). |
 
-I could recall this the credit-card number days after devising it,
-without refreshing my memory. Devising it took less than a minute.
-I instantly memorized it while devising it without extra effort
-because I know the entire 2-digit peg table by heart.
+You can recall this the credit-card number weeks after devising
+the story, without refreshing your memory in between. Devising it
+took less than a minute. I instantly memorized it while devising
+it without extra effort because I know the entire 2-digit peg
+table by heart.
 
 \clearpage
 * Hexadecimal: GUID & SHA-1
@@ -262,17 +443,16 @@ because I know the entire 2-digit peg table by heart.
 For mapping /hexits/ (hexadecimal digits), extend the table with
 the ASCII codes for A-F.
 
-|---+---------+-------+----+----------------------------------------------|
-|   | NATO    | ASCII |    | hallucination; ASCII pair refs marked with * |
-|   |         |       |    | Hebrew pegs capitalized                      |
-|---+---------+-------+----+----------------------------------------------|
-| A | ALPHA   | jail  | 65 | the alpha-male lion (Aryeh:1) is in jail     |
-| B | BAKER   | judge | 66 | passing judgment on the lion                 |
-| C | CHARLIE | chalk | 67 | hopscotch on the sidewalk                    |
-| D | DELTA   | chef  | 68 | day job of a PhD-thesis* student             |
-| E | ECHO    | chip  | 69 | a poker chip in a policeman's(5) hand        |
-| F | FOXTROT | case  | 70 | full of a dozen* pink (Vered:6) roses        |
-|---+---------+-------+----+----------------------------------------------|
+|-----+---------+-------+----+--------------------------------------------|
+| hex | NATO    | ASCII |    | hallucination                              |
+|-----+---------+-------+----+--------------------------------------------|
+| A   | ALPHA   | jail  | 65 | the alpha-male lion is in jail             |
+| B   | BAKER   | judge | 66 | passing judgment on the lion               |
+| C   | CHARLIE | chalk | 67 | hopscotch on the sidewalk                  |
+| D   | DELTA   | chef  | 68 | day job of a PhD-thesis student            |
+| E   | ECHO    | chip  | 69 | a poker chip in a policeman's (LAW:5) hand |
+| F   | FOXTROT | case  | 70 | filled with a dozen pink roses             |
+|-----+---------+-------+----+--------------------------------------------|
 
 and their sound-alikes:
 
@@ -309,7 +489,7 @@ and their sound-alikes:
 \clearpage
 ** Example GUID:
 
-This is only a little harder than decimal.
+Hex is only a little harder than decimal.
 Consider this random GUID generated by Java:
 
 #+begin_example
@@ -318,40 +498,43 @@ Consider this random GUID generated by Java:
 
 Start with the pegs:
 
-| 5D00E7AA | law chef sauce chip key jail jail |
-| C15C     | chalk tail chalk                  |
-| 44A5     | rear jail law                     |
-| 93FA     | beam case jail                    |
-| A4DE675  | jail ray chef chip chuckle        |
-| 0B28A    | saw judge Navy jail               |
+| =5D00 E7AA= | law chef sauce chip key jail jail |
+| =C15C=      | chalk tail chalk                  |
+| =44A5=      | rear jail law                     |
+| =93FA=      | beam case jail                    |
+| =A4DE 675=  | jail ray chef chip chuckle        |
+| =0B28 A=    | saw judge Navy jail               |
 
 *Note*:
 
 - Encode 6750 as "chuckle saw," not as 67 50 "chalk lace."
   "Chalk" decodes as C, not as 67.
 
-Hallucinate a "hell-chef sauce," a recipe for a naive (28),
-gullible, unsuspecting victim. We seeded this hallucination from that
-one word, "naive."
+In the credit-card example, we worked backwards from the
+picturesque peg "fish" 86. Here we work backwards from the
+seductive sound-alike "naive" 28. The seductive emotion will make
+it easier to memorize. Hallucinate a "hell-chef sauce," a recipe
+for a naive victim.
 
-| 5D00E7AA | HELL-chef SAUCE: CHOP, HACK, and CHILL the JELLY. |
-| C15C     | SHAKE with TALLOW, CHECK                          |
-| 44A5     | the RARE CHILI OIL.                               |
-| 93FA     | "BE-MY HAGGIS, JILL!"                             |
-| A4DE675  | CHILL for an HOUR, SHAVE, CHOP, CHUCKLE.          |
-| 0B28A    | "ASSAY, JUDGE!" NAIVE JILL.                       |
+| =5D00 E7AA= | HELL-chef SAUCE: CHOP, HACK, and CHILL the JELLY. |
+| =C15C=      | SHAKE with TALLOW, CHECK                          |
+| =44A5=      | the RARE CHILI OIL.                               |
+| =93FA=      | "BE-MY HAGGIS, JILL!"                             |
+| =A4DE 675=  | CHILL for an HOUR, SHAVE, CHOP, CHUCKLE.          |
+| =0B28 A=    | "ASSAY, JUDGE!" NAIVE JILL.                       |
 
+\clearpage
 ** Example SHA-1 Hash
 
 From https://onlinehashtools.com, consider the following, 160-bit
 hash: For git, it practically suffices to remember the first 8
 hexits. Let's do them all as a workout:
 
-| A638 | 1B63 | jail camel tea judge chime     |
-| D532 | 69BA | chef lemon jaw pea judge jail  |
-| 418E | 5FB1 | artful chip law case judge tea |
-| BD50 | 3950 | judge chef wholesome pillows   |
-| 860D | D679 | fishes chef chef checkup       |
+| =A638 1B63= | jail camel tea judge chime     |
+| =D532 69BA= | chef lemon jaw pea judge jail  |
+| =418E 5FB1= | artful chip law case judge tea |
+| =BD50 3950= | judge chef wholesome pillows   |
+| =860D D679= | fishes chef chef checkup       |
 
 *Notes*
 
@@ -367,24 +550,31 @@ hexits. Let's do them all as a workout:
 Let's bribe a judge and put him to sleep with hash (puns help the
 memory), then summon middle-Eastern heavenly dreams.
 
-| A638 | 1B63 | with SHAWL and CAMEL, TEA for the JUDGE, JIM. |
-| D532 | 69BA | SHAVE a LEMON WEDGE, PAY the JUDGE to CHILL.  |
-| 418E | 5FB1 | an ARTFUL SHAPE of this LAW CASE, SHUSH THEE! |
-| BD50 | 3950 | HASHISH ACHIEVES ELYSIUM BLESSINGS            |
-| 860D | D679 | FETCHES the CHIEF, JEHOVAH for JACOB!         |
+| =A638 1B63= | with SHAWL and CAMEL, TEA for the JUDGE, JIM. |
+| =D532 69BA= | SHAVE a LEMON WEDGE, PAY the JUDGE to CHILL.  |
+| =418E 5FB1= | an ARTFUL SHAPE of this LAW CASE, SHUSH THEE! |
+| =BD50 3950= | HASHISH ACHIEVES ELYSIUM BLESSINGS            |
+| =860D D679= | FETCHES the CHIEF, JEHOVAH for JACOB!         |
 
 \clearpage
-* Radix 36: Spack
+* Radix 36
 
 Radix-36 is more difficult to find "in the wild" than is either
-hex or Radix-64. I most often see it in URLs for encoding queries
-or other such data. It's useful there because HTTP is not
-case-sensitive, so Radix-64 is overkill and sucks up alternatives.
+hex or Radix-64. I most often see it in randomly generated file
+and directory names because some file systems are not
+case-sensitive. R36 is also found sometimes in URLs for encoding
+queries or other data. HTTP is supposed to be case-sensitive, but
+some sites don't adhere to the standard. Radix-64 is overkill in
+such circumstances and sucks up alternatives.
 
-For encoding /rixits/ in radix-36 (or biscuits in base-36?), add the
-remaining capital letters and their sound-alikes from Section [[all-pegs]].
-Radix-36 is case-insensitive, by design, so we only need one set of
-letters. For Radix-64, we need both cases.
+For encoding /rixits/ in R36 (or biscuits in base-36?), I use
+ASCII pegs for the capital letters beyond hex. Find their
+sound-alikes in Section [[all-pegs]]. R36 is case-insensitive, by
+design, so we only need one set of pegs. For Radix-64, we need
+both upper and lower case. The stars in the table below mark
+pegs for the lower case. They help for remembering the ASCII pair
+--- upper and lower case --- but they're only pertinent for R64
+(Section [[r64]]).
 
 |---+----------+----+------+---------------------------------------------------|
 | G | GOLF     | 71 | cat  | on the golf cart with my twosome*                 |
@@ -409,7 +599,7 @@ letters. For Radix-64, we need both cases.
 | Y | YANKEE   | 89 | fob  | a watch-fob hanging from a nail(25) on a US map   |
 | Z | ZULU     | 90 | base | an Athenian* ball-player at bat on home base      |
 |---+----------+----+------+---------------------------------------------------|
-
+\clearpage
 ** Example Unix Time
 
 I found an example here:
@@ -422,23 +612,22 @@ kg4cebk9
 
 Pegs, first, converting to upper-case:
 
-| KG4 | coal cat ray     |
-| CEB | chalk chip judge |
-| K9  | coal pea         |
+| =KG4= | coal cat ray     |
+| =CEB= | chalk chip judge |
+| =K9=  | coal pea         |
 
 Do some forensics on a dead pet.
 
-| KG4 | KILL the CAT with a RAY.             |
-| CEB | CHECK for a CHIP, lest we be JUDGED. |
-| K9  | COOL! it's UP.                       |
+| =KG4= | KILL the CAT with a RAY.             |
+| =CEB= | CHECK for a CHIP, lest we be JUDGED. |
+| =K9= | COOL! it's UP.                       |
 
-\clearpage
 ** Example from Spack
 
-Spack (https://spack.io/) is a superlative dependency solver for
-software build systems. It produces directory names in R36 that
-won't (statistically) collide with SHA-1 hashes and work fine on
-case-insensitive file systems like some of those on Windows.
+Spack (https://spack.io/) is a dependency solver for software
+build systems. It produces directory names in R36 that won't
+(statistically) collide with SHA-1 hashes and work fine on
+case-insensitive file systems. Here's an example
 
 #+begin_example
 [+] /home/blahblah/yackyack/spack_packages/scripts/tmp-spack2/spack/opt/spack/
@@ -448,38 +637,39 @@ linux-ubuntu18.04-haswell/gcc-7.5.0/gdbm-1.19-rdt674nck5k5hbawjaywb4mv4r72osnq
 Pegs first, except cheat on pronounceable subsequences or others
 that appeal to your personal memory!
 
-| RDT6 | 74NC | REDDIT jaw key ray cuff chalk               |
-| K5K5 | HBAW | coal law coal law, can judge jail fig       |
-| JAYW | B4MV | JAY fig, BEFORE MOVIE (judge ray cake fish) |
-| 4R72 | OSNQ | ray fan key Noah, face fame cuff fat.       |
+| =RDT6 74NC= | REDDIT jaw key ray cuff chalk               |
+| =K5K5 HBAW= | coal law coal law, can judge jail fig       |
+| =JAYW B4MV= | JAY fig, BEFORE MOVIE (judge ray cake fish) |
+| =4R72 OSNQ= | ray fan key Noah, face fame cuff fat.       |
 
 How about a tale of canceling on social media?
 
-| RDT6 | 74NC | REDDIT is AHUSH, a COY WAR, GOOFY and SHOCKING.      |
-| K5K5 | HBAW | KILL ILL, UGLY WILL; AGONY SHUSH the SHILL, the FAKE |
-| JAYW | B4MV | JAY-bird FAKE, BEFORE MOVIE                          |
-| 4R72 | OSNQ | OUR FAN GUY NOAH, with VOICE FAIR, GIVE FIGHT!       |
+| =RDT6 74NC= | REDDIT is AHUSH, a COY WAR, GOOFY and SHOCKING.      |
+| =K5K5 HBAW= | KILL ILL, UGLY WILL; AGONY SHUSH the SHILL, the FAKE |
+| =JAYW B4MV= | JAY-bird FAKE, BEFORE MOVIE                          |
+| =4R72 OSNQ= | OUR FAN GUY NOAH, with VOICE FAIR, GIVE FIGHT!       |
 
 *Notes*
 
-- "Car" for 74 is not ok because it decodes as "J". Must peg it as
-  "key ray," then try sound-alikes.
+- "Car" for 74 is not ok because it decodes as "J". Peg it as "key
+  ray," then try sound-alikes.
 
-- "Fish" is "V" in R36, not 86. If we had 86, we would have to
-  encode it in pegs as "fee jaw," then try sound-alikes.
+- "Fish" is "V" in R36, not 86. If we had 86, peg it as "fee jaw,"
+  then try sound-alikes.
 
-- 72 can't be "can," because that's "H" in R36. Encode as "key
+- 72 can't be "can," because that's "H" in R36. Peg it as "key
   Noah" then try sound-alikes.
 
 \clearpage
 * Radix 64
-
-For encoding rixits in base-64, add the lower-case letters plus
-special cases for "+", 62, and "/", 63.
+<<r64>>
+For encoding rixits in R64, add the lower-case letters plus
+special cases for "+", 62, and "/", 63. Stars in the table below mark
+pegs for the upper-case ASCII codes. They help for remembering the
+ASCII pair together.
 
 |----+----------+-----+-------------+------------------------------------------------------|
 |    | NATO     |     | ASCII       | hallucination; ASCII pair refs marked with *         |
-|    |          |     |             | Hebrew pegs capitalized                              |
 |----+----------+-----+-------------+------------------------------------------------------|
 | a  | alpha    |  97 | back        | the jailer* has her back turned to the lion          |
 | b  | baker    |  98 | beef        | the judge* eats a beef dinner in court               |
@@ -530,40 +720,322 @@ C6RD 1/Qn tXQg BV3m pUZq
 
 Pegs first, then try sound-alikes:
 
-| C3Nz | aC1l | chalk me cuff Athenian, back chalk tea tea          |
-| ZDI1 | NTE5 | base chef cam tea, cuff fare chip law               |
-| IFi4 | CpLS | cam case diesel ray, chalk titan cage fame          |
-| hSK/ | uUux | dowser fame coal chime, hotdog fall hotdog dance    |
-| BxM3 | 6WwK | judge dance cake me, jaw fig teddy-bear coal        |
-| C6RD | 1/Qn | chalk jaw fan chef, tea chime fat tights            |
-| tXQg | BV3m | deathwatch fife fat twosome, judge fish me teaspoon |
-| pUZq |      | titan fall base totem                               |
+| =C3Nz aC1l= | chalk me cuff Athenian, back chalk tea tea          |
+| =ZDI1 NTE5= | base chef cam tea, cuff fare chip law               |
+| =IFi4 CpLS= | cam case diesel ray, chalk titan cage fame          |
+| =hSK/ uUux= | dowser fame coal chime, hotdog fall hotdog dance    |
+| =BxM3 6WwK= | judge dance cake me, jaw fig teddy-bear coal        |
+| =C6RD 1/Qn= | chalk jaw fan chef, tea chime fat tights            |
+| =tXQg BV3m= | deathwatch fife fat twosome, judge fish me teaspoon |
+| =pUZq=      | titan fall base totem                               |
 
 A tale of overeating:
 
-| C3Nz | aC1l | CHALK picture, ME adjusting CUFFS, looking down my ATHENIAN nose. |
-|      |      | Turn my BACK, another CHALK picture; my TIE is TOO tight.         |
-|      |      |                                                                   |
-| ZDI1 | NTE5 | On BASE, now. A CHEF flips burgers with a CAMSHAFT and brews TEA. |
-|      |      | COFFEE, FAIR-traded! SHOPPED WELL.                                |
-|      |      |                                                                   |
-| IFi4 | CpLS | The CAMSHAFT stirs EGGS, a DAZZLING omelet, ROE and               |
-|      |      | JACK. I'll be a TWO-TON and KEDGE to bed: HEAVE-HIM!              |
-|      |      |                                                                   |
-| hSK/ | uUux | DESSERTS? WHIFF-EM! CALL a dentist, JIM! my TOOTHACHE             |
-|      |      | JIM! My TOOTHACHE FEELS like a TOOTHACHE, DUNCE!                  |
-|      |      |                                                                   |
-| BxM3 | 6WwK | CHOW-CHOW! DUNCE CAKE for ME.                                     |
-|      |      | JAW a FIG and a TOOTHPICK, COOL!                                  |
-|      |      |                                                                   |
-| C6RD | 1/Qn | CHECK my JAW OFTEN, FAWN CHEF. TO SHAME FOOD TADS.                |
-|      |      |                                                                   |
-| tXQg | BV3m | DEATH-WISH? VIVA my FAT TWOSOME. SHUSH, VETCH, MY TEASPIT.        |
-|      |      |                                                                   |
-| pUZq |      | I'm a TWO-TON, I'll FALL BESIDE the DAYTIME.                      |
+| =C3Nz aC1l= | CHALK picture, ME adjusting CUFFS, looking down my ATHENIAN nose. |
+|             | Turn my BACK, another CHALK picture; my TIE is TOO tight.         |
+|             |                                                                   |
+| =ZDI1 NTE5= | On BASE, now. A CHEF flips burgers with a CAMSHAFT and brews TEA. |
+|             | COFFEE, FAIR-traded! SHOPPED WELL.                                |
+|             |                                                                   |
+| =IFi4 CpLS= | The CAMSHAFT stirs EGGS, a DAZZLING omelet, ROE and               |
+|             | JACK. I'll be a TWO-TON and KEDGE to bed: HEAVE-HIM!              |
+|             |                                                                   |
+| =hSK/ uUux= | DESSERTS? WHIFF-EM! CALL a dentist, JIM! my TOOTHACHE             |
+|             | JIM! My TOOTHACHE FEELS like a TOOTHACHE, DUNCE!                  |
+|             |                                                                   |
+| =BxM3 6WwK= | CHOW-CHOW! DUNCE CAKE for ME.                                     |
+|             | JAW a FIG and a TOOTHPICK, COOL!                                  |
+|             |                                                                   |
+| =C6RD 1/Qn= | CHECK my JAW OFTEN, FAWN CHEF. TO SHAME FOOD TADS.                |
+|             |                                                                   |
+| =tXQg BV3m= | DEATH-WISH? VIVA my FAT TWOSOME. SHUSH, VETCH, MY TEASPIT.        |
+|             |                                                                   |
+| =pUZq=      | I'm a TWO-TON, I'll FALL BESIDE the DAYTIME.                      |
 
 \clearpage
-* P
+* Passwords
+
+Don't make passwords easy for bots to guess. Random, long passwords
+are best, but hard to remember, even with our systems. They're
+even more difficult to associate uniquely with a web site.
+
+Modern web sites don't store your passwords in the clear.
+Virtually all, nowadays, hash your password with a one-way hash
+(and usually some salt and a nonce challenge). That means you
+expose nothing by re-using part of a password, so long as it's
+different from site-to-site.
+
+Pick a difficult prefix, but memorable to you. Mix in a special
+character and a numeral because many sites insist on such. Start
+with something picturesque:
+
+"An Octopus has eight legs with suckers."
+
+Now, partially encode and obfuscate it; this is your personal salt
+prefix:
+
+=2Octopu$Ha$8Leg$With0740=
+
+Finally, append the site name, perhaps obfuscated:
+
+=2Octopu$Ha$8Leg$With0740EBAY=
+=2Octopu$Ha$8Leg$With0740APPLE=
+=2Octopu$Ha$8Leg$With0740OVERLEAF=
+
+Anyone who knows your personal salt prefix and your algorithm will
+break you. But bots will just see a random hash, different
+for each site you visit. They will have no idea that you are even
+using an algorithm
+
+* Daily Practice: ASCII,  Cards, NATO, Hebrew, Dates
+<<daily-practice>>
+
+Table 1 exploits the coincidence that there are 52 glyphs in the
+ASCII Latin alphabet, 52 cards in a standard pack, and 52 weeks of
+the year. There are only 22 Hebrew letters, so the last four rows
+of each 26 are empty in the Hebrew column.
+
+Table 1 is in groups of 13 corresponding to the suits of playing
+cards. Each group also contains dates in a fortuitous quarterly
+month-week pattern of 5-4-4: 5 weeks in Jan, 4 in Feb, 4 in Mar,
+etc. The first days of the months are in the easy pattern 155,
+274, 263, 153. You may memorize this as a honeymoon tale of
+TAILLIGHTS, NIAGRA, UNASHAMED, HOTELMAN.
+
+These are for non-leap years only, so not great for computing
+day-of-the-week. I have another method for that (debugged Furst)
+in Section [[day-of-week]].
+
+My daily practice includes another $156==3\times{}52=2\times{}78$
+three columns of hallucinations for the 156 faces of a standard
+Tarot pack, obverse and reverse. See Section [[tarot]].
+
+I go down table 1 in my mind when I need to fall asleep. I usually
+get four or five rows before drifting off, so next time through, I
+start up where I left off. Sometimes, I recite it backwards just
+to make sure the end of the table doesn't get soft from lack of
+repetition.
+
+#+ATTR_LATEX: :caption Table 1: ASCII, Playing cards, NATO, Hebrew, Dates
+|---+----------+-------+---------+------------+-------+--------+-----|
+|   | NATO     | ASCII | HEBREW  | TRANSLATION | SUIT  | DATE   | DOY |
+|   |          |       |         |            | + PIP |        |     |
+|---+----------+-------+---------+------------+-------+--------+-----|
+| A | ALPHA    | jail  | ARYEH   | lion       | SA    | JAN 01 |   1 |
+| B | BAKER    | judge | BAYIT   | booth      | S2    | JAN 08 |   8 |
+| C | CHARLIE  | chalk | GAMAL   | camel      | S3    | JAN 15 |  15 |
+| D | DELTA    | chef  | DALET   | door       | S4    | JAN 22 |  22 |
+| E | ECHO     | chip  | HAR     | hill       | S5    | JAN 29 |  29 |
+| F | FOXTROT  | case  | VERED   | pink       | S6    | FEB 05 |  36 |
+| G | GOLF     | cat   | ZAHAV   | gold       | S7    | FEB 12 |  43 |
+| H | HOTEL    | can   | CHAMOR  | mule       | S8    | FEB 19 |  50 |
+| I | INDIA    | cam   | TAYAS   | pilot      | S9    | FEB 26 |  57 |
+| J | JULIET   | car   | YAD     | hand       | ST    | MAR 05 |  64 |
+| K | KILO     | coal  | KISEH   | throne     | SJ    | MAR 12 |  71 |
+| L | LIMA     | cage  | LECHEM  | bread      | SQ    | MAR 19 |  78 |
+| M | MIKE     | cake  | MAYIM   | water      | SK    | MAR 26 |  85 |
+|---+----------+-------+---------+------------+-------+--------+-----|
+| N | NOVEMBER | cuff  | NACHASH | snake      | HA    | APR 02 |  92 |
+| O | OSCAR    | cap   | SEFER   | book       | H2    | APR 09 |  99 |
+| P | PAPA     | face  | AYIN    | eye        | H3    | APR 16 | 106 |
+| Q | QUEBEC   | fat   | PANIM   | face       | H4    | APR 23 | 113 |
+| R | ROMEO    | fan   | TZIPPOR | sparrow    | H5    | APR 30 | 120 |
+| S | SIERRA   | fame  | QUF     | monkey     | H6    | MAY 07 | 127 |
+| T | TANGO    | fare  | ROSH    | head       | H7    | MAY 14 | 134 |
+| U | UNIFORM  | fall  | SHAD    | skeleton   | H8    | MAY 21 | 141 |
+| V | VICTOR   | fish  | TANIN   | crocodile  | H9    | MAY 28 | 148 |
+| W | WHISKEY  | fig   |         |            | HT    | JUN 04 | 155 |
+| X | X-RAY    | fife  |         |            | HJ    | JUN 11 | 162 |
+| Y | YANKEE   | fob   |         |            | HQ    | JUN 18 | 169 |
+| Z | ZULU     | base  |         |            | HK    | JUN 25 | 176 |
+|---+----------+-------+---------+------------+-------+--------+-----|
+
+|---+----------+-------------+---------+-------------+-------+--------+-----|
+|   | NATO     | ASCII       | HEBREW  | TRANSLATION | SUIT  | DATE   | DOY |
+|   |          |             |         |             | + PIP |        |     |
+|---+----------+-------------+---------+-------------+-------+--------+-----|
+| a | alpha    | back        | aryeh   | lion        | CA    | JUL 02 | 183 |
+| b | baker    | beef        | bayit   | booth       | C2    | JUL 09 | 190 |
+| c | charlie  | pipe        | gamal   | camel       | C3    | JUL 16 | 167 |
+| d | delta    | thesis      | dalet   | door        | C4    | JUL 23 | 204 |
+| e | echo     | toast       | har     | hill        | C5    | JUL 30 | 211 |
+| f | foxtrot  | dozen       | vered   | pink        | C6    | AUG 06 | 218 |
+| g | golf     | twosome     | zahav   | gold        | C7    | AUG 13 | 225 |
+| h | hotel    | dowser      | chamor  | mule        | C8    | AUG 20 | 232 |
+| i | india    | diesel      | tayas   | pilot       | C9    | AUG 27 | 239 |
+| j | juliet   | wood-sage   | yad     | hand        | CT    | SEP 03 | 246 |
+| k | kilo     | tusk        | kiseh   | throne      | CJ    | SEP 10 | 253 |
+| l | lima     | adhesive    | lechem  | bread       | CQ    | SEP 17 | 260 |
+| m | mike     | teaspoon    | mayim   | water       | CK    | SEP 24 | 267 |
+|---+----------+-------------+---------+-------------+-------+--------+-----|
+| n | november | tights      | nachash | snake       | DA    | OCT 01 | 274 |
+| o | oscar    | teetotaler  | sefer   | book        | D2    | OCT 08 | 281 |
+| p | papa     | titan       | ayin    | eye         | D3    | OCT 15 | 288 |
+| q | quebec   | totem       | panim   | face        | D4    | OCT 22 | 295 |
+| r | romeo    | tatar       | tzippor | sparrow     | D5    | OCT 29 | 302 |
+| s | sierra   | title       | quf     | monkey      | D6    | NOV 05 | 309 |
+| t | tango    | death-watch | rosh    | head        | D7    | NOV 12 | 316 |
+| u | uniform  | hot-dog     | shad    | skeleton    | D8    | NOV 19 | 323 |
+| v | victor   | auto-da-fe  | tanin   | crocodile   | D9    | NOV 26 | 330 |
+| w | whiskey  | teddy-bear  |         |             | DT    | DEC 03 | 337 |
+| x | x-ray    | dance       |         |             | DJ    | DEC 10 | 344 |
+| y | yankee   | doughnut    |         |             | DQ    | DEC 17 | 351 |
+| z | zulu     | Athenian    |         |             | DK    | DEC 24 | 348 |
+|---+----------+-------------+---------+-------------+-------+--------+-----|
+
+* Tarot
+<<tarot>>
+Tarot cards have vivid imagery and powerful, emotional associated
+words. Such features are great for memory.
+
+There are 78 Tarot cards in a standard Rider-Waite pack. That's
+not divisible by 52, but if we consider the reverse images
+(upside-down cards) as distinct to the obverse, and most
+cartomancers do, then we have 156 image-word combinations, and
+that is divisible by 52. Thus, we get an additional three columns
+of picture words to add to the daily practice ([[daily-practice]]),
+where we associate them with standard playing cards, the NATO
+alphabet, the ASCII codes, weeks of the year, day of the year, and
+Hebrew words.
+
+The Tarot suits are wands, clubs, swords, and pentacles. These are
+obviously related to the suits of a standard pack, but different
+enough that we'll just keep those two sets of suits distinct in
+our minds. There are 14 cards in each suit, but only 22 trumps,
+aka majors. Let's take the Knights out of each suit and append
+them to the majors so that the minor suits have 13 cards each,
+including three court cards --- page (like "jack"), queen, and
+king.
+
+ #+begin_comment
+ |-----+--------+------+------------+-------+---------------+-------+------------------+-------+-----------------+----------+-------------+---------+--------+------|
+ | num | num    | card | card       | tarot |               | tarot |                  | tarot |                 | NATO     | ASCII       | hebrew  | month  |  day |
+ |     | peg    |      | peg        | major |               | minor |                  | minor |                 |          |             |         | +day   |   of |
+ |     |        |      |            |       |               | inv   |                  |       |                 |          |             |         |        | year |
+ |-----+--------+------+------------+-------+---------------+-------+------------------+-------+-----------------+----------+-------------+---------+--------+------|
+ |   1 | TEA    | SA   | bat        | MAG   | willpower     | wA    | boredom          | WA    | inspiration     | ALPHA    | jail        | ARYEH   | JAN 01 |    1 |
+ |   2 | NOAH   | S2   | bean       | PST   | intuition     | w2    | hesitation       | W2    | independence    | BAKER    | judge       | BAYIT   | JAN 08 |    8 |
+ |   3 | ME     | S3   | beam       | EMS   | motherhood    | w3    | obstacles        | W3    | expansion       | CHARLIE  | chalk       | GAMAL   | JAN 15 |   15 |
+ |   4 | RAY    | S4   | bar        | EMP   | fatherhood    | w4    | transience       | W4    | home            | DELTA    | chef        | DALET   | JAN 22 |   22 |
+ |   5 | LAW    | S5   | ball       | HEI   | tradition     | w5    | dodge            | W5    | competition     | ECHO     | chip        | HAR     | JAN 29 |   29 |
+ |   6 | JAW    | S6   | badge      | LOV   | union         | w6    | ignored          | W6    | recognition     | FOXTROT  | case        | VERED   | FEB 05 |   36 |
+ |   7 | KEY    | S7   | back       | CHA   | drive         | w7    | give up          | W7    | protect         | GOLF     | cat         | ZAHAV   | FEB 12 |   43 |
+ |   8 | FEE    | S8   | beef       | STR   | strength      | w8    | panic            | W8    | rapid           | HOTEL    | can         | CHAMOR  | FEB 19 |   50 |
+ |   9 | PEA    | S9   | pipe       | HRM   | contemplation | w9    | exhaustion       | W9    | grit            | INDIA    | cam         | TAYAS   | FEB 26 |   57 |
+ |  10 | TOES   | ST   | base       | WHL   | luck          | wT    | micromanage      | WT    | responsibility  | JULIET   | car         | YAD     | MAR 05 |   64 |
+ |  11 | TOT    | SJ   | potato     | JST   | causation     | wJ    | procrastination  | WJ    | excitement      | KILO     | coal        | KISEH   | MAR 12 |   71 |
+ |  12 | TAN    | SQ   | baton      | HNG   | perspective   | wQ    | selfishness      | WQ    | courage         | LIMA     | cage        | LECHEM  | MAR 19 |   78 |
+ |  13 | TAM    | SK   | podium     | DTH   | cycle         | wK    | overbearing      | WK    | overcome        | MIKE     | cake        | MAYIM   | MAR 26 |   85 |
+ |  14 | TAR    | HA   | rat        | TMP   | patience      | cA    | blocked          | CA    | spirituality    | NOVEMBER | cuff        | NACHASH | APR 02 |   92 |
+ |  15 | TAIL   | H2   | rain       | DVL   | addiction     | c2    | tension          | C2    | partnership     | OSCAR    | cap         | SEFER   | APR 09 |   99 |
+ |  16 | TISSUE | H3   | ram        | TWR   | destruction   | c3    | gossip           | C3    | friendship      | PAPA     | face        | AYIN    | APR 16 |  106 |
+ |  17 | TACK   | H4   | rear       | STA   | faith         | c4    | acceptance       | C4    | apathy          | QUEBEC   | fat         | PANIM   | APR 23 |  113 |
+ |  18 | TAFFY  | H5   | rail       | LUN   | misdirection  | c5    | peace            | C5    | disappointment  | ROMEO    | fan         | TZIPPOR | APR 30 |  120 |
+ |  19 | TAP    | H6   | rash       | SUN   | joy           | c6    | leaving home     | C6    | return home     | SIERRA   | fame        | QUF     | MAY 07 |  127 |
+ |  20 | NOSE   | H7   | rack       | JDG   | reckoning     | c7    | diversion        | C7    | daydreaming     | TANGO    | fare        | ROSH    | MAY 14 |  134 |
+ |  21 | NET    | H8   | reef       | WLD   | completion    | c8    | avoidance        | C8    | disillusioned   | UNIFORM  | fall        | SHAD    | MAY 21 |  141 |
+ |  22 | NUN    | H9   | rope       | FOO   | innocence     | c9    | smugness         | C9    | luxury          | VICTOR   | fish        | TANIN   | MAY 28 |  148 |
+ |  23 | NAME   | HT   | race       | KNW   | fearless      | cT    | broken family    | CT    | fulfillment     | WHISKEY  | fig         |         | JUN 04 |  155 |
+ |  24 | NERO   | HJ   | rat-a-tat  | KNC   | idealist      | cJ    | immaturity       | CJ    | dreamer         | X-RAY    | fife        |         | JUN 11 |  162 |
+ |  25 | NAIL   | HQ   | rattan     | KNS   | defender      | cQ    | self-sacrifice   | CQ    | compassion      | YANKEE   | fob         |         | JUN 18 |  169 |
+ |  26 | NICHE  | HK   | radium     | KNP   | efficient     | cK    | cold             | CK    | emot control    | ZULU     | base        |         | JUN 25 |  176 |
+ |  27 | NECK   | CA   | cat        | mag   | illusions     | sA    | chaos            | SA    | breakthrough    | alpha    | back        | aryeh   | JUL 02 |  183 |
+ |  28 | NAVY   | C2   | can        | pst   | repression    | s2    | hobson's         | S2    | indecision      | baker    | beef        | bayit   | JUL 09 |  190 |
+ |  29 | NAP    | C3   | cam        | ems   | barrenness    | s3    | forgiveness      | S3    | heartbreak      | charlie  | pipe        | gamal   | JUL 16 |  197 |
+ |  30 | MASS   | C4   | car        | emp   | tyranny       | s4    | restless         | S4    | rest            | delta    | thesis      | dalet   | JUL 23 |  204 |
+ |  31 | MAT    | C5   | coal       | hei   | rebellion     | s5    | resentment       | S5    | conan           | echo     | toast       | har     | JUL 30 |  211 |
+ |  32 | MAN    | C6   | cage       | lov   | one-sided     | s6    | resistence       | S6    | transition      | foxtrot  | dozen       | vered   | AUG 06 |  218 |
+ |  33 | MAMA   | C7   | cake       | cha   | directionless | s7    | conscience       | S7    | cunning         | golf     | twosome     | zahav   | AUG 13 |  225 |
+ |  34 | MARE   | C8   | cuff       | str   | self-doubt    | s8    | freedom          | S8    | trapped         | hotel    | dowser      | chamor  | AUG 20 |  232 |
+ |  35 | MAIL   | C9   | cap        | hrm   | isolation     | s9    | anxiety          | S9    | hope            | india    | diesel      | tayas   | AUG 27 |  239 |
+ |  36 | MATCH  | CT   | case       | whl   | loss          | sT    | nadir            | ST    | betrayal        | juliet   | wood-sage   | yad     | SEP 03 |  246 |
+ |  37 | MIKE   | CJ   | cadet      | jst   | dishonesty    | sJ    | deception        | SJ    | curiosity       | kilo     | tusk        | kiseh   | SEP 10 |  253 |
+ |  38 | MUFF   | CQ   | katana     | hng   | stalling      | sQ    | critical         | SQ    | clarity         | lima     | adhesive    | lechem  | SEP 17 |  260 |
+ |  39 | MAP    | CK   | catamaran  | dth   | stagnation    | sK    | cruel            | SK    | discipline      | mike     | teaspoon    | mayim   | SEP 24 |  267 |
+ |  40 | RACE   | DA   | tot        | tmp   | excess        | pA    | bad investment   | PA    | venture         | november | tights      | nachash | OCT 01 |  274 |
+ |  41 | RAT    | D2   | tan        | dvl   | recovery      | p2    | overwhelmed      | P2    | priorities      | oscar    | teetotaler  | sefer   | OCT 08 |  281 |
+ |  42 | RAIN   | D3   | tam        | twr   | aversion      | p3    | group conflict   | P3    | teamwork        | papa     | titan       | ayin    | OCT 15 |  288 |
+ |  43 | RAM    | D4   | tar        | sta   | insecurity    | p4    | stingy           | P4    | frugality       | quebec   | totem       | panim   | OCT 22 |  295 |
+ |  44 | REAR   | D5   | tail       | lun   | confusion     | p5    | receive charity  | P5    | poverty         | romeo    | tatar       | tzippor | OCT 29 |  302 |
+ |  45 | RAIL   | D6   | tissue     | sun   | sadness       | p6    | strings attached | P6    | charity         | sierra   | title       | quf     | NOV 05 |  309 |
+ |  46 | RASH   | D7   | tack       | jdg   | doubt         | p7    | wasted work      | P7    | perseverence    | tango    | death-watch | rosh    | NOV 12 |  316 |
+ |  47 | RACK   | D8   | taffy      | wld   | emptiness     | p8    | no motivation    | P8    | high standards  | uniform  | hot-dog     | shad    | NOV 19 |  323 |
+ |  48 | REEF   | D9   | tap        | foo   | naivety       | p9    | spendthrift      | P9    | fruits of labor | victor   | auto-da-fe  | tanin   | NOV 26 |  330 |
+ |  49 | ROPE   | DT   | toes       | knw   | reckless      | pT    | fleeting success | PT    | legacy          | whiskey  | teddy-bear  |         | DEC 03 |  337 |
+ |  50 | LACE   | DJ   | teetotaler | knc   | moody         | pJ    | uncommitted      | PJ    | diligence       | x-ray    | dance       |         | DEC 10 |  344 |
+ |  51 | LOT    | DQ   | titan      | kns   | feckless      | pQ    | jealous          | PQ    | abundance       | yankee   | doughnut    |         | DEC 17 |  351 |
+ |  52 | LANE   | DK   | totem      | knp   | workaholic    | pK    | indulgence       | PK    | prosperity      | zulu     | athenian    |         | DEC 24 |  358 |
+ |-----+--------+------+------------+-------+---------------+-------+------------------+-------+-----------------+----------+-------------+---------+--------+------|
+ #+end_comment
+
+ |--------+-------+---------------+-------+-----------------+-------+----------------|
+ | NUM    | TAROT | INCLUDING     | TAROT | ALL REVERSE     | TAROT | ALL OBVERSE    |
+ | PEG    | MAJOR | KNIGHTS       | MINOR |                 | MINOR |                |
+ |        | OBV   | OBVERSE       | REV   |                 | OBV   |                |
+ |--------+-------+---------------+-------+-----------------+-------+----------------|
+ | TEA    | MAG   | willpower     | wA    | boredom         | WA    | inspiration    |
+ | NOAH   | PST   | intuition     | w2    | hesitation      | W2    | independence   |
+ | ME     | EMS   | motherhood    | w3    | obstacles       | W3    | expansion      |
+ | RAY    | EMP   | fatherhood    | w4    | transience      | W4    | home           |
+ | LAW    | HEI   | tradition     | w5    | dodge           | W5    | competition    |
+ | JAW    | LOV   | union         | w6    | ignored         | W6    | recognition    |
+ | KEY    | CHA   | drive         | w7    | give up         | W7    | protect        |
+ | FEE    | STR   | strength      | w8    | panic           | W8    | rapid          |
+ | PEA    | HRM   | contemplation | w9    | exhaustion      | W9    | grit           |
+ | TOES   | WHL   | luck          | wT    | micromanage     | WT    | responsibility |
+ | TOT    | JST   | causation     | wJ    | procrastination | WJ    | excitement     |
+ | TAN    | HNG   | perspective   | wQ    | selfishness     | WQ    | courage        |
+ | TAM    | DTH   | cycle         | wK    | overbearing     | WK    | overcome       |
+ |--------+-------+---------------+-------+-----------------+-------+----------------|
+ | TAR    | TMP   | patience      | cA    | blocked         | CA    | spirituality   |
+ | TAIL   | DVL   | addiction     | c2    | tension         | C2    | partnership    |
+ | TISSUE | TWR   | destruction   | c3    | gossip          | C3    | friendship     |
+ | TACK   | STA   | faith         | c4    | acceptance      | C4    | apathy         |
+ | TAFFY  | LUN   | misdirection  | c5    | peace           | C5    | disappointment |
+ | TAP    | SUN   | joy           | c6    | leaving home    | C6    | return home    |
+ | NOSE   | JDG   | reckoning     | c7    | diversion       | C7    | daydreaming    |
+ | NET    | WLD   | completion    | c8    | avoidance       | C8    | disillusioned  |
+ | NUN    | FOO   | innocence     | c9    | smugness        | C9    | luxury         |
+ | NAME   | KNW   | fearless      | cT    | broken family   | CT    | fulfillment    |
+ | NERO   | KNC   | idealist      | cJ    | immaturity      | CJ    | dreamer        |
+ | NAIL   | KNS   | defender      | cQ    | self-sacrifice  | CQ    | compassion     |
+ | NICHE  | KNP   | efficient     | cK    | cold            | CK    | emot control   |
+ |--------+-------+---------------+-------+-----------------+-------+----------------|
+
+ |-------+-------+---------------+-------+------------------+-------+-----------------|
+ | NUM   | TAROT | INCLUDING     | TAROT | ALL REVERSE      | TAROT | ALL OBVERSE     |
+ | PEG   | MAJOR | KNIGHTS       | MINOR |                  | MINOR |                 |
+ |       | REV   | REVERSE       | REV   |                  |       |                 |
+ |-------+-------+---------------+-------+------------------+-------+-----------------|
+ | NECK  | mag   | illusions     | sA    | chaos            | SA    | breakthrough    |
+ | NAVY  | pst   | repression    | s2    | hobson's         | S2    | indecision      |
+ | NAP   | ems   | barrenness    | s3    | forgiveness      | S3    | heartbreak      |
+ | MASS  | emp   | tyranny       | s4    | restless         | S4    | rest            |
+ | MAT   | hei   | rebellion     | s5    | resentment       | S5    | conan           |
+ | MAN   | lov   | one-sided     | s6    | resistence       | S6    | transition      |
+ | MAMA  | cha   | directionless | s7    | conscience       | S7    | cunning         |
+ | MARE  | str   | self-doubt    | s8    | freedom          | S8    | trapped         |
+ | MAIL  | hrm   | isolation     | s9    | anxiety          | S9    | hope            |
+ | MATCH | whl   | loss          | sT    | nadir            | ST    | betrayal        |
+ | MIKE  | jst   | dishonesty    | sJ    | deception        | SJ    | curiosity       |
+ | MUFF  | hng   | stalling      | sQ    | critical         | SQ    | clarity         |
+ | MAP   | dth   | stagnation    | sK    | cruel            | SK    | discipline      |
+ |-------+-------+---------------+-------+------------------+-------+-----------------|
+ | RACE  | tmp   | excess        | pA    | bad investment   | PA    | venture         |
+ | RAT   | dvl   | recovery      | p2    | overwhelmed      | P2    | priorities      |
+ | RAIN  | twr   | aversion      | p3    | group conflict   | P3    | teamwork        |
+ | RAM   | sta   | insecurity    | p4    | stingy           | P4    | frugality       |
+ | REAR  | lun   | confusion     | p5    | receive charity  | P5    | poverty         |
+ | RAIL  | sun   | sadness       | p6    | strings attached | P6    | charity         |
+ | RASH  | jdg   | doubt         | p7    | wasted work      | P7    | perseverence    |
+ | RACK  | wld   | emptiness     | p8    | no motivation    | P8    | high standards  |
+ | REEF  | foo   | naivety       | p9    | spendthrift      | P9    | fruits of labor |
+ | ROPE  | knw   | reckless      | pT    | fleeting success | PT    | legacy          |
+ | LACE  | knc   | moody         | pJ    | uncommitted      | PJ    | diligence       |
+ | LOT   | kns   | feckless      | pQ    | jealous          | PQ    | abundance       |
+ | LANE  | knp   | workaholic    | pK    | indulgence       | PK    | prosperity      |
+ |-------+-------+---------------+-------+------------------+-------+-----------------|
+
 * COMMENT Mental Hash Functions
 
 John D. Cook recently blogged about Manuel Blum's proposed hash
@@ -626,7 +1098,6 @@ function that can be computed mentally:
 #+end_comment
 
 * APPENDICES
-
 ** Pegs and Hallucinations
 
 I blogged out the basics of my peg method here:
@@ -676,58 +1147,6 @@ switch slows me down even though I made the switch long, long ago.
 
 *DON'T CHANGE PEGS AFTER LOCKING THEM IN*
 
-** Basic Peg List
-<<basic-pegs>>
-
-My basic 2-digit peg list appears in Table 1, extended from 99 to
-127 for ASCII and with nine extra pegs for court cards (Section
-[[card-pack]]).
-
-#+ATTR_LATEX: :caption Table 1: Basic Extended 2-digit Pegs
-|-----+----------+-----+--------+-----+-----------+-----+------------|
-|  00 | sauce    |  10 | toes   |  20 | nose      |  30 | mass       |
-|  01 | sod      |  11 | tot    |  21 | net       |  31 | mat        |
-|  02 | sun      |  12 | tan    |  22 | nun       |  32 | man        |
-|  03 | seam     |  13 | tam    |  23 | name      |  33 | mama       |
-|  04 | soar     |  14 | tar    |  24 | Nero      |  34 | mare       |
-|  05 | sail     |  15 | tail   |  25 | nail      |  35 | mail       |
-|  06 | sash     |  16 | tissue |  26 | niche     |  36 | match      |
-|  07 | sack     |  17 | tack   |  27 | neck      |  37 | mike       |
-|  08 | safe     |  18 | taffy  |  28 | navy      |  38 | muff       |
-|  09 | sap      |  19 | tap    |  29 | nap       |  39 | map        |
-|-----+----------+-----+--------+-----+-----------+-----+------------|
-|  40 | race     |  50 | lace   |  60 | chess     |  70 | case       |
-|  41 | rat      |  51 | lot    |  61 | jet       |  71 | cat        |
-|  42 | rain     |  52 | lane   |  62 | chain     |  72 | can        |
-|  43 | ram      |  53 | lime   |  63 | chime     |  73 | cam        |
-|  44 | rear     |  54 | lair   |  64 | chair     |  74 | car        |
-|  45 | rail     |  55 | lily   |  65 | jail      |  75 | coal       |
-|  46 | rash     |  56 | lash   |  66 | judge     |  76 | cage       |
-|  47 | rack     |  57 | lake   |  67 | chalk     |  77 | cake       |
-|  48 | reef     |  58 | leaf   |  68 | chef      |  78 | cuff       |
-|  49 | rope     |  59 | lap    |  69 | chip      |  79 | cap        |
-|-----+----------+-----+--------+-----+-----------+-----+------------|
-|  80 | face     |  90 | base   | 100 | thesis    | 110 | tights     |
-|  81 | fat      |  91 | bat    | 101 | toast     | 111 | teetotaler |
-|  82 | fan      |  92 | bean   | 102 | dozen     | 112 | titan      |
-|  83 | fame     |  93 | beam   | 103 | twosome   | 113 | totem      |
-|  84 | fare     |  94 | bar    | 104 | dowser    | 114 | Tatar      |
-|  85 | fall     |  95 | ball   | 105 | diesel    | 115 | title      |
-|  86 | fish     |  96 | badge  | 106 | wood-sage | 116 | deathwatch |
-|  87 | fig      |  97 | back   | 107 | tusk      | 117 | hot dog    |
-|  88 | fife     |  98 | beef   | 108 | adhesive  | 118 | auto-da-fe |
-|  89 | fob      |  99 | pipe   | 109 | teaspoon  | 119 | teddy bear |
-|-----+----------+-----+--------+-----+-----------+-----+------------|
-| 120 | dance    | 911 | potato | 411 | rat-a-tat | 711 | cadet      |
-| 121 | donut    | 912 | baton  | 412 | rattan    | 712 | katana     |
-| 122 | Athenian | 913 | podium | 413 | radium    | 713 | catamaran  |
-| 123 | tenement |     |        |     |           |     |            |
-| 124 | tenor    |     | spades |     | hearts    |     | clubs      |
-| 125 | toenail  |     | court  |     | court     |     | court      |
-| 126 | tension  |     | cards  |     | cards     |     | cards      |
-| 127 | tank     |     |        |     |           |     |            |
-|-----+----------+-----+--------+-----+-----------+-----+------------|
-
 ** Alternatives for Hex
 
 *** Hex Method 1
@@ -763,6 +1182,7 @@ in all caps.
 |   F | steel     | still    | stool    | style     | sadly     | hostile  |
 |-----+-----------+----------+----------+-----------+-----------+----------|
 
+\newpage
 Here is the GUID, again.
 
 #+begin_example
@@ -771,13 +1191,13 @@ Here is the GUID, again.
 
 How about a pseudo-poem about wildlife:
 
-| 5D00E  | OWL of WISDOM and SASSY STARING eyes.        |
-| 7AA    | HAWK, look SIDEWAYS left and SIDEWAYS right. |
-| C15C44 | STAND TALL, SUDDEN HARRIER                   |
-| A5     | and ASSIDUOUS OWL!                           |
-| 93FA   | PUMA, STEALthy CITIZEN,                      |
-| DE6750 | STAMP! STRIKE! SHAKE, LASSIE!                |
-| B28A   | Don't HESITATE. ENOUGH, CITIZEN!             |
+| =5D00E=  | OWL of WISDOM and SASSY STARING eyes.        |
+| =7AA=    | HAWK, look SIDEWAYS left and SIDEWAYS right. |
+| =C15C44= | STAND TALL, SUDDEN HARRIER                   |
+| =A5=     | and ASSIDUOUS OWL!                           |
+| =93FA=   | PUMA, STEALthy CITIZEN,                      |
+| =DE6750= | STAMP! STRIKE! SHAKE, LASSIE!                |
+| =B28A=   | Don't HESITATE. ENOUGH, CITIZEN!             |
 
 *** Hex Method 2
 <<hex-method-2>>
@@ -790,29 +1210,30 @@ EEL or some such.
 
 Here we go, pegs, first:
 
-| 5D00E7AA     | law tam sauce tar key toes toes           |
-| C15C         | tan tea tail tan                          |
-| 44A5         | rear toes law                             |
-| 93FA         | beam tail toes                            |
-| A4DE6750B28A | toes ray tam tar chalk lace tot reef toes |
+| =5D00E7AA=     | law tam sauce tar key toes toes           |
+| =C15C=         | tan tea tail tan                          |
+| =44A5=         | rear toes law                             |
+| =93FA=         | beam tail toes                            |
+| =A4DE6750B28A= | toes ray tam tar chalk lace tot reef toes |
 
 Ignore 'ing' in the following, wherein we are assaulted by a
 Scottish traffic cop:
 
-| 5D00E7AA     | A Scottish policeman (LAW) wearing a TAM o'Shanter gives |
-|              | me SASS. Pulls me over on the TARmac and demands my KEY. |
-|              | I TOSS it on his TOES.                                   |
-|              |                                                          |
-| C15C         | "DONE IT WELL, laddie!"                                  |
-|              |                                                          |
-| 44A5 93FA A4 | THEN ROARING, "'TIS LOW, you BUM!                        |
-|              | 'TILL he EATS TAZER!'"                                   |
-|              |                                                          |
-| DE6750B28A   | "DAMN TAR! SHAKE LESS! TIGHT ENOUGH  on my TOES!"        |
+| =5D00E7AA=     | A Scottish policeman (LAW) wearing a TAM o'Shanter gives |
+|                | me SASS. Pulls me over on the TARmac and demands my KEY. |
+|                | I TOSS it on his TOES.                                   |
+|                |                                                          |
+| =C15C=         | "DONE IT WELL, laddie!"                                  |
+|                |                                                          |
+| =44A5 93FA A4= | THEN ROARING, "'TIS LOW, you BUM!                        |
+|                | 'TILL he EATS TAZER!'"                                   |
+|                |                                                          |
+| =DE6750B28A=   | "DAMN TAR! SHAKE LESS! TIGHT ENOUGH  on my TOES!"        |
 
 Method 1 produces more compact hallucinations and extends to higher
 radices.
 
+\clearpage
 *** SHA-1 by Hex Method 1
 <<sha-hexes>>
 
@@ -828,20 +1249,17 @@ be," and other obvious connector words like "the" and "a."
 
 Let's take a look at a statue in the artist's studio:
 
-a638 1b63 d532 69ba 418e
-5fb1 bd50 3950 860d d679
-
-| A638 | SIDEWAYS CHAMFER?                   |
-| 1B6E | the TOE of this STATUE is a SHAM    |
-| D532 | SODIUM is not ALUMINUM!             |
-| 69BA | its SHAPE in the STUDIO is SIDEWAYS |
-| 418E | ARTFUL HISTORY                      |
-|      |                                     |
-| 5FB1 | LAY a STOOL by the STATUE'S TOE     |
-| BD50 | STATUE is STAMPED "ALICE"           |
-| 3950 | MAYBE ALICE VOUCHES for the STAMP   |
-| D678 | STAMP of a JACOBIAN?                |
-
+| =A638= | SIDEWAYS CHAMFER?                   |
+| =1B6E= | the TOE of this STATUE is a SHAM    |
+| =D532= | SODIUM is not ALUMINUM!             |
+| =69BA= | its SHAPE in the STUDIO is SIDEWAYS |
+| =418E= | ARTFUL HISTORY                      |
+|        |                                     |
+| =5FB1= | LAY a STOOL by the STATUE'S TOE     |
+| =BD50= | STATUE is STAMPED "ALICE"           |
+| =3950= | MAYBE ALICE VOUCHES for the STAMP   |
+| =D678= | STAMP of a JACOBIAN?                |
+\clearpage
 ** Alternatives for Radix-64
 <<public-keys>>
 
@@ -906,7 +1324,7 @@ $\textrm{solstice}\rightarrow{}050\rightarrow{}50\rightarrow{}24\rightarrow{}15$
 
 It's a lot of mental arithmetic, but that's fun, too. Balance
 the fun factor against the need for recall speed and accuracy.
-
+\newpage
 ***** ASCII Popups
 
 If you've memorized ASCII, you already have pegs for A-Z and a-z.
@@ -946,28 +1364,28 @@ Let's tell a tale of poisoning an indiscreet lover.
 =AAAA=, assuming they're always present (TODO: check that!),
 leaving =C3Nz aC1l ZDI1 NTE5=:
 
-| C3Nz | SATIN HEM in a CINEMAtic SASH-WEIGHT                  |
-| aC11 | SMOOCH - STAINED, a HOT OATH                          |
-| ZDI1 | a SMALL STEAMing from the STOVE, with TEA brewing     |
-| NTE5 | CYANAMIDE for a SNOBbish SUITOR's ALE                 |
+| =C3Nz= | SATIN HEM in a CINEMAtic SASH-WEIGHT                  |
+| =aC11= | SMOOCH - STAINED, a HOT OATH                          |
+| =ZDI1= | a SMALL STEAMing from the STOVE, with TEA brewing     |
+| =NTE5= | CYANAMIDE for a SNOBbish SUITOR's ALE                 |
 
 *** The Unique Parts
 <<unique-parts>>
 Now in groups of 3 or 4 quads:
 
-| IFi4 | STUFF the STILL for his ZERO-HOUR HURRAH     |
-| CpLS | SWEETEN the SALT with a SCENT of SNUFF       |
-| hSK/ | a SERUM SINFUL and SINISTER for his SASHIMI  |
-| uUux | a SOLUTION SEMISWEET, no SLUDGE in this SLOP |
-|      |                                              |
-| BxMe | SATED, he SLIPS into ASSONANT WHIMsies       |
-| 6WwK | HUSHed SOMNOLENCE, SOULFUL SNOOZing          |
-| C6RD | SATIN HUSH, SNUG STOMACH                     |
-| 1/Qn | DIE, SWITCHMAN! SNATCH CERBERUS              |
-|      |                                              |
-| tXQg | SLOWLY SEMIMOBILE, SNITCH ! SURRENDER!       |
-| BV3m | SEDATED, to the CEMETERY HOME, SERF!         |
-| pUZq | SLIDE into OSMOSIS, ASSIMILATE SLAIN!        |
+| =IFi4= | STUFF the STILL for his ZERO-HOUR HURRAH     |
+| =CpLS= | SWEETEN the SALT with a SCENT of SNUFF       |
+| =hSK/= | a SERUM SINFUL and SINISTER for his SASHIMI  |
+| =uUux= | a SOLUTION SEMISWEET, no SLUDGE in this SLOP |
+|        |                                              |
+| =BxMe= | SATED, he SLIPS into ASSONANT WHIMsies       |
+| =6WwK= | HUSHed SOMNOLENCE, SOULFUL SNOOZing          |
+| =C6RD= | SATIN HUSH, SNUG STOMACH                     |
+| =1Qn/= | DIE, SWITCHMAN! SNATCH CERBERUS              |
+|        |                                              |
+| =tXQg= | SLOWLY SEMIMOBILE, SNITCH ! SURRENDER!       |
+| =BV3m= | SEDATED, to the CEMETERY HOME, SERF!         |
+| =pUZq= | SLIDE into OSMOSIS, ASSIMILATE SLAIN!        |
 
 *** Old Old Method
 <<old-old-method>>
@@ -998,103 +1416,6 @@ letters to their S-enhanced letter numbers, as in
 
 The decimal digits go to their regular pegs, 0..9. This is a
 variation of the old-old-method ([[old-old-method]]).
-
-** Daily Practice: ASCII,  Cards, NATO, Hebrew, Dates
-<<daily-practice>>
-
-table 2 exploits the coincidence that there are 52 glyphs in the
-ASCII Latin alphabet, 52 cards in a standard pack, and 52 weeks of
-the year. There are only 22 Hebrew letters, so the last four rows
-amongst each 26 are empty in the Hebrew column.
-
-table 2 is in groups of 13 corresponding to the suits of playing
-cards. Each group also contains dates in a monthly pattern of
-5-4-4: 5 weeks in Jan, 4 in Feb, 4 in Mar, etc. The first days of
-the months are in the easy pattern 155, 274, 263, 153. You may
-memorize this as a honeymoon tale of TAILLIGHTS, NIAGRA,
-UNASHAMED, HOTELMAN.
-
-These are for non-leap years only, so not great for computing
-day-of-the-week. I have another method for that (debugged Furst)
-in Section [[day-of-week]].
-
-My daily practice includes another $156==3\times{}52=2\times{}78$
-three columns of hallucinations for the 156 faces of a standard
-Tarot pack, obverse and reverse. That's a little arcane for now,
-so I don't include it.
-
-I go down table 2 in my mind when I need to fall asleep. I usually
-get four or five rows before drifting off, so next time through, I
-start up where I left off. Sometimes, I recite it backwards just
-to make sure the end of the table doesn't get soft from lack of
-repetition.
-
-#+ATTR_LATEX:  :caption table 2: ASCII, Playing cards, NATO, Hebrew, Dates
-|-------+---+-----------+-----+-------+--------+----------+---------+--------|
-| ASCII |   | CARDS     | NUM | SUIT  | PEG    | NATO     | HEBREW  | DATE   |
-|       |   |           |     | + PIP |        |          |         |        |
-|-------+---+-----------+-----+-------+--------+----------+---------+--------|
-| jail  | A | bat       |   1 | SA    | TEA    | ALPHA    | ARYEH   | JAN 01 |
-| judge | B | bean      |   2 | S2    | NOAH   | BAKER    | BAYIT   | JAN 08 |
-| chalk | C | beam      |   3 | S3    | ME     | CHARLIE  | GAMAL   | JAN 15 |
-| chef  | D | bar       |   4 | S4    | RAY    | DELTA    | DALET   | JAN 22 |
-| chip  | E | ball      |   5 | S5    | LAW    | ECHO     | HAR     | JAN 29 |
-| case  | F | badge     |   6 | S6    | JAW    | FOXTROT  | VERED   | FEB 05 |
-| cat   | G | back      |   7 | S7    | KEY    | GOLF     | ZAHAV   | FEB 12 |
-| can   | H | beef      |   8 | S8    | FEE    | HOTEL    | CHAMOR  | FEB 19 |
-| cam   | I | pipe      |   9 | S9    | PEA    | INDIA    | TAYAS   | FEB 26 |
-| car   | J | base      |  10 | ST    | TOES   | JULIET   | YAD     | MAR 05 |
-| coal  | K | potato    |  11 | SJ    | TOT    | KILO     | KISEH   | MAR 12 |
-| cage  | L | baton     |  12 | SQ    | TAN    | LIMA     | LECHEM  | MAR 19 |
-| cake  | M | podium    |  13 | SK    | TAM    | MIKE     | MAYIM   | MAR 26 |
-|-------+---+-----------+-----+-------+--------+----------+---------+--------|
-| cuff  | N | rat       |  14 | HA    | TAR    | NOVEMBER | NACHASH | APR 02 |
-| cap   | O | rain      |  15 | H2    | TAIL   | OSCAR    | SEFER   | APR 09 |
-| face  | P | ram       |  16 | H3    | TISSUE | PAPA     | AYIN    | APR 16 |
-| fat   | Q | rear      |  17 | H4    | TACK   | QUEBEC   | PANIM   | APR 23 |
-| fan   | R | rail      |  18 | H5    | TAFFY  | ROMEO    | TZIPPOR | APR 30 |
-| fame  | S | rash      |  19 | H6    | TAP    | SIERRA   | QUF     | MAY 07 |
-| fare  | T | rack      |  20 | H7    | NOSE   | TANGO    | ROSH    | MAY 14 |
-| fall  | U | reef      |  21 | H8    | NET    | UNIFORM  | SHAD    | MAY 21 |
-| fish  | V | rope      |  22 | H9    | NUN    | VICTOR   | TANIN   | MAY 28 |
-| fig   | W | race      |  23 | HT    | NAME   | WHISKEY  |         | JUN 04 |
-| fife  | X | rat-a-tat |  24 | HJ    | NERO   | X-RAY    |         | JUN 11 |
-| fob   | Y | rattan    |  25 | HQ    | NAIL   | YANKEE   |         | JUN 18 |
-| base  | Z | radium    |  26 | HK    | NICHE  | ZULU     |         | JUN 25 |
-|-------+---+-----------+-----+-------+--------+----------+---------+--------|
-
-|-------------+---+------------+-----+-------+-------+----------+---------+--------|
-| ASCII       |   | CARDS      | NUM | SUIT  | PEG   | NATO     | HEBREW  | DATE   |
-|             |   |            |     | + PIP |       |          |         |        |
-|-------------+---+------------+-----+-------+-------+----------+---------+--------|
-| back        | a | cat        |  27 | CA    | NECK  | alpha    | aryeh   | JUL 02 |
-| beef        | b | can        |  28 | C2    | NAVY  | baker    | bayit   | JUL 09 |
-| pipe        | c | cam        |  29 | C3    | NAP   | charlie  | gamal   | JUL 16 |
-| thesis      | d | car        |  30 | C4    | MASS  | delta    | dalet   | JUL 23 |
-| toast       | e | coal       |  31 | C5    | MAT   | echo     | har     | JUL 30 |
-| dozen       | f | cage       |  32 | C6    | MAN   | foxtrot  | vered   | AUG 06 |
-| twosome     | g | cake       |  33 | C7    | MAMA  | golf     | zahav   | AUG 13 |
-| dowser      | h | cuff       |  34 | C8    | MARE  | hotel    | chamor  | AUG 20 |
-| diesel      | i | cap        |  35 | C9    | MAIL  | india    | tayas   | AUG 27 |
-| wood-sage   | j | case       |  36 | CT    | MATCH | juliet   | yad     | SEP 03 |
-| tusk        | k | cadet      |  37 | CJ    | MIKE  | kilo     | kiseh   | SEP 10 |
-| adhesive    | l | katana     |  38 | CQ    | MUFF  | lima     | lechem  | SEP 17 |
-| teaspoon    | m | catamaran  |  39 | CK    | MAP   | mike     | mayim   | SEP 24 |
-|-------------+---+------------+-----+-------+-------+----------+---------+--------|
-| tights      | n | tot        |  40 | DA    | RACE  | november | nachash | OCT 01 |
-| teetotaler  | o | tan        |  41 | D2    | RAT   | oscar    | sefer   | OCT 08 |
-| titan       | p | tam        |  42 | D3    | RAIN  | papa     | ayin    | OCT 15 |
-| totem       | q | tar        |  43 | D4    | RAM   | quebec   | panim   | OCT 22 |
-| tatar       | r | tail       |  44 | D5    | REAR  | romeo    | tzippor | OCT 29 |
-| title       | s | tissue     |  45 | D6    | RAIL  | sierra   | quf     | NOV 05 |
-| death-watch | t | tack       |  46 | D7    | RASH  | tango    | rosh    | NOV 12 |
-| hot-dog     | u | taffy      |  47 | D8    | RACK  | uniform  | shad    | NOV 19 |
-| auto-da-fe  | v | tap        |  48 | D9    | REEF  | victor   | tanin   | NOV 26 |
-| teddy-bear  | w | toes       |  49 | DT    | ROPE  | whiskey  |         | DEC 03 |
-| dance       | x | teetotaler |  50 | DJ    | LACE  | x-ray    |         | DEC 10 |
-| doughnut    | y | titan      |  51 | DQ    | LOT   | yankee   |         | DEC 17 |
-| Athenian    | z | totem      |  52 | DK    | LANE  | zulu     |         | DEC 24 |
-|-------------+---+------------+-----+-------+-------+----------+---------+--------|
 
 ** Memorizing Dates
 
@@ -1569,10 +1890,10 @@ I blogged this out here:
 
 https://rebcabin.wordpress.com/2015/07/03/590/
 
-Here is a scrape:
+Here is an edited scrape:
 
 Remember Dustin Hoffman's character in the movie “Rainman,” who can
-instantly say the day of the week for a given date?  Of course, he was
+instantly say the day of the week for a given date? Of course, he was
 an autistic savant and probably didn't know and certainly couldn't teach
 how he does it, but here is a method I learned from my Dad [Furst
 has the same method].
@@ -1580,53 +1901,53 @@ has the same method].
 Preliminaries:
 
 Do all math mod 7, that is, you only need to keep the remainder of the
-results of any calculation after dividing by 7.  Thus, 15 is 1, 33 is 5,
+results of any calculation after dividing by 7. Thus, 15 is 1, 33 is 5,
 49 is 0, etc.
 
 Every day of the week has a number, starting with 1 for Sunday and
-ending with 0 for Saturday.  Your goal is to convert any Gregorian
+ending with 0 for Saturday. Your goal is to convert any Gregorian
 calendar date into such a number.
 
 Jan and Feb belong to the year BEFORE. The reason is that leap years add
 a day at the end of Feb and it makes all the math easier to think that
-Jan and Feb 1963 are really part of 1962, for example.  Also remember
-that the Romans started their year with the month of March.  Maybe it
+Jan and Feb 1963 are really part of 1962, for example. Also remember
+that the Romans started their year with the month of March. Maybe it
 was for a similar reason.
 
 Example:
 
 29 Nov 1872.
 
-First convert the century.  1900 happens to be a 0, so that's
-really really easy and convenient.  The numbers for all other
+First convert the century. 1900 happens to be a 0, so that's
+really really easy and convenient. The numbers for all other
 centuries go in a cycle 6 4 2 0, which is also really easy to
-remember.  If you want peg words, say “ages run in sequence.”  To
-learn more about pegs, search for “peg” in my blog.  Because 1900
-is 0, 2000 is 6, 2100 will be 4, 2200 will be 2, etc.  1800 is 2.
+remember: “AGES RUN IN SEQUENCE.” Because 1900 is 0, 2000 is 6,
+2100 will be 4, 2200 will be 2, etc. 1800 is 2.
 
 Keep 2 in your head and move forward.
 
-Now convert the year, and there are two steps.  First, the year mod 7
+Now convert the year, and there are two steps. First, the year mod 7
 because each year is one day longer than a multiple of 7, namely 364. 72
-mod 7 is 2.  Add 2 to the 2 we're carrying to get 4 so far.
+mod 7 is 2. Add 2 to the 2 we're carrying to get 4 so far.
 
-Now get the number of leap years in the century.  That's 72 / 4, or 18,
-which is 4.  Add it to the 4 we're keeping, which is 8, which is 1.
+Now get the number of leap years in the century. That's 72 / 4, or
+18 discarding the remainder; that's 4. Add it to the 4 we're
+keeping, which is 8, which is 1.
 
-Now get the month.  Here are peg mnemonics for months:
+Now get the month. Here are mnemonics for months:
 
-| Mar     | Irish           | 4 |  St. Patrick's Day                 |
-| Apr     | Easter          | 0 |                                    |
-| May     | National        | 2 |  Memorial Day                      |
-| Jun     | Altar           | 5 |  Lots of weddings in June          |
-| Jul     | Sun or Summer   | 0 |  First full sunny month of summer  |
-| Aug     | Moon            | 3 |  Start seeing harvest moons in Aug |
-| Sep     | Job             | 6 |  Labor Day                         |
-| Oct     | Travel          | 1 |  Columbus Day                      |
-| Nov     | Restaurant      | 4 |  Eat turkey in a restaurant        |
-| Dec     | Church          | 6 |  Christmas in a church             |
-| Jan     | New             | 2 |  New-Year's Day                    |
-| Feb     | Love            | 5 |  St. Valentine's Day               |
+| Mar | Irish         | 4 | St. Patrick's Day                 |
+| Apr | Easter        | 0 |                                   |
+| May | National      | 2 | Memorial Day                      |
+| Jun | Altar         | 5 | Lots of weddings in June          |
+| Jul | Sun or Summer | 0 | First full sunny month of summer  |
+| Aug | Moon          | 3 | Start seeing harvest moons in Aug |
+| Sep | Job           | 6 | Labor Day                         |
+| Oct | Travel        | 1 | Columbus Day                      |
+| Nov | Restaurant    | 4 | Eat turkey in a restaurant        |
+| Dec | Church        | 6 | Christmas in a church             |
+| Jan | New           | 2 | New-Year's Day                    |
+| Feb | Love          | 5 | St. Valentine's Day               |
 
 If you forget one, you can recalculate a month number by just adding up
 the 30 = 2 and 31 = 3 days from the beginning of the year in March (mod
@@ -1635,28 +1956,44 @@ the 30 = 2 and 31 = 3 days from the beginning of the year in March (mod
 September, April, June, and November” ditty if you prefer. Whatever
 works.
 
-We're carrying a 1 in head.  Add a 4 for Nov, giving 5.  Almost done.
+We're carrying a 1 in head. Add a 4 for Nov, giving 5. Almost done.
 
-29 mod 7 is 1; add our 5, we get 6.  29 Nov 1872 was a Friday.
+29 mod 7 is 1; add our 5, we get 6. 29 Nov 1872 was a Friday.
 
 Do this a few times and check yourself against Google or
 timeanddate.com.  You'll make a few mistakes when getting started, but
 after a little while you'll be able to do it quickly and reliably.
+
+Let's try today, 21 May 2022:
+
+#+begin_verse
+2000 = 6
+22 = 1 += 0
+ly = 22/4 = 5 discarding the remainder
+May = 2 += 7 = 0
+21 = 0 += 0
+#+end_verse
+
+Today is Saturday.
 
 \clearpage
 * All Pegs and Sound-Alikes
 <<all-pegs>>
 
 Letters for hex, ASCII, and R36, R64 alternative methods are
-included in the row headers. My personal permanent peg words are
-first in each block and in all-caps. My short-list of preferred
-sound-alikes are in the first row of each table.
+included in the row headers.
+
+TODO: My personal permanent peg words are first in each block and
+in all-caps. My short-list of preferred sound-alikes are in the
+first row of each table.
 
 I don't (yet) have a memorized peg for every number, just for the
-most useful ones. I pick pegs that don't collide visually with the
-most frequent ones. I already have CHAIR for 64 (used all the
-time), so SEAT for 01 and THRONE for 142, both rare, are not good
-ideas because they might incorrectly recall 64 at speed.
+most useful ones. It takes time to come up with good pegs. It's a
+quadratic process because I pick pegs that don't collide visually
+with the ones I already have. Picking a new peg means thinking
+about all the others picked so-far. I already have CHAIR for 64
+(used all the time), so SEAT for 01 and THRONE for 142 are not
+good ideas because they might incorrectly recall 64 at speed.
 
 |----+---------------+--------+-----------+----------+------------+----------|
 | 00 | SAUCE         | say-so | seas      | seesaw   | seize      | sissy    |
@@ -1850,6 +2187,8 @@ ideas because they might incorrectly recall 64 at speed.
 |   n | surprise   | syrup        | sauerbraten  | usurper    |           |           |
 |-----+------------+--------------+--------------+------------+-----------+-----------|
 
+
+
 \clearpage
 |-----+------------+-----------+-----------+-----------+-------------+-----------|
 | 050 | SOLSTICE   | sales     | slice     | sluice    | solace      | solicitor |
@@ -1888,33 +2227,39 @@ ideas because they might incorrectly recall 64 at speed.
 |-----+------------+-----------+-----------+-----------+-------------+-----------|
 
 \clearpage
-|-----+---------------+------------+---------------+--------------+-------------+-------------|
-| 060 | SAGES         | switches   | sieges        | sashes       | sea-chest   | suggest     |
-|   y |               |            |               |              |             |             |
-|-----+---------------+------------+---------------+--------------+-------------+-------------|
-| 061 | SAGITTARIUS   | sagittal   | satiate       | sash-weight  | siege-tower | soshed      |
-|   z | switch-hitter | associate  | sachette      |              |             |             |
-|-----+---------------+------------+---------------+--------------+-------------+-------------|
-| 062 | SWITCH-KNIFE  | sashoon    | seashine      | sea-change   | sedge-hen   | session     |
-|   + | scission      | suasion    | sash-window   | cession      |             |             |
-|-----+---------------+------------+---------------+--------------+-------------+-------------|
-| 063 | SASHIMI       | satchem    | switchman     | sea-chime    | sea-chum    |             |
-| ' / |               |            |               |              |             |             |
-|-----+---------------+------------+---------------+--------------+-------------+-------------|
-| 064 | seashore      | saw-shark  | saw-sharpener | seizure      | sojourn     | suture      |
-|     | switcheroo    |            |               |              |             |             |
-|-----+---------------+------------+---------------+--------------+-------------+-------------|
-| 065 | seashell      | sage-oil   | satchel       | sash-line    | switch-line | social      |
-|-----+---------------+------------+---------------+--------------+-------------+-------------|
-| 066 | sage-judge    | wise-judge | sage-cheese   | switch-shift | association |             |
-|-----+---------------+------------+---------------+--------------+-------------+-------------|
-| 067 | sedge-grass   | sash-cord  | siege-coin    | switchgear   | switch-cane |             |
-|-----+---------------+------------+---------------+--------------+-------------+-------------|
-| 068 | sedge-fly     | switch-ivy | switchover    |              |             |             |
-|-----+---------------+------------+---------------+--------------+-------------+-------------|
-| 069 | sagebrush     | s-shaped   | sash-pocket   | sedge-bird   | swashbuckle | switchblade |
-|     | switch-box    |            |               |              |             |             |
-|-----+---------------+------------+---------------+--------------+-------------+-------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 60 70)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+--------------+-------------+---------------+---------------+-------------+-------------|
+| 060 | SAGES        | sea-chest   | sieges        | switches      | sash-saw    | sashes      |
+|   y | suggest      |             |               |               |             |             |
+|-----+--------------+-------------+---------------+---------------+-------------+-------------|
+| 061 | SAGITTARIUS  | siege-tower | sash-weight   | switch-hitter | associate   | sachette    |
+|   z | satiate      | sagittal    | soshed        |               |             |             |
+|-----+--------------+-------------+---------------+---------------+-------------+-------------|
+| 062 | SWITCH-KNIFE | session     | sash-window   | sedge-hen     | sea-change  | scission    |
+|   + | sashoon      | seashine    | suasion       | cession       |             |             |
+|-----+--------------+-------------+---------------+---------------+-------------+-------------|
+| 063 | SASHIMI      | satchem     | switchman     | sea-chime     | sea-chum    |             |
+| ' / |              |             |               |               |             |             |
+|-----+--------------+-------------+---------------+---------------+-------------+-------------|
+| 064 | seashore     | saw-shark   | saw-sharpener | seizure       | sojourn     | suture      |
+|     | switcheroo   |             |               |               |             |             |
+|-----+--------------+-------------+---------------+---------------+-------------+-------------|
+| 065 | sash-line    | sage-oil    | satchel       | seashell      | switch-line | social      |
+|-----+--------------+-------------+---------------+---------------+-------------+-------------|
+| 066 | switch-shift | wise-judge  | sage          | cheese        | association |             |
+|-----+--------------+-------------+---------------+---------------+-------------+-------------|
+| 067 | sash-cord    | sedge-grass | siege-coin    | switchgear    | switch-cane |             |
+|-----+--------------+-------------+---------------+---------------+-------------+-------------|
+| 068 | sedge-fly    | switch-ivy  | switchover    |               |             |             |
+|-----+--------------+-------------+---------------+---------------+-------------+-------------|
+| 069 | sagebrush    | s-shaped    | sash-pocket   | sedge-bird    | swashbuckle | switchblade |
+|     | switch-box   |             |               |               |             |             |
+:end:
 
 \clearpage
 |-----+-----------+-----------+-----------+----------+-------------+-----------|
@@ -1983,6 +2328,12 @@ ideas because they might incorrectly recall 64 at speed.
 |-----+------------+------------+--------------+---------------+-------------+--------------|
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 90 100)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+-----------+------------+-------------+-------------+--------------|
 | 090 | space        | specify   | spice      | spouse      | suppose     | sea-biscuit  |
 |     | soupcon      | auspices  | asbestos   |             |             |              |
@@ -2013,53 +2364,58 @@ ideas because they might incorrectly recall 64 at speed.
 |-----+--------------+-----------+------------+-------------+-------------+--------------|
 | 097 | sawbuck      | speak     | speck      | spike       | spook       | spectacle    |
 |     | zip-code     | aspic     | aspect     | ice-pick    | ice-bag     | ice-pack     |
-|     | Spock        |           |            |             |             |              |
 |-----+--------------+-----------+------------+-------------+-------------+--------------|
 | 098 | spiff        | spoof     | soap-flake | soupfin     | subfreezing | subaverage   |
 |     | subway-fare  |           |            |             |             |              |
 |-----+--------------+-----------+------------+-------------+-------------+--------------|
 | 099 | sea-poppy    | soapbark  | soapberry  | soapbox     | soap-bubble | subprincipal |
 |     | house-paper  |           |            |             |             |              |
-|-----+--------------+-----------+------------+-------------+-------------+--------------|
+:end:
 
 \clearpage
-|---+--------+--------+--------+-------+--------+-------|
-| 0 | SAW    | sea    | sew    | sow   | so     | zoo   |
-|   | ace    | ayes   | eyes   | a-sea | as     | ass   |
-|   | assay  | easy   | essay  | ice   | is     | ooze  |
-|   | us     | use    | has    | hawse | haze   | his   |
-|   | hose   | house  | was    | wise  | woozy  | yes   |
-|---+--------+--------+--------+-------+--------+-------|
-| 1 | TEA    | tee    | tie    | toe   | toy    | tow   |
-|   | thaw   | they   | thee   | thigh | though | day   |
-|   | die    | do     | due    | dough | dye    | at    |
-|   | ad     | add    | aid    | auto  | eat    | eddy  |
-|   | etui   | it     | idea   | hat   | hate   | heat  |
-|   | height | hit    | hot    | hoot  | hood   | head  |
-|   | heed   | hide   | hut    | oat   | oath   | odd   |
-|   | ode    | watt   | what   | wet   | wit    | wait  |
-|   | wade   | wad    | weight | white | wheat  | weed  |
-|   | widow  | wide   | with   | yacht | youth  |       |
-|---+--------+--------+--------+-------+--------+-------|
-| 2 | NOAH   | no     | now    | new   | nigh   | neigh |
-|   | an     | anew   | annoy  | any   | ana    | ani   |
-|   | ennui  | gnu    | gnaw   | hen   | honey  | hyena |
-|   | ion    | in     | inn    | knee  | know   | one   |
-|   | own    | wan    | when   | win   | wino   | wine  |
-|   | wean   |        |        |       |        |       |
-|---+--------+--------+--------+-------+--------+-------|
-| 3 | ME     | May    | may    | mow   | maw    | aim   |
-|   | ammo   | ham    | hem    | him   | hum    | home  |
-|   | hymn   | whim   | whom   | womb  | Emmy   |       |
-|---+--------+--------+--------+-------+--------+-------|
-| 4 | RAY    | raw    | roe    | rye   | air    | are   |
-|   | area   | aria   | array  | arrow | awry   | aware |
-|   | aura   | ear    | era    | err   | here   | her   |
-|   | hair   | hare   | hear   | heir  | hero   | hour  |
-|   | harrow | hurrah | hurry  | ire   | oar    | or    |
-|   | ore    | our    | war    | wear  | ware   | where |
-|   | wire   | worry  | weary  | year  | yore   | your  |
-|---+--------+--------+--------+-------+--------+-------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 100 105)
+#+end_src
+
+#+RESULTS:
+:results:
+|---+--------+-------+--------+--------+--------+-------|
+| 0 | SAW    | ice   | house  | hose   | haze   | zoo   |
+|   | a-sea  | ace   | as     | ass    | assay  | ayes  |
+|   | easy   | essay | eyes   | has    | hawse  | his   |
+|   | is     | ooze  | sea    | sew    | so     | sow   |
+|   | us     | use   | was    | wise   | woozy  | yes   |
+|---+--------+-------+--------+--------+--------+-------|
+| 1 | TEA    | hat   | hood   | oat    | yacht  | widow |
+|   | ad     | add   | aid    | at     | auto   | day   |
+|   | die    | do    | dough  | due    | dye    | eat   |
+|   | eddy   | etui  | hate   | head   | heat   | heed  |
+|   | height | hide  | hit    | hoot   | hot    | hut   |
+|   | idea   | it    | oath   | odd    | ode    | tee   |
+|   | thaw   | thee  | they   | thigh  | though | tie   |
+|   | toe    | tow   | toy    | wad    | wade   | wait  |
+|   | watt   | weed  | weight | wet    | what   | wheat |
+|   | white  | wide  | wit    | with   | youth  |       |
+|---+--------+-------+--------+--------+--------+-------|
+| 2 | NOAH   | honey | knee   | ion    | win    | wine  |
+|   | an     | ana   | anew   | ani    | annoy  | any   |
+|   | ennui  | gnaw  | gnu    | hen    | hyena  | in    |
+|   | inn    | know  | neigh  | new    | nigh   | no    |
+|   | now    | one   | own    | wan    | wean   | when  |
+|   | wino   |       |        |        |        |       |
+|---+--------+-------+--------+--------+--------+-------|
+| 3 | ME     | ammo  | ham    | hem    | womb   | Emmy  |
+|   | May    | may   | mow    | maw    | aim    | him   |
+|   | hum    | home  | hymn   | whim   | whom   |       |
+|---+--------+-------+--------+--------+--------+-------|
+| 4 | RAY    | roe   | arrow  | hair   | oar    | wire  |
+|   | raw    | rye   | air    | are    | area   | aria  |
+|   | array  | awry  | aware  | aura   | ear    | era   |
+|   | err    | here  | her    | hare   | hear   | heir  |
+|   | hero   | hour  | harrow | hurrah | hurry  | ire   |
+|   | or     | ore   | our    | war    | wear   | ware  |
+|   | where  | worry | weary  | year   | yore   | your  |
+:end:
 
 \clearpage
 |---+--------+---------+--------+---------+--------+--------|
@@ -3606,7 +3962,7 @@ ideas because they might incorrectly recall 64 at speed.
 |     | humility    | homiletics    | omelet      | umlaut       | smelt       | smolder     |
 |     | simulate    | simultaneous  |             |              |             |             |
 |-----+-------------+---------------+-------------+--------------+-------------+-------------|
-| 352 | melon       | melancholy    | milliner    | million      | millennium  | malign      |
+| 352 | MELON       | melancholy    | milliner    | million      | millennium  | malign      |
 |     | hemline     | homeland      | Himalayans  | semolina     |             |             |
 |-----+-------------+---------------+-------------+--------------+-------------+-------------|
 | 353 | mailman     | maim          | melamine    | millimeter   | millman     | muleman     |
@@ -6101,6 +6457,9 @@ ideas because they might incorrectly recall 64 at speed.
 
 \clearpage
 ** Picture Words from John D. Cook
+
+I added these to the master tables above. Many come from
+contemporary science fiction.
 
 | Adidas         | Aquinas     | Bilbo            |         |           |        |
 | Bones          | bump        | cabasa           | Chekhov | Chewbacca | chimp  |
