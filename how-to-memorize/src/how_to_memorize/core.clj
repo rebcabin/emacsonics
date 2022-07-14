@@ -26,30 +26,31 @@
      "such" "swatch" "switch" "assuage" "ice-age" "ice-show"
      "usage")])
 
-(def bfnd ['(10000
+(def bfnd ['(100000
              "SAUCE"
              "icehouse"
              "oasis"
-             "seesaw"
              "sissy"
              "sass"
+             "seesaw"
 
              "assess"
              "assize"
              "houses"
+             "sassy"
              "say-so"
              "seas"
              "seize"
              "size"
              )
-           '(10001
+           '(100001
              "SOD"
-
              "Swede"
              "acid"
              "aside"
              "asset"
              "city"
+
              "east"
              "haste"
              "host"
@@ -77,7 +78,7 @@
              "waste"
              "west"
              )
-           '(10002
+           '(100002
              "SUN"
 
              "assign"
@@ -96,7 +97,7 @@
              "swine"
              "zone"
              )
-           '(10003
+           '(100003
              "same"
              "seam"
              "seem"
@@ -109,7 +110,7 @@
              "assume"
              "asthma"
              "psalm")
-           '(10004
+           '(100004
              "seer"
              "sewer"
              "sir"
@@ -124,7 +125,7 @@
              "hawser"
              "hussar"
              "wiser")
-           '(10005
+           '(100005
              "sale"
              "sail"
              "seal"
@@ -149,7 +150,7 @@
              "swallow"
              "weasel"
              "whistle")
-           '(10006
+           '(100006
              "sage"
              "sash"
              "sashay"
@@ -163,7 +164,7 @@
              "ice-age"
              "ice-show"
              "usage")
-           '(10007
+           '(100007
              "sack"
              "sake"
              "seek"
@@ -186,7 +187,7 @@
              "icing"
              "whiskey"
              "wise-guy")
-           '(10008
+           '(100008
              "safe"
              "save"
              "savoy"
@@ -197,7 +198,7 @@
              "savvy"
              "housewife"
              "ossify")
-           '(10009
+           '(100009
              "sap"
              "soap"
              "sob"
@@ -616,134 +617,152 @@
              "syrup"
              "Cerberus"
              "usurper")
-           '(100050
-             "sal-soda"
+           '((100050 "o")
+             "SOLSTICE"
              "sales"
              "slice"
              "sluice"
              "solace"
              "solicitor"
-             "solstice"
+
+             "sal-soda"
              "solus"
              "solos"
              "useless")
-           '(100051
-             "salad"
+           '((100051 "p")
+             "SALAD"
              "salt"
              "salute"
              "slate"
              "sled"
              "sleet"
+
+             "assault"
+             "household"
+             "isolate"
+             "ocelot"
+             "oscillate"
+             "silhouette"
+             "slaughter"
              "slide"
              "slight"
              "slit"
              "slot"
              "solid"
-             "slaughter"
-             "silhouette"
              "solitaire"
              "sultan"
              "zealot"
-             "household"
-             "assault"
-             "isolate"
-             "ocelot"
-             "oscillate")
-           '(100052
-             "saline"
+             )
+           '((100052 "q")
+             "SEA-LION"
              "saloon"
              "sea-lane"
              "sealant"
-             "sea-lion"
+             "saline"
              "slain"
+
+             "aslant"
+             "cylinder"
              "silent"
              "slander"
              "slant"
              "slender"
-             "swollen"
              "sullen"
-             "cylinder"
-             "aslant"
-             "zillion")
-           '(100053
-             "salamander"
+             "swollen"
+             "zillion"
+             )
+           '((100053 "r")
+             "SALAMANDER"
              "slam"
              "slim"
              "slime"
              "slow-motion"
              "slumber"
+
+             "Islam"
+             "asylum"
+             "cell-mate"
              "solemn"
              "soul-mate"
-             "asylum"
-             "Islam"
-             "cell-mate")
-           '(100054
+             )
+           '((100054 "s")
+             "SAILOR"
              "salary"
-             "sailor"
              "seller"
              "sealer"
              "slayer"
              "solar"
-             "cellar"
-             "celery"
+
              "celerity"
-             "whistler")
-           '(100055
+             "celery"
+             "cellar"
+             "whistler"
+             )
+           '((100055 "t")
+             "CELLULOID"
              "sea-lily"
              "slowly"
              "slyly"
              "soliloquy"
              "cellular"
-             "celluloid")
-           '(100056
-             "slash"
+             )
+           '((100056 "u")
+             "SOLUTION"
              "slouch"
              "sludge"
+             "slash"
              "slush"
-             "solution"
              "zoology"
-             "isolation")
-           '(100057
-             "slack"
+
+             "isolation"
+             )
+           '((100057 "v")
+             "silk"
              "slake"
              "slang"
              "sling"
              "sleek"
              "sea-legs"
+
+             "ceiling"
              "select"
-             "silk"
              "silica"
+             "slack"
              "sulky"
-             "ceiling")
-           '(100058
-             "salve"
+             )
+           '((100058 "w")
+             "SALVE"
              "salvo"
              "saliva"
              "salvage"
              "salvation"
              "slave"
-             "sleeve"
+
              "self"
-             "solve"
              "silver"
+             "sleeve"
              "sliver"
-             "sylph"
+             "solve"
              "soulfood"
              "soulful"
-             "sulfur")
-           '(100059
-             "sailboat"
+             "sulfur"
+             "sylph"
+             )
+           '((100059 "x")
+             "slipper"
              "slab"
              "slap"
              "sleep"
              "slip"
-             "slipper"
+             "sailboat"
+
+             "celebrate"
+             "celibacy"
              "sloop"
              "slop"
              "slope"
              "slowpoke"
-             "celibacy"
-             "celebrate")
+             )
            '((100060 "y")
              "SAGES"
              "sea-chest"
@@ -15808,8 +15827,13 @@
         g (if (list? f)
             (first f)
             f)
-        h (if (>= g 10000)
-            (. (str g) substring 3 6)
+        h (if (>= g 10000)  ;; fix three-digit nums with two leading 0's:
+            (let [h' (. (str g) substring 3 6)]
+              (if (and (= \0 (get h' 0))
+                       (= \0 (get h' 1)))
+                (. h' substring 1 3)
+                h'
+                ))
             g)
         k (if (list? f)
             (second f))]
