@@ -235,20 +235,20 @@ have ASCII memorized.
 
 The pegs for the decimal digits, with some mnemonic hints, are
 
-|-------+------+----------------------------------------------------+-------------------------|
-| digit | peg  | mnemonic                                           | sound-alike rules       |
-|-------+------+----------------------------------------------------+-------------------------|
-|     0 | saw  | circular saw, segment of sawed log; round like "0" | s, z                    |
-|     1 | tea  | giant Disneyland teacup; "t" looks like "1"        | d, th, dh (them)        |
-|     2 | Noah | ... and the Ark; "n" has 2 legs                    | ng (Krill, nk is 27)    |
-|     3 | me   | ... in the mirror tying a bow tie; "m" has 3 legs  |                         |
-|     4 | ray  | this one is hard to remember; just brute-force it  |                         |
-|     5 | law  | 5 fingers as the cop holds up his hand             |                         |
-|     6 | jaw  | "6" looks like Lurch's lantern jaw                 | sh, ch, zh (pleasure)   |
-|     7 | key  | "7" looks like an Allen key                        | g, ng (Furst, nk is 27) |
-|     8 | fee  | "8" looks like a dollar sign                       | f, v                    |
-|     9 | pea  | The Princess and the Pea: 9 mattresses             | p, b                    |
-|-------+------+----------------------------------------------------+-------------------------|
+|-------+------+----------------------------------------------------+-------------------------------------|
+| digit | peg  | mnemonic                                           | sound-alike rules                   |
+|-------+------+----------------------------------------------------+-------------------------------------|
+|     0 | saw  | circular saw, segment of sawed log; round like "0" | s, z                                |
+|     1 | tea  | giant Disneyland teacup; "t" looks like "1"        | d, th, dh (them)                    |
+|     2 | Noah | ... and the Ark; "n" has 2 legs                    | ng (Krill only, nk is always 27)    |
+|     3 | me   | ... in the mirror tying a bow tie; "m" has 3 legs  |                                     |
+|     4 | ray  | this one is hard to remember; just brute-force it  |                                     |
+|     5 | law  | 5 fingers as the cop holds up his hand             |                                     |
+|     6 | jaw  | "6" looks like Lurch's lantern jaw                 | sh, ch, zh (pleasure)               |
+|     7 | key  | "7" looks like an Allen key                        | g, ng (Furst only, nk is always 27) |
+|     8 | fee  | "8" looks like a dollar sign                       | f, v                                |
+|     9 | pea  | The Princess and the Pea: 9 mattresses             | p, b                                |
+|-------+------+----------------------------------------------------+-------------------------------------|
 
 Memorize this table, or one like it, by whatever means, by brute
 force if necessary. The rest of the system relies on it. If you
@@ -279,7 +279,7 @@ for 32:
 
 */Notes on such tables/*:
 
-- the peg is capitalized and in first position
+- the peg is in all-caps and in first position
 
 - the first line contains preferred sound-alikes in preference
   order
@@ -288,12 +288,12 @@ for 32:
 
 "MAN" is the peg: it is /equal/ to 32 in your mind. I hallucinate
 Superman flying out of the phone booth or arriving to Save the
-Day. The Sound-Alikes help you create phantasmagorias from long
-strings of numbers by devising a story. With practice, you can get
-fast. Eran Katz, who teaches this method professionally, often
-opens his lectures with a stunt wherein he memorizes hundreds of
-digits as quickly as the audience calls them out and his assistant
-writes them down.
+Day. The Sound-Alikes help you create phantasmagorias (aka
+hallucinations) from long strings of numbers by devising a story.
+With practice, you can get fast. Eran Katz, who teaches this
+method professionally, often opens his lectures with a stunt
+wherein he memorizes hundreds of digits as quickly as the audience
+calls them out and his assistant writes them down.
 
 We go to three digits in this document. That means that every
 number from 00 through 099 and 0 through 1000 has a peg and a list
@@ -327,12 +327,43 @@ because the "n" in "...ina" is a third internal consonant. For
 |     | assimilate | seamless | seemly | similar |        |          |
 :end:
 
+"Assimilate" is an apparent exception to the rule. At speed, I
+would probably read it as 351. Let's see what our dictionary has
+for 351.
+
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 451 452)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+----------+--------------+---------+-----------+-----------+---------|
+| 351 | malt     | malady       | milady  | mallet    | melodrama | melody  |
+|     | meld     | melt         | mild    | military  | millet    | mold    |
+|     | muleteer | multiple     | mulatto | multitude | emulate   | hamlet  |
+|     | humility | homiletics   | omelet  | umlaut    | smelt     | smolder |
+|     | simulate | simultaneous |         |           |           |         |
+:end:
+
+Yup, "assimilate" is ambiguous. TODO: fix this.
+
 #+begin_comment
+
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 450 451)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+--------+---------+----------+-------+-------------+-----------|
+| 350 | mails  | malice  | miles    | mills | millisecond | maelstrom |
+|     | molest | aimless | homeless |       |             |           |
+:end:
 
 Test babomorph.
 
 #+begin_src clojure :exports results :results verbatim drawer output
-  (babomorph 164 166)
+  (babomorph 350 351)
 #+end_src
 
 #+RESULTS:
@@ -350,8 +381,19 @@ Test babomorph.
 :end:
 #+end_comment
 
-
 "Millenium" encodes 352 despite the trailing "...ium."
+
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 452 453)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+--------+------------+------------+----------+----------+----------|
+| 352 | MELON  | Himalayans | hemline    | semolina | milliner | homeland |
+|     | malign | melancholy | millennium | million  |          |          |
+:end:
+
 
 Vowels and the weak consonants "h," "w," "wh," "y," and so on, do
 not count. Thus, "Himalayans" is 352 because the first non-weak
@@ -361,7 +403,7 @@ My basic 2-digit peg list appears below, extended from 99 to
 127 for ASCII and with nine extra pegs for court cards (Section
 [[card-pack]]). I know this table by heart. My Dad and many memory
 experts know pegs for 3 digits by heart and "compute" sound-alikes
-on-the-fly.
+on-the-fly. I'm not that good, yet.
 
 |-----+----------+-----+--------+-----+-----------+-----+------------|
 |  00 | sauce    |  10 | toes   |  20 | nose      |  30 | mass       |

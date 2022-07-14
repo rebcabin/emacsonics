@@ -15815,6 +15815,17 @@
             (second f))]
     {:num h, :letter k, :rest (rest line)}))
 
+(defn bablify
+  "Prepare a line for org-babel, not just org-table."
+  [line]
+  (lindicate (chop-mem-line line)))
+
+(defn babulate
+  "Prepare a line for :results verbatim drawer output in org-babel.
+  Must be mapped over a subvec of bfnd."
+  [line]
+  (map println (bablify line)))
+
 (defn babnicate
   "Process a dictionary produced by fixline into a babulated line,
   perhaps with a letter key. TODO: refactor with 'chop-mem-line',
@@ -15838,17 +15849,6 @@
   "TOP-LEVEL: Process number lines into org-tables."
   [a b]
   (map (comp babnicate fixline) (subvec bfnd a b)))
-
-(defn bablify
-  "Prepare a line for org-babel, not just org-table."
-  [line]
-  (lindicate (chop-mem-line line)))
-
-(defn babulate
-  "Prepare a line for :results verbatim drawer output in org-babel.
-  Must be mapped over a subvec of bfnd."
-  [line]
-  (map println (bablify line)))
 
 (defn -main
   ""
