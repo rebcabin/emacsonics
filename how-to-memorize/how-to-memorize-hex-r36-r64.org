@@ -117,9 +117,9 @@
 # #+STARTUP: latexpreview inlineimages showall
 # #+STARTUP: showall
 
-#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 8
+#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 9
 #+AUTHOR: Brian Beckman; John D. Cook, Ondrej Certik
-#+DATE: 28 May 2022
+#+DATE: 16 Jul 2022
 
 #+BEGIN_SRC elisp :exports none
   (setq org-babel-python-command "python3")
@@ -905,11 +905,11 @@ repetition.
 | E | ECHO     | chip  | S5    | JAN 29 | New nib       |  29 | nib       |
 | F | FOXTROT  | case  | S6    | FEB 05 | Love lie      |  36 | image     |
 | G | GOLF     | cat   | S7    | FEB 12 | Love tune     |  43 | room      |
-| H | HOTEL    | can   | S8    | FEB 19 | Love top      |  50 | loose     |
+| H | HOTEL    | can   | S8    | FEB 19 | Love tap      |  50 | loose     |
 | I | INDIA    | cam   | S9    | FEB 26 | Love nudge    |  57 | leak      |
 | J | JULIET   | car   | ST    | MAR 05 | Irish lie     |  64 | cheer     |
 | K | KILO     | coal  | SJ    | MAR 12 | Irish tune    |  71 | cad       |
-| L | LIMA     | cage  | SQ    | MAR 19 | Irish top     |  78 | cuff      |
+| L | LIMA     | cage  | SQ    | MAR 19 | Irish tap     |  78 | cuff      |
 | M | MIKE     | cake  | SK    | MAR 26 | Irish nudge   |  85 | evil      |
 |---+----------+-------+-------+--------+---------------+-----+-----------|
 | N | NOVEMBER | cuff  | HA    | APR 02 | Easter wine   |  92 | bun       |
@@ -953,7 +953,7 @@ repetition.
 | r | romeo    | tatar       | D5    | OCT 29 | travel nib       | 302 | muezzin    |
 | s | sierra   | title       | D6    | NOV 05 | Restaurant lie   | 309 | mess-up    |
 | t | tango    | death-watch | D7    | NOV 12 | Restaurant tune  | 316 | midshipman |
-| u | uniform  | hot-dog     | D8    | NOV 19 | Restaurant top   | 323 | minimum    |
+| u | uniform  | hot-dog     | D8    | NOV 19 | Restaurant tap   | 323 | minimum    |
 | v | victor   | auto-da-fe  | D9    | NOV 26 | Restaurant nudge | 330 | memos      |
 | w | whiskey  | teddy-bear  | DT    | DEC 03 | Church wham      | 337 | mimic      |
 | x | x-ray    | dance       | DJ    | DEC 10 | Church dice      | 344 | mirror     |
@@ -1071,27 +1071,25 @@ Here is a defunct version with a sound-alike movie:
 * Tarot
 <<tarot>>
 
-Tarot cards have vivid imagery and powerful, emotional, associated
-words. Such features are great for memory.
+Tarot cards have vivid imagery and powerful, emotional,
+words, great for memory.
 
 There are 78 Tarot cards in a standard Rider-Waite pack. That's
 not divisible by 52, but if we consider the reverse images
 (upside-down cards) as distinct to the obverse, and most
 cartomancers do, then we have 156 image-word combinations, and
 that is divisible by 52. Thus, we get an additional three columns
-of picture words to add to the daily practice ([[daily-practice]]),
-where we associate them with standard playing cards, the NATO
-alphabet, the ASCII codes, weeks of the year, day of the year, and
-Hebrew words.
+of picture words for daily practice ([[daily-practice]]), where we
+associate them with standard playing cards, the NATO alphabet, the
+ASCII codes, weeks of the year, day of the year, and Hebrew words.
 
-The Tarot suits are wands, clubs, swords, and pentacles. These are
-obviously related to the suits of a standard pack, but different
-enough that we'll just keep those two sets of suits distinct in
-our minds. There are 14 cards in each suit, but only 22 trumps,
-aka majors. Let's take the Knights out of each suit and append
-them to the majors so that the minor suits have 13 cards each,
-including three court cards --- page (like "jack"), queen, and
-king.
+The Tarot suits are wands, clubs, swords, and pentacles, obviously
+related to the suits of a standard pack, but different enough that
+we'll just keep those two sets of suits distinct in our minds.
+There are 14 cards in each suit, but only 22 trumps, aka majors.
+Let's take the Knights out of each suit and append them to the
+majors so that the minor suits have 13 cards each, including three
+court cards --- page (like "jack"), queen, and king.
 
  #+begin_comment
  |-----+--------+------+------------+-------+---------------+-------+------------------+-------+-----------------+----------+-------------+---------+--------+------|
@@ -1154,73 +1152,73 @@ king.
  |-----+--------+------+------------+-------+---------------+-------+------------------+-------+-----------------+----------+-------------+---------+--------+------|
  #+end_comment
 
- |--------+-------+---------------+-------+-----------------+-------+----------------|
- | NUM    | TAROT | INCLUDING     | TAROT | ALL REVERSE     | TAROT | ALL OBVERSE    |
- | PEG    | MAJOR | KNIGHTS       | MINOR |                 | MINOR |                |
- |        | OBV   | OBVERSE       | REV   |                 | OBV   |                |
- |--------+-------+---------------+-------+-----------------+-------+----------------|
- | TEA    | MAG   | willpower     | wA    | boredom         | WA    | inspiration    |
- | NOAH   | PST   | intuition     | w2    | hesitation      | W2    | independence   |
- | ME     | EMS   | motherhood    | w3    | obstacles       | W3    | expansion      |
- | RAY    | EMP   | fatherhood    | w4    | transience      | W4    | home           |
- | LAW    | HEI   | tradition     | w5    | dodge           | W5    | competition    |
- | JAW    | LOV   | union         | w6    | ignored         | W6    | recognition    |
- | KEY    | CHA   | drive         | w7    | give up         | W7    | protect        |
- | FEE    | STR   | strength      | w8    | panic           | W8    | rapid          |
- | PEA    | HRM   | contemplation | w9    | exhaustion      | W9    | grit           |
- | TOES   | WHL   | luck          | wT    | micromanage     | WT    | responsibility |
- | TOT    | JST   | causation     | wJ    | procrastination | WJ    | excitement     |
- | TAN    | HNG   | perspective   | wQ    | selfishness     | WQ    | courage        |
- | TAM    | DTH   | cycle         | wK    | overbearing     | WK    | overcome       |
- |--------+-------+---------------+-------+-----------------+-------+----------------|
- | TAR    | TMP   | patience      | cA    | blocked         | CA    | spirituality   |
- | TAIL   | DVL   | addiction     | c2    | tension         | C2    | partnership    |
- | TISSUE | TWR   | destruction   | c3    | gossip          | C3    | friendship     |
- | TACK   | STA   | faith         | c4    | acceptance      | C4    | apathy         |
- | TAFFY  | LUN   | misdirection  | c5    | peace           | C5    | disappointment |
- | TAP    | SUN   | joy           | c6    | leaving home    | C6    | return home    |
- | NOSE   | JDG   | reckoning     | c7    | diversion       | C7    | daydreaming    |
- | NET    | WLD   | completion    | c8    | avoidance       | C8    | disillusioned  |
- | NUN    | FOO   | innocence     | c9    | smugness        | C9    | luxury         |
- | NAME   | KNW   | fearless      | cT    | broken family   | CT    | fulfillment    |
- | NERO   | KNC   | idealist      | cJ    | immaturity      | CJ    | dreamer        |
- | NAIL   | KNS   | defender      | cQ    | self-sacrifice  | CQ    | compassion     |
- | NICHE  | KNP   | efficient     | cK    | cold            | CK    | emot control   |
- |--------+-------+---------------+-------+-----------------+-------+----------------|
+ |----------+-------+---------------+-------+-----------------+-------+----------------|
+ | NATO     | TAROT | INCLUDING     | TAROT | ALL REVERSE     | TAROT | ALL OBVERSE    |
+ |          | MAJOR | KNIGHTS       | MINOR |                 | MINOR |                |
+ |          | OBV   | OBVERSE       | REV   |                 | OBV   |                |
+ |----------+-------+---------------+-------+-----------------+-------+----------------|
+ | ALPHA    | MAG   | willpower     | wA    | boredom         | WA    | inspiration    |
+ | BRAVO    | PST   | intuition     | w2    | hesitation      | W2    | independence   |
+ | CHARLIE  | EMS   | motherhood    | w3    | obstacles       | W3    | expansion      |
+ | DELTA    | EMP   | fatherhood    | w4    | transience      | W4    | home           |
+ | ECHO     | HEI   | tradition     | w5    | dodge           | W5    | competition    |
+ | FOXTROT  | LOV   | union         | w6    | ignored         | W6    | recognition    |
+ | GOLF     | CHA   | drive         | w7    | give up         | W7    | protect        |
+ | HOTEL    | STR   | strength      | w8    | panic           | W8    | rapid          |
+ | INDIA    | HRM   | contemplation | w9    | exhaustion      | W9    | grit           |
+ | JULIET   | WHL   | luck          | wT    | micromanage     | WT    | responsibility |
+ | KILO     | JST   | causation     | wJ    | procrastination | WJ    | excitement     |
+ | LIMA     | HNG   | perspective   | wQ    | selfishness     | WQ    | courage        |
+ | MIKE     | DTH   | cycle         | wK    | overbearing     | WK    | overcome       |
+ |----------+-------+---------------+-------+-----------------+-------+----------------|
+ | NOVEMBER | TMP   | patience      | cA    | blocked         | CA    | spirituality   |
+ | OSCAR    | DVL   | addiction     | c2    | tension         | C2    | partnership    |
+ | PAPA     | TWR   | destruction   | c3    | gossip          | C3    | friendship     |
+ | QUEBEC   | STA   | faith         | c4    | acceptance      | C4    | apathy         |
+ | ROMEO    | LUN   | misdirection  | c5    | peace           | C5    | disappointment |
+ | SIERRA   | SUN   | joy           | c6    | leaving home    | C6    | return home    |
+ | TANGO    | JDG   | reckoning     | c7    | diversion       | C7    | daydreaming    |
+ | UNIFORM  | WLD   | completion    | c8    | avoidance       | C8    | disillusioned  |
+ | VICTOR   | FOO   | innocence     | c9    | smugness        | C9    | luxury         |
+ | WHISKEY  | KNW   | fearless      | cT    | broken family   | CT    | fulfillment    |
+ | X-RAY    | KNC   | idealist      | cJ    | immaturity      | CJ    | dreamer        |
+ | YANKEE   | KNS   | defender      | cQ    | self-sacrifice  | CQ    | compassion     |
+ | ZULU     | KNP   | efficient     | cK    | cold            | CK    | emot control   |
+ |----------+-------+---------------+-------+-----------------+-------+----------------|
 
- |-------+-------+---------------+-------+------------------+-------+-----------------|
- | NUM   | TAROT | INCLUDING     | TAROT | ALL REVERSE      | TAROT | ALL OBVERSE     |
- | PEG   | MAJOR | KNIGHTS       | MINOR |                  | MINOR |                 |
- |       | REV   | REVERSE       | REV   |                  |       |                 |
- |-------+-------+---------------+-------+------------------+-------+-----------------|
- | NECK  | mag   | illusions     | sA    | chaos            | SA    | breakthrough    |
- | NAVY  | pst   | repression    | s2    | hobson's         | S2    | indecision      |
- | NAP   | ems   | barrenness    | s3    | forgiveness      | S3    | heartbreak      |
- | MASS  | emp   | tyranny       | s4    | restless         | S4    | rest            |
- | MAT   | hei   | rebellion     | s5    | resentment       | S5    | conan           |
- | MAN   | lov   | one-sided     | s6    | resistence       | S6    | transition      |
- | MAMA  | cha   | directionless | s7    | conscience       | S7    | cunning         |
- | MARE  | str   | self-doubt    | s8    | freedom          | S8    | trapped         |
- | MAIL  | hrm   | isolation     | s9    | anxiety          | S9    | hope            |
- | MATCH | whl   | loss          | sT    | nadir            | ST    | betrayal        |
- | MIKE  | jst   | dishonesty    | sJ    | deception        | SJ    | curiosity       |
- | MUFF  | hng   | stalling      | sQ    | critical         | SQ    | clarity         |
- | MAP   | dth   | stagnation    | sK    | cruel            | SK    | discipline      |
- |-------+-------+---------------+-------+------------------+-------+-----------------|
- | RACE  | tmp   | excess        | pA    | bad investment   | PA    | venture         |
- | RAT   | dvl   | recovery      | p2    | overwhelmed      | P2    | priorities      |
- | RAIN  | twr   | aversion      | p3    | group conflict   | P3    | teamwork        |
- | RAM   | sta   | insecurity    | p4    | stingy           | P4    | frugality       |
- | REAR  | lun   | confusion     | p5    | receive charity  | P5    | poverty         |
- | RAIL  | sun   | sadness       | p6    | strings attached | P6    | charity         |
- | RASH  | jdg   | doubt         | p7    | wasted work      | P7    | perseverence    |
- | RACK  | wld   | emptiness     | p8    | no motivation    | P8    | high standards  |
- | REEF  | foo   | naivety       | p9    | spendthrift      | P9    | fruits of labor |
- | ROPE  | knw   | reckless      | pT    | fleeting success | PT    | legacy          |
- | LACE  | knc   | moody         | pJ    | uncommitted      | PJ    | diligence       |
- | LOT   | kns   | feckless      | pQ    | jealous          | PQ    | abundance       |
- | LANE  | knp   | workaholic    | pK    | indulgence       | PK    | prosperity      |
- |-------+-------+---------------+-------+------------------+-------+-----------------|
+ |----------+-------+---------------+-------+------------------+-------+-----------------|
+ | NATO     | TAROT | INCLUDING     | TAROT | ALL REVERSE      | TAROT | ALL OBVERSE     |
+ |          | MAJOR | KNIGHTS       | MINOR |                  | MINOR |                 |
+ |          | REV   | REVERSE       | REV   |                  |       |                 |
+ |----------+-------+---------------+-------+------------------+-------+-----------------|
+ | alpha    | mag   | illusions     | sA    | chaos            | SA    | breakthrough    |
+ | bravo    | pst   | repression    | s2    | hobson's         | S2    | indecision      |
+ | charlie  | ems   | barrenness    | s3    | forgiveness      | S3    | heartbreak      |
+ | delta    | emp   | tyranny       | s4    | restless         | S4    | rest            |
+ | echo     | hei   | rebellion     | s5    | resentment       | S5    | conan           |
+ | foxtrot  | lov   | one-sided     | s6    | resistence       | S6    | transition      |
+ | golf     | cha   | directionless | s7    | conscience       | S7    | cunning         |
+ | hotel    | str   | self-doubt    | s8    | freedom          | S8    | trapped         |
+ | india    | hrm   | isolation     | s9    | anxiety          | S9    | hope            |
+ | juliet   | whl   | loss          | sT    | nadir            | ST    | betrayal        |
+ | kilo     | jst   | dishonesty    | sJ    | deception        | SJ    | curiosity       |
+ | lima     | hng   | stalling      | sQ    | critical         | SQ    | clarity         |
+ | mike     | dth   | stagnation    | sK    | cruel            | SK    | discipline      |
+ |----------+-------+---------------+-------+------------------+-------+-----------------|
+ | november | tmp   | excess        | pA    | bad investment   | PA    | venture         |
+ | oscar    | dvl   | recovery      | p2    | overwhelmed      | P2    | priorities      |
+ | papa     | twr   | aversion      | p3    | group conflict   | P3    | teamwork        |
+ | quebec   | sta   | insecurity    | p4    | stingy           | P4    | frugality       |
+ | romeo    | lun   | confusion     | p5    | receive charity  | P5    | poverty         |
+ | sierra   | sun   | sadness       | p6    | strings attached | P6    | charity         |
+ | tango    | jdg   | doubt         | p7    | wasted work      | P7    | perseverence    |
+ | uniform  | wld   | emptiness     | p8    | no motivation    | P8    | high standards  |
+ | victor   | foo   | naivety       | p9    | spendthrift      | P9    | fruits of labor |
+ | whiskey  | knw   | reckless      | pT    | fleeting success | PT    | legacy          |
+ | x-ray    | knc   | moody         | pJ    | uncommitted      | PJ    | diligence       |
+ | yankee   | kns   | feckless      | pQ    | jealous          | PQ    | abundance       |
+ | zulu     | knp   | workaholic    | pK    | indulgence       | PK    | prosperity      |
+ |----------+-------+---------------+-------+------------------+-------+-----------------|
 
 \clearpage
 * APPENDICES
