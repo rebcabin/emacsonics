@@ -26,6 +26,9 @@
      "such" "swatch" "switch" "assuage" "ice-age" "ice-show"
      "usage")])
 
+;;; Don't close up these lines because you want to "sort-lines" after the first
+;;; six.
+
 (def bfnd ['(100000
              "SAUCE"
              "icehouse"
@@ -43,6 +46,7 @@
              "seize"
              "size"
              )
+
            '(100001
              "SOD"
              "Swede"
@@ -78,400 +82,513 @@
              "waste"
              "west"
              )
+
            '(100002
              "SUN"
+             "swan"
+             "swine"
+             "ozone"
+             "sinew"
+             "snow"
 
              "assign"
              "hosanna"
-             "ozone"
              "sane"
              "scene"
              "seen"
              "sign"
              "sin"
-             "sinew"
-             "snow"
              "son"
              "soon"
-             "swan"
-             "swine"
              "zone"
              )
+
            '(100003
-             "same"
-             "seam"
-             "seem"
+             "SEAM"
+             "sum"
              "semi"
+             "swami"
+             "psalm"
+             "asthma"
+
+             "assume"
+             "same"
+             "seem"
              "some"
              "somehow"
-             "sum"
-             "swami"
              "swim"
-             "assume"
-             "asthma"
-             "psalm")
+             )
+
            '(100004
-             "seer"
+             "SOAR"
              "sewer"
-             "sir"
+             "seer"
              "soiree"
-             "sore"
-             "sorry"
-             "sorrow"
+             "sir"
              "sour"
-             "zero"
+
              "czar"
              "eyesore"
              "hawser"
              "hussar"
-             "wiser")
+             "sore"
+             "sorrow"
+             "sorry"
+             "wiser"
+             "zero"
+             )
+
            '(100005
-             "sale"
-             "sail"
+             "SAIL"
+             "swallow"
              "seal"
+             "slaw"
+             "sleigh"
+             "weasel"
+
+             "assail"
+             "cell"
+             "easel"
+             "easily"
+             "hassle"
+             "hazel"
+             "sale"
              "sell"
              "sill"
              "silly"
              "slay"
-             "slaw"
-             "sleigh"
              "slow"
              "sly"
              "soil"
              "sole"
              "solo"
              "soul"
-             "cell"
-             "assail"
-             "easel"
-             "easily"
-             "hazel"
-             "hassle"
-             "swallow"
-             "weasel"
-             "whistle")
+             "whistle"
+             )
+
            '(100006
-             "sage"
+             "SAUSAGE"
              "sash"
+             "swatch"
+             "sage"
+             "ice-show"
+             "siege"
+
+             "assuage"
+             "ice-age"
              "sashay"
              "sedge"
              "sewage"
-             "siege"
              "such"
-             "swatch"
              "switch"
-             "assuage"
-             "ice-age"
-             "ice-show"
-             "usage")
+             "usage"
+             )
+
            '(100007
-             "sack"
-             "sake"
-             "seek"
-             "sea-cow"
-             "sick"
-             "scow"
-             "sago"
+             "SACK"
              "ski"
              "sky"
-             "suck"
-             "soak"
-             "soggy"
-             "sock"
-             "squaw"
-             "assegai"
+             "scow"
+             "sake"
+             "sea-cow"
+
              "ask"
+             "assegai"
              "hoosegow"
              "housing"
              "husky"
              "icing"
+             "sago"
+             "seek"
+             "sick"
+             "soak"
+             "sock"
+             "soggy"
+             "squaw"
+             "suck"
              "whiskey"
-             "wise-guy")
+             "wise-guy"
+             )
+
            '(100008
-             "safe"
-             "save"
-             "savoy"
-             "sieve"
-             "sofa"
+             "SAFE"
              "Sufi"
-             "suave"
-             "savvy"
+             "sofa"
+             "sieve"
              "housewife"
-             "ossify")
+             "savoy"
+
+             "ossify"
+             "save"
+             "savvy"
+             "suave"
+             )
+
            '(100009
-             "sap"
+             "SAP"
+             "spy"
+             "wasp"
+             "wisp"
+             "asp"
+             "soup"
+
+             "espy"
              "soap"
              "sob"
-             "soup"
-             "spa"
-             "spy"
              "sop"
+             "spa"
+             "subway"
              "swab"
              "swap"
-             "swipe"
              "sweep"
+             "swipe"
              "swoop"
-             "subway"
              "zebu"
              "zip"
-             "asp"
-             "espy"
-             "wasp"
-             "wisp")
-           '(100010
-             "sawdust"
+             )
+
+           '((100010 "A")
+             "SAWDUST"
              "seduce"
-             "sideways"
-             "stays"
-             "South-Sea"
-             "assets"
-             "assiduous"
+             "hostess"
              "citizen"
              "cities"
-             "hostess")
-           '(100011
-             "state"
-             "statue"
-             "steady"
-             "sedate"
-             "steed"
-             "stout"
+             "South-Sea"
+
+             "assets"
+             "assiduous"
+             "sideways"
+             "stays"
+             )
+
+           '((100011 "B")
+             "STATUE"
              "studio"
-             "sit-down"
-             "astute"
+             "steed"
              "estate"
-             "hesitate"
              "iced-tea"
-             "wasted")
-           '(100012
-             "sadden"
-             "Satan"
+             "wasted"
+
+             "astute"
+             "hesitate"
+             "sedate"
+             "sit-down"
+             "state"
+             "steady"
+             "stout"
+             )
+
+           '((100012 "C")
+             "SATAN"
+             "stain"
              "satin"
              "sedan"
+             "stein"
+             "stone"
+
+             "Estonia"
+             "Sweden"
+             "astound"
+             "hesitant"
+             "pseudonym"
+             "sadden"
+             "sit-in"
              "sodden"
-             "sudden"
              "stand"
-             "stain"
              "standard"
              "stench"
              "stint"
-             "stein"
-             "stone"
              "stun"
              "stunt"
+             "sudden"
              "sweeten"
-             "sit-in"
-             "Sweden"
-             "Estonia"
-             "astound"
-             "hesitant"
-             "pseudonym")
-           '(100013
-             "sediment"
+             )
+
+           '((100013 "D")
+             "SEDIMENT"
              "sodium"
-             "stamp"
              "steam"
              "stem"
-             "stomach"
-             "stampede"
-             "stamina"
-             "stump"
              "esteem"
+             "wisdom"
+
              "estimate"
-             "wisdom")
-           '(100014
-             "satire"
+             "stamina"
+             "stamp"
+             "stampede"
+             "stomach"
+             "stump"
+             )
+
+           '((100014 "E")
+             "SATYR"
              "Saturn"
-             "Saturday"
-             "setter"
              "stair"
+             "cider"
+             "cedar"
+             "oyster"
+
+             "Austria"
+             "Easter"
+             "Saturday"
+             "astir"
+             "astray"
+             "astronaut"
+             "austere"
+             "history"
+             "hysteria"
+             "ouster"
+             "satire"
+             "setter"
              "star"
              "stare"
              "steer"
+             "sterling"
              "stir"
              "store"
-             "story"
              "storm"
+             "story"
              "straw"
              "stream"
-             "stroll"
-             "sterling"
              "strike"
              "strip"
+             "stroll"
              "struggle"
              "suitor"
              "swatter"
              "sweater"
-             "cedar"
-             "cider"
-             "astronaut"
-             "astir"
-             "astray"
-             "austere"
-             "Austria"
-             "Easter"
-             "history"
-             "hysteria"
-             "oyster"
-             "ouster")
-           '(100015
-             "saddle"
-             "settle"
-             "cedilla"
-             "stale"
-             "stall"
-             "steal"
-             "steel"
+             )
+
+           '((100015 "F")
+             "SADDLE"
              "still"
              "stool"
+             "stall"
+             "steel"
              "style"
+
+             "cedilla"
+             "hostile"
              "sadly"
-             "hostile")
-           '(100016
-             "stage"
-             "station"
-             "stitch"
-             "stodgy"
+             "settle"
+             "stale"
+             "steal"
+             )
+
+           '((100016 "G")
+             "STAGE"
              "stooge"
-             "hesitation"
+             "stitch"
+             "station"
              "hostage"
-             "wastage")
-           '(100017
+             "wastage"
+
+             "hesitation"
+             "stodgy"
+             )
+
+           '((100017 "H")
+             "STICK"
+             "steak"
              "stack"
+             "stuck"
+             "stock"
+             "stalk"
+
+             "ascetic"
+             "sciatica"
+             "setting"
              "stag"
              "stake"
-             "stalk"
-             "steak"
-             "stick"
              "sticky"
-             "stock"
+             "stigma"
+             "stigmata"
              "sting"
              "stoic"
              "stoke"
              "stucco"
-             "stigma"
-             "setting"
-             "sciatica"
-             "ascetic")
-           '(100018
+             )
+
+           '((100018 "I")
+             "STIFF"
              "staff"
              "stave"
-             "stiff"
+             "stevedore"
              "stove"
              "stuff"
+
              "sea-devil"
              "set-off"
-             "wasteful")
-           '(100019
-             "stab"
-             "steep"
-             "step"
-             "steppe"
-             "staple"
+             "wasteful"
+             )
+
+           '((100019 "J")
+             "STAB"
+             "stub"
              "steeple"
              "stoop"
+             "staple"
+             "steppe"
+
+             "eastbound"
+             "estop"
+             "seat-belt"
+             "southbound"
+             "steep"
+             "step"
+             "stipend"
              "stop"
              "stupid"
-             "stipend"
-             "stub"
-             "seat-belt"
-             "estop"
-             "eastbound"
-             "southbound"
-             "sweetbread")
-           '(100020
-             "sense"
+             "sweetbread"
+             )
+
+           '((100020 "K")
+             "SENSE"
+             "sneeze"
+             "sinus"
+             "seance"
+             "sunset"
+             "census"
+
+             "easiness"
+             "essence"
+             "iciness"
              "science"
              "since"
              "sincere"
              "sinister"
              "sinus"
-             "seance"
-             "sunset"
-             "census"
-             "easiness"
-             "essence"
-             "iciness"
-             "usance")
-           '(100021
-             "sand"
+             "snooze"
+             )
+
+           '((100021 "L")
+             "SNOT"
              "saint"
+             "sand"
+             "cent"
+             "senate"
+             "synod"
+
+             "Sunday"
+             "ascent"
+             "assent"
              "sandal"
              "sanity"
+             "scent"
              "sent"
              "sentiment"
-             "senate"
+             "snit"
+             "snoot"
+             "snout"
              "sonata"
              "sonnet"
              "sound"
-             "snoot"
-             "snout"
              "sundae"
-             "Sunday"
-             "synod"
-             "scent"
-             "cent"
-             "zenith"
              "swindle"
-             "ascent"
-             "assent")
-           '(100022 "sea-onion" "snow-knife" "synonym" "asinine")
-           '(100023
-             "sea-anemone"
+             "zenith"
+             )
+
+           '((100022 "M")
+             "SIGN-ON"
+             "assonance"
+             "sea-onion"
+             "snow-knife"
+             "synonym"
+             "asinine"
+             )
+
+           '((100023 "N")
+             "CINNAMON"
              "snowman"
              "cinema"
-             "cinnamon"
+             "sea-anemone"
              "cyanamide"
-             "wisenheimer")
-           '(100024
-             "scenery"
+             "so-numb"
+
+             "wisenheimer"
+             )
+
+           '((100024 "O")
+             "SINNER"
+             "sonar"
              "senior"
-             "sinner"
+             "snore"
+             "scenery"
+             "sunrise"
+
              "snare"
              "sneer"
-             "snore"
              "snort"
              "snarl"
              "sonorous"
-             "sunrise"
-             "sonar")
-           '(100025 "senile" "snell" "snail" "sunlamp" "sunlight")
-           '(100026
-             "sensual"
+             )
+
+           '((100025 "P")
+             "SENI​LE"
+             "snell"
+             "snail"
+             "sunlamp"
+             "sunlight"
+             ""
+             )
+
+           '((100026 "Q")
+             "SIGNAGE"
+             "cinch"
              "singe"
              "snatch"
+             "sensual"
              "snitch"
-             "snowshoe"
-             "snow-job"
-             "sunshine"
+
+             "ascension"
              "censure"
-             "cinch"
              "century"
-             "ascension")
-           '(100027
-             "scenic"
-             "sink"
-             "sea-anchor"
+             "snow-job"
+             "snowshoe"
+             "sunshine"
+             )
+
+           '((100027 "R")
+             "SINK"
              "snack"
              "snake"
+             "snick"
+             "cynic"
+             "zinc"
+
+             "isinglass"
+             "scenic"
+             "sea-anchor"
              "sneak"
              "snug"
              "synagogue"
-             "zinc"
-             "isinglass"
-             "cynic")
-           '(100028 "sinful" "snaffle" "snafu" "sniff" "snuff" "snowflake")
-           '(100029
-             "sign-up"
-             "snap"
-             "snipe"
+             )
+
+           '((100028 "S")
+             "SNUFF"
+             "sniff"
+             "snafu"
+             "sinful"
+             "sniffle"
+             "saw-knife"
+
+             "snowflake"
+             )
+
+           '((100029 "T")
+             "SNAP"
              "snob"
+             "snip"
+             "snipe"
              "snoop"
              "snub"
+
+             "sign-up"
              "snowball"
              "synopsis"
-             "snip"
-             "sunup")
+             "sunup"
+             )
+
            '(100030
              "Samson"
              "sea-mouse"
@@ -1967,8 +2084,8 @@
              "nail"
              "newel"
              "newly"
-             "nil"
-             "Nile"
+             "ni​l"
+             "Ni​le"
              "null"
              "annual"
              "annul"
@@ -5973,7 +6090,7 @@
              "nylon"
              "nail"
              "enamel"
-             "aniline"
+             "ani​line"
              "inland"
              "on-line"
              "inalienable")
@@ -5981,7 +6098,7 @@
              "newly-made"
              "annulment"
              "unlimited"
-             "unilluminated"
+             "uni​lluminated"
              "unlamented")
            '(254
              "nailer"
@@ -5990,7 +6107,7 @@
              "kneeler"
              "unlearned"
              "unalarmed")
-           '(255 "nailless" "nail-hole" "nilly-willy" "unloyal" "Honolulu")
+           '(255 "nailless" "nail-hole" "ni​lly-willy" "unloyal" "Honolulu")
            '(256
              "knowledge"
              "analgesic"
@@ -6344,7 +6461,7 @@
            '(284
              "nefarious"
              "nephritis"
-             "never"
+             "nevevvr"
              "nouveau-riche"
              "anniversary"
              "enforce"
@@ -6910,7 +7027,7 @@
              "meanwhile"
              "monologue"
              "moonlight"
-             "Manila"
+             "Mani​la"
              "Emmanuel"
              "hymnal"
              "womanly")
@@ -7162,44 +7279,50 @@
              "morbid"
              "moribund"
              "hammer-beam"
-             "hammerblow")
+             "hammer-blow")
+
            '(350
-             "mails"
-             "malice"
-             "miles"
-             "mills"
-             "millisecond"
+             "MALICE"
+             "homeless"
              "maelstrom"
-             "molest"
+             "mills"
+             "miles"
+             "millisecond"
+
              "aimless"
-             "homeless")
+             "mails"
+             "molest"
+             )
+
            '(351
-             "malt"
+             "MALT"
+             "melt"
+             "mold"
+             "omelet"
+             "smelt"
+             "mulatto"
+
+             "emulate"
+             "hamlet"
+             "homiletics"
+             "humility"
              "malady"
-             "milady"
              "mallet"
+             "meld"
              "melodrama"
              "melody"
-             "meld"
-             "melt"
+             "milady"
              "mild"
              "military"
              "millet"
-             "mold"
              "muleteer"
              "multiple"
-             "mulatto"
              "multitude"
-             "emulate"
-             "hamlet"
-             "humility"
-             "homiletics"
-             "omelet"
-             "umlaut"
-             "smelt"
-             "smolder"
              "simulate"
-             "simultaneous")
+             "simultaneous"
+             "smolder"
+             "umlaut"
+             )
            '(352
              "MELON"
              "Himalayans"
@@ -9108,7 +9231,7 @@
              "linoleum"
              "lonely"
              "lunule"
-             "willy-nilly")
+             "willy-ni​lly")
            '(526
              "launch"
              "lounge"
@@ -10123,7 +10246,7 @@
              "chainless"
              "chainlet"
              "channel"
-             "chenille"
+             "cheni​lle"
              "genealogy"
              "genial"
              "oceanology"
@@ -10754,7 +10877,7 @@
              "chauvinist"
              "chavender"
              "Javanese"
-             "juvenile"
+             "juveni​le"
              "shaven"
              "ash-oven"
              "washfountain")
@@ -12912,7 +13035,7 @@
              "finial"
              "funnel"
              "phenol"
-             "vanilla"
+             "vani​lla"
              "vainly"
              "vinyl"
              "heavenly")
@@ -14387,7 +14510,8 @@
              "panel"
              "penal"
              "penholder"
-             "penniless"
+             "penni​less"
+             "peni​le"
              "penult"
              "pianola"
              "pinhole"
@@ -15803,6 +15927,12 @@
 (def orgofy      (comp backulate frontulate orgulate))
 (def stringulate (partial join " "))
 (def lindicate   #(cons "|--" %))
+
+;;; Deep bug: the sequence of characters "nil" is being erased on
+;;; output. Workaround: replaced all strings containing "nil" with
+;;; "ni[ZERO WIDTH SPACE]l" in the text above. Won't fix the bug.
+;;; Too hard to diagnose. Maybe it has something to do with the
+;;; "nil" in the call of "partition" below.
 
 (defn chop-mem-line
   "Chop a line of memory pegs in prep for org-table."
