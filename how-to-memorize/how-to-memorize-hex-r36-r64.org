@@ -2263,38 +2263,45 @@ good ideas because they might incorrectly recall 64 at speed.
 :end:
 
 \clearpage
-|-----+------------+--------------+------------+------------+-------------+-------------|
-| 030 | SAMSON     | sea-mouse    | seamstress | semester   | semisweet   | semicircle  |
-|   U | swimsuit   | Siamese      | osmosis    |            |             |             |
-|-----+------------+--------------+------------+------------+-------------+-------------|
-| 031 | CEMETERY   | smite        | smith      | smooth     | smut        | summit      |
-|   V | Semite     | symmetric    | assumed    | housemaid  |             |             |
-|-----+------------+--------------+------------+------------+-------------+-------------|
-| 032 | SALMON     | cement       | seaman     | seminary   | semantics   | somnolent   |
-|   W | summon     | sameness     | iceman     | yes-man    | awesomeness | wisewoman   |
-|     | seeming    |              |            |            |             |             |
-|-----+------------+--------------+------------+------------+-------------+-------------|
-| 033 | OSMIUM     | semi-monthly | semi-metal | semi-matte | semi-member | semi-mobile |
-|   X | semi-moist |              |            |            |             |             |
-|-----+------------+--------------+------------+------------+-------------+-------------|
-| 034 | SWIMMER    | simmer       | smart      | smear      | smirk       | summer      |
-|   Y | samurai    | summary      |            |            |             |             |
-|-----+------------+--------------+------------+------------+-------------+-------------|
-| 035 | SAWMILL    | simile       | sea-mile   | seemly     | similar     | small       |
-|   Z | smell      | smile        | seamless   | assimilate |             |             |
-|-----+------------+--------------+------------+------------+-------------+-------------|
-| 036 | SMOOCH     | smidgen      | so-much    | smudge     | smash       |             |
-|   a |            |              |            |            |             |             |
-|-----+------------+--------------+------------+------------+-------------+-------------|
-| 037 | SMOKE      | smack        | smuggler   | seeming    | swimming    | sumac       |
-|   b |            |              |            |            |             |             |
-|-----+------------+--------------+------------+------------+-------------+-------------|
-| 038 | SEMAPHORE  | samovar      | semifinal  | semiformal | symphony    |             |
-|   c |            |              |            |            |             |             |
-|-----+------------+--------------+------------+------------+-------------+-------------|
-| 039 | CYMBAL     | sample       | simple     | somber     | somebody    | swamp       |
-|   d | symbol     | sympathy     | samba      | zombie     | assembly    |             |
-|-----+------------+--------------+------------+------------+-------------+-------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 30 40)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+-------------+---------------+-------------+------------+-------------+------------|
+| 030 | SAMSON      | Siamese       | seamstress  | semester   | semisweet   | swimsuit   |
+|   U | osmosis     | sea-mouse     | semicircle  |            |             |            |
+|-----+-------------+---------------+-------------+------------+-------------+------------|
+| 031 | SEMITE      | housemaid     | cemetery    | smut       | smith       | summit     |
+|   V | assumed     | smite         | smooth      | something  | summed      | symmetric  |
+|-----+-------------+---------------+-------------+------------+-------------+------------|
+| 032 | SALMON      | semen         | seaman      | seminary   | cement      | yes-man    |
+|   W | awesomeness | iceman        | sameness    | semantics  | somnolent   | summon     |
+|     | wisewoman   |               |             |            |             |            |
+|-----+-------------+---------------+-------------+------------+-------------+------------|
+| 033 | SEMIMONTHLY | same make     | same model  | same month | same man    | same mood  |
+|   X | osmium      | semi-material | semi-member | semi-metal | semi-mobile | semi-moist |
+|     | semi-motile | semi-motor    |             |            |             |            |
+|-----+-------------+---------------+-------------+------------+-------------+------------|
+| 034 | SAMURAI     | summer        | simmer      | swimmer    | smear       | summary    |
+|   Y | smart       | smirk         |             |            |             |            |
+|-----+-------------+---------------+-------------+------------+-------------+------------|
+| 035 | SAWMILL     | smile         | smell       | small      | simile      | sea-mile   |
+|   Z | assimilate  | seamless      | seemly      | similar    |             |            |
+|-----+-------------+---------------+-------------+------------+-------------+------------|
+| 036 | SMASH       | smudge        | smooch      | smidgen    | so-much     |            |
+|   a |             |               |             |            |             |            |
+|-----+-------------+---------------+-------------+------------+-------------+------------|
+| 037 | SMACK       | smoke         | sumac       | smuggler   | seeming     | swimming   |
+|   b |             |               |             |            |             |            |
+|-----+-------------+---------------+-------------+------------+-------------+------------|
+| 038 | SEMAPHORE   | samovar       | symphony    | semifinal  | semiformal  |            |
+|   c |             |               |             |            |             |            |
+|-----+-------------+---------------+-------------+------------+-------------+------------|
+| 039 | SAMBA       | somber        | cymbal      | symbol     | zombie      | swamp      |
+|   d | assembly    | sample        | simple      | somebody   | sympathy    |            |
+:end:
 
 \clearpage
 |-----+------------+--------------+--------------+------------+-----------+-----------|

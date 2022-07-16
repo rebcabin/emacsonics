@@ -589,58 +589,83 @@
              "sunup"
              )
 
-           '(100030
-             "Samson"
-             "sea-mouse"
+           '((100030 "U")
+             "SAMSON"
+             "Siamese"
              "seamstress"
              "semester"
              "semisweet"
-             "semicircle"
              "swimsuit"
-             "Siamese"
-             "osmosis")
-           '(100031
-             "Semite"
-             "smite"
-             "smith"
-             "smooth"
-             "smut"
-             "summit"
+
+             "osmosis"
+             "sea-mouse"
+             "semicircle"
+             )
+
+           '((100031 "V")
+             "SEMITE"
+             "housemaid"
              "cemetery"
-             "symmetric"
+             "smut"
+             "smith"
+             "summit"
+
              "assumed"
-             "housemaid")
-           '(100032
-             "sameness"
+             "smite"
+             "smooth"
+             "something"
+             "summed"
+             "symmetric"
+             )
+
+           '((100032 "W")
+             "SALMON"
+             "semen"
              "seaman"
-             "salmon"
              "seminary"
+             "cement"
+             "yes-man"
+
+             "awesomeness"
+             "iceman"
+             "sameness"
              "semantics"
              "somnolent"
              "summon"
-             "cement"
-             "iceman"
-             "yes-man"
-             "awesomeness"
-             "wisewoman")
-           '(100033
-             "semimetal"
-             "semimonthly"
+             "wisewoman"
+             )
+
+           '((100033 "X")
+             "SEMIMONTHLY"
+             "same make"
+             "same model"
+             "same month"
+             "same man"
+             "same mood"
+
              "osmium"
-             "semimat"
-             "semimember"
-             "semimobile"
-             "semimoist")
-           '(100034
-             "samurai"
-             "simmer"
-             "smart"
-             "smear"
-             "smirk"
+             "semi-material"
+             "semi-member"
+             "semi-metal"
+             "semi-mobile"
+             "semi-moist"
+             "semi-motile"
+             "semi-motor"
+             )
+
+           '((100034 "Y")
+             "SAMURAI"
              "summer"
+             "simmer"
              "swimmer"
-             "summary")
-           '(100035
+             "smear"
+             "summary"
+
+             "smart"
+             "smirk"
+             )
+
+           '((100035 "Z")
              "SAWMILL"
              "smile"
              "smell"
@@ -653,21 +678,28 @@
              "seemly"
              "similar"
              )
-           '(100036 "smash" "smidgen" "so-much" "smudge" "smooch")
-           '(100037 "smack" "smoke" "smuggler" "seeming" "swimming" "sumac")
-           '(100038 "samovar" "semaphore" "semifinal" "semiformal" "symphony")
-           '(100039
-             "samba"
+
+           '((100036 "a") "SMASH"  "smudge" "smooch" "smidgen" "so-much")
+
+           '((100037 "b") "SMACK" "smoke" "sumac" "smuggler" "seeming" "swimming")
+
+           '((100038 "c") "SEMAPHORE" "samovar" "symphony" "semifinal" "semiformal")
+
+           '((100039 "d")
+             "SAMBA"
+             "somber"
+             "cymbal"
+             "symbol"
+             "zombie"
+             "swamp"
+
+             "assembly"
              "sample"
              "simple"
-             "somber"
              "somebody"
-             "swamp"
-             "symbol"
              "sympathy"
-             "zombie"
-             "cymbal"
-             "assembly")
+             )
+
            '(100040 "sea-horse" "series" "serious" "sewers" "source" "Circe")
            '(100041
              "sardine"
