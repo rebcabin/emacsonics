@@ -970,7 +970,7 @@ Use the ordinary pegs for these, because we want to recall them in any order.
 | Space      |         | MAN      |  32 | spaceman                                     |
 | Bang       | ~!~     | MAMA     |  33 | with a handgun                               |
 | Dirk       | ~"~     | MARE     |  34 | looks like horse's ears                      |
-| Hash       | ~#~     | MULE     |  35 | corned-beef hash in a mule's feed-bag        |
+| Hash       | ~#~     | MAIL     |  35 | postmarks on your postage stamps             |
 |------------+---------+----------+-----+----------------------------------------------|
 | Cash       | ~$~     | MATCH    |  36 | set your cash on fire                        |
 | Grapes     | ~%~     | MIKE     |  37 | on stage with Bacchus / Dionysis             |
