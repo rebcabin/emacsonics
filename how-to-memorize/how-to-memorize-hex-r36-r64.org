@@ -989,7 +989,7 @@ Use the ordinary pegs for these, because we want to recall them in any order.
 |------------+---------+----------+-----+----------------------------------------------|
 | EFES       | ~0~     | REEF     |  48 | Easy if you know the Hebrew                  |
 | ...        | ..      | ...      |  .. | numbers                                      |
-| TEYSHA     | ~9~     | ROPE     |  49 |                                              |
+| TEYSHA     | ~9~     | LAKE     |  57 |                                              |
 |------------+---------+----------+-----+----------------------------------------------|
 | Snake-Eyes | ~:~     | LEAF     |  58 | four-leaf clover, snake-eyes on dice         |
 | Hybrid     | ~;~     | LAP      |  59 | cat on my lap with one eye open              |
