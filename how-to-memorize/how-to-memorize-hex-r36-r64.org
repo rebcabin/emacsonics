@@ -964,6 +964,60 @@ repetition.
 \clearpage
 * Non-Alphabetic Printable ASCII Codes
 
+Use the ordinary pegs for these, because we want to recall them in any order.
+
+|------------+---------+----------+-----+----------------------------------------------|
+| Space      |         | MAN      |  32 | spaceman                                     |
+| Bang       | ~!~     | MAMA     |  33 | with a handgun                               |
+| Dirk       | ~"~     | MARE     |  34 | looks like horse's ears                      |
+| Hash       | ~#~     | MULE     |  35 | corned-beef hash in a mule's feed-bag        |
+|------------+---------+----------+-----+----------------------------------------------|
+| Cash       | ~$~     | MATCH    |  36 | set your cash on fire                        |
+| Grapes     | ~%~     | MIKE     |  37 | on stage with Bacchus / Dionysis             |
+| Snowman    | ~&~     | MUFF     |  38 | sleeps until winter time                     |
+| Tick       | ~'~     | MAP      |  39 | ticks (bugs) crawling on a map               |
+|------------+---------+----------+-----+----------------------------------------------|
+| Frown      | ~(~     | RACE     |  40 | NASCAR event begins with frown               |
+| Smile      | ~)~     | RAT      |  41 | Rat Fink (hotrodder) lurid grin              |
+| Star       | ~*~     | RAIN     |  42 | star rubies litter rain-soaked beach         |
+| Plus       | ~+~     | RAM      |  43 | cloak caparison on a ram has plus signs      |
+|------------+---------+----------+-----+----------------------------------------------|
+| Tadpole    | ~,~     | REAR     |  44 | backside of my Corvette has tadpoles         |
+| Flag       | ~-~     | RAIL     |  45 | looks like a footrail in a bar               |
+| Stop       | ~.~     | RASH     |  46 | my rash looks like measles' dots             |
+| Press      | ~/~     | RACK     |  47 | my rack of antlers is twisted rightwards     |
+|------------+---------+----------+-----+----------------------------------------------|
+| EFES       | ~0~     | REEF     |  48 | Easy if you know the Hebrew                  |
+| ...        | ..      | ...      |  .. | numbers                                      |
+| TEYSHA     | ~9~     | ROPE     |  49 |                                              |
+|------------+---------+----------+-----+----------------------------------------------|
+| Snake-Eyes | ~:~     | LEAF     |  58 | four-leaf clover, snake-eyes on dice         |
+| Hybrid     | ~;~     | LAP      |  59 | cat on my lap with one eye open              |
+| Bra        | ~<~     | CHESS    |  60 | the Queen on giant chessboard wears a bra    |
+| Gym        | ~=~     | JET      |  61 | parallel bars inside a jet airliner          |
+| Ket        | ~>~     | CHAIN    |  62 | the WC chain pulls the ket from the bra      |
+|------------+---------+----------+-----+----------------------------------------------|
+| Hook       | ~?~     | CHIME    |  63 | when the chime sounds, it's question time    |
+| Snail      | ~@~     | CHAIR    |  64 | snails covering your favorite easy-chair     |
+|------------+---------+----------+-----+----------------------------------------------|
+| Box        | ~[~     | BAT      |  91 | catch the bat with bait in a wooden box      |
+| Slope      | ~\~     | BEAN     |  92 | beans as bait behind the sloped trap door    |
+| Top        | ~]~     | BEAM     |  93 | the lid has a wooden beam for strength       |
+|------------+---------+----------+-----+----------------------------------------------|
+| Hat        | ~^~     | BAR      |  94 | go to your bar (pub) in fishing hat          |
+| Score      | ~_~     | BALL     |  95 | piano player in bar drinks a highball        |
+| Blip       | ~`~     | BADGE    |  96 | radar blips detect metallic badges           |
+|------------+---------+----------+-----+----------------------------------------------|
+| Embrace    | ~{~     | DYNAMITE | 123 | you're embracing dynamite under your coat    |
+| Pipe       | ~\vert~ | TENOR    | 124 | singer has great pipes                       |
+| Bracelet   | ~}~     | TUNNEL   | 125 | you lost your bracelet in a taxi in a tunnel |
+| Worm       | =~=     | DUNGEON  | 126 | you slink into dungeon like a worm           |
+|------------+---------+----------+-----+----------------------------------------------|
+
+#+begin_comment
+
+Here is a defunct version with a sound-alike movie:
+
 |------------+---------+----------+-----+---------------------------------------|
 | Space      |         | moon     |  32 | on the moon, a mummy                  |
 | Bang       | ~!~     | mummy    |  33 | with a handgun                        |
@@ -1011,10 +1065,13 @@ repetition.
 | Bracelet   | ~}~     | tunnel   | 125 | you lost your detonator bracelet      |
 | Worm       | =~=     | dungeon  | 126 | you slink into dungeon like a worm    |
 |------------+---------+----------+-----+---------------------------------------|
+#+end_comment
+
 \clearpage
 * Tarot
 <<tarot>>
-Tarot cards have vivid imagery and powerful, emotional associated
+
+Tarot cards have vivid imagery and powerful, emotional, associated
 words. Such features are great for memory.
 
 There are 78 Tarot cards in a standard Rider-Waite pack. That's
