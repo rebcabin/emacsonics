@@ -117,9 +117,9 @@
 # #+STARTUP: latexpreview inlineimages showall
 # #+STARTUP: showall
 
-#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 9
+#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 10
 #+AUTHOR: Brian Beckman; John D. Cook, Ondrej Certik
-#+DATE: 16 Jul 2022
+#+DATE: 17 Jul 2022
 
 #+BEGIN_SRC elisp :exports none
   (setq org-babel-python-command "python3")
@@ -823,7 +823,121 @@ I go down table 1 in my mind when I need to fall asleep. I usually
 get four or five rows before drifting off, so next time through, I
 start up where I left off. Sometimes, I recite it backwards just
 to make sure the end of the table doesn't get soft from lack of
-repetition.
+repetition. Here are the "mental movies":
+
+1. ALPHA --- The alpha LION (ARYEH) is in the giant disneyland
+   TEACUP. He is in JAIL and the jailer has her BACK turned to us.
+
+2. BAKER --- is serving a BEEF meal to a JUDGE in full
+   magistrate's dress including a powdered with on NOAH's ark in
+   the little BOOTH (BAYIT) on top of the Ark.
+
+3. CHARLIE --- is riding a CAMEL (GAMAL) looking at himself in the ME
+   (mirror) having a hell of a time trying to tie his bow tie
+   while bouncing around on the back of the camel and smoking a
+   PIPE. The camel is dragging ropes with colored sidewalk chalk
+   behind him making marks on the ground.
+
+4. DELTA --- I am pointing a flashlight (RAY) at a giant,
+   brass-and-wooden door (DELET) looking for a keyhole. I open it
+   up and there is a PhD student who never finished his THESIS so
+   must work as a CHEF. I see, hear, and smell the food he is
+   cooking. Alternatively, a laser pointer is etching the blue
+   lines around the margins of the THESIS paper (such was common
+   in my day).
+
+5. ECHO --- Moses is delivering the LAW on mount Sinai. A cop at the
+   bottom of the hill (HAR) is holding up his hand: "stop!" In
+   between his fingers there are poker CHIPS and pieces of
+   Cinnamon TOAST. ECHO begins with "E", which is Greek Eta and
+   looks like the letter "H" of hill and HAR. "Hill" and "har" are
+   obvious cognates by a shift of the liquid consonants "l" and "r."
+
+6. FOXTROT --- Lurch is clenching a pink (VERED) rose in his teeth
+   and lantern JAW. He has an open CASE on his lap filled with a
+   DOZEN more pink roses.
+
+7. GOLF --- I have a golden (ZAHAV) KEY to my golf cart, where my
+   black CAT is waiting with my golf TWOSOME.
+
+8. HOTEL --- I am in the lobby of the beautiful Bellagio hotel
+   with my donkey (CHAMOR) and a stinky CAN full of cigar butts and
+   a DOWSER rod in my hands. I am waiting in line to pay the
+   exorbitant FEE.
+
+9. INDIA --- I am in a junkyard full of old Roll-Royce DIESEL
+   automobiles with their camshafts poking out of their hoods. In
+   the cockpit of one is a pilot (TAYYAS) up to his neck in PEA
+   soup.
+
+10. JULIET --- with her painted TOES and fingernails is leading a
+    WOOD-SAGE (druid) by the hand (YAD) to his brightly colored
+    racing CAR.
+
+11. KILO --- Alice of Wonderland (a TOT) comes off her throne
+    (KISEH) to deliver a kilo of COAL to a troll with huge TUSKS.
+
+12. LIMA --- A girl is sunning herself and holding a silver
+    platter under her chin to ensure it gets TANNED. On the tray
+    is a loaf of bread (LECHEM) with flies buzzing around it. She
+    takes a strip of ADHESIVE flypaper and dangles it into a CAGE
+    to trap the flies.
+
+13. MIKE --- A pod of orca whales are flipping a Tam-O'Shanter
+    (beanie hat with a red pom-pom) in the water (MAYIM). I take a
+    TEASPON of water and drizzle it on a gigantic chocolate CAKE,
+    the size of a five-gallon cylindrical barrel.
+
+14. NOVEMBER --- A snake (NACHASH) is sizzling on a patch of hot
+    TAR asphalt. It has neither arms nor legs, so, of course, it
+    is wearing a shirt with CUFFS and TIGHTS instead of trousers
+    (absurdity helps the memory).
+
+15. OSCAR --- A TEETOTALER wearing a Carrie-Nation CAP is holding
+    an Oscar award. A tiger with a striped TAIL is clenching a
+    book (SEFER) in its jaws and bringing it to the teetotaler.
+
+16. PAPA --- is wiping tears from his eyes (AYIN) with a TISSUE.
+    He is overcomes with emotion looking at the beautiful face of
+    Liz Taylor, whose picture is held by a giant TITAN robot.
+
+17. QUEBEC --- A very FAT premier of Quebec is lying on a bed of
+    TACKS and turning his face (PANIM) to a TOTEM to pray.
+
+18. ROMEO --- has a sparrow (TZIPPOR) with her feet stuck in a
+    patch of sticky TAFFY on his shoulder. He brings her to a
+    TATAR princess, who is being FANNED by several slave girls.
+
+19. SIERRA --- I finally get some FAME from publishing my first
+    book, TITLED "Sierra." I celebrate with a beer pulled from a
+    TAP by a monkey (QUF).
+
+20. TANGO --- A DEATHWATCH soldier with four arms and three swords
+    is carrying Goliath's head (ROSH), which has a giant NOSE. He
+    tangos toward a bus, where he mounts the steps and pays his
+    FARE.
+
+21. UNIFORM --- A skeleton (SHAD) FALLS into a NET with a HOT-DOG.
+
+22. VICTOR --- A NUN with a Christian FISH pendant presides over a
+    victory, a burning at the stake (AUTO-DA-FE). She is holding a
+    pet crocodile (TANIN).
+
+23. WHISKEY --- A TEDDY-BEAR rests on a bed with a book of Edna
+    St. Vincent Millay's poems: "A few FIGS from thistles." A
+    small NAMEPLATE rests against a tumbler of WHISKEY on the
+    nightstand (smell it).
+
+24. X-RAY --- NERO is playing his FIFE (not a fiddle) while
+    watching Rome burn. He uses is X-RAY vision to look through
+    the clothes of a bunch of DANCING people in they yard.
+
+25. YANKEE --- An American flag is NAILED to the wall. Two nails
+    stick out. A DOUGHNUT dangles from one nail and a watch-FOB is
+    looped over the other nail.
+
+26. ZULU --- An ATHENIAN comes up to BASE (baseball). Next to him
+    is a NICHE with a bust of Athena in it.
 
 #+ATTR_LATEX: :caption Table 1: ASCII, Playing cards, NATO, Hebrew, Dates
 |---+----------+-------+---------+-------------+-------+--------+-----|
@@ -2304,38 +2418,44 @@ good ideas because they might incorrectly recall 64 at speed.
 :end:
 
 \clearpage
-|-----+------------+--------------+--------------+------------+-----------+-----------|
-| 040 | SEA-HORSE  | series       | serious      | sewers     | source    | Circe     |
-|   e | sarcen     |              |              |            |           |           |
-|-----+------------+--------------+--------------+------------+-----------+-----------|
-| 041 | SARDINE    | sardonic     | seaward      | seaworthy  | sort      | sortie    |
-|   f | swarthy    | assert       | assort       | certain    | hazard    | wizard    |
-|-----+------------+--------------+--------------+------------+-----------+-----------|
-| 042 | SIREN      | serene       | serenade     | Syrian     | surname   | surrender |
-|   g | sworn      | Sauron       |              |            |           |           |
-|-----+------------+--------------+--------------+------------+-----------+-----------|
-| 043 | SERUM      | sermon       | swarm        | ceramic    | ceremony  |           |
-|   h |            |              |              |            |           |           |
-|-----+------------+--------------+--------------+------------+-----------+-----------|
-| 044 | SORORITY   | searer       | sour-herring | swearer    | zero-hour |           |
-|   i |            |              |              |            |           |           |
-|-----+------------+--------------+--------------+------------+-----------+-----------|
-| 045 | CEREAL     | sirloin      | seraglio     | sorrel     | Israel    | serial    |
-|   j |            |              |              |            |           |           |
-|-----+------------+--------------+--------------+------------+-----------+-----------|
-| 046 | SERGEANT   | serge        | search       | surcharge  | surge     | surgeon   |
-|   k | sea-urchin |              |              |            |           |           |
-|-----+------------+--------------+--------------+------------+-----------+-----------|
-| 047 | SAUERKRAUT | sarcasm      | circle       | sour-cream | sirocco   | circus    |
-|   l | circuit    | circumstance | circle       | zircon     | sarong    |           |
-|-----+------------+--------------+--------------+------------+-----------+-----------|
-| 048 | SERAFIM    | serve        | servile      | surf       | surface   | surfeit   |
-|   m | survive    | survey       | servant      | sorrowful  | serafic   | serf      |
-|-----+------------+--------------+--------------+------------+-----------+-----------|
-| 049 | CERBERUS   | sourpuss     | surpass      | surplice   | surplus   | serpent   |
-|   n | surprise   | syrup        | sauerbraten  | usurper    |           |           |
-|-----+------------+--------------+--------------+------------+-----------+-----------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 40 50)
+#+end_src
 
+#+RESULTS:
+:results:
+|-----+-------------+--------------+------------+--------------+-----------+----------|
+| 040 | SERIES      | sea-horse    | serious    | sewers       | source    | Circe    |
+|   e |             |              |            |              |           |          |
+|-----+-------------+--------------+------------+--------------+-----------+----------|
+| 041 | SARDINE     | sardonic     | sard       | sort         | hazard    | wizard   |
+|   f | assert      | assort       | certain    | seaward      | seaworthy | sortie   |
+|     | swarthy     |              |            |              |           |          |
+|-----+-------------+--------------+------------+--------------+-----------+----------|
+| 042 | SARIN       | siren        | serene     | Syrian       | serenade  | surname  |
+|   g | surrender   | sworn        |            |              |           |          |
+|-----+-------------+--------------+------------+--------------+-----------+----------|
+| 043 | SWARM       | sermon       | serum      | ceremony     | ceramic   |          |
+|   h |             |              |            |              |           |          |
+|-----+-------------+--------------+------------+--------------+-----------+----------|
+| 044 | SEARER      | zero-hour    | sorority   | sour-herring | swearer   |          |
+|   i |             |              |            |              |           |          |
+|-----+-------------+--------------+------------+--------------+-----------+----------|
+| 045 | ISRAEL      | cereal       | serial     | sirloin      | seraglio  | sorrel   |
+|   j |             |              |            |              |           |          |
+|-----+-------------+--------------+------------+--------------+-----------+----------|
+| 046 | SARGE       | search       | serge      | surge        | surgeon   | sergeant |
+|   k | sea-urchin  | surcharge    |            |              |           |          |
+|-----+-------------+--------------+------------+--------------+-----------+----------|
+| 047 | circuit     | sarcasm      | sauerkraut | sour-cream   | circus    | sirocco  |
+|   l | circle      | circumstance | sarong     | zircon       |           |          |
+|-----+-------------+--------------+------------+--------------+-----------+----------|
+| 048 | SURF        | serf         | surface    | service      | serve     | servant  |
+|   m | servile     | sorrowful    | surfeit    | survey       | survive   |          |
+|-----+-------------+--------------+------------+--------------+-----------+----------|
+| 049 | SERPENT     | syrup        | surplice   | surplus      | Cerberus  | surprise |
+|   n | sauerbraten | sourpuss     | surpass    | usurper      |           |          |
+:end:
 
 
 \clearpage
@@ -2370,14 +2490,14 @@ good ideas because they might incorrectly recall 64 at speed.
 | 056 | SOLUTION   | slouch    | sludge    | slash    | slush       | zoology    |
 |   u | isolation  |           |           |          |             |            |
 |-----+------------+-----------+-----------+----------+-------------+------------|
-| 057 | silk       | slake     | slang     | sling    | sleek       | sea-legs   |
+| 057 | SILK       | slake     | slang     | sling    | sleek       | sea-legs   |
 |   v | ceiling    | select    | silica    | slack    | sulky       |            |
 |-----+------------+-----------+-----------+----------+-------------+------------|
 | 058 | SALVE      | salvo     | saliva    | salvage  | salvation   | slave      |
 |   w | self       | silver    | sleeve    | sliver   | solve       | soulfood   |
 |     | soulful    | sulfur    | sylph     |          |             |            |
 |-----+------------+-----------+-----------+----------+-------------+------------|
-| 059 | slipper    | slab      | slap      | sleep    | slip        | sailboat   |
+| 059 | SLIPPER    | slab      | slap      | sleep    | slip        | sailboat   |
 |   x | celebrate  | celibacy  | sloop     | slop     | slope       | slowpoke   |
 :end:
 
@@ -2388,99 +2508,113 @@ good ideas because they might incorrectly recall 64 at speed.
 
 #+RESULTS:
 :results:
-|-----+--------------+-------------+---------------+---------------+-------------+-------------|
-| 060 | SAGES        | sea-chest   | sieges        | switches      | sash-saw    | sashes      |
-|   y | suggest      |             |               |               |             |             |
-|-----+--------------+-------------+---------------+---------------+-------------+-------------|
-| 061 | SAGITTARIUS  | siege-tower | sash-weight   | switch-hitter | associate   | sachette    |
-|   z | satiate      | sagittal    | soshed        |               |             |             |
-|-----+--------------+-------------+---------------+---------------+-------------+-------------|
-| 062 | SWITCH-KNIFE | session     | sash-window   | sedge-hen     | sea-change  | scission    |
-|   + | sashoon      | seashine    | suasion       | cession       |             |             |
-|-----+--------------+-------------+---------------+---------------+-------------+-------------|
-| 063 | SASHIMI      | satchem     | switchman     | sea-chime     | sea-chum    |             |
-| ' / |              |             |               |               |             |             |
-|-----+--------------+-------------+---------------+---------------+-------------+-------------|
-| 064 | seashore     | saw-shark   | saw-sharpener | seizure       | sojourn     | suture      |
-|     | switcheroo   |             |               |               |             |             |
-|-----+--------------+-------------+---------------+---------------+-------------+-------------|
-| 065 | sash-line    | sage-oil    | satchel       | seashell      | switch-line | social      |
-|-----+--------------+-------------+---------------+---------------+-------------+-------------|
-| 066 | switch-shift | wise-judge  | sage          | cheese        | association |             |
-|-----+--------------+-------------+---------------+---------------+-------------+-------------|
-| 067 | sash-cord    | sedge-grass | siege-coin    | switchgear    | switch-cane |             |
-|-----+--------------+-------------+---------------+---------------+-------------+-------------|
-| 068 | sedge-fly    | switch-ivy  | switchover    |               |             |             |
-|-----+--------------+-------------+---------------+---------------+-------------+-------------|
-| 069 | sagebrush    | s-shaped    | sash-pocket   | sedge-bird    | swashbuckle | switchblade |
-|     | switch-box   |             |               |               |             |             |
+|-----+--------------+-------------+-------------+---------------+-------------+-------------|
+| 060 | SAGES        | sea-chest   | sieges      | switches      | sash-saw    | sashes      |
+|   y | suggest      |             |             |               |             |             |
+|-----+--------------+-------------+-------------+---------------+-------------+-------------|
+| 061 | SAGITTARIUS  | siege-tower | sash-weight | switch-hitter | associate   | sachette    |
+|   z | satiate      | sagittal    | satched     |               |             |             |
+|-----+--------------+-------------+-------------+---------------+-------------+-------------|
+| 062 | SWITCH-KNIFE | session     | sash-window | sedge-hen     | sea-change  | scission    |
+|   + | sashoon      | seashine    | suasion     | cession       |             |             |
+|-----+--------------+-------------+-------------+---------------+-------------+-------------|
+| 063 | SASHIMI      | satchem     | switchman   | sea-chime     | sea-chum    |             |
+| ' / |              |             |             |               |             |             |
+|-----+--------------+-------------+-------------+---------------+-------------+-------------|
+| 064 | SUTURE       | seashore    | saw-shark   | saw-sharpener | seizure     | sojourn     |
+|     | switcheroo   |             |             |               |             |             |
+|-----+--------------+-------------+-------------+---------------+-------------+-------------|
+| 065 | SATCHEL      | seashell    | social      | sash-line     | sage-oil    | switch-line |
+|-----+--------------+-------------+-------------+---------------+-------------+-------------|
+| 066 | ASSOCIATION  | sage-age    | cheese-aged | switch-shift  | wise-judge  |             |
+|-----+--------------+-------------+-------------+---------------+-------------+-------------|
+| 067 | SAGE-GRASS   | siege-coin  | sash-cord   | switchgear    | switch-cane |             |
+|-----+--------------+-------------+-------------+---------------+-------------+-------------|
+| 068 | SWITCHOVER   | sedge-fly   | switch-ivy  |               |             |             |
+|-----+--------------+-------------+-------------+---------------+-------------+-------------|
+| 069 | SWASHBUCKLER | sagebrush   | sedge-bird  | s-shaped      | sash-pocket | switchblade |
+|     | switch-box   |             |             |               |             |             |
 :end:
 
 \clearpage
-|-----+-----------+-----------+-----------+----------+-------------+-----------|
-| 070 | seacoast  | sea-goose | sex       | six      | saxophone   | success   |
-|     | Saxon     | squeeze   | sax       | socks    |             |           |
-|-----+-----------+-----------+-----------+----------+-------------+-----------|
-| 071 | squid     | scatter   | scat      | squatter | skid        | skit      |
-|     | skeet     | scout     | scuttle   | skate    | sect        | sea-god   |
-|     | socket    | Scot      | ascot     | weskit   | Scottie     |           |
-|-----+-----------+-----------+-----------+----------+-------------+-----------|
-| 072 | scan      | scanty    | scandal   | sequin   | second      | sicken    |
-|     | sickness  | schooner  | scoundrel | signal   | skin        | sea-gown  |
-|     | zucchini  | askance   |           |          |             |           |
-|-----+-----------+-----------+-----------+----------+-------------+-----------|
-| 073 | sagamore  | scheme    | scum      | skim     | sycamore    | Eskimo    |
-|-----+-----------+-----------+-----------+----------+-------------+-----------|
-| 074 | scar      | scare     | scarce    | scarlet  | screw       | scrawl    |
-|     | singer    | score     | square    | squire   | squirt      | secure    |
-|     | secret    | secretary | scream    | scrap    | screen      | skirt     |
-|     | cigar     | escarole  | escort    | escrow   | Oscar       | ice-cream |
-|     | whisker   |           |           |          |             |           |
-|-----+-----------+-----------+-----------+----------+-------------+-----------|
-| 075 | scallop   | school    | scallion  | scull    | scale       | scalp     |
-|     | sea-gull  | sequel    | sculptor  | scholar  | sickle      | single    |
-|     | skeleton  | skull     | squall    | squill   | suckle      | cycle     |
-|     | icicle    | ossicle   |           |          |             |           |
-|-----+-----------+-----------+-----------+----------+-------------+-----------|
-| 076 | sagacious | sketch    | squash    | Scotch   | escutcheon  |           |
-|-----+-----------+-----------+-----------+----------+-------------+-----------|
-| 077 | skeg      | seeking   | sea-king  | seaquake | squeak      | squawk    |
-|     | asking    | easygoing | sukiyaki  | singing  |             |           |
-|-----+-----------+-----------+-----------+----------+-------------+-----------|
-| 078 | scaffold  | scavenger | scoff     | scofflaw | skiff       | scuff     |
-|     | scuffle   |           |           |          |             |           |
-|-----+-----------+-----------+-----------+----------+-------------+-----------|
-| 079 | scab      | scoop     | scope     | ski-boot | skip        | skeptic   |
-|     | squib     | squabble  | escapade  | escape   | housekeeper | icecap    |
-|-----+-----------+-----------+-----------+----------+-------------+-----------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 70 80)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+-----------+-----------+-----------+-----------+------------+-------------|
+| 070 | SEX       | saxophone | seacoast  | success   | Saxon      | squeeze     |
+|     | sea-goose | six       |           |           |            |             |
+|-----+-----------+-----------+-----------+-----------+------------+-------------|
+| 071 | SCOT      | skate     | scat      | sect      | skeet      | squid       |
+|     | ascot     | scatter   | scout     | scuttle   | sea-god    | skid        |
+|     | skit      | socket    | squatter  | waistcoat |            |             |
+|-----+-----------+-----------+-----------+-----------+------------+-------------|
+| 072 | SCAN      | scanty    | schooner  | sequin    | signal     | skin        |
+|     | askance   | scandal   | scoundrel | sea-gown  | second     | sicken      |
+|     | sickness  | zucchini  |           |           |            |             |
+|-----+-----------+-----------+-----------+-----------+------------+-------------|
+| 073 | SCHEME    | sycamore  | Eskimo    | scum      | sagamore   | skim        |
+|     | scumbag   |           |           |           |            |             |
+|-----+-----------+-----------+-----------+-----------+------------+-------------|
+| 074 | CIGAR     | scar      | screw     | skirt     | square     | squire      |
+|     | Oscar     | escarole  | escort    | escrow    | ice-cream  | scarce      |
+|     | scare     | scarlet   | score     | scrap     | scrawl     | scream      |
+|     | screen    | secret    | secretary | secure    | singer     | squirt      |
+|     | whisker   |           |           |           |            |             |
+|-----+-----------+-----------+-----------+-----------+------------+-------------|
+| 075 | SKULL     | scale     | scallop   | school    | scallion   | scull       |
+|     | cycle     | icicle    | ossicle   | scalp     | scholar    | sculptor    |
+|     | sea-gull  | sequel    | sickle    | single    | skeleton   | skill       |
+|     | squall    | squill    | suckle    |           |            |             |
+|-----+-----------+-----------+-----------+-----------+------------+-------------|
+| 076 | SKETCH    | squash    | sagacious | Scotch    | escutcheon |             |
+|-----+-----------+-----------+-----------+-----------+------------+-------------|
+| 077 | SUKIYAKI  | seeking   | sea-king  | seaquake  | squeak     | squawk      |
+|     | asking    | easygoing | skeg      |           |            |             |
+|-----+-----------+-----------+-----------+-----------+------------+-------------|
+| 078 | SKIFF     | scuffle   | scuff     | scaffold  | scofflaw   | scavenger   |
+|     | scoff     |           |           |           |            |             |
+|-----+-----------+-----------+-----------+-----------+------------+-------------|
+| 079 | SKIP      | scab      | scoop     | scope     | ski-boot   | icecap      |
+|     | skeptic   | squib     | squabble  | escapade  | escape     | housekeeper |
+:end:
 
 \clearpage
-|-----+------------+------------+--------------+---------------+-------------+--------------|
-| 080 | sophist    | saves      | sufism       | suffice       | suffuse     | housewives   |
-|-----+------------+------------+--------------+---------------+-------------+--------------|
-| 081 | safety     | sift       | soft         | swift         | Soviet      | safe-deposit |
-|     | seafood    | sea-fight  |              |               |             |              |
-|-----+------------+------------+--------------+---------------+-------------+--------------|
-| 082 | seven      | siphon     | souvenir     | sea-fan       | suaveness   | Savannah     |
-|     | housephone |            |              |               |             |              |
-|-----+------------+------------+--------------+---------------+-------------+--------------|
-| 083 | seafoam    | sophomore  | sea-vampire  | suffumigate   |             |              |
-|-----+------------+------------+--------------+---------------+-------------+--------------|
-| 084 | saffron    | sapphire   | savior       | sever         | severe      | sphere       |
-|     | savor      | several    | suffer       | sovereign     | suffragette | safari       |
-|     | zephyr     | whosoever  | cipher       |               |             |              |
-|-----+------------+------------+--------------+---------------+-------------+--------------|
-| 085 | safely     | seafowl    | safflower    | safelight     | souffle     | suavely      |
-|     | swivel     | civil      | asphalt      | ice-floe      | useful      |              |
-| 086 | savage     | safe-edge  | icefish      | housewifish   | sawfish     | sufficient   |
-|-----+------------+------------+--------------+---------------+-------------+--------------|
-| 087 | safeguard  | saving     | safe-conduct | savoy-cabbage | suffix      | suffocate    |
-|     | esophagus  | civic      |              |               |             |              |
-|-----+------------+------------+--------------+---------------+-------------+--------------|
-| 088 | save-face  | safe-haven | sieve-field  |               |             |              |
-|-----+------------+------------+--------------+---------------+-------------+--------------|
-| 089 | sieve-pit  | sofa-bed   | SVP          | sieva-bean    |             |              |
-|-----+------------+------------+--------------+---------------+-------------+--------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 80 90)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+---------------+-------------+-------------+--------------+------------+--------------|
+| 080 | SUFISM        | sophist     | saves       | suffice      | suffuse    | housewives   |
+|-----+---------------+-------------+-------------+--------------+------------+--------------|
+| 081 | SEAFOOD       | Soviet      | swift       | safe-deposit | sea-fight  | sift         |
+|     | safety        | soft        |             |              |            |              |
+|-----+---------------+-------------+-------------+--------------+------------+--------------|
+| 082 | SIPHON        | Savannah    | souvenir    | sea-fan      | housephone | suaveness    |
+|     | seven         |             |             |              |            |              |
+|-----+---------------+-------------+-------------+--------------+------------+--------------|
+| 083 | SOPHOMORE     | sea-vampire | seafoam     | suffumigate  |            |              |
+|-----+---------------+-------------+-------------+--------------+------------+--------------|
+| 084 | SAPPHIRE      | safari      | sphere      | zephyr       | sovereign  | suffragette  |
+|     | cipher        | saffron     | savior      | savor        | sever      | several      |
+|     | severe        | suffer      | whosoever   |              |            |              |
+|-----+---------------+-------------+-------------+--------------+------------+--------------|
+| 085 | ASPHALT       | seafowl     | souffle     | safflower    | ice-floe   | swivel       |
+|     | civil         | safelight   | safely      | suavely      | useful     |              |
+|-----+---------------+-------------+-------------+--------------+------------+--------------|
+| 086 | SAVAGE        | icefish     | housewifish | sawfish      | sufficient | safe-edge    |
+|-----+---------------+-------------+-------------+--------------+------------+--------------|
+| 087 | ESOPHAGUS     | suffocate   | civic       | safeguard    | saving     | safe-conduct |
+|     | savoy-cabbage | suffix      |             |              |            |              |
+|-----+---------------+-------------+-------------+--------------+------------+--------------|
+| 088 | SAFE-HAVEN    | save-face   | sieve-field |              |            |              |
+|-----+---------------+-------------+-------------+--------------+------------+--------------|
+| 089 | SOFA-BED      | sieve-pit   | sieva-bean  |              |            |              |
+:end:
 
 \clearpage
 #+begin_src clojure :exports results :results verbatim drawer output
@@ -2489,42 +2623,42 @@ good ideas because they might incorrectly recall 64 at speed.
 
 #+RESULTS:
 :results:
-|-----+--------------+-----------+------------+-------------+-------------+--------------|
-| 090 | space        | specify   | spice      | spouse      | suppose     | sea-biscuit  |
-|     | soupcon      | auspices  | asbestos   |             |             |              |
-|-----+--------------+-----------+------------+-------------+-------------+--------------|
-| 091 | spade        | spate     | speed      | spit        | spite       | spot         |
-|     | spout        | spud      | scepter    | soup-tureen | subdue      | houseboat    |
-|     | hospital     | Sabbath   | September  |             |             |              |
-|-----+--------------+-----------+------------+-------------+-------------+--------------|
-| 092 | span         | spin      | spine      | spoon       | spend       | Spain        |
-|     | soybean      | supine    | subpoena   | has-been    | subnormal   | aspen        |
-|     | espionage    |           |            |             |             |              |
-|-----+--------------+-----------+------------+-------------+-------------+--------------|
-| 093 | submarine    | submerge  | submontane | submit      | spume       | spumoni      |
-|     | subminiature |           |            |             |             |              |
-|-----+--------------+-----------+------------+-------------+-------------+--------------|
-| 094 | soprano      | spare     | sparrow    | spear       | spire       | spirit       |
-|     | spark        | sport     | spread     | spry        | spree       | sopor        |
-|     | spray        | sober     | saber      | supper      | super       | spring       |
-|     | superb       | separate  | cypress    | zebra       | aspire      | aspirin      |
-|     | asparagus    | isobar    | osprey     | whisper     |             |              |
-|-----+--------------+-----------+------------+-------------+-------------+--------------|
-| 095 | splash       | spleen    | splendid   | split       | spell       | spoil        |
-|     | spool        | supply    | sowbelly   | seaplane    | sublime     | sibilant     |
-|     | zeppelin     | esplanade |            |             |             |              |
-|-----+--------------+-----------+------------+-------------+-------------+--------------|
-| 096 | speech       | seabeach  | special    | specie      | spatial     | seepage      |
-|     | subagent     | subject   | waspish    | auspicious  |             |              |
-|-----+--------------+-----------+------------+-------------+-------------+--------------|
-| 097 | sawbuck      | speak     | speck      | spike       | spook       | spectacle    |
-|     | zip-code     | aspic     | aspect     | ice-pick    | ice-bag     | ice-pack     |
-|-----+--------------+-----------+------------+-------------+-------------+--------------|
-| 098 | spiff        | spoof     | soap-flake | soupfin     | subfreezing | subaverage   |
-|     | subway-fare  |           |            |             |             |              |
-|-----+--------------+-----------+------------+-------------+-------------+--------------|
-| 099 | sea-poppy    | soapbark  | soapberry  | soapbox     | soap-bubble | subprincipal |
-|     | house-paper  |           |            |             |             |              |
+|-----+--------------+-------------+------------+-------------+-------------+--------------|
+| 090 | SPACE        | spice       | spouse     | sea-biscuit | asbestos    | soupcon      |
+|     | auspices     | specify     | suppose    |             |             |              |
+|-----+--------------+-------------+------------+-------------+-------------+--------------|
+| 091 | SUBTERRANEAN | spot        | spade      | spate       | speed       | spit         |
+|     | Sabbath      | September   | hospital   | houseboat   | scepter     | soup-tureen  |
+|     | spite        | spout       | spud       | subdue      |             |              |
+|-----+--------------+-------------+------------+-------------+-------------+--------------|
+| 092 | SPIN         | Spain       | spine      | spoon       | span        | spend        |
+|     | aspen        | espionage   | has-been   | soybean     | subnormal   | subpoena     |
+|     | supine       |             |            |             |             |              |
+|-----+--------------+-------------+------------+-------------+-------------+--------------|
+| 093 | SPAM         | spume       | spumoni    | submarine   | submerge    | submontane   |
+|     | subminiature | submit      |            |             |             |              |
+|-----+--------------+-------------+------------+-------------+-------------+--------------|
+| 094 | SPAR         | spear       | spire      | spare       | saber       | zebra        |
+|     | asparagus    | aspire      | aspirin    | cypress     | isobar      | osprey       |
+|     | separate     | sober       | sopor      | soprano     | spark       | sparrow      |
+|     | spirit       | sport       | spray      | spread      | spree       | spring       |
+|     | spry         | super       | superb     | supper      | whisper     |              |
+|-----+--------------+-------------+------------+-------------+-------------+--------------|
+| 095 | SPILL        | spell       | spoil      | spool       | spall       | zeppelin     |
+|     | esplanade    | seaplane    | sibilant   | sowbelly    | splash      | spleen       |
+|     | splendid     | split       | sublime    | supply      |             |              |
+|-----+--------------+-------------+------------+-------------+-------------+--------------|
+| 096 | SUB-AGE      | speech      | seepage    | species     | subject     | special      |
+|     | auspicious   | seabeach    | spatial    | subagent    | waspish     |              |
+|-----+--------------+-------------+------------+-------------+-------------+--------------|
+| 097 | SAWBUCK      | speak       | speck      | spike       | spook       | ice-pick     |
+|     | aspect       | aspic       | ice-bag    | ice-pack    | spectacle   | zip-code     |
+|-----+--------------+-------------+------------+-------------+-------------+--------------|
+| 098 | SPOOF        | subway-fare | subaverage | subfreezing | soap-flake  | soupfin      |
+|     | spiff        |             |            |             |             |              |
+|-----+--------------+-------------+------------+-------------+-------------+--------------|
+| 099 | SOAPBOX      | sea-poppy   | soapbark   | soapberry   | soap-bubble | subprincipal |
+|     | house-paper  |             |            |             |             |              |
 :end:
 
 \clearpage
@@ -2573,119 +2707,186 @@ good ideas because they might incorrectly recall 64 at speed.
 :end:
 
 \clearpage
-|---+--------+---------+--------+---------+--------+--------|
-| 5 | LAW    | lay     | lei    | lie     | lye    | low    |
-|   | ail    | ale     | all    | alley   | ally   | allow  |
-|   | alloy  | aisle   | awl    | aloha   | ell    | eel    |
-|   | hall   | hail    | halo   | heal    | heel   | haul   |
-|   | hell   | hill    | hole   | hollow  | howl   | holy   |
-|   | hull   | hello   | ill    | isle    | ole    | oil    |
-|   | olla   | owl     | wall   | wail    | whole  | wheel  |
-|   | while  | whale   | wallow | willow  | will   | waylay |
-|   | wool   | Yale    | yawl   | yellow  | Yule   |        |
-|---+--------+---------+--------+---------+--------+--------|
-| 6 | JAW    | jay     | Jew    | Joe     | joy    | jus    |
-|   | chew   | chow    | age    | ash     | Asia   | edge   |
-|   | each   | etch    | hatch  | hash    | hitch  | hedge  |
-|   | huge   | hush    | hutch  | shah    | she    | shoe   |
-|   | show   | shy     | issue  | wage    | wash   | watch  |
-|   | wish   | wedge   | which  | witch   | woosh  |        |
-|---+--------+---------+--------+---------+--------+--------|
-| 7 | KEY    | caw     | cow    | coy     | coo    | cue    |
-|   | gay    | go      | guy    | quay    | queue  | ache   |
-|   | ague   | aggie   | ago    | awake   | echo   | egg    |
-|   | ego    | Ike     | IQ     | hack    | hag    | hang   |
-|   | hawk   | Hawkeye | hick   | hike    | hock   | hockey |
-|   | hog    | hook    | hookah | hooky   | hug    | oak    |
-|   | walk   | wake    | weak   | week    | whack  | wick   |
-|   | wig    | yak     | yoga   | yoke    | young  |        |
-|---+--------+---------+--------+---------+--------+--------|
-| 8 | FEE    | few     | foe    | vie     | via    | view   |
-|   | vow    | ave     | half   | halfway | have   | hoof   |
-|   | hive   | heave   | heavy  | hi-fi   | huff   | ivy    |
-|   | oaf    | of      | off    | wave    | waif   | weave  |
-|   | wife   | waive   |        |         |        |        |
-|---+--------+---------+--------+---------+--------+--------|
-| 9 | PEA    | paw     | pay    | pew     | pie    | bay    |
-|   | be     | bee     | beau   | boa     | bough  | bow    |
-|   | boy    | buoy    | buy    | by      | bye    | abbey  |
-|   | ape    | ebb     | epee   | happy   | heap   | hip    |
-|   | hippie | hobby   | hoop   | hope    | hobo   | hubby  |
-|   | hop    | obey    | oboe   | web     | weep   | whip   |
-|   | wipe   | whoopee |        |         |        |        |
-|---+--------+---------+--------+---------+--------+--------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 105 110)
+#+end_src
+
+#+RESULTS:
+:results:
+|---+---------+--------+-------+--------+---------+-------|
+| 5 | LAW     | ale    | awl   | aisle  | eel     | hole  |
+|   | Yale    | Yule   | ail   | all    | alley   | allow |
+|   | alloy   | ally   | aloha | ell    | hail    | hall  |
+|   | halo    | haul   | heal  | heel   | hell    | hello |
+|   | hill    | hollow | holy  | howl   | hull    | ill   |
+|   | isle    | lay    | lei   | lie    | low     | lye   |
+|   | oil     | ole    | olla  | owl    | wail    | wall  |
+|   | wallow  | waylay | whale | wheel  | while   | whole |
+|   | will    | willow | wool  | yawl   | yellow  |       |
+|---+---------+--------+-------+--------+---------+-------|
+| 6 | JAW     | witch  | ash   | edge   | jay     | watch |
+|   | Asia    | Jew    | Joe   | age    | chew    | chow  |
+|   | each    | etch   | hash  | hatch  | hedge   | hitch |
+|   | huge    | hush   | hutch | issue  | joy     | jus   |
+|   | shah    | she    | shoe  | show   | shy     | wage  |
+|   | wash    | wedge  | which | wish   | woosh   |       |
+|---+---------+--------+-------+--------+---------+-------|
+| 7 | KEY     | oak    | yak   | hawk   | hockey  | wig   |
+|   | Hawkeye | IQ     | Ike   | ache   | aggie   | ago   |
+|   | ague    | awake  | caw   | coo    | cow     | coy   |
+|   | cue     | echo   | egg   | ego    | gay     | go    |
+|   | guy     | hack   | hag   | hang   | hick    | hike  |
+|   | hock    | hog    | hook  | hookah | hooky   | hug   |
+|   | quay    | queue  | wake  | walk   | weak    | week  |
+|   | whack   | wick   | yoga  | yoke   | young   |       |
+|---+---------+--------+-------+--------+---------+-------|
+| 8 | FEE     | view   | hi-fi | hive   | ivy     | oaf   |
+|   | ave     | few    | foe   | half   | halfway | have  |
+|   | heave   | heavy  | hoof  | huff   | of      | off   |
+|   | via     | vie    | vow   | waif   | waive   | wave  |
+|   | weave   | wife   |       |        |         |       |
+|---+---------+--------+-------+--------+---------+-------|
+| 9 | PEA     | hippie | buoy  | bow    | bay     | boa   |
+|   | abbey   | ape    | be    | beau   | bee     | bough |
+|   | boy     | buy    | by    | bye    | ebb     | epee  |
+|   | happy   | heap   | hip   | hobby  | hobo    | hoop  |
+|   | hop     | hope   | hubby | obey   | oboe    | paw   |
+|   | pay     | pew    | pie   | web    | weep    | whip  |
+|   | whoopee | wipe   |       |        |         |       |
+:end:
 
 \clearpage
-|----+----------+---------+-------------+-----------+---------+---------|
-| 10 | TOES     | tease   | this        | these     | those   | thus    |
-|    | toss     | twice   | twos        | dais      | days    | daisy   |
-|    | daze     | deuce   | dice        | dizzy     | dose    | douse   |
-|    | doze     | does    | ads         | adds      | eats    | hideous |
-|    | hothouse | ideas   | idiocy      | ides      | odds    | odious  |
-|    | oats     | wits    | White-House |           |         |         |
-|----+----------+---------+-------------+-----------+---------+---------|
-| 11 | TOT      | tattoo  | tooth       | tide      | tight   | tidy    |
-|    | today    | toad    | tithe       | teddy     | thought | tutu    |
-|    | dad      | date    | death       | dead      | data    | debt    |
-|    | deed     | diet    | dot         | dote      | doubt   | duty    |
-|    | deity    | adit    | audit       | edit      | idiot   | oddity  |
-|    | outwit   | without |             |           |         |         |
-|----+----------+---------+-------------+-----------+---------+---------|
-| 12 | TAN      | ten     | tin         | ton       | tone    | tony    |
-|    | tun      | tuna    | tune        | town      | twin    | than    |
-|    | then     | thin    | thine       | twine     | dawn    | Dane    |
-|    | deign    | dean    | den         | deny      | din     | dine    |
-|    | done     | down    | dune        | Athena    | attain  | atone   |
-|    | attune   | Eden    | heathen     | heighten  | hidden  |         |
-|----+----------+---------+-------------+-----------+---------+---------|
-| 13 | TAM      | tame    | team        | teem      | them    | theme   |
-|    | time     | thumb   | tomb        | tome      | thyme   | dam     |
-|    | dame     | deem    | demi        | dim       | dome    | doom    |
-|    | dumb     | dummy   | dime        | Adam      | atom    | autumn  |
-|    | edema    | Edam    | idiom       | item      | odeum   | odium   |
-|----+----------+---------+-------------+-----------+---------+---------|
-| 14 | TAR      | tare    | tear        | their     | theory  | there   |
-|    | three    | throw   | thorough    | tire      | tier    | tiara   |
-|    | tower    | try     | tray        | tree      | trio    | TRUE    |
-|    | dare     | dairy   | dear        | deer      | diary   | door    |
-|    | dower    | dowry   | dry         | draw      | dyer    | adder   |
-|    | adhere   | author  | adore       | attire    | either  | ether   |
-|    | hatter   | hither  | heater      | hydra     | other   | otter   |
-|    | odor     | udder   | utter       | water     | waiter  | weather |
-|    | widower  | whiter  | wither      |           |         |         |
-|----+----------+---------+-------------+-----------+---------+---------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 110 115)
+#+end_src
+
+#+RESULTS:
+:results:
+|----+-------------+----------+--------+----------+--------+---------|
+| 10 | TOES        | daisy    | odds   | hothouse | idiots | deuce   |
+|    | White-House | adds     | ads    | dais     | days   | daze    |
+|    | dice        | dizzy    | does   | dose     | douse  | doze    |
+|    | eats        | hideous  | ideas  | ides     | idiocy | oats    |
+|    | odious      | tease    | these  | this     | those  | thus    |
+|    | toss        | twice    | twos   | wits     |        |         |
+|----+-------------+----------+--------+----------+--------+---------|
+| 11 | TOT         | date     | tattoo | tidy     | toad   | tooth   |
+|    | adit        | audit    | dad    | data     | dead   | death   |
+|    | debt        | deed     | deity  | diet     | dot    | dote    |
+|    | doubt       | duty     | edit   | idiot    | oddity | outwit  |
+|    | teddy       | thought  | tide   | tight    | tithe  | today   |
+|    | tutu        | without  |        |          |        |         |
+|----+-------------+----------+--------+----------+--------+---------|
+| 12 | TAN         | Dane     | dune   | tuna     | dawn   | Eden    |
+|    | Athena      | atone    | attain | attune   | dean   | deign   |
+|    | den         | deny     | din    | dine     | done   | down    |
+|    | heathen     | heighten | hidden | ten      | than   | then    |
+|    | thin        | thine    | tin    | ton      | tone   | tony    |
+|    | town        | tun      | tune   | twin     | twine  |         |
+|----+-------------+----------+--------+----------+--------+---------|
+| 13 | TAM         | Adam     | dime   | dome     | tomb   | tome    |
+|    | Edam        | atom     | autumn | dam      | dame   | deem    |
+|    | demi        | dim      | doom   | dumb     | dummy  | edema   |
+|    | idiom       | item     | odeum  | odium    | tame   | team    |
+|    | teem        | them     | theme  | thumb    | thyme  | time    |
+|----+-------------+----------+--------+----------+--------+---------|
+| 14 | TAR         | tree     | tire   | tower    | tray   | tiara   |
+|    | TRUE        | adder    | adhere | adore    | attire | author  |
+|    | dairy       | dare     | dear   | deer     | diary  | door    |
+|    | dower       | dowry    | draw   | dry      | dyer   | either  |
+|    | ether       | hatter   | heater | hither   | hydra  | odor    |
+|    | other       | otter    | tare   | tear     | their  | theory  |
+|    | there       | thorough | three  | throw    | tier   | trio    |
+|    | try         | udder    | utter  | waiter   | water  | weather |
+|    | whiter      | widower  | wither |          |        |         |
+:end:
 
 \clearpage
-|----+----------+---------+-------------+-----------+---------+---------|
-| 15 | TAIL     | tale    | tall        | tallow    | tally   | tell    |
-|    | tile     | till    | toil        | toll      | tool    | towel   |
-|    | daily    | deal    | delay       | dial      | dole    | doll    |
-|    | dolly    | doily   | duel        | dual      | dull    | dwell   |
-|    | atoll    | hotel   | huddle      | ideal     | idle    | idol    |
-|    | idyll    | Italy   | outlaw      | outlay    | whittle |         |
-|----+----------+---------+-------------+-----------+---------+---------|
-| 16 | TISSUE   | teach   | touch       | touche    | thatch  | dash    |
-|    | dish     | ditch   | Dutch       | duchy     | dodge   | attache |
-|    | attach   | adage   | adagio      | whitewash |         |         |
-|----+----------+---------+-------------+-----------+---------+---------|
-| 17 | TACK     | tag     | take        | talk      | tick    | toga    |
-|    | Tokay    | tuck    | twig        | thick     | thing   | thong   |
-|    | thug     | tyke    | decay       | deck      | dig     | dike    |
-|    | dock     | duck    | duke        | dung      | doing   | ding    |
-|    | dong     | dog     | decoy       | attack    | attic   | ethic   |
-|    | eating   | haddock | headache    | heading   | outing  | wedding |
-|----+----------+---------+-------------+-----------+---------+---------|
-| 18 | TAFFY    | tiff    | thief       | toffee    | tough   | tuff    |
-|    | TV       | daffy   | deaf        | defy      | dive    | dove    |
-|    | diva     | edify   |             |           |         |         |
-|----+----------+---------+-------------+-----------+---------+---------|
-| 19 | TAP      | tape    | taboo       | tabby     | tab     | tip     |
-|    | tub      | tube    | top         | type      | tepee   | toupee  |
-|    | tup      | dab     | daub        | deep      | depot   | dip     |
-|    | debut    | dope    | doughboy    | dupe      | adobe   |         |
-|----+----------+---------+-------------+-----------+---------+---------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 115 120)
+#+end_src
+
+#+RESULTS:
+:results:
+|----+---------+----------+--------+-----------+---------+----------|
+| 15 | TAIL    | atoll    | doll   | doily     | idol    | tally    |
+|    | Italy   | daily    | deal   | delay     | dial    | dole     |
+|    | dolly   | dual     | duel   | dull      | dwell   | hotel    |
+|    | huddle  | ideal    | idle   | idyll     | outlaw  | outlay   |
+|    | tale    | tall     | tallow | tell      | tile    | till     |
+|    | toil    | toll     | tool   | towel     | whittle |          |
+|----+---------+----------+--------+-----------+---------+----------|
+| 16 | TISSUE  | ditch    | dish   | adagio    | Dutch   | dash     |
+|    | teach   | touch    | touche | thatch    | duchy   | dodge    |
+|    | attache | attach   | adage  | whitewash |         |          |
+|----+---------+----------+--------+-----------+---------+----------|
+| 17 | TACK    | duke     | duck   | thong     | toga    | thug     |
+|    | Tokay   | attack   | attic  | decay     | deck    | decoy    |
+|    | dig     | dike     | ding   | dock      | dog     | doing    |
+|    | dong    | dung     | eating | ethic     | haddock | headache |
+|    | heading | outing   | tag    | take      | talk    | thick    |
+|    | thing   | tick     | tuck   | twig      | tyke    | wedding  |
+|----+---------+----------+--------+-----------+---------+----------|
+| 18 | TAFFY   | toffee   | dove   | diva      | dive    | thief    |
+|    | TV      | daffy    | deaf   | defy      | edify   | tiff     |
+|    | tough   | tuff     |        |           |         |          |
+|----+---------+----------+--------+-----------+---------+----------|
+| 19 | TAP     | tabby    | toupee | tip       | tub     | dope     |
+|    | adobe   | dab      | daub   | debut     | deep    | depot    |
+|    | dip     | doughboy | dupe   | tab       | taboo   | tape     |
+|    | tepee   | top      | tube   | tup       | type    |          |
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 120 130)
+#+end_src
+
+#+RESULTS:
+:results:
+|----+---------+----------+---------+----------+----------+---------|
+| 20 | NOSE    | anise    | noose   | niece    | news     | nice    |
+|    | noise   | ensue    | hence   | hens     | highness | once    |
+|    | ones    | ounce    | onus    | uneasy   | wins     | wines   |
+|----+---------+----------+---------+----------+----------+---------|
+| 21 | net     | naught   | not     | note     | night    | neat    |
+|    | need    | nude     | nut     | ante     | anti     | annoyed |
+|    | and     | ant      | aunt    | end      | endow    | gnat    |
+|    | hand    | hind     | hint    | haunt    | hound    | Hindu   |
+|    | hunt    | into     | India   | knight   | knit     | knot    |
+|    | knead   | undo     | undue   | unit     | untie    | unite   |
+|    | wand    | want     | went    | wind     | window   | wound   |
+|----+---------+----------+---------+----------+----------+---------|
+| 22 | nun     | noon     | none    | nine     | nanny    | ninny   |
+|    | noun    | neon     | no-one  | anon     | anyone   | inane   |
+|    | onion   | union    |         |          |          |         |
+|----+---------+----------+---------+----------+----------+---------|
+| 23 | name    | numb     | anemia  | annum    | enemy    | enema   |
+|    | gnome   |          |         |          |          |         |
+|----+---------+----------+---------+----------+----------+---------|
+| 24 | Nero    | narrow   | near    | nor      | nowhere  | newer   |
+|    | noria   | anywhere | honor   | inhere   | inure    | owner   |
+|    | unaware | winner   | winery  | whiner   |          |         |
+|----+---------+----------+---------+----------+----------+---------|
+| 25 | nail    | newel    | newly   | ni​l      | Ni​le     | null    |
+|    | annual  | annul    | enisle  | inhale   | inlay    | in-law  |
+|    | kneel   | knell    | knoll   | only     | unholy   |         |
+|----+---------+----------+---------+----------+----------+---------|
+| 26 | niche   | notch    | nudge   | no-show  | enjoy    | gnash   |
+|    | haunch  | hunch    | hinge   | inch     | unhitch  | wench   |
+|    | winch   |          |         |          |          |         |
+|----+---------+----------+---------+----------+----------+---------|
+| 27 | neck    | nag      | nog     | nick     | nock     | nook    |
+|    | awning  | hunk     | ink     | inning   | Inca     | knack   |
+|    | knock   | unique   | unhook  | wink     | Yankee   |         |
+|----+---------+----------+---------+----------+----------+---------|
+| 28 | navy    | nave     | naive   | nova     | nephew   | enough  |
+|    | envy    | envoy    | inveigh | knave    | knife    | unify   |
+|----+---------+----------+---------+----------+----------+---------|
+| 29 | nap     | nab      | neap    | nape     | nappy    | nib     |
+|    | nip     | nub      | Niobe   | honeybee | knob     | unhappy |
+:end:
+
 |----+---------+----------+---------+----------+----------+---------|
 | 20 | NOSE    | news     | niece   | nice     | noise    | noose   |
 |    | anise   | ensue    | hence   | hens     | highness | once    |
