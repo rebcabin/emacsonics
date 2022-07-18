@@ -239,19 +239,28 @@ The pegs for the decimal digits, with some mnemonic hints, are
 | digit | peg  | mnemonic                                   | sound-alike rules     |
 |-------+------+--------------------------------------------+-----------------------|
 |     0 | saw  | circular saw, sawed log; round like "0"    | s, z                  |
+|-------+------+--------------------------------------------+-----------------------|
 |     1 | tea  | giant Disneyland teacup;                   | d, th, dh (them)      |
 |       |      | "t" looks like "1"                         |                       |
+|-------+------+--------------------------------------------+-----------------------|
 |     2 | Noah | ... and the Ark; "n" has 2 legs            | ng                    |
 |       |      | (2 = ng for Krill only, nk is always 27)   |                       |
+|-------+------+--------------------------------------------+-----------------------|
 |     3 | me   | ... in the mirror tying a bow tie;         |                       |
 |       |      | "m" has 3 legs                             |                       |
+|-------+------+--------------------------------------------+-----------------------|
 |     4 | ray  | this one is hard to remember;              |                       |
 |       |      | just brute-force it                        |                       |
+|-------+------+--------------------------------------------+-----------------------|
 |     5 | law  | 5 fingers as the cop holds up his hand     |                       |
+|-------+------+--------------------------------------------+-----------------------|
 |     6 | jaw  | "6" looks like Lurch's lantern jaw         | sh, ch, zh (pleasure) |
+|-------+------+--------------------------------------------+-----------------------|
 |     7 | key  | "7" looks like an Allen key                | g, ng                 |
 |       |      | (7 = ng for Furst and me, nk is always 27) |                       |
+|-------+------+--------------------------------------------+-----------------------|
 |     8 | fee  | "8" looks like a dollar sign               | f, v                  |
+|-------+------+--------------------------------------------+-----------------------|
 |     9 | pea  | The Princess and the Pea: 9 mattresses     | p, b                  |
 |-------+------+--------------------------------------------+-----------------------|
 
@@ -446,7 +455,7 @@ table by heart.
 
 \clearpage
 * Hexadecimal: GUID & SHA-1
-
+<<hexadecimal>>
 For mapping /hexits/ (hexadecimal digits), extend the table with
 the ASCII codes for A-F.
 
@@ -463,35 +472,41 @@ the ASCII codes for A-F.
 
 and their sound-alikes:
 
-|----+-------------+---------+----------+----------+----------+-----------|
-| 65 | JAIL        | chill   | Chile    | chili    | jelly    | jewel     |
-|  A | jolly       | jowl    | July     | shall    | shell    | shawl     |
-|    | shallow     | shoal   | shill    | shyly    | agile    | usual     |
-|----+-------------+---------+----------+----------+----------+-----------|
-| 66 | JUDGE       | cha-cha | chichi   | choochoo | chowchow | jaygee    |
-|  B | Jewish      | josh    | juju     | shush    | shoji    | hashish   |
-|    | wishy-washy |         |          |          |          |           |
-|----+-------------+---------+----------+----------+----------+-----------|
-| 67 | CHALK       | check   | cheek    | choke    | chug     | chick     |
-|  C | chuck       | chic    | jack     | jock     | jockey   | Django    |
-|    | jingo       | joke    | jug      | shag     | shako    | shack     |
-|    | shake       | shock   | shuck    | sheik    | aging    | itching   |
-|    | etching     | washing | wishing  | watching |          |           |
-|----+-------------+---------+----------+----------+----------+-----------|
-| 68 | CHEF        | chafe   | chaff    | chief    | chive    | Chevy     |
-|  D | Java        | jayvee  | Jehovah  | jiffy    | jive     | shave     |
-|    | sheaf       | shove   | achieve  | wash-off |          |           |
-|----+-------------+---------+----------+----------+----------+-----------|
-| 69 | CHIP        | chap    | chapeau  | cheap    | chop     | chubby    |
-|  E | g.p.        | gyp     | jab      | jib      | jibe     | jeep      |
-|    | job         | Job     | shabby   | shape    | sheep    | ship      |
-|    | shop        | hush-up |          |          |          |           |
-|----+-------------+---------+----------+----------+----------+-----------|
-| 70 | CASE        | cause   | causeway | cozy     | cuss     | chaos     |
-|  F | gas         | gauze   | gaze     | goose    | guess    | guise     |
-|    | guys        | kiss    | quasi    | ax       | accuse   | acquiesce |
-|    | eggs        | hex     | hoax     | ox       | wax      | haggis    |
-|----+-------------+---------+----------+----------+----------+-----------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 165 171)
+#+end_src
+
+#+RESULTS:
+:results:
+|----+-------------+-----------+----------+----------+----------+----------|
+| 65 | JAIL        | chili     | jelly    | jewel    | shell    | shawl    |
+|  A | Chile       | July      | agile    | chill    | jolly    | jowl     |
+|    | shall       | shallow   | shill    | shoal    | shyly    | usual    |
+|----+-------------+-----------+----------+----------+----------+----------|
+| 66 | JUDGE       | hashish   | juju     | Jewish   | cha-cha  | choochoo |
+|  B | chichi      | chowchow  | jaygee   | josh     | shoji    | shush    |
+|    | wishy-washy |           |          |          |          |          |
+|----+-------------+-----------+----------+----------+----------+----------|
+| 67 | CHALK       | jack      | sheikh   | chick    | cheek    | choke    |
+|  C | Django      | aging     | check    | chic     | chuck    | chug     |
+|    | etching     | itching   | jingo    | jock     | jockey   | joke     |
+|    | jug         | shack     | shag     | shake    | shako    | shock    |
+|    | shuck       | washing   | watching | wishing  |          |          |
+|----+-------------+-----------+----------+----------+----------+----------|
+| 68 | CHEF        | chief     | Chevy    | sheaf    | chaff    | chive    |
+|  D | Java        | Jehovah   | achieve  | chafe    | jayvee   | jiffy    |
+|    | jive        | shave     | shove    | wash-off |          |          |
+|----+-------------+-----------+----------+----------+----------+----------|
+| 69 | CHIP        | jib       | jeep     | sheep    | ship     | Job      |
+|  E | GP          | chap      | chapeau  | cheap    | chop     | chubby   |
+|    | gyp         | jab       | jibe     | job      | shabby   | shape    |
+|    | shop        |           |          |          |          |          |
+|----+-------------+-----------+----------+----------+----------+----------|
+| 70 | CASE        | gas       | goose    | kiss     | ox       | eggs     |
+|  F | accuse      | acquiesce | ax       | cause    | causeway | chaos    |
+|    | cozy        | cuss      | gauze    | gaze     | guess    | guise    |
+|    | guys        | hex       | hoax     | quasi    | wax      |          |
+:end:
 
 \clearpage
 ** Example GUID:
@@ -786,7 +801,9 @@ prefix:
 Finally, append the site name, perhaps obfuscated:
 
 =2Octopu$Ha$8Leg$With0740EBAY=
+
 =2Octopu$Ha$8Leg$With0740APPLE=
+
 =2Octopu$Ha$8Leg$With0740OVERLEAF=
 
 Anyone who knows your personal salt prefix and your algorithm will
@@ -829,7 +846,7 @@ repetition. Here are the "mental movies":
    TEACUP. He is in JAIL and the jailer has her BACK turned to us.
 
 2. BAKER --- is serving a BEEF meal to a JUDGE in full
-   magistrate's dress including a powdered with on NOAH's ark in
+   magistrate's dress including a powdered wig on NOAH's ark in
    the little BOOTH (BAYIT) on top of the Ark.
 
 3. CHARLIE --- is riding a CAMEL (GAMAL) looking at himself in the ME
@@ -1074,6 +1091,10 @@ repetition. Here are the "mental movies":
 | y | yankee   | doughnut    | DQ    | DEC 17 | Church tyke      | 351 | malt       |
 | z | zulu     | Athenian    | DK    | DEC 24 | Church near      | 348 | Morpheus   |
 |---+----------+-------------+-------+--------+------------------+-----+------------|
+
+It is a small matter to add the "Date Hallucinations" to the
+mental movies we already have for the 52 glyphs. It takes only a
+little more effort to add the "Day-of-Year Hallucinations."
 
 \clearpage
 * Non-Alphabetic Printable ASCII Codes
