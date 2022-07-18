@@ -216,14 +216,14 @@ My methods are based on tables of
   about INCA CHIEF COIN? Just picture a coin with an Inca chief
   embossed on it, and we're done. It took a little time to devise
   INCA CHIEF COIN from NECK CHEF CAN, but the other direction is
-  instantaneous. It's many-to-one because there are many words
-  that map to each number.
+  instantaneous. Sound-alikes are many-to-one because there are
+  many words that map to each number.
 
 See the last section, Section [[all-pegs]] of this document, after the
 Appendices, for the complete maps of numbers to pegs and
 sound-alikes.
 
-For radices beyond decimal, I choose a mapping from alphabetic
+For radices beyond decimal, I choose a mapping from alphanumeric
 glyphs to ASCII because I already have the mapping memorized for
 instant, bidirectional recall (Section [[daily-practice]]). In
 appendices, I show some alternative mappings for people who don't
@@ -243,7 +243,7 @@ The pegs for the decimal digits, with some mnemonic hints, are
 |     1 | tea  | giant Disneyland teacup;                   | d, th, dh (them)      |
 |       |      | "t" looks like "1"                         |                       |
 |-------+------+--------------------------------------------+-----------------------|
-|     2 | Noah | ... and the Ark; "n" has 2 legs            | ng                    |
+|     2 | Noah | ... and the Ark; "n" has 2 legs            | ng (Krill only)       |
 |       |      | (2 = ng for Krill only, nk is always 27)   |                       |
 |-------+------+--------------------------------------------+-----------------------|
 |     3 | me   | ... in the mirror tying a bow tie;         |                       |
@@ -253,6 +253,7 @@ The pegs for the decimal digits, with some mnemonic hints, are
 |       |      | just brute-force it                        |                       |
 |-------+------+--------------------------------------------+-----------------------|
 |     5 | law  | 5 fingers as the cop holds up his hand     |                       |
+|       |      | the hand is "L"-shaped as you look at it   |                       |
 |-------+------+--------------------------------------------+-----------------------|
 |     6 | jaw  | "6" looks like Lurch's lantern jaw         | sh, ch, zh (pleasure) |
 |-------+------+--------------------------------------------+-----------------------|
@@ -2886,137 +2887,162 @@ good ideas because they might incorrectly recall 64 at speed.
 
 #+RESULTS:
 :results:
-|----+---------+----------+---------+----------+----------+---------|
-| 20 | NOSE    | anise    | noose   | niece    | news     | nice    |
-|    | noise   | ensue    | hence   | hens     | highness | once    |
-|    | ones    | ounce    | onus    | uneasy   | wins     | wines   |
-|----+---------+----------+---------+----------+----------+---------|
-| 21 | net     | naught   | not     | note     | night    | neat    |
-|    | need    | nude     | nut     | ante     | anti     | annoyed |
-|    | and     | ant      | aunt    | end      | endow    | gnat    |
-|    | hand    | hind     | hint    | haunt    | hound    | Hindu   |
-|    | hunt    | into     | India   | knight   | knit     | knot    |
-|    | knead   | undo     | undue   | unit     | untie    | unite   |
-|    | wand    | want     | went    | wind     | window   | wound   |
-|----+---------+----------+---------+----------+----------+---------|
-| 22 | nun     | noon     | none    | nine     | nanny    | ninny   |
-|    | noun    | neon     | no-one  | anon     | anyone   | inane   |
-|    | onion   | union    |         |          |          |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 23 | name    | numb     | anemia  | annum    | enemy    | enema   |
-|    | gnome   |          |         |          |          |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 24 | Nero    | narrow   | near    | nor      | nowhere  | newer   |
-|    | noria   | anywhere | honor   | inhere   | inure    | owner   |
-|    | unaware | winner   | winery  | whiner   |          |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 25 | nail    | newel    | newly   | ni​l      | Ni​le     | null    |
-|    | annual  | annul    | enisle  | inhale   | inlay    | in-law  |
-|    | kneel   | knell    | knoll   | only     | unholy   |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 26 | niche   | notch    | nudge   | no-show  | enjoy    | gnash   |
-|    | haunch  | hunch    | hinge   | inch     | unhitch  | wench   |
-|    | winch   |          |         |          |          |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 27 | neck    | nag      | nog     | nick     | nock     | nook    |
-|    | awning  | hunk     | ink     | inning   | Inca     | knack   |
-|    | knock   | unique   | unhook  | wink     | Yankee   |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 28 | navy    | nave     | naive   | nova     | nephew   | enough  |
-|    | envy    | envoy    | inveigh | knave    | knife    | unify   |
-|----+---------+----------+---------+----------+----------+---------|
-| 29 | nap     | nab      | neap    | nape     | nappy    | nib     |
-|    | nip     | nub      | Niobe   | honeybee | knob     | unhappy |
+|----+----------+----------+---------+---------+---------+----------|
+| 20 | NOSE     | anise    | noose   | niece   | ounce   | news     |
+|    | nice     | noise    | ensue   | hence   | hens    | highness |
+|    | once     | ones     | onus    | uneasy  | wins    | wines    |
+|----+----------+----------+---------+---------+---------+----------|
+| 21 | NET      | knight   | knot    | aunt    | nude    | nut      |
+|    | Hindu    | India    | and     | annoyed | ant     | ante     |
+|    | anti     | end      | endow   | gnat    | hand    | haunt    |
+|    | hind     | hint     | hound   | hunt    | into    | knead    |
+|    | knit     | naught   | neat    | need    | night   | not      |
+|    | note     | undo     | undue   | unit    | unite   | untie    |
+|    | wand     | want     | went    | wind    | window  | wound    |
+|----+----------+----------+---------+---------+---------+----------|
+| 22 | NUN      | onion    | neon    | union   | noon    | nanny    |
+|    | none     | nine     | ninny   | noun    | no-one  | anon     |
+|    | anyone   | inane    |         |         |         |          |
+|----+----------+----------+---------+---------+---------+----------|
+| 23 | NAME     | gnome    | enemy   | enema   | enum    | anemia   |
+|    | annum    | numb     |         |         |         |          |
+|----+----------+----------+---------+---------+---------+----------|
+| 24 | NERO     | honor    | winery  | whiner  | winner  | owner    |
+|    | anywhere | inhere   | inure   | narrow  | near    | newer    |
+|    | nor      | noria    | nowhere | unaware |         |          |
+|----+----------+----------+---------+---------+---------+----------|
+| 25 | NAIL     | narwhal  | Ni​le    | inlay   | in-law  | unholy   |
+|    | anal     | annual   | annul   | inhale  | kneel   | knell    |
+|    | knoll    | newel    | newly   | ni​l     | null    | only     |
+|----+----------+----------+---------+---------+---------+----------|
+| 26 | NICHE    | notch    | nudge   | haunch  | hinge   | inch     |
+|    | enjoy    | gnash    | hunch   | no-show | unhitch | wench    |
+|    | winch    |          |         |         |         |          |
+|----+----------+----------+---------+---------+---------+----------|
+| 27 | NECK     | Inca     | nock    | ink     | hunk    | nook     |
+|    | Yankee   | awning   | inning  | knack   | knock   | nag      |
+|    | nick     | nog      | unhook  | unique  | wink    |          |
+|----+----------+----------+---------+---------+---------+----------|
+| 28 | NAVY     | nova     | knave   | knife   | nephew  | naive    |
+|    | enough   | envoy    | envy    | inveigh | nave    | unify    |
+|----+----------+----------+---------+---------+---------+----------|
+| 29 | NAP      | nib      | nub     | knob    | nape    | nappy    |
+|    | Niobe    | honeybee | nab     | neap    | nip     | unhappy  |
 :end:
 
-|----+---------+----------+---------+----------+----------+---------|
-| 20 | NOSE    | news     | niece   | nice     | noise    | noose   |
-|    | anise   | ensue    | hence   | hens     | highness | once    |
-|    | ones    | ounce    | onus    | uneasy   | wins     | wines   |
-|----+---------+----------+---------+----------+----------+---------|
-| 21 | NET     | naught   | not     | note     | night    | neat    |
-|    | need    | nude     | nut     | ante     | anti     | annoyed |
-|    | and     | ant      | aunt    | end      | endow    | gnat    |
-|    | hand    | hind     | hint    | haunt    | hound    | Hindu   |
-|    | hunt    | into     | India   | knight   | knit     | knot    |
-|    | knead   | undo     | undue   | unit     | untie    | unite   |
-|    | wand    | want     | went    | wind     | window   | wound   |
-|----+---------+----------+---------+----------+----------+---------|
-| 22 | NUN     | noon     | none    | nine     | nanny    | ninny   |
-|    | noun    | neon     | no-one  | anon     | anyone   | inane   |
-|    | onion   | union    |         |          |          |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 23 | NAME    | numb     | anemia  | annum    | enemy    | enema   |
-|    | gnome   |          |         |          |          |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 24 | NERO    | narrow   | near    | nor      | nowhere  | newer   |
-|    | noria   | anywhere | honor   | inhere   | inure    | owner   |
-|    | unaware | winner   | winery  | whiner   |          |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 25 | NAIL    | newel    | newly   | nil      | Nile     | null    |
-|    | annual  | annul    | enisle  | inhale   | inlay    | in-law  |
-|    | kneel   | knell    | knoll   | only     | unholy   |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 26 | NICHE   | notch    | nudge   | no-show  | enjoy    | gnash   |
-|    | haunch  | hunch    | hinge   | inch     | unhitch  | wench   |
-|    | winch   |          |         |          |          |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 27 | NECK    | nag      | nog     | nick     | nock     | nook    |
-|    | awning  | hunk     | ink     | inning   | Inca     | knack   |
-|    | knock   | unique   | unhook  | wink     | Yankee   |         |
-|----+---------+----------+---------+----------+----------+---------|
-| 28 | NAVY    | nave     | naive   | nova     | nephew   | enough  |
-|    | envy    | envoy    | inveigh | knave    | knife    | unify   |
-|----+---------+----------+---------+----------+----------+---------|
-| 29 | NAP     | nab      | neap    | nape     | nappy    | nib     |
-|    | nip     | nub      | Niobe   | honeybee | knob     | unhappy |
-|----+---------+----------+---------+----------+----------+---------|
+\clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 130 140)
+#+end_src
+
+#+RESULTS:
+:results:
+|----+---------+---------+---------+-----------+--------+---------|
+| 30 | MASS    | mace    | maze    | hummus    | mice   | moose   |
+|    | Messiah | aims    | amass   | amaze     | amiss  | amuse   |
+|    | humus   | mess    | mews    | miss      | moss   | mouse   |
+|    | muse    | muss    |         |           |        |         |
+|----+---------+---------+---------+-----------+--------+---------|
+| 31 | MAT     | maid    | moth    | mud       | mitt   | midi    |
+|    | amid    | amity   | emit    | humid     | mad    | made    |
+|    | mate    | meadow  | meat    | meet      | midday | midway  |
+|    | might   | mite    | moat    | mod       | mode   | mood    |
+|    | motto   | mouth   | mute    | myth      | omit   |         |
+|----+---------+---------+---------+-----------+--------+---------|
+| 32 | MAN     | mane    | hymen   | mine      | minnow | moon    |
+|    | amen    | ammonia | human   | main      | mana   | mania   |
+|    | manna   | many    | mean    | mien      | moan   | money   |
+|    | omen    | woman   | yeoman  |           |        |         |
+|----+---------+---------+---------+-----------+--------+---------|
+| 33 | MAMA    | mummy   | mime    | imam      | maim   | Mau-Mau |
+|    | Miami   | mayhem  | memo    | whim-wham |        |         |
+|----+---------+---------+---------+-----------+--------+---------|
+| 34 | MARE    | Mary    | mayor   | merry     | homer  | emir    |
+|    | amour   | hammer  | humor   | mar       | marrow | marry   |
+|    | mere    | mire    | moor    | more      | myrrh  | omer    |
+|----+---------+---------+---------+-----------+--------+---------|
+| 35 | MAIL    | mule    | mile    | mole      | mill   | meal    |
+|    | homely  | homily  | male    | mall      | melee  | mellow  |
+|    | moll    |         |         |           |        |         |
+|----+---------+---------+---------+-----------+--------+---------|
+| 36 | MATCH   | mash    | mesh    | midge     | mush   | homage  |
+|    | Amish   | image   | mashie  | mooch     | much   |         |
+|----+---------+---------+---------+-----------+--------+---------|
+| 37 | MIKE    | mica    | hammock | mocha     | Mecca  | Mohawk  |
+|    | amigo   | amok    | among   | make      | meek   | mock    |
+|    | muck    | mug     | omega   |           |        |         |
+|----+---------+---------+---------+-----------+--------+---------|
+| 38 | MUFF    | mauve   | Mafia   | miff      | move   | movie   |
+|    | oomph   |         |         |           |        |         |
+|----+---------+---------+---------+-----------+--------+---------|
+| 39 | MAP     | hemp    | hump    | imp       | ump    | amoeba  |
+|    | amp     | imbue   | maybe   | mob       | mop    | mope    |
+|    | myopia  |         |         |           |        |         |
+:end:
 
 \clearpage
-|----+---------+---------+--------+-----------+--------+--------|
-| 30 | MASS    | mace    | maze   | mess      | mews   | mice   |
-|    | miss    | moose   | mouse  | muse      | moss   | muss   |
-|    | Messiah | amass   | amaze  | amiss     | aims   | amuse  |
-|    | humus   | hummus  |        |           |        |        |
-|----+---------+---------+--------+-----------+--------+--------|
-| 31 | MAT     | mate    | made   | maid      | mad    | meadow |
-|    | meat    | meet    | midday | middy     | midway | moth   |
-|    | mouth   | might   | mite   | mode      | mood   | moat   |
-|    | motto   | mud     | mute   | mod       | myth   | mitt   |
-|    | amid    | amity   | emit   | omit      | humid  |        |
-|----+---------+---------+--------+-----------+--------+--------|
-| 32 | MAN     | mane    | mana   | mania     | main   | many   |
-|    | manna   | mine    | minnow | mean      | moan   | moon   |
-|    | money   | mien    | amen   | ammonia   | hymen  | human  |
-|    | omen    | woman   | yeoman |           |        |        |
-|----+---------+---------+--------+-----------+--------+--------|
-| 33 | MAMA    | maim    | mayhem | Mau-Mau   | memo   | mummy  |
-|    | mime    | Miami   | imam   | whim-wham |        |        |
-|----+---------+---------+--------+-----------+--------+--------|
-| 34 | MARE    | mar     | marrow | marry     | Mary   | mayor  |
-|    | mere    | merry   | more   | mire      | moor   | myrrh  |
-|    | amour   | emir    | hammer | homer     | humor  | omer   |
-|----+---------+---------+--------+-----------+--------+--------|
-| 35 | MAIL    | male    | mall   | meal      | melee  | mellow |
-|    | mile    | mole    | mill   | mule      | moll   | homely |
-|    | homily  |         |        |           |        |        |
-|----+---------+---------+--------+-----------+--------+--------|
-| 36 | MATCH   | mash    | mashie | mesh      | midge  | much   |
-|    | mush    | mooch   | homage | image     | Amish  |        |
-|----+---------+---------+--------+-----------+--------+--------|
-| 37 | MIKE    | make    | meek   | mica      | mock   | muck   |
-|    | mug     | mocha   | Mecca  | Mohawk    | amigo  | amok   |
-|    | among   | hammock | omega  | umiak     |        |        |
-|----+---------+---------+--------+-----------+--------+--------|
-| 38 | MUFF    | mauve   | Mafia  | miff      | move   | movie  |
-|    | oomph   |         |        |           |        |        |
-|----+---------+---------+--------+-----------+--------+--------|
-| 39 | MAP     | mop     | mope   | maybe     | mob    | myopia |
-|    | hemp    | hump    | imbue  | imp       | amp    | ump    |
-|    | amoeba  |         |        |           |        |        |
-|----+---------+---------+--------+-----------+--------+--------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 140 150)
+#+end_src
 
-\clearpage
+#+RESULTS:
+:results:
+|----+-----------+---------+----------+---------+---------+---------|
+| 40 | race      | racy    | raise    | rase    | raze    | rice    |
+|    | rise      | rose    | rouse    | ruse    | arouse  | erase   |
+|    | eros      | erose   | harass   | hearse  | hearsay | heresy  |
+|    | hers      | hoarse  | horse    | heiress | iris    | ours    |
+|    | warehouse | worse   | Warsaw   |         |         |         |
+|----+-----------+---------+----------+---------+---------+---------|
+| 41 | rat       | rate    | radio    | raid    | reed    | red     |
+|    | read      | ready   | rid      | ride    | road    | rod     |
+|    | root      | rot     | route    | rut     | rite    | riot    |
+|    | right     | arid    | aright   | art     | award   | aorta   |
+|    | earth     | errata  | erode    | hard    | hart    | heart   |
+|    | hearth    | herd    | hereto   | hoard   | horde   | horrid  |
+|    | hurt      | hurried | ward     | wart    | word    | worth   |
+|    | wrath     | wreath  | wreathe  | write   | yard    | worried |
+|    | weird     |         |          |         |         |         |
+|----+-----------+---------+----------+---------+---------+---------|
+| 42 | rain      | rein    | reign    | renew   | run     | ruin    |
+|    | Rhine     | rune    | rhino    | Reno    | arena   | Aryan   |
+|    | arraign   | earn    | hernia   | heroin  | heroine | horn    |
+|    | iron      | irony   | Irene    | Orion   | urn     | worn    |
+|    | warn      |         |          |         |         |         |
+|----+-----------+---------+----------+---------+---------+---------|
+| 43 | ram       | rim     | rhyme    | ream    | room    | rime    |
+|    | rum       | roam    | Rome     | Romeo   | arm     | army    |
+|    | aroma     | harm    | harem    | warm    | worm    |         |
+|----+-----------+---------+----------+---------+---------+---------|
+| 44 | rear      | rare    | roar     | rower   | arrear  | aurora  |
+|    | error     | harrier | harrower | horror  | warrior | worrier |
+|    | wearer    | hearer  | orrery   |         |         |         |
+|----+-----------+---------+----------+---------+---------+---------|
+| 45 | rail      | rally   | railway  | real    | reel    | relay   |
+|    | rely      | rill    | roil     | role    | roll    | royal   |
+|    | rule      | earl    | early    | hourly  | hurl    | oral    |
+|    | oriole    | aerial  | whirl    | whorl   | yearly  |         |
+|----+-----------+---------+----------+---------+---------+---------|
+| 46 | rash      | rage    | ratio    | Rajah   | reach   | roach   |
+|    | rich      | ridge   | rouge    | ruche   | rush    | rushee  |
+|    | Russia    | arch    | harsh    | Irish   | orgy    | urge    |
+|    | wretch    |         |          |         |         |         |
+|----+-----------+---------+----------+---------+---------+---------|
+| 47 | rake      | rack    | rag      | reek    | rock    | ring    |
+|    | rogue     | rook    | rug      | rig     | ragout  | airing  |
+|    | ark       | argue   | arc      | ergo    | hark    | hearing |
+|    | herring   | heroic  | work     | wreck   |         |         |
+|----+-----------+---------+----------+---------+---------+---------|
+| 48 | reef      | raffia  | review   | revue   | riff    | rife    |
+|    | roof      | rough   | rave     | ruff    | rive    | rove    |
+|    | arrive    | aerify  | horrify  | wharf   |         |         |
+|----+-----------+---------+----------+---------+---------+---------|
+| 49 | rope      | rap     | rape     | reap    | repay   | rip     |
+|    | ripe      | rib     | rabbi    | rob     | rub     | robe    |
+|    | ruby      | rupee   | harp     | herb    | hereby  | orb     |
+|    | Europe    | Arabia  | warp     |         |         |         |
+:end:
+
 |----+-----------+---------+----------+---------+---------+---------|
 | 40 | RACE      | racy    | raise    | rase    | raze    | rice    |
 |    | rise      | rose    | rouse    | ruse    | arouse  | erase   |
