@@ -580,7 +580,7 @@ memory), then summon middle-Eastern heavenly dreams.
 
 \clearpage
 * Radix 36
-
+<<r36>>
 Radix-36 is more difficult to find "in the wild" than is either
 hex or Radix-64. I most often see it in randomly generated file
 and directory names because some file systems are not
@@ -840,121 +840,142 @@ I go down table 1 in my mind when I need to fall asleep. I usually
 get four or five rows before drifting off, so next time through, I
 start up where I left off. Sometimes, I recite it backwards just
 to make sure the end of the table doesn't get soft from lack of
-repetition. Here are the "mental movies":
+repetition. Here are the "mental movies," expanded from the hints
+in Sections [[hexadecimal]], [[r36]], and [[r64]]. I include smells
+(redolance) because it's helpful to my memory. It might not work
+for you.
 
-1. ALPHA --- The alpha LION (ARYEH) is in the giant disneyland
+1. ALPHA --- The alpha LION (ARYEH) is in the giant, Disneyland
    TEACUP. He is in JAIL and the jailer has her BACK turned to us.
+   Smell the dank musty odor of the jail.
 
-2. BAKER --- is serving a BEEF meal to a JUDGE in full
-   magistrate's dress including a powdered wig on NOAH's ark in
-   the little BOOTH (BAYIT) on top of the Ark.
+2. BAKER --- is serving a BEEF meal to a JUDGE, who is in full
+   magistrate's dress including a powdered wig. The meal is taking
+   place in the little BOOTH (BAYIT) on top of Noah's Ark. Smell
+   the food.
 
-3. CHARLIE --- is riding a CAMEL (GAMAL) looking at himself in the ME
-   (mirror) having a hell of a time trying to tie his bow tie
+3. CHARLIE --- is riding a CAMEL (GAMAL), looking at himself in the ME
+   (mirror) having a hell of a time tying his bow tie
    while bouncing around on the back of the camel and smoking a
    PIPE. The camel is dragging ropes with colored sidewalk chalk
-   behind him making marks on the ground.
+   behind him making marks on the ground. Smell the pipe tobacco
+   smoke mixed with stinky camel fur and road dust.
 
 4. DELTA --- I am pointing a flashlight (RAY) at a giant,
-   brass-and-wooden door (DELET) looking for a keyhole. I open it
-   up and there is a PhD student who never finished his THESIS so
-   must work as a CHEF. I see, hear, and smell the food he is
-   cooking. Alternatively, a laser pointer is etching the blue
-   lines around the margins of the THESIS paper (such was common
-   in my day).
+   brass-and-wooden door (DELET) looking for a keyhole in the rain
+   and the dark (smell mold and mildew and moss and grass and old
+   machine-oil grease on the door's hardware). I open it up and
+   there is a PhD student who never finished his THESIS so must
+   work as a CHEF. I see, hear, and smell the food he is cooking.
+   Alternatively, a laser pointer is etching the blue lines around
+   the margins of the THESIS paper (such paper with blue lines was
+   common in my day).
 
-5. ECHO --- Moses is delivering the LAW on mount Sinai. A cop at the
-   bottom of the hill (HAR) is holding up his hand: "stop!" In
+5. ECHO --- Moses is delivering the LAW on mount Sinai. A cop at
+   the bottom of the hill (HAR) is holding up his hand: "stop!" In
    between his fingers there are poker CHIPS and pieces of
-   Cinnamon TOAST. ECHO begins with "E", which is Greek Eta and
-   looks like the letter "H" of hill and HAR. "Hill" and "har" are
-   obvious cognates by a shift of the liquid consonants "l" and "r."
+   Cinnamon TOAST (smell it). ECHO begins with "E", which is Greek
+   Eta and looks like the letter "H" of hill and HAR. "Hill" and
+   "har" are obvious cognates by a shift of the liquid consonants
+   "l" and "r." Smell the desert sands.
 
 6. FOXTROT --- Lurch is clenching a pink (VERED) rose in his teeth
    and lantern JAW. He has an open CASE on his lap filled with a
-   DOZEN more pink roses.
+   DOZEN more pink roses. Smell the roses.
 
 7. GOLF --- I have a golden (ZAHAV) KEY to my golf cart, where my
-   black CAT is waiting with my golf TWOSOME.
+   black CAT is waiting with my golf TWOSOME. Smell the fuel of
+   the golf cart mixed with the grass smell of the golf course.
 
 8. HOTEL --- I am in the lobby of the beautiful Bellagio hotel
-   with my donkey (CHAMOR) and a stinky CAN full of cigar butts and
-   a DOWSER rod in my hands. I am waiting in line to pay the
-   exorbitant FEE.
+   with my smelly donkey (CHAMOR) and a #10 coffee CAN full of
+   stinky cigar butts. I have a forked DOWSER rod in my hands. I
+   am waiting in line to pay the exorbitant FEE. The dowser is
+   vibrating as it detects the nearness of water, or gold, because
+   I am going to pay my fee in gold.
 
 9. INDIA --- I am in a junkyard full of old Roll-Royce DIESEL
-   automobiles with their camshafts poking out of their hoods. In
+   (smell it) automobiles with their camshafts poking out of their
+   hoods (there are more Roll-Royces in India than in Britain). In
    the cockpit of one is a pilot (TAYYAS) up to his neck in PEA
    soup.
 
 10. JULIET --- with her painted TOES and fingernails is leading a
     WOOD-SAGE (druid) by the hand (YAD) to his brightly colored
-    racing CAR.
+    racing CAR parked in a clearing in the woods. Smell the forest.
 
 11. KILO --- Alice of Wonderland (a TOT) comes off her throne
     (KISEH) to deliver a kilo of COAL to a troll with huge TUSKS.
+    Smell the coal and the body odor of the filthy troll king.
 
 12. LIMA --- A girl is sunning herself and holding a silver
     platter under her chin to ensure it gets TANNED. On the tray
-    is a loaf of bread (LECHEM) with flies buzzing around it. She
+    is a loaf of bread (LECHEM) with flies buzzing around it
+    (smell it because it's extra hot, baking in the sunshine). She
     takes a strip of ADHESIVE flypaper and dangles it into a CAGE
     to trap the flies.
 
-13. MIKE --- A pod of orca whales are flipping a Tam-O'Shanter
+13. MIKE --- A pod of orca whales are flipping a Tam-o'Shanter
     (beanie hat with a red pom-pom) in the water (MAYIM). I take a
-    TEASPON of water and drizzle it on a gigantic chocolate CAKE,
-    the size of a five-gallon cylindrical barrel.
+    TEASPOON of water and drizzle it on a gigantic chocolate CAKE,
+    the size of a five-gallon cylindrical barrel. Smell the seawater.
 
 14. NOVEMBER --- A snake (NACHASH) is sizzling on a patch of hot
-    TAR asphalt. It has neither arms nor legs, so, of course, it
-    is wearing a shirt with CUFFS and TIGHTS instead of trousers
-    (absurdity helps the memory).
+    TAR asphalt (smell it). It has neither arms nor legs, so, of
+    course, it is wearing a shirt with CUFFS, plus TIGHTS instead
+    of trousers (absurdity helps the memory).
 
 15. OSCAR --- A TEETOTALER wearing a Carrie-Nation CAP is holding
-    an Oscar award. A tiger with a striped TAIL is clenching a
+    an Oscar cinema award. A tiger with a striped TAIL is clenching a
     book (SEFER) in its jaws and bringing it to the teetotaler.
+    Smell the tiger: a "zoo" smell.
 
 16. PAPA --- is wiping tears from his eyes (AYIN) with a TISSUE.
     He is overcomes with emotion looking at the beautiful face of
     Liz Taylor, whose picture is held by a giant TITAN robot.
+    Smell Liz's perfume.
 
 17. QUEBEC --- A very FAT premier of Quebec is lying on a bed of
-    TACKS and turning his face (PANIM) to a TOTEM to pray.
+    TACKS and turning his face (PANIM) to a TOTEM to pray. Smell
+    the wood and paint of the totem.
 
 18. ROMEO --- has a sparrow (TZIPPOR) with her feet stuck in a
-    patch of sticky TAFFY on his shoulder. He brings her to a
-    TATAR princess, who is being FANNED by several slave girls.
+    patch of sticky TAFFY (smell it) on his shoulder. He brings
+    her to a TATAR princess, who is being FANNED by several slave
+    girls.
 
 19. SIERRA --- I finally get some FAME from publishing my first
     book, TITLED "Sierra." I celebrate with a beer pulled from a
-    TAP by a monkey (QUF).
+    TAP by a monkey (QUF). Smell it.
 
 20. TANGO --- A DEATHWATCH soldier with four arms and three swords
-    is carrying Goliath's head (ROSH), which has a giant NOSE. He
-    tangos toward a bus, where he mounts the steps and pays his
-    FARE.
+    is carrying Goliath's head (ROSH), which has a giant NOSE.
+    Smell the blood. He tangos awkwardly toward a bus, where he
+    mounts the steps and pays his FARE inside.
 
-21. UNIFORM --- A skeleton (SHAD) FALLS into a NET with a HOT-DOG.
+21. UNIFORM --- A skeleton (SHAD) holding a butterfly net FALLS
+    into a bigger NET along with a man-sized HOT-DOG. Smell it.
 
 22. VICTOR --- A NUN with a Christian FISH pendant presides over a
     victory, a burning at the stake (AUTO-DA-FE). She is holding a
-    pet crocodile (TANIN).
+    pet crocodile (TANIN) by a leash. Smell everything.
 
 23. WHISKEY --- A TEDDY-BEAR rests on a bed with a book of Edna
-    St. Vincent Millay's poems: "A few FIGS from thistles." A
+    St. Vincent Millay's poems: "A few FIGS from Thistles." A
     small NAMEPLATE rests against a tumbler of WHISKEY on the
     nightstand (smell it).
 
 24. X-RAY --- NERO is playing his FIFE (not a fiddle) while
     watching Rome burn. He uses is X-RAY vision to look through
-    the clothes of a bunch of DANCING people in they yard.
+    the clothes of a bunch of DANCING people in the yard.
 
 25. YANKEE --- An American flag is NAILED to the wall. Two nails
-    stick out. A DOUGHNUT dangles from one nail and a watch-FOB is
-    looped over the other nail.
+    stick out. A DOUGHNUT with icing and sprinkles (smell it)
+    dangles from one nail and a watch-FOB is looped over the other
+    nail.
 
 26. ZULU --- An ATHENIAN comes up to BASE (baseball). Next to him
-    is a NICHE with a bust of Athena in it.
+    is a NICHE with a bust of Athena dressed in Zulu regalia in it.
 
 #+ATTR_LATEX: :caption Table 1: ASCII, Playing cards, NATO, Hebrew, Dates
 |---+----------+-------+---------+-------------+-------+--------+-----|
