@@ -863,7 +863,7 @@ you.
    smoke mixed with stinky camel fur and road dust.
 
 4. DELTA --- I am pointing a flashlight (RAY) at a giant,
-   brass-and-wooden door (DELET) looking for a keyhole in the rain
+   brass-and-wooden DOOR (DALET) looking for a keyhole in the rain
    and the dark (smell mold and mildew and moss and grass and old
    machine-oil grease on the door's hardware). I open it up and
    there is a PhD student who never finished his THESIS so must
