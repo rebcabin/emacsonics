@@ -5357,12 +5357,13 @@
              )
 
            '(150
+             "TELESCOPE"
+
              "tails"
              "tales"
              "tools"
              "tiles"
              "tallies"
-             "telescope"
              "tollhouse"
              "delusive"
              "dollhouse"
@@ -5374,8 +5375,12 @@
              "headless"
              "hatless"
              "outlast"
-             "utilize")
+             "utilize"
+             )
+
            '(151
+             "TALIT"
+
              "toilet"
              "telltale"
              "tilt"
@@ -5398,10 +5403,13 @@
              "utility"
              "withhold"
              "outlet"
-             "stealth")
+             "stealth"
+             )
+
            '(152
+             "TALON"
+
              "tail-end"
-             "talon"
              "toluene"
              "towline"
              "talent"
@@ -5416,15 +5424,19 @@
              "Italian"
              "outline"
              "stillness"
-             "Stalin")
+             "Stalin"
+             )
+
            '(153
+             "THALLIUM"
+
+
              "tollman"
              "teleman"
              "telemark"
              "toolmaker"
              "tallyman"
              "Talmud"
-             "thallium"
              "dalmatian"
              "dilemma"
              "dolomite"
@@ -5432,9 +5444,12 @@
              "hotelman"
              "hoodlum"
              "stalemate"
-             "settlement")
+             "settlement"
+             )
+
            '(154
-             "tailor"
+             "TAILOR"
+
              "tiller"
              "tolerate"
              "tailer"
@@ -5449,8 +5464,12 @@
              "yodeler"
              "settler"
              "stellar"
-             "stealer")
+             "stealer"
+             )
+
            '(155
+             "DAY-lily"
+
              "telelens"
              "tall-oil"
              "taillight"
@@ -5458,15 +5477,16 @@
              "tileless"
              "tallowless"
              "teleology"
-             "day"
-             "lily"
              "Dalai-Lama"
              "stellular"
              "still-life"
-             "styleless")
+             "styleless"
+             )
+
            '(156
+             "TOOL-shed"
+
              "tail-shaft"
-             "tool-shed"
              "tallish"
              "tillage"
              "tollage"
@@ -5478,10 +5498,13 @@
              "dilution"
              "adulation"
              "etiology"
-             "stylish")
+             "stylish"
+             )
+
            '(157
+             "TAILGATE"
+
              "telegram"
-             "tailgate"
              "toll-call"
              "telling"
              "tollgate"
@@ -5494,11 +5517,14 @@
              "dialogue"
              "headlong"
              "outlook"
-             "wedlock")
+             "wedlock"
+             )
+
            '(158
+             "TAIL-fin"
+
              "telephone"
              "television"
-             "tail-fin"
              "twelve"
              "tell-off"
              "delve"
@@ -5507,9 +5533,12 @@
              "dolphin"
              "Delft"
              "dollface"
-             "outlive")
+             "outlive"
+             )
+
            '(159
-             "tulip"
+             "TULIP"
+
              "tailpiece"
              "tholepin"
              "tilbury"
@@ -5524,21 +5553,27 @@
              "dilapidate"
              "dollop"
              "doll-up"
-             "ad-lib")
+             "ad-lib"
+             )
+
            '(160
+             "DUCHESS"
+
              "tea-chest"
              "touchstone"
              "touch-system"
              "digest"
              "dishes"
-             "duchess"
              "audacious"
-             "headcheese")
+             "headcheese"
+             )
+
            '(161
+             "DIGIT"
+
              "touchwood"
              "touchdown"
              "touch-type"
-             "digit"
              "ditched"
              "dished"
              "dashed"
@@ -5548,8 +5583,13 @@
              "ditchdigger"
              "attached"
              "hotshot"
-             "whitewashed")
+             "whitewashed"
+             )
+
            '(162
+             "EDITION"
+
+             "station"
              "tuition"
              "teach-in"
              "tee-joint"
@@ -5557,20 +5597,24 @@
              "Dutch-uncle"
              "addition"
              "audition"
-             "edition"
              "outshine"
-             "station"
              "stagehand"
-             "hesitation")
+             "hesitation"
+             )
+
            '(163
-             "Taj-Mahal"
+             "TAJ-MAHAL"
+
              "touch-me-not"
              "touchmark"
              "Dutchman"
              "attachment"
-             "stage-manager")
+             "stage-manager"
+             )
+
            '(164
-             "teacher"
+             "TEACHER"
+
              "T-shirt"
              "dasher"
              "dodger"
@@ -5578,15 +5622,30 @@
              "de-jure"
              "autogiro"
              "etagere"
-             "wheat-germ")
-           '(165 "touchline" "touchhole" "Dutch-elm" "dash-light" "Dutch-light")
+             "wheat-germ"
+             )
+
+           '(165
+             "DASH-LIGHT"
+
+             "touchline"
+             "touchhole"
+             "Dutch-elm"
+             "Dutch-light"
+             )
+
            '(166
+             "DISHWASHER"
+
              "touch-watch"
-             "dishwasher"
              "dodge-chain"
              "Dutch-cheese"
-             "head-judge")
+             "head-judge"
+             )
+
            '(167
+             "STAGECOACH"
+
              "thatch-grass"
              "teaching"
              "touching"
@@ -5596,26 +5655,34 @@
              "hatcheck"
              "woodchuck"
              "staging"
-             "stagecoach")
+             )
+
            '(168
+             "DUTCH-OVEN"
+
              "touch-off"
-             "Dutch-oven"
              "Dutch-wife"
              "dash-off"
              "disheveled"
              "dishful"
              "wheat-chaff"
-             "stage-fright")
+             "stage-fright"
+             )
+
            '(169
+             "DODGE-BALL"
+
              "tissue-paper"
              "toy-shop"
              "touchback"
              "touch-up"
-             "dodge-ball"
              "odd-job"
-             "dish-up")
+             "dish-up"
+             )
+
            '(170
-             "taxi"
+             "TAXI"
+
              "tax"
              "Texas"
              "text"
@@ -5632,8 +5699,12 @@
              "attics"
              "ethics"
              "outcast"
-             "suitcase")
+             "suitcase"
+             )
+
            '(171
+             "DOCTOR"
+
              "teakettle"
              "tact"
              "thicket"
@@ -5648,14 +5719,17 @@
              "docket"
              "dictate"
              "decathlon"
-             "doctor"
              "ductile"
              "dogwood"
              "adequate"
              "edict"
              "etiquette"
-             "educator")
+             "educator"
+             )
+
            '(172
+             "TOUCAN"
+
              "token"
              "tea-wagon"
              "tycoon"
@@ -5663,24 +5737,29 @@
              "thicken"
              "thickness"
              "technical"
-             "toucan"
              "deacon"
              "decanter"
              "dignity"
-             "stagnant")
+             "stagnant"
+             )
+
            '(173
+             "DOCUMENT"
+
              "thingumajig"
              "Tecumseh"
              "autogamy"
              "decompose"
-             "document"
              "dogma"
              "degum"
              "decamp"
              "day-camp"
-             "stigma")
+             "stigma"
+             )
+
            '(174
-             "tiger"
+             "TIGER"
+
              "ticker"
              "tea-garden"
              "dagger"
@@ -5701,9 +5780,12 @@
              "outgrow"
              "stagger"
              "stoker"
-             "stacker")
+             "stacker"
+             )
+
            '(175
-             "tackle"
+             "TACKLE"
+
              "tangle"
              "tickle"
              "tingle"
@@ -5717,18 +5799,25 @@
              "decline"
              "decal"
              "ducal"
-             "stockholder")
+             "stockholder"
+             )
+
            '(176
+             "DICTIONARY"
+
              "tuck-shop"
              "take-issue"
-             "dictionary"
              "dockage"
              "doggish"
              "dogwatch"
              "dog-show"
              "eduction"
-             "education")
+             "education"
+             )
+
            '(177
+             "HOT-cake"
+
              "tea-cake"
              "tacking"
              "tagging"
@@ -5737,12 +5826,14 @@
              "dogging"
              "attacking"
              "outgoing"
-             "hot-cake"
              "sticking"
              "stocking"
-             "stock-exchange")
+             "stock-exchange"
+             )
+
            '(178
-             "takeoff"
+             "TAKEOFF"
+
              "tick-off"
              "tick-fever"
              "dogface"
@@ -5754,8 +5845,12 @@
              "hot-coffee"
              "wedding-vow"
              "outgiving"
-             "stockfish")
+             "stockfish"
+             )
+
            '(179
+             "STICKUP"
+
              "teacup"
              "take-up"
              "toe-cap"
@@ -5763,9 +5858,12 @@
              "decapitate"
              "decoupage"
              "hiding-place"
-             "stickup"
-             "stockbroker")
+             "stockbroker"
+             )
+
            '(180
+             "DEVICE"
+
              "two-faced"
              "two-fisted"
              "two-phase"
@@ -5774,14 +5872,17 @@
              "deface"
              "devastate"
              "deficit"
-             "device"
              "diffuse"
              "divest"
              "dovehouse"
              "advise"
              "edifice"
-             "whiteface")
+             "whiteface"
+             )
+
            '(181
+             "DAVID"
+
              "taffeta"
              "theft"
              "Tophet"
@@ -5792,7 +5893,6 @@
              "davit"
              "defeat"
              "daffodil"
-             "David"
              "devoid"
              "devote"
              "devout"
@@ -5804,9 +5904,12 @@
              "outfit"
              "outvote"
              "stevedore"
-             "eightfooter")
+             "eightfooter"
+             )
+
            '(182
-             "tiffany"
+             "TIFFANY"
+
              "typhoon"
              "toughness"
              "tiffin"
@@ -5819,10 +5922,21 @@
              "divine"
              "advent"
              "advance"
-             "advantage")
-           '(183 "tea-family" "tough-minded" "TV-man" "deafmute" "defame")
+             "advantage"
+             )
+
+           '(183
+             "DEAFMUTE"
+
+             "tea-family"
+             "tough-minded"
+             "TV-man"
+             "defame"
+             )
+
            '(184
-             "tavern"
+             "TAVERN"
+
              "taffrail"
              "tovarich"
              "thievery"
@@ -5839,8 +5953,13 @@
              "defrost"
              "deaf-ear"
              "adverse"
-             "advertisement")
+             "advertisement"
+             )
+
            '(185
+             "DEVIL"
+
+             "tefillin"
              "tivoli"
              "tough-luck"
              "twofold"
@@ -5849,7 +5968,6 @@
              "defile"
              "deflate"
              "develop"
-             "devil"
              "duffel"
              "hatful"
              "hateful"
@@ -5858,21 +5976,27 @@
              "white-elephant"
              "youthful"
              "stifle"
-             "wistful")
+             "wistful"
+             )
+
            '(186
+             "DEVOTION"
+
              "TV-show"
              "thievish"
              "deficiency"
              "deviation"
-             "devotion"
              "dovish"
              "diffusion"
              "division"
              "audiovisual"
              "whitefish"
-             "hot-fudge")
+             "hot-fudge"
+             )
+
            '(187
-             "tough-guy"
+             "TOUGH-guy"
+
              "de-facto"
              "defect"
              "difficult"
@@ -5880,22 +6004,32 @@
              "advocate"
              "edification"
              "staffing"
-             "stuffing")
+             "stuffing"
+             )
+
            '(188
-             "two-fifths"
              "TV-fan"
+
+             "two-fifths"
              "thief-vault"
              "dive-off"
              "eighty-five"
-             "stave-off")
+             "stave-off"
+             )
+
            '(189
+             "DIVE-bomber"
+
              "taffy-pull"
              "tough-boy"
-             "dive-bomber"
              "edifiable"
              "stovepipe"
-             "stove-pot")
+             "stove-pot"
+             )
+
            '(190
+             "TAPAS"
+
              "topsail"
              "top-sergeant"
              "top-secret"
@@ -5915,8 +6049,12 @@
              "autobus"
              "autopsy"
              "headpiece"
-             "outpace")
+             "outpace"
+             )
+
            '(191
+             "DEBUTANT"
+
              "teapot"
              "tepid"
              "tiptoe"
@@ -5929,15 +6067,18 @@
              "debit"
              "depth"
              "deputy"
-             "debutant"
              "adapt"
              "adept"
              "adopt"
              "output"
              "hotbed"
              "outbid"
-             "stupid")
+             "stupid"
+             )
+
            '(192
+             "HATPIN"
+
              "tiepin"
              "topknot"
              "topnotch"
@@ -5952,15 +6093,27 @@
              "Ethiopian"
              "headpin"
              "outbound"
-             "headband")
-           '(193 "topman" "topmast" "topmost" "top-milk" "stepmother" "topminnow")
+             "headband"
+             )
+
+           '(193
+             "STEPMOTHER"
+
+             "topman"
+             "topmast"
+             "topmost"
+             "top-milk"
+             "topminnow"
+             )
+
            '(194
+             "TYPEWRITER"
+
              "tie-bar"
              "tea-party"
              "taper"
              "tapir"
              "taproom"
-             "typewriter"
              "topper"
              "topwork"
              "top-round"
@@ -5981,9 +6134,12 @@
              "outbreak"
              "sideboard"
              "sideburns"
-             "stubborn")
+             "stubborn"
+             )
+
            '(195
-             "table"
+             "TABLE"
+
              "tablet"
              "tableau"
              "tipple"
@@ -6004,25 +6160,31 @@
              "oddball"
              "stable"
              "steeple"
-             "stipulate")
+             "stipulate"
+             )
+
            '(196
+             "DEBAUCH"
+
              "tip-sheet"
              "top-sheet"
              "top-shelf"
              "two-page"
              "type-wash"
-             "debauch"
              "adoption"
              "adaption"
-             "stoppage")
+             "stoppage"
+             )
+
            '(197
+             "TOBACCO"
+
              "tea-bag"
              "tapping"
              "topping"
              "typing"
              "topcoat"
              "topkick"
-             "tobacco"
              "toboggan"
              "topic"
              "typical"
@@ -6033,8 +6195,12 @@
              "debug"
              "autobiography"
              "hatbox"
-             "stopping")
+             "stopping"
+             )
+
            '(198
+             "STEPFATHER"
+
              "two-by-four"
              "tip-off"
              "topflight"
@@ -6043,12 +6209,14 @@
              "typefounder"
              "deep-felt"
              "deepfreeze"
-             "stepfather"
              "step-off"
              "stupefy"
-             "stopover")
+             "stopover"
+             )
+
            '(199
-             "top-banana"
+             "TOP-BANANA"
+
              "top-billing"
              "top-boots"
              "wet-pipe"
@@ -6058,8 +6226,12 @@
              "dope-peddler"
              "dope-pusher"
              "wastepaper"
-             "hot-pepper")
+             "hot-pepper"
+             )
+
            '(200
+             "GNOSIS"
+
              "necessity"
              "nieces"
              "noses"
@@ -6071,13 +6243,15 @@
              "unseasoned"
              "unsuspicious"
              "ounces"
-             "gnosis"
-             "census")
+             "census"
+             )
+
            '(201
+             "NOSTRIL"
+
              "nest"
              "nasty"
              "nicety"
-             "nostril"
              "nose-dive"
              "anesthesia"
              "honest"
@@ -6095,14 +6269,17 @@
              "unsuitable"
              "gnostic"
              "one-step"
-             "Wednesday")
+             "Wednesday"
+             )
+
            '(202
+             "ENSIGN"
+
              "newshen"
              "nice-nelly"
              "niacin"
              "nosiness"
              "nuisance"
-             "ensign"
              "ensnare"
              "incinerator"
              "innocent"
@@ -6113,8 +6290,12 @@
              "unseen"
              "unsound"
              "unison"
-             "unessential")
+             "unessential"
+             )
+
            '(203
+             "INSEMINATION"
+
              "newsman"
              "noisemaker"
              "news-media"
@@ -6125,11 +6306,14 @@
              "inasmuch"
              "insomnia"
              "in-sum"
-             "insemination"
              "unseemly"
              "unassuming"
-             "unsimilar")
+             "unsimilar"
+             )
+
            '(204
+             "CENSOR"
+
              "newsreel"
              "newsworthy"
              "answer"
@@ -6142,9 +6326,11 @@
              "uncertain"
              "unsworn"
              "sincere"
-             "censor")
+             )
+
            '(205
-             "nacelle"
+             "NACELLE"
+
              "nozzle"
              "nuzzle"
              "nestle"
@@ -6161,16 +6347,22 @@
              "oneself"
              "unselfish"
              "wine-cellar"
-             "senseless")
+             "senseless"
+             )
+
            '(206
+             "NOSE-JOB"
+
              "news-agency"
-             "nose-job"
              "incision"
              "ionization"
              "unsociable"
-             "sensation")
+             "sensation"
+             )
+
            '(207
-             "nose-cone"
+             "NOSE-cone"
+
              "nosegay"
              "encyclopedia"
              "honeysuckle"
@@ -6180,19 +6372,25 @@
              "insignificant"
              "unicycle"
              "unscrupulous"
-             "wainscot")
+             "wainscot"
+             )
+
            '(208
+             "IONOSPHERE"
+
              "news-vendor"
              "henceforth"
              "insufferable"
              "insufficient"
              "once-over"
-             "ionosphere"
              "uncivil"
              "unsafe"
-             "UNICEF")
+             "unicef"
+             )
+
            '(209
-             "newsboy"
+             "NEWSBOY"
+
              "nosepiece"
              "newsprint"
              "no-soap"
@@ -6205,12 +6403,15 @@
              "insuperable"
              "insupportable"
              "unspent"
-             "sensible")
+             "sensible"
+             )
+
            '(210
+             "NUDIST"
+
              "notice"
              "Nazi"
              "nowadays"
-             "nudist"
              "no-dice"
              "antacid"
              "anticipate"
@@ -6225,8 +6426,12 @@
              "handsaw"
              "undeserved"
              "undesirable"
-             "undisturbed")
+             "undisturbed"
+             )
+
            '(211
+             "UNTIED"
+
              "nitwit"
              "nudity"
              "night-duty"
@@ -6245,12 +6450,14 @@
              "undoubted"
              "untidy"
              "united"
-             "untied"
              "undated"
-             "want-ad")
+             "want-ad"
+             )
+
            '(212
+             "ANTENNA"
+
              "andante"
-             "antenna"
              "Anthony"
              "antonym"
              "india-ink"
@@ -6269,11 +6476,14 @@
              "wanton"
              "sentence"
              "sentinel"
-             "centennial")
+             "centennial"
+             )
+
            '(213
+             "ANTIMATTER"
+
              "nutmeg"
              "nightmare"
-             "antimatter"
              "anthem"
              "anadem"
              "anatomy"
@@ -6293,8 +6503,12 @@
              "onetime"
              "anytime"
              "untimely"
-             "windmill")
+             "windmill"
+             )
+
            '(214
+             "NUTTER"
+
              "network"
              "neither"
              "Netherlands"
@@ -6333,11 +6547,14 @@
              "unit-rule"
              "untiring"
              "winter"
-             "wonder")
+             "wonder"
+             )
+
            '(215
+             "NOODLE"
+
              "needle"
              "needless"
-             "noodle"
              "night-owl"
              "new-deal"
              "antelope"
@@ -6352,8 +6569,12 @@
              "intolerable"
              "know-it-all"
              "until"
-             "windless")
+             "windless"
+             )
+
            '(216
+             "SANDWICH"
+
              "nightshade"
              "night-watch"
              "notation"
@@ -6367,11 +6588,13 @@
              "windowshade"
              "wantage"
              "window-shopping"
-             "sandwich")
+             )
+
            '(217
+             "NIGHTGOWN"
+
              "nothing"
              "nightcap"
-             "nightgown"
              "nautical"
              "nightingale"
              "nutcracker"
@@ -6396,10 +6619,13 @@
              "untangle"
              "winding"
              "wanting"
-             "syndicate")
+             "syndicate"
+             )
+
            '(218
+             "NIGHTFALL"
+
              "native"
-             "nightfall"
              "notification"
              "endeavor"
              "endive"
@@ -6412,9 +6638,12 @@
              "undefined"
              "undeveloped"
              "undefeated"
-             "scientific")
+             "scientific"
+             )
+
            '(219
-             "notebook"
+             "NOTEBOOK"
+
              "notable"
              "night-pay"
              "antibiotics"
@@ -6434,9 +6663,12 @@
              "knotty-pine"
              "windpipe"
              "sandbox"
-             "sound-box")
+             "sound-box"
+             )
+
            '(220
-             "nonce"
+             "NONCE"
+
              "nonsense"
              "nonuse"
              "nainsook"
@@ -6446,8 +6678,12 @@
              "enhance"
              "onions"
              "onionskin"
-             "unanswered")
+             "unanswered"
+             )
+
            '(221
+             "UNKNIT"
+
              "noontime"
              "ninth"
              "nineteen"
@@ -6461,19 +6697,24 @@
              "unintentional"
              "unwanted"
              "union-dues"
-             "unknit")
+             )
+
            '(222
+             "NONUNION"
+
              "ninon"
              "no-nonsense"
-             "nonunion"
              "nonnegotiable"
              "nonentity"
              "non-owner"
              "unknown"
-             "unannounced")
+             "unannounced"
+             )
+
            '(223
+             "NOON-meal"
+
              "ninnyhammer"
-             "noon-meal"
              "nonemotional"
              "nonmetal"
              "nonmember"
@@ -6484,16 +6725,23 @@
              "inanimate"
              "unanimous"
              "unanimated"
-             "synonymous")
+             "synonymous"
+             )
+
            '(224
-             "nunnery"
+             "NUNNERY"
+
              "nonracial"
              "nonradical"
              "onion-ring"
              "union-organizer"
              "unenrolled"
-             "unhonored")
+             "unhonored"
+             )
+
            '(225
+             "SON-IN-LAW"
+
              "nonliquid"
              "nonliterary"
              "nonelect"
@@ -6505,23 +6753,28 @@
              "union-hall"
              "union-labor"
              "union-leader"
-             "son-in-law")
+             )
+
            '(226
+             "UNION-JACK"
+
              "nonchalant"
              "nonjuror"
              "nonage"
              "knee-injury"
              "uninjured"
              "uninsured"
-             "union-jack"
              "union-shop"
-             "uninitiated")
+             "uninitiated"
+             )
+
            '(227
+             "NONAGON"
+
              "nincompoop"
-             "nonagon"
+             "nannygoat"
              "nankeen"
              "non-com"
-             "nannygoat"
              "nonconformist"
              "nonacceptance"
              "nonactive"
@@ -6529,8 +6782,12 @@
              "nonequal"
              "nonexclusive"
              "unknowing"
-             "unincorporated")
+             "unincorporated"
+             )
+
            '(228
+             "NINEVEH"
+
              "nine-footer"
              "nonviolence"
              "nonfat"
@@ -6544,9 +6801,11 @@
              "uninvited"
              "uninformed"
              "union-official"
-             "Nineveh")
+             )
+
            '(229
-             "ninepins"
+             "NINEPINS"
+
              "nonabsorbent"
              "nonbeliever"
              "nonbreakable"
@@ -6559,7 +6818,9 @@
              "nonprofessional"
              "nonprofit"
              "nonpolitical"
-             "union-pay")
+             "union-pay"
+             )
+
            '(230
              "names"
              "namesake"

@@ -3635,330 +3635,377 @@ good ideas because they might incorrectly recall 64 at speed.
 :end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 250 260)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+------------+------------+------------+-------------+------------|
-| 150 | tails      | tales      | tools      | tiles      | tallies     | telescope  |
+| 150 | TELESCOPE  | tails      | tales      | tools      | tiles       | tallies    |
 |     | tollhouse  | delusive   | dollhouse  | doilies    | dailies     | atlas      |
 |     | idealize   | idolize    | headless   | hatless    | outlast     | utilize    |
 |-----+------------+------------+------------+------------+-------------+------------|
-| 151 | toilet     | telltale   | tilt       | twilight   | teletype    | too-late   |
-|     | toehold    | daylight   | delight    | delude     | dilate      | dilute     |
-|     | doldrums   | dolt       | adult      | adultery   | athlete     | etiolated  |
-|     | idolatry   | utility    | withhold   | outlet     | stealth     |            |
+| 151 | TALIT      | toilet     | telltale   | tilt       | twilight    | teletype   |
+|     | too-late   | toehold    | daylight   | delight    | delude      | dilate     |
+|     | dilute     | doldrums   | dolt       | adult      | adultery    | athlete    |
+|     | etiolated  | idolatry   | utility    | withhold   | outlet      | stealth    |
 |-----+------------+------------+------------+------------+-------------+------------|
-| 152 | tail-end   | talon      | toluene    | towline    | talent      | dalliance  |
+| 152 | TALON      | tail-end   | toluene    | towline    | talent      | dalliance  |
 |     | DEW-Line   | delineate  | delinquent | headline   | hot-line    | headland   |
 |     | idleness   | Italian    | outline    | stillness  | Stalin      |            |
 |-----+------------+------------+------------+------------+-------------+------------|
-| 153 | tollman    | teleman    | telemark   | toolmaker  | tallyman    | Talmud     |
-|     | thallium   | dalmatian  | dilemma    | dolomite   | head-lamp   | hotelman   |
+| 153 | THALLIUM   | tollman    | teleman    | telemark   | toolmaker   | tallyman   |
+|     | Talmud     | dalmatian  | dilemma    | dolomite   | head-lamp   | hotelman   |
 |     | hoodlum    | stalemate  | settlement |            |             |            |
 |-----+------------+------------+------------+------------+-------------+------------|
-| 154 | tailor     | tiller     | tolerate   | tailer     | teller      | toolroom   |
+| 154 | TAILOR     | tiller     | tolerate   | tailer     | teller      | toolroom   |
 |     | dealer     | dialer     | dollar     | dueler     | hotel-room  | idler      |
 |     | yodeler    | settler    | stellar    | stealer    |             |            |
 |-----+------------+------------+------------+------------+-------------+------------|
-| 155 | telelens   | tall-oil   | taillight  | telial     | tileless    | tallowless |
-|     | teleology  | day        | lily       | Dalai-Lama | stellular   | still-life |
-|     | styleless  |            |            |            |             |            |
+| 155 | DAY-lily   | telelens   | tall-oil   | taillight  | telial      | tileless   |
+|     | tallowless | teleology  | Dalai-Lama | stellular  | still-life  | styleless  |
 |-----+------------+------------+------------+------------+-------------+------------|
-| 156 | tail-shaft | tool-shed  | tallish    | tillage    | tollage     | theologian |
+| 156 | TOOL-shed  | tail-shaft | tallish    | tillage    | tollage     | theologian |
 |     | delicious  | deluge     | delusion   | diligence  | dilution    | adulation  |
 |     | etiology   | stylish    |            |            |             |            |
 |-----+------------+------------+------------+------------+-------------+------------|
-| 157 | telegram   | tailgate   | toll-call  | telling    | tollgate    | talc       |
+| 157 | TAILGATE   | telegram   | toll-call  | telling    | tollgate    | talc       |
 |     | dealings   | delegate   | delicacy   | dwelling   | dialect     | dialogue   |
 |     | headlong   | outlook    | wedlock    |            |             |            |
 |-----+------------+------------+------------+------------+-------------+------------|
-| 158 | telephone  | television | tail-fin   | twelve     | tell-off    | delve      |
+| 158 | TAIL-fin   | telephone  | television | twelve     | tell-off    | delve      |
 |     | deliver    | doleful    | dolphin    | Delft      | dollface    | outlive    |
 |-----+------------+------------+------------+------------+-------------+------------|
-| 159 | tulip      | tailpiece  | tholepin   | tilbury    | tailpipe    | telepathy  |
+| 159 | TULIP      | tailpiece  | tholepin   | tilbury    | tailpipe    | telepathy  |
 |     | tallboy    | tollbooth  | toolbox    | talebearer | day-laborer | deliberate |
 |     | dilapidate | dollop     | doll-up    | ad-lib     |             |            |
-|-----+------------+------------+------------+------------+-------------+------------|
+:end:
 
 \clearpage
-|-----+--------------+--------------+--------------+--------------+-------------+---------------|
-| 160 | tea-chest    | touchstone   | touch-system | digest       | dishes      | duchess       |
-|     | audacious    | headcheese   |              |              |             |               |
-|-----+--------------+--------------+--------------+--------------+-------------+---------------|
-| 161 | touchwood    | touchdown    | touch-type   | digit        | ditched     | dished        |
-|     | dashed       | dodged       | dish-towel   | dishwater    | ditchdigger | attached      |
-|     | hotshot      | whitewashed  |              |              |             |               |
-|-----+--------------+--------------+--------------+--------------+-------------+---------------|
-| 162 | tuition      | teach-in     | tee-joint    | dudgeon      | Dutch-uncle | addition      |
-|     | audition     | edition      | outshine     | station      | stagehand   | hesitation    |
-|-----+--------------+--------------+--------------+--------------+-------------+---------------|
-| 163 | Taj-Mahal    | touch-me-not | touchmark    | Dutchman     | attachment  | stage-manager |
-|-----+--------------+--------------+--------------+--------------+-------------+---------------|
-| 164 | teacher      | T-shirt      | dasher       | dodger       | dowager     | de-jure       |
-|     | autogiro     | etagere      | wheat-germ   |              |             |               |
-|-----+--------------+--------------+--------------+--------------+-------------+---------------|
-| 165 | touchline    | touchhole    | Dutch-elm    | dash-light   | Dutch-light |               |
-|-----+--------------+--------------+--------------+--------------+-------------+---------------|
-| 166 | touch-watch  | dishwasher   | dodge-chain  | Dutch-cheese | head-judge  |               |
-|-----+--------------+--------------+--------------+--------------+-------------+---------------|
-| 167 | thatch-grass | teaching     | touching     | dashing      | dodging     | deject        |
-|     | hatcheck     | woodchuck    | staging      | stagecoach   | dashiki     |               |
-|-----+--------------+--------------+--------------+--------------+-------------+---------------|
-| 168 | touch-off    | Dutch-oven   | Dutch-wife   | dash-off     | disheveled  | dishful       |
-|     | wheat-chaff  | stage-fright |              |              |             |               |
-|-----+--------------+--------------+--------------+--------------+-------------+---------------|
-| 169 | tissue-paper | toy-shop     | touchback    | touch-up     | dodge-ball  | odd-job       |
-|     | dish-up      |              |              |              |             |               |
-|-----+--------------+--------------+--------------+--------------+-------------+---------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 260 270)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+-------------+--------------+-------------+--------------+-------------+---------------|
+| 160 | DUCHESS     | tea-chest    | touchstone  | touch-system | digest      | dishes        |
+|     | audacious   | headcheese   |             |              |             |               |
+|-----+-------------+--------------+-------------+--------------+-------------+---------------|
+| 161 | DIGIT       | touchwood    | touchdown   | touch-type   | ditched     | dished        |
+|     | dashed      | dodged       | dish-towel  | dishwater    | ditchdigger | attached      |
+|     | hotshot     | whitewashed  |             |              |             |               |
+|-----+-------------+--------------+-------------+--------------+-------------+---------------|
+| 162 | EDITION     | station      | tuition     | teach-in     | tee-joint   | dudgeon       |
+|     | Dutch-uncle | addition     | audition    | outshine     | stagehand   | hesitation    |
+|-----+-------------+--------------+-------------+--------------+-------------+---------------|
+| 163 | TAJ-MAHAL   | touch-me-not | touchmark   | Dutchman     | attachment  | stage-manager |
+|-----+-------------+--------------+-------------+--------------+-------------+---------------|
+| 164 | TEACHER     | T-shirt      | dasher      | dodger       | dowager     | de-jure       |
+|     | autogiro    | etagere      | wheat-germ  |              |             |               |
+|-----+-------------+--------------+-------------+--------------+-------------+---------------|
+| 165 | DASH-LIGHT  | touchline    | touchhole   | Dutch-elm    | Dutch-light |               |
+|-----+-------------+--------------+-------------+--------------+-------------+---------------|
+| 166 | DISHWASHER  | touch-watch  | dodge-chain | Dutch-cheese | head-judge  |               |
+|-----+-------------+--------------+-------------+--------------+-------------+---------------|
+| 167 | STAGECOACH  | thatch-grass | teaching    | touching     | dashing     | dodging       |
+|     | deject      | hatcheck     | woodchuck   | staging      |             |               |
+|-----+-------------+--------------+-------------+--------------+-------------+---------------|
+| 168 | DUTCH-OVEN  | touch-off    | Dutch-wife  | dash-off     | disheveled  | dishful       |
+|     | wheat-chaff | stage-fright |             |              |             |               |
+|-----+-------------+--------------+-------------+--------------+-------------+---------------|
+| 169 | DODGE-BALL  | tissue-paper | toy-shop    | touchback    | touch-up    | odd-job       |
+|     | dish-up     |              |             |              |             |               |
+:end:
 
 \clearpage
-|-----+--------------+------------+-------------+------------+-------------+----------------|
-| 170 | taxi         | tax        | Texas       | text       | textile     | tongs          |
-|     | things       | tea        | cozy        | decks      | dachshund   | dexterity      |
-|     | doghouse     | dogs       | attics      | ethics     | outcast     | suitcase       |
-|-----+--------------+------------+-------------+------------+-------------+----------------|
-| 171 | teakettle    | tact       | thicket     | ticktack   | ticket      | together       |
-|     | teakwood     | tag-day    | decadent    | decade     | decode      | docket         |
-|     | dictate      | decathlon  | doctor      | ductile    | dogwood     | adequate       |
-|     | edict        | etiquette  | educator    | tactic     | tactical    |                |
-|-----+--------------+------------+-------------+------------+-------------+----------------|
-| 172 | token        | tea-wagon  | tycoon      | taken      | thicken     | thickness      |
-|     | technical    | toucan     | deacon      | decanter   | dignity     | stagnant       |
-|-----+--------------+------------+-------------+------------+-------------+----------------|
-| 173 | thingumajig  | Tecumseh   | autogamy    | decompose  | document    | dogma          |
-|     | degum        | decamp     | day-camp    | stigma     |             |                |
-|-----+--------------+------------+-------------+------------+-------------+----------------|
-| 174 | tiger        | ticker     | tea-garden  | dagger     | decorate    | decrease       |
-|     | decree       | decry      | degree      | degrade    | digress     | digger         |
-|     | dacron       | doggerel   | autograph   | autocar    | attacker    | outcry         |
-|     | outgrow      | stagger    | stoker      | stacker    |             |                |
-|-----+--------------+------------+-------------+------------+-------------+----------------|
-| 175 | tackle       | tangle     | tickle      | tingle     | tongue-lash | tag-line       |
-|     | tequila      | toggle     | dangle      | declaim    | declare     | decline        |
-|     | decal        | ducal      | stockholder |            |             |                |
-|-----+--------------+------------+-------------+------------+-------------+----------------|
-| 176 | tuck-shop    | take-issue | dictionary  | dockage    | doggish     | dogwatch       |
-|     | dog-show     | eduction   | education   |            |             |                |
-|-----+--------------+------------+-------------+------------+-------------+----------------|
-| 177 | tea-cake     | tacking    | tagging     | decaying   | digging     | dogging        |
-|     | attacking    | outgoing   | hot-cake    | sticking   | stocking    | stock-exchange |
-|-----+--------------+------------+-------------+------------+-------------+----------------|
-| 178 | takeoff      | tick-off   | tick-fever  | dogface    | dogfight    | dogfish        |
-|     | dog-food     | dogfoot    | duckfooted  | hot-coffee | wedding-vow | outgiving      |
-|     | stockfish    |            |             |            |             |                |
-|-----+--------------+------------+-------------+------------+-------------+----------------|
-| 179 | teacup       | take-up    | toe-cap     | dig-up     | decapitate  | decoupage      |
-|     | hiding-place | stickup    | stockbroker |            |             |                |
-|-----+--------------+------------+-------------+------------+-------------+----------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 270 280)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 170 | TAXI       | tax          | Texas       | text       | textile     | tongs          |
+|     | things     | tea          | cozy        | decks      | dachshund   | dexterity      |
+|     | doghouse   | dogs         | attics      | ethics     | outcast     | suitcase       |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 171 | DOCTOR     | teakettle    | tact        | thicket    | ticktack    | ticket         |
+|     | together   | teakwood     | tag-day     | decadent   | decade      | decode         |
+|     | docket     | dictate      | decathlon   | ductile    | dogwood     | adequate       |
+|     | edict      | etiquette    | educator    |            |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 172 | TOUCAN     | token        | tea-wagon   | tycoon     | taken       | thicken        |
+|     | thickness  | technical    | deacon      | decanter   | dignity     | stagnant       |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 173 | DOCUMENT   | thingumajig  | Tecumseh    | autogamy   | decompose   | dogma          |
+|     | degum      | decamp       | day-camp    | stigma     |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 174 | TIGER      | ticker       | tea-garden  | dagger     | decorate    | decrease       |
+|     | decree     | decry        | degree      | degrade    | digress     | digger         |
+|     | dacron     | doggerel     | autograph   | autocar    | attacker    | outcry         |
+|     | outgrow    | stagger      | stoker      | stacker    |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 175 | TACKLE     | tangle       | tickle      | tingle     | tongue-lash | tag-line       |
+|     | tequila    | toggle       | dangle      | declaim    | declare     | decline        |
+|     | decal      | ducal        | stockholder |            |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 176 | DICTIONARY | tuck-shop    | take-issue  | dockage    | doggish     | dogwatch       |
+|     | dog-show   | eduction     | education   |            |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 177 | HOT-cake   | tea-cake     | tacking     | tagging    | decaying    | digging        |
+|     | dogging    | attacking    | outgoing    | sticking   | stocking    | stock-exchange |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 178 | TAKEOFF    | tick-off     | tick-fever  | dogface    | dogfight    | dogfish        |
+|     | dog-food   | dogfoot      | duckfooted  | hot-coffee | wedding-vow | outgiving      |
+|     | stockfish  |              |             |            |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 179 | STICKUP    | teacup       | take-up     | toe-cap    | dig-up      | decapitate     |
+|     | decoupage  | hiding-place | stockbroker |            |             |                |
+:end:
 
 \clearpage
-|-----+-------------+--------------+----------------+-----------+-------------+---------------|
-| 180 | two-faced   | two-fisted   | two-phase      | thieves   | typhus      | deface        |
-|     | devastate   | deficit      | device         | diffuse   | divest      | dovehouse     |
-|     | advise      | edifice      | whiteface      |           |             |               |
-|-----+-------------+--------------+----------------+-----------+-------------+---------------|
-| 181 | taffeta     | theft        | Tophet         | typhoid   | tuft        | daft          |
-|     | deft        | davit        | defeat         | daffodil  | David       | devoid        |
-|     | devote      | devout       | diphtheria     | divide    | deviate     | diphthong     |
-|     | hotfoot     | outfit       | outvote        | stevedore | eightfooter |               |
-|-----+-------------+--------------+----------------+-----------+-------------+---------------|
-| 182 | tiffany     | typhoon      | toughness      | tiffin    | deafen      | defense       |
-|     | defiant     | define       | dauphin        | divan     | divine      | advent        |
-|     | advance     | advantage    |                |           |             |               |
-|-----+-------------+--------------+----------------+-----------+-------------+---------------|
-| 183 | tea-family  | tough-minded | TV-man         | deafmute  | defame      |               |
-|-----+-------------+--------------+----------------+-----------+-------------+---------------|
-| 184 | tavern      | taffrail     | tovarich       | thievery  | defer       | deform        |
-|     | defraud     | defray       | devour         | diaphragm | differ      | diver         |
-|     | diverse     | divorce      | defrost        | deaf-ear  | adverse     | advertisement |
-|-----+-------------+--------------+----------------+-----------+-------------+---------------|
-| 185 | tivoli      | tough-luck   | twofold        | toyful    | defalcation | defile        |
-|     | deflate     | develop      | devil          | duffel    | hatful      | hateful       |
-|     | outfield    | outflow      | white-elephant | youthful  | stifle      | wistful       |
-|-----+-------------+--------------+----------------+-----------+-------------+---------------|
-| 186 | TV-show     | thievish     | deficiency     | deviation | devotion    | dovish        |
-|     | diffusion   | division     | audiovisual    | whitefish | hot-fudge   |               |
-|-----+-------------+--------------+----------------+-----------+-------------+---------------|
-| 187 | tough-guy   | de-facto     | defect         | difficult | diving      | advocate      |
-|     | edification | staffing     | stuffing       |           |             |               |
-|-----+-------------+--------------+----------------+-----------+-------------+---------------|
-| 188 | two-fifths  | TV-fan       | thief-vault    | dive-off  | eighty-five | stave-off     |
-|-----+-------------+--------------+----------------+-----------+-------------+---------------|
-| 189 | taffy-pull  | tough-boy    | dive-bomber    | edifiable | stovepipe   | stove-pot     |
-|-----+-------------+--------------+----------------+-----------+-------------+---------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 280 290)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 180 | DEVICE      | two-faced  | two-fisted   | two-phase      | thieves     | typhus        |
+|     | deface      | devastate  | deficit      | diffuse        | divest      | dovehouse     |
+|     | advise      | edifice    | whiteface    |                |             |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 181 | DAVID       | taffeta    | theft        | Tophet         | typhoid     | tuft          |
+|     | daft        | deft       | davit        | defeat         | daffodil    | devoid        |
+|     | devote      | devout     | diphtheria   | divide         | deviate     | diphthong     |
+|     | hotfoot     | outfit     | outvote      | stevedore      | eightfooter |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 182 | TIFFANY     | typhoon    | toughness    | tiffin         | deafen      | defense       |
+|     | defiant     | define     | dauphin      | divan          | divine      | advent        |
+|     | advance     | advantage  |              |                |             |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 183 | DEAFMUTE    | tea-family | tough-minded | TV-man         | defame      |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 184 | TAVERN      | taffrail   | tovarich     | thievery       | defer       | deform        |
+|     | defraud     | defray     | devour       | diaphragm      | differ      | diver         |
+|     | diverse     | divorce    | defrost      | deaf-ear       | adverse     | advertisement |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 185 | DEVIL       | tefillin   | tivoli       | tough-luck     | twofold     | toyful        |
+|     | defalcation | defile     | deflate      | develop        | duffel      | hatful        |
+|     | hateful     | outfield   | outflow      | white-elephant | youthful    | stifle        |
+|     | wistful     |            |              |                |             |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 186 | DEVOTION    | TV-show    | thievish     | deficiency     | deviation   | dovish        |
+|     | diffusion   | division   | audiovisual  | whitefish      | hot-fudge   |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 187 | TOUGH-guy   | de-facto   | defect       | difficult      | diving      | advocate      |
+|     | edification | staffing   | stuffing     |                |             |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 188 | TV-fan      | two-fifths | thief-vault  | dive-off       | eighty-five | stave-off     |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 189 | DIVE-bomber | taffy-pull | tough-boy    | edifiable      | stovepipe   | stove-pot     |
+:end:
 
 \clearpage
-|-----+-------------+--------------+-------------+---------------+-------------+-------------|
-| 190 | topsail     | top-sergeant | top-secret  | topside       | topsoil     | topsy-turvy |
-|     | tapestry    | tipsy        | tips        | tops          | tubes       | tubs        |
-|     | types       | debase       | deposit     | dubious       | autobus     | autopsy     |
-|     | headpiece   | outpace      |             |               |             |             |
-|-----+-------------+--------------+-------------+---------------+-------------+-------------|
-| 191 | teapot      | tepid        | tiptoe      | top-hat       | top-dog     | topdrawer   |
-|     | towpath     | two-bit      | debate      | debit         | depth       | deputy      |
-|     | debutant    | adapt        | adept       | adopt         | output      | hotbed      |
-|     | outbid      | stupid       |             |               |             |             |
-|-----+-------------+--------------+-------------+---------------+-------------+-------------|
-| 192 | tiepin      | topknot      | topnotch    | thighbone     | twopence    | debenture   |
-|     | deepen      | debonair     | depend      | depone        | Dubonnet    | Ethiopian   |
-|     | headpin     | outbound     | headband    |               |             |             |
-|-----+-------------+--------------+-------------+---------------+-------------+-------------|
-| 193 | topman      | topmast      | topmost     | top-milk      | stepmother  | topminnow   |
-|-----+-------------+--------------+-------------+---------------+-------------+-------------|
-| 194 | tie-bar     | tea-party    | taper       | tapir         | taproom     | typewriter  |
-|     | topper      | topwork      | top-round   | top-rate      | daybreak    | debar       |
-|     | depart      | dapper       | debris      | department    | deportment  | depreciate  |
-|     | depress     | deprive      | dipper      | diaper        | outboard    | outbreak    |
-|     | sideboard   | sideburns    | stubborn    |               |             |             |
-|-----+-------------+--------------+-------------+---------------+-------------+-------------|
-| 195 | table       | tablet       | tableau     | tipple        | topple      | topless     |
-|     | tupelo      | two-ply      | dapple      | deplore       | diploma     | diplomat    |
-|     | double      | duplicate    | doublet     | diabolic      | audible     | edible      |
-|     | oddball     | stable       | steeple     | stipulate     |             |             |
-|-----+-------------+--------------+-------------+---------------+-------------+-------------|
-| 196 | tip-sheet   | top-sheet    | top-shelf   | two-page      | type-wash   | debauch     |
-|     | adoption    | adaption     | stoppage    |               |             |             |
-|-----+-------------+--------------+-------------+---------------+-------------+-------------|
-| 197 | tea-bag     | tapping      | topping     | typing        | topcoat     | topkick     |
-|     | tobacco     | toboggan     | topic       | typical       | typograph   | debacle     |
-|     | depict      | dipping      | debug       | autobiography | hatbox      | stopping    |
-|-----+-------------+--------------+-------------+---------------+-------------+-------------|
-| 198 | two-by-four | tip-off      | topflight   | top-heavy     | typify      | typefounder |
-|     | deep-felt   | deepfreeze   | stepfather  | step-off      | stupefy     | stopover    |
-|-----+-------------+--------------+-------------+---------------+-------------+-------------|
-| 199 | top-banana  | top-billing  | top-boots   | wet-pipe      | white-poppy | white-paper |
-|     | depopulate  | dope-peddler | dope-pusher | wastepaper    | hot-pepper  |             |
-|-----+-------------+--------------+-------------+---------------+-------------+-------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 290 300)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+-------------+--------------+--------------+---------------+-------------+-------------|
+| 190 | TAPAS       | topsail      | top-sergeant | top-secret    | topside     | topsoil     |
+|     | topsy-turvy | tapestry     | tipsy        | tips          | tops        | tubes       |
+|     | tubs        | types        | debase       | deposit       | dubious     | autobus     |
+|     | autopsy     | headpiece    | outpace      |               |             |             |
+|-----+-------------+--------------+--------------+---------------+-------------+-------------|
+| 191 | DEBUTANT    | teapot       | tepid        | tiptoe        | top-hat     | top-dog     |
+|     | topdrawer   | towpath      | two-bit      | debate        | debit       | depth       |
+|     | deputy      | adapt        | adept        | adopt         | output      | hotbed      |
+|     | outbid      | stupid       |              |               |             |             |
+|-----+-------------+--------------+--------------+---------------+-------------+-------------|
+| 192 | HATPIN      | tiepin       | topknot      | topnotch      | thighbone   | twopence    |
+|     | debenture   | deepen       | debonair     | depend        | depone      | Dubonnet    |
+|     | Ethiopian   | headpin      | outbound     | headband      |             |             |
+|-----+-------------+--------------+--------------+---------------+-------------+-------------|
+| 193 | STEPMOTHER  | topman       | topmast      | topmost       | top-milk    | topminnow   |
+|-----+-------------+--------------+--------------+---------------+-------------+-------------|
+| 194 | TYPEWRITER  | tie-bar      | tea-party    | taper         | tapir       | taproom     |
+|     | topper      | topwork      | top-round    | top-rate      | daybreak    | debar       |
+|     | depart      | dapper       | debris       | department    | deportment  | depreciate  |
+|     | depress     | deprive      | dipper       | diaper        | outboard    | outbreak    |
+|     | sideboard   | sideburns    | stubborn     |               |             |             |
+|-----+-------------+--------------+--------------+---------------+-------------+-------------|
+| 195 | TABLE       | tablet       | tableau      | tipple        | topple      | topless     |
+|     | tupelo      | two-ply      | dapple       | deplore       | diploma     | diplomat    |
+|     | double      | duplicate    | doublet      | diabolic      | audible     | edible      |
+|     | oddball     | stable       | steeple      | stipulate     |             |             |
+|-----+-------------+--------------+--------------+---------------+-------------+-------------|
+| 196 | DEBAUCH     | tip-sheet    | top-sheet    | top-shelf     | two-page    | type-wash   |
+|     | adoption    | adaption     | stoppage     |               |             |             |
+|-----+-------------+--------------+--------------+---------------+-------------+-------------|
+| 197 | TOBACCO     | tea-bag      | tapping      | topping       | typing      | topcoat     |
+|     | topkick     | toboggan     | topic        | typical       | typograph   | debacle     |
+|     | depict      | dipping      | debug        | autobiography | hatbox      | stopping    |
+|-----+-------------+--------------+--------------+---------------+-------------+-------------|
+| 198 | STEPFATHER  | two-by-four  | tip-off      | topflight     | top-heavy   | typify      |
+|     | typefounder | deep-felt    | deepfreeze   | step-off      | stupefy     | stopover    |
+|-----+-------------+--------------+--------------+---------------+-------------+-------------|
+| 199 | TOP-BANANA  | top-billing  | top-boots    | wet-pipe      | white-poppy | white-paper |
+|     | depopulate  | dope-peddler | dope-pusher  | wastepaper    | hot-pepper  |             |
+:end:
 
 \clearpage
-|-----+-------------+----------------+--------------+--------------+----------------+---------------|
-| 200 | necessity   | nieces         | noses        | noises       | incisor        | insist        |
-|     | incessant   | unceasing      | unseasoned   | unsuspicious | ounces         | gnosis        |
-|     | census      |                |              |              |                |               |
-|-----+-------------+----------------+--------------+--------------+----------------+---------------|
-| 201 | nest        | nasty          | nicety       | nostril      | nose-dive      | anesthesia    |
-|     | honest      | incident       | incite       | inside       | insight        | instant       |
-|     | instead     | instinct       | institute    | instrument   | unsatisfactory | unsteady      |
-|     | unsuitable  | gnostic        | one-step     | Wednesday    |                |               |
-|-----+-------------+----------------+--------------+--------------+----------------+---------------|
-| 202 | newshen     | nice-nelly     | niacin       | nosiness     | nuisance       | ensign        |
-|     | ensnare     | incinerator    | innocent     | insane       | insensitive    | insincere     |
-|     | uneasiness  | unseen         | unsound      | unison       | unessential    |               |
-|-----+-------------+----------------+--------------+--------------+----------------+---------------|
-| 203 | newsman     | noisemaker     | news-media   | nizam        | noisome        | enzyme        |
-|     | hansom      | inasmuch       | insomnia     | in-sum       | insemination   | unseemly      |
-|     | unassuming  | unsimilar      |              |              |                |               |
-|-----+-------------+----------------+--------------+--------------+----------------+---------------|
-| 204 | newsreel    | newsworthy     | answer       | encircle     | incertitude    | insert        |
-|     | insurgent   | insurmountable | insurrection | uncertain    | unsworn        | sincere       |
-|     | censor      |                |              |              |                |               |
-|-----+-------------+----------------+--------------+--------------+----------------+---------------|
-| 205 | nacelle     | nozzle         | nuzzle       | nestle       | nasal          | noiseless     |
-|     | nicely      | enslave        | insolence    | insolvent    | insulin        | insular       |
-|     | insult      | ancillary      | oneself      | unselfish    | wine-cellar    | senseless     |
-|     | Han Solo    |                |              |              |                |               |
-|-----+-------------+----------------+--------------+--------------+----------------+---------------|
-| 206 | news-agency | nose-job       | incision     | ionization   | unsociable     | sensation     |
-|-----+-------------+----------------+--------------+--------------+----------------+---------------|
-| 207 | nose-cone   | nosegay        | encyclopedia | honeysuckle  | inscription    | insect        |
-|     | insecure    | insignificant  | unicycle     | unscrupulous | wainscot       |               |
-|-----+-------------+----------------+--------------+--------------+----------------+---------------|
-| 208 | news-vendor | henceforth     | insufferable | insufficient | once-over      | ionosphere    |
-|     | uncivil     | unsafe         | UNICEF       |              |                |               |
-|-----+-------------+----------------+--------------+--------------+----------------+---------------|
-| 209 | newsboy     | nosepiece      | newsprint    | no-soap      | newspaper      | inhospitable  |
-|     | inseparable | insipid        | inspect      | inspiration  | insuperable    | insupportable |
-|     | unspent     | sensible       |              |              |                |               |
-|-----+-------------+----------------+--------------+--------------+----------------+---------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 300 310)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 200 | GNOSIS       | necessity     | nieces         | noses        | noises         | incisor       |
+|     | insist       | incessant     | unceasing      | unseasoned   | unsuspicious   | ounces        |
+|     | census       |               |                |              |                |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 201 | NOSTRIL      | nest          | nasty          | nicety       | nose-dive      | anesthesia    |
+|     | honest       | incident      | incite         | inside       | insight        | instant       |
+|     | instead      | instinct      | institute      | instrument   | unsatisfactory | unsteady      |
+|     | unsuitable   | gnostic       | one-step       | Wednesday    |                |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 202 | ENSIGN       | newshen       | nice-nelly     | niacin       | nosiness       | nuisance      |
+|     | ensnare      | incinerator   | innocent       | insane       | insensitive    | insincere     |
+|     | uneasiness   | unseen        | unsound        | unison       | unessential    |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 203 | INSEMINATION | newsman       | noisemaker     | news-media   | nizam          | noisome       |
+|     | enzyme       | hansom        | inasmuch       | insomnia     | in-sum         | unseemly      |
+|     | unassuming   | unsimilar     |                |              |                |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 204 | CENSOR       | newsreel      | newsworthy     | answer       | encircle       | incertitude   |
+|     | insert       | insurgent     | insurmountable | insurrection | uncertain      | unsworn       |
+|     | sincere      |               |                |              |                |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 205 | NACELLE      | nozzle        | nuzzle         | nestle       | nasal          | noiseless     |
+|     | nicely       | enslave       | insolence      | insolvent    | insulin        | insular       |
+|     | insult       | ancillary     | oneself        | unselfish    | wine-cellar    | senseless     |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 206 | NOSE-JOB     | news-agency   | incision       | ionization   | unsociable     | sensation     |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 207 | NOSE-cone    | nosegay       | encyclopedia   | honeysuckle  | inscription    | insect        |
+|     | insecure     | insignificant | unicycle       | unscrupulous | wainscot       |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 208 | IONOSPHERE   | news-vendor   | henceforth     | insufferable | insufficient   | once-over     |
+|     | uncivil      | unsafe        | unicef         |              |                |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 209 | NEWSBOY      | nosepiece     | newsprint      | no-soap      | newspaper      | inhospitable  |
+|     | inseparable  | insipid       | inspect        | inspiration  | insuperable    | insupportable |
+|     | unspent      | sensible      |                |              |                |               |
+:end:
 
 \clearpage
-|-----+-----------------+-------------+--------------+--------------+----------------+---------------|
-| 210 | notice          | Nazi        | nowadays     | nudist       | no-dice        | antacid       |
-|     | anticipate      | antiseptic  | enthusiasm   | entice       | indecent       | indistinct    |
-|     | induce          | industry    | hind-sight   | handsaw      | undeserved     | undesirable   |
-|     | undisturbed     | Ents        |              |              |                |               |
-|-----+-----------------+-------------+--------------+--------------+----------------+---------------|
-| 211 | nitwit          | nudity      | night-duty   | noted        | needed         | antitrust     |
-|     | annotate        | antidote    | entity       | entitle      | handed         | haunted       |
-|     | handout         | indeed      | knighthood   | undoubted    | untidy         | united        |
-|     | untied          | undated     | want-ad      |              |                |               |
-|-----+-----------------+-------------+--------------+--------------+----------------+---------------|
-| 212 | andante         | antenna     | Anthony      | antonym      | india-ink      | antiknock     |
-|     | handiness       | entwine     | inattentive  | indent       | Indian         | intend        |
-|     | intense         | intonate    | one-to-one   | undeniable   | unthankful     | wanton        |
-|     | sentence        | sentinel    | centennial   |              |                |               |
-|-----+-----------------+-------------+--------------+--------------+----------------+---------------|
-| 213 | nutmeg          | nightmare   | antimatter   | anthem       | anadem         | anatomy       |
-|     | anathema        | antimissile | endemic      | inadmissible | indemnify      | intimacy      |
-|     | intimidate      | handyman    | handmaiden   | handmade     | honeydew-melon | ointment      |
-|     | on-time         | onetime     | anytime      | untimely     | windmill       |               |
-|-----+-----------------+-------------+--------------+--------------+----------------+---------------|
-| 214 | network         | neither     | Netherlands  | nodder       | neutral        | notary        |
-|     | nutriment       | nitric      | nitrate      | nightrobe    | another        | anterior      |
-|     | anthracite      | anteroom    | endear       | endorse      | endure         | enter         |
-|     | entertain       | entrance    | entry        | handrail     | handwriting    | hundred       |
-|     | hinterland      | interact    | interest     | interior     | intern         | international |
-|     | interval        | interview   | introduce    | under        | Unitarian      | unit-rule     |
-|     | untiring        | winter      | wonder       |              |                |               |
-|-----+-----------------+-------------+--------------+--------------+----------------+---------------|
-| 215 | needle          | needless    | noodle       | night-owl    | new-deal       | antelope      |
-|     | anthill         | endless     | handle       | indelicate   | indolent       | indulge       |
-|     | intellect       | intelligent | intolerable  | know-it-all  | until          | windless      |
-|-----+-----------------+-------------+--------------+--------------+----------------+---------------|
-| 216 | nightshade      | night-watch | notation     | nutshell     | annotation     | antechamber   |
-|     | indigenous      | indigestion | intuition    | untouchable  | windowshade    | wantage       |
-|     | window-shopping | sandwich    |              |              |                |               |
-|-----+-----------------+-------------+--------------+--------------+----------------+---------------|
-| 217 | nothing         | nightcap    | nightgown    | nautical     | nightingale    | nutcracker    |
-|     | antagonist      | antichrist  | antics       | antique      | anything       | ending        |
-|     | handicraft      | hunting     | handcuff     | handicap     | inadequate     | index         |
-|     | indigo          | indignant   | induction    | intact       | integrity      | intoxicated   |
-|     | untangle        | winding     | wanting      | syndicate    |                |               |
-|-----+-----------------+-------------+--------------+--------------+----------------+---------------|
-| 218 | native          | nightfall   | notification | endeavor     | endive         | handful       |
-|     | antiphony       | inadvisable | indifferent  | individual   | indefinite     | undefined     |
-|     | undeveloped     | undefeated  | scientific   |              |                |               |
-|-----+-----------------+-------------+--------------+--------------+----------------+---------------|
-| 219 | notebook        | notable     | night-pay    | antibiotics  | antibody       | antipasto     |
-|     | antipathy       | antipode    | antipope     | handbag      | handbill       | handbook      |
-|     | handball        | inaudible   | independent  | inedible     | knee-deep      | knotty-pine   |
-|     | windpipe        | sandbox     | sound-box    |              |                |               |
-|-----+-----------------+-------------+--------------+--------------+----------------+---------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 310 320)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 210 | NUDIST        | notice          | Nazi         | nowadays     | no-dice        | antacid     |
+|     | anticipate    | antiseptic      | enthusiasm   | entice       | indecent       | indistinct  |
+|     | induce        | industry        | hind-sight   | handsaw      | undeserved     | undesirable |
+|     | undisturbed   |                 |              |              |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 211 | UNTIED        | nitwit          | nudity       | night-duty   | noted          | needed      |
+|     | antitrust     | annotate        | antidote     | entity       | entitle        | handed      |
+|     | haunted       | handout         | indeed       | knighthood   | undoubted      | untidy      |
+|     | united        | undated         | want-ad      |              |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 212 | ANTENNA       | andante         | Anthony      | antonym      | india-ink      | antiknock   |
+|     | handiness     | entwine         | inattentive  | indent       | Indian         | intend      |
+|     | intense       | intonate        | one-to-one   | undeniable   | unthankful     | wanton      |
+|     | sentence      | sentinel        | centennial   |              |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 213 | ANTIMATTER    | nutmeg          | nightmare    | anthem       | anadem         | anatomy     |
+|     | anathema      | antimissile     | endemic      | inadmissible | indemnify      | intimacy    |
+|     | intimidate    | handyman        | handmaiden   | handmade     | honeydew-melon | ointment    |
+|     | on-time       | onetime         | anytime      | untimely     | windmill       |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 214 | NUTTER        | network         | neither      | Netherlands  | nodder         | neutral     |
+|     | notary        | nutriment       | nitric       | nitrate      | nightrobe      | another     |
+|     | anterior      | anthracite      | anteroom     | endear       | endorse        | endure      |
+|     | enter         | entertain       | entrance     | entry        | handrail       | handwriting |
+|     | hundred       | hinterland      | interact     | interest     | interior       | intern      |
+|     | international | interval        | interview    | introduce    | under          | Unitarian   |
+|     | unit-rule     | untiring        | winter       | wonder       |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 215 | NOODLE        | needle          | needless     | night-owl    | new-deal       | antelope    |
+|     | anthill       | endless         | handle       | indelicate   | indolent       | indulge     |
+|     | intellect     | intelligent     | intolerable  | know-it-all  | until          | windless    |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 216 | SANDWICH      | nightshade      | night-watch  | notation     | nutshell       | annotation  |
+|     | antechamber   | indigenous      | indigestion  | intuition    | untouchable    | windowshade |
+|     | wantage       | window-shopping |              |              |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 217 | NIGHTGOWN     | nothing         | nightcap     | nautical     | nightingale    | nutcracker  |
+|     | antagonist    | antichrist      | antics       | antique      | anything       | ending      |
+|     | handicraft    | hunting         | handcuff     | handicap     | inadequate     | index       |
+|     | indigo        | indignant       | induction    | intact       | integrity      | intoxicated |
+|     | untangle      | winding         | wanting      | syndicate    |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 218 | NIGHTFALL     | native          | notification | endeavor     | endive         | handful     |
+|     | antiphony     | inadvisable     | indifferent  | individual   | indefinite     | undefined   |
+|     | undeveloped   | undefeated      | scientific   |              |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 219 | NOTEBOOK      | notable         | night-pay    | antibiotics  | antibody       | antipasto   |
+|     | antipathy     | antipode        | antipope     | handbag      | handbill       | handbook    |
+|     | handball      | inaudible       | independent  | inedible     | knee-deep      | knotty-pine |
+|     | windpipe      | sandbox         | sound-box    |              |                |             |
+:end:
 
 \clearpage
-|-----+----------------+--------------+---------------+----------------+-------------------+---------------|
-| 220 | nonce          | nonsense     | nonuse        | nainsook       | ananas            | announce      |
-|     | annoyance      | enhance      | onions        | onionskin      | unanswered        |               |
-|-----+----------------+--------------+---------------+----------------+-------------------+---------------|
-| 221 | noontime       | ninth        | nineteen      | ninety         | nondenominational | nontechnical  |
-|     | anoint         | innuendo     | know-nothing  | unintelligible | unintentional     | unwanted      |
-|     | union-dues     | unknit       |               |                |                   |               |
-|-----+----------------+--------------+---------------+----------------+-------------------+---------------|
-| 222 | ninon          | no-nonsense  | nonunion      | nonnegotiable  | nonentity         | non-owner     |
-|     | unknown        | unannounced  |               |                |                   |               |
-|-----+----------------+--------------+---------------+----------------+-------------------+---------------|
-| 223 | ninnyhammer    | noon-meal    | nonemotional  | nonmetal       | nonmember         | nonmedical    |
-|     | nonmilitary    | nonemergency | anonymous     | inanimate      | unanimous         | unanimated    |
-|     | synonymous     |              |               |                |                   |               |
-|-----+----------------+--------------+---------------+----------------+-------------------+---------------|
-| 224 | nunnery        | nonracial    | nonradical    | onion-ring     | union-organizer   | unenrolled    |
-|     | unhonored      |              |               |                |                   |               |
-|-----+----------------+--------------+---------------+----------------+-------------------+---------------|
-| 225 | nonliquid      | nonliterary  | nonelect      | nonallied      | nonelastic        | unenlightened |
-|     | unenlarged     | unanalyzed   | union-hall    | union-labor    | union-leader      | son-in-law    |
-|-----+----------------+--------------+---------------+----------------+-------------------+---------------|
-| 226 | nonchalant     | nonjuror     | nonage        | knee-injury    | uninjured         | uninsured     |
-|     | union-jack     | union-shop   | uninitiated   |                |                   |               |
-|-----+----------------+--------------+---------------+----------------+-------------------+---------------|
-| 227 | nincompoop     | nonagon      | nankeen       | non-com        | nannygoat         | nonconformist |
-|     | nonacceptance  | nonactive    | nonaggressive | nonequal       | nonexclusive      | unknowing     |
-|     | unincorporated |              |               |                |                   |               |
-|-----+----------------+--------------+---------------+----------------+-------------------+---------------|
-| 228 | nine-footer    | nonviolence  | nonfat        | nonvoting      | nonfeasance       | nonferrous    |
-|     | nonavailable   | unenviable   | unenforcible  | uninventive    | uninvited         | uninformed    |
-|     | union-official | Nineveh      |               |                |                   |               |
-|-----+----------------+--------------+---------------+----------------+-------------------+---------------|
-| 229 | ninepins       | nonabsorbent | nonbeliever   | nonbreakable   | nonpaying         | nonpareil     |
-|     | nonplus        | nonpros      | nonpartisan   | nonoperative   | nonprofessional   | nonprofit     |
-|     | nonpolitical   | union-pay    |               |                |                   |               |
-|-----+----------------+--------------+---------------+----------------+-------------------+---------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 320 330)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
+| 220 | NONCE          | nonsense       | nonuse        | nainsook      | ananas          | announce          |
+|     | annoyance      | enhance        | onions        | onionskin     | unanswered      |                   |
+|-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
+| 221 | UNKNIT         | noontime       | ninth         | nineteen      | ninety          | nondenominational |
+|     | nontechnical   | anoint         | innuendo      | know-nothing  | unintelligible  | unintentional     |
+|     | unwanted       | union-dues     |               |               |                 |                   |
+|-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
+| 222 | NONUNION       | ninon          | no-nonsense   | nonnegotiable | nonentity       | non-owner         |
+|     | unknown        | unannounced    |               |               |                 |                   |
+|-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
+| 223 | NOON-meal      | ninnyhammer    | nonemotional  | nonmetal      | nonmember       | nonmedical        |
+|     | nonmilitary    | nonemergency   | anonymous     | inanimate     | unanimous       | unanimated        |
+|     | synonymous     |                |               |               |                 |                   |
+|-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
+| 224 | NUNNERY        | nonracial      | nonradical    | onion-ring    | union-organizer | unenrolled        |
+|     | unhonored      |                |               |               |                 |                   |
+|-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
+| 225 | SON-IN-LAW     | nonliquid      | nonliterary   | nonelect      | nonallied       | nonelastic        |
+|     | unenlightened  | unenlarged     | unanalyzed    | union-hall    | union-labor     | union-leader      |
+|-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
+| 226 | UNION-JACK     | nonchalant     | nonjuror      | nonage        | knee-injury     | uninjured         |
+|     | uninsured      | union-shop     | uninitiated   |               |                 |                   |
+|-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
+| 227 | NONAGON        | nincompoop     | nannygoat     | nankeen       | non-com         | nonconformist     |
+|     | nonacceptance  | nonactive      | nonaggressive | nonequal      | nonexclusive    | unknowing         |
+|     | unincorporated |                |               |               |                 |                   |
+|-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
+| 228 | NINEVEH        | nine-footer    | nonviolence   | nonfat        | nonvoting       | nonfeasance       |
+|     | nonferrous     | nonavailable   | unenviable    | unenforcible  | uninventive     | uninvited         |
+|     | uninformed     | union-official |               |               |                 |                   |
+|-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
+| 229 | NINEPINS       | nonabsorbent   | nonbeliever   | nonbreakable  | nonpaying       | nonpareil         |
+|     | nonplus        | nonpros        | nonpartisan   | nonoperative  | nonprofessional | nonprofit         |
+|     | nonpolitical   | union-pay      |               |               |                 |                   |
+:end:
 
 \clearpage
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
