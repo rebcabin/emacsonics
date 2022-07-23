@@ -4119,7 +4119,7 @@ good ideas because they might incorrectly recall 64 at speed.
 
 \clearpage
 #+begin_src clojure :exports results :results verbatim drawer output
-  (babomorph 360 370)
+(babomorph 360   370)
 #+end_src
 
 #+RESULTS:
@@ -4157,9 +4157,15 @@ good ideas because they might incorrectly recall 64 at speed.
 :end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 370   380)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+---------------+---------------+---------------+--------------+--------------+----------------|
-| 270 | negus         | next          | nexus         | knocks       | annex        | encase         |
-|     | inaccessible  | inexcusable   | inexpensive   | inks         | inexperience | innocuous      |
+| 270 | inks          | negus         | next          | nexus        | knocks       | annex          |
+|     | encase        | inaccessible  | inexcusable   | inexpensive  | inexperience | innocuous      |
 |     | inquest       | unaccustomed  | unexpected    | unexplored   | unquestioned | Yankees        |
 |     | snacks        |               |               |              |              |                |
 |-----+---------------+---------------+---------------+--------------+--------------+----------------|
@@ -4198,9 +4204,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+---------------+---------------+---------------+--------------+--------------+----------------|
 | 279 | hanky-panky   | incapable     | innkeeper     | incubate     | inkpot       | kneecap        |
 |     | knockabout    | uncouple      | unequipped    | unoccupied   |              |                |
-|-----+---------------+---------------+---------------+--------------+--------------+----------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 380   390)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+---------------+-------------+--------------+---------------+--------------+---------------|
 | 280 | naves         | novice      | nephews      | nevus         | envious      | infest        |
 |     | infuse        | invest      | investigate  | invisible     | invoice      | knives        |
@@ -4216,7 +4228,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+---------------+-------------+--------------+---------------+--------------+---------------|
 | 283 | navy-man      | November    | infamous     | one-family    | unfamiliar   |               |
 |-----+---------------+-------------+--------------+---------------+--------------+---------------|
-| 284 | nefarious     | nephritis   | never        | nouveau-riche | anniversary  | enforce       |
+| 284 | nefarious     | nephritis   | nevevvr      | nouveau-riche | anniversary  | enforce       |
 |     | enfranchise   | environ     | infer        | infirm        | inform       | infringe      |
 |     | invariable    | invert      | knavery      | unfair        | unforeseen   | unforgettable |
 |     | unfortunate   | unfurnished | uniform      | universe      | university   | unvaried      |
@@ -4238,9 +4250,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+---------------+-------------+--------------+---------------+--------------+---------------|
 | 289 | navy-bean     | navy-brass  | enfeeble     | enviable      | unevaporated | unfabricated  |
 |     | unifiable     |             |              |               |              |               |
-|-----+---------------+-------------+--------------+---------------+--------------+---------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 390   400)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+-------------+-------------+---------------+---------------+--------------|
 | 290 | nabs         | naps        | nibs        | nips          | NBC           | nubs         |
 |     | knapsack     | knobs       | unbiased    | unobserved    | unobscured    | unopposed    |
@@ -4272,9 +4290,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | unbaffled    |             |             |               |               |              |
 |-----+--------------+-------------+-------------+---------------+---------------+--------------|
 | 299 | nabob        | nip-up      | unbiblical  | unpayable     | unpopular     | unpublished  |
-|-----+--------------+-------------+-------------+---------------+---------------+--------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 400   410)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+---------------+---------------+-------------+---------------+---------------+-------------|
 | 300 | masseuse      | mesas         | masses      | misses        | misuse        | mosses      |
 |     | muses         | Messias       | Mississippi | Moses         |               |             |
@@ -4310,9 +4334,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+---------------+---------------+-------------+---------------+---------------+-------------|
 | 309 | mishap        | misplay       | misplace    | misapply      | misbehave     | misbelief   |
 |     | misprint      | homo-sapiens  | homespun    | mass-produced |               |             |
-|-----+---------------+---------------+-------------+---------------+---------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 410   420)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-----------+------------+-------------+-------------+------------+---------------|
 | 310 | maids     | mats       | mates       | madhouse    | matzo      | meadows       |
 |     | medicine  | midsummer  | medusa      | midsemester | modes      | modest        |
@@ -4348,9 +4378,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | modify    | humidifier |             |             |            |               |
 |-----+-----------+------------+-------------+-------------+------------+---------------|
 | 319 | meatball  | made-up    | metabolic   | mouthpiece  | mutable    | mudpie        |
-|-----+-----------+------------+-------------+-------------+------------+---------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 420   430)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
 | 320 | manse       | mayonnaise    | manslaughter | mainsail   | menace       | mince       |
 |     | minus       | miniskirt     | means        | minister   | minstrel     | monastery   |
@@ -4374,7 +4410,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | Monroe      | homeowner     |              |            |              |             |
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
 | 325 | manhole     | mainland      | mainly       | manly      | manual       | monolith    |
-|     | moneylender | meanwhile     | monologue    | moonlight  | Manila       | Emmanuel    |
+|     | moneylender | meanwhile     | monologue    | moonlight  | Mani​la       | Emmanuel    |
 |     | hymnal      | womanly       |              |            |              |             |
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
 | 326 | manager     | manger        | mansion      | mention    | menagerie    | miniature   |
@@ -4392,9 +4428,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 329 | man-        | ape           | manipulate   | manpower   | minable      | moneybags   |
 |     | money-belt  | monoplane     | monopoly     | moonbeam   | moon-blind   | myna-bird   |
 |     | amenable    | hymenopteron  | omnibus      | omnipotent |              |             |
-|-----+-------------+---------------+--------------+------------+--------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 430   440)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+------------+----------------+---------------+-----------+-------------|
 | 330 | mammas       | maims      | mayhems        | memos         | memsahib  | mimes       |
 |     | mimeses      | mimosa     | momus          | mummies       |           |             |
@@ -4421,9 +4463,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+--------------+------------+----------------+---------------+-----------+-------------|
 | 339 | mamba        | mambo      | member         | mumps         | mumble    | membrane    |
 |     | memo-pad     | mummy-bag  | mumbo-jumbo    |               |           |             |
-|-----+--------------+------------+----------------+---------------+-----------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 440   450)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+-------------+--------------+------------+------------+------------|
 | 340 | mercenary   | mercer      | mercy        | morass     | morose     | morsel     |
 |     | Mars        | Morse       | amerce       | amorous    | humorous   | immerse    |
@@ -4456,46 +4504,58 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | Morpheus    | Moravia     |              |            |            |            |
 |-----+-------------+-------------+--------------+------------+------------+------------|
 | 349 | marble      | marabou     | mariposa     | marplot    | marrowbone | morbid     |
-|     | moribund    | hammer-beam | hammerblow   |            |            |            |
-|-----+-------------+-------------+--------------+------------+------------+------------|
+|     | moribund    | hammer-beam | hammer-blow  |            |            |            |
+:end:
 
 \clearpage
-|-----+-------------+---------------+-------------+--------------+-------------+-------------|
-| 350 | mails       | malice        | miles       | mills        | millisecond | maelstrom   |
-|     | molest      | aimless       | homeless    |              |             |             |
-|-----+-------------+---------------+-------------+--------------+-------------+-------------|
-| 351 | malt        | malady        | milady      | mallet       | melodrama   | melody      |
-|     | meld        | melt          | mild        | military     | millet      | mold        |
-|     | muleteer    | multiple      | mulatto     | multitude    | emulate     | hamlet      |
-|     | humility    | homiletics    | omelet      | umlaut       | smelt       | smolder     |
-|     | simulate    | simultaneous  |             |              |             |             |
-|-----+-------------+---------------+-------------+--------------+-------------+-------------|
-| 352 | MELON       | melancholy    | milliner    | million      | millennium  | malign      |
-|     | hemline     | homeland      | Himalayans  | semolina     |             |             |
-|-----+-------------+---------------+-------------+--------------+-------------+-------------|
-| 353 | mailman     | maim          | melamine    | millimeter   | millman     | muleman     |
-|     | mule-mark   | mealymouthed  | emolument   | small-minded |             |             |
-|-----+-------------+---------------+-------------+--------------+-------------+-------------|
-| 354 | molar       | miler         | malaria     | miller       | milliard    | mealworm    |
-|     | mailer      | milord        | millwright  | ameliorate   | similar     |             |
-|-----+-------------+---------------+-------------+--------------+-------------+-------------|
-| 355 | may-lily    | molehill      | milliliter  | mill-wheel   | melilot     |             |
-|-----+-------------+---------------+-------------+--------------+-------------+-------------|
-| 356 | militia     | malicious     | mileage     | maladjusted  | millage     | mulch       |
-|     | mulish      | emulsion      | humiliation | homology     |             |             |
-|-----+-------------+---------------+-------------+--------------+-------------+-------------|
-| 357 | malcontent  | mailing       | malignant   | malkin       | milk        | milligram   |
-|     | mollycoddle | molecule      | Malaga      | amalgamate   | hemlock     | homologous  |
-|-----+-------------+---------------+-------------+--------------+-------------+-------------|
-| 358 | mellophone  | malevolent    | malefactor  | malfeasance  | malformed   | malfunction |
-|     | mellifluous | milee-feuille | millefleurs | millfeed     | millefiore  | mule-foot   |
-|     | mollify     | homelife      |             |              |             |             |
-|-----+-------------+---------------+-------------+--------------+-------------+-------------|
-| 359 | mailbag     | mail-boat     | mail-pouch  | mailbox      | malleable   | melba       |
-|     | malapert    | malaprop      | mulberry    | muleback     | smallpox    |             |
-|-----+-------------+---------------+-------------+--------------+-------------+-------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 450   460)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+-------------+---------------+-------------+--------------+------------+--------------|
+| 350 | MALICE      | homeless      | maelstrom   | mills        | miles      | millisecond  |
+|     | aimless     | mails         | molest      |              |            |              |
+|-----+-------------+---------------+-------------+--------------+------------+--------------|
+| 351 | MALT        | melt          | mold        | omelet       | smelt      | mulatto      |
+|     | emulate     | hamlet        | homiletics  | humility     | malady     | mallet       |
+|     | meld        | melodrama     | melody      | milady       | mild       | military     |
+|     | millet      | muleteer      | multiple    | multitude    | simulate   | simultaneous |
+|     | smolder     | umlaut        |             |              |            |              |
+|-----+-------------+---------------+-------------+--------------+------------+--------------|
+| 352 | MELON       | Himalayans    | hemline     | semolina     | milliner   | homeland     |
+|     | malign      | melancholy    | millennium  | million      |            |              |
+|-----+-------------+---------------+-------------+--------------+------------+--------------|
+| 353 | mailman     | maim          | melamine    | millimeter   | millman    | muleman      |
+|     | mule-mark   | mealymouthed  | emolument   | small-minded |            |              |
+|-----+-------------+---------------+-------------+--------------+------------+--------------|
+| 354 | molar       | miler         | malaria     | miller       | milliard   | mealworm     |
+|     | mailer      | milord        | millwright  | ameliorate   | similar    |              |
+|-----+-------------+---------------+-------------+--------------+------------+--------------|
+| 355 | may-lily    | molehill      | milliliter  | mill-wheel   | melilot    |              |
+|-----+-------------+---------------+-------------+--------------+------------+--------------|
+| 356 | militia     | malicious     | mileage     | maladjusted  | millage    | mulch        |
+|     | mulish      | emulsion      | humiliation | homology     |            |              |
+|-----+-------------+---------------+-------------+--------------+------------+--------------|
+| 357 | malcontent  | mailing       | malignant   | malkin       | milk       | milligram    |
+|     | mollycoddle | molecule      | Malaga      | amalgamate   | hemlock    | homologous   |
+|-----+-------------+---------------+-------------+--------------+------------+--------------|
+| 358 | mellophone  | malevolent    | malefactor  | malfeasance  | malformed  | malfunction  |
+|     | mellifluous | milee-feuille | millefleurs | millfeed     | millefiore | mule-foot    |
+|     | mollify     | homelife      |             |              |            |              |
+|-----+-------------+---------------+-------------+--------------+------------+--------------|
+| 359 | mailbag     | mail-boat     | mail-pouch  | mailbox      | malleable  | melba        |
+|     | malapert    | malaprop      | mulberry    | muleback     | smallpox   |              |
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 460   470)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+------------+-----------+------------+-------------+----------|
 | 360 | magistrate  | majesty    | majuscule | matches    | images      |          |
 |-----+-------------+------------+-----------+------------+-------------+----------|
@@ -4518,9 +4578,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 368 | midge-fly   | home-chef  | semishift |            |             |          |
 |-----+-------------+------------+-----------+------------+-------------+----------|
 | 369 | matchable   | matchbook  | matchbox  | matchboard | match-up    | mushball |
-|-----+-------------+------------+-----------+------------+-------------+----------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 470   480)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+--------------+------------+-----------+---------------+-------------|
 | 370 | macassar    | maccus       | magazine   | maxim     | megacycle     | mikes       |
 |     | mix         | mucus        | mugs       | amongst   | hammocks      |             |
@@ -4548,9 +4614,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+--------------+------------+-----------+---------------+-------------|
 | 379 | magpie      | make-believe | makeup     | Maccabee  | megapolis     | mock-up     |
 |     | hummingbird | Yom-Kippur   | amicable   |           |               |             |
-|-----+-------------+--------------+------------+-----------+---------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 480   490)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+--------------+-------------+--------------+--------------+--------------|
 | 380 | mavis      | movies       | moves       | muffs        | Mephisto     | emphasis     |
 |     | emphysema  | ham-fisted   | home        | office       |              |              |
@@ -4575,9 +4647,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 388 | movie-fan  | Mafia-family | move-off    | move-over    |              |              |
 |-----+------------+--------------+-------------+--------------+--------------+--------------|
 | 389 | movable    | movie-plot   | move-up     | amphibious   | amphipod     | amphibole    |
-|-----+------------+--------------+-------------+--------------+--------------+--------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 490   500)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+--------------+------------+--------------+--------------+-------------|
 | 390 | maps       | mobster      | ambassador | ambuscade    | embassy      | embezzle    |
 |     | emboss     | embosom      | home-base  | impasse      | impassive    | impose      |
@@ -4614,9 +4692,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 398 | ambivalent | ambivert     | amebiform  | impavid      | impoverished | swamp-fever |
 |-----+------------+--------------+------------+--------------+--------------+-------------|
 | 399 | maypop     | mopboard     | mop-up     | humpback     | imbibe       | impubic     |
-|-----+------------+--------------+------------+--------------+--------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 500   510)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+-------------+--------------+---------------+-------------+-----------|
 | 400 | racist       | recess      | resist       | raises        | roses       | horses    |
 |     | irresistible | warehouses  |              |               |             |           |
@@ -4652,9 +4736,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 409 | rasp         | raspberry   | receptacle   | reception     | recipe      | recipient |
 |     | reciprocal   | respect     | respiration  | respite       | resplendent | respond   |
 |     | responsible  | airspace    | horseback    | horsepower    | horsewhip   | irascible |
-|-----+--------------+-------------+--------------+---------------+-------------+-----------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 510   520)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+------------+------------+-------------+--------------+---------------|
 | 410 | radius      | raticide   | reduce     | righteous   | roadster     | roads         |
 |     | Rhodes      | ritzy      | arduous    | artisan     | artist       | yardstick     |
@@ -4698,9 +4788,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 419 | ratable     | rataplan   | ratproof   | redback     | redberry     | redbreast     |
 |     | redouble    | rutabaga   | air-tube   | heartbeat   | heartbreak   | hardpan       |
 |     | hartebeest  | irritable  | yardbird   | wiretap     |              |               |
-|-----+-------------+------------+------------+-------------+--------------+---------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 520   530)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+-----------+------------+------------+------------+-------------|
 | 420 | rains      | rancid    | ransack    | ransom     | reigns     | reinsert    |
 |     | reinstate  | renews    | rhinoceros | rinse      | ruins      | earnest     |
@@ -4734,16 +4830,21 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+------------+-----------+------------+------------+------------+-------------|
 | 429 | rainbow    | rainpool  | rainproof  | runabout   | runup      | hornbill    |
 |     | hornblende | hornbook  | hornpipe   |            |            |             |
-|-----+------------+-----------+------------+------------+------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 530   540)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+-------------+-----------+-----------+------------+-------------|
 | 430 | rams         | reams       | rooms     | remiss    | rhymes     | arms        |
 |     | armies       | armistice   | airmass   | harems    | surmise    |             |
 |-----+--------------+-------------+-----------+-----------+------------+-------------|
 | 431 | remedy       | remit       | remodel   | remote    | rheumatism | roomette    |
 |     | armada       | aromatic    | armed     | eremite   | hermit     | warmth      |
-|     | Harry Mudd   |             |           |           |            |             |
 |-----+--------------+-------------+-----------+-----------+------------+-------------|
 | 432 | raiment      | remain      | remind    | reminisce | remnant    | remonstrate |
 |     | remunerate   | Roman       | romantic  | Romania   | ruminant   | airman      |
@@ -4770,9 +4871,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 439 | ramp         | rampart     | ramble    | rampage   | reemploy   | Rembrandt   |
 |     | reimburse    | rhombus     | rhumba    | romp      | rumble     | rumpus      |
 |     | rambunctious | rambutan    | armpit    | warm-up   |            |             |
-|-----+--------------+-------------+-----------+-----------+------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 540   550)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+--------------+------------+-----------+-------------+-----------|
 | 440 | rehearsal   | roars        | arrears    | errors    | horrors     | warhorse  |
 |     | warriors    |              |            |           |             |           |
@@ -4798,9 +4905,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 448 | rara-avis   | rear-fanged  | rearview   | rarefy    | errorfree   |           |
 |-----+-------------+--------------+------------+-----------+-------------+-----------|
 | 449 | rarebit     | re-orbit     | roorback   | wire-rope |             |           |
-|-----+-------------+--------------+------------+-----------+-------------+-----------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 550   560)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+-----------+-------------+--------------+-----------+-----------|
 | 450 | rails       | realize   | release     | realest      | realist   | airless   |
 |     | hairless    | orioles   | wireless    |              |           |           |
@@ -4833,9 +4946,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+-----------+-------------+--------------+-----------+-----------|
 | 459 | railbird    | reliable  | relapse     | rollback     | roly-poly | earlap    |
 |     | earlobe     | harelip   | hurly-burly | orlop        | whirlpool |           |
-|-----+-------------+-----------+-------------+--------------+-----------+-----------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 560   570)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+---------------+-------------+--------------+-----------+-----------|
 | 460 | rages       | ratios        | regisseur   | register     | rejoice   | riches    |
 |     | ridges      | righteous     | rushes      | arches       |           |           |
@@ -4867,9 +4986,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+---------------+-------------+--------------+-----------+-----------|
 | 469 | reshape     | reship        | airship     | archbishop   | hairsheep | warship   |
 |     | worship     |               |             |              |           |           |
-|-----+-------------+---------------+-------------+--------------+-----------+-----------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 570   580)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+----------------+-------------+------------+-------------+------------|
 | 470 | racks        | rags           | recast      | request    | raucous     | rex        |
 |     | requisite    | ruckus         | arcs        | heroics    | irksome     | orchestra  |
@@ -4907,9 +5032,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+--------------+----------------+-------------+------------+-------------+------------|
 | 479 | recap        | recapitulation | recuperate  | rockabye   | rockberry   | rockbird   |
 |     | rock-bottom  | rugby          | archipelago | ark-boat   | herringbone | arquebus   |
-|-----+--------------+----------------+-------------+------------+-------------+------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 580   590)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+------------+--------------+-------------+-------------+------------|
 | 480 | refuse     | reviews    | revise       | revisit     | airwaves    | harvest    |
 |     | orifice    | Orpheus    | wharves      | war-office  | service     | surface    |
@@ -4939,9 +5070,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 488 | revival    | rough-fish | rough-footed | wharf-fish  | survivor    |            |
 |-----+------------+------------+--------------+-------------+-------------+------------|
 | 489 | rev-up     | reviewable | refabricate  | roofable    | rough-up    | wharf-boat |
-|-----+------------+------------+--------------+-------------+-------------+------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 590   600)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-----------+------------+-------------+-----------+-------------+----------|
 | 490 | rabies    | repast     | repose      | repost    | rebus       | robust   |
 |     | rhapsody  | robes      | ropes       | airbase   | airbus      | Arabs    |
@@ -4980,9 +5117,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-----------+------------+-------------+-----------+-------------+----------|
 | 499 | republic  | republish  | repeople    | rip-up    | air-pipe    | earbob   |
 |     | orb-web   | war-baby   |             |           |             |          |
-|-----+-----------+------------+-------------+-----------+-------------+----------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 600   610)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+---------------+---------------+---------------+--------------+-------------+--------------|
 | 500 | lasses        | lassoes       | leases        | lazy-Susan   | losses      | Louis-Seize  |
 |     | alehouses     | aliases       | Ulysses       | Alsace       |             |              |
@@ -5001,7 +5144,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | elsewhere     | illusory      | ulcer         |              |             |              |
 |-----+---------------+---------------+---------------+--------------+-------------+--------------|
 | 505 | lazily        | leasehold     | low-slung     | luzula       | oil-seal    | wholesale    |
-|     | whole-souled  | Lysol         |               |              |             |              |
+|     | whole-souled  |               |               |              |             |              |
 |-----+---------------+---------------+---------------+--------------+-------------+--------------|
 | 506 | loose-jointed | Alsatian      | oil-switch    | wall-switch  | yellow-sage | yellow-sedge |
 |-----+---------------+---------------+---------------+--------------+-------------+--------------|
@@ -5011,9 +5154,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+---------------+---------------+---------------+--------------+-------------+--------------|
 | 509 | lazybones     | lesbian       | lisp          | low-spirited | wellspring  | well-spoken  |
 |     | allspice      |               |               |              |             |              |
-|-----+---------------+---------------+---------------+--------------+-------------+--------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 610   620)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+--------------+------------+-------------+---------------+------------|
 | 510 | lattice      | lettuce      | ladies     | lads        | lighthouse    | lotus      |
 |     | loudspeaker  | Lao-Tse      | eldest     | halitosis   | oldest        | holidays   |
@@ -5052,18 +5201,24 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+--------------+--------------+------------+-------------+---------------+------------|
 | 519 | ladybird     | ladybug      | laudable   | leadback    | lead-up       | lead-pipe  |
 |     | let-up       | hilltop      | holdback   | hold-up     | wildebeest    |            |
-|-----+--------------+--------------+------------+-------------+---------------+------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 620   630)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 520 | lance       | lens          | lioness     | linseed    | lonesome  | lunacy        |
 |     | lyonnaise   | alliance      | aliens      | allowance  | holiness  | illness       |
-|     | silence     | Linus         |             |            |           |               |
+|     | silence     |               |             |            |           |               |
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 521 | land        | lend          | lent        | lint       | lintel    | lean-to       |
 |     | laundry     | lentil        | lindy       | linden     | lunatic   | London        |
 |     | alienate    | island        | eland       | Holland    | oleander  | walnut        |
-|     | wall-unit   | well-knit     | cylinder    | assailant  | Lando     |               |
+|     | wall-unit   | well-knit     | cylinder    | assailant  |           |               |
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 522 | lenient     | Lenin         | leonine     | linen      | linin     | alanine       |
 |     | all-in-one  | hole-in-one   | illanun     | Illinoian  | wellknown |               |
@@ -5075,7 +5230,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | loaner      | loanword      | loner       | lunar      | Leonardo  | alienor       |
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 525 | lanolin     | lienal        | lineal      | line-haul  | Iinoleate | linoleum      |
-|     | lonely      | lunule        | willy-nilly |            |           |               |
+|     | lonely      | lunule        | willy-ni​lly |            |           |               |
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 526 | launch      | lounge        | lineage     | longitude  | lingerie  | lunation      |
 |     | luncheon    | lunge         | lynch       | alienation | elench    | elenge        |
@@ -5089,9 +5244,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 529 | lenape      | unable        | linebacker  | line-up    | linebred  | linebreed     |
 |     | loanable    | loanblend     | alienable   |            |           |               |
-|-----+-------------+---------------+-------------+------------+-----------+---------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 630   640)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+---------------+---------------+-----------------+------------+-----------|
 | 530 | lambs       | limbs         | limousine     | looms           | low-mass   | almost    |
 |     | elms        | Hallowmas     | slums         |                 |            |           |
@@ -5123,9 +5284,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 539 | lamp        | lamprey       | limber        | limp            | limpid     | limbus    |
 |     | limbo       | Limburger     | lumbago       | lumber          | lump       | Alhambra  |
 |     | Olympics    | slumber       |               |                 |            |           |
-|-----+-------------+---------------+---------------+-----------------+------------+-----------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 640   650)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+-------------+---------------+-------------+-------------+-------------|
 | 540 | larceny     | liars       | lawyers       | lower-house | walrus      | wheelhorse  |
 |     | hilarious   |             |               |             |             |             |
@@ -5154,9 +5321,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+-------------+---------------+-------------+-------------+-------------|
 | 549 | larb        | larboard    | larrup        | layer-up    | low-warp    | lowerable   |
 |     | lyre-back   | lyrebird    |               |             |             |             |
-|-----+-------------+-------------+---------------+-------------+-------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 650   660)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+-------------+--------------+--------------+----------------+------------|
 | 550 | lawless     | lilies      | lowliest     | lulls        | lulus          | Allhallows |
 |     | hula-hulas  | oil-wells   |              |              |                |            |
@@ -5180,9 +5353,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 558 | low-level   | lowlife     | low-lived    | well-loved   | yellow-livered | all-alive  |
 |-----+-------------+-------------+--------------+--------------+----------------+------------|
 | 559 | lalapalooza | lilliputian | lollipop     | lullaby      |                |            |
-|-----+-------------+-------------+--------------+--------------+----------------+------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 660   670)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+-------------+---------------+-------------+-------------+-------------|
 | 560 | latches     | lodges      | loges         | loggias     | legislator  | logistics   |
 |     | luscious    | elegies     | eulogist      | eyelashes   | zoologist   |             |
@@ -5207,9 +5386,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 568 | low-shafted | well-shaven | well-shuffled |             |             |             |
 |-----+-------------+-------------+---------------+-------------+-------------+-------------|
 | 569 | awl-shaped  | hell-ship   | algebra       | oil-job     | oil-ship    | well-shaped |
-|-----+-------------+-------------+---------------+-------------+-------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 670   680)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-----------------+-------------+------------+-------------+------------+------------------|
 | 570 | laxative        | laxity      | legacy     | legs        | locks      | looks            |
 |     | locust          | low-cost    | log-house  | likewise    | lungs      | elks             |
@@ -5246,9 +5431,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-----------------+-------------+------------+-------------+------------+------------------|
 | 579 | legbar          | leg-break   | leg-pull   | leucoplast  | likable    | lockup           |
 |     | look-up         | longboat    | lugubrious | helicopter  | allocable  |                  |
-|-----+-----------------+-------------+------------+-------------+------------+------------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 680   690)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+--------------+------------+-----------------+---------------+--------------|
 | 580 | laughs       | layoffs      | leaves     | levies          | lives         | lifesaver    |
 |     | life-span    | life-size    | loaves     | love-sick       | lovesome      | elves        |
@@ -5284,44 +5475,56 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+--------------+--------------+------------+-----------------+---------------+--------------|
 | 589 | lavabo       | laughable    | leafhopper | lifebuoy        | lifeboat      | livable      |
 |     | live-by      | live-up      | lovable    | lovebird        | love-potion   | alphabet     |
-|-----+--------------+--------------+------------+-----------------+---------------+--------------|
+:end:
 
 \clearpage
-|-----+-------------+----------------+--------------+------------+-------------+-------------|
-| 590 | labs        | laps           | lapse        | lips       | loops       | lopsided    |
-|     | lobbies     | lobster        | alabaster    | alibis     | alps        | ellipse     |
-|     | elopes      | helps          | wall-base    | celibacy   |             |             |
-|-----+-------------+----------------+--------------+------------+-------------+-------------|
-| 591 | lapidary    | lappet         | leaped       | libido     | lipid       | looped      |
-|     | law-abiding | albatross      | albeit       | eloped     | allopathy   | halibut     |
-|     | ill-boding  | well-paid      | whaleboat    |            |             |             |
-|-----+-------------+----------------+--------------+------------+-------------+-------------|
-| 592 | lupine      | albino         | Albion       | alpine     | hell-bent   | olibanum    |
-|     | whalebone   | well-appointed | sleepiness   |            |             |             |
-|-----+-------------+----------------+--------------+------------+-------------+-------------|
-| 593 | low-beam    | album          | Alabama      | albumin    | elopement   | helpmate    |
-|     | oil-palm    |                |              |            |             |             |
-|-----+-------------+----------------+--------------+------------+-------------+-------------|
-| 594 | labor       | laboratory     | lawbreaker   | leopard    | leap-year   | leprosy     |
-|     | liberal     | liberty        | Libra        | librarian  | looper      | lowbrow     |
-|     | lubricant   | elaborate      | elbow-room   | eloper     | helper      | ill-bred    |
-|     | wellborn    | wellbred       | sleeper      | slipper    | celebrate   | wheelbarrow |
-|-----+-------------+----------------+--------------+------------+-------------+-------------|
-| 595 | label       | lapel          | liable       | libel      | lobelia     | loblolly    |
-|     | lobule      | tube-oil       | loophole     | lowbell    | allowable   | helpless    |
-|     | hillbilly   | hullabaloo     | well-beloved | soluble    | syllable    |             |
-|-----+-------------+----------------+--------------+------------+-------------+-------------|
-| 596 | libation    | lobation       | low-budget   | lowbush    | lowpitched  | slipshod    |
-|-----+-------------+----------------+--------------+------------+-------------+-------------|
-| 597 | lawbook     | leaping        | lobbying     | looping    | alpaca      | eloping     |
-|     | helping     | ill-being      | oil-bag      | well-being | sleeping    |             |
-|-----+-------------+----------------+--------------+------------+-------------+-------------|
-| 598 | leapfrog    | lop-off        | all-beef     | helpful    | wellbehaved | lapful      |
-|-----+-------------+----------------+--------------+------------+-------------+-------------|
-| 599 | lap-up      | leap-up        | ale-pub      | Ali-Baba   | oil-pipe    | wallpaper   |
-|-----+-------------+----------------+--------------+------------+-------------+-------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 690   700)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+-------------+----------------+--------------+------------+-------------+-----------|
+| 590 | labs        | laps           | lapse        | lips       | loops       | lopsided  |
+|     | lobbies     | lobster        | alabaster    | alibis     | alps        | ellipse   |
+|     | elopes      | helps          | wall-base    | celibacy   |             |           |
+|-----+-------------+----------------+--------------+------------+-------------+-----------|
+| 591 | lapidary    | lappet         | leaped       | libido     | lipid       | looped    |
+|     | law-abiding | albatross      | albeit       | eloped     | allopathy   | halibut   |
+|     | ill-boding  | well-paid      | whaleboat    |            |             |           |
+|-----+-------------+----------------+--------------+------------+-------------+-----------|
+| 592 | lupine      | albino         | Albion       | alpine     | hell-bent   | olibanum  |
+|     | whalebone   | well-appointed | sleepiness   |            |             |           |
+|-----+-------------+----------------+--------------+------------+-------------+-----------|
+| 593 | low-beam    | album          | Alabama      | albumin    | elopement   | helpmate  |
+|     | oil-palm    |                |              |            |             |           |
+|-----+-------------+----------------+--------------+------------+-------------+-----------|
+| 594 | labor       | laboratory     | lawbreaker   | leopard    | leap-year   | leprosy   |
+|     | liberal     | liberty        | Libra        | librarian  | looper      | lowbrow   |
+|     | lubricant   | elaborate      | elbow-room   | eloper     | helper      | ill-bred  |
+|     | wellborn    | wellbred       | sleeper      | slipper    | celebrate   |           |
+|-----+-------------+----------------+--------------+------------+-------------+-----------|
+| 595 | label       | lapel          | liable       | libel      | lobelia     | loblolly  |
+|     | lobule      | tube-oil       | loophole     | lowbell    | allowable   | helpless  |
+|     | hillbilly   | hullabaloo     | well-beloved | soluble    | syllable    |           |
+|-----+-------------+----------------+--------------+------------+-------------+-----------|
+| 596 | libation    | lobation       | low-budget   | lowbush    | lowpitched  | slipshod  |
+|-----+-------------+----------------+--------------+------------+-------------+-----------|
+| 597 | lawbook     | leaping        | lobbying     | looping    | alpaca      | eloping   |
+|     | helping     | ill-being      | oil-bag      | well-being | sleeping    |           |
+|-----+-------------+----------------+--------------+------------+-------------+-----------|
+| 598 | leapfrog    | lop-off        | all-beef     | helpful    | wellbehaved | lapful    |
+|-----+-------------+----------------+--------------+------------+-------------+-----------|
+| 599 | lap-up      | leap-up        | ale-pub      | Ali-Baba   | oil-pipe    | wallpaper |
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 700   710)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+----------------+---------------+--------------+-------------+------------|
 | 600 | chases       | cheeses        | choices       | jazzist      | Jesus       | juices     |
 |     | joss-house   | shoe-size      |               |              |             |            |
@@ -5350,9 +5553,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+--------------+----------------+---------------+--------------+-------------+------------|
 | 609 | chassepot    | cheeseparer    | cheeseburger  | chess-pie    | chessboard  | jasper     |
 |     | jazzbow      | juice-up       | Jezebel       | shoespoon    | Josup       | Shuswap    |
-|-----+--------------+----------------+---------------+--------------+-------------+------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 710   720)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+------------+------------+---------------+-----------+-------------|
 | 610 | chiteaus    | jets       | jetsam     | jettison      | Judas     | shades      |
 |     | shadows     | sheets     | shots      | shouts        | geodesy   |             |
@@ -5387,9 +5596,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | sheet-block | sheathbill | shootable  | shootboard    | shoot-up  | shotblast   |
 |     | shotbush    | shot-put   | shut-up    | chateaubriand | agitable  | hushed-up   |
 |     | washed-up   | washtub    |            |               |           |             |
-|-----+-------------+------------+------------+---------------+-----------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 720   730)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+--------------+------------+--------------+------------+------------|
 | 620 | chance      | chains       | chancellor | chanson      | Chinese    | genesis    |
 |     | genius      | genocide     | agency     | ginseng      | issuance   | oceans     |
@@ -5409,7 +5624,7 @@ good ideas because they might incorrectly recall 64 at speed.
 | 624 | chinaware   | general      | generation | generic      | generosity | genre      |
 |     | January     | joiner       | junior     | shiner       |            |            |
 |-----+-------------+--------------+------------+--------------+------------+------------|
-| 625 | chainless   | chainlet     | channel    | chenille     | genealogy  | genial     |
+| 625 | chainless   | chainlet     | channel    | cheni​lle     | genealogy  | genial     |
 |     | oceanology  | shinleaf     |            |              |            |            |
 |-----+-------------+--------------+------------+--------------+------------+------------|
 | 626 | change      | chain-shaped | chinch     | chinchilla   | ginger     | gingelly   |
@@ -5425,9 +5640,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 629 | china-boy   | chinbone     | chin-up    | janapa       | johnapple  | johnboat   |
 |     | joinable    | Juneberry    | junebud    | juniper      | schnapps   | shinbone   |
 |     | shinplaster |              |            |              |            |            |
-|-----+-------------+--------------+------------+--------------+------------+------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 730   740)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+-------------+-------------+-------------+------------+-----------|
 | 630 | chemise    | chimes      | chums       | gems        | James      | jams      |
 |     | shames     | shamus      |             |             |            |           |
@@ -5445,7 +5666,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | shamrock   | shimmer     | shomer      |             |            |           |
 |-----+------------+-------------+-------------+-------------+------------+-----------|
 | 635 | chummily   | gemlike     | gemmologist | gemmule     | gym-hall   | schmaltz  |
-|     | shameless  | Ishmael     | Gimli       |             |            |           |
+|     | shameless  | Ishmael     |             |             |            |           |
 |-----+------------+-------------+-------------+-------------+------------+-----------|
 | 636 | gemmieeous | gemmation   | gym-shoe    | Jamshid     | jimjams    | shim-sham |
 |-----+------------+-------------+-------------+-------------+------------+-----------|
@@ -5457,55 +5678,67 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+------------+-------------+-------------+-------------+------------+-----------|
 | 639 | chamber    | champagne   | champion    | champignon  | chimpanzee | chump     |
 |     | jambeau    | jambalaya   | jambone     | jam-pack    | jam-up     | jamboree  |
-|     | jumbo      | jumble      | jump        | shambles    | shampoo    | chimp     |
-|-----+------------+-------------+-------------+-------------+------------+-----------|
+|     | jumbo      | jumble      | jump        | shambles    | shampoo    |           |
+:end:
 
 \clearpage
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 640 | chairs     | cherries    | chores       | gyroscope   | gyrus      | jars        |
-|     | jersey     | jurist      | Scheherazade | shares      | shears     |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 641 | charity    | chard       | chart        | charter     | cheroot    | cheet       |
-|     | chariot    | joyride     | shirt        | short       | shard      | shred       |
-|     | shrewd     | shroud      | surety       | watchword   | ushered    |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 642 | charnel    | churn       | gerent       | Geronimo    | gerund     | geranium    |
-|     | journal    | journey     | shrine       | shrink      | shorn      | shoehorn    |
-|     | sojourn    | sureness    | adjourn      | assurance   | usher-in   | Gorn        |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 643 | chairman   | charm       | charwoman    | germ        | German     | germane     |
-|     | germinate  | gerrymander | jeremiad     | juryman     | jurywoman  | ashram      |
-|     | showroom   | shrimp      | washerman    | washroom    |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 644 | cheerer    | Gerardia    | juror        | sharer      | shearer    | shearier    |
-|     | shirrer    | shorer      | surer        | assurer     | usherer    | usurer      |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 645 | charlatan  | charily     | cheerleader  | Charlie     | cheerless  | churlish    |
-|     | schorl     | sherlock    | shoreline    | shareholder | shrill     | surely      |
-|     | usherless  |             |              |             |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 646 | charge     | cherish     | church       | Churchill   | George     | gyration    |
-|     | shrewish   | ushership   |              |             |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 647 | charcoal   | Cherokee    | gyrocompass  | Jericho     | jerk       | jarring     |
-|     | jargon     | jerrican    | shark        | sharing     | shirk      | shriek      |
-|     | shrug      |             |              |             |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 648 | chervil    | cheerful    | sharif       | sheriff     | shrift     | shrive      |
-|     | shroff     | shrove      | surefire     | surefooted  | giraffe    |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
-| 649 | charabanc  | charpoy     | cheer-up     | cherry-pie  | chirp      | chirrup     |
-|     | cherub     | sharp       | sharpy       | sherbet     | shorebird  | showerproof |
-|     | shrapnel   | shrub       |              |             |            |             |
-|-----+------------+-------------+--------------+-------------+------------+-------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 740   750)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+-----------+-------------+--------------+-------------+-----------+-------------|
+| 640 | chairs    | cherries    | chores       | gyroscope   | gyrus     | jars        |
+|     | jersey    | jurist      | Scheherazade | shares      | shears    |             |
+|-----+-----------+-------------+--------------+-------------+-----------+-------------|
+| 641 | charity   | chard       | chart        | charter     | cheroot   | cheet       |
+|     | chariot   | joyride     | shirt        | short       | shard     | shred       |
+|     | shrewd    | shroud      | surety       | watchword   | ushered   |             |
+|-----+-----------+-------------+--------------+-------------+-----------+-------------|
+| 642 | charnel   | churn       | gerent       | Geronimo    | gerund    | geranium    |
+|     | journal   | journey     | shrine       | shrink      | shorn     | shoehorn    |
+|     | sojourn   | sureness    | adjourn      | assurance   | usher-in  |             |
+|-----+-----------+-------------+--------------+-------------+-----------+-------------|
+| 643 | chairman  | charm       | charwoman    | germ        | German    | germane     |
+|     | germinate | gerrymander | jeremiad     | juryman     | jurywoman | ashram      |
+|     | showroom  | shrimp      | washerman    | washroom    |           |             |
+|-----+-----------+-------------+--------------+-------------+-----------+-------------|
+| 644 | cheerer   | Gerardia    | juror        | sharer      | shearer   | shearier    |
+|     | shirrer   | shorer      | surer        | assurer     | usherer   | usurer      |
+|-----+-----------+-------------+--------------+-------------+-----------+-------------|
+| 645 | charlatan | charily     | cheerleader  | Charlie     | cheerless | churlish    |
+|     | schorl    | sherlock    | shoreline    | shareholder | shrill    | surely      |
+|     | usherless |             |              |             |           |             |
+|-----+-----------+-------------+--------------+-------------+-----------+-------------|
+| 646 | charge    | cherish     | church       | Churchill   | George    | gyration    |
+|     | shrewish  | ushership   |              |             |           |             |
+|-----+-----------+-------------+--------------+-------------+-----------+-------------|
+| 647 | charcoal  | Cherokee    | gyrocompass  | Jericho     | jerk      | jarring     |
+|     | jargon    | jerrican    | shark        | sharing     | shirk     | shriek      |
+|     | shrug     |             |              |             |           |             |
+|-----+-----------+-------------+--------------+-------------+-----------+-------------|
+| 648 | chervil   | cheerful    | sharif       | sheriff     | shrift    | shrive      |
+|     | shroff    | shrove      | surefire     | surefooted  | giraffe   |             |
+|-----+-----------+-------------+--------------+-------------+-----------+-------------|
+| 649 | charabanc | charpoy     | cheer-up     | cherry-pie  | chirp     | chirrup     |
+|     | cherub    | sharp       | sharpy       | sherbet     | shorebird | showerproof |
+|     | shrapnel  | shrub       |              |             |           |             |
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 750   760)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+-------------+------------+--------------+---------------+------------|
 | 650 | chalice     | chills      | jalousie   | jealousy     | jailhouse     | jewels     |
 |     | joyless     | Julius      | shells     | shoelace     | ageless       | socialism  |
 |-----+-------------+-------------+------------+--------------+---------------+------------|
 | 651 | child       | gelatin     | gelid      | jilt         | jolt          | shallot    |
-|     | shelter     | shield      | shoulder   | age-old      | agility       | Shalob     |
+|     | shelter     | shield      | shoulder   | age-old      | agility       |            |
 |-----+-------------+-------------+------------+--------------+---------------+------------|
 | 652 | challenge   | chalone     | chilliness | chow-line    | jawline       | jillion    |
 |     | jolliness   | julienne    | shalloon   | shallowness  | show-line     | echelon    |
@@ -5530,9 +5763,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+-------------+------------+--------------+---------------+------------|
 | 659 | chilblain   | jailbait    | jailbird   | jailbreak    | jalopy        | jellybread |
 |     | julep       | shallop     | shellapple | shellback    | shellproof    | shilpit    |
-|-----+-------------+-------------+------------+--------------+---------------+------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 760   770)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-----------------+-------------+-------------+--------------+------------+--------------|
 | 660 | cha-chas        | chiches     | chi-chis    | cicisbeo     | joy-juice  | joshes       |
 |     | judges          | shojis      |             |              |            |              |
@@ -5556,13 +5795,19 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-----------------+-------------+-------------+--------------+------------+--------------|
 | 669 | Chachapoya      | chichipate  | chichipe    | jojoba       | jujube     | shoe-shaped  |
 |     | shoe-shop       | showshop    |             |              |            |              |
-|-----+-----------------+-------------+-------------+--------------+------------+--------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 770   780)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-----------------+-------------+-------------+--------------+------------+-------------|
 | 670 | checks          | checkstones | checkstrap  | cheeks       | chicks     | jackass     |
 |     | jockeys         | jokes       | shakes      | showcase     | Ajax       | hedgehogs   |
-|     | watchcase       | jacks       |             |              |            |             |
+|     | watchcase       |             |             |              |            |             |
 |-----+-----------------+-------------+-------------+--------------+------------+-------------|
 | 671 | checked         | checkout    | chickadee   | Chiquito     | chickweed  | choked      |
 |     | gigot           | jackdaw     | jacket      | jagged       | shakedown  | shake-out   |
@@ -5593,14 +5838,19 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-----------------+-------------+-------------+--------------+------------+-------------|
 | 678 | checkoff        | check-over  | check-weave | chock-full   | choke-full | jackfish    |
 |     | jackfruit       | jugful      | shakefork   | shake-off    | shake-wave | shockwave   |
-|     | Chekhov         |             |             |              |            |             |
 |-----+-----------------+-------------+-------------+--------------+------------+-------------|
 | 679 | cheekbone       | cheekpiece  | checkback   | checkbite    | checkbook  | checkpoint  |
 |     | check-up        | chick-pea   | chockablock | Jacob        | Jacobin    | shakeproof  |
 |     | shakeup         |             |             |              |            |             |
-|-----+-----------------+-------------+-------------+--------------+------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 780   790)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 680 | chafes             | chauffeuse | chefs        | chiefs      | chives     | geophysics    |
 |     | jives              | shaves     | sheaves      | shoves      | watch-face | watch-officer |
@@ -5608,13 +5858,14 @@ good ideas because they might incorrectly recall 64 at speed.
 | 681 | chafed             | chiefdom   | chieftain    | cheviot     | shaft      | shaved        |
 |     | shavetail          | shift      | shoved       | Java-tea    | achieved   |               |
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
-| 682 | chaffinch          | chiffon    | chauvinist   | chavender   | Javanese   | juvenile      |
+| 682 | chaffinch          | chiffon    | chauvinist   | chavender   | Javanese   | juveni​le      |
 |     | shaven             | ash-oven   | washfountain |             |            |               |
+|-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 683 | chief-mate         | sheaveman  | show-fame    | achievement |            |               |
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 684 | chafer             | chaffer    | chaffron     | chauffeur   | chevron    | shofar        |
 |     | shaver             | shivaree   | shiver       | achiever    | ashiver    | watch-fire    |
-|     | witch-fire         | whichever  | Jefferson    | shofar      |            |               |
+|     | witch-fire         | whichever  | Jefferson    |             |            |               |
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 685 | chevalier          | chiefless  | chiefly      | chivalry    | javelin    | jovial        |
 |     | joyful             | shaveling  | sheaflike    | shoeflower  | shoofly    | shovel        |
@@ -5629,48 +5880,59 @@ good ideas because they might incorrectly recall 64 at speed.
 | 688 | chaff-flower       | chief-of   | shave-off    | shove-off   |            |               |
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 689 | chaffable          | chavibetol | achievable   | shove-up    | watch-fob  |               |
-|-----+--------------------+------------+--------------+-------------+------------+---------------|
+:end:
 
 \clearpage
-|-----+--------------+-------------+-------------+-------------+-------------+---------------|
-| 690 | chaps        | chapstick   | chips       | chops       | chopsuey    | chophouse     |
-|     | gypsy        | gypsum      | jabs        | jobs        | gyps        | ships         |
-|     | shops        | showbiz     | showpiece   |             |             |               |
-|-----+--------------+-------------+-------------+-------------+-------------+---------------|
-| 691 | chapter      | chopped     | gibbet      | shipped     | shopped     | showboat      |
-|     | ashpit       | hashpot     | hotchpot    | Egypt       | Jupiter     | Jabba the Hut |
-|-----+--------------+-------------+-------------+-------------+-------------+---------------|
-| 692 | cheapen      | chip-in     | Chippendale | Chopin      | chubbiness  | chupon        |
-|     | Japan        | jawbone     | shabbiness  | sheepnose   | sheepnut    | shipowner     |
-|     | ashpan       | hash-pan    | watchband   | wishbone    |             |               |
-|-----+--------------+-------------+-------------+-------------+-------------+---------------|
-| 693 | chapman      | chapwoman   | chipmunk    | sheepman    | sheepmaster | sheepmint     |
-|     | shipment     | shipmaster  | shipmate    | shopman     | hatch-beam  |               |
-|-----+--------------+-------------+-------------+-------------+-------------+---------------|
-| 694 | chaparral    | chaperon    | cheaper     | chipper     | chopper     | gibber        |
-|     | gypper       | jabber      | jabberwocky | jobber      | jawbreaker  | jabiru        |
-|     | jeopardize   | shipper     | shopper     | shepherd    | shipwreck   | shipwright    |
-|     | shipyard     | hatch-bar   | washboard   | switchboard |             |               |
-|-----+--------------+-------------+-------------+-------------+-------------+---------------|
-| 695 | chapel       | chaplain    | Chablis     | giblets     | jobless     | jubilee       |
-|     | shapely      | shoeblack   | shoebill    | showbill    | shibboleth  | shoplifter    |
-|     | ash-blonde   | washable    | sociable    |             |             |               |
-|-----+--------------+-------------+-------------+-------------+-------------+---------------|
-| 696 | chippage     | chop-cherry | chop-chop   | jib-o-jib   | she-beech   | sheepish      |
-|     | sheepshearer | sheepwash   | shipshape   | hodgepodge  | Egyptian    |               |
-|-----+--------------+-------------+-------------+-------------+-------------+---------------|
-| 697 | chapping     | chipping    | chopping    | jabbing     | shaping     | sheepgate     |
-|     | shipping     | shoepack    | shopping    | shopkeeper  | shebang     | hedgepig      |
-|     | Chewbacca    |             |             |             |             |               |
-|-----+--------------+-------------+-------------+-------------+-------------+---------------|
-| 698 | chapfallen   | chop-off    | shapeful    | sheepfaced  | shipfitter  | sheepfold     |
-|     | sheepfoot    | shopful     |             |             |             |               |
-|-----+--------------+-------------+-------------+-------------+-------------+---------------|
-| 699 | chapbook     | chip-blower | chip-proof  | jibboom     | shapable    | shape-up      |
-|     | sheep-pod    | shipboard   | shipbuilder | hushpuppy   |             |               |
-|-----+--------------+-------------+-------------+-------------+-------------+---------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 790   800)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+--------------+-------------+-------------+-------------+-------------+------------|
+| 690 | chaps        | chapstick   | chips       | chops       | chopsuey    | chophouse  |
+|     | gypsy        | gypsum      | jabs        | jobs        | gyps        | ships      |
+|     | shops        | showbiz     | showpiece   |             |             |            |
+|-----+--------------+-------------+-------------+-------------+-------------+------------|
+| 691 | chapter      | chopped     | gibbet      | shipped     | shopped     | showboat   |
+|     | ashpit       | hashpot     | hotchpot    | Egypt       | Jupiter     |            |
+|-----+--------------+-------------+-------------+-------------+-------------+------------|
+| 692 | cheapen      | chip-in     | Chippendale | Chopin      | chubbiness  | chupon     |
+|     | Japan        | jawbone     | shabbiness  | sheepnose   | sheepnut    | shipowner  |
+|     | ashpan       | hash-pan    | watchband   | wishbone    |             |            |
+|-----+--------------+-------------+-------------+-------------+-------------+------------|
+| 693 | chapman      | chapwoman   | chipmunk    | sheepman    | sheepmaster | sheepmint  |
+|     | shipment     | shipmaster  | shipmate    | shopman     | hatch-beam  |            |
+|-----+--------------+-------------+-------------+-------------+-------------+------------|
+| 694 | chaparral    | chaperon    | cheaper     | chipper     | chopper     | gibber     |
+|     | gypper       | jabber      | jabberwocky | jobber      | jawbreaker  | jabiru     |
+|     | jeopardize   | shipper     | shopper     | shepherd    | shipwreck   | shipwright |
+|     | shipyard     | hatch-bar   | washboard   | switchboard |             |            |
+|-----+--------------+-------------+-------------+-------------+-------------+------------|
+| 695 | chapel       | chaplain    | Chablis     | giblets     | jobless     | jubilee    |
+|     | shapely      | shoeblack   | shoebill    | showbill    | shibboleth  | shoplifter |
+|     | ash-blonde   | washable    | sociable    |             |             |            |
+|-----+--------------+-------------+-------------+-------------+-------------+------------|
+| 696 | chippage     | chop-cherry | chop-chop   | jib-o-jib   | she-beech   | sheepish   |
+|     | sheepshearer | sheepwash   | shipshape   | hodgepodge  | Egyptian    |            |
+|-----+--------------+-------------+-------------+-------------+-------------+------------|
+| 697 | chapping     | chipping    | chopping    | jabbing     | shaping     | sheepgate  |
+|     | shipping     | shoepack    | shopping    | shopkeeper  | shebang     | hedgepig   |
+|-----+--------------+-------------+-------------+-------------+-------------+------------|
+| 698 | chapfallen   | chop-off    | shapeful    | sheepfaced  | shipfitter  | sheepfold  |
+|     | sheepfoot    | shopful     |             |             |             |            |
+|-----+--------------+-------------+-------------+-------------+-------------+------------|
+| 699 | chapbook     | chip-blower | chip-proof  | jibboom     | shapable    | shape-up   |
+|     | sheep-pod    | shipboard   | shipbuilder | hushpuppy   |             |            |
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 800   810)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+---------------+-------------------+------------+----------------+-------------|
 | 700 | cases        | causes        | cusses            | gases      | gazes          | guesses     |
 |     | gashouse     | kisses        | axis              | access     | excess         | excise      |
@@ -5698,8 +5960,8 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | gazelle      | guzzle        | quasi-legislative | quisling   | axle           | auxiliary   |
 |     | exalt        | exhilarate    | exile             | excel      | exhale         |             |
 |-----+--------------+---------------+-------------------+------------+----------------+-------------|
-| 706 | causeation   | gasogene      | quasi-judicial    | quiz-show  | accusation     | acquisition |
-|     | exchange     | exchequer     | exigent           | oxygen     | case-shelf     |             |
+| 706 | caseation    | gasogene      | quasi-judicial    | quiz-show  | accusation     | acquisition |
+|     | exchange     | exchequer     | exigent           | oxygen     |                |             |
 |-----+--------------+---------------+-------------------+------------+----------------+-------------|
 | 707 | cascade      | casing        | cask              | cassock    | cossack        | casket      |
 |     | gasket       | goose-egg     | kiosk             | kissing    | exact          | excavate    |
@@ -5712,9 +5974,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | gazebo       | gooseberry    | gospel            | gossip     | hocuspocus     | accept      |
 |     | except       | exhibit       | expand            | expect     | expend         | experience  |
 |     | expire       | explain       | explore           | export     | express        | exuberant   |
-|-----+--------------+---------------+-------------------+------------+----------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 810   820)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+--------------+-------------+-------------+---------------+---------------|
 | 710 | cats       | catsup       | catastrophe | coats       | caddies       | codes         |
 |     | co-eds     | codicil      | egotism     | goddess     | godson        | kites         |
@@ -5755,15 +6023,21 @@ good ideas because they might incorrectly recall 64 at speed.
 | 719 | catapult   | catbird      | catboat     | catbrier    | cutback       | cutiepie      |
 |     | cutup      | getup        | giddap      | guidebook   | good-bye      | Good-Hope     |
 |     | equitable  | October      | octopus     |             |               |               |
-|-----+------------+--------------+-------------+-------------+---------------+---------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 820   830)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+---------------+--------------+---------------+------------+--------------+-------------|
 | 720 | cancel        | cancer       | coincidence   | conceal    | concede      | conceit     |
 |     | concentration | consent      | consequence   | conserve   | consider     | consign     |
 |     | consist       | console      | conspire      | constable  | constitution | consul      |
 |     | consume       | counsel      | gunhouse      | gainsay    | gunnysack    | queens      |
-|     | agonize       | Kiwanis      | Aquinas       |            |              |             |
+|     | agonize       | Kiwanis      |               |            |              |             |
 |-----+---------------+--------------+---------------+------------+--------------+-------------|
 | 721 | candid        | candle       | candy         | cant       | canter       | condense    |
 |     | condition     | conductor    | contact       | content    | contest      | context     |
@@ -5799,9 +6073,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+---------------+--------------+---------------+------------+--------------+-------------|
 | 729 | canape        | cannibal     | canopy        | connubial  | gunboat      | gunplay     |
 |     | gunpoint      | gunpowder    | queenbee      | ignoble    |              |             |
-|-----+---------------+--------------+---------------+------------+--------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 830   840)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+---------------+-------------+------------+------------+------------+-------------|
 | 730 | cameos        | chemist     | comestible | combs      | commas     | commissary  |
 |     | games         | gums        |            |            |            |             |
@@ -5837,9 +6117,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | competence    | compete     | complain   | complete   | complex    | compliment  |
 |     | comply        | component   | composer   | compress   | compromise | computer    |
 |     | gamble        | gambit      | gambol     | gumbo      |            |             |
-|-----+---------------+-------------+------------+------------+------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 840   845)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-----------+-----------+---------------+------------+------------+-----------|
 | 740 | caress    | coarse    | correspond    | corsage    | corset     | course    |
 |     | craze     | crease    | crest         | crass      | crisis     | cross     |
@@ -5847,7 +6133,6 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | Christian | Christmas | chrysanthemum | charisma   | chorus     | garcon    |
 |     | garrison  | grace     | grasp         | grass      | graze      | grease    |
 |     | Greece    | grocer    | gross         | accuracy   | across     | Aquarius  |
-|     | Icarus    |           |               |            |            |           |
 |-----+-----------+-----------+---------------+------------+------------+-----------|
 | 741 | carat     | card      | cardinal      | carrot     | cart       | cartoon   |
 |     | cord      | cordial   | corridor      | courtesy   | court      | coward    |
@@ -5876,8 +6161,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 744 | carara    | career    | careworn      | cariri     | carrier    | courier   |
 |     | coherer   | corer     | crier         | curare     | grower     | Gruyere   |
 |     | agrarian  |           |               |            |            |           |
-|-----+-----------+-----------+---------------+------------+------------+-----------|
+:end:
 
+\clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph    845 850)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+------------+------------+-------------+-------------+--------------|
 | 745 | carryall    | careless   | carol      | coral       | corral      | crawl        |
 |     | cruel       | curl       | cure-all   | chorale     | garland     | garlic       |
@@ -5892,7 +6184,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | crack       | crackle    | crag       | creak       | creek       | crick        |
 |     | cricket     | croak      | crock      | crocket     | crocodile   | crocus       |
 |     | crook       | croquet    | co-worker  | curriculum  | gargle      | Greek        |
-|     | grog        | gherkin    | aggregate  | segregate   | Kirk        |              |
+|     | grog        | gherkin    | aggregate  | segregate   |             |              |
 |-----+-------------+------------+------------+-------------+-------------+--------------|
 | 748 | carafe      | caravan    | careful    | carryover   | carve       | corvette     |
 |     | craft       | cravat     | crave      | crevice     | curfew      | curve        |
@@ -5906,9 +6198,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | crop        | croup      | curable    | curb        | chiropodist | chiropractor |
 |     | garbage     | grab       | grape      | grapple     | grip        | group        |
 |     | grub        |            |            |             |             |              |
-|-----+-------------+------------+------------+-------------+-------------+--------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 850   860)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+------------+--------------+--------------+-------------+--------------|
 | 750 | calls       | calcium    | callous      | clasp        | class       | clause       |
 |     | close       | closet     | cluster      | colossus     | cholesterol | gallows      |
@@ -5931,7 +6229,6 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | clemency    | climate    | climb        | clump        | clumsy      | column       |
 |     | culminate   | glamour    | gleam        | glimmer      | glimpse     | gloam        |
 |     | gloom       | glum       | acclaim      | acclimate    | kilometer   | schoolmaster |
-|     | golem       | Gollum     |              |              |             |              |
 |-----+-------------+------------+--------------+--------------+-------------+--------------|
 | 754 | caller      | calorie    | chlorite     | claret       | clarify     | clarinet     |
 |     | clarion     | clear      | clergy       | clerk        | collar      | color        |
@@ -5960,9 +6257,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | glib        | glob       | gallbladder  | globe        | goalpost    | gullible     |
 |     | gulp        | kelp       | kelpie       | kleptomaniac | eclipse     | equilibrium  |
 |     | eucalyptus  |            |              |              |             |              |
-|-----+-------------+------------+--------------+--------------+-------------+--------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 860   870)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+-------------+-------------+------------+--------------+------------|
 | 760 | cages      | caches      | catches     | cautious   | coaches      | couches    |
 |     | gashes     | gauges      | gouges      | gushes     | gauchos      | sagacious  |
@@ -5990,9 +6293,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+------------+-------------+-------------+------------+--------------+------------|
 | 769 | cashbook   | cashboy     | cashbox     | catchpenny | catchpole    | catch-up   |
 |     | ketchup    | key-job     |             |            |              |            |
-|-----+------------+-------------+-------------+------------+--------------+------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 870   880)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+----------------+----------------+--------------+--------------+-------------|
 | 770 | cakes      | caucus         | coax           | coexist      | cox          | cooks       |
 |     | gags       | gangster       | kicks          | kings        | quicksand    | quicksilver |
@@ -6029,9 +6338,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 779 | co-captain | cockboat       | cockpaddle     | cockpit      | cockup       | cock-a-hoop |
 |     | cocobolo   | cocopan        | cookbook       | cuckoo-bee   | gangplank    | kickback    |
 |     | kickup     | kakapo         | kingpin        | kookaburra   | eggcup       |             |
-|-----+------------+----------------+----------------+--------------+--------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 880   890)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-----------------+---------------+--------------+-----------+-------------+--------------|
 | 780 | cafes           | calves        | cavascope    | caves     | coffeehouse | coifs        |
 |     | coves           | coveys        | cuffs        | gaffs     | goofs       | kvass        |
@@ -6060,13 +6375,19 @@ good ideas because they might incorrectly recall 64 at speed.
 | 788 | coffee-flavored | give-off      | goof-off     | qui-vive  |             |              |
 |-----+-----------------+---------------+--------------+-----------+-------------+--------------|
 | 789 | coffeeberry     | coffeebush    | coffeepot    | cough-up  | give-up     | goofball     |
-|-----+-----------------+---------------+--------------+-----------+-------------+--------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 890   900)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 790 | cabs        | caboose    | capacity   | capes      | capsize    | capstan     |
 |     | capstone    | capsule    | copious    | copies     | cowboys    | gaps        |
-|     | keepsake    | hiccups    | cabasa     | Cupid      |            |             |
+|     | keepsake    | hiccups    |            |            |            |             |
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 791 | capital     | capitol    | capitulate | captain    | captivate  | copied      |
 |     | cop-out     | cupid      | kept       | equipped   | sickbed    |             |
@@ -6079,7 +6400,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 794 | caper       | caprice    | cooper     | cooperate  | copper     | copra       |
 |     | copyreader  | copyright  | cooper     | gabardine  | gabber     | keeper      |
-|     | keyboard    | kipper     | aquapura   | skipper    | cobra      |             |
+|     | keyboard    | kipper     | aquapura   | skipper    |            |             |
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 795 | cabal       | cable      | capelet    | capelin    | Capella    | cobbler     |
 |     | cobblestone | cobalt     | copilot    | couple     | copula     | cowbell     |
@@ -6098,9 +6419,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 799 | capable     | cap-a-pie  | capybara   | cobweb     | copybook   | copyboy     |
 |     | cubeb       | cupbearer  | kabob      | keep-up    | key-pipe   |             |
-|-----+-------------+------------+------------+------------+------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 900   910)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+----------------+---------------+------------------+-----------------+--------------|
 | 800 | faces       | face-saving    | fezzes        | fusses           | phases          | physicist    |
 |     | vases       | vices          | vicissitude   | voices           | half-size       | offices      |
@@ -6119,7 +6446,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | Ophism      |                |               |                  |                 |              |
 |-----+-------------+----------------+---------------+------------------+-----------------+--------------|
 | 804 | facer       | facework       | fossorial     | fusser           | vasoreflex      | viceroy      |
-|     | visor       | vizier         | officer       | phaser           |                 |              |
+|     | visor       | vizier         | officer       |                  |                 |              |
 |-----+-------------+----------------+---------------+------------------+-----------------+--------------|
 | 805 | faceless    | face-lift      | face-wall     | facility         | fizzle          | fossil       |
 |     | fusillade   | fuselage       | foozie        | vacillate        | vaseline        | vassal       |
@@ -6136,9 +6463,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+----------------+---------------+------------------+-----------------+--------------|
 | 809 | facepiece   | faceplate      | faceup        | feasible         | fusible         | fussbudget   |
 |     | vesper      | vice-president | visible       | office-boy       | offspring       |              |
-|-----+-------------+----------------+---------------+------------------+-----------------+--------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 910   920)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+--------------+--------------+------------+----------------+----------------|
 | 810 | fatso      | fates        | feats        | feuds      | fights         | fetus          |
 |     | footsore   | footstep     | footstool    | photostat  | vats           | vets           |
@@ -6157,7 +6490,7 @@ good ideas because they might incorrectly recall 64 at speed.
 | 814 | father     | fatter       | feather      | fedora     | feeder         | federal        |
 |     | fetter     | fitter       | fighter      | fodder     | footrest       | footwear       |
 |     | footwork   | veteran      | veterinarian | vetoer     | voter          | after          |
-|     | aviator    | evader       | heavy-water  | Vader      |                |                |
+|     | aviator    | evader       | heavy-water  |            |                |                |
 |-----+------------+--------------+--------------+------------+----------------+----------------|
 | 815 | fatal      | fee-tail     | fettle       | feudal     | fiddle         | fidelity       |
 |     | foothill   | foothold     | footlights   | footlocker | footloose      | footwall       |
@@ -6174,9 +6507,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+------------+--------------+--------------+------------+----------------+----------------|
 | 819 | fatback    | fed-up       | feedback     | football   | footbridge     | footpad        |
 |     | footpace   | footpath     | footprint    | avoidable  |                |                |
-|-----+------------+--------------+--------------+------------+----------------+----------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 920   930)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+------------+------------+---------------+-------------+-------------|
 | 820 | fancy       | fence      | fiance     | finesse       | fines       | fins        |
 |     | vainness    | veins      | vines      | Venus         | venison     | venous      |
@@ -6198,7 +6537,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | vineyard    | evener     | heavenward |               |             |             |
 |-----+-------------+------------+------------+---------------+-------------+-------------|
 | 825 | fanlight    | final      | finely     | finial        | funnel      | phenol      |
-|     | vanilla     | vainly     | vinyl      | heavenly      |             |             |
+|     | vani​lla     | vainly     | vinyl      | heavenly      |             |             |
 |-----+-------------+------------+------------+---------------+-------------+-------------|
 | 826 | finch       | finish     | Finnish    | vanish        | Venetian    | vengeance   |
 |     | V-engine    | avenge     | evangel    | eventual      |             |             |
@@ -6211,9 +6550,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+------------+------------+---------------+-------------+-------------|
 | 829 | fanback     | finable    | finback    | phenobarbital | evenup      | heaven-born |
 |     | oven-baked  | ovenbird   |            |               |             |             |
-|-----+-------------+------------+------------+---------------+-------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 930   940)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+-----------------+----------------+--------------+-------------+-----------|
 | 830 | fames      | fameuse         | famous         | famose       | femcee      | foams     |
 |     | fumes      | fumous          | vamoose        | vomicine     | euphemism   | half-mast |
@@ -6241,9 +6586,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+------------+-----------------+----------------+--------------+-------------+-----------|
 | 839 | fimble     | fumble          | fimbriate      | vamp         | vampire     | vambrace  |
 |     | vimpa      | Phomopsis       | half-implied   |              |             |           |
-|-----+------------+-----------------+----------------+--------------+-------------+-----------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 940   950)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+--------------+-----------+------------+------------+--------------|
 | 840 | farce      | fierce       | firehouse | first      | force      | forest       |
 |     | forsake    | forswear     | freeze    | frost      | foursome   | foresee      |
@@ -6257,7 +6608,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | froth      | fruit        | further   | furtive    | fjord      | variety      |
 |     | vertebra   | verdict      | vertigo   | afford     | afraid     | avert        |
 |     | effort     | everything   | overdo    | overdue    | overtake   | overthrow    |
-|     | overturn   | Frodo        |           |            |            |              |
+|     | overturn   |              |           |            |            |              |
 |-----+------------+--------------+-----------+------------+------------+--------------|
 | 842 | farina     | fairness     | fern      | foreign    | forename   | forenoon     |
 |     | forehand   | France       | franchise | frantic    | friend     | front        |
@@ -6300,13 +6651,18 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | fireplug   | firepower    | fireproof | forbear    | forbid     | freebooter   |
 |     | freeborn   | four-poster  | variable  | verb       | everybody  | overpay      |
 |     | overpower  | overburden   |           |            |            |              |
-|-----+------------+--------------+-----------+------------+------------+--------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 950   960)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+----------------+--------------+------------+-------------+-----------|
-| 850 | FLEECE      | false          | felicitate   | fail-safe  | fallacy     | fleas     |
+| 850 | fallacy     | FALSE          | felicitate   | fail-safe  | fleece      | fleas     |
 |     | fogies      | philosophy     | valise       | velocity   | avulse      | civilize  |
-|     | floss       |                |              |            |             |           |
 |-----+-------------+----------------+--------------+------------+-------------+-----------|
 | 851 | fallout     | falter         | fault        | felt       | field       | filter    |
 |     | filth       | flat           | flatter      | fleet      | flight      | flitter   |
@@ -6352,9 +6708,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | fillip      | filibuster     | Filipino     | flyboy     | flypaper    | followup  |
 |     | foul-up     | fullback       | full-blooded | full-blown | valuable    | voluble   |
 |     | volplane    | voluptuous     | available    |            |             |           |
-|-----+-------------+----------------+--------------+------------+-------------+-----------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 960   970)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+--------------+----------------+--------------+------------+-------------|
 | 860 | fascist     | fatuous      | fishes         | fish-house   | vicious    | vouchsafe   |
 |     | voyages     | vichyssoise  | effigies       | officious    | savages    |             |
@@ -6388,9 +6750,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 869 | fetch-up    | fishable     | fish-bellied   | fish-blooded | fishbowl   | fishberry   |
 |     | fish-bone   | fishpond     | fishpound      | fishplate    | fishy-back | vouchsafe   |
 |     | off-job     | wave-shape   |                |              |            |             |
-|-----+-------------+--------------+----------------+--------------+------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 970   980)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+-------------+--------------+-------------+-------------+-------------|
 | 870 | facsimile  | fakes       | fix          | figs        | focsle      | focus       |
 |     | fogs       | folks       | fox          | fucose      | focus       | vaccine     |
@@ -6428,9 +6796,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+------------+-------------+--------------+-------------+-------------+-------------|
 | 879 | fogbank    | fogbow      | fogbound     | vagabond    | vocable     | vocabulary  |
 |     | evocable   | half-cap    | huffcap      | safekeeping |             |             |
-|-----+------------+-------------+--------------+-------------+-------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 980   990)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+--------------+-------------+---------------+--------------+----------------|
 | 880 | fauvism     | fives        | fivesome    | fivesome      | five-spot    | five-star      |
 |     | frvestones  | fiefs        | fifes       | vavasor       | vivacity     | vivisection    |
@@ -6459,9 +6833,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+--------------+-------------+---------------+--------------+----------------|
 | 889 | fife-player | five-piece   | fivepins    | five-ply      | fivepence    | five-percenter |
 |     | viviparous  |              |             |               |              |                |
-|-----+-------------+--------------+-------------+---------------+--------------+----------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 990   1000)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+------------+--------------+-------------+-----------+-------------|
 | 890 | fibs       | fobs       | fibster      | fops        | phoebes   | Phoebus     |
 |     | fubsy      | phobias    | VIPs         | ovipositor  | halfpace  | wave-base   |
@@ -6492,9 +6872,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 898 | fabiform   | fob-off    | half-paved   | half-payoff |           |             |
 |-----+------------+------------+--------------+-------------+-----------+-------------|
 | 899 | fob-pocket | half-bib   | half-bob     | V-bob       |           |             |
-|-----+------------+------------+--------------+-------------+-----------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 1000  1010)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+---------------+---------------+------------+-------------+------------+-------------|
 | 900 | paces         | passes        | pauses     | pieces      | Pisces     | possess     |
 |     | poses         | basis         | bosses     | buses       | apsis      | abscess     |
@@ -6512,7 +6898,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+---------------+---------------+------------+-------------+------------+-------------|
 | 903 | pacemaker     | peacemaker    | pessimist  | baseman     | basement   | beseem      |
 |     | besmear       | besmirch      | besom      | bosom       | aposematic | appeasement |
-|     | opossum       | spasm         | specimen   | possum      |            |             |
+|     | opossum       | spasm         | specimen   |             |            |             |
 |-----+---------------+---------------+------------+-------------+------------+-------------|
 | 904 | pacer         | passer        | piecework  | bazaar      | bizarre    | boozer      |
 |     | buzzer        | absorb        | absurd     | abuser      | observe    | opposer     |
@@ -6536,9 +6922,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | passe-partout | pass-up       | peaceable  | peace-pipe  | peace-plan | pea-soup    |
 |     | possible      | baseball      | bespatter  | besprinkle  | biceps     | busboy      |
 |     | busybody      | upsweep       |            |             |            |             |
-|-----+---------------+---------------+------------+-------------+------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph  1010 1020)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+--------------+-------------+------------+-------------+------------|
 | 910 | patsy        | peau-de-soie | pedestal    | pedestrian | poetess     | pizza      |
 |     | batsman      | bathhouse    | bathyscaphe | beads      | beside      | bodice     |
@@ -6583,14 +6975,20 @@ good ideas because they might incorrectly recall 64 at speed.
 | 919 | paid-up      | petit-pois   | potable     | potbelly   | potpie      | put-up     |
 |     | bad-boy      | batboy       | beat-up     | bedbug     | bedpan      | habitable  |
 |     | hospitable   |              |             |            |             |            |
-|-----+--------------+--------------+-------------+------------+-------------+------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 1020 1030)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+--------------+-------------+-------------+---------------+-------------|
 | 920 | panacea    | pans         | pains       | pansy       | pence         | pencil      |
 |     | pensive    | pianist      | pincers     | pounce      | puns          | banister    |
 |     | benzine    | bonus        | bounce      | bunnies     | buoyancy      | abeyance    |
-|     | happiness  | hypnosis     | Bones       |             |               |             |
+|     | happiness  | hypnosis     |             |             |               |             |
 |-----+------------+--------------+-------------+-------------+---------------+-------------|
 | 921 | paint      | panda        | pant        | panther     | pendant       | penetrate   |
 |     | penitent   | penthouse    | pint        | point       | pond          | pontoon     |
@@ -6610,8 +7008,9 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | binary     | binaural     | boner       | abnormal    | habanera      | open-air    |
 |     | opener     | weaponry     |             |             |               |             |
 |-----+------------+--------------+-------------+-------------+---------------+-------------|
-| 925 | panel      | penal        | penholder   | penniless   | penult        | pianola     |
-|     | pinhole    | pinwheel     | banal       | hobnail     | openly        | spaniel     |
+| 925 | panel      | penal        | penholder   | penni​less   | peni​le        | penult      |
+|     | pianola    | pinhole      | pinwheel    | banal       | hobnail       | openly      |
+|     | spaniel    |              |             |             |               |             |
 |-----+------------+--------------+-------------+-------------+---------------+-------------|
 | 926 | panache    | panjandrum   | pawnshop    | penchant    | pension       | penuche     |
 |     | pinch      | poncho       | pongee      | punch       | pungent       | punish      |
@@ -6630,9 +7029,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 929 | panoply    | panpipe      | panplane    | pawnbroker  | penny-pincher | penny-plain |
 |     | pennyprick | pinball      | pinbone     | pineapple   | pinpoint      | pinprick    |
 |     | pinniped   | pinup        | bonapartist | bonebreaker | hobnob        | open-up     |
-|-----+------------+--------------+-------------+-------------+---------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 1030 1040)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+---------------+----------------+-------------+-----------+------------+-----------|
 | 930 | palmist       | paymaster      | poems       | pomace    | pomes      | pumice    |
 |     | Bahamas       | beams          | bemuse      | bombs     | booms      | bums      |
@@ -6665,10 +7070,16 @@ good ideas because they might incorrectly recall 64 at speed.
 | 939 | pampas        | pamper         | pimp        | pimpernel | pimple     | pomp      |
 |     | pompadour     | pom-pom        | pompon      | pump      | Bambi      | bamboo    |
 |     | bamboozle     | bimbo          | bimeby      | bombard   | bombast    | bumblebee |
-|     | bumper        | bump           |             |           |            |           |
-|-----+---------------+----------------+-------------+-----------+------------+-----------|
+|     | bumper        |                |             |           |            |           |
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 1040 1045)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+-----------+-----------+-------------+-------------+--------------|
 | 940 | parasite    | parasol   | parcel    | Paris       | parson      | perceive     |
 |     | percentage  | persecute | persist   | person      | persuade    | pierce       |
@@ -6686,7 +7097,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | board       | braid     | bread     | breath      | breed       | bride        |
 |     | bridle      | British   | broad     | broth       | brother     | brutal       |
 |     | burden      | aboard    | abroad    | apart       | apparatus   | Opart        |
-|     | operate     | parrot    |           |             |             |              |
+|     | operate     |           |           |             |             |              |
 |-----+-------------+-----------+-----------+-------------+-------------+--------------|
 | 942 | parent      | paranoid  | paranymph | parentheses | prank       | principle    |
 |     | print       | pronoun   | prune     | barn        | barren      | baron        |
@@ -6703,9 +7114,14 @@ good ideas because they might incorrectly recall 64 at speed.
 | 944 | pairer      | parer     | poorer    | prairie     | prayer      | prerequisite |
 |     | prerogative | prewar    | prior     | priority    | prorated    | barrier      |
 |     | bearer      | borer     | borrower  | brewer      | briar       | uproar       |
-|-----+-------------+-----------+-----------+-------------+-------------+--------------|
+:end:
 
-\clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 1045 1050)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+---------------+-------------+------------+--------------+-------------|
 | 945 | parallel   | paralyze      | parlay      | parley     | parliament   | parlor      |
 |     | parole     | payroll       | pearl       | peerless   | peril        | poorly      |
@@ -6742,9 +7158,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | proposal   | proprietor    | purple      | purpose    | barbarian    | barber      |
 |     | barbell    | barbecue      | bourbon     | brob       | burp         | abrupt      |
 |     | approbate  | appropriation | apropos     | hyperbole  |              |             |
-|-----+------------+---------------+-------------+------------+--------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 1050 1060)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+------------+--------------+-----------+-----------+-------------|
 | 950 | palace     | pals       | place        | placebo   | placid    | plasma      |
 |     | plaza      | plaster    | please       | plus      | police    | policy      |
@@ -6759,7 +7181,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | ballot     | behold     | belt         | bewilder  | billet    | bladder     |
 |     | blade      | bleed      | bloat        | blood     | blot      | bold        |
 |     | bolt       | build      | bulldog      | bullet    | bulletin  | ability     |
-|     | applaud    | uphold     | obliterate   | Pluto     |           |             |
+|     | applaud    | uphold     | obliterate   |           |           |             |
 |-----+------------+------------+--------------+-----------+-----------+-------------|
 | 952 | paleness   | plain      | plaint       | plane     | plank     | plankton    |
 |     | plant      | plenty     | plunder      | pollen    | balance   | balloon     |
@@ -6801,10 +7223,16 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | pliable    | plop       | polyp        | pulp      | pulpit    | ballplayer  |
 |     | bellboy    | blip       | blooper      | blowup    | blueberry | bluebird    |
 |     | bulb       | bluebonnet | bullpen      | bullpup   | bullwhip  | bullyboy    |
-|     | applepie   | epileptic  | Bilbo        |           |           |             |
-|-----+------------+------------+--------------+-----------+-----------+-------------|
+|     | applepie   | epileptic  |              |           |           |             |
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 1060 1070)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+-------------+----------------+------------+-------------+-------------|
 | 960 | pachisi     | patches     | peaches        | pitches    | pouches     | poaches     |
 |     | pushes      | badges      | beaches        | beeches    | beaugeste   | bitches     |
@@ -6841,9 +7269,15 @@ good ideas because they might incorrectly recall 64 at speed.
 | 969 | page-boy    | patch-up    | peach-pie      | pishposh   | pie-shape   | pitchblende |
 |     | pushball    | push-button | push-up        | bishop     | bushberry   | bushboy     |
 |     | bush-pea    | bushpig     | heebie-jeebies | hobby-shop |             |             |
-|-----+-------------+-------------+----------------+------------+-------------+-------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 1070 1080)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+--------------+-------------+------------+------------+----------------|
 | 970 | packs      | pax          | PX          | Picasso    | pikes      | pigskin        |
 |     | pixie      | pox          | Bacchus     | backs      | bags       | bangs          |
@@ -6888,9 +7322,15 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | backboard  | backbone     | back-pay    | back-up    | bagpipe    | beekeeper      |
 |     | bookbinder | bugaboo      | bugbane     | bugbear    | bugbite    | buckplate      |
 |     | buckpot    | buck-up      | hubcap      | upkeep     |            |                |
-|-----+------------+--------------+-------------+------------+------------+----------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 1080 1090)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-----------+------------+------------+------------+-------------+------------|
 | 980 | paves     | pavestone  | payoffs    | peeves     | puffs       | beefs      |
 |     | beefsteak | beehives   | behaves    | obfuscate  | obvious     |            |
@@ -6921,47 +7361,50 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-----------+------------+------------+------------+-------------+------------|
 | 989 | puffball  | puffbird   | puff-up    | beefburger | beef-pie    | beef-up    |
 |     | buffable  | buffbar    | aboveboard |            |             |            |
-|-----+-----------+------------+------------+------------+-------------+------------|
+:end:
 
 \clearpage
-|-----+--------------+------------+------------+--------------+------------+------------|
-| 990 | papacy       | papistry   | papoose    | pip-squeak   | poppies    | puppies    |
-|     | PPS          | babies     | biopsy     | bobbysoxer   | bobsled    | bypass     |
-|     | Pepsi        |            |            |              |            |            |
-|-----+--------------+------------+------------+--------------+------------+------------|
-| 991 | pipe-die     | pipit      | pipette    | Poppy-Day    | puppet     | babbitt    |
-|     | babyhood     | baptism    | biped      | bobtail      | booby-trap | bypath     |
-|     | hippopotamus | upbeat     |            |              |            |            |
-|-----+--------------+------------+------------+--------------+------------+------------|
-| 992 | peppiriess   | pipe-in    | pippin     | popinjay     | baboon     | bobbin     |
-|     | bobbinet     | hipbone    |            |              |            |            |
-|-----+--------------+------------+------------+--------------+------------+------------|
-| 993 | Papiamento   | pipeman    | bee-balm   | baby-minder  |            |            |
-|-----+--------------+------------+------------+--------------+------------+------------|
-| 994 | paper        | paprika    | pauper     | peeper       | pepper     | peppermint |
-|     | piper        | popery     | potpourri  | puberty      | by-product | bipartisan |
-|-----+--------------+------------+------------+--------------+------------+------------|
-| 995 | papal        | payable    | pebble     | peephole     | people     | piebald    |
-|     | pipeline     | poplin     | poplar     | populace     | popular    | public     |
-|     | publisher    | pupil      | Pueblo     | babble       | Bible      | biplane    |
-|     | bobolink     | bubble     | byplay     | apoplexy     |            |            |
-|-----+--------------+------------+------------+--------------+------------+------------|
-| 996 | pea-patch    | peep-show  | pipage     | popish       | poppy-ash  | poppy-show |
-|     | babushka     | babyish    | baby-show  | booby-hatch  |            |            |
-|-----+--------------+------------+------------+--------------+------------+------------|
-| 997 | payback      | paybook    | pipecoline | pipe-clay    | pipe-key   | piping     |
-|     | pipkin       | popcorn    | popgun     | poppycock    | babying    | bobcat     |
-|-----+--------------+------------+------------+--------------+------------+------------|
-| 998 | papaver      | pepful     | pipefish   | pipeful      | pop-off    | popover    |
-|     | poppyfish    | baby-faced | bobfly     | bubby-flower | pupfish    | pupiform   |
-|-----+--------------+------------+------------+--------------+------------+------------|
-| 999 | BEBOP        | pipable    | pipe-band  | pipe-opener  | poppy-bee  | pop-up     |
-|     | baby-boy     | baobab     | pep-up     | bubbybush    |            |            |
-|-----+--------------+------------+------------+--------------+------------+------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+(babomorph 1090 1101)
+#+end_src
 
-|------+----------+----------+---------+
-| 1000 | dioceses | diseases | disuses |
-|------+----------+----------+---------+
+#+RESULTS:
+:results:
+|------+--------------+------------+------------+--------------+------------+------------|
+|  990 | papacy       | papistry   | papoose    | pip-squeak   | poppies    | puppies    |
+|      | PPS          | babies     | biopsy     | bobbysoxer   | bobsled    | bypass     |
+|------+--------------+------------+------------+--------------+------------+------------|
+|  991 | pipe-die     | pipit      | pipette    | Poppy-Day    | puppet     | babbitt    |
+|      | babyhood     | baptism    | biped      | bobtail      | booby-trap | bypath     |
+|      | hippopotamus | upbeat     |            |              |            |            |
+|------+--------------+------------+------------+--------------+------------+------------|
+|  992 | peppiriess   | pipe-in    | pippin     | popinjay     | baboon     | bobbin     |
+|      | bobbinet     | hipbone    |            |              |            |            |
+|------+--------------+------------+------------+--------------+------------+------------|
+|  993 | Papiamento   | pipeman    | bee-balm   | baby-minder  |            |            |
+|------+--------------+------------+------------+--------------+------------+------------|
+|  994 | paper        | paprika    | pauper     | peeper       | pepper     | peppermint |
+|      | piper        | popery     | potpourri  | puberty      | by-product | bipartisan |
+|------+--------------+------------+------------+--------------+------------+------------|
+|  995 | papal        | payable    | pebble     | peephole     | people     | piebald    |
+|      | pipeline     | poplin     | poplar     | populace     | popular    | public     |
+|      | publisher    | pupil      | Pueblo     | babble       | Bible      | biplane    |
+|      | bobolink     | bubble     | byplay     | apoplexy     |            |            |
+|------+--------------+------------+------------+--------------+------------+------------|
+|  996 | pea-patch    | peep-show  | pipage     | popish       | poppy-ash  | poppy-show |
+|      | babushka     | babyish    | baby-show  | booby-hatch  |            |            |
+|------+--------------+------------+------------+--------------+------------+------------|
+|  997 | payback      | paybook    | pipecoline | pipe-clay    | pipe-key   | piping     |
+|      | pipkin       | popcorn    | popgun     | poppycock    | babying    | bobcat     |
+|------+--------------+------------+------------+--------------+------------+------------|
+|  998 | papaver      | pepful     | pipefish   | pipeful      | pop-off    | popover    |
+|      | poppyfish    | baby-faced | bobfly     | bubby-flower | pupfish    | pupiform   |
+|------+--------------+------------+------------+--------------+------------+------------|
+|  999 | pep-up       | pipable    | pipe-band  | pipe-opener  | poppy-bee  | pop-up     |
+|      | baby-boy     | baobab     | bebop      | bubbybush    |            |            |
+|------+--------------+------------+------------+--------------+------------+------------|
+| 1000 | dioceses     | diseases   | disuses    |              |            |            |
+:end:
 
 \clearpage
 ** Picture Words from John D. Cook
