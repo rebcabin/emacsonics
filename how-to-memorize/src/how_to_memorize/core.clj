@@ -2653,7 +2653,8 @@
              )
 
            '(40
-             "race"
+             "RACE"
+
              "racy"
              "raise"
              "rase"
@@ -2680,8 +2681,10 @@
              "warehouse"
              "worse"
              "Warsaw")
+
            '(41
-             "rat"
+             "RAT"
+
              "rate"
              "radio"
              "raid"
@@ -2729,9 +2732,12 @@
              "write"
              "yard"
              "worried"
-             "weird")
+             "weird"
+             )
+
            '(42
-             "rain"
+             "RAIN"
+
              "rein"
              "reign"
              "renew"
@@ -2755,9 +2761,12 @@
              "Orion"
              "urn"
              "worn"
-             "warn")
+             "warn"
+             )
+
            '(43
-             "ram"
+             "RAM"
+
              "rim"
              "rhyme"
              "ream"
@@ -2773,9 +2782,12 @@
              "harm"
              "harem"
              "warm"
-             "worm")
+             "worm"
+             )
+
            '(44
-             "rear"
+             "REAR"
+
              "rare"
              "roar"
              "rower"
@@ -2789,9 +2801,12 @@
              "worrier"
              "wearer"
              "hearer"
-             "orrery")
+             "orrery"
+             )
+
            '(45
-             "rail"
+             "RAIL"
+
              "rally"
              "railway"
              "real"
@@ -2813,9 +2828,12 @@
              "aerial"
              "whirl"
              "whorl"
-             "yearly")
+             "yearly"
+             )
+
            '(46
-             "rash"
+             "RASH"
+
              "rage"
              "ratio"
              "Rajah"
@@ -2833,9 +2851,12 @@
              "Irish"
              "orgy"
              "urge"
-             "wretch")
+             "wretch"
+             )
+
            '(47
-             "rake"
+             "RAKE"
+
              "rack"
              "rag"
              "reek"
@@ -2856,9 +2877,12 @@
              "herring"
              "heroic"
              "work"
-             "wreck")
+             "wreck"
+             )
+
            '(48
-             "reef"
+             "REEF"
+
              "raffia"
              "review"
              "revue"
@@ -2873,9 +2897,12 @@
              "arrive"
              "aerify"
              "horrify"
-             "wharf")
+             "wharf"
+             )
+
            '(49
-             "rope"
+             "ROPE"
+
              "rap"
              "rape"
              "reap"
@@ -2895,9 +2922,12 @@
              "orb"
              "Europe"
              "Arabia"
-             "warp")
+             "warp"
+             )
+
            '(50
-             "lace"
+             "LACE"
+
              "lass"
              "lassie"
              "lazy"
@@ -2919,9 +2949,12 @@
              "also"
              "alias"
              "Eliza"
-             "else")
+             "else"
+             )
+
            '(51
-             "lot"
+             "LOT"
+
              "lad"
              "lathe"
              "late"
@@ -2960,9 +2993,12 @@
              "old"
              "wild"
              "wallet"
-             "wealth")
+             "wealth"
+             )
+
            '(52
-             "lane"
+             "LANE"
+
              "lawn"
              "lean"
              "lien"
@@ -2975,9 +3011,12 @@
              "alone"
              "hellion"
              "Halloween"
-             "woolen")
+             "woolen"
+             )
+
            '(53
-             "lime"
+             "LIME"
+
              "lame"
              "lama"
              "lamb"
@@ -2991,9 +3030,12 @@
              "elm"
              "haulm"
              "helm"
-             "helium")
+             "helium"
+             )
+
            '(54
-             "lair"
+             "LAIR"
+
              "layer"
              "lawyer"
              "leer"
@@ -3007,9 +3049,12 @@
              "holler"
              "Holy-Year"
              "oiler"
-             "whaler")
+             "whaler"
+             )
+
            '(55
-             "lily"
+             "LILY"
+
              "lisle"
              "loyal"
              "lowly"
@@ -3024,9 +3069,12 @@
              "ill-will"
              "oil-well"
              "Walhalla"
-             "whale-oil")
+             "whale-oil"
+             )
+
            '(56
-             "lash"
+             "LASH"
+
              "latch"
              "leash"
              "liege"
@@ -3038,9 +3086,12 @@
              "allege"
              "hellish"
              "ullage"
-             "Welsh")
+             "Welsh"
+             )
+
            '(57
-             "lake"
+             "LAKE"
+
              "lack"
              "lackey"
              "lag"
@@ -3068,9 +3119,12 @@
              "hulk"
              "hollyhock"
              "ilk"
-             "whaling")
+             "whaling"
+             )
+
            '(58
-             "leaf"
+             "LEAF"
+
              "lava"
              "laugh"
              "leave"
@@ -3086,9 +3140,12 @@
              "elf"
              "olive"
              "welloff"
-             "wolf")
+             "wolf"
+             )
+
            '(59
-             "lap"
+             "LAP"
+
              "lab"
              "leap"
              "lip"
@@ -3104,13 +3161,16 @@
              "elope"
              "help"
              "whelp"
-             "wallop")
+             "wallop"
+             )
+
            '(60
+             "CHESS"
              "cheese"
+
              "chassis"
              "chase"
              "chaise"
-             "chess"
              "choice"
              "choose"
              "ashes"
@@ -3120,8 +3180,13 @@
              "joyous"
              "juice"
              "wages"
-             "schuss")
+             "schuss"
+             )
+
            '(61
+             "JET"
+
+             "aged"
              "chat"
              "chateau"
              "cheat"
@@ -3129,56 +3194,64 @@
              "chit"
              "chute"
              "jade"
-             "jet"
              "jetty"
              "jot"
-             "jute"
              "judo"
+             "jute"
+             "shad"
              "shade"
              "shadow"
-             "shed"
-             "shad"
-             "sheet"
              "sheath"
+             "shed"
+             "sheet"
              "shoot"
              "shot"
              "shout"
              "shut"
-             "aged"
+             "washed"
              "widget"
-             "washed")
+             )
+
            '(62
-             "chain"
-             "chin"
-             "chine"
+             "CHAIN"
+
              "China"
-             "gin"
              "Jane"
              "John"
              "June"
+             "Shawnee"
+             "chin"
+             "chine"
+             "gin"
+             "hygiene"
              "join"
+             "ocean"
              "shine"
              "shown"
              "shun"
-             "Shawnee"
-             "hygiene"
-             "ocean"
-             "widgeon")
+             "widgeon"
+             )
+
            '(63
-             "chime"
+             "CHIME"
+
+             "Jim"
              "chamois"
              "chum"
              "gem"
              "gym"
              "jam"
              "jamb"
-             "Jim"
              "sham"
              "shame"
              "shammy"
-             "shimmy")
+             "shim"
+             "shimmy"
+             )
+
            '(64
              "CHAIR"
+
              "jar"
              "sherry"
              "washer"
@@ -3191,26 +3264,25 @@
              "char"
              "cheer"
              "chore"
-
              "edger"
              "hosiery"
              "jeer"
              "jury"
              "osier"
              "share"
-
              "shear"
              "sheer"
              "shire"
              "shore"
              "shower"
              "sure"
-
              "wager"
              )
+
            '((65 "A")
 
              "JAIL"
+
              "chili"
              "jelly"
              "jewel"
@@ -3231,8 +3303,10 @@
              "usual"
              )
 
+
            '((66 "B")
              "JUDGE"
+
              "hashish"
              "juju"
              "Jewish"
@@ -3248,8 +3322,10 @@
              "wishy-washy"
              )
 
+
            '((67 "C")
              "CHALK"
+
              "jack"
              "sheikh"
              "chick"
@@ -3280,8 +3356,10 @@
              "wishing"
              )
 
+
            '((68 "D")
              "CHEF"
+
              "chief"
              "Chevy"
              "sheaf"
@@ -3300,8 +3378,10 @@
              "wash-off"
              )
 
+
            '((69 "E")
              "CHIP"
+
              "jib"
              "jeep"
              "sheep"
@@ -3322,6 +3402,7 @@
              "shape"
              "shop"
              )
+
 
            '((70 "F")
              "CASE"
@@ -3415,25 +3496,37 @@
              "wagon"
              )
 
-           '(73
-             "comb"
-             "cam"
+           '((73 "I")
+             "CAM"
+
+
+             "acme"
              "calm"
              "cameo"
              "coma"
-             "comma"
+             "comb"
              "come"
-             "game"
+             "comma"
              "gam"
+             "game"
              "gum"
-             "acme"
              "hokum"
              "oakum"
-             "wigwam")
-           '(74
-             "car"
+             "wigwam"
+             )
+
+           '((74 "J")
+             "CAR"
+
+             "accrue"
+             "acquire"
+             "acre"
+             "agar"
+             "agree"
+             "anger"
              "care"
              "carry"
+             "choir"
              "coheir"
              "cohere"
              "core"
@@ -3444,33 +3537,29 @@
              "cur"
              "cure"
              "curry"
-             "choir"
-             "grey"
-             "grow"
-             "gory"
-             "gear"
-             "guru"
-             "quarry"
-             "queer"
-             "quire"
-             "acre"
-             "agree"
-             "agar"
-             "acquire"
-             "accrue"
-             "anger"
              "eager"
              "eagre"
              "ecru"
              "euchre"
+             "gear"
+             "gory"
+             "grey"
+             "grow"
+             "guru"
+             "hiker"
+             "hooker"
+             "hugger"
              "occur"
              "ogre"
              "okra"
-             "hiker"
-             "hooker"
-             "hugger")
-           '(75
-             "coal"
+             "quarry"
+             "queer"
+             "quire"
+             )
+
+           '((75 "K")
+             "COAL"
+
              "call"
              "clay"
              "coil"
@@ -3503,10 +3592,13 @@
              "heckle"
              "ogle"
              "ugly"
-             "weekly")
-           '(76
+             "weekly"
+             )
+
+           '((76 "L")
+             "CAGE"
+
              "cash"
-             "cage"
              "catch"
              "cache"
              "cachet"
@@ -3523,9 +3615,12 @@
              "kedge"
              "hoggish"
              "hogwash"
-             "waggish")
-           '(77
-             "cake"
+             "waggish"
+             )
+
+           '((77 "M")
+             "CAKE"
+
              "calk"
              "caulk"
              "cock"
@@ -3551,9 +3646,12 @@
              "quake"
              "quick"
              "aching"
-             "agog")
-           '(78
-             "cuff"
+             "agog"
+             )
+
+           '((78 "N")
+             "CUFF"
+
              "calf"
              "cave"
              "cafe"
@@ -3568,9 +3666,12 @@
              "guffaw"
              "guava"
              "quaff"
-             "agave")
-           '(79
-             "cap"
+             "agave"
+             )
+
+           '((79 "O")
+             "CAP"
+
              "cab"
              "cabby"
              "cape"
@@ -3593,9 +3694,12 @@
              "occupy"
              "okapi"
              "wickiup"
-             "wicopy")
-           '(80
-             "face"
+             "wicopy"
+             )
+
+           '((80 "P")
+             "FACE"
+
              "fizz"
              "fuse"
              "fusee"
@@ -3609,9 +3713,12 @@
              "phase"
              "efface"
              "effuse"
-             "office")
-           '(81
-             "fat"
+             "office"
+             )
+
+           '((81 "Q")
+             "FAT"
+
              "fate"
              "feat"
              "feed"
@@ -3640,9 +3747,12 @@
              "effete"
              "ovate"
              "off-white"
-             "waft")
-           '(82
-             "fan"
+             "waft"
+             )
+
+           '((82 "R")
+             "FAN"
+
              "fain"
              "fawn"
              "fanny"
@@ -3668,10 +3778,20 @@
              "often"
              "oven"
              "ovine"
-             "woven")
-           '(83 "fame" "foam" "fume" "vim" "ovum")
-           '(84
-             "fare"
+             "woven"
+             )
+
+           '((83 "S")
+             "FAME"
+             "foam"
+             "fume"
+             "vim"
+             "ovum"
+             )
+
+           '((84 "T")
+             "FARE"
+
              "fair"
              "fairway"
              "fairy"
@@ -3713,9 +3833,12 @@
              "waver"
              "waiver"
              "weaver"
-             "woofer")
-           '(85
-             "fall"
+             "woofer"
+             )
+
+           '((85 "U")
+             "FALL"
+
              "fail"
              "feel"
              "fell"
@@ -3754,9 +3877,12 @@
              "hovel"
              "offal"
              "oval"
-             "waffle")
-           '(86
-             "fish"
+             "waffle"
+             )
+
+           '((86 "V")
+             "FISH"
+
              "fetch"
              "fichu"
              "fuchsia"
@@ -3766,9 +3892,12 @@
              "voyage"
              "affiche"
              "effigy"
-             "offish")
-           '(87
-             "fig"
+             "offish"
+             )
+
+           '((87 "W")
+             "FIG"
+
              "fag"
              "fake"
              "fang"
@@ -3785,10 +3914,20 @@
              "evoke"
              "offing"
              "waving"
-             "weaving")
-           '(88 "fife" "five" "fief" "viva" "half-off")
-           '(89
-             "fob"
+             "weaving"
+             )
+
+           '((88 "X")
+             "FIFE"
+             "five"
+             "fief"
+             "viva"
+             "half-off"
+             )
+
+           '((89 "Y")
+             "FOB"
+
              "faux-pas"
              "fib"
              "fop"
@@ -3796,9 +3935,12 @@
              "Phoebe"
              "veep"
              "VIP"
-             "half-pay")
-           '(90
-             "base"
+             "half-pay"
+             )
+
+           '((90 "Z")
+             "BASE"
+
              "pace"
              "pass"
              "pause"
@@ -3827,9 +3969,12 @@
              "epos"
              "obese"
              "oppose"
-             "opus")
+             "opus"
+             )
+
            '(91
-             "bat"
+             "BAT"
+
              "pad"
              "pat"
              "path"
@@ -3876,9 +4021,12 @@
              "about"
              "opiate"
              "opt"
-             "habit")
+             "habit"
+             )
+
            '(92
-             "bean"
+             "BEAN"
+
              "pain"
              "pan"
              "pane"
@@ -3902,9 +4050,12 @@
              "ebony"
              "happen"
              "subpoena"
-             "weapon")
+             "weapon"
+             )
+
            '(93
-             "beam"
+             "BEAM"
+
              "palm"
              "poem"
              "puma"
@@ -3913,9 +4064,12 @@
              "bomb"
              "boom"
              "bum"
-             "opium")
+             "opium"
+             )
+
            '(94
-             "bar"
+             "BAR"
+
              "par"
              "pair"
              "pare"
@@ -3956,9 +4110,12 @@
              "Hebrew"
              "hopper"
              "opera"
-             "upper")
+             "upper"
+             )
+
            '(95
-             "ball"
+             "BALL"
+
              "pal"
              "pale"
              "pail"
@@ -4006,9 +4163,12 @@
              "hoopla"
              "opal"
              "wobble"
-             "uphill")
+             "uphill"
+             )
+
            '(96
-             "badge"
+             "BADGE"
+
              "page"
              "pasha"
              "patch"
@@ -4031,9 +4191,12 @@
              "apish"
              "apogee"
              "Apache"
-             "hibachi")
-           '(97
-             "back"
+             "hibachi"
+             )
+
+           '((97 "a")
+             "BACK"
+
              "pack"
              "pang"
              "peak"
@@ -4064,9 +4227,12 @@
              "aback"
              "epic"
              "epoch"
-             "opaque")
-           '(98
-             "beef"
+             "opaque"
+             )
+
+           '((98 "b")
+             "BEEF"
+
              "pave"
              "peeve"
              "payoff"
@@ -4080,12 +4246,15 @@
              "buffo"
              "buffet"
              "above"
-             "ab-ovo")
-           '(99
+             "ab-ovo"
+             )
+
+           '((99 "c")
+             "PIPE"
+
              "baby"
              "pap"
              "peep"
-             "pipe"
              "pip"
              "pop"
              "pope"
@@ -4100,9 +4269,12 @@
              "boo-boo"
              "booby"
              "bop"
-             "hubbub")
-           '(100
-             "thesis"
+             "hubbub"
+             )
+
+           '((100 "d")
+             "THESIS"
+
              "decease"
              "decisive"
              "desist"
@@ -4113,8 +4285,10 @@
              "daisies"
              "deuces"
              "doses"
-             "diocese")
-           '(101
+             "diocese"
+             )
+
+           '((101 "e")
              "toast"
              "tacit"
              "taste"
