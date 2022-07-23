@@ -32,7 +32,8 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(csv
+   '(python
+     csv
      auto-completion
      ;; rust
      ;; ----------------------------------------------------------------
@@ -41,7 +42,7 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      ;; better-defaults
-     clojure
+     ;; clojure
      (clojure :variables
               clojure-backend 'cider
               clojure-enable-clj-refactor t
@@ -60,8 +61,8 @@ This function should only modify configuration layer settings."
      ;; mermaid
      ;; multiple-cursors
      org
-     pdf
-     python
+     ;; pdf
+     ;; python
 
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -70,10 +71,10 @@ This function should only modify configuration layer settings."
      ;; ruby
      ;; sayid
      spell-checking
-     syntax-checking
+     ;; syntax-checking
      ;; version-control
-     themes-megapack
-     treemacs
+     ;; themes-megapack
+     ;; treemacs
      yaml
      )
 
@@ -90,17 +91,18 @@ This function should only modify configuration layer settings."
                                       clj-refactor
                                       exec-path-from-shell
                                       figlet
-                                      flyspell
-                                      geiser-mit
-                                      geiser-racket
-                                      haskell-mode
+                                      ;; flyspell
+                                      ;; geiser-mit
+                                      ;; geiser-racket
+                                      ;; haskell-mode
                                       mermaid-mode
-                                      modus-themes
+                                      ;; modus-themes
                                       ob-mermaid
-                                      quack
-                                      racket-mode
+                                      ;; quack
+                                      ;; racket-mode
                                       rst
-                                      slime
+                                      ;; slime
+                                      ;; wgrep
                                       wolfram-mode
                                       yasnippet
                                       )
@@ -282,19 +284,22 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
-   dotspacemacs-colorize-cursor-according-to-state t
+   dotspacemacs-colorize-cursor-according-to-state nil
 
    ;; Default font or prioritized list of fonts. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font '(
-                               ; "JetBrainsMono Nerd Font Mono"
-                               ; "Andale Mono"
-                               ; "Source Code Pro"
-                               "Fira Code Retina"
-                               :size 16
-                               :weight normal ; bold
-                               :width normal)
+                               ;; (
+			       ;; 	;; "JetBrainsMono Nerd Font Mono"
+                               ;;  "Fira Code Retina"
+                               ;;  "Andale Mono"
+                               ;;  "Source Code Pro"
+			       ;; )
+                               ;; :size 16.0
+                               ;; :weight normal ; bold
+                               ;; :width normal
+                               )
 
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
@@ -594,6 +599,10 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
+  ;; (require 'wgrep)
+
+  (setq undo-tree-auto-save-history nil)  ; file gets huge
+
   (add-to-list 'load-path "/Users/brian/Documents/GitHub/emacs-ob-racket")
   (add-to-list 'load-path "~/Documents/GitHub/ob-wolfram")
   (global-auto-revert-mode)
@@ -812,14 +821,21 @@ buffer.  The region is never considered active outside
 
   ;; by default, the function 'python-mode is associated with
   ;; the package python.el. The following changes that to python-mode.el:
-  (autoload 'python-mode "python-mode" "Python Mode." t)
+  ;; (autoload 'python-mode "python-mode" "Python Mode." t)
 
   ;; open py files with python-mode
-  (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+  ;; (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 
   ;; sets python interpreter mode to be python-mode
-  (add-to-list 'interpreter-mode-alist '("python3" . python-mode))
+  ;; (add-to-list 'interpreter-mode-alist '("python3" . python-mode))
   ;; (add-to-list 'interpreter-mode-alist '("python" . python-mode))
+
+  ;; (setq python-shell-completion-native-disabled-interpreters
+  ;;       '(python python3))
+
+  ;; (setq python-shell-interpreter "/usr/bin/python3") ;;
+  ;; (setq pytest-global-name "~/anaconda3/bin/pytest")
+  ;; (setq pytest-cmd-flags "-x -v")
 
   (autoload 'enable-paredit-mode "paredit"
     "Turn on pseudo-structural editing of Lisp code." t)
@@ -834,9 +850,6 @@ buffer.  The region is never considered active outside
   (add-hook 'racket-mode-hook           #'enable-paredit-mode)
 
   (setq ob-mermaid-cli-path "/opt/homebrew/bin/mmdc")
-  (setq python-shell-interpreter "/usr/bin/python3") ;;
-  (setq pytest-global-name "~/anaconda3/bin/pytest")
-  (setq pytest-cmd-flags "-x -v")
 
   (org-babel-do-load-languages
    'org-babel-load-languages
@@ -855,7 +868,7 @@ buffer.  The region is never considered active outside
      (org         . t)
      ;; (perl        . t)
      ;; (plantuml    . t)
-     (mathematica . t)
+     ;; (mathematica . t)
      (mermaid     . t)
      (python      . t)
      ;; (scheme      . t)
@@ -879,29 +892,29 @@ buffer.  The region is never considered active outside
 
   ;; (require 'ob-awk)
   ;; (require 'ob-graphviz) ;; ! NO !  can't find it !   doesn't exist !
-  (require 'ob-clojure)
+  ;; (require 'ob-clojure)
   ;; (require 'ob-bash)
-  (require 'ob-calc)
-  (require 'ob-ditaa)
-  (require 'ob-haskell)
+  ;; (require 'ob-calc)
+  ;; (require 'ob-ditaa)
+  ;; (require 'ob-haskell)
   ;; (require 'ob-java)
   ;; (require 'ob-js)
-  (require 'ob-mathematica)
-  (require 'ob-wolfram)
-  (require 'ob-latex)
-  (require 'ob-lisp)
-  (require 'ob-org)
-  (require 'ob-plantuml)
-  (require 'ob-python)
-  (require 'ob-racket)
+  ;; (require 'ob-mathematica)
+  ;; (require 'ob-wolfram)
+  ;; (require 'ob-latex)
+  ;; (require 'ob-lisp)
+  ;; (require 'ob-org)
+  ;; (require 'ob-plantuml)
+  ;; (require 'ob-python)
+  ;; (require 'ob-racket)
   ;; (require 'ob-scheme)
   ;; (require 'ob-sed)
-  (require 'ob-shell)
+  ;; (require 'ob-shell)
   ;; (require 'ob-forth)
   ;; (require 'ob-octave)
   ;; (require 'emacs-lisp)
   ;; (require 'ob-R)
-  (require 'ob-dot)
+  ;; (require 'ob-dot)
   ;; (require 'ob-gnuplot)
   ;; (require 'ob-perl)
   ;; (require 'ob-screen)
@@ -924,19 +937,20 @@ buffer.  The region is never considered active outside
 
   (add-hook 'python-mode-hook     #'turn-on-auto-fill)
 
-  (setq org-babel-mathematica-command "wolframscript -script")
-  (add-to-list 'org-src-lang-modes '("mathematica" . wolfram))
+  ;; (setq org-babel-mathematica-command "wolframscript -script")
+  ;; (add-to-list 'org-src-lang-modes '("mathematica" . wolfram))
 
-  (add-hook 'scheme-mode-hook 'geiser-mode)
-  (setq geiser-default-implementation 'racket)
+  ;; (add-hook 'scheme-mode-hook 'geiser-mode)
+  ;; (setq geiser-default-implementation 'racket)
 
-  (setq inferior-lisp-program "/usr/bin/sbcl")
+  ;; (setq inferior-lisp-program "/usr/bin/sbcl")
 
   (setenv "GIT_SSH_COMMAND" "ssh -i ~/.ssh/id_ed25519_Golf37.local")
 
   (exec-path-from-shell-initialize)
 
-  (global-company-mode)
+  ;; (global-company-mode)
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -955,13 +969,103 @@ This function is called at the very end of Spacemacs initialization."
    '("02fff7eedb18d38b8fd09a419c579570673840672da45b77fde401d8708dc6b5" default))
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
-   '(csv-mode neotree cider sesman parseedn clojure-mode parseclj seeing-is-believing rvm ruby-tools ruby-test-mode ruby-refactor ruby-hash-syntax rubocopfmt rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby ob-mermaid exec-path-from-shell yaml-mode pdf-tools tablist yasnippet web-mode web-beautify tagedit slim-mode scss-mode sass-mode pug-mode prettier-js impatient-mode simple-httpd helm-css-scss haml-mode emmet-mode counsel-css counsel swiper ivy company-web web-completion-data company add-node-modules-path zonokai-emacs zenburn-theme zen-and-art-theme yapfify ws-butler writeroom-mode wolfram-mode winum white-sand-theme which-key volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme treemacs-projectile treemacs-persp treemacs-icons-dired toxi-theme toml-mode toc-org tao-theme tangotango-theme tango-plus-theme tango-2-theme symon symbol-overlay sunny-day-theme sublime-themes subatomic256-theme subatomic-theme string-inflection string-edit srefactor sphinx-doc spaceline-all-the-icons spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme slime seti-theme ron-mode reverse-theme restart-emacs request rebecca-theme rainbow-delimiters railscasts-theme racket-mode racer quickrun quack pytest pyenv-mode pydoc py-isort purple-haze-theme professional-theme popwin poetry planet-theme pippel pipenv pip-requirements phoenix-dark-pink-theme phoenix-dark-mono-theme pcre2el password-generator paradox overseer organic-green-theme org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-contrib org-cliplink open-junk-file omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme nose noctilux-theme naquadah-theme nameless mustang-theme multi-line monokai-theme monochrome-theme molokai-theme moe-theme modus-themes mmm-mode minimal-theme material-theme markdown-toc majapahit-theme madhat2r-theme lush-theme lorem-ipsum live-py-mode link-hint light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inspector inkpot-theme info+ indent-guide importmagic hybrid-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation heroku-theme hemisu-theme helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-ls-git helm-flx helm-descbinds helm-ag hc-zenburn-theme haskell-mode gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio gnuplot gh-md geiser-racket geiser-mit gandalf-theme font-lock+ flyspell-correct-helm flycheck-package flycheck-elsa flx-ido flatui-theme flatland-theme figlet farmhouse-theme fancy-battery eziam-theme eyebrowse expand-region exotica-theme evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu espresso-theme emr elisp-slime-nav editorconfig dumb-jump drag-stuff dracula-theme dotenv-mode doom-themes doom-modeline django-theme dired-quick-sort diminish devdocs define-word darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cython-mode cyberpunk-theme column-enforce-mode color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme clean-aindent-mode chocolate-theme cherry-blossom-theme centered-cursor-mode cargo busybee-theme bubbleberry-theme blacken birds-of-paradise-plus-theme badwolf-theme auto-highlight-symbol auto-dictionary auto-compile apropospriate-theme anti-zenburn-theme anaconda-mode ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme ace-link ace-jump-helm-line))
- '(safe-local-variable-values '((org-image-actual-width)))
+   '(wgrep csv-mode neotree cider sesman parseedn clojure-mode parseclj seeing-is-believing rvm ruby-tools ruby-test-mode ruby-refactor ruby-hash-syntax rubocopfmt rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby ob-mermaid exec-path-from-shell yaml-mode pdf-tools tablist yasnippet web-mode web-beautify tagedit slim-mode scss-mode sass-mode pug-mode prettier-js impatient-mode simple-httpd helm-css-scss haml-mode emmet-mode counsel-css counsel swiper ivy company-web web-completion-data company add-node-modules-path zonokai-emacs zenburn-theme zen-and-art-theme yapfify ws-butler writeroom-mode wolfram-mode winum white-sand-theme which-key volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme treemacs-projectile treemacs-persp treemacs-icons-dired toxi-theme toml-mode toc-org tao-theme tangotango-theme tango-plus-theme tango-2-theme symon symbol-overlay sunny-day-theme sublime-themes subatomic256-theme subatomic-theme string-inflection string-edit srefactor sphinx-doc spaceline-all-the-icons spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme slime seti-theme ron-mode reverse-theme restart-emacs request rebecca-theme rainbow-delimiters railscasts-theme racket-mode racer quickrun quack pytest pyenv-mode pydoc py-isort purple-haze-theme professional-theme popwin poetry planet-theme pippel pipenv pip-requirements phoenix-dark-pink-theme phoenix-dark-mono-theme pcre2el password-generator paradox overseer organic-green-theme org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-contrib org-cliplink open-junk-file omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme nose noctilux-theme naquadah-theme nameless mustang-theme multi-line monokai-theme monochrome-theme molokai-theme moe-theme modus-themes mmm-mode minimal-theme material-theme markdown-toc majapahit-theme madhat2r-theme lush-theme lorem-ipsum live-py-mode link-hint light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inspector inkpot-theme info+ indent-guide importmagic hybrid-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation heroku-theme hemisu-theme helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-ls-git helm-flx helm-descbinds helm-ag hc-zenburn-theme haskell-mode gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio gnuplot gh-md geiser-racket geiser-mit gandalf-theme font-lock+ flyspell-correct-helm flycheck-package flycheck-elsa flx-ido flatui-theme flatland-theme figlet farmhouse-theme fancy-battery eziam-theme eyebrowse expand-region exotica-theme evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu espresso-theme emr elisp-slime-nav editorconfig dumb-jump drag-stuff dracula-theme dotenv-mode doom-themes doom-modeline django-theme dired-quick-sort diminish devdocs define-word darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cython-mode cyberpunk-theme column-enforce-mode color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme clean-aindent-mode chocolate-theme cherry-blossom-theme centered-cursor-mode cargo busybee-theme bubbleberry-theme blacken birds-of-paradise-plus-theme badwolf-theme auto-highlight-symbol auto-dictionary auto-compile apropospriate-theme anti-zenburn-theme anaconda-mode ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme ace-link ace-jump-helm-line))
+ '(safe-local-variable-values
+   '((eval progn
+           (require 'find-file)
+           (require 'cc-styles)
+           (require 'cl)
+           (unless
+               (assoc "gsi" c-style-alist)
+             (c-add-style "gsi"
+                          '("linux"
+                            (c-offsets-alist
+                             (innamespace . 0)
+                             (inextern-lang . 0)
+                             (arglist-cont-nonempty c-lineup-gcc-asm-reg c-lineup-arglist)))))
+           (c-set-style "gsi")
+           (setq c-file-style "gsi")
+           (setq fill-column 120)
+           (setq-local cc-other-file-alist
+                       (append
+                        '(("\\.l\\'"
+                           (".h"))
+                          ("\\.y\\'"
+                           (".h"))
+                          ("\\.apl\\'"
+                           (".h")))
+                        cc-other-file-alist))
+           (setq-local ff-special-constructs
+                       (cons
+                        `("^\\s *APL_C_INCLUDE\\s +[<\"]\\(.*\\)[>\"]" \,
+                          (lambda nil
+                            (buffer-substring
+                             (match-beginning 1)
+                             (match-end 1))))
+                        ff-special-constructs))
+           (setq-local ggtags-include-pattern
+                       '("^\\s-*\\(?:\\(?:#\\s-*\\(?:include\\|import\\)\\)\\|APL_C_INCLUDE\\)\\s-*[\"<]\\(?:[./]*\\)?\\(.*?\\)[\">]" . 1))
+           (when-let
+               ((here
+                 (ignore-errors
+                   (file-name-directory
+                    (car
+                     (dir-locals-find-file
+                      (buffer-file-name)))))))
+             (let*
+                 ((dropping
+                   (format "%sbuild/last-mode/last-product/_i/emacs-droppings/%s.include-path" here
+                           (string-remove-prefix here
+                                                 (buffer-file-name))))
+                  (contents
+                   (ignore-errors
+                     (with-temp-buffer
+                       (insert-file-contents dropping)
+                       (buffer-string))))
+                  (dirs
+                   (if
+                       (and contents
+                            (not
+                             (=
+                              (length contents)
+                              0)))
+                       (split-string contents)
+                     `("." "/usr/include" ,(concat here "export/include")
+                       ,@(mapcar
+                          (lambda
+                            (suffix)
+                            (concat here "common/include/" suffix))
+                          '("generic" "apuc" "host" "fw"))))))
+               (setq-local cc-search-directories dirs))))
+     (eval unless
+           (featurep 'gsi-apu-prep-done)
+           (require 'subr-x)
+           (require 'cl)
+           (add-to-list 'auto-mode-alist
+                        '("\\.apl$" . c-mode))
+           (unless
+               (fboundp 'when-let)
+             (defmacro when-let
+                 (bindings &rest body)
+               (declare
+                (indent 1))
+               (if
+                   (null bindings)
+                   `(progn ,@body)
+                 `(let
+                      (,(car bindings))
+                    (when ,(caar bindings)
+                      (when-let ,(cdr bindings)
+                        ,@body))))))
+           (setq-local ggtags-process-environment
+                       '("GTAGSLABEL=pygments"))
+           (provide 'gsi-apu-prep-done))
+     (org-image-actual-width)))
  '(warning-suppress-types '((comp) (comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:background nil)))))
 )
