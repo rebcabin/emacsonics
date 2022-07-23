@@ -3360,91 +3360,99 @@ good ideas because they might incorrectly recall 64 at speed.
 |    | hubbub  |          |        |         |         |         |
 :end:
 
+\clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 200 210)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 100 | THESIS      | decease      | decisive   | desist       | disaster    | disease        |
+|   d | disuse      | dissuasive   | daisies    | deuces       | doses       | diocese        |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 101 | TOAST       | tacit        | taste      | test         | testimony   | Tuesday        |
+|   e | twist       | deceit       | decide     | deist        | destiny     | destitute      |
+|     | destruct    | distance     | distaste   | distinct     | distinguish | distract       |
+|     | distress    | distribute   | district   | distrust     | disturb     | dust           |
+|     | atheist     | attest       | audacity   | outside      |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 102 | DOZEN       | decent       | descent    | design       | dishonest   | disinclined    |
+|   f | disinfect   | disinterest  | disown     | dissent      | dissonant   | dizziness      |
+|     | Whitsunday  | Docent       |            |              |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 103 | TWOSOME     | theism       | deism      | decimal      | disembark   | dismay         |
+|   g | dismember   | December     | dismiss    | dismount     | dissemble   | dissimilar     |
+|     | atheism     | decimeter    | decimate   |              |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 104 | DOWSER      | dicer        | thesaurus  | desert       | dessert     | deserve        |
+|   h | desire      | disarm       | disarrange | discern      | dishearten  | disorder       |
+|     | disregard   | disreputable | disroot    | dissertation | disrobe     | disrupt        |
+|     | douser      |              |            |              |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 105 | DIESEL      | tassel       | dazzle     | desolate     | disillusion | dislike        |
+|   i | dislocate   | dissolve     | docile     | deciliter    | disloyal    | white-sale     |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 106 | WOOD-sage   | dosage       | decision   | discharge    | dissuasion  | autosuggestion |
+|   j |             |              |            |              |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 107 | TUSK        | task         | desk       | disk         | discolor    | discomfort     |
+|   k | disclose    | disconnect   | discontent | discord      | discount    | discourage     |
+|     | discourse   | discover     | discrete   | discriminate | discuss     | disgrace       |
+|     | disguise    | disgust      | disquiet   | dusk         | outskirts   | doeskin        |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 108 | ADHESIVE    | tea-sieve    | theosophy  | deceive      | decipher    | disaffect      |
+|   l | disavow     | disfigure    | disfavor   | satisfaction |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 109 | TEASPOON    | thespian     | toss-up    | despot       | despair     | deception      |
+|   m | decibel     | despite      | despond    | disabled     | diaspora    | disappear      |
+|     | disappoint  | disapprove   | disciple   | disobey      | dispatch    | dispense       |
+|     | dispel      | disperse     | display    | displace     | displease   | disposal       |
+|     | disposition | dissipate    |            |              |             |                |
+:end:
 
 \clearpage
-|-----+--------------+-------------+--------------+--------------+-------------+-------------|
-| 100 | THESIS       | decease     | decisive     | desist       | disaster    | disease     |
-|   d | disuse       | dissuasive  | daisies      | deuces       | doses       | diocese     |
-|-----+--------------+-------------+--------------+--------------+-------------+-------------|
-| 101 | TOAST        | tacit       | taste        | test         | testimony   | Tuesday     |
-|   e | twist        | deceit      | decide       | deist        | destiny     | destitute   |
-|     | destruct     | distance    | distaste     | distinct     | distinguish | distract    |
-|     | distress     | distribute  | district     | distrust     | disturb     | dust        |
-|     | atheist      | attest      | audacity     | outside      |             |             |
-|-----+--------------+-------------+--------------+--------------+-------------+-------------|
-| 102 | DOZEN        | decent      | descent      | design       | dishonest   | disinclined |
-|   f | disinfect    | disinterest | disown       | dissent      | dissonant   | dizziness   |
-|     | Whitsunday   | Docent      | dissonance   |              |             |             |
-|-----+--------------+-------------+--------------+--------------+-------------+-------------|
-| 103 | TWOSOME      | theism      | deism        | decimal      | disembark   | dismay      |
-|   g | dismember    | December    | dismiss      | dismount     | dissemble   | dissimilar  |
-|     | atheism      | decimeter   | decimate     |              |             |             |
-|-----+--------------+-------------+--------------+--------------+-------------+-------------|
-| 104 | DOWSER       | thesaurus   | desert       | dessert      | deserve     | desire      |
-|   h | disarm       | disarrange  | discern      | dishearten   | disorder    | disregard   |
-|     | disreputable | disroot     | dissertation | disrobe      | disrupt     | douser      |
-|     | dicer        | howitzer    | dizzier      | iodizer      | woodsier    | disarray    |
-|     | tosser       |             |              |              |             |             |
-|-----+--------------+-------------+--------------+--------------+-------------+-------------|
-| 105 | DIESEL       | tassel      | dazzle       | desolate     | disillusion | dislike     |
-|   i | dislocate    | dissolve    | docile       | deciliter    | disloyal    | white-sale  |
-|-----+--------------+-------------+--------------+--------------+-------------+-------------|
-| 106 | WOOD-SAGE    | dosage      | decision     | discharge    | dissuasion  | autosuggest |
-|   j |              |             |              |              |             |             |
-|-----+--------------+-------------+--------------+--------------+-------------+-------------|
-| 107 | TUSK         | task        | desk         | disk         | discolor    | discomfort  |
-|   k | disclose     | disconnect  | discontent   | discord      | discount    | discourage  |
-|     | discourse    | discover    | discrete     | discriminate | discuss     | disgrace    |
-|     | disguise     | disgust     | disquiet     | dusk         | outskirts   | doeskin     |
-|-----+--------------+-------------+--------------+--------------+-------------+-------------|
-| 108 | ADHESIVE     | theosophy   | deceive      | decipher     | disaffect   | disavow     |
-|   l | disfigure    | disfavor    | tea-sieve    | satisfaction |             |             |
-|-----+--------------+-------------+--------------+--------------+-------------+-------------|
-| 109 | TEASPOON     | thespian    | toss-up      | despot       | despair     | deception   |
-|   m | decibel      | despite     | despond      | disabled     | diaspora    | disappear   |
-|     | disappoint   | disapprove  | disciple     | disobey      | dispatch    | dispense    |
-|     | dispel       | disperse    | display      | displace     | displease   | disposal    |
-|     | disposition  | dissipate   | desperate    | desperation  |             |             |
-|-----+--------------+-------------+--------------+--------------+-------------+-------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 210 220)
+#+end_src
 
-\clearpage
-|-----+-------------+----------------+--------------+------------+------------+-------------|
-| 110 | TIGHTS      | tedious        | toothsome    | tootsy     | deduce     | detest      |
-|   n | statesman   | status         | statistical  | studious   | Adidas     |             |
-|-----+-------------+----------------+--------------+------------+------------+-------------|
-| 111 | TEETOTALER  | tete-a-tete    | tidied       | dietetic   | day-duty   | deadwood    |
-|   o | doodad      | dotted         | doubted      | attitude   | audited    | outwitted   |
-|     | autodidact  | Douthat (Ross) |              |            |            |             |
-|-----+-------------+----------------+--------------+------------+------------+-------------|
-| 112 | TITAN       | Titanic        | tetanus      | tea-dance  | two-tone   | tidiness    |
-|   p | tighten     | deaden         | detain       | detonate   | dead-end   | sedateness  |
-|     | steadiness  | stoutness      | student      |            |            |             |
-|-----+-------------+----------------+--------------+------------+------------+-------------|
-| 113 | TOTEM       | teatime        | two-timer    | tedium     | TeDeum     | diadem      |
-|   q | datum       | daytime        | stadium      |            |            |             |
-|-----+-------------+----------------+--------------+------------+------------+-------------|
-| 114 | TATAR       | tater          | tea-tray     | tatter     | theater    | thither     |
-|   r | tooter      | totter         | tutor        | dater      | daughter   | deter       |
-|     | deteriorate | determine      | detract      | detriment  | daydreamer | diatribe    |
-|     | auditor     | editor         | headwater    | hot-water  | stutter    |             |
-|-----+-------------+----------------+--------------+------------+------------+-------------|
-| 115 | TITLE       | tattle         | tittle       | tidal      | tootle     | titillate   |
-|   s | total       | dawdle         | doodle       | dateline   | deadline   | dead-letter |
-|     | deadly      | detail         | thoughtless  | state-line | Dudley     |             |
-|-----+-------------+----------------+--------------+------------+------------+-------------|
-| 116 | DEATHWATCH  | detach         | death-wish   | dotage     | hot-dish   | dead-issue  |
-|   t |             |                |              |            |            |             |
-|-----+-------------+----------------+--------------+------------+------------+-------------|
-| 117 | HOTDOG      | toothache      | dating       | dedicate   | deduct     | detect      |
-|   u | detective   | tidings        | tie-tack     | idiotic    | dedication | didact      |
-|     | didactic    |                |              |            |            |             |
-|-----+-------------+----------------+--------------+------------+------------+-------------|
-| 118 | AUTO-DA-FE  | thoughtful     | dative       | dutiful    | dutyfree   | deadfall    |
-|   v | additive    | auditive       | tutti-frutti | sedative   |            |             |
-|-----+-------------+----------------+--------------+------------+------------+-------------|
-| 119 | TEDDY-BEAR  | tea-table      | tadpole      | toothpick  | tidbit     | toothbrush  |
-|   w | deadbeat    | deadpan        | deathbed     | ditty-bag  |            |             |
-|-----+-------------+----------------+--------------+------------+------------+-------------|
+#+RESULTS:
+:results:
+|-----+-------------+--------------+-------------+------------+------------+-------------|
+| 110 | TIGHTS      | tedious      | toothsome   | tootsy     | deduce     | detest      |
+|   n | statesman   | status       | statistical | studious   |            |             |
+|-----+-------------+--------------+-------------+------------+------------+-------------|
+| 111 | TEETOTALER  | tete-a-tete  | tidied      | dietetic   | day-duty   | deadwood    |
+|   o | doodad      | dotted       | doubted     | attitude   | audited    | outwitted   |
+|-----+-------------+--------------+-------------+------------+------------+-------------|
+| 112 | TITAN       | Titanic      | tetanus     | tea-dance  | two-tone   | tidiness    |
+|   p | tighten     | deaden       | detain      | detonate   | dead-end   | sedateness  |
+|     | steadiness  | stoutness    | student     |            |            |             |
+|-----+-------------+--------------+-------------+------------+------------+-------------|
+| 113 | TOTEM       | diadem       | teatime     | two-timer  | tedium     | TeDeum      |
+|   q | datum       | daytime      | stadium     |            |            |             |
+|-----+-------------+--------------+-------------+------------+------------+-------------|
+| 114 | TATAR       | tater        | tea-tray    | tatter     | theater    | thither     |
+|   r | tooter      | totter       | tutor       | dater      | daughter   | deter       |
+|     | deteriorate | determine    | detract     | detriment  | daydreamer | diatribe    |
+|     | auditor     | editor       | headwater   | hot-water  | stutter    |             |
+|-----+-------------+--------------+-------------+------------+------------+-------------|
+| 115 | TITLE       | tattle       | tittle      | tidal      | tootle     | titillate   |
+|   s | total       | dawdle       | doodle      | dateline   | deadline   | dead-letter |
+|     | deadly      | detail       | thoughtless | state-line |            |             |
+|-----+-------------+--------------+-------------+------------+------------+-------------|
+| 116 | DEATHWATCH  | detach       | death-wish  | dotage     | hot-dish   | dead-issue  |
+|   t |             |              |             |            |            |             |
+|-----+-------------+--------------+-------------+------------+------------+-------------|
+| 117 | HOT-dog     | tie-tack     | toothache   | dating     | dedicate   | deduct      |
+|   u | detect      | detective    | tidings     | idiotic    |            |             |
+|-----+-------------+--------------+-------------+------------+------------+-------------|
+| 118 | AUTO-da-fe  | tutti-frutti | thoughtful  | dative     | dutiful    | dutyfree    |
+|   v | deadfall    | additive     | auditive    | sedative   |            |             |
+|-----+-------------+--------------+-------------+------------+------------+-------------|
+| 119 | TEDDY-bear  | tadpole      | tea-table   | toothpick  | tidbit     | toothbrush  |
+|   w | deadbeat    | deadpan      | deathbed    | ditty-bag  |            |             |
+:end:
 
 \clearpage
 |-----+--------------+-------------+-------------+--------------+--------------+--------------|

@@ -4289,7 +4289,8 @@
              )
 
            '((101 "e")
-             "toast"
+             "TOAST"
+
              "tacit"
              "taste"
              "test"
@@ -4316,9 +4317,12 @@
              "atheist"
              "attest"
              "audacity"
-             "outside")
-           '(102
-             "dozen"
+             "outside"
+             )
+
+           '((102 "f")
+             "DOZEN"
+
              "decent"
              "descent"
              "design"
@@ -4331,9 +4335,12 @@
              "dissonant"
              "dizziness"
              "Whitsunday"
-             "Docent")
-           '(103
-             "twosome"
+             "Docent"
+             )
+
+           '((103 "g")
+             "TWOSOME"
+
              "theism"
              "deism"
              "decimal"
@@ -4347,8 +4354,12 @@
              "dissimilar"
              "atheism"
              "decimeter"
-             "decimate")
-           '(104
+             "decimate"
+             )
+
+           '((104 "h")
+             "DOWSER"
+
              "dicer"
              "thesaurus"
              "desert"
@@ -4367,10 +4378,13 @@
              "disrobe"
              "disrupt"
              "douser"
-             "dowser")
-           '(105
+
+             )
+
+           '((105 "i")
+             "DIESEL"
+
              "tassel"
-             "diesel"
              "dazzle"
              "desolate"
              "disillusion"
@@ -4380,16 +4394,23 @@
              "docile"
              "deciliter"
              "disloyal"
-             "white-sale")
-           '(106
+             "white-sale"
+             )
+
+           '((106 "j")
+             "WOOD-sage"
+
              "dosage"
              "decision"
              "discharge"
              "dissuasion"
              "autosuggestion"
-             "wood-sage")
-           '(107
-             "tusk"
+
+             )
+
+           '((107 "k")
+             "TUSK"
+
              "task"
              "desk"
              "disk"
@@ -4412,8 +4433,12 @@
              "disquiet"
              "dusk"
              "outskirts"
-             "doeskin")
-           '(108
+             "doeskin"
+             )
+
+           '((108 "l")
+             "ADHESIVE"
+
              "tea-sieve"
              "theosophy"
              "deceive"
@@ -4422,10 +4447,13 @@
              "disavow"
              "disfigure"
              "disfavor"
-             "adhesive"
-             "satisfaction")
-           '(109
-             "teaspoon"
+             "satisfaction"
+
+             )
+
+           '((109 "m")
+             "TEASPOON"
+
              "thespian"
              "toss-up"
              "despot"
@@ -4450,9 +4478,12 @@
              "displease"
              "disposal"
              "disposition"
-             "dissipate")
-           '(110
-             "tights"
+             "dissipate"
+             )
+
+           '((110 "n")
+             "TIGHTS"
+
              "tedious"
              "toothsome"
              "tootsy"
@@ -4461,9 +4492,12 @@
              "statesman"
              "status"
              "statistical"
-             "studious")
-           '(111
-             "teetotaler"
+             "studious"
+             )
+
+           '((111 "o")
+             "TEETOTALER"
+
              "tete-a-tete"
              "tidied"
              "dietetic"
@@ -4474,9 +4508,12 @@
              "doubted"
              "attitude"
              "audited"
-             "outwitted")
-           '(112
-             "Titan"
+             "outwitted"
+             )
+
+           '((112 "p")
+             "TITAN"
+
              "Titanic"
              "tetanus"
              "tea-dance"
@@ -4490,19 +4527,26 @@
              "sedateness"
              "steadiness"
              "stoutness"
-             "student")
-           '(113
+             "student"
+             )
+
+           '((113 "q")
+             "TOTEM"
+
              "diadem"
              "teatime"
              "two-timer"
              "tedium"
              "TeDeum"
-             "totem"
              "datum"
              "daytime"
-             "stadium")
-           '(114
-             "Tatar"
+             "stadium"
+
+             )
+
+           '((114 "r")
+             "TATAR"
+
              "tater"
              "tea-tray"
              "tatter"
@@ -4524,10 +4568,13 @@
              "editor"
              "headwater"
              "hot-water"
-             "stutter")
-           '(115
+             "stutter"
+             )
+
+           '((115 "s")
+             "TITLE"
+
              "tattle"
-             "title"
              "tittle"
              "tidal"
              "tootle"
@@ -4541,15 +4588,22 @@
              "deadly"
              "detail"
              "thoughtless"
-             "state-line")
-           '(116
+             "state-line"
+             )
+
+           '((116 "t")
+             "DEATHWATCH"
+
              "detach"
-             "deathwatch"
              "death-wish"
              "dotage"
              "hot-dish"
-             "dead-issue")
-           '(117
+             "dead-issue"
+             )
+
+           '((117 "u")
+             "HOT-dog"
+
              "tie-tack"
              "toothache"
              "dating"
@@ -4558,9 +4612,12 @@
              "detect"
              "detective"
              "tidings"
-             "hot-dog"
-             "idiotic")
-           '(118
+             "idiotic"
+             )
+
+           '((118 "v")
+             "AUTO-da-fe"
+
              "tutti-frutti"
              "thoughtful"
              "dative"
@@ -4569,27 +4626,32 @@
              "deadfall"
              "additive"
              "auditive"
-             "auto-da-fe"
-             "sedative")
-           '(119
+             "sedative"
+             )
+
+           '((119 "w")
+             "TEDDY-bear"
+
              "tadpole"
              "tea-table"
-             "teddy-bear"
              "toothpick"
              "tidbit"
              "toothbrush"
              "deadbeat"
              "deadpan"
              "deathbed"
-             "ditty-bag")
-           '(120
+             "ditty-bag"
+             )
+
+           '((120 "x")
+             "DANCE"
+
              "tinsel"
              "tenacity"
              "tennis"
              "tense"
              "thence"
              "tonsil"
-             "dance"
              "dense"
              "dunce"
              "ad-nauseam"
@@ -4601,8 +4663,12 @@
              "utensil"
              "whiteness"
              "witness"
-             "sadness")
-           '(121
+             "sadness"
+             )
+
+           '((121 "y")
+             "DOUGHNUT"
+
              "tent"
              "taint"
              "taunt"
@@ -4623,7 +4689,6 @@
              "dentist"
              "denude"
              "dint"
-             "doughnut"
              "dwindle"
              "attend"
              "authentic"
@@ -4633,19 +4698,25 @@
              "whodunit"
              "stand"
              "stint"
-             "astound")
-           '(122
+             "astound"
+             )
+
+           '((122 "z")
+             "ATHENIAN"
+
              "tenant"
              "tenon"
              "teeny-weeny"
              "denounce"
              "adonian"
-             "Athenian"
-             "hootenanny")
+             "hootenanny"
+             )
+
            '(123
+             "TENEMENT"
+
              "thin-man"
              "tonometer"
-             "tenement"
              "town-meeting"
              "denim"
              "Denmark"
@@ -4655,7 +4726,9 @@
              "atonement"
              "attainment"
              "autonomy"
-             "outnumber")
+             "outnumber"
+             )
+
            '(124
              "tanner"
              "teener"
