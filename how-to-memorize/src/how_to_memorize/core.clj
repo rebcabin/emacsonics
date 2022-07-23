@@ -6712,7 +6712,7 @@
              )
 
            '(223
-             "NOON-meal"
+             "NOON-MEAL"
 
              "ninnyhammer"
              "nonemotional"
@@ -6822,6 +6822,8 @@
              )
 
            '(230
+             "GNOMES"
+
              "names"
              "namesake"
              "nemesis"
@@ -6829,22 +6831,27 @@
              "animosity"
              "inmost"
              "enemies"
-             "gnomes"
              "unmistakable"
-             "unmask")
+             "unmask"
+             )
+
            '(231
-             "nomad"
+             "NOMAD"
+
              "named"
              "new-math"
              "name-dropper"
              "animate"
              "enmity"
              "inmate"
-             "pneumatic")
+             "pneumatic"
+             )
+
            '(232
+             "NEW-MOON"
+
              "nominal"
              "nominee"
-             "new-moon"
              "numbness"
              "honeymoon"
              "inhuman"
@@ -6853,17 +6860,23 @@
              "unmentionable"
              "unmindful"
              "unwomanly"
-             "pneumonia")
+             "pneumonia"
+             )
+
            '(233
+             "ANEMOMETER"
+
              "name-maker"
              "new-member"
              "unmaimed"
              "unmemorized"
-             "anemometer"
-             "unmomentous")
+             "unmomentous"
+             )
+
            '(234
+             "NIMROD"
+
              "namer"
-             "Nimrod"
              "numeral"
              "numerology"
              "newmarket"
@@ -6873,19 +6886,50 @@
              "unmarked"
              "unmerciful"
              "unmarried"
-             "un-American")
-           '(235 "nameless" "numbly" "animal" "enamel" "anomaly" "pneumology")
-           '(236 "animation" "unemotional" "unimaginative" "unmatched" "unmeshed")
-           '(237 "naming" "anemic" "inimical" "unmake" "winemaker")
+             "un-American"
+             )
+
+           '(235
+             "ANIMAL"
+
+             "nameless"
+             "numbly"
+             "enamel"
+             "anomaly"
+             "pneumology"
+             )
+
+           '(236
+             "ANIMATION"
+
+             "unemotional"
+             "unimaginative"
+             "unmatched"
+             "unmeshed"
+             )
+
+           '(237
+             "WINEMAKER"
+
+             "naming"
+             "anemic"
+             "inimical"
+             "unmake"
+             )
+
            '(238
-             "nymph"
+             "NYMPH"
+
              "unemphatic"
              "unmovable"
              "nemophila"
              "unmiffed"
-             "unmuffled")
+             "unmuffled"
+             )
+
            '(239
-             "nameplate"
+             "NAMEPLATE"
+
              "nimble"
              "number"
              "unemployed"
@@ -6896,9 +6940,12 @@
              "unambiguous"
              "unamiable"
              "unhampered"
-             "snowmobile")
+             "snowmobile"
+             )
+
            '(240
-             "nurse"
+             "NURSE"
+
              "nursery"
              "neurosis"
              "nearsighted"
@@ -6908,9 +6955,12 @@
              "unrest"
              "unhorse"
              "sonorous"
-             "sunrise")
+             "sunrise"
+             )
+
            '(241
-             "narrator"
+             "NARRATOR"
+
              "neurotic"
              "nard"
              "north"
@@ -6924,30 +6974,46 @@
              "unhurt"
              "unredeemed"
              "unworthy"
-             "unwritten")
+             "unwritten"
+             )
+
            '(242
+             "NEURON"
+
              "no-iron"
              "no-run"
-             "neuron"
              "nearness"
              "narrowness"
              "unearned"
              "unworn"
              "unwarned"
-             "unwarranted")
+             "unwarranted"
+             )
+
            '(243
+             "NORMAN"
+
              "norm"
              "normal"
              "near-miss"
              "Norma"
-             "Norman"
              "enormous"
              "narrow-minded"
              "unarmed"
-             "innermost")
-           '(244 "nearer" "narrower" "honorary" "unrewarded")
+             "innermost"
+             )
+
+           '(244
+             "HONORARY"
+
+             "nearer"
+             "narrower"
+             "unrewarded"
+             )
+
            '(245
-             "narwhal"
+             "NARWHAL"
+
              "narrowly"
              "nearly"
              "New-World"
@@ -6960,19 +7026,25 @@
              "unruly"
              "unreal"
              "unroyal"
-             "snarl")
+             "snarl"
+             )
+
            '(246
+             "ENERGY"
+
              "narration"
              "nourishment"
              "Norwegian"
-             "energy"
              "enrage"
              "enrich"
              "inertia"
              "onrush"
-             "ownership")
+             "ownership"
+             )
+
            '(247
-             "narcotics"
+             "NARCOTICS"
+
              "nark"
              "Newark"
              "New-York"
@@ -6982,29 +7054,38 @@
              "unrecorded"
              "unrequited"
              "unerring"
-             "unrecoverable")
+             "unrecoverable"
+             )
+
            '(248
+             "NIRVANA"
+
              "nerve"
-             "nirvana"
              "no-refund"
              "enervate"
              "unravel"
              "unrivaled"
              "unrefined"
-             "unruffled")
+             "unruffled"
+             )
+
            '(249
+             "ENROBE"
+
              "nearby"
              "enrapt"
-             "enrobe"
              "enwrap"
              "honorable"
              "unrepentant"
              "unripe"
              "unrippled"
-             "unwrap")
+             "unwrap"
+             )
+
            '(250
+             "NELSON"
+
              "nails"
-             "nelson"
              "nihilist"
              "annals"
              "analyze"
@@ -7013,9 +7094,12 @@
              "in-laws"
              "unlace"
              "unless"
-             "unwholesome")
+             "unwholesome"
+             )
+
            '(251
-             "newlywed"
+             "NEWLYWED"
+
              "nailed"
              "annihilate"
              "annulled"
@@ -7029,39 +7113,62 @@
              "unladylike"
              "unload"
              "unlit"
-             "knelt")
+             "knelt"
+             )
+
            '(252
+             "ENAMEL"
+
              "nylon"
              "nail"
-             "enamel"
              "ani​line"
              "inland"
              "on-line"
-             "inalienable")
+             "inalienable"
+             )
+
            '(253
+             "ANNULMENT"
+
              "newly-made"
-             "annulment"
              "unlimited"
              "uni​lluminated"
-             "unlamented")
+             "unlamented"
+             )
+
            '(254
+             "INHALER"
+
              "nailer"
              "enlargement"
-             "inhaler"
              "kneeler"
              "unlearned"
-             "unalarmed")
-           '(255 "nailless" "nail-hole" "ni​lly-willy" "unloyal" "Honolulu")
+             "unalarmed"
+             )
+
+           '(255
+             "HONOLULU"
+
+             "nailless"
+             "nail-hole"
+             "ni​lly-willy"
+             "unloyal"
+             )
+
            '(256
-             "knowledge"
+             "KNOWLEDGE"
+
              "analgesic"
              "analogy"
              "ineligible"
              "unlatch"
-             "unleash")
+             "unleash"
+             )
+
            '(257
+             "KNEELING"
+
              "nailing"
-             "kneeling"
              "no-luck"
              "new-look"
              "onlooker"
@@ -7071,8 +7178,12 @@
              "unwelcome"
              "unwilling"
              "unallocated"
-             "unlooked-for")
+             "unlooked-for"
+             )
+
            '(258
+             "UNLOVED"
+
              "nail-file"
              "New-Left"
              "nullify"
@@ -7082,10 +7193,12 @@
              "on-leave"
              "unlawful"
              "unlive"
-             "unloved")
+             )
+
            '(259
+             "NAIL-POLISH"
+
              "nail-biting"
-             "nail-polish"
              "nail-up"
              "nol-pros"
              "analeptic"
@@ -7094,8 +7207,12 @@
              "inhalable"
              "unallowable"
              "unlabeled"
-             "unlabored")
+             "unlabored"
+             )
+
            '(260
+             "NATCHEZ"
+
              "nauseous"
              "niches"
              "notches"
@@ -7104,8 +7221,11 @@
              "inches"
              "injustice"
              "unjust"
-             "Natchez")
+             )
+
            '(261
+             "UNWASHED"
+
              "nidget"
              "notched"
              "nudged"
@@ -7116,14 +7236,15 @@
              "unshod"
              "unshut"
              "initiated"
-             "unwashed"
-             "unwashed")
+             )
+
            '(262
+             "ENGINE"
+
              "nation"
              "notion"
              "ancient"
              "enchant"
-             "engine"
              "engineer"
              "enjoin"
              "ingenue"
@@ -7133,9 +7254,20 @@
              "ungentle"
              "ungenerous"
              "unchanged"
-             "unchained")
-           '(263 "notchmark" "enjoyment" "inchmeal" "unashamed")
+             "unchained"
+             )
+
+           '(263
+             "NOTCHMARK"
+
+             "enjoyment"
+             "inchmeal"
+             "unashamed"
+             )
+
            '(264
+             "KNEE-JERK"
+
              "nature"
              "notcher"
              "nudger"
@@ -7143,47 +7275,67 @@
              "enshrine"
              "injury"
              "insurance"
-             "knee-jerk"
              "onager"
              "on-shore"
              "unshrinkable"
              "unsure"
-             "century")
+             "century"
+             )
+
            '(265
-             "enchilada"
+             "ENCHILADA"
+
              "initial"
              "unchallenged"
              "unchilled"
              "unshielded"
              "unsheltered"
-             "unusual")
-           '(266 "hinge-joint" "unjudged" "un-Jewish")
+             "unusual"
+             )
+
+           '(266
+             "HINGE-JOINT"
+
+             "unjudged"
+             "un-Jewish"
+             )
+
            '(267
+             "GNASHING"
+
              "nudging"
-             "gnashing"
              "enjoying"
              "inject"
              "unchecked"
              "unshaken"
-             "unshackle")
+             "unshackle"
+             )
+
            '(268
-             "anchovy"
+             "ANCHOVY"
+
              "in-a-jiffy"
              "unshaven"
              "unshifted"
              "unshuffled"
              "unshoveled"
              "unchivalrous"
-             "unchafable")
+             "unchafable"
+             )
+
            '(269
-             "hunchback"
+             "HUNCHBACK"
+
              "enjoyable"
              "unshapely"
              "unship"
              "unchaperoned"
              "unwashable"
-             "wineshop")
+             "wineshop"
+             )
+
            '(270
+             "inks"
              "negus"
              "next"
              "nexus"
@@ -7193,7 +7345,6 @@
              "inaccessible"
              "inexcusable"
              "inexpensive"
-             "inks"
              "inexperience"
              "innocuous"
              "inquest"

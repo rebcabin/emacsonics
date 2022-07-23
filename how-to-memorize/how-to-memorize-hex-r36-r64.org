@@ -4008,129 +4008,153 @@ good ideas because they might incorrectly recall 64 at speed.
 :end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 330 340)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 230 | names      | namesake     | nemesis       | numismatist  | animosity   | inmost      |
-|     | enemies    | gnomes       | unmistakable  | unmask       |             |             |
+| 230 | GNOMES     | names        | namesake      | nemesis      | numismatist | animosity   |
+|     | inmost     | enemies      | unmistakable  | unmask       |             |             |
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 231 | nomad      | named        | new-math      | name-dropper | animate     | enmity      |
+| 231 | NOMAD      | named        | new-math      | name-dropper | animate     | enmity      |
 |     | inmate     | pneumatic    |               |              |             |             |
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 232 | nominal    | nominee      | new-moon      | numbness     | honeymoon   | inhuman     |
+| 232 | NEW-MOON   | nominal      | nominee       | numbness     | honeymoon   | inhuman     |
 |     | unmanly    | unmannerly   | unmentionable | unmindful    | unwomanly   | pneumonia   |
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 233 | name-maker | new-member   | unmaimed      | unmemorized  | anemometer  | unmomentous |
+| 233 | ANEMOMETER | name-maker   | new-member    | unmaimed     | unmemorized | unmomentous |
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 234 | namer      | Nimrod       | numeral       | numerology   | newmarket   | enamor      |
+| 234 | NIMROD     | namer        | numeral       | numerology   | newmarket   | enamor      |
 |     | enumerate  | unmarred     | unmarked      | unmerciful   | unmarried   | un-American |
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 235 | nameless   | numbly       | animal        | enamel       | anomaly     | pneumology  |
+| 235 | ANIMAL     | nameless     | numbly        | enamel       | anomaly     | pneumology  |
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 236 | animation  | unemotional  | unimaginative | unmatched    | unmeshed    |             |
+| 236 | ANIMATION  | unemotional  | unimaginative | unmatched    | unmeshed    |             |
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 237 | naming     | anemic       | inimical      | unmake       | winemaker   |             |
+| 237 | WINEMAKER  | naming       | anemic        | inimical     | unmake      |             |
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 238 | nymph      | unemphatic   | unmovable     | nemophila    | unmiffed    | unmuffled   |
+| 238 | NYMPH      | unemphatic   | unmovable     | nemophila    | unmiffed    | unmuffled   |
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 239 | nameplate  | nimble       | number        | unemployed   | unimportant | unimpaired  |
+| 239 | NAMEPLATE  | nimble       | number        | unemployed   | unimportant | unimpaired  |
 |     | unimproved | unimpressive | unambiguous   | unamiable    | unhampered  | snowmobile  |
-|-----+------------+--------------+---------------+--------------+-------------+-------------|
+:end:
 
 \clearpage
-|-----+---------------+-------------+-------------+-------------+---------------+-------------|
-| 240 | nurse         | nursery     | neurosis    | nearsighted | honors        | onerous     |
-|     | owners        | unrest      | unhorse     | sonorous    | sunrise       |             |
-|-----+---------------+-------------+-------------+-------------+---------------+-------------|
-| 241 | narrator      | neurotic    | nard        | north       | inarticulate  | inert       |
-|     | inheritance   | inroad      | inward      | onward      | unearth       | unhurt      |
-|     | unredeemed    | unworthy    | unwritten   |             |               |             |
-|-----+---------------+-------------+-------------+-------------+---------------+-------------|
-| 242 | no-iron       | no-run      | neuron      | nearness    | narrowness    | unearned    |
-|     | unworn        | unwarned    | unwarranted |             |               |             |
-|-----+---------------+-------------+-------------+-------------+---------------+-------------|
-| 243 | norm          | normal      | near-miss   | Norma       | Norman        | enormous    |
-|     | narrow-minded | unarmed     | innermost   |             |               |             |
-|-----+---------------+-------------+-------------+-------------+---------------+-------------|
-| 244 | nearer        | narrower    | honorary    | unrewarded  |               |             |
-|-----+---------------+-------------+-------------+-------------+---------------+-------------|
-| 245 | narwhal       | narrowly    | nearly      | New-World   | enroll        | gnarl       |
-|     | knurl         | one-reel    | unrelenting | unreliable  | unruly        | unreal      |
-|     | unroyal       | snarl       |             |             |               |             |
-|-----+---------------+-------------+-------------+-------------+---------------+-------------|
-| 246 | narration     | nourishment | Norwegian   | energy      | enrage        | enrich      |
-|     | inertia       | onrush      | ownership   |             |               |             |
-|-----+---------------+-------------+-------------+-------------+---------------+-------------|
-| 247 | narcotics     | nark        | Newark      | New-York    | anarchy       | on-record   |
-|     | honoring      | unrecorded  | unrequited  | unerring    | unrecoverable |             |
-|-----+---------------+-------------+-------------+-------------+---------------+-------------|
-| 248 | nerve         | nirvana     | no-refund   | enervate    | unravel       | unrivaled   |
-|     | unrefined     | unruffled   |             |             |               |             |
-|-----+---------------+-------------+-------------+-------------+---------------+-------------|
-| 249 | nearby        | enrapt      | enrobe      | enwrap      | honorable     | unrepentant |
-|     | unripe        | unrippled   | unwrap      |             |               |             |
-|-----+---------------+-------------+-------------+-------------+---------------+-------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 340 350)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 240 | NURSE         | nursery    | neurosis    | nearsighted | honors        | onerous     |
+|     | owners        | unrest     | unhorse     | sonorous    | sunrise       |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 241 | NARRATOR      | neurotic   | nard        | north       | inarticulate  | inert       |
+|     | inheritance   | inroad     | inward      | onward      | unearth       | unhurt      |
+|     | unredeemed    | unworthy   | unwritten   |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 242 | NEURON        | no-iron    | no-run      | nearness    | narrowness    | unearned    |
+|     | unworn        | unwarned   | unwarranted |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 243 | NORMAN        | norm       | normal      | near-miss   | Norma         | enormous    |
+|     | narrow-minded | unarmed    | innermost   |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 244 | HONORARY      | nearer     | narrower    | unrewarded  |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 245 | NARWHAL       | narrowly   | nearly      | New-World   | enroll        | gnarl       |
+|     | knurl         | one-reel   | unrelenting | unreliable  | unruly        | unreal      |
+|     | unroyal       | snarl      |             |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 246 | ENERGY        | narration  | nourishment | Norwegian   | enrage        | enrich      |
+|     | inertia       | onrush     | ownership   |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 247 | NARCOTICS     | nark       | Newark      | New-York    | anarchy       | on-record   |
+|     | honoring      | unrecorded | unrequited  | unerring    | unrecoverable |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 248 | NIRVANA       | nerve      | no-refund   | enervate    | unravel       | unrivaled   |
+|     | unrefined     | unruffled  |             |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 249 | ENROBE        | nearby     | enrapt      | enwrap      | honorable     | unrepentant |
+|     | unripe        | unrippled  | unwrap      |             |               |             |
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 350 360)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 250 | nails       | nelson      | nihilist    | annals        | analyze     | awnless      |
+| 250 | NELSON      | nails       | nihilist    | annals        | analyze     | awnless      |
 |     | enlist      | in-laws     | unlace      | unless        | unwholesome |              |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 251 | newlywed    | nailed      | annihilate  | annulled      | enlighten   | inalterable  |
+| 251 | NEWLYWED    | nailed      | annihilate  | annulled      | enlighten   | inalterable  |
 |     | inlet       | inhaled     | unhealthy   | unallowed     | unallotted  | unladylike   |
 |     | unload      | unlit       | knelt       |               |             |              |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 252 | nylon       | nail        | enamel      | aniline       | inland      | on-line      |
+| 252 | ENAMEL      | nylon       | nail        | ani​line       | inland      | on-line      |
 |     | inalienable |             |             |               |             |              |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 253 | newly-made  | annulment   | unlimited   | unilluminated | unlamented  |              |
+| 253 | ANNULMENT   | newly-made  | unlimited   | uni​lluminated | unlamented  |              |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 254 | nailer      | enlargement | inhaler     | kneeler       | unlearned   | unalarmed    |
+| 254 | INHALER     | nailer      | enlargement | kneeler       | unlearned   | unalarmed    |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 255 | nailless    | nail-hole   | nilly-willy | unloyal       | Honolulu    |              |
+| 255 | HONOLULU    | nailless    | nail-hole   | ni​lly-willy   | unloyal     |              |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 256 | knowledge   | analgesic   | analogy     | ineligible    | unlatch     | unleash      |
+| 256 | KNOWLEDGE   | analgesic   | analogy     | ineligible    | unlatch     | unleash      |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 257 | nailing     | kneeling    | no-luck     | new-look      | onlooker    | unlike       |
+| 257 | KNEELING    | nailing     | no-luck     | new-look      | onlooker    | unlike       |
 |     | unlock      | unlucky     | unwelcome   | unwilling     | unallocated | unlooked-for |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 258 | nail-file   | New-Left    | nullify     | analphabet    | enliven     | in-love      |
-|     | on-leave    | unlawful    | unlive      | unloved       |             |              |
+| 258 | UNLOVED     | nail-file   | New-Left    | nullify       | analphabet  | enliven      |
+|     | in-love     | on-leave    | unlawful    | unlive        |             |              |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 259 | nail-biting | nail-polish | nail-up     | nol-pros      | analeptic   | unhelpful    |
+| 259 | NAIL-POLISH | nail-biting | nail-up     | nol-pros      | analeptic   | unhelpful    |
 |     | unliable    | inhalable   | unallowable | unlabeled     | unlabored   |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
+:end:
 
 \clearpage
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 360 370)
+#+end_src
+
+#+RESULTS:
+:results:
 |-----+--------------+------------+--------------+------------+--------------+-------------|
-| 260 | nauseous     | niches     | notches      | nudges     | hinges       | inches      |
-|     | injustice    | unjust     | Natchez      |            |              |             |
+| 260 | NATCHEZ      | nauseous   | niches       | notches    | nudges       | hinges      |
+|     | inches       | injustice  | unjust       |            |              |             |
 |-----+--------------+------------+--------------+------------+--------------+-------------|
-| 261 | nidget       | notched    | nudged       | gnashed    | enjoyed      | inched      |
-|     | one-shot     | unshod     | unshut       | initiated  | unwashed     | unwashed    |
+| 261 | UNWASHED     | nidget     | notched      | nudged     | gnashed      | enjoyed     |
+|     | inched       | one-shot   | unshod       | unshut     | initiated    |             |
 |-----+--------------+------------+--------------+------------+--------------+-------------|
-| 262 | nation       | notion     | ancient      | enchant    | engine       | engineer    |
+| 262 | ENGINE       | nation     | notion       | ancient    | enchant      | engineer    |
 |     | enjoin       | ingenue    | ingenious    | injunction | knee-jointed | ungentle    |
 |     | ungenerous   | unchanged  | unchained    |            |              |             |
 |-----+--------------+------------+--------------+------------+--------------+-------------|
-| 263 | notchmark    | enjoyment  | inchmeal     | unashamed  |              |             |
+| 263 | NOTCHMARK    | enjoyment  | inchmeal     | unashamed  |              |             |
 |-----+--------------+------------+--------------+------------+--------------+-------------|
-| 264 | nature       | notcher    | nudger       | ensure     | enshrine     | injury      |
-|     | insurance    | knee-jerk  | onager       | on-shore   | unshrinkable | unsure      |
+| 264 | KNEE-JERK    | nature     | notcher      | nudger     | ensure       | enshrine    |
+|     | injury       | insurance  | onager       | on-shore   | unshrinkable | unsure      |
 |     | century      |            |              |            |              |             |
 |-----+--------------+------------+--------------+------------+--------------+-------------|
-| 265 | enchilada    | initial    | unchallenged | unchilled  | unshielded   | unsheltered |
+| 265 | ENCHILADA    | initial    | unchallenged | unchilled  | unshielded   | unsheltered |
 |     | unusual      |            |              |            |              |             |
 |-----+--------------+------------+--------------+------------+--------------+-------------|
-| 266 | hinge-joint  | unjudged   | un-Jewish    |            |              |             |
+| 266 | HINGE-JOINT  | unjudged   | un-Jewish    |            |              |             |
 |-----+--------------+------------+--------------+------------+--------------+-------------|
-| 267 | nudging      | gnashing   | enjoying     | inject     | unchecked    | unshaken    |
+| 267 | GNASHING     | nudging    | enjoying     | inject     | unchecked    | unshaken    |
 |     | unshackle    |            |              |            |              |             |
 |-----+--------------+------------+--------------+------------+--------------+-------------|
-| 268 | anchovy      | in-a-jiffy | unshaven     | unshifted  | unshuffled   | unshoveled  |
+| 268 | ANCHOVY      | in-a-jiffy | unshaven     | unshifted  | unshuffled   | unshoveled  |
 |     | unchivalrous | unchafable |              |            |              |             |
 |-----+--------------+------------+--------------+------------+--------------+-------------|
-| 269 | hunchback    | enjoyable  | unshapely    | unship     | unchaperoned | unwashable  |
+| 269 | HUNCHBACK    | enjoyable  | unshapely    | unship     | unchaperoned | unwashable  |
 |     | wineshop     |            |              |            |              |             |
-|-----+--------------+------------+--------------+------------+--------------+-------------|
+:end:
 
 \clearpage
 |-----+---------------+---------------+---------------+--------------+--------------+----------------|
