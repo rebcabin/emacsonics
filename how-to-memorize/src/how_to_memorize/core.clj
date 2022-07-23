@@ -4730,9 +4730,10 @@
              )
 
            '(124
+             "TENOR"
+
              "tanner"
              "teener"
-             "tenor"
              "tenure"
              "thinner"
              "tone-arm"
@@ -4743,19 +4744,25 @@
              "downright"
              "wet-nurse"
              "whitener"
-             "itinerary")
+             "itinerary"
+             )
+
            '(125
+             "TUNNEL"
+
              "toenail"
              "thinly"
              "tonal"
-             "tunnel"
              "town-hall"
              "denial"
              "downhill"
              "ethanol"
-             "stainless")
+             "stainless"
+             )
+
            '(126
-             "teenager"
+             "TEENAGER"
+
              "tonsure"
              "tenacious"
              "tannage"
@@ -4770,9 +4777,12 @@
              "astonish"
              "stench"
              "attention"
-             "wooden-shoe")
+             "wooden-shoe"
+             )
+
            '(127
-             "tank"
+             "TANK"
+
              "thank"
              "think"
              "tincture"
@@ -4788,18 +4798,25 @@
              "ethnic"
              "hoodwink"
              "satanic"
-             "stenographer")
+             "stenographer"
+             )
+
            '(128
+             "TUNA-FISH"
+
              "tinfoil"
-             "tuna-fish"
              "tenfold"
              "ten-footer"
              "tea-knife"
              "tuneful"
              "twinflower"
              "de-novo"
-             "downfall")
+             "downfall"
+             )
+
            '(129
+             "DUNE-BUGGY"
+
              "tenpin"
              "tenpounder"
              "tinplate"
@@ -4810,9 +4827,12 @@
              "downpour"
              "donnybrook"
              "Danube"
-             "dune-buggy"
-             "stoneblind")
+             "stoneblind"
+             )
+
            '(130
+             "THAMES"
+
              "Thomas"
              "teamster"
              "team-song"
@@ -4826,9 +4846,12 @@
              "admissible"
              "atomizer"
              "atmosphere"
-             "utmost")
+             "utmost"
+             )
+
            '(131
-             "tomato"
+             "TOMATO"
+
              "tamed"
              "tom-tom"
              "timid"
@@ -4846,8 +4869,12 @@
              "automate"
              "odometer"
              "estimate"
-             "esteemed")
+             "esteemed"
+             )
+
            '(132
+             "DOMINO"
+
              "T-man"
              "Tammany"
              "thiamine"
@@ -4864,23 +4891,28 @@
              "dominate"
              "domain"
              "dominion"
-             "domino"
              "administer"
              "admonish"
              "autumnal"
              "headman"
              "ottoman"
              "stamina"
-             "sediment")
+             "sediment"
+             )
+
            '(133
+             "DEMIMONDE"
+
              "teammate"
              "time-money"
              "time-immemorial"
              "dime-museum"
-             "demimonde"
-             "demi-magic")
+             "demi-magic"
+             )
+
            '(134
-             "tamer"
+             "TAMER"
+
              "tamarind"
              "timer"
              "tomorrow"
@@ -4893,9 +4925,12 @@
              "admirer"
              "admiral"
              "stammer"
-             "steamer")
+             "steamer"
+             )
+
            '(135
-             "tamale"
+             "TAMALE"
+
              "time-lag"
              "time-loan"
              "tumult"
@@ -4908,8 +4943,12 @@
              "dome-light"
              "etymologist"
              "oatmeal"
-             "stimulant")
+             "stimulant"
+             )
+
            '(136
+             "STEAMSHIP"
+
              "time-sheet"
              "time-chart"
              "tam-o-shanter"
@@ -4921,9 +4960,11 @@
              "atom-age"
              "Edam-cheese"
              "estimation"
-             "steamship")
+             )
+
            '(137
-             "tomahawk"
+             "TOMAHAWK"
+
              "tomcat"
              "team-captain"
              "time-card"
@@ -4937,8 +4978,12 @@
              "demigod"
              "democrat"
              "atomic"
-             "stomach")
+             "stomach"
+             )
+
            '(138
+             "ATOM-FORCE"
+
              "tomfool"
              "time-fuze"
              "time-value"
@@ -4947,9 +4992,12 @@
              "dumbfounded"
              "duumvirate"
              "hit-movie"
-             "steamfitter")
+             "steamfitter"
+             )
+
            '(139
-             "tomboy"
+             "TOMBOY"
+
              "temper"
              "temperature"
              "temperance"
@@ -4971,13 +5019,16 @@
              "dump"
              "automobile"
              "stamp"
-             "stump")
+             "stump"
+             )
+
            '(140
+             "TERRACE"
+
              "tricycle"
              "tea-rose"
              "thrice"
              "torso"
-             "terrace"
              "thirst"
              "Thursday"
              "trace"
@@ -4997,8 +5048,12 @@
              "waitress"
              "otherwise"
              "storehouse"
-             "stress")
+             "stress"
+             )
+
            '(141
+             "TURRET"
+
              "tart"
              "tardy"
              "territory"
@@ -5040,14 +5095,17 @@
              "street"
              "stride"
              "strut"
-             "sturdy")
+             "sturdy"
+             )
+
            '(142
+             "TERRAIN"
+
              "train"
              "trainee"
              "thorn"
              "throne"
              "torrent"
-             "terrain"
              "trance"
              "translation"
              "transport"
@@ -5072,8 +5130,12 @@
              "utterance"
              "astronaut"
              "historian"
-             "strain")
+             "strain"
+             )
+
            '(143
+             "DREAM"
+
              "tearoom"
              "term"
              "terminal"
@@ -5090,7 +5152,6 @@
              "turmoil"
              "diorama"
              "drama"
-             "dream"
              "dermatology"
              "dram"
              "drome"
@@ -5102,10 +5163,13 @@
              "streamer"
              "uttermost"
              "watermelon"
-             "watermark")
+             "watermark"
+             )
+
            '(144
+             "TERROR"
+
              "terrier"
-             "terror"
              "trier"
              "darer"
              "dearer"
@@ -5117,9 +5181,12 @@
              "outerwear"
              "waterer"
              "water-rat"
-             "water-right")
+             "water-right"
+             )
+
            '(145
-             "trail"
+             "TRAIL"
+
              "trial"
              "trawl"
              "thrill"
@@ -5143,9 +5210,12 @@
              "sterile"
              "sterling"
              "stroll"
-             "Waterloo")
+             "Waterloo"
+             )
+
            '(146
-             "trash"
+             "TRASH"
+
              "tragedy"
              "torch"
              "thrash"
@@ -5169,8 +5239,12 @@
              "storage"
              "stretch"
              "sturgeon"
-             "attrition")
+             "attrition"
+             )
+
            '(147
+             "TREK"
+
              "truck"
              "track"
              "tractor"
@@ -5207,8 +5281,12 @@
              "structure"
              "stroke"
              "struggle"
-             "historical")
+             "historical"
+             )
+
            '(148
+             "TREIF"
+
              "turf"
              "trophy"
              "tariff"
@@ -5236,11 +5314,14 @@
              "waterfall"
              "strive"
              "strafe"
-             "weather-vane")
+             "weather-vane"
+             )
+
            '(149
+             "TRAP"
+
              "tarpaulin"
              "tripod"
-             "trap"
              "trapeze"
              "treble"
              "terrible"
@@ -5272,7 +5353,9 @@
              "strip"
              "stripe"
              "water-boy"
-             "waterproof")
+             "waterproof"
+             )
+
            '(150
              "tails"
              "tales"

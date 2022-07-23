@@ -3455,160 +3455,184 @@ good ideas because they might incorrectly recall 64 at speed.
 :end:
 
 \clearpage
-|-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 120 | DANCE        | tenacity    | tennis      | tense        | thence       | tonsil       |
-|   x | tinsel       | dense       | dunce       | ad-nauseum   | Adonis       | Athens       |
-|     | audience     | haughtiness | dynasty     | utensil      | whiteness    | witness      |
-|     | sadness      |             |             |              |              |              |
-|-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 121 | DONUT        | taint       | taunt       | tenth        | tendon       | tend         |
-|   y | thunder      | tint        | tender      | twenty       | TNT          | twi-night    |
-|     | tantalize    | dainty      | dandy       | denote       | dent         | dentist      |
-|     | denude       | dint        | tent        | dwindle      | attend       | authentic    |
-|     | addendum     | identical   | identify    | whodunit     | stand        | stint        |
-|     | astound      |             |             |              |              |              |
-|-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 122 | ATHENIAN     | tenon       | teeny-weeny | denounce     | adonian      | tenant       |
-|   z | hootenanny   |             |             |              |              |              |
-|-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 123 | thin-man     | tonometer   | tenement    | town-meeting | denim        | Denmark      |
-|     | denomination | dynamo      | dynamite    | atonement    | attainment   | autonomy     |
-|     | outnumber    |             |             |              |              |              |
-|-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 124 | tanner       | teener      | tenor       | tenure       | thinner      | tone-arm     |
-|     | tuner        | diner       | dinner      | donor        | downright    | wet-nurse    |
-|     | whitener     | itinerary   |             |              |              |              |
-|-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 125 | toenail      | thinly      | tonal       | tunnel       | town-hall    | denial       |
-|     | downhill     | ethanol     | stainless   |              |              |              |
-|-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 126 | teenager     | tonsure     | tenacious   | tannage      | tension      | tonnage      |
-|     | township     | Danish      | dunnage     | donation     | dungeon      | twinge       |
-|     | astonish     | stench      | attention   | wooden-shoe  |              |              |
-|-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 127 | tank         | thank       | think       | tincture     | tinker       | tonic        |
-|     | tunic        | twinkle     | dank        | dinky        | dining       | donkey       |
-|     | Don-Quixote  | ethnic      | hoodwink    | satanic      | stenographer |              |
-|-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 128 | tinfoil      | tuna-fish   | tenfold     | ten-footer   | tea-knife    | tuneful      |
-|     | twinflower   | de-novo     | downfall    |              |              |              |
-|-----+--------------+-------------+-------------+--------------+--------------+--------------|
-| 129 | tenpin       | tenpounder  | tinplate    | tune-up      | twin-bill    | down-payment |
-|     | downbeat     | downpour    | donnybrook  | Danube       | dune-buggy   | stoneblind   |
-|-----+--------------+-------------+-------------+--------------+--------------+--------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 220 230)
+#+END_src
+
+#+RESULTS:
+:results:
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 120 | DANCE        | tinsel      | tenacity   | tennis       | tense        | thence     |
+|   x | tonsil       | dense       | dunce      | ad-nauseam   | Adonis       | Athens     |
+|     | audience     | haughtiness | dynasty    | utensil      | whiteness    | witness    |
+|     | sadness      |             |            |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 121 | DOUGHNUT     | tent        | taint      | taunt        | tenth        | tendon     |
+|   y | tend         | thunder     | tint       | tender       | twenty       | TNT        |
+|     | twi-night    | tantalize   | dainty     | dandy        | denote       | dent       |
+|     | dentist      | denude      | dint       | dwindle      | attend       | authentic  |
+|     | addendum     | identical   | identify   | whodunit     | stand        | stint      |
+|     | astound      |             |            |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 122 | ATHENIAN     | tenant      | tenon      | teeny-weeny  | denounce     | adonian    |
+|   z | hootenanny   |             |            |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 123 | TENEMENT     | thin-man    | tonometer  | town-meeting | denim        | Denmark    |
+|     | denomination | dynamo      | dynamite   | atonement    | attainment   | autonomy   |
+|     | outnumber    |             |            |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 124 | TENOR        | tanner      | teener     | tenure       | thinner      | tone-arm   |
+|     | tuner        | diner       | dinner     | donor        | downright    | wet-nurse  |
+|     | whitener     | itinerary   |            |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 125 | TUNNEL       | toenail     | thinly     | tonal        | town-hall    | denial     |
+|     | downhill     | ethanol     | stainless  |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 126 | TEENAGER     | tonsure     | tenacious  | tannage      | tension      | tonnage    |
+|     | township     | Danish      | dunnage    | donation     | dungeon      | twinge     |
+|     | astonish     | stench      | attention  | wooden-shoe  |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 127 | TANK         | thank       | think      | tincture     | tinker       | tonic      |
+|     | tunic        | twinkle     | dank       | dinky        | dining       | donkey     |
+|     | Don-Quixote  | ethnic      | hoodwink   | satanic      | stenographer |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 128 | TUNA-FISH    | tinfoil     | tenfold    | ten-footer   | tea-knife    | tuneful    |
+|     | twinflower   | de-novo     | downfall   |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 129 | DUNE-BUGGY   | tenpin      | tenpounder | tinplate     | tune-up      | twin-bill  |
+|     | down-payment | downbeat    | downpour   | donnybrook   | Danube       | stoneblind |
+:end:
 
 \clearpage
-|-----+------------+------------+-----------------+--------------+------------+-------------|
-| 130 | Thomas     | teamster   | team-song       | Thames       | theme-song | damask      |
-|     | damsel     | domestic   | domicile        | demise       | admissible | atomizer    |
-|     | atmosphere | utmost     |                 |              |            |             |
-|-----+------------+------------+-----------------+--------------+------------+-------------|
-| 131 | tomato     | tamed      | tom-tom         | timid        | tumid      | timeout     |
-|     | thumbtack  | daymaid    | deemed          | demit        | diameter   | dumdum      |
-|     | dumbwaiter | adamite    | admit           | automate     | odometer   | estimate    |
-|     | esteemed   |            |                 |              |            |             |
-|-----+------------+------------+-----------------+--------------+------------+-------------|
-| 132 | T-man      | Tammany    | thiamine        | time-honored | thumbnail  | tameness    |
-|     | demand     | demeanor   | demonstrate     | demon        | diamond    | dimension   |
-|     | diminish   | dominate   | domain          | dominion     | domino     | administer  |
-|     | admonish   | autumnal   | headman         | ottoman      | stamina    | sediment    |
-|-----+------------+------------+-----------------+--------------+------------+-------------|
-| 133 | teammate   | time-money | time-immemorial | dime-museum  | demimonde  | demi-magic  |
-|-----+------------+------------+-----------------+--------------+------------+-------------|
-| 134 | tamer      | tamarind   | timer           | tomorrow     | tommyrot   | Tia-Maria   |
-|     | tumor      | demure     | demarche        | demarcation  | admirer    | admiral     |
-|     | stammer    | steamer    |                 |              |            |             |
-|-----+------------+------------+-----------------+--------------+------------+-------------|
-| 135 | tamale     | time-lag   | time-loan       | tumult       | timeless   | time-limit  |
-|     | timely     | time-lock  | demolish        | dimly        | dome-light | etymologist |
-|     | oatmeal    | stimulant  |                 |              |            |             |
-|-----+------------+------------+-----------------+--------------+------------+-------------|
-| 136 | time-sheet | time-chart | tam-o-shanter   | damage       | demijohn   | dumb-show   |
-|     | admission  | automation | atom-age        | Edam-cheese  | estimation | steamship   |
-|-----+------------+------------+-----------------+--------------+------------+-------------|
-| 137 | tomahawk   | tomcat     | team-captain    | time-card    | timekeeper | tommy-gun   |
-|     | tummyache  | taming     | timing          | teeming      | demagogue  | demigod     |
-|     | democrat   | atomic     | stomach         |              |            |             |
-|-----+------------+------------+-----------------+--------------+------------+-------------|
-| 138 | tomfool    | time-fuze  | time-value      | team-foul    | time-off   | dumbfounded |
-|     | duumvirate | hit-movie  | steamfitter     |              |            |             |
-|-----+------------+------------+-----------------+--------------+------------+-------------|
-| 139 | tomboy     | temper     | temperature     | temperance   | tempest    | temple      |
-|     | template   | team-play  | team-boat       | timber       | timpani    | tympan      |
-|     | tombolo    | thimble    | thump           | tumble       | damp       | dimple      |
-|     | dumbbell   | dump       | automobile      | stamp        | stump      |             |
-|-----+------------+------------+-----------------+--------------+------------+-------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 230 240)
+#+END_src
+
+#+RESULTS:
+:results:
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 130 | THAMES      | Thomas     | teamster     | team-song       | Thames       | theme-song  |
+|     | damask      | damsel     | domestic     | domicile        | demise       | admissible  |
+|     | atomizer    | atmosphere | utmost       |                 |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 131 | TOMATO      | tamed      | tom-tom      | timid           | tumid        | timeout     |
+|     | thumbtack   | daymaid    | deemed       | demit           | diameter     | dumdum      |
+|     | dumbwaiter  | adamite    | admit        | automate        | odometer     | estimate    |
+|     | esteemed    |            |              |                 |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 132 | DOMINO      | T-man      | Tammany      | thiamine        | time-honored | thumbnail   |
+|     | tameness    | demand     | demeanor     | demonstrate     | demon        | diamond     |
+|     | dimension   | diminish   | dominate     | domain          | dominion     | administer  |
+|     | admonish    | autumnal   | headman      | ottoman         | stamina      | sediment    |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 133 | DEMIMONDE   | teammate   | time-money   | time-immemorial | dime-museum  | demi-magic  |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 134 | TAMER       | tamarind   | timer        | tomorrow        | tommyrot     | Tia-Maria   |
+|     | tumor       | demure     | demarche     | demarcation     | admirer      | admiral     |
+|     | stammer     | steamer    |              |                 |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 135 | TAMALE      | time-lag   | time-loan    | tumult          | timeless     | time-limit  |
+|     | timely      | time-lock  | demolish     | dimly           | dome-light   | etymologist |
+|     | oatmeal     | stimulant  |              |                 |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 136 | STEAMSHIP   | time-sheet | time-chart   | tam-o-shanter   | damage       | demijohn    |
+|     | dumb-show   | admission  | automation   | atom-age        | Edam-cheese  | estimation  |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 137 | TOMAHAWK    | tomcat     | team-captain | time-card       | timekeeper   | tommy-gun   |
+|     | tummyache   | taming     | timing       | teeming         | demagogue    | demigod     |
+|     | democrat    | atomic     | stomach      |                 |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 138 | ATOM-FORCE  | tomfool    | time-fuze    | time-value      | team-foul    | time-off    |
+|     | dumbfounded | duumvirate | hit-movie    | steamfitter     |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 139 | TOMBOY      | temper     | temperature  | temperance      | tempest      | temple      |
+|     | template    | team-play  | team-boat    | timber          | timpani      | tympan      |
+|     | tombolo     | thimble    | thump        | tumble          | damp         | dimple      |
+|     | dumbbell    | dump       | automobile   | stamp           | stump        |             |
+:end:
 
 \clearpage
-|-----+-----------+-------------+-----------+-------------+-----------+-------------|
-| 140 | tricycle  | tea-rose    | thrice    | torso       | terrace   | thirst      |
-|     | Thursday  | trace       | throes    | tress       | trews     | truce       |
-|     | dress     | dresser     | dressing  | drizzle     | drowsy    | duress      |
-|     | address   | atrocity    | authoress | waitress    | otherwise | storehouse  |
-|     | stress    |             |           |             |           |             |
-|-----+-----------+-------------+-----------+-------------+-----------+-------------|
-| 141 | tart      | tardy       | territory | tread       | treadle   | treat       |
-|     | trade     | trait       | triton    | treaty      | trident   | trout       |
-|     | truth     | turtle      | third     | thirty      | thirteen  | thread      |
-|     | threat    | throat      | thyroid   | dart        | dearth    | diehard     |
-|     | dirt      | dread       | drought   | druid       | adroit    | authority   |
-|     | iterate   | outright    | yesterday | Saturday    | start     | strait      |
-|     | straight  | stratagem   | street    | stride      | strut     | sturdy      |
-|     | Darth     |             |           |             |           |             |
-|-----+-----------+-------------+-----------+-------------+-----------+-------------|
-| 142 | train     | trainee     | thorn     | throne      | torrent   | terrain     |
-|     | trance    | translation | transport | trench      | turn      | tourney     |
-|     | turnip    | tyrant      | darn      | drain       | drench    | dirndl      |
-|     | drink     | drown       | drunk     | dryness     | adherent  | adorn       |
-|     | attorney  | eternal     | outrun    | utterance   | astronaut | historian   |
-|     | strain    |             |           |             |           |             |
-|-----+-----------+-------------+-----------+-------------+-----------+-------------|
-| 143 | tearoom   | term        | terminal  | thermometer | torment   | tram        |
-|     | tramp     | trampoline  | tremble   | trim        | trombone  | trumpet     |
-|     | theorem   | turmoil     | diorama   | drama       | dream     | dermatology |
-|     | dram      | drome       | dormer    | dormitory   | drum      | dramamine   |
-|     | stream    | streamer    | uttermost | watermelon  | watermark |             |
-|-----+-----------+-------------+-----------+-------------+-----------+-------------|
-| 144 | terrier   | terror      | trier     | darer       | dearer    | drawer      |
-|     | dreary    | dryer       | dry-run   | adorer      | outerwear | waterer     |
-|     | water-rat | water-right |           |             |           |             |
-|-----+-----------+-------------+-----------+-------------+-----------+-------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 240 245)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+-----------+-------------+------------+------------+-------------+-------------|
+| 140 | TERRACE   | tricycle    | tea-rose   | thrice     | torso       | thirst      |
+|     | Thursday  | trace       | throes     | tress      | trews       | truce       |
+|     | dress     | dresser     | dressing   | drizzle    | drowsy      | duress      |
+|     | address   | atrocity    | authoress  | waitress   | otherwise   | storehouse  |
+|     | stress    |             |            |            |             |             |
+|-----+-----------+-------------+------------+------------+-------------+-------------|
+| 141 | TURRET    | tart        | tardy      | territory  | tread       | treadle     |
+|     | treat     | trade       | trait      | triton     | treaty      | trident     |
+|     | trout     | truth       | turtle     | third      | thirty      | thirteen    |
+|     | thread    | threat      | throat     | thyroid    | dart        | dearth      |
+|     | diehard   | dirt        | dread      | drought    | druid       | adroit      |
+|     | authority | iterate     | outright   | yesterday  | Saturday    | start       |
+|     | strait    | straight    | stratagem  | street     | stride      | strut       |
+|     | sturdy    |             |            |            |             |             |
+|-----+-----------+-------------+------------+------------+-------------+-------------|
+| 142 | TERRAIN   | train       | trainee    | thorn      | throne      | torrent     |
+|     | trance    | translation | transport  | trench     | turn        | tourney     |
+|     | turnip    | tyrant      | darn       | drain      | drench      | dirndl      |
+|     | drink     | drown       | drunk      | dryness    | adherent    | adorn       |
+|     | attorney  | eternal     | outrun     | utterance  | astronaut   | historian   |
+|     | strain    |             |            |            |             |             |
+|-----+-----------+-------------+------------+------------+-------------+-------------|
+| 143 | DREAM     | tearoom     | term       | terminal   | thermometer | torment     |
+|     | tram      | tramp       | trampoline | tremble    | trim        | trombone    |
+|     | trumpet   | theorem     | turmoil    | diorama    | drama       | dermatology |
+|     | dram      | drome       | dormer     | dormitory  | drum        | dramamine   |
+|     | stream    | streamer    | uttermost  | watermelon | watermark   |             |
+|-----+-----------+-------------+------------+------------+-------------+-------------|
+| 144 | TERROR    | terrier     | trier      | darer      | dearer      | drawer      |
+|     | dreary    | dryer       | dry-run    | adorer     | outerwear   | waterer     |
+|     | water-rat | water-right |            |            |             |             |
+:end:
 
 \clearpage
-|-----+------------+------------+------------+--------------+------------+-------------|
-| 145 | trail      | trial      | trawl      | thrill       | trellis    | trowel      |
-|     | trolley    | twirl      | truly      | truelove     | tarheel    | trilogy     |
-|     | darling    | derail     | drill      | droll        | door-lock  | water-hole  |
-|     | water-lily | starling   | astrologer | sterile      | sterling   | stroll      |
-|     | Waterloo   |            |            |              |            |             |
-|-----+------------+------------+------------+--------------+------------+-------------|
-| 146 | trash      | tragedy    | torch      | thrash       | thrush     | traject     |
-|     | treachery  | treasure   | tear-sheet | dredge       | derision   | dirigible   |
-|     | drudge     | duration   | adoration  | atrocious    | authorship | hydrogen    |
-|     | outrage    | ostrich    | starch     | storage      | stretch    | sturgeon    |
-|     | attrition  |            |            |              |            |             |
-|-----+------------+------------+------------+--------------+------------+-------------|
-| 147 | truck      | track      | tractor    | tract        | trick      | tricolor    |
-|     | turkey     | target     | turk       | throng       | dark       | daring      |
-|     | direct     | doorkeeper | drag       | dragon       | drawing    | drug        |
-|     | during     | director   | dreg       | dragnet      | drake      | dirk        |
-|     | attract    | staircase  | stark      | streak       | strength   | strike      |
-|     | strict     | string     | strong     | structure    | stroke     | struggle    |
-|     | historical |            |            |              |            |             |
-|-----+------------+------------+------------+--------------+------------+-------------|
-| 148 | turf       | trophy     | tariff     | terrific     | terrify    | thrift      |
-|     | thrive     | traffic    | travel     | trifle       | truffle    | tearful     |
-|     | trove      | trough     | drivel     | draft        | drift      | drive       |
-|     | drove      | draught    | derive     | dwarf        | atrophy    | hydrophobia |
-|     | waterfall  | strive     | strafe     | weather-vane |            |             |
-|-----+------------+------------+------------+--------------+------------+-------------|
-| 149 | tarpaulin  | tripod     | trap       | trapeze      | treble     | terrible    |
-|     | throb      | torpedo    | trip       | tribe        | tribunal   | triple      |
-|     | troop      | troupe     | trouble    | turbine      | turbot     | tribute     |
-|     | drab       | drape      | drawback   | drip         | droop      | drop        |
-|     | durable    | derby      | adorable   | attribute    | strap      | stirrup     |
-|     | strawberry | strip      | stripe     | water-boy    | waterproof |             |
-|-----+------------+------------+------------+--------------+------------+-------------|
+#+begin_src clojure :exports results :results verbatim drawer output
+  (babomorph 245 250)
+#+end_src
+
+#+RESULTS:
+:results:
+|-----+-------------+------------+------------+-----------+--------------+------------|
+| 145 | TRAIL       | trial      | trawl      | thrill    | trellis      | trowel     |
+|     | trolley     | twirl      | truly      | truelove  | tarheel      | trilogy    |
+|     | darling     | derail     | drill      | droll     | door-lock    | water-hole |
+|     | water-lily  | starling   | astrologer | sterile   | sterling     | stroll     |
+|     | Waterloo    |            |            |           |              |            |
+|-----+-------------+------------+------------+-----------+--------------+------------|
+| 146 | TRASH       | tragedy    | torch      | thrash    | thrush       | traject    |
+|     | treachery   | treasure   | tear-sheet | dredge    | derision     | dirigible  |
+|     | drudge      | duration   | adoration  | atrocious | authorship   | hydrogen   |
+|     | outrage     | ostrich    | starch     | storage   | stretch      | sturgeon   |
+|     | attrition   |            |            |           |              |            |
+|-----+-------------+------------+------------+-----------+--------------+------------|
+| 147 | TREK        | truck      | track      | tractor   | tract        | trick      |
+|     | tricolor    | turkey     | target     | turk      | throng       | dark       |
+|     | daring      | direct     | doorkeeper | drag      | dragon       | drawing    |
+|     | drug        | during     | director   | dreg      | dragnet      | drake      |
+|     | dirk        | attract    | staircase  | stark     | streak       | strength   |
+|     | strike      | strict     | string     | strong    | structure    | stroke     |
+|     | struggle    | historical |            |           |              |            |
+|-----+-------------+------------+------------+-----------+--------------+------------|
+| 148 | TREIF       | turf       | trophy     | tariff    | terrific     | terrify    |
+|     | thrift      | thrive     | traffic    | travel    | trifle       | truffle    |
+|     | tearful     | trove      | trough     | drivel    | draft        | drift      |
+|     | drive       | drove      | draught    | derive    | dwarf        | atrophy    |
+|     | hydrophobia | waterfall  | strive     | strafe    | weather-vane |            |
+|-----+-------------+------------+------------+-----------+--------------+------------|
+| 149 | TRAP        | tarpaulin  | tripod     | trapeze   | treble       | terrible   |
+|     | throb       | torpedo    | trip       | tribe     | tribunal     | triple     |
+|     | troop       | troupe     | trouble    | turbine   | turbot       | tribute    |
+|     | drab        | drape      | drawback   | drip      | droop        | drop       |
+|     | durable     | derby      | adorable   | attribute | strap        | stirrup    |
+|     | strawberry  | strip      | stripe     | water-boy | waterproof   |            |
+:end:
 
 \clearpage
 |-----+------------+------------+------------+------------+-------------+------------|
