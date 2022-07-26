@@ -117,7 +117,7 @@
 # #+STARTUP: latexpreview inlineimages showall
 # #+STARTUP: showall
 
-#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 10
+#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 11
 #+AUTHOR: Brian Beckman; John D. Cook, Ondrej Certik
 #+DATE: 17 Jul 2022
 
@@ -155,17 +155,17 @@
 
 - Revision 3
 
-  - includes some sound-alikes and peg candidates from John D.
+  - Include some sound-alikes and peg candidates from John D.
     Cook, plus a hint from him that science fiction is a
-    worthwhile fount of sound-alikes
+    worthwhile fount of sound-alikes.
 
-  - begins promoting the first row in each table to "preferred sound
-    alikes"
+  - Begin promoting the first row in each table to "preferred sound
+    alikes."
 
 - Revision 4
 
-  - includes remarks about passwords and mental hash functions from John
-    D. Cook
+  - Include remarks about passwords and mental hash functions from John
+    D. Cook.
 
 - Revision 5
 
@@ -173,11 +173,20 @@
 
 - Revision 6
 
-  - automate production of tables with Clojure program
+  - Automate production of tables with Clojure program.
 
 - Revision 7
 
   - Non-Alphabetic ASCII
+
+- Revision 10
+
+  - All Pegs now use babomorph for everything.
+
+- Revision 11
+
+  - Added section on people's names. This is a new application of the
+    technique, never before published to our knowledge.
 
 \clearpage
 * Introduction
@@ -1395,7 +1404,6 @@ Jordan -> 6412 -> Jordan, Sheridan (memorize, e.g., as "sure tone")
 Brian -> 942 -> Brian, Brain, Bryan, Brown (memorize, e.g., as "hebrew now")
 
 Ondrej -> 214 -> Andrew, Andrea, Andrei (memorize, e.g., as "winter")
-
 
 Pick words and create a movie related to something that you know about the
 person (for example they like WINTER sports like hockey, or they are learning
