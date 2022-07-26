@@ -438,7 +438,7 @@ https://www.getcreditcardnumbers.com
 
 \vskip 0.26cm
 #+begin_src text
-  4716 5752 8659 3825
+  4716 5752 8659 3845
 #+end_src
 
 From the peg list, we get
@@ -446,7 +446,7 @@ From the peg list, we get
 | 4716 | rack tissue |
 | 5752 | lake lane   |
 | 8659 | fish lap    |
-| 3825 | muff rail   |
+| 3845 | muff rail   |
 
 There isn't an obvious narrative, here, but we get better
 by starting with "fish" (picturesque and smelly) and working
@@ -455,9 +455,9 @@ some sound-alikes backwards:
 | 4716 | rack DASH | Take a fishing rod off the RACK and DASH   |
 | 5752 | lake lane | down to the LAKE via our favorite LANE.    |
 | 8659 | fish LEAP | The FISH are LEAPing today, so we          |
-| 3825 | MOVE REEL | MOVE the REEL slowly (on the fishing rod). |
+| 3845 | MOVE REEL | MOVE the REEL slowly (on the fishing rod). |
 
-You can recall this the credit-card number weeks after devising
+You can recall this credit-card number weeks after devising
 the story, without refreshing your memory in between. Devising it
 took less than a minute. I instantly memorized it while devising
 it without extra effort because I know the entire 2-digit peg
