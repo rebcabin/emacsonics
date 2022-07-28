@@ -963,7 +963,7 @@ you.
     Smell the blood. He tangos awkwardly toward a bus, where he
     mounts the steps and pays his FARE inside.
 
-21. UNIFORM --- A skeleton (SHAD) holding a butterfly net FALLS
+21. UNIFORM --- A skeleton (SHELED) holding a butterfly net FALLS
     into a bigger NET along with a man-sized HOT-DOG. Smell it.
 
 22. VICTOR --- A NUN with a Christian FISH pendant presides over a
@@ -1013,7 +1013,7 @@ you.
 | R | ROMEO    | fan   | TZIPPOR | sparrow     | H5    | APR 30 | 120 |
 | S | SIERRA   | fame  | QUF     | monkey      | H6    | MAY 07 | 127 |
 | T | TANGO    | fare  | ROSH    | head        | H7    | MAY 14 | 134 |
-| U | UNIFORM  | fall  | SHAD    | skeleton    | H8    | MAY 21 | 141 |
+| U | UNIFORM  | fall  | SHELED  | skeleton    | H8    | MAY 21 | 141 |
 | V | VICTOR   | fish  | TANIN   | crocodile   | H9    | MAY 28 | 148 |
 | W | WHISKEY  | fig   |         |             | HT    | JUN 04 | 155 |
 | X | X-RAY    | fife  |         |             | HJ    | JUN 11 | 162 |
@@ -1047,7 +1047,7 @@ you.
 | r | romeo    | tatar       | tzippor | sparrow     | D5    | OCT 29 | 302 |
 | s | sierra   | title       | quf     | monkey      | D6    | NOV 05 | 309 |
 | t | tango    | death-watch | rosh    | head        | D7    | NOV 12 | 316 |
-| u | uniform  | hot-dog     | shad    | skeleton    | D8    | NOV 19 | 323 |
+| u | uniform  | hot-dog     | sheled  | skeleton    | D8    | NOV 19 | 323 |
 | v | victor   | auto-da-fe  | tanin   | crocodile   | D9    | NOV 26 | 330 |
 | w | whiskey  | teddy-bear  |         |             | DT    | DEC 03 | 337 |
 | x | x-ray    | dance       |         |             | DJ    | DEC 10 | 344 |
@@ -1283,7 +1283,7 @@ court cards --- page (like "jack"), queen, and king.
  |  18 | TAFFY  | H5   | rail       | LUN   | misdirection  | c5    | peace            | C5    | disappointment  | ROMEO    | fan         | TZIPPOR | APR 30 |  120 |
  |  19 | TAP    | H6   | rash       | SUN   | joy           | c6    | leaving home     | C6    | return home     | SIERRA   | fame        | QUF     | MAY 07 |  127 |
  |  20 | NOSE   | H7   | rack       | JDG   | reckoning     | c7    | diversion        | C7    | daydreaming     | TANGO    | fare        | ROSH    | MAY 14 |  134 |
- |  21 | NET    | H8   | reef       | WLD   | completion    | c8    | avoidance        | C8    | disillusioned   | UNIFORM  | fall        | SHAD    | MAY 21 |  141 |
+ |  21 | NET    | H8   | reef       | WLD   | completion    | c8    | avoidance        | C8    | disillusioned   | UNIFORM  | fall        | SHELED    | MAY 21 |  141 |
  |  22 | NUN    | H9   | rope       | FOO   | innocence     | c9    | smugness         | C9    | luxury          | VICTOR   | fish        | TANIN   | MAY 28 |  148 |
  |  23 | NAME   | HT   | race       | KNW   | fearless      | cT    | broken family    | CT    | fulfillment     | WHISKEY  | fig         |         | JUN 04 |  155 |
  |  24 | NERO   | HJ   | rat-a-tat  | KNC   | idealist      | cJ    | immaturity       | CJ    | dreamer         | X-RAY    | fife        |         | JUN 11 |  162 |
@@ -1309,7 +1309,7 @@ court cards --- page (like "jack"), queen, and king.
  |  44 | REAR   | D5   | tail       | lun   | confusion     | p5    | receive charity  | P5    | poverty         | romeo    | tatar       | tzippor | OCT 29 |  302 |
  |  45 | RAIL   | D6   | tissue     | sun   | sadness       | p6    | strings attached | P6    | charity         | sierra   | title       | quf     | NOV 05 |  309 |
  |  46 | RASH   | D7   | tack       | jdg   | doubt         | p7    | wasted work      | P7    | perseverence    | tango    | death-watch | rosh    | NOV 12 |  316 |
- |  47 | RACK   | D8   | taffy      | wld   | emptiness     | p8    | no motivation    | P8    | high standards  | uniform  | hot-dog     | shad    | NOV 19 |  323 |
+ |  47 | RACK   | D8   | taffy      | wld   | emptiness     | p8    | no motivation    | P8    | high standards  | uniform  | hot-dog     | sheled    | NOV 19 |  323 |
  |  48 | REEF   | D9   | tap        | foo   | naivety       | p9    | spendthrift      | P9    | fruits of labor | victor   | auto-da-fe  | tanin   | NOV 26 |  330 |
  |  49 | ROPE   | DT   | toes       | knw   | reckless      | pT    | fleeting success | PT    | legacy          | whiskey  | teddy-bear  |         | DEC 03 |  337 |
  |  50 | LACE   | DJ   | teetotaler | knc   | moody         | pJ    | uncommitted      | PJ    | diligence       | x-ray    | dance       |         | DEC 10 |  344 |
