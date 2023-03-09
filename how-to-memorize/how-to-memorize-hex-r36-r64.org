@@ -4136,7 +4136,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
 | 254 | INHALER     | nailer      | enlargement | kneeler       | unlearned   | unalarmed    |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 255 | HONOLULU    | nailless    | nail-hole   | ni​lly-willy   | unloyal     |              |
+| 255 | HONOLULU    | nailless    | nail-hole   | nilly-willy   | unloyal     |              |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
 | 256 | KNOWLEDGE   | analgesic   | analogy     | ineligible    | unlatch     | unleash      |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
@@ -4443,7 +4443,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | Monroe      | homeowner     |              |            |              |             |
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
 | 325 | manhole     | mainland      | mainly       | manly      | manual       | monolith    |
-|     | moneylender | meanwhile     | monologue    | moonlight  | Mani​la       | Emmanuel    |
+|     | moneylender | meanwhile     | monologue    | moonlight  | Manila       | Emmanuel    |
 |     | hymnal      | womanly       |              |            |              |             |
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
 | 326 | manager     | manger        | mansion      | mention    | menagerie    | miniature   |
@@ -5263,7 +5263,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | loaner      | loanword      | loner       | lunar      | Leonardo  | alienor       |
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 525 | lanolin     | lienal        | lineal      | line-haul  | Iinoleate | linoleum      |
-|     | lonely      | lunule        | willy-ni​lly |            |           |               |
+|     | lonely      | lunule        | willy-nilly |            |           |               |
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 526 | launch      | lounge        | lineage     | longitude  | lingerie  | lunation      |
 |     | luncheon    | lunge         | lynch       | alienation | elench    | elenge        |
@@ -5657,7 +5657,7 @@ good ideas because they might incorrectly recall 64 at speed.
 | 624 | chinaware   | general      | generation | generic      | generosity | genre      |
 |     | January     | joiner       | junior     | shiner       |            |            |
 |-----+-------------+--------------+------------+--------------+------------+------------|
-| 625 | chainless   | chainlet     | channel    | cheni​lle     | genealogy  | genial     |
+| 625 | chainless   | chainlet     | channel    | chenille     | genealogy  | genial     |
 |     | oceanology  | shinleaf     |            |              |            |            |
 |-----+-------------+--------------+------------+--------------+------------+------------|
 | 626 | change      | chain-shaped | chinch     | chinchilla   | ginger     | gingelly   |
@@ -5891,7 +5891,7 @@ good ideas because they might incorrectly recall 64 at speed.
 | 681 | chafed             | chiefdom   | chieftain    | cheviot     | shaft      | shaved        |
 |     | shavetail          | shift      | shoved       | Java-tea    | achieved   |               |
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
-| 682 | chaffinch          | chiffon    | chauvinist   | chavender   | Javanese   | juveni​le      |
+| 682 | chaffinch          | chiffon    | chauvinist   | chavender   | Javanese   | juvenile      |
 |     | shaven             | ash-oven   | washfountain |             |            |               |
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 683 | chief-mate         | sheaveman  | show-fame    | achievement |            |               |
@@ -6570,7 +6570,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | vineyard    | evener     | heavenward |               |             |             |
 |-----+-------------+------------+------------+---------------+-------------+-------------|
 | 825 | fanlight    | final      | finely     | finial        | funnel      | phenol      |
-|     | vani​lla     | vainly     | vinyl      | heavenly      |             |             |
+|     | vanilla     | vainly     | vinyl      | heavenly      |             |             |
 |-----+-------------+------------+------------+---------------+-------------+-------------|
 | 826 | finch       | finish     | Finnish    | vanish        | Venetian    | vengeance   |
 |     | V-engine    | avenge     | evangel    | eventual      |             |             |
@@ -7041,7 +7041,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | binary     | binaural     | boner       | abnormal    | habanera      | open-air    |
 |     | opener     | weaponry     |             |             |               |             |
 |-----+------------+--------------+-------------+-------------+---------------+-------------|
-| 925 | panel      | penal        | penholder   | penni​less   | peni​le        | penult      |
+| 925 | panel      | penal        | penholder   | penniless   | penile        | penult      |
 |     | pianola    | pinhole      | pinwheel    | banal       | hobnail       | openly      |
 |     | spaniel    |              |             |             |               |             |
 |-----+------------+--------------+-------------+-------------+---------------+-------------|

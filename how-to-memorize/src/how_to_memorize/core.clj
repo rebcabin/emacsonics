@@ -524,7 +524,7 @@
              )
 
            '((100025 "P")
-             "SENI​LE"
+             "SENILE"
              "snell"
              "snail"
              "sunlamp"
@@ -2368,7 +2368,7 @@
            '(25
              "NAIL"
              "narwhal"
-             "Ni​le"
+             "Nile"
              "inlay"
              "in-law"
              "unholy"
@@ -2382,7 +2382,7 @@
              "knoll"
              "newel"
              "newly"
-             "ni​l"
+             "nil"
              "null"
              "only"
              )
@@ -7121,7 +7121,7 @@
 
              "nylon"
              "nail"
-             "ani​line"
+             "aniline"
              "inland"
              "on-line"
              "inalienable"
@@ -7132,7 +7132,7 @@
 
              "newly-made"
              "unlimited"
-             "uni​lluminated"
+             "unilluminated"
              "unlamented"
              )
 
@@ -7151,7 +7151,7 @@
 
              "nailless"
              "nail-hole"
-             "ni​lly-willy"
+             "nilly-willy"
              "unloyal"
              )
 
@@ -8122,7 +8122,7 @@
              "meanwhile"
              "monologue"
              "moonlight"
-             "Mani​la"
+             "Manila"
              "Emmanuel"
              "hymnal"
              "womanly")
@@ -10326,7 +10326,7 @@
              "linoleum"
              "lonely"
              "lunule"
-             "willy-ni​lly")
+             "willy-nilly")
            '(526
              "launch"
              "lounge"
@@ -11341,7 +11341,7 @@
              "chainless"
              "chainlet"
              "channel"
-             "cheni​lle"
+             "chenille"
              "genealogy"
              "genial"
              "oceanology"
@@ -11972,7 +11972,7 @@
              "chauvinist"
              "chavender"
              "Javanese"
-             "juveni​le"
+             "juvenile"
              "shaven"
              "ash-oven"
              "washfountain")
@@ -14130,7 +14130,7 @@
              "finial"
              "funnel"
              "phenol"
-             "vani​lla"
+             "vanilla"
              "vainly"
              "vinyl"
              "heavenly")
@@ -15605,8 +15605,8 @@
              "panel"
              "penal"
              "penholder"
-             "penni​less"
-             "peni​le"
+             "penniless"
+             "penile"
              "penult"
              "pianola"
              "pinhole"
