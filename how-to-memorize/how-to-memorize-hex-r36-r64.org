@@ -147,9 +147,9 @@
 #+END_SRC
 
 #+RESULTS:
-: Emacs version: GNU Emacs 28.1 (build 2, aarch64-apple-darwin21.4.0, NS appkit-2113.40 Version 12.3.1 (Build 21E258))
-:  of 2022-04-12
-: org version: 9.5.2
+: Emacs version: GNU Emacs 28.2 (build 1, aarch64-apple-darwin21.1.0, NS appkit-2113.00 Version 12.0.1 (Build 21A559))
+:  of 2022-09-12
+: org version: 9.5.5
 \clearpage
 * Change log
 
@@ -2436,7 +2436,7 @@ good ideas because they might incorrectly recall 64 at speed.
 | 024 | SINNER      | sonar     | senior     | snore       | scenery   | sunrise   |
 |   O | snare       | sneer     | snort      | snarl       | sonorous  |           |
 |-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 025 | SENI​LE      | snell     | snail      | sunlamp     | sunlight  |           |
+| 025 | SENILE       | snell     | snail      | sunlamp     | sunlight  |           |
 |   P |             |           |            |             |           |           |
 |-----+-------------+-----------+------------+-------------+-----------+-----------|
 | 026 | SIGNAGE     | cinch     | singe      | snatch      | sensual   | snitch    |
@@ -2944,9 +2944,9 @@ good ideas because they might incorrectly recall 64 at speed.
 |    | anywhere | inhere   | inure   | narrow  | near    | newer    |
 |    | nor      | noria    | nowhere | unaware |         |          |
 |----+----------+----------+---------+---------+---------+----------|
-| 25 | NAIL     | narwhal  | Ni​le    | inlay   | in-law  | unholy   |
+| 25 | NAIL     | narwhal  | Nile    | inlay   | in-law  | unholy   |
 |    | anal     | annual   | annul   | inhale  | kneel   | knell    |
-|    | knoll    | newel    | newly   | ni​l     | null    | only     |
+|    | knoll    | newel    | newly   | nil     | null    | only     |
 |----+----------+----------+---------+---------+---------+----------|
 | 26 | NICHE    | notch    | nudge   | haunch  | hinge   | inch     |
 |    | enjoy    | gnash    | hunch   | no-show | unhitch | wench    |
@@ -4129,10 +4129,10 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | inlet       | inhaled     | unhealthy   | unallowed     | unallotted  | unladylike   |
 |     | unload      | unlit       | knelt       |               |             |              |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 252 | ENAMEL      | nylon       | nail        | ani​line       | inland      | on-line      |
+| 252 | ENAMEL      | nylon       | nail        | aniline       | inland      | on-line      |
 |     | inalienable |             |             |               |             |              |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 253 | ANNULMENT   | newly-made  | unlimited   | uni​lluminated | unlamented  |              |
+| 253 | ANNULMENT   | newly-made  | unlimited   | unilluminated | unlamented  |              |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
 | 254 | INHALER     | nailer      | enlargement | kneeler       | unlearned   | unalarmed    |
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
