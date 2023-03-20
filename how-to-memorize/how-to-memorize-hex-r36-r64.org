@@ -125,7 +125,7 @@
   (setq org-babel-python-command "python3")
   (setq org-image-actual-width nil)
   (setq org-confirm-babel-evaluate nil)
-  (setq org-src-yfontify-natively t)
+  (setq org-src-fontify-natively t)
   (add-to-list 'org-latex-packages-alist '("" "listingsutf8"))
   (setq org-export-latex-listings 'minted)
   (setq org-latex-listings 'minted
@@ -294,11 +294,11 @@ for 32:
 
 #+RESULTS:
 :results:
-|----+-------+---------+--------+--------+------+-------|
-| 32 | MAN   | mane    | mine   | minnow | moon | woman |
-|    | amen  | ammonia | human  | hymen  | main | mana  |
-|    | mania | manna   | many   | mean   | mien | moan  |
-|    | money | omen    | yeoman |        |      |       |
+|----+-------+---------+--------+------+--------+-------|
+| 32 | MAN   | mane    | hymen  | mine | minnow | moon  |
+|    | amen  | ammonia | human  | main | mana   | mania |
+|    | manna | many    | mean   | mien | moan   | money |
+|    | omen  | woman   | yeoman |      |        |       |
 :end:
 
 */Notes on such tables/*:
@@ -347,7 +347,7 @@ because the "n" in "...ina" is a third internal consonant. For
 :results:
 |-----+------------+----------+--------+---------+--------+----------|
 | 035 | SAWMILL    | smile    | smell  | small   | simile | sea-mile |
-|     | assimilate | seamless | seemly | similar |        |          |
+|   Z | assimilate | seamless | seemly | similar |        |          |
 :end:
 
 "Assimilate" is an apparent exception to the rule, inherited from Furst.
@@ -437,9 +437,9 @@ Consider the following, fake VISA number from
 https://www.getcreditcardnumbers.com
 
 \vskip 0.26cm
-#+begin_src text
+#+begin_example
   4716 5752 8659 3845
-#+end_src
+#+end_example
 
 From the peg list, we get
 
@@ -2344,9 +2344,9 @@ good ideas because they might incorrectly recall 64 at speed.
 |    | sale    | sell     | sill     | silly    | slay      | slow    |
 |    | sly     | soil     | sole     | solo     | soul      | whistle |
 |----+---------+----------+----------+----------+-----------+---------|
-| 06 | SASH    | swatch   | sage     | ice-show | sashay    | siege   |
-|    | assuage | ice-age  | sedge    | sewage   | such      | switch  |
-|    | usage   |          |          |          |           |         |
+| 06 | SAUSAGE | sash     | swatch   | sage     | ice-show  | siege   |
+|    | assuage | ice-age  | sashay   | sedge    | sewage    | such    |
+|    | switch  | usage    |          |          |           |         |
 |----+---------+----------+----------+----------+-----------+---------|
 | 07 | SACK    | ski      | sky      | scow     | sake      | sea-cow |
 |    | ask     | assegai  | hoosegow | housing  | husky     | icing   |
@@ -2436,7 +2436,7 @@ good ideas because they might incorrectly recall 64 at speed.
 | 024 | SINNER      | sonar     | senior     | snore       | scenery   | sunrise   |
 |   O | snare       | sneer     | snort      | snarl       | sonorous  |           |
 |-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 025 | SENILE       | snell     | snail      | sunlamp     | sunlight  |           |
+| 025 | SEE         | snell     | snail      | sunlamp     | sunlight  |           |
 |   P |             |           |            |             |           |           |
 |-----+-------------+-----------+------------+-------------+-----------+-----------|
 | 026 | SIGNAGE     | cinch     | singe      | snatch      | sensual   | snitch    |
@@ -2744,42 +2744,42 @@ good ideas because they might incorrectly recall 64 at speed.
 
 #+RESULTS:
 :results:
-|---+--------+-------+--------+--------+--------+-------|
-| 0 | SAW    | ice   | house  | hose   | haze   | zoo   |
-|   | a-sea  | ace   | as     | ass    | assay  | ayes  |
-|   | easy   | essay | eyes   | has    | hawse  | his   |
-|   | is     | ooze  | sea    | sew    | so     | sow   |
-|   | us     | use   | was    | wise   | woozy  | yes   |
-|---+--------+-------+--------+--------+--------+-------|
-| 1 | TEA    | hat   | hood   | oat    | yacht  | widow |
-|   | ad     | add   | aid    | at     | auto   | day   |
-|   | die    | do    | dough  | due    | dye    | eat   |
-|   | eddy   | etui  | hate   | head   | heat   | heed  |
-|   | height | hide  | hit    | hoot   | hot    | hut   |
-|   | idea   | it    | oath   | odd    | ode    | tee   |
-|   | thaw   | thee  | they   | thigh  | though | tie   |
-|   | toe    | tow   | toy    | wad    | wade   | wait  |
-|   | watt   | weed  | weight | wet    | what   | wheat |
-|   | white  | wide  | wit    | with   | youth  |       |
-|---+--------+-------+--------+--------+--------+-------|
-| 2 | NOAH   | honey | knee   | ion    | win    | wine  |
-|   | an     | ana   | anew   | ani    | annoy  | any   |
-|   | ennui  | gnaw  | gnu    | hen    | hyena  | in    |
-|   | inn    | know  | neigh  | new    | nigh   | no    |
-|   | now    | one   | own    | wan    | wean   | when  |
-|   | wino   |       |        |        |        |       |
-|---+--------+-------+--------+--------+--------+-------|
-| 3 | ME     | ammo  | ham    | hem    | womb   | Emmy  |
-|   | May    | may   | mow    | maw    | aim    | him   |
-|   | hum    | home  | hymn   | whim   | whom   |       |
-|---+--------+-------+--------+--------+--------+-------|
-| 4 | RAY    | roe   | arrow  | hair   | oar    | wire  |
-|   | raw    | rye   | air    | are    | area   | aria  |
-|   | array  | awry  | aware  | aura   | ear    | era   |
-|   | err    | here  | her    | hare   | hear   | heir  |
-|   | hero   | hour  | harrow | hurrah | hurry  | ire   |
-|   | or     | ore   | our    | war    | wear   | ware  |
-|   | where  | worry | weary  | year   | yore   | your  |
+|---+--------+--------+--------+-------+--------+-------|
+| 0 | SAW    | ice    | house  | hose  | haze   | zoo   |
+|   | a-sea  | ace    | as     | ass   | assay  | ayes  |
+|   | easy   | essay  | eyes   | has   | hawse  | his   |
+|   | is     | ooze   | sea    | sew   | so     | sow   |
+|   | us     | use    | was    | wise  | woozy  | yes   |
+|---+--------+--------+--------+-------+--------+-------|
+| 1 | TEA    | hat    | hood   | oat   | yacht  | widow |
+|   | ad     | add    | aid    | at    | auto   | day   |
+|   | die    | do     | dough  | due   | dye    | eat   |
+|   | eddy   | etui   | hate   | head  | heat   | heed  |
+|   | height | hide   | hit    | hoot  | hot    | hut   |
+|   | idea   | it     | oath   | odd   | ode    | tee   |
+|   | thaw   | thee   | they   | thigh | though | tie   |
+|   | toe    | tow    | toy    | wad   | wade   | wait  |
+|   | watt   | weed   | weight | wet   | what   | wheat |
+|   | white  | wide   | wit    | with  | youth  |       |
+|---+--------+--------+--------+-------+--------+-------|
+| 2 | NOAH   | honey  | knee   | ion   | win    | wine  |
+|   | an     | ana    | anew   | ani   | annoy  | any   |
+|   | ennui  | gnaw   | gnu    | hen   | hyena  | in    |
+|   | inn    | know   | neigh  | new   | nigh   | no    |
+|   | now    | one    | own    | wan   | wean   | when  |
+|   | wino   |        |        |       |        |       |
+|---+--------+--------+--------+-------+--------+-------|
+| 3 | ME     | ammo   | ham    | hem   | womb   | Emmy  |
+|   | May    | may    | mow    | maw   | aim    | him   |
+|   | hum    | home   | hymn   | whim  | whom   |       |
+|---+--------+--------+--------+-------+--------+-------|
+| 4 | RAY    | roe    | arrow  | hair  | oar    | wire  |
+|   | air    | are    | area   | aria  | array  | aura  |
+|   | aware  | awry   | ear    | era   | err    | hare  |
+|   | harrow | hear   | heir   | her   | here   | hero  |
+|   | hour   | hurrah | hurry  | ire   | or     | ore   |
+|   | our    | raw    | rye    | war   | ware   | wear  |
+|   | weary  | where  | worry  | year  | yore   | your  |
 :end:
 
 \clearpage
@@ -2944,9 +2944,9 @@ good ideas because they might incorrectly recall 64 at speed.
 |    | anywhere | inhere   | inure   | narrow  | near    | newer    |
 |    | nor      | noria    | nowhere | unaware |         |          |
 |----+----------+----------+---------+---------+---------+----------|
-| 25 | NAIL     | narwhal  | Nile    | inlay   | in-law  | unholy   |
+| 25 | NAIL     | narwhal  | e       | inlay   | in-law  | unholy   |
 |    | anal     | annual   | annul   | inhale  | kneel   | knell    |
-|    | knoll    | newel    | newly   | nil     | null    | only     |
+|    | knoll    | newel    | newly   |         | null    | only     |
 |----+----------+----------+---------+---------+---------+----------|
 | 26 | NICHE    | notch    | nudge   | haunch  | hinge   | inch     |
 |    | enjoy    | gnash    | hunch   | no-show | unhitch | wench    |
@@ -4014,7 +4014,7 @@ good ideas because they might incorrectly recall 64 at speed.
 | 222 | NONUNION       | ninon          | no-nonsense   | nonnegotiable | nonentity       | non-owner         |
 |     | unknown        | unannounced    |               |               |                 |                   |
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
-| 223 | NOON-meal      | ninnyhammer    | nonemotional  | nonmetal      | nonmember       | nonmedical        |
+| 223 | NOON-MEAL      | ninnyhammer    | nonemotional  | nonmetal      | nonmember       | nonmedical        |
 |     | nonmilitary    | nonemergency   | anonymous     | inanimate     | unanimous       | unanimated        |
 |     | synonymous     |                |               |               |                 |                   |
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
@@ -4121,33 +4121,33 @@ good ideas because they might incorrectly recall 64 at speed.
 
 #+RESULTS:
 :results:
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 250 | NELSON      | nails       | nihilist    | annals        | analyze     | awnless      |
-|     | enlist      | in-laws     | unlace      | unless        | unwholesome |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 251 | NEWLYWED    | nailed      | annihilate  | annulled      | enlighten   | inalterable  |
-|     | inlet       | inhaled     | unhealthy   | unallowed     | unallotted  | unladylike   |
-|     | unload      | unlit       | knelt       |               |             |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 252 | ENAMEL      | nylon       | nail        | aniline       | inland      | on-line      |
-|     | inalienable |             |             |               |             |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 253 | ANNULMENT   | newly-made  | unlimited   | unilluminated | unlamented  |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 254 | INHALER     | nailer      | enlargement | kneeler       | unlearned   | unalarmed    |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 255 | HONOLULU    | nailless    | nail-hole   | nilly-willy   | unloyal     |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 256 | KNOWLEDGE   | analgesic   | analogy     | ineligible    | unlatch     | unleash      |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 257 | KNEELING    | nailing     | no-luck     | new-look      | onlooker    | unlike       |
-|     | unlock      | unlucky     | unwelcome   | unwilling     | unallocated | unlooked-for |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 258 | UNLOVED     | nail-file   | New-Left    | nullify       | analphabet  | enliven      |
-|     | in-love     | on-leave    | unlawful    | unlive        |             |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 259 | NAIL-POLISH | nail-biting | nail-up     | nol-pros      | analeptic   | unhelpful    |
-|     | unliable    | inhalable   | unallowable | unlabeled     | unlabored   |              |
+|-----+-------------+-------------+-------------+------------+-------------+--------------|
+| 250 | NELSON      | nails       | nihilist    | annals     | analyze     | awnless      |
+|     | enlist      | in-laws     | unlace      | unless     | unwholesome |              |
+|-----+-------------+-------------+-------------+------------+-------------+--------------|
+| 251 | NEWLYWED    | nailed      | annihilate  | annulled   | enlighten   | inalterable  |
+|     | inlet       | inhaled     | unhealthy   | unallowed  | unallotted  | unladylike   |
+|     | unload      | unlit       | knelt       |            |             |              |
+|-----+-------------+-------------+-------------+------------+-------------+--------------|
+| 252 | ENAMEL      | nylon       | nail        | aine       | inland      | on-line      |
+|     | inalienable |             |             |            |             |              |
+|-----+-------------+-------------+-------------+------------+-------------+--------------|
+| 253 | ANNULMENT   | newly-made  | unlimited   | uluminated | unlamented  |              |
+|-----+-------------+-------------+-------------+------------+-------------+--------------|
+| 254 | INHALER     | nailer      | enlargement | kneeler    | unlearned   | unalarmed    |
+|-----+-------------+-------------+-------------+------------+-------------+--------------|
+| 255 | HONOLULU    | nailless    | nail-hole   | ly-willy   | unloyal     |              |
+|-----+-------------+-------------+-------------+------------+-------------+--------------|
+| 256 | KNOWLEDGE   | analgesic   | analogy     | ineligible | unlatch     | unleash      |
+|-----+-------------+-------------+-------------+------------+-------------+--------------|
+| 257 | KNEELING    | nailing     | no-luck     | new-look   | onlooker    | unlike       |
+|     | unlock      | unlucky     | unwelcome   | unwilling  | unallocated | unlooked-for |
+|-----+-------------+-------------+-------------+------------+-------------+--------------|
+| 258 | UNLOVED     | nail-file   | New-Left    | nullify    | analphabet  | enliven      |
+|     | in-love     | on-leave    | unlawful    | unlive     |             |              |
+|-----+-------------+-------------+-------------+------------+-------------+--------------|
+| 259 | NAIL-POLISH | nail-biting | nail-up     | nol-pros   | analeptic   | unhelpful    |
+|     | unliable    | inhalable   | unallowable | unlabeled  | unlabored   |              |
 :end:
 
 \clearpage
@@ -4443,7 +4443,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | Monroe      | homeowner     |              |            |              |             |
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
 | 325 | manhole     | mainland      | mainly       | manly      | manual       | monolith    |
-|     | moneylender | meanwhile     | monologue    | moonlight  | Manila       | Emmanuel    |
+|     | moneylender | meanwhile     | monologue    | moonlight  | Maa          | Emmanuel    |
 |     | hymnal      | womanly       |              |            |              |             |
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
 | 326 | manager     | manger        | mansion      | mention    | menagerie    | miniature   |
@@ -5263,7 +5263,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | loaner      | loanword      | loner       | lunar      | Leonardo  | alienor       |
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 525 | lanolin     | lienal        | lineal      | line-haul  | Iinoleate | linoleum      |
-|     | lonely      | lunule        | willy-nilly |            |           |               |
+|     | lonely      | lunule        | willy-ly    |            |           |               |
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 526 | launch      | lounge        | lineage     | longitude  | lingerie  | lunation      |
 |     | luncheon    | lunge         | lynch       | alienation | elench    | elenge        |
@@ -5657,7 +5657,7 @@ good ideas because they might incorrectly recall 64 at speed.
 | 624 | chinaware   | general      | generation | generic      | generosity | genre      |
 |     | January     | joiner       | junior     | shiner       |            |            |
 |-----+-------------+--------------+------------+--------------+------------+------------|
-| 625 | chainless   | chainlet     | channel    | chenille     | genealogy  | genial     |
+| 625 | chainless   | chainlet     | channel    | chele        | genealogy  | genial     |
 |     | oceanology  | shinleaf     |            |              |            |            |
 |-----+-------------+--------------+------------+--------------+------------+------------|
 | 626 | change      | chain-shaped | chinch     | chinchilla   | ginger     | gingelly   |
@@ -5891,7 +5891,7 @@ good ideas because they might incorrectly recall 64 at speed.
 | 681 | chafed             | chiefdom   | chieftain    | cheviot     | shaft      | shaved        |
 |     | shavetail          | shift      | shoved       | Java-tea    | achieved   |               |
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
-| 682 | chaffinch          | chiffon    | chauvinist   | chavender   | Javanese   | juvenile      |
+| 682 | chaffinch          | chiffon    | chauvinist   | chavender   | Javanese   | juvee         |
 |     | shaven             | ash-oven   | washfountain |             |            |               |
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 683 | chief-mate         | sheaveman  | show-fame    | achievement |            |               |
@@ -6570,7 +6570,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | vineyard    | evener     | heavenward |               |             |             |
 |-----+-------------+------------+------------+---------------+-------------+-------------|
 | 825 | fanlight    | final      | finely     | finial        | funnel      | phenol      |
-|     | vanilla     | vainly     | vinyl      | heavenly      |             |             |
+|     | vala        | vainly     | vinyl      | heavenly      |             |             |
 |-----+-------------+------------+------------+---------------+-------------+-------------|
 | 826 | finch       | finish     | Finnish    | vanish        | Venetian    | vengeance   |
 |     | V-engine    | avenge     | evangel    | eventual      |             |             |
@@ -7041,7 +7041,7 @@ good ideas because they might incorrectly recall 64 at speed.
 |     | binary     | binaural     | boner       | abnormal    | habanera      | open-air    |
 |     | opener     | weaponry     |             |             |               |             |
 |-----+------------+--------------+-------------+-------------+---------------+-------------|
-| 925 | panel      | penal        | penholder   | penniless   | penile        | penult      |
+| 925 | panel      | penal        | penholder   | peness      | pee           | penult      |
 |     | pianola    | pinhole      | pinwheel    | banal       | hobnail       | openly      |
 |     | spaniel    |              |             |             |               |             |
 |-----+------------+--------------+-------------+-------------+---------------+-------------|
@@ -7497,9 +7497,6 @@ function that can be computed mentally:
 #+end_src
 
 #+RESULTS:
-: {'permutation': array([6, 5, 7, 9, 0, 8, 4, 2, 1, 3])}
-: {'digits': [5, 1, 9, 9, 9]}
-: {'hash': '26752'}
 
 #+begin_comment
   def fp_free_permutation(i, p, n):
