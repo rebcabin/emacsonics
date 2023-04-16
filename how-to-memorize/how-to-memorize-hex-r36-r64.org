@@ -49,6 +49,7 @@
 #+LaTeX_HEADER: \usepackage[T1]{fontenc}
 #+LaTeX_HEADER: \usepackage{cmll}
 #+LaTeX_HEADER: \usepackage{amsmath}
+#+LaTeX_HEADER: \usepackage{amsthm}
 #+LaTeX_HEADER: \usepackage{amssymb}
 #+LaTeX_HEADER: \usepackage{interval}  % must install texlive-full
 #+LaTeX_HEADER: \usepackage{mathtools}
@@ -57,9 +58,9 @@
 #+LaTeX_HEADER: \usepackage{tikz}
 #+LaTeX_HEADER: \usepackage[utf8]{inputenc}
 
-# #+LaTeX_HEADER: \usepackage[top=0.90in,bottom=0.55in,left=1in,right=1in,includefoot]{geometry}
+# #+LaTeX_HEADER: \usepackage[top=0.90in,bottom=0.55in,left=1.25in,right=1.25in,includefoot]{geometry}
 
-#+LaTeX_HEADER: \usepackage[top=1.25in,bottom=1.25in,left=1.25in,right=1.25in,includefoot]{geometry}
+#+LaTeX_HEADER: \usepackage[top=1.25in,bottom=1.25in,left=1.75in,right=1.75in,includefoot]{geometry}
 
 #+LaTeX_HEADER: \usepackage{palatino}
 
@@ -69,14 +70,15 @@
 #+LATEX_HEADER: \usepackage{fancyhdr}
 #+LATEX_HEADER: \pagestyle{fancyplain}
 #+LATEX_HEADER: \lhead{}
-#+LATEX_HEADER: \chead{\textbf{(c) Brian Beckman, 2022; Creative Commons Attribution-ShareAlike CC-BY-SA}}
+#+LATEX_HEADER: \chead{\textbf{(c) Brian Beckman, 2023; Creative Commons Attribution-ShareAlike CC-BY-SA}}
 #+LATEX_HEADER: \rhead{}
-#+LATEX_HEADER: \lfoot{(c) Brian Beckman, 2022; CC-BY-SA}
+#+LATEX_HEADER: \lfoot{(c) Brian Beckman, 2023; CC-BY-SA}
 #+LATEX_HEADER: \cfoot{\thepage}
 #+LATEX_HEADER: \rfoot{}
 #+LATEX_HEADER: \usepackage{lineno}
 #+LATEX_HEADER: \usepackage{minted}
 #+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{tipa}
 
 # #+LATEX_HEADER: \linenumbers
 
@@ -87,6 +89,8 @@
 #+LATEX_HEADER: \usepackage{textcomp}
 #+LATEX_HEADER: \usepackage[atend]{bookmark}
 #+LATEX_HEADER: \usepackage{mdframed}
+#+LATEX_HEADER: \usepackage[utf8]{inputenc} % usually not needed (loaded by default)
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
 
 #+LATEX_HEADER_EXTRA: \BeforeBeginEnvironment{minted}{\begin{mdframed}}
 #+LATEX_HEADER_EXTRA: \AfterEndEnvironment{minted}{\end{mdframed}}
@@ -105,7 +109,19 @@
 #+LaTeX_HEADER: \newcommand\bleir{BLEIR}
 #+LaTeX_HEADER: \newcommand\llb{low-level \belex}
 #+LaTeX_HEADER: \newcommand\hlb{high-level \belex}
+#+LaTeX_HEADER: \newcommand{\Coloneqq}{\mathrel{\vcenter{\hbox{$:\,:\,=$}}{}}}
 
+#+LaTeX_HEADER: \theoremstyle{definition}
+#+LaTeX_HEADER: \newtheorem{definition}{Definition}
+
+#+LaTeX_HEADER: \theoremstyle{slogan}
+#+LaTeX_HEADER: \newtheorem{slogan}{Slogan}
+
+#+LaTeX_HEADER: \theoremstyle{warning}
+#+LaTeX_HEADER: \newtheorem{warning}{Warning}
+
+#+LaTeX_HEADER: \theoremstyle{premise}
+#+LaTeX_HEADER: \newtheorem{premise}{Premise}
 
 #+SELECT_TAGS: export
 #+STARTUP: indent
@@ -117,9 +133,9 @@
 # #+STARTUP: latexpreview inlineimages showall
 # #+STARTUP: showall
 
-#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 11
-#+AUTHOR: Brian Beckman; John D. Cook, Ondrej Certik
-#+DATE: 17 Jul 2022
+#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 12
+#+AUTHOR: Brian Beckman with John D. Cook, Ondrej Certik
+#+DATE: 16 April 2023
 
 #+BEGIN_SRC elisp :exports none
   (setq org-babel-python-command "python3")
@@ -155,17 +171,15 @@
 
 - Revision 3
 
-  - Include some sound-alikes and peg candidates from John D.
-    Cook, plus a hint from him that science fiction is a
-    worthwhile fount of sound-alikes.
+  - Include some sound-alikes and peg candidates from JDC, plus a
+    hint that science fiction is a fount of sound-alikes.
 
   - Begin promoting the first row in each table to "preferred sound
     alikes."
 
 - Revision 4
 
-  - Include remarks about passwords and mental hash functions from John
-    D. Cook.
+  - Include remarks about passwords and mental hash functions from JDC
 
 - Revision 5
 
@@ -188,58 +202,110 @@
   - Added section on people's names. This is a new application of the
     technique, never before published to our knowledge.
 
+- Revision 12
+
+  - Reworking the 3-digit pegs; adding new technique.
+
 \clearpage
 * Introduction
 
-I memorize numbers in any radix (base) by hallucinating poems,
-stories, or mental cartoon movies via the Mnemonic Major System:
+Here is a word that might be unfamiliar:
 
-https://en.wikipedia.org/wiki/Mnemonic_major_system
+\label{def:phantasmagoria}
+\begin{definition}
+  A \emph{phantasmagoria} is
 
-My hallucinations come with synaesthesia: smells, heat, texture,
-colors, brightness, etc. I use only imagination, no drugs. Many
-memory practitioners do not use synaesthesia, but they help me.
+  1. a vivid mental image like Superman or Bilbo Baggins
 
-Krill calls the hallucinations "phantasmagorias" and the inputs
-for them "phantasmagorishables," which itself encodes the digits
-8210 3746 95.
+  2. a mental movie clip like Rhett Butler carrying Scarlett O'Hara up
+     the staircase, two steps at a time; or Legolas the elf
+     in "Lord of the Rings" firing off arrows
 
-https://folk.ntnu.no/krill/pseudonumerology.htm
+  3. a sensation like the taste of cherry pie with vanilla ice cream or
+     the smell of burnt motor oil in an old engine block
 
-My methods are based on tables of
+  4. a musical riff like Clapton's "Down to the Crossroads" or
+     Bach's "Toccata and Fugue in D Minor"
 
-- pegs :: permanent, immutable hallucinogens in one-to-one
-  correspondence to numbers. For instance, the number 68 is a
-  chef, and I smell the kitchen and hear the sounds of boiling and
-  sizzling. Whenever I see a chef or think of one, I instantly
-  think of the number 68. That's 1-to-1 correspondence.
+  5. anything else that's vivid and easy to recall without effort
+  $\blacksquare$
+\end{definition}
 
-- sound-alikes :: fluid, mutable list of hallucinogenic words that
-  are similar in their consonant sounds to the pegs and in
-  many-to-one correspondence to the numbers. 68's "chef" sounds
-  like "chief," "sheaf," "Java," "chaff," amongst others. While 68
-  always means "chef," first, a chef might not fit well into an
-  ongoing hallucination. For instance, if we're memorizing 276872,
-  the pegs are NECK, CHEF, and CAN. That sequence does not invoke
-  an obvious story, so we start looking for sound-alikes. How
-  about INCA CHIEF COIN? Just picture a coin with an Inca chief
-  embossed on it, and we're done. It took a little time to devise
-  INCA CHIEF COIN from NECK CHEF CAN, but the other direction is
+The premise of everything in this document is
+
+\label{prm:premise}
+\begin{premise}{}
+  Almost everyone can recall phantasmagorias without effort.
+  Let's trick our minds into memorizing numerical
+  data via permanent associations between numbers and
+   phantasmagorias.
+  $\blacksquare$
+\end{premise}
+
+We'll find that we can memorize long sequences of numbers in any
+radix (base) by making up phantasmagorias. It's fun, easy, and
+empowering. It requires some effort up front, but the effort is
+incremental. It takes less than 30 minutes for anyone to learn to
+memorize shopping lists of up to 10 items effortlessly. In a
+couple of weeks, anyone can learn to memorize lists of up to 100
+items for effortless recall. That's good enough for a lifetime of
+practical application. The seriously committed can spend a few
+months learning to memorize up to 1000 items for effortless
+recall. JDC proposes a general theory in Section [[gut-pegs]] that
+loosely explains the non-linear efforts for these constants, 10,
+100, 1000.
+
+\clearpage
+* The Peg System
+
+Many memory techniques, such as the Roman Room system[fn::
+https://artofmemory.com/blog/roman-rooms/] or the
+Person-Action-Object (PAO) system [fn::
+https://artofmemory.com/blog/pao-system/], exploit phantasmagorias
+by indirect association to numbers or number sequences. This
+document is about the Mnemonic-Major or Peg system,[fn::
+https://forum.artofmemory.com/t/the-mnemonic-major-system-and-gregg-shorthand-have-the-same-underlying-structure/26339][fn::
+https://en.wikipedia.org/wiki/Mnemonic_major_system] which makes
+direct and permanent associations.
+
+My Dad taught me the peg system when I was a child. I later found
+sources to back it up, specifically Krill[fn::
+https://folk.ntnu.no/krill/pseudonumerology.htm] and Furst.[fn::
+https://a.co/d/fv1uRmv/]
+
+These methods are based on tables of
+
+- pegs :: permanent, immutable mental images in one-to-one
+  correspondence with numbers. For instance, the number 68, for
+  me, is a chef. Whenever I see a chef or think of one, I smell
+  the kitchen and hear the sounds of boiling and sizzling
+  phantasmagorically, and I instantly think of the number 68.
+  That's 1-to-1 correspondence.
+
+- sound-alikes :: fluid, mutable list of mental-images that are
+  similar in their consonant sounds to the pegs and in many-to-one
+  correspondence to the numbers. 68's "chef" sounds like "chief,"
+  "sheaf," "Java," "chaff," amongst others. While 68 always means
+  "chef," first, a chef might not fit well into an ongoing
+  phantasmagoria. For instance, if we're memorizing 276872, the
+  pegs are NECK, CHEF, and CAN. That sequence does not invoke an
+  obvious story, so we start looking for sound-alikes. How about
+  INCA CHIEF COIN? Just picture a coin with an Inca chief embossed
+  on it, and we're done. It took a few seconds to derive INCA
+  CHIEF COIN from NECK CHEF CAN, but the other direction is
   instantaneous. Sound-alikes are many-to-one because there are
   many words that map to each number.
 
-See the last section, Section [[all-pegs]] of this document, after the
-Appendices, for the complete maps of numbers to pegs and
-sound-alikes.
+# See Section [[all-pegs]], after the Appendices, for one complete map
+# of numbers to pegs and sound-alikes.
 
 For radices beyond decimal, I choose a mapping from alphanumeric
-glyphs to ASCII because I already have the mapping memorized for
-instant, bidirectional recall (Section [[daily-practice]]). In
-appendices, I show some alternative mappings for people who don't
-have ASCII memorized.
+glyphs to ASCII because I already have the mapping memorized
+(Section [[daily-practice]]). In appendices, I show some alternative
+mappings for people who don't have ASCII memorized.
 
 \clearpage
-* The System of Sound-Alikes
+* Sound-Alikes
 <<basic-pegs>>
 
 The pegs for the decimal digits, with some mnemonic hints, are
@@ -258,15 +324,15 @@ The pegs for the decimal digits, with some mnemonic hints, are
 |     3 | me   | ... in the mirror tying a bow tie;         |                       |
 |       |      | "m" has 3 legs                             |                       |
 |-------+------+--------------------------------------------+-----------------------|
-|     4 | ray  | this one is hard to remember;              |                       |
-|       |      | just brute-force it                        |                       |
+|     4 | ray  | laser pointer, flashlight;                 |                       |
+|       |      | no simple mnemonic to 4                    |                       |
 |-------+------+--------------------------------------------+-----------------------|
 |     5 | law  | 5 fingers as the cop holds up his hand     |                       |
 |       |      | the hand is "L"-shaped as you look at it   |                       |
 |-------+------+--------------------------------------------+-----------------------|
 |     6 | jaw  | "6" looks like Lurch's lantern jaw         | sh, ch, zh (pleasure) |
 |-------+------+--------------------------------------------+-----------------------|
-|     7 | key  | "7" looks like an Allen key                | g, ng                 |
+|     7 | key  | "7" looks like an Allen key                | g, ng (Furst only)  |
 |       |      | (7 = ng for Furst and me, nk is always 27) |                       |
 |-------+------+--------------------------------------------+-----------------------|
 |     8 | fee  | "8" looks like a dollar sign               | f, v                  |
@@ -309,18 +375,27 @@ for 32:
 
 - the remaining sound-alikes appear in alphabetical order
 
-"MAN" is the peg: it is /equal/ to 32 in your mind. I hallucinate
+"MAN" is the peg: it is /equal/ to 32 in your mind. I visualize
 Superman flying out of the phone booth or arriving to Save the
-Day. The Sound-Alikes help you create phantasmagorias (aka
-hallucinations) from long strings of numbers by devising a story.
-With practice, you can get fast. Eran Katz, who teaches this
-method professionally, often opens his lectures with a stunt
+Day.
+
+The Sound-Alikes help to create longer phantasmagorias from longer
+strings of numbers by devising a story. For instance, 327685 is
+Superman (32) leaping up to catch (76) a fly (85). With practice,
+one gets fast. Eran Katz often opens his lectures with a stunt
 wherein he memorizes hundreds of digits as quickly as the audience
 calls them out and his assistant writes them down.
 
+** Old 3-Digit System
+
 We go to three digits in this document. That means that every
 number from 00 through 099 and 0 through 1000 has a peg and a list
-of sound-alikes. For instance, here is the list for 352:
+of sound-alikes.
+
+In this old system, the peg and sound-alikes for the 3-digit
+number $abc$ is formed from 3 consonant sound alikes, $x$ for $a$,
+$y$ for $b$, and $z$ for $c$. For instance, here is the list for
+352:
 
 #+begin_src clojure :exports results :results verbatim drawer output
   (babomorph 452 453)
@@ -333,11 +408,15 @@ of sound-alikes. For instance, here is the list for 352:
 |     | malign | melancholy | millennium | million  |          |          |
 :end:
 
-For words with three internal consonants, leading zeros and all
-sounds after the third consonant do not count. "Semolina" encodes
-352 despite the leading "s." "Semolina" does not encode 035
-because the "n" in "...ina" is a third internal consonant. For
-035, indeed, we have the following.
+Let's explain the leading /s/ and /h/ sounds, and for the trailing sounds
+like "...ium"
+
+*** Leading S and Z sounds
+
+Leading S and Z sounds, i.e., leading zeros, do not count unless
+the total is exactly three sounds. "Semolina" does not encode 0352
+because that would be four sounds. Instead, the three digits 035
+have the following codes:
 
 #+begin_src clojure :exports results :results verbatim drawer output
   (babomorph 35 36)
@@ -345,45 +424,70 @@ because the "n" in "...ina" is a third internal consonant. For
 
 #+RESULTS:
 :results:
-|-----+------------+----------+--------+---------+--------+----------|
-| 035 | SAWMILL    | smile    | smell  | small   | simile | sea-mile |
-|   Z | assimilate | seamless | seemly | similar |        |          |
+|-----+----------+--------+---------+-------+--------+----------|
+| 035 | SAWMILL  | smile  | smell   | small | simile | sea-mile |
+|   Z | seamless | seemly | similar |       |        |          |
 :end:
 
-"Assimilate" is an apparent exception to the rule, inherited from Furst.
-At speed, I would probably read it as 351 and not as 35. Let's see what
-our dictionary has for 351 (the dictionary source for this document is
-stored in file =core.clj=. The tables in this document are automatically
-formatted from raw data in that source file every time this document is
-exported from org-mode to PDF).
+*** TODO Exceptions
 
-#+begin_src clojure :exports results :results verbatim drawer output
-  (babomorph 451 452)
-#+end_src
+/Seamless/ and /similar/ are apparent exceptions to the rule,
+inherited in this list from Furst. Fix this.
 
-#+RESULTS:
-:results:
-|-----+---------+-----------+------------+-----------+----------+--------------|
-| 351 | MALT    | melt      | mold       | omelet    | smelt    | mulatto      |
-|     | emulate | hamlet    | homiletics | humility  | malady   | mallet       |
-|     | meld    | melodrama | melody     | milady    | mild     | military     |
-|     | millet  | muleteer  | multiple   | multitude | simulate | simultaneous |
-|     | smolder | umlaut    |            |           |          |              |
-:end:
+*** Extra Trailing Consonant Sounds
 
-Yup, "assimilate" is ambiguous: it's both . TODO: fix this.
+/Millenium/ encodes 352 despite the trailing /...ium/.
 
-"Millenium" encodes 352 despite the trailing "...ium."
+*** Vowels and Weak Consonants
 
-Vowels and the weak consonants "h," "w," "wh," "y," and so on, do
-not count. Thus, "Himalayans" is 352 because the first non-weak
-consonant is "m" for 3.
+Vowels and the weak sounds  /h/, /w/, /wh/, /y/ and so on, do
+not count. Thus, "Himalayans" is 352 because the first strong
+consonant is /m/ for 3.
+
+** TODO New 3-Digit System
+
+In the old system, the sounds $xyz$ for $abc$ can be
+$hxyzh\ldots$, where $h$ stands for any weak sound or, in the
+leading position, S or Z sound. In the more permissive, new system
+(under development), 3-digit codes are $xyh\ldots{}zh\ldots{}$. For
+example:
+
+| 740 | Creamy Strawberry Pie     |
+| 741 | Creamy Treacle            |
+| 742 | Creamy Nougat             |
+| 743 | Creamy Marshmallow        |
+| 744 | Creamy Raspberry Pie      |
+| 745 | Creamy Lemon Meringue Pie |
+| 746 | Creamy Cherry Pie         |
+| 747 | Creamy Coconut Pie        |
+| 748 | Creamy Vanilla Pie        |
+| 749 | Creamy Blackberry Pie     |
+
+and
+
+| 840 | Fresh-baked Strawberry Pie     |
+| 841 | Fresh-baked Treacle            |
+| 842 | Fresh-baked Nougat             |
+| 843 | Fresh-baked Marshmallow        |
+| 844 | Fresh-baked Raspberry Pie      |
+| 845 | Fresh-baked Lemon Meringue Pie |
+| 846 | Fresh-baked Cherry Pie         |
+| 847 | Fresh-baked Coconut Pie        |
+| 848 | Fresh-baked Vanilla Pie        |
+| 849 | Fresh-baked Blackberry Pie     |
+
+This new system can reuse $xyh\ldots$ for the first two digits of
+a block of ten and can reuse $zh\ldots$ for all ten pegs in
+multiple blocks of ten.
+
+** Brian's 2-Digit-Plus List
 
 My basic 2-digit peg list appears below, extended from 99 to
 127 for ASCII and with nine extra pegs for court cards (Section
-[[card-pack]]). I know this table by heart. My Dad and many memory
-experts know pegs for 3 digits by heart and "compute" sound-alikes
-on-the-fly. I'm not that good, yet.
+[[card-pack]]). I know this table by heart.
+# My Dad and many memory
+# experts know pegs for 3 digits by heart and "compute" sound-alikes
+# on-the-fly. This document records my journey to a 3-digit holding.
 
 |-----+----------+-----+--------+-----+-----------+-----+------------|
 |  00 | sauce    |  10 | toes   |  20 | nose      |  30 | mass       |
@@ -450,18 +554,17 @@ From the peg list, we get
 
 There isn't an obvious narrative, here, but we get better
 by starting with "fish" (picturesque and smelly) and working
-some sound-alikes backwards:
+sound-alikes backwards:
 
 | 4716 | rack DASH | Take a fishing rod off the RACK and DASH   |
 | 5752 | lake lane | down to the LAKE via our favorite LANE.    |
 | 8659 | fish LEAP | The FISH are LEAPing today, so we          |
 | 3845 | MOVE REEL | MOVE the REEL slowly (on the fishing rod). |
 
-You can recall this credit-card number weeks after devising
-the story, without refreshing your memory in between. Devising it
-took less than a minute. I instantly memorized it while devising
-it without extra effort because I know the entire 2-digit peg
-table by heart.
+I can recall this credit-card number weeks after devising the
+story, without much refreshing in between. Devising it took less
+than a minute. I memorized it while devising it without extra
+effort because I know the 2-digit peg table by heart.
 
 \clearpage
 * Hexadecimal: GUID & SHA-1
@@ -539,13 +642,13 @@ Start with the pegs:
 
 *Note*:
 
-- Encode 6750 as "chuckle saw," not as 67 50 "chalk lace."
-  "Chalk" decodes as C, not as 67.
+- Encode 6750 as /chuckle saw/, not as 67 50 /chalk lace/.
+  /Chalk/ decodes as C, not as 67.
 
 In the credit-card example, we worked backwards from the
-picturesque peg "fish" 86. Here we work backwards from the
-seductive sound-alike "naive" 28. The seductive emotion will make
-it easier to memorize. Hallucinate a "hell-chef sauce," a recipe
+picturesque peg /fish/ 86. Here we work backwards from the
+seductive sound-alike /naive/ 28. The seductive emotion will make
+it easier to memorize. Hallucinate a /hell-chef sauce/, a recipe
 for a naive victim.
 
 | =5D00 E7AA= | HELL-chef SAUCE: CHOP, HACK, and CHILL the JELLY. |
@@ -570,14 +673,14 @@ hexits. Let's do them all as a workout:
 
 *Notes*
 
-- "Chime" for 63 is ok in hex and R36, but not ok in R64, where it
+- /Chime/ for 63 is ok in hex and R36, but not ok in R64, where it
   decodes as "/".
 
-- Don't encode 69 as "chip," rather as "jaw pea," because "chip"
+- Don't encode 69 as /chip/, rather as /jaw pea/, because /chip/
   decodes as E.
 
-- An alternative to "wholesome pillows" for 50 3950 is "lace map
-  lace," but it's clumsy.
+- An alternative to /wholesome pillows/ for 50 3950 is /lace map
+  lace/, but it's clumsy.
 
 Let's bribe a judge and put him to sleep with hash (puns help the
 memory), then summon middle-Eastern heavenly dreams.
@@ -683,14 +786,14 @@ How about a tale of canceling on social media?
 
 *Notes*
 
-- "Car" for 74 is not ok because it decodes as "J". Peg it as "key
-  ray," then try sound-alikes.
+- /Car/ for 74 is not ok because it decodes as J. Peg it as /key
+  ray/, then try sound-alikes.
 
-- "Fish" is "V" in R36, not 86. If we had 86, peg it as "fee jaw,"
+- /Fish/ is V in R36, not 86. If we had 86, peg it as /fee jaw/,
   then try sound-alikes.
 
-- 72 can't be "can," because that's "H" in R36. Peg it as "key
-  Noah" then try sound-alikes.
+- 72 can't be /can/, because that's H in R36. Peg it as /key
+  Noah/ then try sound-alikes.
 
 \clearpage
 * Radix 64
@@ -801,7 +904,7 @@ Pick a difficult prefix, but memorable to you. Mix in a special
 character and a numeral because many sites insist on such. Start
 with something picturesque:
 
-"An Octopus has eight legs with suckers."
+/An Octopus has eight legs with suckers/.
 
 Now, partially encode and obfuscate it; this is your personal salt
 prefix:
@@ -884,10 +987,10 @@ you.
 5. ECHO --- Moses is delivering the LAW on mount Sinai. A cop at
    the bottom of the hill (HAR) is holding up his hand: "stop!" In
    between his fingers there are poker CHIPS and pieces of
-   Cinnamon TOAST (smell it). ECHO begins with "E", which is Greek
-   Eta and looks like the letter "H" of hill and HAR. "Hill" and
-   "har" are obvious cognates by a shift of the liquid consonants
-   "l" and "r." Smell the desert sands.
+   Cinnamon TOAST (smell it). ECHO begins with E, which is Greek
+   Eta and looks like the letter H of /hill/ and /HAR/. /Hill/ and
+   /har/ are obvious cognates by a shift of the liquid consonants
+   /l/ and /r/. Smell the desert sands.
 
 6. FOXTROT --- Lurch is clenching a pink (VERED) rose in his teeth
    and lantern JAW. He has an open CASE on his lap filled with a
@@ -956,7 +1059,7 @@ you.
 
 19. SIERRA --- I finally get some FAME from publishing my first
     book, TITLED "Sierra." I celebrate with a beer pulled from a
-    TAP by a monkey (QUF). Smell it.
+    TAP by a monkey (QUF). Smell the beer.
 
 20. TANGO --- A DEATHWATCH soldier with four arms and three swords
     is carrying Goliath's head (ROSH), which has a giant NOSE.
@@ -973,7 +1076,7 @@ you.
 23. WHISKEY --- A TEDDY-BEAR rests on a bed with a book of Edna
     St. Vincent Millay's poems: "A few FIGS from Thistles." A
     small NAMEPLATE rests against a tumbler of WHISKEY on the
-    nightstand (smell it).
+    nightstand (smell the whiskey).
 
 24. X-RAY --- NERO is playing his FIFE (not a fiddle) while
     watching Rome burn. He uses his X-RAY vision to look through
@@ -1123,9 +1226,9 @@ you.
 | z | zulu     | Athenian    | DK    | DEC 24 | Church near      | 348 | Morpheus   |
 |---+----------+-------------+-------+--------+------------------+-----+------------|
 
-It is a small matter to add the "Date Hallucinations" to the
+It is a small matter to add the date phantasmagorias to the
 mental movies we already have for the 52 glyphs. It takes only a
-little more effort to add the "Day-of-Year Hallucinations."
+little more effort to add the "Day-of-Year Phantasmagorias."
 
 \clearpage
 * Non-Alphabetic Printable ASCII Codes
@@ -1399,11 +1502,11 @@ knowing the name at all.
 
 Examples.
 
-Jordan -> 6412 -> Jordan, Sheridan (memorize, e.g., as "sure tone")
+Jordan -> 6412 -> Jordan, Sheridan (memorize, e.g., as /sure tone/)
 
-Brian -> 942 -> Brian, Brain, Bryan, Brown (memorize, e.g., as "hebrew now")
+Brian -> 942 -> Brian, Brain, Bryan, Brown (memorize, e.g., as /hebrew now/)
 
-Ondrej -> 214 -> Andrew, Andrea, Andrei (memorize, e.g., as "winter")
+Ondrej -> 214 -> Andrew, Andrea, Andrei (memorize, e.g., as /winter/)
 
 Pick words and create a movie related to something that you know about the
 person (for example they like WINTER sports like hockey, or they are learning
@@ -1421,7 +1524,7 @@ https://rebcabin.wordpress.com/2010/11/21/memory-pegs/
 ** Sound-Alikes
 
 Finding a sound-alike is "computing" or "calculating" a picture
-word. For example, the peg for 37 is "mike." Picture a microphone
+word. For example, the peg for 37 is /mike/. Picture a microphone
 in your hand and feel the electrical tingling. Adding synaesthesia
 or emotion to pegs helps my memory. It may not help other people.
 Do what is best for you!
@@ -1453,8 +1556,8 @@ must be instantaneous. Whenever you see or think of a number, you
 must recall the peg without effort.
 
 I regret changing a few pegs once. I did it for teaching purposes
-because my originals got dated. For example, 3 for "May" became
-"me" because no one today knows what a May-pole is. Every time I
+because my originals got dated. For example, 3 for /May/ became
+/me/ because no one today knows what a May-pole is. Every time I
 see 3, however, I picture a May-pole instead of myself in a
 mirror. I learned May-pole first (from Furst and from my Dad). The
 switch slows me down even though I made the switch long, long ago.
@@ -1603,16 +1706,16 @@ v       v v     v       v       v       v       v       v      v
 
 ***** Off-By-One Mental Arithmetic
 
-Notice that 24 is "O," but you may remember that "O" is also the
+Notice that 24 is O, but you may remember that O is also the
 15-th capital glyph of the alphabet. Adding 10 for the first ten
-digits of the encoding, $15+A = 15+10 = 25$", not 24. This is an
+digits of the encoding, $15+A = 15+10 = 25$, not 24. This is an
 opportunity for error at speed. But we can deal with it.
 
 To encode O, remembered as the 15-th letter of the alphabet,
 first subtract 1 to correct the off-by-one error, getting 14.
 Then add 10 to account for the leading ten digits $0..9$ of the
 encoding, getting 24. Prepend the leading $s=0$ for the radix to
-get $024$, say "sunrise."
+get $024$, say /sunrise/.
 
 Encode: subtract 1, add 10, i.e., add 9.
 

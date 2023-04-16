@@ -673,7 +673,7 @@
              "simile"
              "sea-mile"
 
-             "assimilate"
+             ;; "assimilate"
              "seamless"
              "seemly"
              "similar"
@@ -8397,6 +8397,7 @@
              "smelt"
              "mulatto"
 
+             "assimilate"
              "emulate"
              "hamlet"
              "homiletics"
