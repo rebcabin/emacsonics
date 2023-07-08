@@ -48,13 +48,14 @@
              )
 
            '(100001
-             "SOD"
+             "SOT"
+             "sod"
              "Swede"
              "acid"
              "aside"
              "asset"
-             "city"
 
+             "city"
              "east"
              "haste"
              "host"
@@ -69,7 +70,6 @@
              "site"
              "soot"
              "sooth"
-             "sot"
              "south"
              "stay"
              "stew"
@@ -167,8 +167,8 @@
              )
 
            '(100006
-             "SAUSAGE"
-             "sash"
+             "SASH"
+             "sausage"
              "swatch"
              "sage"
              "ice-show"
@@ -185,13 +185,14 @@
              )
 
            '(100007
-             "SACK"
+             "SOCK"
+             "sack"
              "ski"
              "sky"
              "scow"
              "sake"
-             "sea-cow"
 
+             "sea-cow"
              "ask"
              "assegai"
              "hoosegow"
@@ -202,7 +203,6 @@
              "seek"
              "sick"
              "soak"
-             "sock"
              "soggy"
              "squaw"
              "suck"
@@ -225,15 +225,15 @@
              )
 
            '(100009
-             "SAP"
+             "SOAP"
              "spy"
              "wasp"
              "wisp"
              "asp"
              "soup"
 
+             "sap"
              "espy"
-             "soap"
              "sob"
              "sop"
              "spa"
@@ -679,11 +679,27 @@
              "similar"
              )
 
-           '((100036 "a") "SMASH"  "smudge" "smooch" "smidgen" "so-much")
+           '((100036 "a")
+             "SMASH"
+             "smudge"
+             "smooch"
+             "smidgen"
+             "so-much")
 
-           '((100037 "b") "SMACK" "smoke" "sumac" "smuggler" "seeming" "swimming")
+           '((100037 "b")
+             "SMACK"
+             "smoke"
+             "sumac"
+             "smuggler"
+             "seeming"
+             "swimming")
 
-           '((100038 "c") "SEMAPHORE" "samovar" "symphony" "semifinal" "semiformal")
+           '((100038 "c")
+             "SEMAPHORE"
+             "samovar"
+             "symphony"
+             "semifinal"
+             "semiformal")
 
            '((100039 "d")
              "SAMBA"
@@ -700,7 +716,13 @@
              "sympathy"
              )
 
-           '((100040 "e") "SERIES" "sea-horse" "serious" "sewers" "source" "Circe")
+           '((100040 "e")
+             "SERIES"
+             "sea-horse"
+             "serious"
+             "sewers"
+             "source"
+             "Circe")
 
            '((100041 "f")
              "SARDINE"
@@ -731,11 +753,27 @@
              "sworn"
              )
 
-           '((100043 "h") "SWARM" "sermon" "serum" "ceremony" "ceramic")
+           '((100043 "h")
+             "SWARM"
+             "sermon"
+             "serum"
+             "ceremony"
+             "ceramic")
 
-           '((100044 "i") "SEARER" "zero-hour" "sorority" "sour-herring" "swearer")
+           '((100044 "i")
+             "SEARER"
+             "zero-hour"
+             "sorority"
+             "sour-herring"
+             "swearer")
 
-           '((100045 "j")  "ISRAEL" "cereal" "serial" "sirloin" "seraglio" "sorrel")
+           '((100045 "j")
+             "ISRAEL"
+             "cereal"
+             "serial"
+             "sirloin"
+             "seraglio"
+             "sorrel")
 
            '((100046 "k")
              "SARGE"
@@ -1486,9 +1524,9 @@
 
            '(0
              "SAW"
+             "hose"
              "ice"
              "house"
-             "hose"
              "haze"
              "zoo"
 
@@ -1582,11 +1620,11 @@
 
            '(2
              "NOAH"
+             "wine"
              "honey"
              "knee"
              "ion"
              "win"
-             "wine"
 
              "an"
              "ana"
@@ -1617,12 +1655,13 @@
 
            '(3
              "ME"
+             "home"
              "ammo"
              "ham"
              "hem"
              "womb"
-             "Emmy"
 
+             "Emmy"
              "May"
              "may"
              "mow"
@@ -1630,7 +1669,6 @@
              "aim"
              "him"
              "hum"
-             "home"
              "hymn"
              "whim"
              "whom"
@@ -1638,8 +1676,8 @@
 
            '(4
              "RAY"
-             "roe"
              "arrow"
+             "roe"
              "hair"
              "oar"
              "wire"
@@ -1684,11 +1722,11 @@
 
            '(5
              "LAW"
+             "whale"
              "ale"
              "awl"
              "aisle"
              "eel"
-             "hole"
 
              "Yale"
              "Yule"
@@ -1709,6 +1747,7 @@
              "hell"
              "hello"
              "hill"
+             "hole"
              "hollow"
              "holy"
              "howl"
@@ -1728,7 +1767,6 @@
              "wall"
              "wallow"
              "waylay"
-             "whale"
              "wheel"
              "while"
              "whole"
@@ -1741,11 +1779,11 @@
 
            '(6
              "JAW"
+             "shoe"
              "witch"
              "ash"
              "edge"
              "jay"
-             "watch"
 
              "Asia"
              "Jew"
@@ -1767,11 +1805,11 @@
              "jus"
              "shah"
              "she"
-             "shoe"
              "show"
              "shy"
              "wage"
              "wash"
+             "watch"
              "wedge"
              "which"
              "wish"
@@ -1780,11 +1818,11 @@
 
            '(7
              "KEY"
+             "cow"
              "oak"
              "yak"
              "hawk"
              "hockey"
-             "wig"
 
              "Hawkeye"
              "IQ"
@@ -1796,7 +1834,6 @@
              "awake"
              "caw"
              "coo"
-             "cow"
              "coy"
              "cue"
              "echo"
@@ -1824,6 +1861,7 @@
              "week"
              "whack"
              "wick"
+             "wig"
              "yoga"
              "yoke"
              "young"
@@ -1831,11 +1869,11 @@
 
            '(8
              "FEE"
+             "wave"
              "view"
              "hi-fi"
              "hive"
              "ivy"
-             "oaf"
 
              "ave"
              "few"
@@ -1847,6 +1885,7 @@
              "heavy"
              "hoof"
              "huff"
+             "oaf"
              "of"
              "off"
              "via"
@@ -1854,24 +1893,24 @@
              "vow"
              "waif"
              "waive"
-             "wave"
              "weave"
              "wife"
              )
 
            '(9
              "PEA"
+             "pie"
              "hippie"
              "buoy"
              "bow"
              "bay"
-             "boa"
 
              "abbey"
              "ape"
              "be"
              "beau"
              "bee"
+             "boa"
              "bough"
              "boy"
              "buy"
@@ -1893,7 +1932,6 @@
              "paw"
              "pay"
              "pew"
-             "pie"
              "web"
              "weep"
              "whip"
@@ -1941,11 +1979,11 @@
 
            '(11
              "TOT"
+             "teddy"
              "date"
              "tattoo"
              "tidy"
              "toad"
-             "tooth"
 
              "adit"
              "audit"
@@ -1965,21 +2003,21 @@
              "idiot"
              "oddity"
              "outwit"
-             "teddy"
              "thought"
              "tide"
              "tight"
              "tithe"
              "today"
+             "tooth"
              "tutu"
              "without"
              )
 
            '(12
              "TAN"
+             "tuna"
              "Dane"
              "dune"
-             "tuna"
              "dawn"
              "Eden"
 
@@ -2164,8 +2202,8 @@
 
            '(17
              "TACK"
-             "duke"
              "duck"
+             "duke"
              "thong"
              "toga"
              "thug"
@@ -2204,8 +2242,8 @@
 
            '(18
              "TAFFY"
-             "toffee"
              "dove"
+             "toffee"
              "diva"
              "dive"
              "thief"
@@ -2222,11 +2260,11 @@
 
            '(19
              "TAP"
+             "tuba"
              "tabby"
              "toupee"
              "tip"
              "tub"
-             "dope"
 
              "adobe"
              "dab"
@@ -2235,6 +2273,7 @@
              "deep"
              "depot"
              "dip"
+             "dope"
              "doughboy"
              "dupe"
              "tab"
@@ -2347,11 +2386,11 @@
 
            '(24
              "NERO"
+             "wiener"
              "honor"
              "winery"
              "whiner"
              "winner"
-             "owner"
 
              "anywhere"
              "inhere"
@@ -2362,13 +2401,14 @@
              "nor"
              "noria"
              "nowhere"
+             "owner"
              "unaware"
              )
 
            '(25
              "NAIL"
              "narwhal"
-             "Nile"
+             "N﻿ile"
              "inlay"
              "in-law"
              "unholy"
@@ -2382,7 +2422,7 @@
              "knoll"
              "newel"
              "newly"
-             "nil"
+             "n﻿il"
              "null"
              "only"
              )
@@ -6020,7 +6060,7 @@
            '(189
              "DIVE-bomber"
 
-             "taffy-pull"
+             "taffy-pull"v
              "tough-boy"
              "edifiable"
              "stovepipe"
@@ -7121,7 +7161,7 @@
 
              "nylon"
              "nail"
-             "aniline"
+             "an﻿iline"
              "inland"
              "on-line"
              "inalienable"
@@ -7132,7 +7172,7 @@
 
              "newly-made"
              "unlimited"
-             "unilluminated"
+             "un﻿illuminated"
              "unlamented"
              )
 
@@ -7151,7 +7191,7 @@
 
              "nailless"
              "nail-hole"
-             "nilly-willy"
+             "n﻿illy-willy"
              "unloyal"
              )
 
@@ -8122,7 +8162,7 @@
              "meanwhile"
              "monologue"
              "moonlight"
-             "Manila"
+             "Man﻿ila"
              "Emmanuel"
              "hymnal"
              "womanly")
@@ -10327,7 +10367,7 @@
              "linoleum"
              "lonely"
              "lunule"
-             "willy-nilly")
+             "willy-n﻿illy")
            '(526
              "launch"
              "lounge"
@@ -11342,7 +11382,7 @@
              "chainless"
              "chainlet"
              "channel"
-             "chenille"
+             "chen﻿ille"
              "genealogy"
              "genial"
              "oceanology"
@@ -11973,7 +12013,7 @@
              "chauvinist"
              "chavender"
              "Javanese"
-             "juvenile"
+             "juven﻿ile"
              "shaven"
              "ash-oven"
              "washfountain")
@@ -14131,7 +14171,7 @@
              "finial"
              "funnel"
              "phenol"
-             "vanilla"
+             "van﻿illa"
              "vainly"
              "vinyl"
              "heavenly")
@@ -15606,8 +15646,8 @@
              "panel"
              "penal"
              "penholder"
-             "penniless"
-             "penile"
+             "penn﻿iless"
+             "pen﻿ile"
              "penult"
              "pianola"
              "pinhole"
@@ -17026,9 +17066,8 @@
 
 ;;; Deep bug: the sequence of characters "nil" is being erased on
 ;;; output. Workaround: replaced all strings containing "nil" with
-;;; "ni[ZERO WIDTH SPACE]l" in the text above. Won't fix the bug.
-;;; Too hard to diagnose. Maybe it has something to do with the
-;;; "nil" in the call of "partition" below.
+;;; "n[ZERO WIDTH NO-BREAK SPACE]il" in the text above. Get that
+;;; via C-x 8 [ENTER] ZERO WIDTH NO-BREAK SPACE
 
 (defn chop-mem-line
   "Chop a line of memory pegs in prep for org-table."
