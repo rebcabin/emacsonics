@@ -32,7 +32,13 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(python
+   '(rust
+     yaml
+     ;; perl5
+     javascript
+     ;; pdf
+     python
+     coq
      csv
      auto-completion
      ;; rust
@@ -62,7 +68,7 @@ This function should only modify configuration layer settings."
      ;; mermaid
      ;; multiple-cursors
      org
-     ;; pdf
+     pdf
      ;; python
 
      ;; (shell :variables
@@ -76,7 +82,8 @@ This function should only modify configuration layer settings."
      ;; version-control
      ;; themes-megapack
      ;; treemacs
-     yaml
+     ;; w3m
+     ;; yalm
      )
 
 
@@ -89,23 +96,29 @@ This function should only modify configuration layer settings."
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(
+                                      change-case
                                       clj-refactor
                                       exec-path-from-shell
+                                      ert-runner
                                       figlet
+                                      keycast
                                       ;; flyspell
+                                      ;; geiser-gambit
                                       ;; geiser-mit
                                       ;; geiser-racket
                                       ;; haskell-mode
-                                      mermaid-mode
+                                      ;; mermaid-mode
                                       ;; modus-themes
-                                      ob-mermaid
+                                      ;; ob-mermaid
+                                      pollen-mode
                                       ;; quack
-                                      ;; racket-mode
+                                      racket-mode
                                       rst
                                       ;; slime
                                       ;; wgrep
-                                      wolfram-mode
-                                      yasnippet
+                                      w3m
+                                      ;; wolfram-mode
+                                      ;; yasnippet
                                       )
 
    ;; A list of packages that cannot be updated.
@@ -264,10 +277,10 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         ;; gruvbox-dark-hard
-                         ;; gruvbox-light-hard
-                         modus-vivendi
-                         modus-operandi
+                         gruvbox-dark-hard
+                         gruvbox-light-hard
+                         ;; modus-vivendi
+                         ;; modus-operandi
                          ;; material
                          ;; material-light
                          ;; spacemacs-dark
@@ -295,11 +308,11 @@ It should only modify the values of Spacemacs settings."
 			       ;; 	;; "JetBrainsMono Nerd Font Mono"
                                ;;  "Fira Code Retina"
                                ;;  "Andale Mono"
-                               ;;  "Source Code Pro"
+                               "Source Code Pro"
 			       ;; )
-                               ;; :size 16.0
-                               ;; :weight normal ; bold
-                               ;; :width normal
+                               :size 16.0
+                               :weight normal ; bold
+                               :width normal
                                )
 
    ;; The leader key (default "SPC")
@@ -483,7 +496,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
-   dotspacemacs-enable-server nil
+   dotspacemacs-enable-server t
 
    ;; Set the emacs server socket location.
    ;; If nil, uses whatever the Emacs default is, otherwise a directory path
@@ -585,13 +598,11 @@ configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first.")
 
-
 (defun dotspacemacs/user-load ()
   "Library to load while dumping.
 This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
 dump.")
-
 
 (defun dotspacemacs/user-config ()
   "Configuration for user code:
@@ -600,16 +611,78 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
+  ;; (pdf-tools :location (recipe
+  ;;                       :fetcher github
+  ;;                       :repo "dalanicolai/pdf-tools"
+  ;;                       :branch "pdf-roll"
+  ;;                       :files ("lisp/*.el"
+  ;;                               "README"
+  ;;                               ("build" "Makefile")
+  ;;                               ("build" "server")
+  ;;                               (:exclude "lisp/tablist.el"
+  ;;                                         "lisp/tablist-filter.el"))))
+  ;; (image-roll :location (recipe
+  ;;                        :fetcher github
+  ;;                        :repo "dalanicolai/image-roll.el"))
+
+
+  (yas-global-mode 1)
+  (add-hook 'yas-minor-mode-hook
+            (lambda ()
+              (yas-activate-extra-mode
+               'fundamental-mode)))
+  (setq auto-completion-enable-snippets-in-popup t)
+
+
+  (define-key yas-minor-mode-map (kbd "C-c C-y") yas-maybe-expand)
+
+
+  (require 'change-case)
+
+
+  (setq tty-menu-open-use-tmm 't)  ;; TUI menu under F10
+
+
+  (setq use-dialog-box nil)
+
+
+  (custom-set-variables
+   '(coq-prog-name
+     "/Applications/Coq-Platform~8.16~2022.09.app/Contents/Resources/bin/coqtop")
+   '(proof-three-window-enable t))
+
+
+  (fset 'fold-unfold-2
+        (kmacro-lambda-form [?\C-c ?@ ?\C-c ?\C-n ?\C-n ?\C-a ?\C-n] 0 "%d"))
+
+
+  (fset 'fold-unfold-1
+        (kmacro-lambda-form [?\C-c ?@ ?\C-c ?\C-n ?\C-a ?\C-n] 0 "%d"))
+
+
   ;; (require 'wgrep)
 
-  (setq undo-tree-auto-save-history nil)  ; file gets huge
+
+  (setq undo-tree-auto-save-history nil) ; file gets huge
+
 
   (add-to-list 'load-path "/Users/brian/Documents/GitHub/emacs-ob-racket")
+
+
   (add-to-list 'load-path "~/Documents/GitHub/ob-wolfram")
+
+
   (global-auto-revert-mode)
+
+
   (setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -f -pdf %f"))
+
+
   (setq c-basic-offset 4)
+
+
   (setq fill-column 66)
+
 
   (defun insert-random-uuid ()
     "Insert a random UUID.
@@ -629,6 +702,7 @@ before packages are loaded."
              (random (expt 16 6))
              (random (expt 16 6)) )))
 
+
   (defun insert-random-hex (&optional n)
     "Insert a random string of hex digits; default length is 8."
     (interactive "P")
@@ -639,6 +713,7 @@ before packages are loaded."
       (insert
        (let ((x (random 16)))
          (if (< x 10) (+ x ?0) (+ x (- ?A 10)))))))
+
 
   (defun sort-lines-nocase ()
     (interactive)
@@ -653,8 +728,10 @@ before packages are loaded."
     (let ((fill-column (point-max)))
       (fill-region beg end)))
 
+
   ;; Handy key definition
   (define-key global-map "\C-\M-Q" 'unfill-region)
+
 
   ;;; Stefan Monnier <foo at acm.org>. It is the opposite of fill-paragraph
   (defun unfill-paragraph (&optional region)
@@ -664,6 +741,7 @@ before packages are loaded."
           ;; This would override `fill-column' if it's an integer.
           (emacs-lisp-docstring-fill-column t))
       (fill-paragraph nil region)))
+
 
   (defun number-region (start end)
     (interactive "r")
@@ -744,6 +822,7 @@ word A will be replaced with word Z."
 	        )
         (funcall orig-mode))))
 
+
   (cl-defmacro ap/with-random-word-cache (&rest body)
     ""
     (declare (indent defun)
@@ -765,6 +844,7 @@ word A will be replaced with word Z."
              ;; necessary, I have no idea why this is.
              (setq ap/random-word-buffer-point (point))
              ,result)))))
+
 
   (defun ap/get-random-word-of-same-length (word &optional exclude-ht)
     (let* ((length (length word))
@@ -792,6 +872,7 @@ word A will be replaced with word Z."
                           (setq match nil))))
                  finally return match))))
 
+
   (defun ap/get-random-string (length)
     "Return random string of LENGTH."
     (unless (and (bound-and-true-p ap/random-chars)
@@ -802,6 +883,7 @@ word A will be replaced with word Z."
       (while (< (length s) length)
         (setq s (concat s (nth (random ap/random-chars-length) ap/random-chars))))
       s))
+
 
   (defun randomise-region ()
     "Like `ap/replace-words-randomly', but only replace inside region if it is active.
@@ -817,7 +899,6 @@ buffer.  The region is never considered active outside
             (goto-char (point-min))
             (ap/replace-words-randomly)))
       (ap/replace-words-randomly)))
-
 
 
   ;; by default, the function 'python-mode is associated with
@@ -838,90 +919,94 @@ buffer.  The region is never considered active outside
   ;; (setq pytest-global-name "~/anaconda3/bin/pytest")
   ;; (setq pytest-cmd-flags "-x -v")
 
+
   (autoload 'enable-paredit-mode "paredit"
     "Turn on pseudo-structural editing of Lisp code." t)
 
   (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
+
   ;; (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
   ;; (add-hook 'ielm-mode-hook             #'enable-paredit-mode)
+
   (add-hook 'lisp-mode-hook             #'enable-paredit-mode)
   (add-hook 'clojure-mode-hook          #'enable-paredit-mode)
   (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
   (add-hook 'scheme-mode-hook           #'enable-paredit-mode)
   (add-hook 'racket-mode-hook           #'enable-paredit-mode)
 
-  (setq ob-mermaid-cli-path "/opt/homebrew/bin/mmdc")
+
+  ;; (setq ob-mermaid-cli-path "/opt/homebrew/bin/mmdc")
 
   (org-babel-do-load-languages
    'org-babel-load-languages
    '(
      (C           . t)
-     ;; (awk         . t)
      (clojure     . t)
      (ditaa       . t)
-     ;; (dot         . t)
      (emacs-lisp  . t)
-     ;; (gnuplot     . t)
-     ;; (js          . t)
-     ;; (java        . t)
+     (haskell     . t)
      (latex       . t)
      (lisp        . t)
      (org         . t)
-     ;; (perl        . t)
-     ;; (plantuml    . t)
-     ;; (mathematica . t)
-     (mermaid     . t)
      (python      . t)
-     ;; (scheme      . t)
-     ;; (sed         . t)
+     (racket      . t)
+     (scheme      . t)
      (shell       . t)
+     (wolfram     . t)
      ;; (R          . t)
+     ;; (awk         . t)
      ;; (calc       . t)
+     ;; (dot         . t)
+     ;; (gnuplot     . t)
      ;; (gnuplot    . t)
      ;; (graphviz   . t) ! NO !
-     (haskell     .t)
+     ;; (java        . t)
+     ;; (js          . t)
+     ;; (mathematica . t)
+     ;; (mermaid     . t)
      ;; (octave     . t)
-     (racket      .t)
+     ;; (perl        . t)
+     ;; (plantuml    . t)
      ;; (ruby       . t)
      ;; (screen     . t)
+     ;; (sed         . t)
      ;; (sh         . t)
      ;; (sql        . t)
      ;; (sqlite     . t)
      ;; (stan       . t)
-     (wolfram     .t)
      ))
 
+  ;; (require 'ob-scheme)
+  ;; (require 'emacs-lisp)
+  ;; (require 'ob-R)
   ;; (require 'ob-awk)
-  ;; (require 'ob-graphviz) ;; ! NO !  can't find it !   doesn't exist !
-  ;; (require 'ob-clojure)
   ;; (require 'ob-bash)
   ;; (require 'ob-calc)
+  ;; (require 'ob-clojure)
   ;; (require 'ob-ditaa)
+  ;; (require 'ob-dot)
+  ;; (require 'ob-forth)
+  ;; (require 'ob-gnuplot)
+  ;; (require 'ob-graphviz) ;; ! NO !  can't find it !   doesn't exist !
   ;; (require 'ob-haskell)
   ;; (require 'ob-java)
   ;; (require 'ob-js)
-  ;; (require 'ob-mathematica)
-  ;; (require 'ob-wolfram)
   ;; (require 'ob-latex)
   ;; (require 'ob-lisp)
+  ;; (require 'ob-mathematica)
+  ;; (require 'ob-octave)
   ;; (require 'ob-org)
+  ;; (require 'ob-perl)
   ;; (require 'ob-plantuml)
   ;; (require 'ob-python)
   ;; (require 'ob-racket)
-  ;; (require 'ob-scheme)
-  ;; (require 'ob-sed)
-  ;; (require 'ob-shell)
-  ;; (require 'ob-forth)
-  ;; (require 'ob-octave)
-  ;; (require 'emacs-lisp)
-  ;; (require 'ob-R)
-  ;; (require 'ob-dot)
-  ;; (require 'ob-gnuplot)
-  ;; (require 'ob-perl)
   ;; (require 'ob-screen)
+  ;; (require 'ob-sed)
   ;; (require 'ob-sh)
+  ;; (require 'ob-shell)
   ;; (require 'ob-sql)
   ;; (require 'ob-sqlite)
+  ;; (require 'ob-wolfram)
 
   (require 'clj-refactor)
   (defun my-clojure-mode-hook ()
@@ -929,26 +1014,38 @@ buffer.  The region is never considered active outside
     ;; (yas-minor-mode 1)
     ;; (cljr-add-keybindings-with-prefix "C-c C-m")
     )
-  (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
 
+  (add-hook 'clojure-mode-hook    #'my-clojure-mode-hook)
+
+
+  (variable-pitch-mode -1)
+  (add-hook 'org-mode-hook        (variable-pitch-mode -1))
   (add-hook 'org-mode-hook        #'turn-on-auto-fill )
-  (add-hook 'org-mode-hook        (lambda () (setq fill-column 72)))
+  (add-hook 'org-mode-hook        (lambda () (setq fill-column 66)))
+
 
   (add-hook 'markdown-mode-hook   #'turn-on-auto-fill)
 
+
   (add-hook 'python-mode-hook     #'turn-on-auto-fill)
+
 
   ;; (setq org-babel-mathematica-command "wolframscript -script")
   ;; (add-to-list 'org-src-lang-modes '("mathematica" . wolfram))
 
+
   ;; (add-hook 'scheme-mode-hook 'geiser-mode)
   ;; (setq geiser-default-implementation 'racket)
 
+
   ;; (setq inferior-lisp-program "/usr/bin/sbcl")
 
-  (setenv "GIT_SSH_COMMAND" "ssh -i ~/.ssh/id_ed25519_Golf37.local")
+
+  ;; (setenv "GIT_SSH_COMMAND" "ssh -i ~/.ssh/id_ed25519_Golf37.local")
+
 
   (exec-path-from-shell-initialize)
+
 
   ;; (global-company-mode)
 
@@ -966,13 +1063,17 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(coq-prog-name
+   "/Applications/Coq-Platform~8.15~2022.04.app/Contents/Resources/bin/coqtop")
  '(custom-safe-themes
    '("02fff7eedb18d38b8fd09a419c579570673840672da45b77fde401d8708dc6b5" default))
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
-   '(cmake-mode helm-ctest wgrep csv-mode neotree cider sesman parseedn clojure-mode parseclj seeing-is-believing rvm ruby-tools ruby-test-mode ruby-refactor ruby-hash-syntax rubocopfmt rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby ob-mermaid exec-path-from-shell yaml-mode pdf-tools tablist yasnippet web-mode web-beautify tagedit slim-mode scss-mode sass-mode pug-mode prettier-js impatient-mode simple-httpd helm-css-scss haml-mode emmet-mode counsel-css counsel swiper ivy company-web web-completion-data company add-node-modules-path zonokai-emacs zenburn-theme zen-and-art-theme yapfify ws-butler writeroom-mode wolfram-mode winum white-sand-theme which-key volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme treemacs-projectile treemacs-persp treemacs-icons-dired toxi-theme toml-mode toc-org tao-theme tangotango-theme tango-plus-theme tango-2-theme symon symbol-overlay sunny-day-theme sublime-themes subatomic256-theme subatomic-theme string-inflection string-edit srefactor sphinx-doc spaceline-all-the-icons spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme slime seti-theme ron-mode reverse-theme restart-emacs request rebecca-theme rainbow-delimiters railscasts-theme racket-mode racer quickrun quack pytest pyenv-mode pydoc py-isort purple-haze-theme professional-theme popwin poetry planet-theme pippel pipenv pip-requirements phoenix-dark-pink-theme phoenix-dark-mono-theme pcre2el password-generator paradox overseer organic-green-theme org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-contrib org-cliplink open-junk-file omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme nose noctilux-theme naquadah-theme nameless mustang-theme multi-line monokai-theme monochrome-theme molokai-theme moe-theme modus-themes mmm-mode minimal-theme material-theme markdown-toc majapahit-theme madhat2r-theme lush-theme lorem-ipsum live-py-mode link-hint light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inspector inkpot-theme info+ indent-guide importmagic hybrid-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation heroku-theme hemisu-theme helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-ls-git helm-flx helm-descbinds helm-ag hc-zenburn-theme haskell-mode gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio gnuplot gh-md geiser-racket geiser-mit gandalf-theme font-lock+ flyspell-correct-helm flycheck-package flycheck-elsa flx-ido flatui-theme flatland-theme figlet farmhouse-theme fancy-battery eziam-theme eyebrowse expand-region exotica-theme evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu espresso-theme emr elisp-slime-nav editorconfig dumb-jump drag-stuff dracula-theme dotenv-mode doom-themes doom-modeline django-theme dired-quick-sort diminish devdocs define-word darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cython-mode cyberpunk-theme column-enforce-mode color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme clean-aindent-mode chocolate-theme cherry-blossom-theme centered-cursor-mode cargo busybee-theme bubbleberry-theme blacken birds-of-paradise-plus-theme badwolf-theme auto-highlight-symbol auto-dictionary auto-compile apropospriate-theme anti-zenburn-theme anaconda-mode ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme ace-link ace-jump-helm-line))
+   '(keycast ert-runner change-case edit-indirect flycheck-rust pos-tip rust-mode company-plsense realgud test-simple loc-changes load-relative geiser-gambit geiser xref autothemer company-coq company-math math-symbol-lists proof-general counsel-gtags dap-mode lsp-docker lsp-treemacs bui lsp-mode ggtags helm-gtags import-js grizzl js-doc js2-refactor livid-mode nodejs-repl npm-mode skewer-mode js2-mode tern cmake-mode helm-ctest wgrep csv-mode neotree cider sesman parseedn clojure-mode parseclj seeing-is-believing rvm ruby-tools ruby-test-mode ruby-refactor ruby-hash-syntax rubocopfmt rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby ob-mermaid exec-path-from-shell yaml-mode pdf-tools tablist yasnippet web-mode web-beautify tagedit slim-mode scss-mode sass-mode pug-mode prettier-js impatient-mode simple-httpd helm-css-scss haml-mode emmet-mode counsel-css counsel swiper ivy company-web web-completion-data company add-node-modules-path zonokai-emacs zenburn-theme zen-and-art-theme yapfify ws-butler writeroom-mode wolfram-mode winum white-sand-theme which-key volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme treemacs-projectile treemacs-persp treemacs-icons-dired toxi-theme toml-mode toc-org tao-theme tangotango-theme tango-plus-theme tango-2-theme symon symbol-overlay sunny-day-theme sublime-themes subatomic256-theme subatomic-theme string-inflection string-edit srefactor sphinx-doc spaceline-all-the-icons spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme slime seti-theme ron-mode reverse-theme restart-emacs request rebecca-theme rainbow-delimiters railscasts-theme racket-mode racer quickrun quack pytest pyenv-mode pydoc py-isort purple-haze-theme professional-theme popwin poetry planet-theme pippel pipenv pip-requirements phoenix-dark-pink-theme phoenix-dark-mono-theme pcre2el password-generator paradox overseer organic-green-theme org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-contrib org-cliplink open-junk-file omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme nose noctilux-theme naquadah-theme nameless mustang-theme multi-line monokai-theme monochrome-theme molokai-theme moe-theme modus-themes mmm-mode minimal-theme material-theme markdown-toc majapahit-theme madhat2r-theme lush-theme lorem-ipsum live-py-mode link-hint light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inspector inkpot-theme info+ indent-guide importmagic hybrid-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation heroku-theme hemisu-theme helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-ls-git helm-flx helm-descbinds helm-ag hc-zenburn-theme haskell-mode gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio gnuplot gh-md geiser-racket geiser-mit gandalf-theme font-lock+ flyspell-correct-helm flycheck-package flycheck-elsa flx-ido flatui-theme flatland-theme figlet farmhouse-theme fancy-battery eziam-theme eyebrowse expand-region exotica-theme evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu espresso-theme emr elisp-slime-nav editorconfig dumb-jump drag-stuff dracula-theme dotenv-mode doom-themes doom-modeline django-theme dired-quick-sort diminish devdocs define-word darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cython-mode cyberpunk-theme column-enforce-mode color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme clean-aindent-mode chocolate-theme cherry-blossom-theme centered-cursor-mode cargo busybee-theme bubbleberry-theme blacken birds-of-paradise-plus-theme badwolf-theme auto-highlight-symbol auto-dictionary auto-compile apropospriate-theme anti-zenburn-theme anaconda-mode ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme ace-link ace-jump-helm-line))
+ '(proof-three-window-enable t)
  '(safe-local-variable-values
-   '((eval progn
+   '((line-spacing . 2)
+     (eval progn
            (require 'find-file)
            (require 'cc-styles)
            (require 'cl)
@@ -1068,6 +1169,5 @@ This function is called at the very end of Spacemacs initialization."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:background nil))))
  '(highlight-parentheses-highlight ((nil (:weight ultra-bold))) t))
 )
