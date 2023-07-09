@@ -1524,7 +1524,7 @@
 
            '(0
              "SAW"
-             "hose"
+             "HOSE"
              "ice"
              "house"
              "haze"
@@ -1558,7 +1558,7 @@
 
            '(1
              "TEA"
-             "hat"
+             "HAT"
              "hood"
              "oat"
              "yacht"
@@ -1620,7 +1620,7 @@
 
            '(2
              "NOAH"
-             "wine"
+             "WINE"
              "honey"
              "knee"
              "ion"
@@ -1655,7 +1655,7 @@
 
            '(3
              "ME"
-             "home"
+             "HOME"
              "ammo"
              "ham"
              "hem"
@@ -1676,7 +1676,7 @@
 
            '(4
              "RAY"
-             "arrow"
+             "ARROW"
              "roe"
              "hair"
              "oar"
@@ -1722,7 +1722,7 @@
 
            '(5
              "LAW"
-             "whale"
+             "WHALE"
              "ale"
              "awl"
              "aisle"
@@ -1779,7 +1779,7 @@
 
            '(6
              "JAW"
-             "shoe"
+             "SHOE"
              "witch"
              "ash"
              "edge"
@@ -1818,7 +1818,7 @@
 
            '(7
              "KEY"
-             "cow"
+             "COW"
              "oak"
              "yak"
              "hawk"
@@ -1869,7 +1869,7 @@
 
            '(8
              "FEE"
-             "wave"
+             "WAVE"
              "view"
              "hi-fi"
              "hive"
@@ -1899,7 +1899,7 @@
 
            '(9
              "PEA"
-             "pie"
+             "PIE"
              "hippie"
              "buoy"
              "bow"
@@ -1979,7 +1979,7 @@
 
            '(11
              "TOT"
-             "teddy"
+             "TEDDY"
              "date"
              "tattoo"
              "tidy"
@@ -2015,7 +2015,7 @@
 
            '(12
              "TAN"
-             "tuna"
+             "TUNA"
              "Dane"
              "dune"
              "dawn"
@@ -2202,7 +2202,7 @@
 
            '(17
              "TACK"
-             "duck"
+             "DUCK"
              "duke"
              "thong"
              "toga"
@@ -2242,7 +2242,7 @@
 
            '(18
              "TAFFY"
-             "dove"
+             "DOVE"
              "toffee"
              "diva"
              "dive"
@@ -2260,7 +2260,7 @@
 
            '(19
              "TAP"
-             "tuba"
+             "TUBA"
              "tabby"
              "toupee"
              "tip"
@@ -2356,7 +2356,7 @@
 
            '(22
              "NUN"
-             "onion"
+             "ONION"
              "neon"
              "union"
              "noon"
@@ -2374,7 +2374,7 @@
 
            '(23
              "NAME"
-             "gnome"
+             "GNOME"
              "enemy"
              "enema"
              "enum"
@@ -2386,7 +2386,7 @@
 
            '(24
              "NERO"
-             "wiener"
+             "WIENER"
              "honor"
              "winery"
              "whiner"
@@ -2429,26 +2429,27 @@
 
            '(26
              "NICHE"
+             "NACHO"
              "notch"
-             "nudge"
+             "wench"
              "haunch"
              "hinge"
-             "inch"
 
              "enjoy"
              "gnash"
              "hunch"
+             "inch"
              "no-show"
+             "nudge"
              "unhitch"
-             "wench"
              "winch"
              )
 
            '(27
              "NECK"
+             "INK"
              "Inca"
              "nock"
-             "ink"
              "hunk"
              "nook"
 
@@ -2467,9 +2468,9 @@
 
            '(28
              "NAVY"
+             "KNIFE"
              "nova"
              "knave"
-             "knife"
              "nephew"
              "naive"
 
@@ -2483,9 +2484,9 @@
 
            '(29
              "NAP"
+             "KNOB"
              "nib"
              "nub"
-             "knob"
              "nape"
              "nappy"
 
@@ -2494,16 +2495,17 @@
              "nab"
              "neap"
              "nip"
+             "nob"
              "unhappy"
              )
 
            '(30
              "MASS"
+             "MOUSE"
              "mace"
              "maze"
              "hummus"
              "mice"
-             "moose"
 
              "Messiah"
              "aims"
@@ -2515,8 +2517,8 @@
              "mess"
              "mews"
              "miss"
+             "moose"
              "moss"
-             "mouse"
              "muse"
              "muss"
              )
