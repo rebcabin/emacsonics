@@ -366,11 +366,11 @@ for 32:
 
 #+RESULTS:
 :results:
-|----+-------+---------+--------+------+--------+-------|
-| 32 | MAN   | mane    | hymen  | mine | minnow | moon  |
-|    | amen  | ammonia | human  | main | mana   | mania |
-|    | manna | many    | mean   | mien | moan   | money |
-|    | omen  | woman   | yeoman |      |        |       |
+|----+-------+---------+--------+-------+------+--------|
+| 32 | MAN   | MOON    | mane   | hymen | mine | minnow |
+|    | amen  | ammonia | human  | main  | mana | mania  |
+|    | manna | many    | mean   | mien  | moan | money  |
+|    | omen  | woman   | yeoman |       |      |        |
 :end:
 
 */Notes on such tables/*:
@@ -602,26 +602,26 @@ and their sound-alikes:
 |  A | Chile       | July      | agile    | chill    | jolly    | jowl     |
 |    | shall       | shallow   | shill    | shoal    | shyly    | usual    |
 |----+-------------+-----------+----------+----------+----------+----------|
-| 66 | JUDGE       | hashish   | juju     | Jewish   | cha-cha  | choochoo |
+| 66 | JUDGE       | HASHISH   | juju     | Jewish   | cha-cha  | choochoo |
 |  B | chichi      | chowchow  | jaygee   | josh     | shoji    | shush    |
 |    | wishy-washy |           |          |          |          |          |
 |----+-------------+-----------+----------+----------+----------+----------|
-| 67 | CHALK       | jack      | sheikh   | chick    | cheek    | choke    |
-|  C | Django      | aging     | check    | chic     | chuck    | chug     |
-|    | etching     | itching   | jingo    | jock     | jockey   | joke     |
-|    | jug         | shack     | shag     | shake    | shako    | shock    |
+| 67 | CHALK       | JUG       | jack     | sheikh   | chick    | cheek    |
+|  C | Django      | aging     | check    | chic     | choke    | chuck    |
+|    | chug        | etching   | itching  | jingo    | jock     | jockey   |
+|    | joke        | shack     | shag     | shake    | shako    | shock    |
 |    | shuck       | washing   | watching | wishing  |          |          |
 |----+-------------+-----------+----------+----------+----------+----------|
 | 68 | CHEF        | chief     | Chevy    | sheaf    | chaff    | chive    |
 |  D | Java        | Jehovah   | achieve  | chafe    | jayvee   | jiffy    |
 |    | jive        | shave     | shove    | wash-off |          |          |
 |----+-------------+-----------+----------+----------+----------+----------|
-| 69 | CHIP        | jib       | jeep     | sheep    | ship     | Job      |
+| 69 | CHIP        | JEEP      | jib      | sheep    | ship     | Job      |
 |  E | GP          | chap      | chapeau  | cheap    | chop     | chubby   |
 |    | gyp         | jab       | jibe     | job      | shabby   | shape    |
-|    | shop        |           |          |          |          |          |
+|    | ship        | shop      |          |          |          |          |
 |----+-------------+-----------+----------+----------+----------+----------|
-| 70 | CASE        | gas       | goose    | kiss     | ox       | eggs     |
+| 70 | CASE        | GOOSE     | gas      | kiss     | ox       | eggs     |
 |  F | accuse      | acquiesce | ax       | cause    | causeway | chaos    |
 |    | cozy        | cuss      | gauze    | gaze     | guess    | guise    |
 |    | guys        | hex       | hoax     | quasi    | wax      |          |
@@ -2404,19 +2404,31 @@ Today is Saturday.
 <<all-pegs>>
 
 Letters for hex, ASCII, and R36, R64 alternative methods are
-included in the row headers.
+included in the headers.
 
-TODO: My personal permanent peg words are first in each block and
-in all-caps. My short-list of preferred sound-alikes are in the
-first row of each table.
+** Caps and Rows
 
-I don't (yet) have a memorized peg for every number, just for the
-most useful ones. It takes time to come up with good pegs. It's a
-quadratic process because I pick pegs that don't collide visually
-with the ones I already have. Picking a new peg means thinking
-about all the others picked so-far. I already have CHAIR for 64
-(used all the time), so SEAT for 01 and THRONE for 142 are not
-good ideas because they might incorrectly recall 64 at speed.
+Items in ALL CAPS are pegs recommended because they're visually
+strong. The first row in each block contains recommended
+alternatives in preference order. The rest of the rows are in
+alphabetical order.
+
+Blocks without items in ALL CAPS do not have recommended pegs as
+of this version. Rows in blocks without items in ALL CAPS may not
+be ordered.
+
+We work on this list in our hobby time. It will be several
+versions before it's finished.
+
+It takes time to come up with good pegs. It's a quadratic process
+because one must pick pegs that don't collide visually with the
+ones already memorized. Picking a new peg means thinking about all
+the others picked so-far. I already have CHAIR for 64 (used all
+the time), so SEAT for 01 and THRONE for 142 are not good ideas
+because they might incorrectly recall 64 at speed.
+
+This list is automatically constructed from a file named
+/core.clj/ deeper in the directory tree of the source repository.
 
 \clearpage
 #+begin_src clojure :exports results :results verbatim drawer output
@@ -2854,13 +2866,13 @@ good ideas because they might incorrectly recall 64 at speed.
 #+RESULTS:
 :results:
 |---+--------+--------+--------+-------+--------+-------|
-| 0 | SAW    | hose   | ice    | house | haze   | zoo   |
+| 0 | SAW    | HOSE   | ice    | house | haze   | zoo   |
 |   | a-sea  | ace    | as     | ass   | assay  | ayes  |
 |   | easy   | essay  | eyes   | has   | hawse  | his   |
 |   | is     | ooze   | sea    | sew   | so     | sow   |
 |   | us     | use    | was    | wise  | woozy  | yes   |
 |---+--------+--------+--------+-------+--------+-------|
-| 1 | TEA    | hat    | hood   | oat   | yacht  | widow |
+| 1 | TEA    | HAT    | hood   | oat   | yacht  | widow |
 |   | ad     | add    | aid    | at    | auto   | day   |
 |   | die    | do     | dough  | due   | dye    | eat   |
 |   | eddy   | etui   | hate   | head  | heat   | heed  |
@@ -2871,18 +2883,18 @@ good ideas because they might incorrectly recall 64 at speed.
 |   | watt   | weed   | weight | wet   | what   | wheat |
 |   | white  | wide   | wit    | with  | youth  |       |
 |---+--------+--------+--------+-------+--------+-------|
-| 2 | NOAH   | wine   | honey  | knee  | ion    | win   |
+| 2 | NOAH   | WINE   | honey  | knee  | ion    | win   |
 |   | an     | ana    | anew   | ani   | annoy  | any   |
 |   | ennui  | gnaw   | gnu    | hen   | hyena  | in    |
 |   | inn    | know   | neigh  | new   | nigh   | no    |
 |   | now    | one    | own    | wan   | wean   | when  |
 |   | wino   |        |        |       |        |       |
 |---+--------+--------+--------+-------+--------+-------|
-| 3 | ME     | home   | ammo   | ham   | hem    | womb  |
+| 3 | ME     | HOME   | ammo   | ham   | hem    | womb  |
 |   | Emmy   | May    | may    | mow   | maw    | aim   |
 |   | him    | hum    | hymn   | whim  | whom   |       |
 |---+--------+--------+--------+-------+--------+-------|
-| 4 | RAY    | arrow  | roe    | hair  | oar    | wire  |
+| 4 | RAY    | ARROW  | roe    | hair  | oar    | wire  |
 |   | air    | are    | area   | aria  | array  | aura  |
 |   | aware  | awry   | ear    | era   | err    | hare  |
 |   | harrow | hear   | heir   | her   | here   | hero  |
@@ -2899,7 +2911,7 @@ good ideas because they might incorrectly recall 64 at speed.
 #+RESULTS:
 :results:
 |---+---------+--------+--------+-------+---------+--------|
-| 5 | LAW     | whale  | ale    | awl   | aisle   | eel    |
+| 5 | LAW     | WHALE  | ale    | awl   | aisle   | eel    |
 |   | Yale    | Yule   | ail    | all   | alley   | allow  |
 |   | alloy   | ally   | aloha  | ell   | hail    | hall   |
 |   | halo    | haul   | heal   | heel  | hell    | hello  |
@@ -2909,14 +2921,14 @@ good ideas because they might incorrectly recall 64 at speed.
 |   | wall    | wallow | waylay | wheel | while   | whole  |
 |   | will    | willow | wool   | yawl  | yellow  |        |
 |---+---------+--------+--------+-------+---------+--------|
-| 6 | JAW     | shoe   | witch  | ash   | edge    | jay    |
+| 6 | JAW     | SHOE   | witch  | ash   | edge    | jay    |
 |   | Asia    | Jew    | Joe    | age   | chew    | chow   |
 |   | each    | etch   | hash   | hatch | hedge   | hitch  |
 |   | huge    | hush   | hutch  | issue | joy     | jus    |
 |   | shah    | she    | show   | shy   | wage    | wash   |
 |   | watch   | wedge  | which  | wish  | woosh   |        |
 |---+---------+--------+--------+-------+---------+--------|
-| 7 | KEY     | cow    | oak    | yak   | hawk    | hockey |
+| 7 | KEY     | COW    | oak    | yak   | hawk    | hockey |
 |   | Hawkeye | IQ     | Ike    | ache  | aggie   | ago    |
 |   | ague    | awake  | caw    | coo   | coy     | cue    |
 |   | echo    | egg    | ego    | gay   | go      | guy    |
@@ -2925,13 +2937,13 @@ good ideas because they might incorrectly recall 64 at speed.
 |   | queue   | wake   | walk   | weak  | week    | whack  |
 |   | wick    | wig    | yoga   | yoke  | young   |        |
 |---+---------+--------+--------+-------+---------+--------|
-| 8 | FEE     | wave   | view   | hi-fi | hive    | ivy    |
+| 8 | FEE     | WAVE   | view   | hi-fi | hive    | ivy    |
 |   | ave     | few    | foe    | half  | halfway | have   |
 |   | heave   | heavy  | hoof   | huff  | oaf     | of     |
 |   | off     | via    | vie    | vow   | waif    | waive  |
 |   | weave   | wife   |        |       |         |        |
 |---+---------+--------+--------+-------+---------+--------|
-| 9 | PEA     | pie    | hippie | buoy  | bow     | bay    |
+| 9 | PEA     | PIE    | hippie | buoy  | bow     | bay    |
 |   | abbey   | ape    | be     | beau  | bee     | boa    |
 |   | bough   | boy    | buy    | by    | bye     | ebb    |
 |   | epee    | happy  | heap   | hip   | hobby   | hobo   |
@@ -2955,14 +2967,14 @@ good ideas because they might incorrectly recall 64 at speed.
 |    | odious      | tease    | these  | this     | those  | thus    |
 |    | toss        | twice    | twos   | wits     |        |         |
 |----+-------------+----------+--------+----------+--------+---------|
-| 11 | TOT         | teddy    | date   | tattoo   | tidy   | toad    |
+| 11 | TOT         | TEDDY    | date   | tattoo   | tidy   | toad    |
 |    | adit        | audit    | dad    | data     | dead   | death   |
 |    | debt        | deed     | deity  | diet     | dot    | dote    |
 |    | doubt       | duty     | edit   | idiot    | oddity | outwit  |
 |    | thought     | tide     | tight  | tithe    | today  | tooth   |
 |    | tutu        | without  |        |          |        |         |
 |----+-------------+----------+--------+----------+--------+---------|
-| 12 | TAN         | tuna     | Dane   | dune     | dawn   | Eden    |
+| 12 | TAN         | TUNA     | Dane   | dune     | dawn   | Eden    |
 |    | Athena      | atone    | attain | attune   | dean   | deign   |
 |    | den         | deny     | din    | dine     | done   | down    |
 |    | heathen     | heighten | hidden | ten      | than   | then    |
@@ -3005,18 +3017,18 @@ good ideas because they might incorrectly recall 64 at speed.
 |    | teach   | touch  | touche   | thatch    | duchy   | dodge    |
 |    | attache | attach | adage    | whitewash |         |          |
 |----+---------+--------+----------+-----------+---------+----------|
-| 17 | TACK    | duck   | duke     | thong     | toga    | thug     |
+| 17 | TACK    | DUCK   | duke     | thong     | toga    | thug     |
 |    | Tokay   | attack | attic    | decay     | deck    | decoy    |
 |    | dig     | dike   | ding     | dock      | dog     | doing    |
 |    | dong    | dung   | eating   | ethic     | haddock | headache |
 |    | heading | outing | tag      | take      | talk    | thick    |
 |    | thing   | tick   | tuck     | twig      | tyke    | wedding  |
 |----+---------+--------+----------+-----------+---------+----------|
-| 18 | TAFFY   | dove   | toffee   | diva      | dive    | thief    |
+| 18 | TAFFY   | DOVE   | toffee   | diva      | dive    | thief    |
 |    | TV      | daffy  | deaf     | defy      | edify   | tiff     |
 |    | tough   | tuff   |          |           |         |          |
 |----+---------+--------+----------+-----------+---------+----------|
-| 19 | TAP     | tuba   | tabby    | toupee    | tip     | tub      |
+| 19 | TAP     | TUBA   | tabby    | toupee    | tip     | tub      |
 |    | adobe   | dab    | daub     | debut     | deep    | depot    |
 |    | dip     | dope   | doughboy | dupe      | tab     | taboo    |
 |    | tape    | tepee  | top      | tube      | tup     | type     |
@@ -3042,14 +3054,14 @@ good ideas because they might incorrectly recall 64 at speed.
 |    | note     | undo     | undue   | unit    | unite   | untie    |
 |    | wand     | want     | went    | wind    | window  | wound    |
 |----+----------+----------+---------+---------+---------+----------|
-| 22 | NUN      | onion    | neon    | union   | noon    | nanny    |
+| 22 | NUN      | ONION    | neon    | union   | noon    | nanny    |
 |    | none     | nine     | ninny   | noun    | no-one  | anon     |
 |    | anyone   | inane    |         |         |         |          |
 |----+----------+----------+---------+---------+---------+----------|
-| 23 | NAME     | gnome    | enemy   | enema   | enum    | anemia   |
+| 23 | NAME     | GNOME    | enemy   | enema   | enum    | anemia   |
 |    | annum    | numb     |         |         |         |          |
 |----+----------+----------+---------+---------+---------+----------|
-| 24 | NERO     | wiener   | honor   | winery  | whiner  | winner   |
+| 24 | NERO     | WIENER   | honor   | winery  | whiner  | winner   |
 |    | anywhere | inhere   | inure   | narrow  | near    | newer    |
 |    | nor      | noria    | nowhere | owner   | unaware |          |
 |----+----------+----------+---------+---------+---------+----------|
@@ -3057,19 +3069,20 @@ good ideas because they might incorrectly recall 64 at speed.
 |    | anal     | annual   | annul   | inhale  | kneel   | knell    |
 |    | knoll    | newel    | newly   | n﻿il     | null    | only     |
 |----+----------+----------+---------+---------+---------+----------|
-| 26 | NICHE    | notch    | nudge   | haunch  | hinge   | inch     |
-|    | enjoy    | gnash    | hunch   | no-show | unhitch | wench    |
-|    | winch    |          |         |         |         |          |
+| 26 | NICHE    | NACHO    | notch   | wench   | haunch  | hinge    |
+|    | enjoy    | gnash    | hunch   | inch    | no-show | nudge    |
+|    | unhitch  | winch    |         |         |         |          |
 |----+----------+----------+---------+---------+---------+----------|
-| 27 | NECK     | Inca     | nock    | ink     | hunk    | nook     |
+| 27 | NECK     | INK      | Inca    | nock    | hunk    | nook     |
 |    | Yankee   | awning   | inning  | knack   | knock   | nag      |
 |    | nick     | nog      | unhook  | unique  | wink    |          |
 |----+----------+----------+---------+---------+---------+----------|
-| 28 | NAVY     | nova     | knave   | knife   | nephew  | naive    |
+| 28 | NAVY     | KNIFE    | nova    | knave   | nephew  | naive    |
 |    | enough   | envoy    | envy    | inveigh | nave    | unify    |
 |----+----------+----------+---------+---------+---------+----------|
-| 29 | NAP      | nib      | nub     | knob    | nape    | nappy    |
-|    | Niobe    | honeybee | nab     | neap    | nip     | unhappy  |
+| 29 | NAP      | KNOB     | nib     | nub     | nape    | nappy    |
+|    | Niobe    | honeybee | nab     | neap    | nip     | nob      |
+|    | unhappy  |          |         |         |         |          |
 :end:
 
 \clearpage
@@ -3079,47 +3092,47 @@ good ideas because they might incorrectly recall 64 at speed.
 
 #+RESULTS:
 :results:
-|----+---------+---------+---------+-----------+--------+---------|
-| 30 | MASS    | mace    | maze    | hummus    | mice   | moose   |
-|    | Messiah | aims    | amass   | amaze     | amiss  | amuse   |
-|    | humus   | mess    | mews    | miss      | moss   | mouse   |
-|    | muse    | muss    |         |           |        |         |
-|----+---------+---------+---------+-----------+--------+---------|
-| 31 | MAT     | maid    | moth    | mud       | mitt   | midi    |
-|    | amid    | amity   | emit    | humid     | mad    | made    |
-|    | mate    | meadow  | meat    | meet      | midday | midway  |
-|    | might   | mite    | moat    | mod       | mode   | mood    |
-|    | motto   | mouth   | mute    | myth      | omit   |         |
-|----+---------+---------+---------+-----------+--------+---------|
-| 32 | MAN     | mane    | hymen   | mine      | minnow | moon    |
-|    | amen    | ammonia | human   | main      | mana   | mania   |
-|    | manna   | many    | mean    | mien      | moan   | money   |
-|    | omen    | woman   | yeoman  |           |        |         |
-|----+---------+---------+---------+-----------+--------+---------|
-| 33 | MAMA    | mummy   | mime    | imam      | maim   | Mau-Mau |
-|    | Miami   | mayhem  | memo    | whim-wham |        |         |
-|----+---------+---------+---------+-----------+--------+---------|
-| 34 | MARE    | Mary    | mayor   | merry     | homer  | emir    |
-|    | amour   | hammer  | humor   | mar       | marrow | marry   |
-|    | mere    | mire    | moor    | more      | myrrh  | omer    |
-|----+---------+---------+---------+-----------+--------+---------|
-| 35 | MAIL    | mule    | mile    | mole      | mill   | meal    |
-|    | homely  | homily  | male    | mall      | melee  | mellow  |
-|    | moll    |         |         |           |        |         |
-|----+---------+---------+---------+-----------+--------+---------|
-| 36 | MATCH   | mash    | mesh    | midge     | mush   | homage  |
-|    | Amish   | image   | mashie  | mooch     | much   |         |
-|----+---------+---------+---------+-----------+--------+---------|
-| 37 | MIKE    | mica    | hammock | mocha     | Mecca  | Mohawk  |
-|    | amigo   | amok    | among   | make      | meek   | mock    |
-|    | muck    | mug     | omega   |           |        |         |
-|----+---------+---------+---------+-----------+--------+---------|
-| 38 | MUFF    | mauve   | Mafia   | miff      | move   | movie   |
-|    | oomph   |         |         |           |        |         |
-|----+---------+---------+---------+-----------+--------+---------|
-| 39 | MAP     | hemp    | hump    | imp       | ump    | amoeba  |
-|    | amp     | imbue   | maybe   | mob       | mop    | mope    |
-|    | myopia  |         |         |           |        |         |
+|----+---------+---------+--------+-----------+--------+---------|
+| 30 | MASS    | MOUSE   | mace   | maze      | hummus | mice    |
+|    | Messiah | aims    | amass  | amaze     | amiss  | amuse   |
+|    | humus   | mess    | mews   | miss      | moose  | moss    |
+|    | muse    | muss    |        |           |        |         |
+|----+---------+---------+--------+-----------+--------+---------|
+| 31 | MAT     | maid    | moth   | mud       | mitt   | midi    |
+|    | amid    | amity   | emit   | humid     | mad    | made    |
+|    | mate    | meadow  | meat   | meet      | midday | midway  |
+|    | might   | mite    | moat   | mod       | mode   | mood    |
+|    | motto   | mouth   | mute   | myth      | omit   |         |
+|----+---------+---------+--------+-----------+--------+---------|
+| 32 | MAN     | MOON    | mane   | hymen     | mine   | minnow  |
+|    | amen    | ammonia | human  | main      | mana   | mania   |
+|    | manna   | many    | mean   | mien      | moan   | money   |
+|    | omen    | woman   | yeoman |           |        |         |
+|----+---------+---------+--------+-----------+--------+---------|
+| 33 | MAMA    | MUMMY   | mime   | imam      | maim   | Mau-Mau |
+|    | Miami   | mayhem  | memo   | whim-wham |        |         |
+|----+---------+---------+--------+-----------+--------+---------|
+| 34 | MARE    | HAMMER  | Mary   | mayor     | merry  | homer   |
+|    | amour   | emir    | humor  | mar       | marrow | marry   |
+|    | mere    | mire    | moor   | more      | myrrh  | omer    |
+|----+---------+---------+--------+-----------+--------+---------|
+| 35 | MAIL    | mule    | mile   | mole      | mill   | meal    |
+|    | homely  | homily  | male   | mall      | melee  | mellow  |
+|    | moll    |         |        |           |        |         |
+|----+---------+---------+--------+-----------+--------+---------|
+| 36 | MATCH   | mash    | mesh   | midge     | mush   | homage  |
+|    | Amish   | image   | mashie | mooch     | much   |         |
+|----+---------+---------+--------+-----------+--------+---------|
+| 37 | MIKE    | mug     | mica   | hammock   | mocha  | Mecca   |
+|    | amigo   | Mohawk  | amok   | among     | make   | meek    |
+|    | mock    | muck    | omega  |           |        |         |
+|----+---------+---------+--------+-----------+--------+---------|
+| 38 | MUFF    | MOVIE   | mauve  | Mafia     | miff   | move    |
+|    | oomph   |         |        |           |        |         |
+|----+---------+---------+--------+-----------+--------+---------|
+| 39 | MAP     | hemp    | hump   | imp       | ump    | amoeba  |
+|    | amp     | imbue   | maybe  | mob       | mop    | mope    |
+|    | myopia  |         |        |           |        |         |
 :end:
 
 \clearpage
@@ -3129,60 +3142,60 @@ good ideas because they might incorrectly recall 64 at speed.
 
 #+RESULTS:
 :results:
-|----+-----------+---------+----------+---------+---------+---------|
-| 40 | RACE      | racy    | raise    | rase    | raze    | rice    |
-|    | rise      | rose    | rouse    | ruse    | arouse  | erase   |
-|    | eros      | erose   | harass   | hearse  | hearsay | heresy  |
-|    | hers      | hoarse  | horse    | heiress | iris    | ours    |
-|    | warehouse | worse   | Warsaw   |         |         |         |
-|----+-----------+---------+----------+---------+---------+---------|
-| 41 | RAT       | rate    | radio    | raid    | reed    | red     |
-|    | read      | ready   | rid      | ride    | road    | rod     |
-|    | root      | rot     | route    | rut     | rite    | riot    |
-|    | right     | arid    | aright   | art     | award   | aorta   |
-|    | earth     | errata  | erode    | hard    | hart    | heart   |
-|    | hearth    | herd    | hereto   | hoard   | horde   | horrid  |
-|    | hurt      | hurried | ward     | wart    | word    | worth   |
-|    | wrath     | wreath  | wreathe  | write   | yard    | worried |
-|    | weird     |         |          |         |         |         |
-|----+-----------+---------+----------+---------+---------+---------|
-| 42 | RAIN      | rein    | reign    | renew   | run     | ruin    |
-|    | Rhine     | rune    | rhino    | Reno    | arena   | Aryan   |
-|    | arraign   | earn    | hernia   | heroin  | heroine | horn    |
-|    | iron      | irony   | Irene    | Orion   | urn     | worn    |
-|    | warn      |         |          |         |         |         |
-|----+-----------+---------+----------+---------+---------+---------|
-| 43 | RAM       | rim     | rhyme    | ream    | room    | rime    |
-|    | rum       | roam    | Rome     | Romeo   | arm     | army    |
-|    | aroma     | harm    | harem    | warm    | worm    |         |
-|----+-----------+---------+----------+---------+---------+---------|
-| 44 | REAR      | rare    | roar     | rower   | arrear  | aurora  |
-|    | error     | harrier | harrower | horror  | warrior | worrier |
-|    | wearer    | hearer  | orrery   |         |         |         |
-|----+-----------+---------+----------+---------+---------+---------|
-| 45 | RAIL      | rally   | railway  | real    | reel    | relay   |
-|    | rely      | rill    | roil     | role    | roll    | royal   |
-|    | rule      | earl    | early    | hourly  | hurl    | oral    |
-|    | oriole    | aerial  | whirl    | whorl   | yearly  |         |
-|----+-----------+---------+----------+---------+---------+---------|
-| 46 | RASH      | rage    | ratio    | Rajah   | reach   | roach   |
-|    | rich      | ridge   | rouge    | ruche   | rush    | rushee  |
-|    | Russia    | arch    | harsh    | Irish   | orgy    | urge    |
-|    | wretch    |         |          |         |         |         |
-|----+-----------+---------+----------+---------+---------+---------|
-| 47 | RAKE      | rack    | rag      | reek    | rock    | ring    |
-|    | rogue     | rook    | rug      | rig     | ragout  | airing  |
-|    | ark       | argue   | arc      | ergo    | hark    | hearing |
-|    | herring   | heroic  | work     | wreck   |         |         |
-|----+-----------+---------+----------+---------+---------+---------|
-| 48 | REEF      | raffia  | review   | revue   | riff    | rife    |
-|    | roof      | rough   | rave     | ruff    | rive    | rove    |
-|    | arrive    | aerify  | horrify  | wharf   |         |         |
-|----+-----------+---------+----------+---------+---------+---------|
-| 49 | ROPE      | rap     | rape     | reap    | repay   | rip     |
-|    | ripe      | rib     | rabbi    | rob     | rub     | robe    |
-|    | ruby      | rupee   | harp     | herb    | hereby  | orb     |
-|    | Europe    | Arabia  | warp     |         |         |         |
+|----+---------+-----------+----------+--------+---------+--------|
+| 40 | RACE    | ROSE      | racy     | raise  | rase    | raze   |
+|    | Warsaw  | arouse    | erase    | eros   | erose   | harass |
+|    | hearsay | hearse    | heiress  | heresy | hers    | hoarse |
+|    | horse   | iris      | ours     | rice   | rise    | rouse  |
+|    | ruse    | warehouse | worse    |        |         |        |
+|----+---------+-----------+----------+--------+---------+--------|
+| 41 | RAT     | ROAD      | aorta    | arid   | aright  | art    |
+|    | award   | earth     | erode    | errata | hard    | hart   |
+|    | heart   | hearth    | herd     | hereto | hoard   | horde  |
+|    | horrid  | hurried   | hurt     | radio  | raid    | rate   |
+|    | read    | ready     | red      | reed   | rid     | ride   |
+|    | right   | riot      | rite     | rod    | root    | rot    |
+|    | route   | rut       | ward     | wart   | weird   | word   |
+|    | worried | worth     | wrath    | wreath | wreathe | write  |
+|    | yard    |           |          |        |         |        |
+|----+---------+-----------+----------+--------+---------+--------|
+| 42 | RAIN    | rein      | reign    | renew  | run     | ruin   |
+|    | Aryan   | Irene     | Orion    | Reno   | Rhine   | arena  |
+|    | arraign | earn      | hernia   | heroin | heroine | horn   |
+|    | iron    | irony     | rhino    | rune   | urn     | warn   |
+|    | worn    |           |          |        |         |        |
+|----+---------+-----------+----------+--------+---------+--------|
+| 43 | RAM     | rim       | rhyme    | ream   | room    | rime   |
+|    | Rome    | Romeo     | arm      | army   | aroma   | harem  |
+|    | harm    | roam      | rum      | warm   | worm    |        |
+|----+---------+-----------+----------+--------+---------+--------|
+| 44 | REAR    | AURORA    | rare     | roar   | rower   | arrear |
+|    | error   | harrier   | harrower | hearer | horror  | orrery |
+|    | warrior | wearer    | worrier  |        |         |        |
+|----+---------+-----------+----------+--------+---------+--------|
+| 45 | RAIL    | rally     | railway  | real   | reel    | relay  |
+|    | aerial  | earl      | early    | hourly | hurl    | oral   |
+|    | oriole  | rely      | rill     | roil   | role    | roll   |
+|    | royal   | rule      | whirl    | whorl  | yearly  |        |
+|----+---------+-----------+----------+--------+---------+--------|
+| 46 | RASH    | ROACH     | rage     | ratio  | Rajah   | reach  |
+|    | Irish   | Russia    | arch     | harsh  | orgy    | rich   |
+|    | ridge   | rouge     | ruche    | rush   | rushee  | urge   |
+|    | wretch  |           |          |        |         |        |
+|----+---------+-----------+----------+--------+---------+--------|
+| 47 | RACK    | ROCK      | rake     | rag    | reek    | ring   |
+|    | airing  | arc       | argue    | ark    | ergo    | hark   |
+|    | hearing | heroic    | herring  | ragout | rig     | rogue  |
+|    | rook    | rug       | work     | wreck  |         |        |
+|----+---------+-----------+----------+--------+---------+--------|
+| 48 | REEF    | raffia    | review   | revue  | riff    | rife   |
+|    | aerify  | arrive    | horrify  | rave   | rive    | roof   |
+|    | rough   | rove      | ruff     | wharf  |         |        |
+|----+---------+-----------+----------+--------+---------+--------|
+| 49 | ROPE    | rap       | rape     | reap   | repay   | rip    |
+|    | Arabia  | Europe    | harp     | herb   | hereby  | orb    |
+|    | rabbi   | rib       | ripe     | rob    | robe    | rub    |
+|    | ruby    | rupee     | warp     |        |         |        |
 :end:
 
 \clearpage
@@ -3192,53 +3205,53 @@ good ideas because they might incorrectly recall 64 at speed.
 
 #+RESULTS:
 :results:
-|----+-----------+----------+-----------+-----------+------------+-----------|
-| 50 | LACE      | lass     | lassie    | lazy      | lasso      | lease     |
-|    | lees      | less     | lessee    | loose     | lose       | loss      |
-|    | louse     | luce     | Lucy      | alas      | alehouse   | allies    |
-|    | always    | also     | alias     | Eliza     | else       |           |
-|----+-----------+----------+-----------+-----------+------------+-----------|
-| 51 | LOT       | lad      | lathe     | late      | lady       | lath      |
-|    | let       | lid      | lead      | light     | load       | loath     |
-|    | loud      | loot     | lido      | lout      | lute       | allowed   |
-|    | allot     | allude   | aloud     | although  | allied     | alit      |
-|    | alight    | elate    | eyelid    | elite     | halt       | health    |
-|    | hold      | hilt     | holiday   | Hollywood | helot      | islet     |
-|    | old       | wild     | wallet    | wealth    |            |           |
-|----+-----------+----------+-----------+-----------+------------+-----------|
-| 52 | LANE      | lawn     | lean      | lien      | line       | lion      |
-|    | loan      | loin     | loon      | alien     | alone      | hellion   |
-|    | Halloween | woolen   |           |           |            |           |
-|----+-----------+----------+-----------+-----------+------------+-----------|
-| 53 | LIME      | lame     | lama      | lamb      | lima       | lime      |
-|    | Limey     | limb     | loom      | loam      | alum       | elm       |
-|    | haulm     | helm     | helium    |           |            |           |
-|----+-----------+----------+-----------+-----------+------------+-----------|
-| 54 | LAIR      | layer    | lawyer    | leer      | liar       | lower     |
-|    | lorry     | lure     | lyre      | allure    | healer     | holler    |
-|    | Holy-Year | oiler    | whaler    |           |            |           |
-|----+-----------+----------+-----------+-----------+------------+-----------|
-| 55 | LILY      | lisle    | loyal     | lowly     | Loyola     | loll      |
-|    | lolly     | lull     | lulu      | holy-oil  | hallelujah | hula-hula |
-|    | ill-will  | oil-well | Walhalla  | whale-oil |            |           |
-|----+-----------+----------+-----------+-----------+------------+-----------|
-| 56 | LASH      | latch    | leash     | liege     | leech      | ledge     |
-|    | lodge     | loge     | lush      | allege    | hellish    | ullage    |
-|    | Welsh     |          |           |           |            |           |
-|----+-----------+----------+-----------+-----------+------------+-----------|
-| 57 | LAKE      | lack     | lackey    | lag       | lac        | league    |
-|    | leak      | leek     | leg       | lick      | like       | lock      |
-|    | log       | long     | look      | luck      | lug        | lung      |
-|    | loco      | low-key  | alike     | along     | ailing     | elk       |
-|    | hillock   | hulk     | hollyhock | ilk       | whaling    |           |
-|----+-----------+----------+-----------+-----------+------------+-----------|
-| 58 | LEAF      | lava     | laugh     | leave     | life       | live      |
-|    | loaf      | love     | levee     | levy      | luff       | alive     |
-|    | aloof     | elf      | olive     | welloff   | wolf       |           |
-|----+-----------+----------+-----------+-----------+------------+-----------|
-| 59 | LAP       | lab      | leap      | lip       | lob        | lobe      |
-|    | lop       | lobby    | lowboy    | loop      | alibi      | alp       |
-|    | elbow     | elope    | help      | whelp     | wallop     |           |
+|----+-----------+------------+----------+-----------+----------+-----------|
+| 50 | LACE      | lass       | lassie   | lazy      | lasso    | lease     |
+|    | Eliza     | Lucy       | alas     | alehouse  | alias    | allies    |
+|    | also      | always     | else     | lees      | less     | lessee    |
+|    | loose     | lose       | loss     | louse     | luce     |           |
+|----+-----------+------------+----------+-----------+----------+-----------|
+| 51 | LOT       | EYELID     | lad      | lathe     | late     | lady      |
+|    | Hollywood | alight     | alit     | allied    | allot    | allowed   |
+|    | allude    | aloud      | although | elate     | elite    | halt      |
+|    | health    | helot      | hilt     | hold      | holiday  | islet     |
+|    | lath      | lead       | let      | lid       | lido     | light     |
+|    | load      | loath      | loot     | loud      | lout     | lute      |
+|    | old       | wallet     | wealth   | wild      |          |           |
+|----+-----------+------------+----------+-----------+----------+-----------|
+| 52 | LANE      | LION       | lawn     | lean      | lien     | line      |
+|    | Halloween | alien      | alone    | hellion   | loan     | loin      |
+|    | loon      | woolen     |          |           |          |           |
+|----+-----------+------------+----------+-----------+----------+-----------|
+| 53 | LIME      | lame       | lama     | lamb      | lima     | lime      |
+|    | Limey     | alum       | elm      | haulm     | helium   | helm      |
+|    | limb      | loam       | loom     |           |          |           |
+|----+-----------+------------+----------+-----------+----------+-----------|
+| 54 | LAIR      | LYRE       | layer    | lawyer    | leer     | liar      |
+|    | Holy-Year | allure     | healer   | holler    | lorry    | lower     |
+|    | lure      | oiler      | whaler   |           |          |           |
+|----+-----------+------------+----------+-----------+----------+-----------|
+| 55 | LILY      | lisle      | loyal    | lowly     | Loyola   | loll      |
+|    | Walhalla  | hallelujah | holy-oil | hula-hula | ill-will | lolly     |
+|    | lull      | lulu       | oil-well | whale-oil |          |           |
+|----+-----------+------------+----------+-----------+----------+-----------|
+| 56 | LASH      | LEECH      | latch    | leash     | liege    | ledge     |
+|    | Welsh     | allege     | hellish  | lodge     | loge     | lush      |
+|    | ullage    |            |          |           |          |           |
+|----+-----------+------------+----------+-----------+----------+-----------|
+| 57 | LAKE      | lack       | lackey   | lag       | lac      | league    |
+|    | ailing    | alike      | along    | elk       | hillock  | hollyhock |
+|    | hulk      | ilk        | leak     | leek      | leg      | lick      |
+|    | like      | lock       | loco     | log       | long     | look      |
+|    | low-key   | luck       | lug      | lung      | whaling  |           |
+|----+-----------+------------+----------+-----------+----------+-----------|
+| 58 | LEAF      | WOLF       | lava     | laugh     | leave    | life      |
+|    | alive     | aloof      | elf      | levee     | levy     | live      |
+|    | loaf      | love       | luff     | olive     | welloff  |           |
+|----+-----------+------------+----------+-----------+----------+-----------|
+| 59 | LAP       | WALLABY    | lab      | leap      | lip      | lob       |
+|    | alibi     | alp        | elbow    | elope     | help     | lobby     |
+|    | lobe      | loop       | lop      | lowboy    | wallop   | whelp     |
 :end:
 
 \clearpage
@@ -3250,21 +3263,21 @@ good ideas because they might incorrectly recall 64 at speed.
 :results:
 |----+-------------+----------+----------+----------+---------+----------|
 | 60 | CHESS       | cheese   | chassis  | chase    | chaise  | choice   |
-|    | choose      | ashes    | ages     | Jaycee   | Jewess  | joyous   |
-|    | juice       | wages    | schuss   |          |         |          |
+|    | Jaycee      | Jewess   | ages     | ashes    | choose  | joyous   |
+|    | juice       | schuss   | wages    |          |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
-| 61 | JET         | aged     | chat     | chateau  | cheat   | cheetah  |
-|    | chit        | chute    | jade     | jetty    | jot     | judo     |
+| 61 | JET         | judo     | cheetah  | chateau  | jade    | jetty    |
+|    | aged        | chat     | cheat    | chit     | chute   | jot      |
 |    | jute        | shad     | shade    | shadow   | sheath  | shed     |
 |    | sheet       | shoot    | shot     | shout    | shut    | washed   |
 |    | widget      |          |          |          |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
-| 62 | CHAIN       | China    | Jane     | John     | June    | Shawnee  |
-|    | chin        | chine    | gin      | hygiene  | join    | ocean    |
+| 62 | CHAIN       | chin     | gin      | ocean    | china   | hygiene  |
+|    | Jane        | John     | June     | Shawnee  | chine   | join     |
 |    | shine       | shown    | shun     | widgeon  |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
-| 63 | CHIME       | Jim      | chamois  | chum     | gem     | gym      |
-|    | jam         | jamb     | sham     | shame    | shammy  | shim     |
+| 63 | CHIME       | chamois  | chum     | gem      | gym     | jam      |
+|    | Jim         | jamb     | sham     | shame    | shammy  | shim     |
 |    | shimmy      |          |          |          |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
 | 64 | CHAIR       | jar      | sherry   | washer   | usher   | cherry   |
@@ -3277,24 +3290,24 @@ good ideas because they might incorrectly recall 64 at speed.
 |  A | Chile       | July     | agile    | chill    | jolly   | jowl     |
 |    | shall       | shallow  | shill    | shoal    | shyly   | usual    |
 |----+-------------+----------+----------+----------+---------+----------|
-| 66 | JUDGE       | hashish  | juju     | Jewish   | cha-cha | choochoo |
+| 66 | JUDGE       | HASHISH  | juju     | Jewish   | cha-cha | choochoo |
 |  B | chichi      | chowchow | jaygee   | josh     | shoji   | shush    |
 |    | wishy-washy |          |          |          |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
-| 67 | CHALK       | jack     | sheikh   | chick    | cheek   | choke    |
-|  C | Django      | aging    | check    | chic     | chuck   | chug     |
-|    | etching     | itching  | jingo    | jock     | jockey  | joke     |
-|    | jug         | shack    | shag     | shake    | shako   | shock    |
+| 67 | CHALK       | JUG      | jack     | sheikh   | chick   | cheek    |
+|  C | Django      | aging    | check    | chic     | choke   | chuck    |
+|    | chug        | etching  | itching  | jingo    | jock    | jockey   |
+|    | joke        | shack    | shag     | shake    | shako   | shock    |
 |    | shuck       | washing  | watching | wishing  |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
 | 68 | CHEF        | chief    | Chevy    | sheaf    | chaff   | chive    |
 |  D | Java        | Jehovah  | achieve  | chafe    | jayvee  | jiffy    |
 |    | jive        | shave    | shove    | wash-off |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
-| 69 | CHIP        | jib      | jeep     | sheep    | ship    | Job      |
+| 69 | CHIP        | JEEP     | jib      | sheep    | ship    | Job      |
 |  E | GP          | chap     | chapeau  | cheap    | chop    | chubby   |
 |    | gyp         | jab      | jibe     | job      | shabby  | shape    |
-|    | shop        |          |          |          |         |          |
+|    | ship        | shop     |          |          |         |          |
 :end:
 
 \clearpage
@@ -3304,63 +3317,64 @@ good ideas because they might incorrectly recall 64 at speed.
 
 #+RESULTS:
 :results:
-|----+---------+-----------+---------+--------+----------+---------|
-| 70 | CASE    | gas       | goose   | kiss   | ox       | eggs    |
-|  F | accuse  | acquiesce | ax      | cause  | causeway | chaos   |
-|    | cozy    | cuss      | gauze   | gaze   | guess    | guise   |
-|    | guys    | hex       | hoax    | quasi  | wax      |         |
-|----+---------+-----------+---------+--------+----------+---------|
-| 71 | CAT     | kit       | kid     | co-ed  | goat     | caddie  |
-|  G | God     | Kate      | acquit  | act    | acute    | coat    |
-|    | code    | cot       | cut     | cute   | gaiety   | gait    |
-|    | gat     | gate      | gaudy   | get    | ghetto   | goad    |
-|    | good    | gout      | guide   | kite   | kitty    | quiet   |
-|    | quit    | quite     | quota   | quote  | weekday  | wicked  |
-|    | wicket  |           |         |        |          |         |
-|----+---------+-----------+---------+--------+----------+---------|
-| 72 | CAN     | coin      | gun     | queen  | cone     | cane    |
-|  H | acne    | again     | agony   | awaken | canoe    | coon    |
-|    | gain    | gown      | guinea  | icon   | keen     | kin     |
-|    | oaken   | wagon     |         |        |          |         |
-|----+---------+-----------+---------+--------+----------+---------|
-| 73 | CAM     | acme      | calm    | cameo  | coma     | comb    |
-|  I | come    | comma     | gam     | game   | gum      | hokum   |
-|    | oakum   | wigwam    |         |        |          |         |
-|----+---------+-----------+---------+--------+----------+---------|
-| 74 | CAR     | accrue    | acquire | acre   | agar     | agree   |
-|  J | anger   | care      | carry   | choir  | coheir   | cohere  |
-|    | core    | cower     | crew    | crow   | cry      | cur     |
-|    | cure    | curry     | eager   | eagre  | ecru     | euchre  |
-|    | gear    | gory      | grey    | grow   | guru     | hiker   |
-|    | hooker  | hugger    | occur   | ogre   | okra     | quarry  |
-|    | queer   | quire     |         |        |          |         |
-|----+---------+-----------+---------+--------+----------+---------|
-| 75 | COAL    | call      | clay    | coil   | cool     | coolie  |
-|  K | collie  | clew      | claw    | clue   | gale     | gall    |
-|    | gal     | galley    | glee    | glow   | glue     | goal    |
-|    | gully   | Gaul      | kale    | keel   | keyhole  | kill    |
-|    | quail   | quill     | eagle   | equal  | haggle   | hackle  |
-|    | heckle  | ogle      | ugly    | weekly |          |         |
-|----+---------+-----------+---------+--------+----------+---------|
-| 76 | CAGE    | cash      | catch   | cache  | cachet   | cashew  |
-|  L | coach   | couch     | gash    | gage   | gauge    | gush    |
-|    | gauche  | gaucho    | ketch   | kedge  | hoggish  | hogwash |
-|    | waggish |           |         |        |          |         |
-|----+---------+-----------+---------+--------+----------+---------|
-| 77 | CAKE    | calk      | caulk   | cock   | coke     | cook    |
-|  M | cacao   | cuckoo    | cookie  | gag    | gangway  | gang    |
-|    | gong    | going     | goo-goo | gook   | kaka     | kayak   |
-|    | khaki   | kick      | king    | keg    | quack    | quake   |
-|    | quick   | aching    | agog    |        |          |         |
-|----+---------+-----------+---------+--------+----------+---------|
-| 78 | CUFF    | calf      | cave    | cafe   | coffee   | cough   |
-|  N | cove    | covey     | gaff    | give   | goof     | guff    |
-|    | guffaw  | guava     | quaff   | agave  |          |         |
-|----+---------+-----------+---------+--------+----------+---------|
-| 79 | CAP     | cab       | cabby   | cape   | cop      | cope    |
-|  O | coop    | copy      | cowboy  | cub    | cube     | cup     |
-|    | gab     | guppy     | gap     | gape   | keep     | quip    |
-|    | hang-up | hiccup    | occupy  | okapi  | wickiup  | wicopy  |
+|----+---------+-----------+--------+---------+----------+---------|
+| 70 | CASE    | GOOSE     | gas    | kiss    | ox       | eggs    |
+|  F | accuse  | acquiesce | ax     | cause   | causeway | chaos   |
+|    | cozy    | cuss      | gauze  | gaze    | guess    | guise   |
+|    | guys    | hex       | hoax   | quasi   | wax      |         |
+|----+---------+-----------+--------+---------+----------+---------|
+| 71 | CAT     | kit       | kid    | co-ed   | goat     | caddie  |
+|  G | God     | Kate      | acquit | act     | acute    | coat    |
+|    | code    | cot       | cut    | cute    | gaiety   | gait    |
+|    | gat     | gate      | gaudy  | get     | ghetto   | goad    |
+|    | good    | gout      | guide  | kite    | kitty    | quiet   |
+|    | quit    | quite     | quota  | quote   | weekday  | wicked  |
+|    | wicket  |           |        |         |          |         |
+|----+---------+-----------+--------+---------+----------+---------|
+| 72 | CAN     | GUN       | coin   | queen   | cone     | cane    |
+|  H | acne    | again     | agony  | awaken  | canoe    | coon    |
+|    | gain    | gown      | guinea | icon    | keen     | kin     |
+|    | oaken   | wagon     |        |         |          |         |
+|----+---------+-----------+--------+---------+----------+---------|
+| 73 | CAM     | COMB      | acme   | calm    | cameo    | coma    |
+|  I | come    | comma     | gam    | game    | gum      | hokum   |
+|    | oakum   | wigwam    |        |         |          |         |
+|----+---------+-----------+--------+---------+----------+---------|
+| 74 | CAR     | choir     | gear   | curry   | hiker    | hooker  |
+|  J | accrue  | acquire   | acre   | agar    | agree    | anger   |
+|    | care    | carry     | coheir | cohere  | core     | cower   |
+|    | crew    | crow      | cry    | cur     | cure     | eager   |
+|    | eagre   | ecru      | euchre | gory    | grey     | grow    |
+|    | guru    | hugger    | occur  | ogre    | okra     | quarry  |
+|    | queer   | quire     |        |         |          |         |
+|----+---------+-----------+--------+---------+----------+---------|
+| 75 | COAL    | GLUE      | coil   | eagle   | gull     | quill   |
+|  K | Gaul    | call      | claw   | clay    | clew     | clue    |
+|    | collie  | cool      | coolie | equal   | gal      | gale    |
+|    | gall    | galley    | glee   | glow    | goal     | gully   |
+|    | hackle  | haggle    | heckle | kale    | keel     | keyhole |
+|    | kill    | ogle      | quail  | ugly    | weekly   |         |
+|----+---------+-----------+--------+---------+----------+---------|
+| 76 | CAGE    | GAUGE     | cashew | gaucho  | coach    | couch   |
+|  L | cash    | catch     | cache  | cachet  | gash     | gage    |
+|    | gush    | gauche    | ketch  | kedge   | hoggish  | hogwash |
+|    | waggish |           |        |         |          |         |
+|----+---------+-----------+--------+---------+----------+---------|
+| 77 | CAKE    | caulk     | cook   | gong    | king     | cookie  |
+|  M | calk    | cock      | coke   | cacao   | cuckoo   | gag     |
+|    | gangway | gang      | going  | goo-goo | gook     | kaka    |
+|    | kayak   | khaki     | kick   | keg     | quack    | quake   |
+|    | quick   | aching    | agog   |         |          |         |
+|----+---------+-----------+--------+---------+----------+---------|
+| 78 | CUFF    | CAVE      | calf   | cafe    | coffee   | agave   |
+|  N | cough   | cove      | covey  | gaff    | give     | goof    |
+|    | guava   | guff      | guffaw | quaff   |          |         |
+|----+---------+-----------+--------+---------+----------+---------|
+| 79 | CAP     | cob       | cowboy | cab     | guppy    | cube    |
+|  O | cabby   | cape      | coop   | cop     | cope     | copy    |
+|    | cub     | cup       | gab    | gap     | gape     | hang-up |
+|    | hiccup  | keep      | occupy | okapi   | quip     | wickiup |
+|    | wicopy  |           |        |         |          |         |
 :end:
 
 \clearpage
@@ -3370,55 +3384,55 @@ good ideas because they might incorrectly recall 64 at speed.
 
 #+RESULTS:
 :results:
-|----+--------+----------+----------+---------+-----------+---------|
-| 80 | FACE   | fizz     | fuse     | fusee   | fuss      | fuzz    |
-|  P | vase   | vice     | vise     | visa    | voice     | phase   |
-|    | efface | effuse   | office   |         |           |         |
-|----+--------+----------+----------+---------+-----------+---------|
-| 81 | FAT    | fate     | feat     | feed    | fade      | faith   |
-|  Q | fad    | feud     | fete     | fiat    | fight     | fit     |
-|    | food   | foot     | photo    | veto    | void      | voodoo  |
-|    | vote   | aft      | aphid    | avid    | afoot     | aviate  |
-|    | avoid  | evade    | effete   | ovate   | off-white | waft    |
-|----+--------+----------+----------+---------+-----------+---------|
-| 82 | FAN    | fain     | fawn     | fanny   | feign     | fen     |
-|  R | fin    | fine     | fun      | phone   | phony     | vain    |
-|    | van    | vane     | vein     | Vienna  | vine      | haven   |
-|    | heaven | hyphen   | avenue   | euphony | even      | often   |
-|    | oven   | ovine    | woven    |         |           |         |
-|----+--------+----------+----------+---------+-----------+---------|
-| 83 | FAME   | foam     | fume     | vim     | ovum      |         |
-|  S |        |          |          |         |           |         |
-|----+--------+----------+----------+---------+-----------+---------|
-| 84 | FARE   | fair     | fairway  | fairy   | far       | fear    |
-|  T | faro   | ferry    | fiery    | fir     | fire      | fray    |
-|    | free   | fry      | fur      | furrow  | fury      | foray   |
-|    | four   | for      | foyer    | Pharaoh | vary      | very    |
-|    | viewer | veer     | afar     | affair  | affray    | aviary  |
-|    | ever   | euphoria | heifer   | hoofer  | half-year | ivory   |
-|    | offer  | over     | off-year | waver   | waiver    | weaver  |
-|    | woofer |          |          |         |           |         |
-|----+--------+----------+----------+---------+-----------+---------|
-| 85 | FALL   | fail     | feel     | fell    | fellow    | file    |
-|  U | fill   | filly    | flaw     | flea    | flee      | flow    |
-|    | fly    | foal     | foil     | follow  | folly     | fool    |
-|    | foul   | fowl     | fuel     | full    | phial     | valley  |
-|    | value  | veal     | vial     | veil    | vail      | vile    |
-|    | viola  | volley   | vowel    | avail   | avowal    | awful   |
-|    | hovel  | offal    | oval     | waffle  |           |         |
-|----+--------+----------+----------+---------+-----------+---------|
-| 86 | FISH   | fetch    | fichu    | fuchsia | fudge     | vetch   |
-|  V | vouch  | voyage   | affiche  | effigy  | offish    |         |
-|----+--------+----------+----------+---------+-----------+---------|
-| 87 | FIG    | fag      | fake     | fang    | fog       | foggy   |
-|  W | fogie  | vague    | viewing  | vic     | vogue     | havoc   |
-|    | having | heaving  | evoke    | offing  | waving    | weaving |
-|----+--------+----------+----------+---------+-----------+---------|
-| 88 | FIFE   | five     | fief     | viva    | half-off  |         |
-|  X |        |          |          |         |           |         |
-|----+--------+----------+----------+---------+-----------+---------|
-| 89 | FOB    | faux-pas | fib      | fop     | phobia    | Phoebe  |
-|  Y | veep   | VIP      | half-pay |         |           |         |
+|----+-----------+---------+----------+---------+----------+-----------|
+| 80 | FACE      | VASE    | fuse     | vise    | visa     | vice      |
+|  P | efface    | effuse  | fizz     | fusee   | fuss     | fuzz      |
+|    | office    | phase   | voice    |         |          |           |
+|----+-----------+---------+----------+---------+----------+-----------|
+| 81 | FAT       | PHOTO   | foot     | fiat    | voodoo   | aphid     |
+|  Q | afoot     | aft     | aviate   | avid    | avoid    | effete    |
+|    | evade     | fad     | fade     | faith   | fate     | feat      |
+|    | feed      | fete    | feud     | fight   | fit      | food      |
+|    | off-white | ovate   | veto     | void    | vote     | waft      |
+|----+-----------+---------+----------+---------+----------+-----------|
+| 82 | FAN       | phone   | vine     | fawn    | van      | fanny     |
+|  R | Vienna    | avenue  | euphony  | even    | fain     | feign     |
+|    | fen       | fin     | fine     | fun     | haven    | heaven    |
+|    | hyphen    | often   | oven     | ovine   | phony    | vain      |
+|    | vane      | vein    | woven    |         |          |           |
+|----+-----------+---------+----------+---------+----------+-----------|
+| 83 | FAME      | FOAM    | ovum     | fume    | vim      |           |
+|  S |           |         |          |         |          |           |
+|----+-----------+---------+----------+---------+----------+-----------|
+| 84 | FARE      | FIRE    | Pharaoh  | fairway | ferry    | ivory     |
+|  T | afar      | affair  | affray   | aviary  | euphoria | ever      |
+|    | fair      | fairy   | far      | faro    | fear     | fiery     |
+|    | fir       | for     | foray    | four    | foyer    | fray      |
+|    | free      | fry     | fur      | furrow  | fury     | half-year |
+|    | heifer    | hoofer  | off-year | offer   | over     | vary      |
+|    | veer      | very    | viewer   | waiver  | waver    | weaver    |
+|    | woofer    |         |          |         |          |           |
+|----+-----------+---------+----------+---------+----------+-----------|
+| 85 | FALL      | EIFFEL  | flea     | veil    | viola    | waffle    |
+|  U | avail     | avowal  | awful    | fail    | feel     | fell      |
+|    | fellow    | file    | fill     | filly   | flaw     | flee      |
+|    | flow      | fly     | foal     | foil    | follow   | folly     |
+|    | fool      | foul    | fowl     | fuel    | full     | hovel     |
+|    | offal     | oval    | phial    | vail    | valley   | value     |
+|    | veal      | vial    | vile     | volley  | vowel    |           |
+|----+-----------+---------+----------+---------+----------+-----------|
+| 86 | FISH      | fuchsia | fudge    | effigy  | phage    | voyage    |
+|  V | affiche   | fetch   | fichu    | offish  | vetch    | vouch     |
+|----+-----------+---------+----------+---------+----------+-----------|
+| 87 | FIG       | fang    | fog      | fake    | Vogue    | havoc     |
+|  W | evoke     | fag     | foggy    | fogie   | having   | heaving   |
+|    | offing    | vague   | vic      | viewing | waving   | weaving   |
+|----+-----------+---------+----------+---------+----------+-----------|
+| 88 | FIFE      | fief    | five     | viva    | half-off |           |
+|  X |           |         |          |         |          |           |
+|----+-----------+---------+----------+---------+----------+-----------|
+| 89 | FOB       | fop     | veep     | VIP     | Phoebe   | phobia    |
+|  Y | faux-pas  | fib     | half-pay |         |          |           |
 :end:
 
 \clearpage
@@ -3428,38 +3442,39 @@ good ideas because they might incorrectly recall 64 at speed.
 
 #+RESULTS:
 :results:
-|----+---------+---------+--------+---------+--------+----------|
-| 90 | BASE    | pace    | pass   | pause   | peace  | piece    |
-|  Z | piazza  | pious   | poise  | pose    | PS     | pussy    |
-|    | bass    | basso   | bias   | boss    | booze  | boys     |
-|    | bus     | busy    | buzz   | abuse   | abyss  | apiece   |
-|    | appease | apis    | epos   | obese   | oppose | opus     |
-|----+---------+---------+--------+---------+--------+----------|
-| 91 | BAT     | pad     | pat    | path    | peat   | pet      |
-|    | petty   | piety   | pit    | pity    | poet   | pot      |
-|    | pout    | put     | putty  | bad     | bait   | bath     |
-|    | bead    | beat    | beauty | bed     | bet    | bid      |
-|    | bight   | bit     | bite   | boat    | body   | boot     |
-|    | both    | boyhood | booth  | bout    | bud    | but      |
-|    | butt    | buddy   | apathy | apt     | abate  | abet     |
-|    | abide   | abode   | about  | opiate  | opt    | habit    |
-|----+---------+---------+--------+---------+--------+----------|
-| 92 | BEAN    | pain    | pan    | pane    | pawn   | pen      |
-|    | penny   | piano   | pin    | pine    | pony   | pun      |
-|    | pone    | ban     | bane   | bin     | bine   | bone     |
-|    | boon    | bun     | bunny  | ebony   | happen | subpoena |
-|    | weapon  |         |        |         |        |          |
-|----+---------+---------+--------+---------+--------+----------|
-| 93 | BEAM    | palm    | poem   | puma    | balm   | Bohemia  |
-|    | bomb    | boom    | bum    | opium   |        |          |
-|----+---------+---------+--------+---------+--------+----------|
-| 94 | BAR     | par     | pair   | pare    | pear   | payer    |
-|    | parry   | power   | peer   | pier    | poor   | pour     |
-|    | pore    | pray    | prey   | pry     | prow   | purr     |
-|    | pyre    | bare    | bear   | beer    | berry  | beware   |
-|    | bier    | borrow  | boar   | borough | brew   | Boer     |
-|    | bore    | brow    | bury   | bureau  | buyer  | abhor    |
-|    | apiary  | appear  | Hebrew | hopper  | opera  | upper    |
+|----+---------+--------+--------+--------+---------+----------|
+| 90 | BASE    | BUS    | pizza  | bass   | booze   | boss     |
+|  Z | PS      | abuse  | abyss  | apiece | apis    | appease  |
+|    | basso   | bias   | boys   | busy   | buzz    | epos     |
+|    | obese   | oppose | opus   | pace   | pass    | pause    |
+|    | peace   | piazza | piece  | pious  | poise   | pose     |
+|    | pussy   |        |        |        |         |          |
+|----+---------+--------+--------+--------+---------+----------|
+| 91 | BAT     | BOAT   | bath   | opiate | poet    | bait     |
+|    | abate   | abet   | abide  | abode  | about   | apathy   |
+|    | apt     | bad    | bead   | beat   | beauty  | bed      |
+|    | bet     | bid    | bight  | bit    | bite    | body     |
+|    | boot    | booth  | both   | bout   | boyhood | bud      |
+|    | buddy   | but    | butt   | habit  | opt     | pad      |
+|    | pat     | path   | peat   | pet    | petty   | piety    |
+|    | pit     | pity   | pot    | pout   | put     | putty    |
+|----+---------+--------+--------+--------+---------+----------|
+| 92 | BEAN    | BUNNY  | pan    | pony   | piano   | pine     |
+|    | ban     | bane   | bin    | bine   | bone    | boon     |
+|    | bun     | ebony  | happen | pain   | pane    | pawn     |
+|    | pen     | penny  | pin    | pone   | pun     | subpoena |
+|    | weapon  |        |        |        |         |          |
+|----+---------+--------+--------+--------+---------+----------|
+| 93 | BEAM    | bomb   | puma   | palm   | bum     | balm     |
+|    | Bohemia | boom   | opium  | poem   |         |          |
+|----+---------+--------+--------+--------+---------+----------|
+| 94 | BAR     | bear   | berry  | opera  | pear    | prey     |
+|    | Boer    | Hebrew | abhor  | apiary | appear  | bare     |
+|    | beer    | beware | bier   | boar   | bore    | borough  |
+|    | borrow  | brew   | brow   | bureau | bury    | buyer    |
+|    | hopper  | pair   | par    | pare   | parry   | payer    |
+|    | peer    | pier   | poor   | pore   | pour    | power    |
+|    | pray    | prow   | pry    | purr   | pyre    | upper    |
 :end:
 
 \clearpage
@@ -3470,36 +3485,36 @@ good ideas because they might incorrectly recall 64 at speed.
 #+RESULTS:
 :results:
 |----+---------+----------+--------+---------+---------+---------|
-| 95 | BALL    | pal      | pale   | pail    | peal    | peel    |
-|    | pile    | pill     | pillow | play    | plea    | pole    |
-|    | ploy    | pool     | plough | plow    | ply     | payola  |
-|    | pull    | pulley   | poll   | bale    | bail    | belay   |
-|    | bell    | below    | belly  | bile    | bill    | billow  |
-|    | blue    | boil     | bowl   | blow    | bull    | bylaw   |
-|    | able    | appall   | appeal | apple   | apply   | eyeball |
-|    | happily | highball | hobble | hoopla  | opal    | wobble  |
-|    | uphill  |          |        |         |         |         |
+| 95 | BALL    | BELL     | opal   | bowl    | apple   | pillow  |
+|    | able    | appall   | appeal | apply   | bail    | bale    |
+|    | belay   | belly    | below  | bile    | bill    | billow  |
+|    | blow    | blue     | boil   | bull    | bylaw   | eyeball |
+|    | happily | highball | hobble | hoopla  | pail    | pal     |
+|    | pale    | payola   | peal   | peel    | pile    | pill    |
+|    | play    | plea     | plough | plow    | ploy    | ply     |
+|    | pole    | poll     | pool   | pull    | pulley  | uphill  |
+|    | wobble  |          |        |         |         |         |
 |----+---------+----------+--------+---------+---------+---------|
-| 96 | BADGE   | page     | pasha  | patch   | peach   | pitch   |
-|    | poach   | pouch    | push   | posh    | pudgy   | batch   |
-|    | beach   | beech    | budge  | bush    | bijou   | boyish  |
-|    | botch   | abash    | apish  | apogee  | Apache  | hibachi |
+| 96 | BADGE   | apogee   | bijou  | hibachi | bush    | pouch   |
+|    | Apache  | abash    | apish  | batch   | beach   | beech   |
+|    | botch   | boyish   | budge  | page    | pasha   | patch   |
+|    | peach   | pitch    | poach  | posh    | pudgy   | push    |
 |----+---------+----------+--------+---------+---------+---------|
-| 97 | BACK    | pack     | pang   | peak    | peek    | peck    |
-|  a | peg     | pick     | pig    | pike    | poke    | puck    |
-|    | pique   | bag      | bake   | bang    | beak    | beck    |
-|    | beg     | being    | big    | book    | bouquet | bogey   |
-|    | bog     | buck     | bug    | buggy   | aback   | epic    |
-|    | epoch   | opaque   |        |         |         |         |
+| 97 | BACK    | BIKE     | book   | bouquet | buck    | bog     |
+|  a | aback   | bag      | bake   | bang    | beak    | beck    |
+|    | beg     | being    | big    | bogey   | bug     | buggy   |
+|    | epic    | epoch    | opaque | pack    | pang    | peak    |
+|    | peck    | peek     | peg    | pick    | pig     | pike    |
+|    | pique   | poke     | puck   |         |         |         |
 |----+---------+----------+--------+---------+---------+---------|
-| 98 | BEEF    | pave     | peeve  | payoff  | puff    | beehive |
-|  b | behalf  | behave   | bevy   | biff    | buff    | buffo   |
-|    | buffet  | above    | ab-ovo |         |         |         |
+| 98 | BEEF    | BEEHIVE  | buffet | puff    | buff    | payoff  |
+|  b | ab-ovo  | above    | behalf | behave  | bevy    | biff    |
+|    | buffo   | pave     | peeve  |         |         |         |
 |----+---------+----------+--------+---------+---------+---------|
-| 99 | PIPE    | baby     | pap    | peep    | pip     | pop     |
-|  c | pope    | papa     | poppy  | puppy   | babe    | bib     |
-|    | bob     | bobby    | boob   | boo-boo | booby   | bop     |
-|    | hubbub  |          |        |         |         |         |
+| 99 | PIPE    | BABY     | papa   | pope    | poppy   | puppy   |
+|  c | babe    | bib      | bob    | bobby   | boo-boo | boob    |
+|    | booby   | bop      | hubbub | pap     | peep    | pip     |
+|    | pop     |          |        |         |         |         |
 :end:
 
 \clearpage
