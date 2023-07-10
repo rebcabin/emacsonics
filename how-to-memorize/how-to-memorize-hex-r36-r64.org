@@ -2408,10 +2408,10 @@ included in the headers.
 
 ** Caps and Rows
 
-Items in ALL CAPS are pegs recommended because they're visually
-strong. The first row in each block contains recommended
-alternatives in preference order. The rest of the rows are in
-alphabetical order.
+Items in ALL CAPS are recommended pegs: visually strong, easy to
+reconstruct by enumerating vowels, low collision potential. The
+first row in each block contains recommended alternatives in
+preference order. The rest of the rows are in alphabetical order.
 
 Blocks without items in ALL CAPS do not have recommended pegs as
 of this version. Rows in blocks without items in ALL CAPS may not
@@ -2427,8 +2427,28 @@ the others picked so-far. I already have CHAIR for 64 (used all
 the time), so SEAT for 01 and THRONE for 142 are not good ideas
 because they might incorrectly recall 64 at speed.
 
-This list is automatically constructed from a file named
-/core.clj/ deeper in the directory tree of the source repository.
+Most of this this list (except for the double leading zeros) is
+automatically constructed from a file named /core.clj/ deeper in
+the directory tree of the source repository.
+
+Pick your own pegs from this list, or mark your pegs in ALL CAPS
+in the /core.clj/ file and regenerate the PDF (cider-quit,
+cider-jack-in, org-babel-execute-buffer, org-latex-export-to-pdf;
+you must start with a fresh cider-repl every time, as Clojure
+caches the results).
+
+\clearpage
+|-----+-----------------+----------------+-------------+--------|
+| 000 | SOY SAUCE       | SASSY SAYING   | assize      |        |
+| 001 | CYST            | siesta         |             |        |
+| 002 | CESSNA          | ASSASSIN       | seasoning   | season |
+| 003 | SESAME SEED BUN | ASS'S MANE     |             |        |
+| 004 | SCISSOR         | CAESAR         | ass's reins |        |
+| 005 | C S LEWIS       | SIZZLING STEAK |             |        |
+| 006 | SAUSAGE         | SIOUX SAGE     |             |        |
+| 007 | SUZUKI SCOOTER  | SIZING         | siezing     |        |
+| 008 | SOUSAPHONE      | ASS'S FOAL     |             |        |
+| 009 | SWISS BANK      | ASS'S BEARD    |             |        |
 
 \clearpage
 #+begin_src clojure :exports results :results verbatim drawer output
@@ -2437,50 +2457,50 @@ This list is automatically constructed from a file named
 
 #+RESULTS:
 :results:
-|----+---------+----------+---------+----------+-----------+---------|
-| 00 | SAUCE   | icehouse | oasis   | sissy    | sass      | seesaw  |
-|    | assess  | assize   | houses  | sassy    | say-so    | seas    |
-|    | seize   | size     |         |          |           |         |
-|----+---------+----------+---------+----------+-----------+---------|
-| 01 | SOT     | sod      | Swede   | acid     | aside     | asset   |
-|    | city    | east     | haste   | host     | sad       | seat    |
-|    | seed    | seedy    | settee  | side     | sight     | sit     |
-|    | site    | soot     | sooth   | south    | stay      | stew    |
-|    | suede   | suet     | suit    | suite    | swat      | sweet   |
-|    | waste   | west     |         |          |           |         |
-|----+---------+----------+---------+----------+-----------+---------|
-| 02 | SUN     | swan     | swine   | ozone    | sinew     | snow    |
-|    | assign  | hosanna  | sane    | scene    | seen      | sign    |
-|    | sin     | son      | soon    | zone     |           |         |
-|----+---------+----------+---------+----------+-----------+---------|
-| 03 | SEAM    | sum      | semi    | swami    | psalm     | asthma  |
-|    | assume  | same     | seem    | some     | somehow   | swim    |
-|----+---------+----------+---------+----------+-----------+---------|
-| 04 | SOAR    | sewer    | seer    | soiree   | sir       | sour    |
-|    | czar    | eyesore  | hawser  | hussar   | sore      | sorrow  |
-|    | sorry   | wiser    | zero    |          |           |         |
-|----+---------+----------+---------+----------+-----------+---------|
-| 05 | SAIL    | swallow  | seal    | slaw     | sleigh    | weasel  |
-|    | assail  | cell     | easel   | easily   | hassle    | hazel   |
-|    | sale    | sell     | sill    | silly    | slay      | slow    |
-|    | sly     | soil     | sole    | solo     | soul      | whistle |
-|----+---------+----------+---------+----------+-----------+---------|
-| 06 | SASH    | sausage  | swatch  | sage     | ice-show  | siege   |
-|    | assuage | ice-age  | sashay  | sedge    | sewage    | such    |
-|    | switch  | usage    |         |          |           |         |
-|----+---------+----------+---------+----------+-----------+---------|
-| 07 | SOCK    | sack     | ski     | sky      | scow      | sake    |
-|    | sea-cow | ask      | assegai | hoosegow | housing   | husky   |
-|    | icing   | sago     | seek    | sick     | soak      | soggy   |
-|    | squaw   | suck     | whiskey | wise-guy |           |         |
-|----+---------+----------+---------+----------+-----------+---------|
-| 08 | SAFE    | Sufi     | sofa    | sieve    | housewife | savoy   |
-|    | ossify  | save     | savvy   | suave    |           |         |
-|----+---------+----------+---------+----------+-----------+---------|
-| 09 | SOAP    | spy      | wasp    | wisp     | asp       | soup    |
-|    | sap     | espy     | sob     | sop      | spa       | subway  |
-|    | swab    | swap     | sweep   | swipe    | swoop     | zebu    |
-|    | zip     |          |         |          |           |         |
+|----+----------+---------+----------+----------+-----------+---------|
+| 00 | SAUCE    | OASIS   | icehouse | sissy    | sass      | seesaw  |
+|    | assess   | assize  | houses   | sassy    | say-so    | seas    |
+|    | seize    | size    |          |          |           |         |
+|----+----------+---------+----------+----------+-----------+---------|
+| 01 | SOT      | SOD     | Swede    | acid     | aside     | asset   |
+|    | city     | east    | haste    | host     | sad       | seat    |
+|    | seed     | seedy   | settee   | side     | sight     | sit     |
+|    | site     | soot    | sooth    | south    | stay      | stew    |
+|    | suede    | suet    | suit     | suite    | swat      | sweet   |
+|    | waste    | west    |          |          |           |         |
+|----+----------+---------+----------+----------+-----------+---------|
+| 02 | SUN      | SWAN    | swine    | ozone    | sinew     | snow    |
+|    | assign   | hosanna | sane     | scene    | seen      | sign    |
+|    | sin      | son     | soon     | zone     |           |         |
+|----+----------+---------+----------+----------+-----------+---------|
+| 03 | SEAM     | SWAMI   | semi     | psalm    | asthma    | sum     |
+|    | assume   | same    | seem     | some     | somehow   | swim    |
+|----+----------+---------+----------+----------+-----------+---------|
+| 04 | SOAR     | SEWER   | seer     | soiree   | sir       | sour    |
+|    | czar     | eyesore | hawser   | hussar   | sore      | sorrow  |
+|    | sorry    | wiser   | zero     |          |           |         |
+|----+----------+---------+----------+----------+-----------+---------|
+| 05 | SAIL     | SEAL    | swallow  | slaw     | sleigh    | weasel  |
+|    | assail   | cell    | easel    | easily   | hassle    | hazel   |
+|    | sale     | sell    | sill     | silly    | slay      | slow    |
+|    | sly      | soil    | sole     | solo     | soul      | whistle |
+|----+----------+---------+----------+----------+-----------+---------|
+| 06 | SASH     | SWATCH  | switch   | sage     | ice-show  | siege   |
+|    | assuage  | ice-age | sashay   | sedge    | sewage    | such    |
+|    | usage    |         |          |          |           |         |
+|----+----------+---------+----------+----------+-----------+---------|
+| 07 | SOCK     | SACK    | ski      | sky      | scow      | sake    |
+|    | ask      | assegai | hoosegow | housing  | husky     | icing   |
+|    | sago     | sea-cow | seek     | sick     | soak      | soggy   |
+|    | squaw    | suck    | whiskey  | wise-guy |           |         |
+|----+----------+---------+----------+----------+-----------+---------|
+| 08 | SAFE     | SUFI    | sofa     | sieve    | housewife | savoy   |
+|    | ossified | save    | savvy    | suave    |           |         |
+|----+----------+---------+----------+----------+-----------+---------|
+| 09 | SOAP     | SPY     | wasp     | wisp     | asp       | soup    |
+|    | sap      | espy    | sob      | sop      | spa       | subway  |
+|    | swab     | swap    | sweep    | swipe    | swoop     | zebu    |
+|    | zip      |         |          |          |           |         |
 :end:
 
 \clearpage
@@ -2490,45 +2510,46 @@ This list is automatically constructed from a file named
 
 #+RESULTS:
 :results:
-|-----+------------+-----------+-----------+------------+-----------+-----------|
-| 010 | SAWDUST    | seduce    | hostess   | citizen    | cities    | South-Sea |
-|   A | assets     | assiduous | sideways  | stays      |           |           |
-|-----+------------+-----------+-----------+------------+-----------+-----------|
-| 011 | STATUE     | studio    | steed     | estate     | iced-tea  | wasted    |
-|   B | astute     | hesitate  | sedate    | sit-down   | state     | steady    |
-|     | stout      |           |           |            |           |           |
-|-----+------------+-----------+-----------+------------+-----------+-----------|
-| 012 | SATAN      | stain     | satin     | sedan      | stein     | stone     |
-|   C | Estonia    | Sweden    | astound   | hesitant   | pseudonym | sadden    |
-|     | sit-in     | sodden    | stand     | standard   | stench    | stint     |
-|     | stun       | stunt     | sudden    | sweeten    |           |           |
-|-----+------------+-----------+-----------+------------+-----------+-----------|
-| 013 | SEDIMENT   | sodium    | steam     | stem       | esteem    | wisdom    |
-|   D | estimate   | stamina   | stamp     | stampede   | stomach   | stump     |
-|-----+------------+-----------+-----------+------------+-----------+-----------|
-| 014 | SATYR      | Saturn    | stair     | cider      | cedar     | oyster    |
-|   E | Austria    | Easter    | Saturday  | astir      | astray    | astronaut |
-|     | austere    | history   | hysteria  | ouster     | satire    | setter    |
-|     | star       | stare     | steer     | sterling   | stir      | store     |
-|     | storm      | story     | straw     | stream     | strike    | strip     |
-|     | stroll     | struggle  | suitor    | swatter    | sweater   |           |
-|-----+------------+-----------+-----------+------------+-----------+-----------|
-| 015 | SADDLE     | still     | stool     | stall      | steel     | style     |
-|   F | cedilla    | hostile   | sadly     | settle     | stale     | steal     |
-|-----+------------+-----------+-----------+------------+-----------+-----------|
-| 016 | STAGE      | stooge    | stitch    | station    | hostage   | wastage   |
-|   G | hesitation | stodgy    |           |            |           |           |
-|-----+------------+-----------+-----------+------------+-----------+-----------|
-| 017 | STICK      | steak     | stack     | stuck      | stock     | stalk     |
-|   H | ascetic    | sciatica  | setting   | stag       | stake     | sticky    |
-|     | stigma     | stigmata  | sting     | stoic      | stoke     | stucco    |
-|-----+------------+-----------+-----------+------------+-----------+-----------|
-| 018 | STIFF      | staff     | stave     | stevedore  | stove     | stuff     |
-|   I | sea-devil  | set-off   | wasteful  |            |           |           |
-|-----+------------+-----------+-----------+------------+-----------+-----------|
-| 019 | STAB       | stub      | steeple   | stoop      | staple    | steppe    |
-|   J | eastbound  | estop     | seat-belt | southbound | steep     | step      |
-|     | stipend    | stop      | stupid    | sweetbread |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 010 | SAWDUST    | SWEETS   | seducer   | hostess    | citizen   | cities    |
+|   A | South-Sea  | assets   | assiduous | sideways   | stays     |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 011 | STATUE     | STEED    | studio    | estate     | iced-tea  | wasted    |
+|   B | astute     | hesitate | sedate    | sit-down   | state     | steady    |
+|     | stout      | stud     |           |            |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 012 | SATAN      | STEIN    | sedan     | stain      | satin     | stone     |
+|   C | Estonia    | Sweden   | astound   | hesitant   | pseudonym | sadden    |
+|     | sit-in     | sodden   | stand     | standard   | stench    | stint     |
+|     | stun       | stunt    | sudden    | sweeten    |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 013 | SEDIMENT   | STEAM    | sodium    | stem       | esteem    | wisdom    |
+|   D | abstemious | estimate | stamina   | stamp      | stampede  | stomach   |
+|     | stump      |          |           |            |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 014 | SATYR      | STAR     | Saturn    | stair      | cider     | cedar     |
+|   E | Austria    | Easter   | Saturday  | astir      | astray    | astronaut |
+|     | austere    | history  | hysteria  | ouster     | oyster    | satire    |
+|     | setter     | star     | stare     | steer      | sterling  | stir      |
+|     | store      | storm    | story     | straw      | stream    | strike    |
+|     | strip      | stroll   | struggle  | suitor     | swatter   | sweater   |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 015 | SADDLE     | STOOL    | still     | stall      | steel     | style     |
+|   F | cedilla    | hostile  | sadly     | settle     | stale     | steal     |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 016 | STAGE      | STOOGE   | stitch    | station    | hostage   | wastage   |
+|   G | hesitation | stodgy   |           |            |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 017 | STICK      | STEAK    | stack     | stuck      | stock     | stalk     |
+|   H | ascetic    | sciatica | setting   | stag       | stake     | sticky    |
+|     | stigma     | stigmata | sting     | stoic      | stoke     | stucco    |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 018 | STIFF      | STOVE    | staff     | stave      | stevedore | stuff     |
+|   I | sea-devil  | set-off  | wasteful  |            |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 019 | STAB       | STEEPLE  | stub      | stoop      | staple    | steppe    |
+|   J | eastbound  | estop    | seat-belt | southbound | steep     | step      |
+|     | stipend    | stop     | stupid    | sweetbread |           |           |
 :end:
 
 \clearpage
@@ -2538,39 +2559,39 @@ This list is automatically constructed from a file named
 
 #+RESULTS:
 :results:
-|-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 020 | SENSE       | sneeze    | sinus      | seance      | sunset    | census    |
-|   K | easiness    | essence   | iciness    | science     | since     | sincere   |
-|     | sinister    | sinus     | snooze     |             |           |           |
-|-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 021 | SNOT        | saint     | sand       | cent        | senate    | synod     |
-|   L | Sunday      | ascent    | assent     | sandal      | sanity    | scent     |
-|     | sent        | sentiment | snit       | snoot       | snout     | sonata    |
-|     | sonnet      | sound     | sundae     | swindle     | zenith    |           |
-|-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 022 | SIGN-ON     | assonance | sea-onion  | snow-knife  | synonym   | asinine   |
-|   M |             |           |            |             |           |           |
-|-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 023 | CINNAMON    | snowman   | cinema     | sea-anemone | cyanamide | so-numb   |
-|   N | wisenheimer |           |            |             |           |           |
-|-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 024 | SINNER      | sonar     | senior     | snore       | scenery   | sunrise   |
-|   O | snare       | sneer     | snort      | snarl       | sonorous  |           |
-|-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 025 | SEE         | snell     | snail      | sunlamp     | sunlight  |           |
-|   P |             |           |            |             |           |           |
-|-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 026 | SIGNAGE     | cinch     | singe      | snatch      | sensual   | snitch    |
-|   Q | ascension   | censure   | century    | snow-job    | snowshoe  | sunshine  |
-|-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 027 | SINK        | snack     | snake      | snick       | cynic     | zinc      |
-|   R | isinglass   | scenic    | sea-anchor | sneak       | snug      | synagogue |
-|-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 028 | SNUFF       | sniff     | snafu      | sinful      | sniffle   | saw-knife |
-|   S | snowflake   |           |            |             |           |           |
-|-----+-------------+-----------+------------+-------------+-----------+-----------|
-| 029 | SNAP        | snob      | snip       | snipe       | snoop     | snub      |
-|   T | sign-up     | snowball  | synopsis   | sunup       |           |           |
+|-----+-------------+------------+------------+-----------+-------------+-----------|
+| 020 | SENSE       | SUNS       | sneeze     | sinus     | seance      | sunset    |
+|   K | census      | easiness   | essence    | iciness   | science     | since     |
+|     | sincere     | sinister   | sinus      | snooze    |             |           |
+|-----+-------------+------------+------------+-----------+-------------+-----------|
+| 021 | SAINT       | SAND       | cent       | senate    | synod       | snot      |
+|   L | Sunday      | ascent     | assent     | sandal    | sanity      | scent     |
+|     | sent        | sentiment  | snit       | snoot     | snout       | sonata    |
+|     | sonnet      | sound      | sundae     | swindle   | zenith      |           |
+|-----+-------------+------------+------------+-----------+-------------+-----------|
+| 022 | SIGN-ON     | SAN JUAN   | assonance  | sea-onion | snow-knife  | synonym   |
+|   M | asinine     |            |            |           |             |           |
+|-----+-------------+------------+------------+-----------+-------------+-----------|
+| 023 | CINNAMON    | SNOWMOBILE | snowman    | cinema    | sea-anemone | cyanamide |
+|   N | wisenheimer |            |            |           |             |           |
+|-----+-------------+------------+------------+-----------+-------------+-----------|
+| 024 | SINNER      | SONAR      | senior     | snore     | scenery     | sunrise   |
+|   O | snare       | sneer      | snort      | snarl     | sonorous    |           |
+|-----+-------------+------------+------------+-----------+-------------+-----------|
+| 025 | SEE         | SUNLAMP    | snell      | snail     | sunlight    |           |
+|   P |             |            |            |           |             |           |
+|-----+-------------+------------+------------+-----------+-------------+-----------|
+| 026 | SIGNAGE     | cinch      | singe      | snatch    | sensual     | snitch    |
+|   Q | ascension   | censure    | century    | snow-job  | snowshoe    | sunshine  |
+|-----+-------------+------------+------------+-----------+-------------+-----------|
+| 027 | SINK        | snack      | snake      | snick     | cynic       | zinc      |
+|   R | isinglass   | scenic     | sea-anchor | sneak     | snug        | synagogue |
+|-----+-------------+------------+------------+-----------+-------------+-----------|
+| 028 | SNUFF       | sniff      | snafu      | sinful    | sniffle     | saw-knife |
+|   S | snowflake   |            |            |           |             |           |
+|-----+-------------+------------+------------+-----------+-------------+-----------|
+| 029 | SNAP        | snob       | snip       | snipe     | snoop       | snub      |
+|   T | sign-up     | snowball   | synopsis   | sunup     |             |           |
 :end:
 
 \clearpage

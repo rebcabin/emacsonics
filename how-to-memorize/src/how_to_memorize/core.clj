@@ -31,8 +31,8 @@
 
 (def bfnd ['(100000
              "SAUCE"
+             "OASIS"
              "icehouse"
-             "oasis"
              "sissy"
              "sass"
              "seesaw"
@@ -49,7 +49,7 @@
 
            '(100001
              "SOT"
-             "sod"
+             "SOD"
              "Swede"
              "acid"
              "aside"
@@ -85,7 +85,7 @@
 
            '(100002
              "SUN"
-             "swan"
+             "SWAN"
              "swine"
              "ozone"
              "sinew"
@@ -105,11 +105,11 @@
 
            '(100003
              "SEAM"
-             "sum"
+             "SWAMI"
              "semi"
-             "swami"
              "psalm"
              "asthma"
+             "sum"
 
              "assume"
              "same"
@@ -121,7 +121,7 @@
 
            '(100004
              "SOAR"
-             "sewer"
+             "SEWER"
              "seer"
              "soiree"
              "sir"
@@ -140,8 +140,8 @@
 
            '(100005
              "SAIL"
+             "SEAL"
              "swallow"
-             "seal"
              "slaw"
              "sleigh"
              "weasel"
@@ -168,8 +168,8 @@
 
            '(100006
              "SASH"
-             "sausage"
-             "swatch"
+             "SWATCH"
+             "switch"
              "sage"
              "ice-show"
              "siege"
@@ -180,19 +180,17 @@
              "sedge"
              "sewage"
              "such"
-             "switch"
              "usage"
              )
 
            '(100007
              "SOCK"
-             "sack"
+             "SACK"
              "ski"
              "sky"
              "scow"
              "sake"
 
-             "sea-cow"
              "ask"
              "assegai"
              "hoosegow"
@@ -200,6 +198,7 @@
              "husky"
              "icing"
              "sago"
+             "sea-cow"
              "seek"
              "sick"
              "soak"
@@ -212,13 +211,13 @@
 
            '(100008
              "SAFE"
-             "Sufi"
+             "SUFI"
              "sofa"
              "sieve"
              "housewife"
              "savoy"
 
-             "ossify"
+             "ossified"
              "save"
              "savvy"
              "suave"
@@ -226,7 +225,7 @@
 
            '(100009
              "SOAP"
-             "spy"
+             "SPY"
              "wasp"
              "wisp"
              "asp"
@@ -249,12 +248,13 @@
 
            '((100010 "A")
              "SAWDUST"
-             "seduce"
+             "SWEETS"
+             "seducer"
              "hostess"
              "citizen"
              "cities"
-             "South-Sea"
 
+             "South-Sea"
              "assets"
              "assiduous"
              "sideways"
@@ -263,8 +263,8 @@
 
            '((100011 "B")
              "STATUE"
+             "STEED"
              "studio"
-             "steed"
              "estate"
              "iced-tea"
              "wasted"
@@ -276,14 +276,15 @@
              "state"
              "steady"
              "stout"
+             "stud"
              )
 
            '((100012 "C")
              "SATAN"
+             "STEIN"
+             "sedan"
              "stain"
              "satin"
-             "sedan"
-             "stein"
              "stone"
 
              "Estonia"
@@ -306,12 +307,13 @@
 
            '((100013 "D")
              "SEDIMENT"
+             "STEAM"
              "sodium"
-             "steam"
              "stem"
              "esteem"
              "wisdom"
 
+             "abstemious"
              "estimate"
              "stamina"
              "stamp"
@@ -322,11 +324,11 @@
 
            '((100014 "E")
              "SATYR"
+             "STAR"
              "Saturn"
              "stair"
              "cider"
              "cedar"
-             "oyster"
 
              "Austria"
              "Easter"
@@ -338,6 +340,7 @@
              "history"
              "hysteria"
              "ouster"
+             "oyster"
              "satire"
              "setter"
              "star"
@@ -361,8 +364,8 @@
 
            '((100015 "F")
              "SADDLE"
+             "STOOL"
              "still"
-             "stool"
              "stall"
              "steel"
              "style"
@@ -377,7 +380,7 @@
 
            '((100016 "G")
              "STAGE"
-             "stooge"
+             "STOOGE"
              "stitch"
              "station"
              "hostage"
@@ -389,7 +392,7 @@
 
            '((100017 "H")
              "STICK"
-             "steak"
+             "STEAK"
              "stack"
              "stuck"
              "stock"
@@ -411,12 +414,12 @@
 
            '((100018 "I")
              "STIFF"
+             "STOVE"
              "staff"
              "stave"
              "stevedore"
-             "stove"
-             "stuff"
 
+             "stuff"
              "sea-devil"
              "set-off"
              "wasteful"
@@ -424,8 +427,8 @@
 
            '((100019 "J")
              "STAB"
+             "STEEPLE"
              "stub"
-             "steeple"
              "stoop"
              "staple"
              "steppe"
@@ -444,12 +447,13 @@
 
            '((100020 "K")
              "SENSE"
+             "SUNS"
              "sneeze"
              "sinus"
              "seance"
              "sunset"
-             "census"
 
+             "census"
              "easiness"
              "essence"
              "iciness"
@@ -462,12 +466,12 @@
              )
 
            '((100021 "L")
-             "SNOT"
-             "saint"
-             "sand"
+             "SAINT"
+             "SAND"
              "cent"
              "senate"
              "synod"
+             "snot"
 
              "Sunday"
              "ascent"
@@ -490,27 +494,29 @@
 
            '((100022 "M")
              "SIGN-ON"
+             "SAN JUAN"
              "assonance"
              "sea-onion"
              "snow-knife"
              "synonym"
+
              "asinine"
              )
 
            '((100023 "N")
              "CINNAMON"
+             "SNOWMOBILE"
              "snowman"
              "cinema"
              "sea-anemone"
              "cyanamide"
-             "so-numb"
 
              "wisenheimer"
              )
 
            '((100024 "O")
              "SINNER"
-             "sonar"
+             "SONAR"
              "senior"
              "snore"
              "scenery"
@@ -525,9 +531,9 @@
 
            '((100025 "P")
              "SENILE"
+             "SUNLAMP"
              "snell"
              "snail"
-             "sunlamp"
              "sunlight"
              ""
              )
