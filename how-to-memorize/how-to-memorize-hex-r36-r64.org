@@ -135,7 +135,7 @@
 
 #+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 14
 #+AUTHOR: Brian Beckman with John D. Cook, Ondrej Certik
-#+DATE: 9 July 2023
+#+DATE: 15 July 2023
 
 #+BEGIN_SRC elisp :exports none
   (setq org-babel-python-command "python3")
@@ -274,19 +274,18 @@ https://forum.artofmemory.com/t/the-mnemonic-major-system-and-gregg-shorthand-ha
 https://en.wikipedia.org/wiki/Mnemonic_major_system] which makes
 /direct/ and permanent associations.
 
-[Brian] My Dad taught me the peg system when I was a child. I
-later found sources to back it up, specifically Krill[fn::
+The primary sources for the peg system are Krill[fn::
 https://folk.ntnu.no/krill/pseudonumerology.htm] and Furst.[fn::
 https://a.co/d/fv1uRmv/]
 
 These methods are based on tables of
 
 - pegs :: permanent, immutable mental images in one-to-one
-  correspondence with numbers. For instance, the number 68, for
-  me, is a chef. Whenever I see a chef or think of one, I smell
-  the kitchen and hear the sounds of boiling and sizzling
-  phantasmagorically, and I instantly think of the number 68.
-  That's 1-to-1 correspondence.
+  correspondence with numbers. For instance, I pegged the number
+  68 to /chef/. Whenever I see a chef or think of one, I smell the
+  kitchen and hear the sounds of boiling and sizzling
+  phantasmagorically, and instantly think of the number 68. That's
+  1-to-1 correspondence.
 
 - sound-alikes :: fluid, mutable list of mental-images that are
   similar in their consonant sounds to the pegs and in many-to-one

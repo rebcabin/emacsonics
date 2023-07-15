@@ -391,25 +391,27 @@
              )
 
            '((100017 "H")
-             "STICK"
-             "STEAK"
-             "stack"
-             "stuck"
+             "SIDECAR"
+             "SIDEKICK"
+             "stake"
+             "stick"
+             "stucco"
              "stock"
-             "stalk"
 
              "ascetic"
              "sciatica"
              "setting"
+             "stack"
              "stag"
-             "stake"
+             "stalk"
+             "steak"
              "sticky"
              "stigma"
              "stigmata"
              "sting"
              "stoic"
              "stoke"
-             "stucco"
+             "stuck"
              )
 
            '((100018 "I")
@@ -540,64 +542,65 @@
 
            '((100026 "Q")
              "SIGNAGE"
+             "SNOWSHOE"
              "cinch"
              "singe"
              "snatch"
-             "sensual"
-             "snitch"
+             "censure"
 
              "ascension"
-             "censure"
              "century"
+             "sensual"
+             "snitch"
              "snow-job"
-             "snowshoe"
              "sunshine"
              )
 
            '((100027 "R")
              "SINK"
+             "SYNAGOGUE"
              "snack"
              "snake"
              "snick"
-             "cynic"
              "zinc"
 
+             "cynic"
              "isinglass"
              "scenic"
              "sea-anchor"
              "sneak"
              "snug"
-             "synagogue"
              )
 
            '((100028 "S")
              "SNUFF"
+             "SNOWFLAKE"
              "sniff"
              "snafu"
-             "sinful"
              "sniffle"
              "saw-knife"
 
-             "snowflake"
+             "Seinfeld"
+             "sinful"
              )
 
            '((100029 "T")
              "SNAP"
+             "snowball"
              "snob"
              "snip"
              "snipe"
              "snoop"
-             "snub"
 
              "sign-up"
-             "snowball"
-             "synopsis"
+             "snub"
              "sunup"
+             "synopsis"
              )
 
            '((100030 "U")
              "SAMSON"
-             "Siamese"
+             "SIAMESE"
              "seamstress"
              "semester"
              "semisweet"
@@ -609,11 +612,11 @@
              )
 
            '((100031 "V")
-             "SEMITE"
+             "CEMETERY"
+             "SMITH"
+             "Semite"
              "housemaid"
-             "cemetery"
              "smut"
-             "smith"
              "summit"
 
              "assumed"
@@ -626,30 +629,34 @@
 
            '((100032 "W")
              "SALMON"
-             "semen"
+             "CEMENT"
              "seaman"
+             "semen"
              "seminary"
-             "cement"
              "yes-man"
 
+             "Seminole"
              "awesomeness"
              "iceman"
              "sameness"
              "semantics"
              "somnolent"
              "summon"
-             "wisewoman"
+             "wise-man"
+             "wise-woman"
              )
 
            '((100033 "X")
-             "SEMIMONTHLY"
+             "OSMIUM"
+             "SEMI-MONTHLY"
+             "semi-mundane"
              "same make"
              "same model"
              "same month"
+
+             "Summum Bonum"
              "same man"
              "same mood"
-
-             "osmium"
              "semi-material"
              "semi-member"
              "semi-metal"
@@ -661,9 +668,9 @@
 
            '((100034 "Y")
              "SAMURAI"
+             "SWIMMER"
              "summer"
              "simmer"
-             "swimmer"
              "smear"
              "summary"
 
@@ -673,28 +680,30 @@
 
            '((100035 "Z")
              "SAWMILL"
-             "smile"
+             "SMILE"
+             "semolina"
              "smell"
              "small"
              "simile"
-             "sea-mile"
 
-             ;; "assimilate"
+             "sea-mile"
+             "sea-mule"
              "seamless"
              "seemly"
              "similar"
+             ;; "assimilate"
              )
 
            '((100036 "a")
              "SMASH"
+             "SMOOCH"
              "smudge"
-             "smooch"
              "smidgen"
              "so-much")
 
            '((100037 "b")
              "SMACK"
-             "smoke"
+             "SMOKE"
              "sumac"
              "smuggler"
              "seeming"
@@ -702,15 +711,15 @@
 
            '((100038 "c")
              "SEMAPHORE"
-             "samovar"
+             "SAMOVAR"
              "symphony"
              "semifinal"
              "semiformal")
 
            '((100039 "d")
+             "CYMBAL"
              "SAMBA"
              "somber"
-             "cymbal"
              "symbol"
              "zombie"
              "swamp"
@@ -724,19 +733,20 @@
 
            '((100040 "e")
              "SERIES"
-             "sea-horse"
-             "serious"
+             "SEA-HORSE"
              "sewers"
              "source"
-             "Circe")
+             "Circe"
+             "serious"
+             )
 
            '((100041 "f")
              "SARDINE"
+             "WIZARD"
              "sardonic"
              "sard"
              "sort"
              "hazard"
-             "wizard"
 
              "assert"
              "assort"
@@ -749,33 +759,35 @@
 
            '((100042 "g")
              "SARIN"
-             "siren"
+             "SIREN"
              "serene"
              "Syrian"
              "serenade"
              "surname"
 
+             "Sauron"
              "surrender"
              "sworn"
              )
 
            '((100043 "h")
              "SWARM"
-             "sermon"
+             "SERMON"
              "serum"
              "ceremony"
              "ceramic")
 
            '((100044 "i")
-             "SEARER"
+             "SORORITY"
+             "SRIRACHA"
              "zero-hour"
-             "sorority"
              "sour-herring"
+             "searer"
              "swearer")
 
            '((100045 "j")
              "ISRAEL"
-             "cereal"
+             "CEREAL"
              "serial"
              "sirloin"
              "seraglio"
@@ -783,20 +795,20 @@
 
            '((100046 "k")
              "SARGE"
+             "SURGEON"
              "search"
              "serge"
              "surge"
-             "surgeon"
-             "sergeant"
 
              "sea-urchin"
+             "sergeant"
              "surcharge"
              )
 
            '((100047 "l")
-             "circuit"
+             "CIRCUIT"
+             "SAUERKRAUT"
              "sarcasm"
-             "sauerkraut"
              "sour-cream"
              "circus"
              "sirocco"
@@ -805,11 +817,12 @@
              "circumstance"
              "sarong"
              "zircon"
+             "zirconium"
              )
 
            '((100048 "m")
              "SURF"
-             "serf"
+             "SERF"
              "surface"
              "service"
              "serve"
@@ -823,48 +836,48 @@
              )
 
            '((100049 "n")
-             "SERPENT"
-             "syrup"
+             "CERBERUS"
+             "SYRUP"
              "surplice"
              "surplus"
-             "Cerberus"
              "surprise"
+             "usurper"
 
+             "Serb"
              "sauerbraten"
+             "serpent"
              "sourpuss"
              "surpass"
-             "usurper"
              )
 
            '((100050 "o")
              "SOLSTICE"
-             "sales"
+             "SALSA"
              "slice"
-             "sluice"
-             "solace"
              "solicitor"
+             "sluice"
 
-             "sal-soda"
-             "solus"
-             "solos"
+             "sales"
+             "solace"
              "useless"
              )
 
            '((100051 "p")
-             "SALAD"
-             "salt"
-             "salute"
+             "SLOT MACHINE"
+             "OCELOT"
              "slate"
-             "sled"
-             "sleet"
+             "salt"
+             "salad"
 
              "assault"
              "household"
              "isolate"
-             "ocelot"
              "oscillate"
+             "salute"
              "silhouette"
              "slaughter"
+             "sled"
+             "sleet"
              "slide"
              "slight"
              "slit"
@@ -877,18 +890,19 @@
 
            '((100052 "q")
              "SEA-LION"
+             "CYLINDER"
              "saloon"
-             "sea-lane"
+             "salon"
              "sealant"
-             "saline"
-             "slain"
+             "slender"
 
              "aslant"
-             "cylinder"
+             "saline"
+             "sea-lane"
              "silent"
+             "slain"
              "slander"
              "slant"
-             "slender"
              "sullen"
              "swollen"
              "zillion"
@@ -896,76 +910,82 @@
 
            '((100053 "r")
              "SALAMANDER"
+             "SLIME"
+             "cell-mate"
+             "asylum"
+             "soul-mate"
+             "Islam"
+
              "slam"
              "slim"
-             "slime"
              "slow-motion"
              "slumber"
-
-             "Islam"
-             "asylum"
-             "cell-mate"
              "solemn"
-             "soul-mate"
              )
 
            '((100054 "s")
-             "SAILOR"
-             "salary"
-             "seller"
-             "sealer"
-             "slayer"
-             "solar"
+             "CELLAR"
+             "SOLAR PANEL"
+             "celery"
+             "soiler"
+             "sailor"
 
              "celerity"
-             "celery"
-             "cellar"
+             "salary"
+             "sealer"
+             "seller"
+             "slayer"
              "whistler"
              )
 
            '((100055 "t")
+             "CELLULAR"
              "CELLULOID"
+             "soliloquy"
              "sea-lily"
              "slowly"
              "slyly"
-             "soliloquy"
-             "cellular"
              )
 
            '((100056 "u")
              "SOLUTION"
+             "SLEDGEHAMMER"
              "slouch"
              "sludge"
-             "slash"
              "slush"
-             "zoology"
+             "slash"
 
              "isolation"
+             "zoology"
              )
 
            '((100057 "v")
              "SILK"
-             "slake"
-             "slang"
-             "sling"
-             "sleek"
-             "sea-legs"
-
-             "ceiling"
-             "select"
              "silica"
+             "ceiling"
              "slack"
+             "sling"
+             "slang"
+
+
+             "sea-legs"
+             "select"
+             "slake"
+             "sleek"
              "sulky"
              )
 
            '((100058 "w")
-             "SALVE"
-             "salvo"
+             "SULFUR"
+             "XYLOPHONE"
              "saliva"
              "salvage"
              "salvation"
              "slave"
 
+             "salve"
+             "salver"
+             "salvo"
              "self"
              "silver"
              "sleeve"
@@ -973,21 +993,20 @@
              "solve"
              "soulfood"
              "soulful"
-             "sulfur"
              "sylph"
              )
 
            '((100059 "x")
+             "SLOOP"
              "SLIPPER"
+             "sailboat"
              "slab"
              "slap"
              "sleep"
-             "slip"
-             "sailboat"
 
              "celebrate"
              "celibacy"
-             "sloop"
+             "slip"
              "slop"
              "slope"
              "slowpoke"
@@ -995,10 +1014,10 @@
 
            '((100060 "y")
              "SAGES"
-             "sea-chest"
+             "SWATCHES"
              "sieges"
              "switches"
-             "sash-saw"
+             "sea-chest"
              "sashes"
 
              "suggest"
@@ -1006,165 +1025,151 @@
 
            '((100061 "z")
              "SAGITTARIUS"
+             "sagittal"
              "siege-tower"
              "sash-weight"
              "switch-hitter"
              "associate"
-             "sachette"
 
              "satiate"
-             "sagittal"
              "satched"
              )
 
            '((100062 "+")
              "SWITCH-KNIFE"
-             "session"
-             "sash-window"
-             "sedge-hen"
+             "SZECHUAN"
              "sea-change"
-             "scission"
-
-             "sashoon"
-             "seashine"
-             "suasion"
-             "cession"
+             "session"
              )
 
            '((100063 "' /")
              "SASHIMI"
-             "satchem"
-             "switchman"
-             "sea-chime"
+             "SWITCHMAN"
              "sea-chum"
              )
 
            '(100064
              "SUTURE"
-             "seashore"
-             "saw-shark"
-             "saw-sharpener"
+             "SOJOURN"
+             "swisher"
              "seizure"
-             "sojourn"
-
+             "seashore"
+             "saw-sharpener"
              "switcheroo"
              )
 
            '(100065
+             "SEASHELL"
              "SATCHEL"
-             "seashell"
              "social"
-             "sash-line"
-             "sage-oil"
-             "switch-line"
              )
 
-           '(100066 "ASSOCIATION"
-                    "sage-age"
-                    "cheese-aged"
-                    "switch-shift"
-                    "wise-judge"
-                    )
+           '(100066
+             "ASSOCIATION"
+             "SUSHI CHAI"
+             "sash-chain"
+             "sage-judge"
+             "switch-shift"
+             "wise-judge"
+             )
 
            '(100067
              "SAGE-GRASS"
-             "siege-coin"
+             "SWITCHGEAR"
              "sash-cord"
-             "switchgear"
+             "siege-coin"
              "switch-cane"
              )
 
            '(100068
+             "SOUS CHEF"
              "SWITCHOVER"
-             "sedge-fly"
-             "switch-ivy"
+             "swish fop"
+             "sash fob"
+             "switch-vein"
              )
 
            '(100069
              "SWASHBUCKLER"
-             "sagebrush"
-             "sedge-bird"
+             "SAGEBRUSH"
              "s-shaped"
              "sash-pocket"
              "switchblade"
-
              "switch-box"
              )
 
            '(100070
              "SEX"
+             "SOCKS"
              "saxophone"
+             "Saxon"
              "seacoast"
              "success"
-             "Saxon"
-             "squeeze"
 
-             "sea-goose"
              "six"
+             "squeeze"
              )
 
            '(100071
              "SCOT"
-             "skate"
-             "scat"
-             "sect"
-             "skeet"
+             "SKEET"
              "squid"
-
+             "socket"
              "ascot"
+             "squatter"
+
+             "scat"
              "scatter"
              "scout"
              "scuttle"
              "sea-god"
+             "sect"
+             "skate"
              "skid"
              "skit"
-             "socket"
-             "squatter"
              "waistcoat"
              )
 
            '(100072
-             "SCAN"
+             "ZUCCHINI"
+             "scoundrel"
              "scanty"
-             "schooner"
+             "skin"
              "sequin"
              "signal"
-             "skin"
+
 
              "askance"
+             "scan"
              "scandal"
-             "scoundrel"
-             "sea-gown"
+             "schooner"
              "second"
              "sicken"
              "sickness"
-             "zucchini"
              )
 
            '(100073
-             "SCHEME"
-             "sycamore"
-             "Eskimo"
+             "ESKIMO"
+             "SYCAMORE"
+             "scheme"
              "scum"
-             "sagamore"
              "skim"
-
              "scumbag"
              )
 
            '(100074
              "CIGAR"
-             "scar"
+             "SKIRT"
+             "Oscar"
+             "scorpion"
              "screw"
-             "skirt"
-             "square"
              "squire"
 
-             "Oscar"
              "escarole"
              "escort"
              "escrow"
              "ice-cream"
+             "scar"
              "scarce"
              "scare"
              "scarlet"
@@ -1177,18 +1182,20 @@
              "secretary"
              "secure"
              "singer"
+             "square"
              "squirt"
              "whisker"
              )
 
            '(100075
              "SKULL"
-             "scale"
+             "SCALE"
              "scallop"
              "school"
              "scallion"
              "scull"
 
+             "Skoal"
              "cycle"
              "icicle"
              "ossicle"
@@ -1208,34 +1215,36 @@
 
            '(100076
              "SKETCH"
+             "SCOTCH TAPE"
              "squash"
              "sagacious"
-             "Scotch"
              "escutcheon"
              )
 
            '(100077
+             "PSYCHIC"
              "SUKIYAKI"
-             "seeking"
-             "sea-king"
-             "seaquake"
-             "squeak"
-             "squawk"
 
              "asking"
              "easygoing"
+             "seaquake"
+             "seeking"
              "skeg"
+             "squawk"
+             "squeak"
              )
 
            '(100078
-             "SKIFF"
+             "SCAFFOLD"
+             "ICE COFFEE"
+             "scofflaw"
              "scuffle"
              "scuff"
-             "scaffold"
-             "scofflaw"
              "scavenger"
 
+
              "scoff"
+             "skiff"
              )
 
            '(100079
