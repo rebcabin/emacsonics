@@ -133,9 +133,9 @@
 # #+STARTUP: latexpreview inlineimages showall
 # #+STARTUP: showall
 
-#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 14
+#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 15
 #+AUTHOR: Brian Beckman with John D. Cook, Ondrej Certik
-#+DATE: 15 July 2023
+#+DATE: 30 Nov 2024
 
 #+BEGIN_SRC elisp :exports none
   (setq org-babel-python-command "python3")
@@ -163,32 +163,33 @@
 #+END_SRC
 
 #+RESULTS:
-: Emacs version: GNU Emacs 28.2 (build 1, aarch64-apple-darwin21.1.0, NS appkit-2113.00 Version 12.0.1 (Build 21A559))
-:  of 2022-09-12
-: org version: 9.5.5
+: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
+:  of 2023-07-29
+: org version: 9.6.6
 \clearpage
 * Change log
 
-- Revision 14
+- Revision 15
 
-  - New pegs to 1000
+  - Add caching to the org-babel code.
+  - new pegs to 1000
 
 - Revision 12
 
-  - Reworking the 3-digit pegs; adding new technique.
+  - Rework the 3-digit pegs; adding new technique.
 
 - Revision 11
 
-  - Added section on people's names. This is a new application of the
+  - Add section on people's names, a new application of the
     technique, never before published to our knowledge.
 
 - Revision 10
 
-  - All Pegs now use babomorph for everything.
+  - All Pegs now use babomorph for typesetting.
 
 - Revision 7
 
-  - Non-Alphabetic ASCII
+  - non-Alphabetic ASCII
 
 - Revision 6
 
@@ -196,11 +197,11 @@
 
 - Revision 5
 
-  - include Tarot images
+  - Include Tarot images.
 
 - Revision 4
 
-  - Include remarks about passwords and mental hash functions from JDC
+  - Include remarks about passwords and mental hash functions from JDC.
 
 - Revision 3
 
@@ -209,6 +210,50 @@
 
   - Begin promoting the first row in each table to "preferred sound
     alikes."
+
+\clearpage
+* Prologue
+
+Brian is the curator and primary author of this document. He wrote
+the first version before enlisting John and Ondrej to contribute.
+Any use of the first person "I," "we," and so on, in the document
+is historical and refers to Brian.
+
+The =.org= source is an org-babel program that produces a PDF
+document. It contains blocks of Clojure code. The code extracts
+strings from the file
+
+=src/how-to-memorize/core.clj=.
+
+If you want to change the peg words, the ordering of the words,
+the capitalization of the words, the formatting of the tables in
+the PDF document, or anything else about this code, modify that
+=core.clj= file. The results of running all the Clojure code is
+cached in the =.org= file, so if you change the Clojure code, you
+must manually run the affected blocks in the =.org= file by
+removing the =results= blocks and keyboarding =Ctrl-C Ctrl-C= with
+your cursor somewhere inside the block.
+
+To produce the PDF, you need a full \LaTeX installation, Emacs
+29.1 or later, Clojure 1.10.3 or better (see =project.clj=), and
+CIDER installed. There may be other ways to build the PDF, but
+that's what I use. Manually =cider-jack in= to a CIDER session to
+warm up the Clojure environment. Run
+
+=org-latex-export-to-pdf=
+
+while visiting the =.org= file in an Emacs buffer to produce a
+=.tex= file and possibly a =.pdf= file. Something went wrong in my
+=tex= integration, so I must run
+
+=pdflatex -shell-escape=
+
+manually in a side terminal after running
+
+=org-latex-export-to-pdf=
+
+but that's not a big roadblock. Your installation's of \LaTeX and
+Emacs may go more smoothly.
 
 \clearpage
 * Introduction
@@ -232,7 +277,6 @@ Here is a word that might be unfamiliar:
      Bach's "Toccata and Fugue in D Minor"
 
   5. anything else that's vivid and easy to recall without effort
-  $\blacksquare$
 \end{definition}
 
 The premise of everything in this document is
@@ -337,7 +381,7 @@ The pegs for the decimal digits, with some mnemonic hints, are
 |-------+------+--------------------------------------------+-----------------------|
 |     6 | jaw  | "6" looks like Lurch's lantern jaw         | sh, ch, zh (pleasure) |
 |-------+------+--------------------------------------------+-----------------------|
-|     7 | key  | "7" looks like an Allen key                | g, ng (Furst only)  |
+|     7 | key  | "7" looks like an Allen key                | g, ng (Furst only)    |
 |       |      | (7 = ng for Furst and me, nk is always 27) |                       |
 |-------+------+--------------------------------------------+-----------------------|
 |     8 | fee  | "8" looks like a dollar sign               | f, v                  |
@@ -350,20 +394,20 @@ force if necessary. The rest of the system relies on it. If you
 don't like these specific pegs, pick some others out of the rows
 for 0 through 9 in Section [[all-pegs]]. Pick your own peg for each
 digit, make your own table, memorize it, and stick with it
-forever. NEVER, EVER CHANGE ANYTHING IN IT. I did that once more
-than 50 years ago, and I continue to regret it. This table must
-become an internal, effortless vocabulary like your native
+forever. NEVER, EVER CHANGE ANYTHING IN IT. Brian did that once
+more than 50 years ago, and continues to regret it. This table
+must become an internal, effortless vocabulary like your native
 language.
 
 Make up pegs and sound-alikes for longer numbers by combining
 consonant sounds. For example, here is the peg and sound-alikes
 for 32:
 
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 132 133)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[c73f78f3ec40ebbcdf9733e33285918be30c387f]:
 :results:
 |----+-------+---------+--------+-------+------+--------|
 | 32 | MAN   | MOON    | mane   | hymen | mine | minnow |
@@ -374,9 +418,11 @@ for 32:
 
 */Notes on such tables/*:
 
-- the peg is in all-caps and in first position
+- the peg is in all-caps and in first position; other terms in
+  all-caps are recommended alternative pegs
 
-- the first line contains six preferred sound-alikes in preference order
+- the first line contains six preferred sound-alikes in preference
+  order
 
 - the remaining sound-alikes appear in alphabetical order
 
@@ -402,11 +448,11 @@ number $abc$ is formed from 3 consonant sound alikes, $x$ for $a$,
 $y$ for $b$, and $z$ for $c$. For instance, here is the list for
 352:
 
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 452 453)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[feb7343cbe9fa0c01dd859afe2e0cddc49afdd38]:
 :results:
 |-----+--------+------------+------------+----------+----------+----------|
 | 352 | MELON  | Himalayans | hemline    | semolina | milliner | homeland |
@@ -423,21 +469,23 @@ the total is exactly three sounds. "Semolina" does not encode 0352
 because that would be four sounds. Instead, the three digits 035
 have the following codes:
 
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 35 36)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[f3260c3f510a9a32f1326e2a573192e146af518d]:
 :results:
-|-----+----------+--------+---------+-------+--------+----------|
-| 035 | SAWMILL  | smile  | smell   | small | simile | sea-mile |
-|   Z | seamless | seemly | similar |       |        |          |
+|-----+----------+----------+----------+--------+---------+--------|
+| 035 | SAWMILL  | SMILE    | semolina | smell  | small   | simile |
+|   Z | sea-mile | sea-mule | seamless | seemly | similar |        |
 :end:
 
 *** TODO Exceptions
 
-/Seamless/ and /similar/ are apparent exceptions to the rule,
-inherited in this list from Furst. Fix this.
+/Seamless/ and /similar/ are apparent exceptions to the rule
+because they do not comprise exactly three sounds, else they would
+be, for instance, /malice/ and /mailer/, respectively. These two
+examples are inherited from Furst. Fix this.
 
 *** Extra Trailing Consonant Sounds
 
@@ -449,13 +497,13 @@ Vowels and the weak sounds  /h/, /w/, /wh/, /y/ and so on, do
 not count. Thus, "Himalayans" is 352 because the first strong
 consonant is /m/ for 3.
 
-** TODO New 3-Digit System
+** TODO /Composite Pegs/: New 3-Digit System
 
 In the old system, the sounds $xyz$ for $abc$ can be
 $hxyzh\ldots$, where $h$ stands for any weak sound or, in the
-leading position, S or Z sound. In the more permissive, new system
-(under development), 3-digit codes are $xyh\ldots{}zh\ldots{}$. For
-example:
+leading position, S or Z sound, and $\ldots$ stands for anything
+at all. In the more permissive, new system (under development),
+3-digit codes are $xyh\ldots{}zh\ldots{}$. For example:
 
 | 740 | Creamy Strawberry Pie     |
 | 741 | Creamy Treacle            |
@@ -482,17 +530,18 @@ and
 | 849 | Fresh-baked Blackberry Pie     |
 
 This new system can reuse $xyh\ldots$ for the first two digits of
-a block of ten and can reuse $zh\ldots$ for all ten pegs in
-multiple blocks of ten.
+all pegs in a block of ten pegs and can reuse ten $zh\ldots$
+across those ten pegs in multiple blocks of ten. The examples
+above may clarify this general description. /Creamy/ introduces
+all ten pegs in the 740\nobreakdash-block, and /Fresh-baked/
+introduces all ten pegs in the 840\nobreakdash-block. /Creamy/ and
+/Fresh-baked/ are followed by ten sorts of pie or pie filling.
 
 ** Brian's 2-Digit-Plus List
 
-My basic 2-digit peg list appears below, extended from 99 to
+Brian's basic 2-digit peg list appears below, extended from 99 to
 127 for ASCII and with nine extra pegs for court cards (Section
-[[card-pack]]). I know this table by heart.
-# My Dad and many memory
-# experts know pegs for 3 digits by heart and "compute" sound-alikes
-# on-the-fly. This document records my journey to a 3-digit holding.
+[[card-pack]]). Brian knows this table by heart.
 
 |-----+----------+-----+--------+-----+-----------+-----+------------|
 |  00 | sauce    |  10 | toes   |  20 | nose      |  30 | mass       |
@@ -538,6 +587,14 @@ My basic 2-digit peg list appears below, extended from 99 to
 | 127 | tank     |     |        |     |           |     |            |
 |-----+----------+-----+--------+-----+-----------+-----+------------|
 
+In case you find yourself forgetting a peg, there is an easy way
+to re-derive it: go down the vowel sounds, short and long, in
+order---a, e, i, o, u---and try sandwiching each vowel between the
+bracketing consonants---/nan/, /nane/, /nen/, /nene/, /nin/,
+/nine/, /non/, /known/, /nun/. Eventually, you'll hit the
+right one. For the ambiguous consonant clusters like 6=/j/, /sh/,
+/ch/, you may have to try a few combinations of consonants as well.
+
 \clearpage
 * Credit-Card Numbers
 
@@ -552,10 +609,10 @@ https://www.getcreditcardnumbers.com
 
 From the peg list, we get
 
-| 4716 | rack tissue |
-| 5752 | lake lane   |
-| 8659 | fish lap    |
-| 3845 | muff rail   |
+| 4716 | RACK TISSUE |
+| 5752 | LAKE LANE   |
+| 8659 | FISH LAP    |
+| 3845 | MUFF RAIL   |
 
 There isn't an obvious narrative, here, but we get better
 by starting with "fish" (picturesque and smelly) and working
@@ -575,29 +632,30 @@ effort because I know the 2-digit peg table by heart.
 * Hexadecimal: GUID & SHA-1
 <<hexadecimal>>
 For mapping /hexits/ (hexadecimal digits), extend the table with
-the ASCII codes for A-F.
+the ASCII codes for A-F. We'll explain the rationale for some of
+these phantasmagorias later.
 
 |-----+---------+-------+----+--------------------------------------------|
 | hex | NATO    | ASCII |    | hallucination                              |
 |-----+---------+-------+----+--------------------------------------------|
-| A   | ALPHA   | jail  | 65 | the alpha-male lion is in jail             |
-| B   | BAKER   | judge | 66 | passing judgment on the lion               |
-| C   | CHARLIE | chalk | 67 | hopscotch on the sidewalk                  |
-| D   | DELTA   | chef  | 68 | day job of a PhD-thesis student            |
-| E   | ECHO    | chip  | 69 | a poker chip in a policeman's (LAW:5) hand |
-| F   | FOXTROT | case  | 70 | filled with a dozen pink roses             |
+| A   | ALPHA   | JAIL  | 65 | the alpha-male lion is in jail             |
+| B   | BAKER   | JUDGE | 66 | passing judgment on the lion               |
+| C   | CHARLIE | CHALK | 67 | hopscotch on the sidewalk                  |
+| D   | DELTA   | CHEF  | 68 | day job of a PhD-thesis student            |
+| E   | ECHO    | CHIP  | 69 | a poker chip in a policeman's (LAW:5) hand |
+| F   | FOXTROT | CASE  | 70 | filled with a dozen pink roses             |
 |-----+---------+-------+----+--------------------------------------------|
 
 and their sound-alikes:
 
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 165 171)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[1054dfba4c406d977855c98e8b625e4a62532386]:
 :results:
 |----+-------------+-----------+----------+----------+----------+----------|
-| 65 | JAIL        | chili     | jelly    | jewel    | shell    | shawl    |
+| 65 | JAIL        | CHILI     | jelly    | jewel    | shell    | shawl    |
 |  A | Chile       | July      | agile    | chill    | jolly    | jowl     |
 |    | shall       | shallow   | shill    | shoal    | shyly    | usual    |
 |----+-------------+-----------+----------+----------+----------+----------|
@@ -611,7 +669,7 @@ and their sound-alikes:
 |    | joke        | shack     | shag     | shake    | shako    | shock    |
 |    | shuck       | washing   | watching | wishing  |          |          |
 |----+-------------+-----------+----------+----------+----------+----------|
-| 68 | CHEF        | chief     | Chevy    | sheaf    | chaff    | chive    |
+| 68 | CHEF        | CHEVY     | chief    | sheaf    | chaff    | chive    |
 |  D | Java        | Jehovah   | achieve  | chafe    | jayvee   | jiffy    |
 |    | jive        | shave     | shove    | wash-off |          |          |
 |----+-------------+-----------+----------+----------+----------+----------|
@@ -626,6 +684,13 @@ and their sound-alikes:
 |    | guys        | hex       | hoax     | quasi    | wax      |          |
 :end:
 
+Note that with this encoding, we lose the six pegs for 65
+through 70. You can't memorize a 65 in the text by picturing
+/jail/ because /jail/ means A in hex. You'll have to employ some
+other encoding or grouping of the digits. For example, seeing a
+=265A=, you might think NICHE(26), LAW(5), JAIL(A), or ANGEL(265),
+JAIL(A).
+
 \clearpage
 ** Example GUID:
 
@@ -636,14 +701,15 @@ Consider this random GUID generated by Java:
 5D00E7AA-C15C-44A5-93FA-A4DE6750B28A
 #+end_example
 
-Start with the pegs:
+Often, in real-world application, you don't need to memorize the
+whole thing, but we'll do that for practice. Start with the pegs:
 
-| =5D00 E7AA= | law chef sauce chip key jail jail |
-| =C15C=      | chalk tail chalk                  |
-| =44A5=      | rear jail law                     |
-| =93FA=      | beam case jail                    |
-| =A4DE 675=  | jail ray chef chip chuckle        |
-| =0B28 A=    | saw judge Navy jail               |
+| =5D00 E7AA= | LAW CHEF SAUCE CHIP KEY JAIL JAIL |
+| =C15C=      | CHALK TAIL CHALK                  |
+| =44A5=      | REAR JAIL LAW                     |
+| =93FA=      | BEAM CASE JAIL                    |
+| =A4DE 675=  | JAIL RAY CHEF CHIP CHUCKLE        |
+| =0B28 A=    | SAW JUDGE NAVY JAIL               |
 
 *Note*:
 
@@ -667,14 +733,14 @@ for a naive victim.
 ** Example SHA-1 Hash
 
 From https://onlinehashtools.com, consider the following, 160-bit
-hash: For git, it practically suffices to remember the first 8
+hash: For git, it usually suffices to remember the first 8
 hexits. Let's do them all as a workout:
 
-| =A638 1B63= | jail camel tea judge chime     |
-| =D532 69BA= | chef lemon jaw pea judge jail  |
-| =418E 5FB1= | artful chip law case judge tea |
-| =BD50 3950= | judge chef wholesome pillows   |
-| =860D D679= | fishes chef chef checkup       |
+| =A638 1B63= | jail sham-fruit tea judge chime |
+| =D532 69BA= | chef lemon jaw pea judge jail   |
+| =418E 5FB1= | artful chip law case judge tea  |
+| =BD50 3950= | judge chef wholesome pillows    |
+| =860D D679= | fishes chef chef checkup        |
 
 *Notes*
 
@@ -690,22 +756,23 @@ hexits. Let's do them all as a workout:
 Let's bribe a judge and put him to sleep with hash (puns help the
 memory), then summon middle-Eastern heavenly dreams.
 
-| =A638 1B63= | with SHAWL and CAMEL, TEA for the JUDGE, JIM. |
-| =D532 69BA= | SHAVE a LEMON WEDGE, PAY the JUDGE to CHILL.  |
-| =418E 5FB1= | an ARTFUL SHAPE of this LAW CASE, SHUSH THEE! |
-| =BD50 3950= | HASHISH ACHIEVES ELYSIUM BLESSINGS            |
-| =860D D679= | FETCHES the CHIEF, JEHOVAH for JACOB!         |
+| =A638 1B63= | with SHAWL and SHAM-FRUIT, TEA for the JUDGE, JIM. |
+| =D532 69BA= | SHAVE a LEMON WEDGE, PAY the JUDGE to CHILL.       |
+| =418E 5FB1= | an ARTFUL SHAPE of this LAW CASE, SHUSH THEE!      |
+| =BD50 3950= | HASHISH ACHIEVES ELYSIUM BLESSINGS                 |
+| =860D D679= | FETCHES the CHIEF, JEHOVAH for JACOB!              |
 
 \clearpage
 * Radix 36
-<<r36>>
-Radix-36 is more difficult to find "in the wild" than is either
-hex or Radix-64. I most often see it in randomly generated file
-and directory names because some file systems are not
-case-sensitive. R36 is also found sometimes in URLs for encoding
-queries or other data. HTTP is supposed to be case-sensitive, but
-some sites don't adhere to the standard. Radix-64 is overkill in
-such circumstances and sucks up alternatives.
+<<r36>> Radix-36 is more difficult to find "in the wild" than is
+either hex or Radix-64. I most often see it in randomly generated
+file and directory names because some file systems are not
+case-sensitive and neither is R36. R36 is also found sometimes in
+URLs for encoding queries or other data, despite the fact that
+URLs, except for the domain name, are case-sensitive. Some sites,
+especially older ones, and even some browsers and query-generation
+machinery, don't adhere to the standard properly. Radix-64 is
+overkill in such circumstances and sucks up alternatives.
 
 For encoding /rixits/ in R36 (or biscuits in base-36?), I use
 ASCII pegs for the capital letters beyond hex. Find their
@@ -2450,11 +2517,11 @@ caches the results).
 | 009 | SWISS BANK      | ASS'S BEARD    |             |        |
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 0 10)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[7ecf5cbc3481e60410646e89bc93d7140a6cad17]:
 :results:
 |----+----------+---------+----------+----------+-----------+---------|
 | 00 | SAUCE    | OASIS   | icehouse | sissy    | sass      | seesaw  |
@@ -2503,11 +2570,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 10 20)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[467e25442ad914e480408d3d35c363768e576119]:
 :results:
 |-----+------------+----------+-----------+------------+-----------+-----------|
 | 010 | SAWDUST    | SWEETS   | seducer   | hostess    | citizen   | cities    |
@@ -2539,9 +2606,10 @@ caches the results).
 | 016 | STAGE      | STOOGE   | stitch    | station    | hostage   | wastage   |
 |   G | hesitation | stodgy   |           |            |           |           |
 |-----+------------+----------+-----------+------------+-----------+-----------|
-| 017 | STICK      | STEAK    | stack     | stuck      | stock     | stalk     |
-|   H | ascetic    | sciatica | setting   | stag       | stake     | sticky    |
-|     | stigma     | stigmata | sting     | stoic      | stoke     | stucco    |
+| 017 | SIDECAR    | SIDEKICK | stake     | stick      | stucco    | stock     |
+|   H | ascetic    | sciatica | setting   | stack      | stag      | stalk     |
+|     | steak      | sticky   | stigma    | stigmata   | sting     | stoic     |
+|     | stoke      | stuck    |           |            |           |           |
 |-----+------------+----------+-----------+------------+-----------+-----------|
 | 018 | STIFF      | STOVE    | staff     | stave      | stevedore | stuff     |
 |   I | sea-devil  | set-off  | wasteful  |            |           |           |
@@ -2552,338 +2620,339 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 20 30)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[aac58782ba68f4820cb4a2d98d8387e950c35f43]:
 :results:
-|-----+-------------+------------+------------+-----------+-------------+-----------|
-| 020 | SENSE       | SUNS       | sneeze     | sinus     | seance      | sunset    |
-|   K | census      | easiness   | essence    | iciness   | science     | since     |
-|     | sincere     | sinister   | sinus      | snooze    |             |           |
-|-----+-------------+------------+------------+-----------+-------------+-----------|
-| 021 | SAINT       | SAND       | cent       | senate    | synod       | snot      |
-|   L | Sunday      | ascent     | assent     | sandal    | sanity      | scent     |
-|     | sent        | sentiment  | snit       | snoot     | snout       | sonata    |
-|     | sonnet      | sound      | sundae     | swindle   | zenith      |           |
-|-----+-------------+------------+------------+-----------+-------------+-----------|
-| 022 | SIGN-ON     | SAN JUAN   | assonance  | sea-onion | snow-knife  | synonym   |
-|   M | asinine     |            |            |           |             |           |
-|-----+-------------+------------+------------+-----------+-------------+-----------|
-| 023 | CINNAMON    | SNOWMOBILE | snowman    | cinema    | sea-anemone | cyanamide |
-|   N | wisenheimer |            |            |           |             |           |
-|-----+-------------+------------+------------+-----------+-------------+-----------|
-| 024 | SINNER      | SONAR      | senior     | snore     | scenery     | sunrise   |
-|   O | snare       | sneer      | snort      | snarl     | sonorous    |           |
-|-----+-------------+------------+------------+-----------+-------------+-----------|
-| 025 | SEE         | SUNLAMP    | snell      | snail     | sunlight    |           |
-|   P |             |            |            |           |             |           |
-|-----+-------------+------------+------------+-----------+-------------+-----------|
-| 026 | SIGNAGE     | cinch      | singe      | snatch    | sensual     | snitch    |
-|   Q | ascension   | censure    | century    | snow-job  | snowshoe    | sunshine  |
-|-----+-------------+------------+------------+-----------+-------------+-----------|
-| 027 | SINK        | snack      | snake      | snick     | cynic       | zinc      |
-|   R | isinglass   | scenic     | sea-anchor | sneak     | snug        | synagogue |
-|-----+-------------+------------+------------+-----------+-------------+-----------|
-| 028 | SNUFF       | sniff      | snafu      | sinful    | sniffle     | saw-knife |
-|   S | snowflake   |            |            |           |             |           |
-|-----+-------------+------------+------------+-----------+-------------+-----------|
-| 029 | SNAP        | snob       | snip       | snipe     | snoop       | snub      |
-|   T | sign-up     | snowball   | synopsis   | sunup     |             |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 020 | SENSE       | SUNS       | sneeze    | sinus      | seance      | sunset    |
+|   K | census      | easiness   | essence   | iciness    | science     | since     |
+|     | sincere     | sinister   | sinus     | snooze     |             |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 021 | SAINT       | SAND       | cent      | senate     | synod       | snot      |
+|   L | Sunday      | ascent     | assent    | sandal     | sanity      | scent     |
+|     | sent        | sentiment  | snit      | snoot      | snout       | sonata    |
+|     | sonnet      | sound      | sundae    | swindle    | zenith      |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 022 | SIGN-ON     | SAN JUAN   | assonance | sea-onion  | snow-knife  | synonym   |
+|   M | asinine     |            |           |            |             |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 023 | CINNAMON    | SNOWMOBILE | snowman   | cinema     | sea-anemone | cyanamide |
+|   N | wisenheimer |            |           |            |             |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 024 | SINNER      | SONAR      | senior    | snore      | scenery     | sunrise   |
+|   O | snare       | sneer      | snort     | snarl      | sonorous    |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 025 | SEE         | SUNLAMP    | snell     | snail      | sunlight    |           |
+|   P |             |            |           |            |             |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 026 | SIGNAGE     | SNOWSHOE   | cinch     | singe      | snatch      | censure   |
+|   Q | ascension   | century    | sensual   | snitch     | snow-job    | sunshine  |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 027 | SINK        | SYNAGOGUE  | snack     | snake      | snick       | zinc      |
+|   R | cynic       | isinglass  | scenic    | sea-anchor | sneak       | snug      |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 028 | SNUFF       | SNOWFLAKE  | sniff     | snafu      | sniffle     | saw-knife |
+|   S | Seinfeld    | sinful     |           |            |             |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 029 | SNAP        | snowball   | snob      | snip       | snipe       | snoop     |
+|   T | sign-up     | snub       | sunup     | synopsis   |             |           |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 30 40)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[eb9a923a1f25657119834471cfd01f10cc6f3a84]:
 :results:
-|-----+-------------+---------------+-------------+------------+-------------+------------|
-| 030 | SAMSON      | Siamese       | seamstress  | semester   | semisweet   | swimsuit   |
-|   U | osmosis     | sea-mouse     | semicircle  |            |             |            |
-|-----+-------------+---------------+-------------+------------+-------------+------------|
-| 031 | SEMITE      | housemaid     | cemetery    | smut       | smith       | summit     |
-|   V | assumed     | smite         | smooth      | something  | summed      | symmetric  |
-|-----+-------------+---------------+-------------+------------+-------------+------------|
-| 032 | SALMON      | semen         | seaman      | seminary   | cement      | yes-man    |
-|   W | awesomeness | iceman        | sameness    | semantics  | somnolent   | summon     |
-|     | wisewoman   |               |             |            |             |            |
-|-----+-------------+---------------+-------------+------------+-------------+------------|
-| 033 | SEMIMONTHLY | same make     | same model  | same month | same man    | same mood  |
-|   X | osmium      | semi-material | semi-member | semi-metal | semi-mobile | semi-moist |
-|     | semi-motile | semi-motor    |             |            |             |            |
-|-----+-------------+---------------+-------------+------------+-------------+------------|
-| 034 | SAMURAI     | summer        | simmer      | swimmer    | smear       | summary    |
-|   Y | smart       | smirk         |             |            |             |            |
-|-----+-------------+---------------+-------------+------------+-------------+------------|
-| 035 | SAWMILL     | smile         | smell       | small      | simile      | sea-mile   |
-|   Z | seamless    | seemly        | similar     |            |             |            |
-|-----+-------------+---------------+-------------+------------+-------------+------------|
-| 036 | SMASH       | smudge        | smooch      | smidgen    | so-much     |            |
-|   a |             |               |             |            |             |            |
-|-----+-------------+---------------+-------------+------------+-------------+------------|
-| 037 | SMACK       | smoke         | sumac       | smuggler   | seeming     | swimming   |
-|   b |             |               |             |            |             |            |
-|-----+-------------+---------------+-------------+------------+-------------+------------|
-| 038 | SEMAPHORE   | samovar       | symphony    | semifinal  | semiformal  |            |
-|   c |             |               |             |            |             |            |
-|-----+-------------+---------------+-------------+------------+-------------+------------|
-| 039 | SAMBA       | somber        | cymbal      | symbol     | zombie      | swamp      |
-|   d | assembly    | sample        | simple      | somebody   | sympathy    |            |
+|-----+--------------+--------------+--------------+---------------+-------------+------------|
+| 030 | SAMSON       | SIAMESE      | seamstress   | semester      | semisweet   | swimsuit   |
+|   U | osmosis      | sea-mouse    | semicircle   |               |             |            |
+|-----+--------------+--------------+--------------+---------------+-------------+------------|
+| 031 | CEMETERY     | SMITH        | Semite       | housemaid     | smut        | summit     |
+|   V | assumed      | smite        | smooth       | something     | summed      | symmetric  |
+|-----+--------------+--------------+--------------+---------------+-------------+------------|
+| 032 | SALMON       | CEMENT       | seaman       | semen         | seminary    | yes-man    |
+|   W | Seminole     | awesomeness  | iceman       | sameness      | semantics   | somnolent  |
+|     | summon       | wise-man     | wise-woman   |               |             |            |
+|-----+--------------+--------------+--------------+---------------+-------------+------------|
+| 033 | OSMIUM       | SEMI-MONTHLY | semi-mundane | same make     | same model  | same month |
+|   X | Summum Bonum | same man     | same mood    | semi-material | semi-member | semi-metal |
+|     | semi-mobile  | semi-moist   | semi-motile  | semi-motor    |             |            |
+|-----+--------------+--------------+--------------+---------------+-------------+------------|
+| 034 | SAMURAI      | SWIMMER      | summer       | simmer        | smear       | summary    |
+|   Y | smart        | smirk        |              |               |             |            |
+|-----+--------------+--------------+--------------+---------------+-------------+------------|
+| 035 | SAWMILL      | SMILE        | semolina     | smell         | small       | simile     |
+|   Z | sea-mile     | sea-mule     | seamless     | seemly        | similar     |            |
+|-----+--------------+--------------+--------------+---------------+-------------+------------|
+| 036 | SMASH        | SMOOCH       | smudge       | smidgen       | so-much     |            |
+|   a |              |              |              |               |             |            |
+|-----+--------------+--------------+--------------+---------------+-------------+------------|
+| 037 | SMACK        | SMOKE        | sumac        | smuggler      | seeming     | swimming   |
+|   b |              |              |              |               |             |            |
+|-----+--------------+--------------+--------------+---------------+-------------+------------|
+| 038 | SEMAPHORE    | SAMOVAR      | symphony     | semifinal     | semiformal  |            |
+|   c |              |              |              |               |             |            |
+|-----+--------------+--------------+--------------+---------------+-------------+------------|
+| 039 | CYMBAL       | SAMBA        | somber       | symbol        | zombie      | swamp      |
+|   d | assembly     | sample       | simple       | somebody      | sympathy    |            |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 40 50)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[9636d4b043291df2edd68bec3a1bd8d96b011a91]:
 :results:
-|-----+-------------+--------------+------------+--------------+-----------+----------|
-| 040 | SERIES      | sea-horse    | serious    | sewers       | source    | Circe    |
-|   e |             |              |            |              |           |          |
-|-----+-------------+--------------+------------+--------------+-----------+----------|
-| 041 | SARDINE     | sardonic     | sard       | sort         | hazard    | wizard   |
-|   f | assert      | assort       | certain    | seaward      | seaworthy | sortie   |
-|     | swarthy     |              |            |              |           |          |
-|-----+-------------+--------------+------------+--------------+-----------+----------|
-| 042 | SARIN       | siren        | serene     | Syrian       | serenade  | surname  |
-|   g | surrender   | sworn        |            |              |           |          |
-|-----+-------------+--------------+------------+--------------+-----------+----------|
-| 043 | SWARM       | sermon       | serum      | ceremony     | ceramic   |          |
-|   h |             |              |            |              |           |          |
-|-----+-------------+--------------+------------+--------------+-----------+----------|
-| 044 | SEARER      | zero-hour    | sorority   | sour-herring | swearer   |          |
-|   i |             |              |            |              |           |          |
-|-----+-------------+--------------+------------+--------------+-----------+----------|
-| 045 | ISRAEL      | cereal       | serial     | sirloin      | seraglio  | sorrel   |
-|   j |             |              |            |              |           |          |
-|-----+-------------+--------------+------------+--------------+-----------+----------|
-| 046 | SARGE       | search       | serge      | surge        | surgeon   | sergeant |
-|   k | sea-urchin  | surcharge    |            |              |           |          |
-|-----+-------------+--------------+------------+--------------+-----------+----------|
-| 047 | circuit     | sarcasm      | sauerkraut | sour-cream   | circus    | sirocco  |
-|   l | circle      | circumstance | sarong     | zircon       |           |          |
-|-----+-------------+--------------+------------+--------------+-----------+----------|
-| 048 | SURF        | serf         | surface    | service      | serve     | servant  |
-|   m | servile     | sorrowful    | surfeit    | survey       | survive   |          |
-|-----+-------------+--------------+------------+--------------+-----------+----------|
-| 049 | SERPENT     | syrup        | surplice   | surplus      | Cerberus  | surprise |
-|   n | sauerbraten | sourpuss     | surpass    | usurper      |           |          |
+|-----+----------+--------------+-----------+--------------+-----------+------------|
+| 040 | SERIES   | SEA-HORSE    | sewers    | source       | Circe     | serious    |
+|   e |          |              |           |              |           |            |
+|-----+----------+--------------+-----------+--------------+-----------+------------|
+| 041 | SARDINE  | WIZARD       | sardonic  | sard         | sort      | hazard     |
+|   f | assert   | assort       | certain   | seaward      | seaworthy | sortie     |
+|     | swarthy  |              |           |              |           |            |
+|-----+----------+--------------+-----------+--------------+-----------+------------|
+| 042 | SARIN    | SIREN        | serene    | Syrian       | serenade  | surname    |
+|   g | Sauron   | surrender    | sworn     |              |           |            |
+|-----+----------+--------------+-----------+--------------+-----------+------------|
+| 043 | SWARM    | SERMON       | serum     | ceremony     | ceramic   |            |
+|   h |          |              |           |              |           |            |
+|-----+----------+--------------+-----------+--------------+-----------+------------|
+| 044 | SORORITY | SRIRACHA     | zero-hour | sour-herring | searer    | swearer    |
+|   i |          |              |           |              |           |            |
+|-----+----------+--------------+-----------+--------------+-----------+------------|
+| 045 | ISRAEL   | CEREAL       | serial    | sirloin      | seraglio  | sorrel     |
+|   j |          |              |           |              |           |            |
+|-----+----------+--------------+-----------+--------------+-----------+------------|
+| 046 | SARGE    | SURGEON      | search    | serge        | surge     | sea-urchin |
+|   k | sergeant | surcharge    |           |              |           |            |
+|-----+----------+--------------+-----------+--------------+-----------+------------|
+| 047 | CIRCUIT  | SAUERKRAUT   | sarcasm   | sour-cream   | circus    | sirocco    |
+|   l | circle   | circumstance | sarong    | zircon       | zirconium |            |
+|-----+----------+--------------+-----------+--------------+-----------+------------|
+| 048 | SURF     | SERF         | surface   | service      | serve     | servant    |
+|   m | servile  | sorrowful    | surfeit   | survey       | survive   |            |
+|-----+----------+--------------+-----------+--------------+-----------+------------|
+| 049 | CERBERUS | SYRUP        | surplice  | surplus      | surprise  | usurper    |
+|   n | Serb     | sauerbraten  | serpent   | sourpuss     | surpass   |            |
 :end:
 
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 50 60)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[5e363d38e0a98750f01bdf12374b2a46eb778a14]:
 :results:
-|-----+------------+-----------+-----------+----------+-------------+------------|
-| 050 | SOLSTICE   | sales     | slice     | sluice   | solace      | solicitor  |
-|   o | sal-soda   | solus     | solos     | useless  |             |            |
-|-----+------------+-----------+-----------+----------+-------------+------------|
-| 051 | SALAD      | salt      | salute    | slate    | sled        | sleet      |
-|   p | assault    | household | isolate   | ocelot   | oscillate   | silhouette |
-|     | slaughter  | slide     | slight    | slit     | slot        | solid      |
-|     | solitaire  | sultan    | zealot    |          |             |            |
-|-----+------------+-----------+-----------+----------+-------------+------------|
-| 052 | SEA-LION   | saloon    | sea-lane  | sealant  | saline      | slain      |
-|   q | aslant     | cylinder  | silent    | slander  | slant       | slender    |
-|     | sullen     | swollen   | zillion   |          |             |            |
-|-----+------------+-----------+-----------+----------+-------------+------------|
-| 053 | SALAMANDER | slam      | slim      | slime    | slow-motion | slumber    |
-|   r | Islam      | asylum    | cell-mate | solemn   | soul-mate   |            |
-|-----+------------+-----------+-----------+----------+-------------+------------|
-| 054 | SAILOR     | salary    | seller    | sealer   | slayer      | solar      |
-|   s | celerity   | celery    | cellar    | whistler |             |            |
-|-----+------------+-----------+-----------+----------+-------------+------------|
-| 055 | CELLULOID  | sea-lily  | slowly    | slyly    | soliloquy   | cellular   |
-|   t |            |           |           |          |             |            |
-|-----+------------+-----------+-----------+----------+-------------+------------|
-| 056 | SOLUTION   | slouch    | sludge    | slash    | slush       | zoology    |
-|   u | isolation  |           |           |          |             |            |
-|-----+------------+-----------+-----------+----------+-------------+------------|
-| 057 | SILK       | slake     | slang     | sling    | sleek       | sea-legs   |
-|   v | ceiling    | select    | silica    | slack    | sulky       |            |
-|-----+------------+-----------+-----------+----------+-------------+------------|
-| 058 | SALVE      | salvo     | saliva    | salvage  | salvation   | slave      |
-|   w | self       | silver    | sleeve    | sliver   | solve       | soulfood   |
-|     | soulful    | sulfur    | sylph     |          |             |            |
-|-----+------------+-----------+-----------+----------+-------------+------------|
-| 059 | SLIPPER    | slab      | slap      | sleep    | slip        | sailboat   |
-|   x | celebrate  | celibacy  | sloop     | slop     | slope       | slowpoke   |
+|-----+--------------+--------------+-------------+-----------+------------+-----------|
+| 050 | SOLSTICE     | SALSA        | slice       | solicitor | sluice     | sales     |
+|   o | solace       | useless      |             |           |            |           |
+|-----+--------------+--------------+-------------+-----------+------------+-----------|
+| 051 | SLOT MACHINE | OCELOT       | slate       | salt      | salad      | assault   |
+|   p | household    | isolate      | oscillate   | salute    | silhouette | slaughter |
+|     | sled         | sleet        | slide       | slight    | slit       | slot      |
+|     | solid        | solitaire    | sultan      | zealot    |            |           |
+|-----+--------------+--------------+-------------+-----------+------------+-----------|
+| 052 | SEA-LION     | CYLINDER     | saloon      | salon     | sealant    | slender   |
+|   q | aslant       | saline       | sea-lane    | silent    | slain      | slander   |
+|     | slant        | sullen       | swollen     | zillion   |            |           |
+|-----+--------------+--------------+-------------+-----------+------------+-----------|
+| 053 | SALAMANDER   | SLIME        | cell-mate   | asylum    | soul-mate  | Islam     |
+|   r | slam         | slim         | slow-motion | slumber   | solemn     |           |
+|-----+--------------+--------------+-------------+-----------+------------+-----------|
+| 054 | CELLAR       | SOLAR PANEL  | celery      | soiler    | sailor     | celerity  |
+|   s | salary       | sealer       | seller      | slayer    | whistler   |           |
+|-----+--------------+--------------+-------------+-----------+------------+-----------|
+| 055 | CELLULAR     | CELLULOID    | soliloquy   | sea-lily  | slowly     | slyly     |
+|   t |              |              |             |           |            |           |
+|-----+--------------+--------------+-------------+-----------+------------+-----------|
+| 056 | SOLUTION     | SLEDGEHAMMER | slouch      | sludge    | slush      | slash     |
+|   u | isolation    | zoology      |             |           |            |           |
+|-----+--------------+--------------+-------------+-----------+------------+-----------|
+| 057 | SILK         | silica       | ceiling     | slack     | sling      | slang     |
+|   v | sea-legs     | select       | slake       | sleek     | sulky      |           |
+|-----+--------------+--------------+-------------+-----------+------------+-----------|
+| 058 | SULFUR       | XYLOPHONE    | saliva      | salvage   | salvation  | slave     |
+|   w | salve        | salver       | salvo       | self      | silver     | sleeve    |
+|     | sliver       | solve        | soulfood    | soulful   | sylph      |           |
+|-----+--------------+--------------+-------------+-----------+------------+-----------|
+| 059 | SLOOP        | SLIPPER      | sailboat    | slab      | slap       | sleep     |
+|   x | celebrate    | celibacy     | slip        | slop      | slope      | slowpoke  |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 60 70)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[c29398e3a4f634828989e603111041bf62282467]:
 :results:
-|-----+--------------+-------------+-------------+---------------+-------------+-------------|
-| 060 | SAGES        | sea-chest   | sieges      | switches      | sash-saw    | sashes      |
-|   y | suggest      |             |             |               |             |             |
-|-----+--------------+-------------+-------------+---------------+-------------+-------------|
-| 061 | SAGITTARIUS  | siege-tower | sash-weight | switch-hitter | associate   | sachette    |
-|   z | satiate      | sagittal    | satched     |               |             |             |
-|-----+--------------+-------------+-------------+---------------+-------------+-------------|
-| 062 | SWITCH-KNIFE | session     | sash-window | sedge-hen     | sea-change  | scission    |
-|   + | sashoon      | seashine    | suasion     | cession       |             |             |
-|-----+--------------+-------------+-------------+---------------+-------------+-------------|
-| 063 | SASHIMI      | satchem     | switchman   | sea-chime     | sea-chum    |             |
-| ' / |              |             |             |               |             |             |
-|-----+--------------+-------------+-------------+---------------+-------------+-------------|
-| 064 | SUTURE       | seashore    | saw-shark   | saw-sharpener | seizure     | sojourn     |
-|     | switcheroo   |             |             |               |             |             |
-|-----+--------------+-------------+-------------+---------------+-------------+-------------|
-| 065 | SATCHEL      | seashell    | social      | sash-line     | sage-oil    | switch-line |
-|-----+--------------+-------------+-------------+---------------+-------------+-------------|
-| 066 | ASSOCIATION  | sage-age    | cheese-aged | switch-shift  | wise-judge  |             |
-|-----+--------------+-------------+-------------+---------------+-------------+-------------|
-| 067 | SAGE-GRASS   | siege-coin  | sash-cord   | switchgear    | switch-cane |             |
-|-----+--------------+-------------+-------------+---------------+-------------+-------------|
-| 068 | SWITCHOVER   | sedge-fly   | switch-ivy  |               |             |             |
-|-----+--------------+-------------+-------------+---------------+-------------+-------------|
-| 069 | SWASHBUCKLER | sagebrush   | sedge-bird  | s-shaped      | sash-pocket | switchblade |
-|     | switch-box   |             |             |               |             |             |
+|-----+--------------+------------+-------------+-------------+---------------+---------------|
+| 060 | SAGES        | SWATCHES   | sieges      | switches    | sea-chest     | sashes        |
+|   y | suggest      |            |             |             |               |               |
+|-----+--------------+------------+-------------+-------------+---------------+---------------|
+| 061 | SAGITTARIUS  | sagittal   | siege-tower | sash-weight | switch-hitter | associate     |
+|   z | satiate      | satched    |             |             |               |               |
+|-----+--------------+------------+-------------+-------------+---------------+---------------|
+| 062 | SWITCH-KNIFE | SZECHUAN   | sea-change  | session     |               |               |
+|   + |              |            |             |             |               |               |
+|-----+--------------+------------+-------------+-------------+---------------+---------------|
+| 063 | SASHIMI      | SWITCHMAN  | sea-chum    |             |               |               |
+| ' / |              |            |             |             |               |               |
+|-----+--------------+------------+-------------+-------------+---------------+---------------|
+| 064 | SUTURE       | SOJOURN    | swisher     | seizure     | seashore      | saw-sharpener |
+|     | switcheroo   |            |             |             |               |               |
+|-----+--------------+------------+-------------+-------------+---------------+---------------|
+| 065 | SEASHELL     | SATCHEL    | social      |             |               |               |
+|-----+--------------+------------+-------------+-------------+---------------+---------------|
+| 066 | ASSOCIATION  | SUSHI CHAI | sash-chain  | sage-judge  | switch-shift  | wise-judge    |
+|-----+--------------+------------+-------------+-------------+---------------+---------------|
+| 067 | SAGE-GRASS   | SWITCHGEAR | sash-cord   | siege-coin  | switch-cane   |               |
+|-----+--------------+------------+-------------+-------------+---------------+---------------|
+| 068 | SOUS CHEF    | SWITCHOVER | swish fop   | sash fob    | switch-vein   |               |
+|-----+--------------+------------+-------------+-------------+---------------+---------------|
+| 069 | SWASHBUCKLER | SAGEBRUSH  | s-shaped    | sash-pocket | switchblade   | switch-box    |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 70 80)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[64236ec329a0ec5cedcd8fe0af9fa77aee11c9d5]:
 :results:
-|-----+-----------+-----------+-----------+-----------+------------+-------------|
-| 070 | SEX       | saxophone | seacoast  | success   | Saxon      | squeeze     |
-|     | sea-goose | six       |           |           |            |             |
-|-----+-----------+-----------+-----------+-----------+------------+-------------|
-| 071 | SCOT      | skate     | scat      | sect      | skeet      | squid       |
-|     | ascot     | scatter   | scout     | scuttle   | sea-god    | skid        |
-|     | skit      | socket    | squatter  | waistcoat |            |             |
-|-----+-----------+-----------+-----------+-----------+------------+-------------|
-| 072 | SCAN      | scanty    | schooner  | sequin    | signal     | skin        |
-|     | askance   | scandal   | scoundrel | sea-gown  | second     | sicken      |
-|     | sickness  | zucchini  |           |           |            |             |
-|-----+-----------+-----------+-----------+-----------+------------+-------------|
-| 073 | SCHEME    | sycamore  | Eskimo    | scum      | sagamore   | skim        |
-|     | scumbag   |           |           |           |            |             |
-|-----+-----------+-----------+-----------+-----------+------------+-------------|
-| 074 | CIGAR     | scar      | screw     | skirt     | square     | squire      |
-|     | Oscar     | escarole  | escort    | escrow    | ice-cream  | scarce      |
-|     | scare     | scarlet   | score     | scrap     | scrawl     | scream      |
-|     | screen    | secret    | secretary | secure    | singer     | squirt      |
-|     | whisker   |           |           |           |            |             |
-|-----+-----------+-----------+-----------+-----------+------------+-------------|
-| 075 | SKULL     | scale     | scallop   | school    | scallion   | scull       |
-|     | cycle     | icicle    | ossicle   | scalp     | scholar    | sculptor    |
-|     | sea-gull  | sequel    | sickle    | single    | skeleton   | skill       |
-|     | squall    | squill    | suckle    |           |            |             |
-|-----+-----------+-----------+-----------+-----------+------------+-------------|
-| 076 | SKETCH    | squash    | sagacious | Scotch    | escutcheon |             |
-|-----+-----------+-----------+-----------+-----------+------------+-------------|
-| 077 | SUKIYAKI  | seeking   | sea-king  | seaquake  | squeak     | squawk      |
-|     | asking    | easygoing | skeg      |           |            |             |
-|-----+-----------+-----------+-----------+-----------+------------+-------------|
-| 078 | SKIFF     | scuffle   | scuff     | scaffold  | scofflaw   | scavenger   |
-|     | scoff     |           |           |           |            |             |
-|-----+-----------+-----------+-----------+-----------+------------+-------------|
-| 079 | SKIP      | scab      | scoop     | scope     | ski-boot   | icecap      |
-|     | skeptic   | squib     | squabble  | escapade  | escape     | housekeeper |
+|-----+----------+-------------+-------------+-----------+------------+-----------|
+| 070 | SEX      | SOCKS       | saxophone   | Saxon     | seacoast   | success   |
+|     | six      | squeeze     |             |           |            |           |
+|-----+----------+-------------+-------------+-----------+------------+-----------|
+| 071 | SCOT     | SKEET       | squid       | socket    | ascot      | squatter  |
+|     | scat     | scatter     | scout       | scuttle   | sea-god    | sect      |
+|     | skate    | skid        | skit        | waistcoat |            |           |
+|-----+----------+-------------+-------------+-----------+------------+-----------|
+| 072 | ZUCCHINI | scoundrel   | scanty      | skin      | sequin     | signal    |
+|     | askance  | scan        | scandal     | schooner  | second     | sicken    |
+|     | sickness |             |             |           |            |           |
+|-----+----------+-------------+-------------+-----------+------------+-----------|
+| 073 | ESKIMO   | SYCAMORE    | scheme      | scum      | skim       | scumbag   |
+|-----+----------+-------------+-------------+-----------+------------+-----------|
+| 074 | CIGAR    | SKIRT       | Oscar       | scorpion  | screw      | squire    |
+|     | escarole | escort      | escrow      | ice-cream | scar       | scarce    |
+|     | scare    | scarlet     | score       | scrap     | scrawl     | scream    |
+|     | screen   | secret      | secretary   | secure    | singer     | square    |
+|     | squirt   | whisker     |             |           |            |           |
+|-----+----------+-------------+-------------+-----------+------------+-----------|
+| 075 | SKULL    | SCALE       | scallop     | school    | scallion   | scull     |
+|     | Skoal    | cycle       | icicle      | ossicle   | scalp      | scholar   |
+|     | sculptor | sea-gull    | sequel      | sickle    | single     | skeleton  |
+|     | skill    | squall      | squill      | suckle    |            |           |
+|-----+----------+-------------+-------------+-----------+------------+-----------|
+| 076 | SKETCH   | SCOTCH TAPE | squash      | sagacious | escutcheon |           |
+|-----+----------+-------------+-------------+-----------+------------+-----------|
+| 077 | PSYCHIC  | SUKIYAKI    | asking      | easygoing | seaquake   | seeking   |
+|     | skeg     | squawk      | squeak      |           |            |           |
+|-----+----------+-------------+-------------+-----------+------------+-----------|
+| 078 | SCAFFOLD | ICE COFFEE  | scofflaw    | scuffle   | scuff      | scavenger |
+|     | scoff    | skiff       |             |           |            |           |
+|-----+----------+-------------+-------------+-----------+------------+-----------|
+| 079 | SKIP     | SKIPPER     | scab        | scoop     | scope      | ski-boot  |
+|     | escapade | escape      | housekeeper | icecap    | skeptic    | ski-boat  |
+|     | squabble | squib       |             |           |            |           |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 80 90)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[c36916b9474e4d4ba315b902fac1f335367e1cf3]:
 :results:
-|-----+---------------+-------------+-------------+--------------+------------+--------------|
-| 080 | SUFISM        | sophist     | saves       | suffice      | suffuse    | housewives   |
-|-----+---------------+-------------+-------------+--------------+------------+--------------|
-| 081 | SEAFOOD       | Soviet      | swift       | safe-deposit | sea-fight  | sift         |
-|     | safety        | soft        |             |              |            |              |
-|-----+---------------+-------------+-------------+--------------+------------+--------------|
-| 082 | SIPHON        | Savannah    | souvenir    | sea-fan      | housephone | suaveness    |
-|     | seven         |             |             |              |            |              |
-|-----+---------------+-------------+-------------+--------------+------------+--------------|
-| 083 | SOPHOMORE     | sea-vampire | seafoam     | suffumigate  |            |              |
-|-----+---------------+-------------+-------------+--------------+------------+--------------|
-| 084 | SAPPHIRE      | safari      | sphere      | zephyr       | sovereign  | suffragette  |
-|     | cipher        | saffron     | savior      | savor        | sever      | several      |
-|     | severe        | suffer      | whosoever   |              |            |              |
-|-----+---------------+-------------+-------------+--------------+------------+--------------|
-| 085 | ASPHALT       | seafowl     | souffle     | safflower    | ice-floe   | swivel       |
-|     | civil         | safelight   | safely      | suavely      | useful     |              |
-|-----+---------------+-------------+-------------+--------------+------------+--------------|
-| 086 | SAVAGE        | icefish     | housewifish | sawfish      | sufficient | safe-edge    |
-|-----+---------------+-------------+-------------+--------------+------------+--------------|
-| 087 | ESOPHAGUS     | suffocate   | civic       | safeguard    | saving     | safe-conduct |
-|     | savoy-cabbage | suffix      |             |              |            |              |
-|-----+---------------+-------------+-------------+--------------+------------+--------------|
-| 088 | SAFE-HAVEN    | save-face   | sieve-field |              |            |              |
-|-----+---------------+-------------+-------------+--------------+------------+--------------|
-| 089 | SOFA-BED      | sieve-pit   | sieva-bean  |              |            |              |
+|-----+--------------+---------------+-------------+--------------+-------------+-----------|
+| 080 | SAVES        | CIVVIES       | housewives  | sophist      | sufism      | suffice   |
+|     | suffuse      |               |             |              |             |           |
+|-----+--------------+---------------+-------------+--------------+-------------+-----------|
+| 081 | SEAFOOD      | SOVIET        | swift       | safe-deposit | sift        | safety    |
+|     | sea-fight    | soft          |             |              |             |           |
+|-----+--------------+---------------+-------------+--------------+-------------+-----------|
+| 082 | SIPHON       | SOUVENIR      | Savannah    | sea-fan      | housephone  | suaveness |
+|     | seven        |               |             |              |             |           |
+|-----+--------------+---------------+-------------+--------------+-------------+-----------|
+| 083 | SOPHOMORE    | SEAFOAM       | sea-vampire | suffumigate  |             |           |
+|-----+--------------+---------------+-------------+--------------+-------------+-----------|
+| 084 | SAPPHIRE     | SUFFRAGETTE   | safari      | sphere       | zephyr      | sovereign |
+|     | cipher       | saffron       | savior      | savor        | sever       | several   |
+|     | severe       | suffer        | whosoever   |              |             |           |
+|-----+--------------+---------------+-------------+--------------+-------------+-----------|
+| 085 | ASPHALT      | SOUFFLE       | seafowl     | safflower    | ice-floe    | swivel    |
+|     | civil        | safelight     | safely      | suavely      | useful      |           |
+|-----+--------------+---------------+-------------+--------------+-------------+-----------|
+| 086 | SAVAGE       | SAWFISH       | icefish     | housewifish  | sufficient  | safe-edge |
+|-----+--------------+---------------+-------------+--------------+-------------+-----------|
+| 087 | ESOPHAGUS    | SAFECRACKER   | suffocate   | civic        | safeguard   | saving    |
+|     | safe-conduct | savoy-cabbage | suffix      |              |             |           |
+|-----+--------------+---------------+-------------+--------------+-------------+-----------|
+| 088 | SAFE-HAVEN   | SAFE VAULT    | save-face   | sieve-field  | save-virtue |           |
+|-----+--------------+---------------+-------------+--------------+-------------+-----------|
+| 089 | SOFA-BED     | SAFE BOX      | sieve-pit   | sieva-bean   |             |           |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 90 100)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[dd1a01cd06fd171cfdc390c5a16a04eec498e8a5]:
 :results:
-|-----+--------------+-------------+------------+-------------+-------------+--------------|
-| 090 | SPACE        | spice       | spouse     | sea-biscuit | asbestos    | soupcon      |
-|     | auspices     | specify     | suppose    |             |             |              |
-|-----+--------------+-------------+------------+-------------+-------------+--------------|
-| 091 | SUBTERRANEAN | spot        | spade      | spate       | speed       | spit         |
-|     | Sabbath      | September   | hospital   | houseboat   | scepter     | soup-tureen  |
-|     | spite        | spout       | spud       | subdue      |             |              |
-|-----+--------------+-------------+------------+-------------+-------------+--------------|
-| 092 | SPIN         | Spain       | spine      | spoon       | span        | spend        |
-|     | aspen        | espionage   | has-been   | soybean     | subnormal   | subpoena     |
-|     | supine       |             |            |             |             |              |
-|-----+--------------+-------------+------------+-------------+-------------+--------------|
-| 093 | SPAM         | spume       | spumoni    | submarine   | submerge    | submontane   |
-|     | subminiature | submit      |            |             |             |              |
-|-----+--------------+-------------+------------+-------------+-------------+--------------|
-| 094 | SPAR         | spear       | spire      | spare       | saber       | zebra        |
-|     | asparagus    | aspire      | aspirin    | cypress     | isobar      | osprey       |
-|     | separate     | sober       | sopor      | soprano     | spark       | sparrow      |
-|     | spirit       | sport       | spray      | spread      | spree       | spring       |
-|     | spry         | super       | superb     | supper      | whisper     |              |
-|-----+--------------+-------------+------------+-------------+-------------+--------------|
-| 095 | SPILL        | spell       | spoil      | spool       | spall       | zeppelin     |
-|     | esplanade    | seaplane    | sibilant   | sowbelly    | splash      | spleen       |
-|     | splendid     | split       | sublime    | supply      |             |              |
-|-----+--------------+-------------+------------+-------------+-------------+--------------|
-| 096 | SUB-AGE      | speech      | seepage    | species     | subject     | special      |
-|     | auspicious   | seabeach    | spatial    | subagent    | waspish     |              |
-|-----+--------------+-------------+------------+-------------+-------------+--------------|
-| 097 | SAWBUCK      | speak       | speck      | spike       | spook       | ice-pick     |
-|     | aspect       | aspic       | ice-bag    | ice-pack    | spectacle   | zip-code     |
-|-----+--------------+-------------+------------+-------------+-------------+--------------|
-| 098 | SPOOF        | subway-fare | subaverage | subfreezing | soap-flake  | soupfin      |
-|     | spiff        |             |            |             |             |              |
-|-----+--------------+-------------+------------+-------------+-------------+--------------|
-| 099 | SOAPBOX      | sea-poppy   | soapbark   | soapberry   | soap-bubble | subprincipal |
-|     | house-paper  |             |            |             |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 090 | SPACE        | ASBESTOS    | spice       | spouse      | sea-biscuit | soupcon      |
+|     | auspices     | specify     | suppose     |             |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 091 | SUBTERRANEAN | SPIDERMAN   | Sabbath     | hospital    | houseboat   | spade        |
+|     | September    | scepter     | soup-tureen | spate       | speed       | spit         |
+|     | spite        | spot        | spout       | spud        | subdue      |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 092 | SPIN         | SPAIN       | spine       | soybean     | spoon       | spun candy   |
+|     | aspen        | espionage   | has-been    | span        | spend       | spun gold    |
+|     | subnormal    | subpoena    | supine      |             |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 093 | SPAM         | SPUMONI     | submarine   | submerge    | submontane  | spume        |
+|     | subminiature | submit      |             |             |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 094 | SPAR         | soprano     | spear       | spire       | spare       | saber        |
+|     | asparagus    | aspire      | aspirin     | cypress     | isobar      | osprey       |
+|     | separate     | sober       | sopor       | spark       | sparrow     | spirit       |
+|     | sport        | spray       | spread      | spree       | spring      | spry         |
+|     | super        | superb      | supper      | whisper     | zebra       |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 095 | SEAPLANE     | ZEPPELIN    | spool       | spell       | spall       | spill        |
+|     | esplanade    | sibilant    | sowbelly    | splash      | spleen      | splendid     |
+|     | split        | spoil       | sublime     | supply      |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 096 | SPEECH       | seepage     | species     | subject     | special     | waspish      |
+|     | auspicious   | seabeach    | spatial     | sub-age     | subagent    |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 097 | ICE-PACK     | SPOCK       | ice-pick    | spike       | spook       | speck        |
+|     | aspect       | aspic       | ice-bag     | sawbuck     | speak       | spectacle    |
+|     | zip-code     |             |             |             |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 098 | SPOOF        | soap-flake  | subway-fare | subway fire | subaverage  | subfreezing  |
+|     | soupfin      | spiff       |             |             |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 099 | SOAPBOX      | SOAP-BUBBLE | sea-poppy   | soapbark    | soapberry   | subprincipal |
+|     | house-paper  |             |             |             |             |              |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 100 105)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[4495ac7b32639781ddf426ffaa075642c9d2df4c]:
 :results:
 |---+--------+--------+--------+-------+--------+-------|
 | 0 | SAW    | HOSE   | ice    | house | haze   | zoo   |
@@ -2924,11 +2993,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 105 110)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[c6bdc850fe47dd200b79ba4bb3d6e1927eb4f672]:
 :results:
 |---+---------+--------+--------+-------+---------+--------|
 | 5 | LAW     | WHALE  | ale    | awl   | aisle   | eel    |
@@ -2973,11 +3042,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 110 115)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[bd94e130acd65202ad62b77dbb26d376623d5710]:
 :results:
 |----+-------------+----------+--------+----------+--------+---------|
 | 10 | TOES        | daisy    | odds   | hothouse | idiots | deuce   |
@@ -3019,11 +3088,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 115 120)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[af0c3857e6f82d0ff6a5e8ca85a14f8af107eaae]:
 :results:
 |----+---------+--------+----------+-----------+---------+----------|
 | 15 | TAIL    | atoll  | doll     | doily     | idol    | tally    |
@@ -3055,11 +3124,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 120 130)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[7b0c03d7f501e0b6f9398aab217b8c3f5239af9e]:
 :results:
 |----+----------+----------+---------+---------+---------+----------|
 | 20 | NOSE     | anise    | noose   | niece   | ounce   | news     |
@@ -3085,7 +3154,7 @@ caches the results).
 |    | anywhere | inhere   | inure   | narrow  | near    | newer    |
 |    | nor      | noria    | nowhere | owner   | unaware |          |
 |----+----------+----------+---------+---------+---------+----------|
-| 25 | NAIL     | narwhal  | N﻿ile    | inlay   | in-law  | unholy   |
+| 25 | NAIL     | NARWHAL  | N﻿ile    | inlay   | in-law  | unholy   |
 |    | anal     | annual   | annul   | inhale  | kneel   | knell    |
 |    | knoll    | newel    | newly   | n﻿il     | null    | only     |
 |----+----------+----------+---------+---------+---------+----------|
@@ -3106,11 +3175,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 130 140)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[fe75a4c4ad29ff24bf6c9a9f9250d72ab6e7f1ae]:
 :results:
 |----+---------+---------+--------+-----------+--------+---------|
 | 30 | MASS    | MOUSE   | mace   | maze      | hummus | mice    |
@@ -3140,153 +3209,153 @@ caches the results).
 |    | homely  | homily  | male   | mall      | melee  | mellow  |
 |    | moll    |         |        |           |        |         |
 |----+---------+---------+--------+-----------+--------+---------|
-| 36 | MATCH   | mash    | mesh   | midge     | mush   | homage  |
+| 36 | MATCH   | MASH    | mesh   | midge     | mush   | homage  |
 |    | Amish   | image   | mashie | mooch     | much   |         |
 |----+---------+---------+--------+-----------+--------+---------|
-| 37 | MIKE    | mug     | mica   | hammock   | mocha  | Mecca   |
-|    | amigo   | Mohawk  | amok   | among     | make   | meek    |
+| 37 | MIKE    | MUG     | mica   | hammock   | mocha  | Mecca   |
+|    | Mohawk  | amigo   | amok   | among     | make   | meek    |
 |    | mock    | muck    | omega  |           |        |         |
 |----+---------+---------+--------+-----------+--------+---------|
 | 38 | MUFF    | MOVIE   | mauve  | Mafia     | miff   | move    |
 |    | oomph   |         |        |           |        |         |
 |----+---------+---------+--------+-----------+--------+---------|
-| 39 | MAP     | hemp    | hump   | imp       | ump    | amoeba  |
-|    | amp     | imbue   | maybe  | mob       | mop    | mope    |
+| 39 | MAP     | AMP     | hemp   | hump      | ump    | amoeba  |
+|    | imbue   | imp     | maybe  | mob       | mop    | mope    |
 |    | myopia  |         |        |           |        |         |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 140 150)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[9b2e658a05cee89bf4cbb690ec23a0948cf25166]:
 :results:
-|----+---------+-----------+----------+--------+---------+--------|
-| 40 | RACE    | ROSE      | racy     | raise  | rase    | raze   |
-|    | Warsaw  | arouse    | erase    | eros   | erose   | harass |
-|    | hearsay | hearse    | heiress  | heresy | hers    | hoarse |
-|    | horse   | iris      | ours     | rice   | rise    | rouse  |
-|    | ruse    | warehouse | worse    |        |         |        |
-|----+---------+-----------+----------+--------+---------+--------|
-| 41 | RAT     | ROAD      | aorta    | arid   | aright  | art    |
-|    | award   | earth     | erode    | errata | hard    | hart   |
-|    | heart   | hearth    | herd     | hereto | hoard   | horde  |
-|    | horrid  | hurried   | hurt     | radio  | raid    | rate   |
-|    | read    | ready     | red      | reed   | rid     | ride   |
-|    | right   | riot      | rite     | rod    | root    | rot    |
-|    | route   | rut       | ward     | wart   | weird   | word   |
-|    | worried | worth     | wrath    | wreath | wreathe | write  |
-|    | yard    |           |          |        |         |        |
-|----+---------+-----------+----------+--------+---------+--------|
-| 42 | RAIN    | rein      | reign    | renew  | run     | ruin   |
-|    | Aryan   | Irene     | Orion    | Reno   | Rhine   | arena  |
-|    | arraign | earn      | hernia   | heroin | heroine | horn   |
-|    | iron    | irony     | rhino    | rune   | urn     | warn   |
-|    | worn    |           |          |        |         |        |
-|----+---------+-----------+----------+--------+---------+--------|
-| 43 | RAM     | rim       | rhyme    | ream   | room    | rime   |
-|    | Rome    | Romeo     | arm      | army   | aroma   | harem  |
-|    | harm    | roam      | rum      | warm   | worm    |        |
-|----+---------+-----------+----------+--------+---------+--------|
-| 44 | REAR    | AURORA    | rare     | roar   | rower   | arrear |
-|    | error   | harrier   | harrower | hearer | horror  | orrery |
-|    | warrior | wearer    | worrier  |        |         |        |
-|----+---------+-----------+----------+--------+---------+--------|
-| 45 | RAIL    | rally     | railway  | real   | reel    | relay  |
-|    | aerial  | earl      | early    | hourly | hurl    | oral   |
-|    | oriole  | rely      | rill     | roil   | role    | roll   |
-|    | royal   | rule      | whirl    | whorl  | yearly  |        |
-|----+---------+-----------+----------+--------+---------+--------|
-| 46 | RASH    | ROACH     | rage     | ratio  | Rajah   | reach  |
-|    | Irish   | Russia    | arch     | harsh  | orgy    | rich   |
-|    | ridge   | rouge     | ruche    | rush   | rushee  | urge   |
-|    | wretch  |           |          |        |         |        |
-|----+---------+-----------+----------+--------+---------+--------|
-| 47 | RACK    | ROCK      | rake     | rag    | reek    | ring   |
-|    | airing  | arc       | argue    | ark    | ergo    | hark   |
-|    | hearing | heroic    | herring  | ragout | rig     | rogue  |
-|    | rook    | rug       | work     | wreck  |         |        |
-|----+---------+-----------+----------+--------+---------+--------|
-| 48 | REEF    | raffia    | review   | revue  | riff    | rife   |
-|    | aerify  | arrive    | horrify  | rave   | rive    | roof   |
-|    | rough   | rove      | ruff     | wharf  |         |        |
-|----+---------+-----------+----------+--------+---------+--------|
-| 49 | ROPE    | rap       | rape     | reap   | repay   | rip    |
-|    | Arabia  | Europe    | harp     | herb   | hereby  | orb    |
-|    | rabbi   | rib       | ripe     | rob    | robe    | rub    |
-|    | ruby    | rupee     | warp     |        |         |        |
+|----+---------+-----------+----------+--------+---------+---------|
+| 40 | RACE    | ROSE      | racy     | raise  | rase    | raze    |
+|    | Warsaw  | arouse    | erase    | eros   | erose   | harass  |
+|    | hearsay | hearse    | heiress  | heresy | hers    | hoarse  |
+|    | horse   | iris      | ours     | rice   | rise    | rouse   |
+|    | ruse    | warehouse | worse    |        |         |         |
+|----+---------+-----------+----------+--------+---------+---------|
+| 41 | RAT     | ROAD      | rod      | radio  | wraith  | Earth   |
+|    | aorta   | arid      | aright   | art    | award   | erode   |
+|    | errata  | hard      | hart     | heart  | hearth  | herd    |
+|    | hereto  | hoard     | horde    | horrid | hurried | hurt    |
+|    | raid    | rate      | read     | ready  | red     | reed    |
+|    | rid     | ride      | right    | riot   | rite    | root    |
+|    | rot     | route     | rut      | ward   | wart    | weird   |
+|    | word    | worried   | worth    | wrath  | wreath  | wreathe |
+|    | write   | yard      |          |        |         |         |
+|----+---------+-----------+----------+--------+---------+---------|
+| 42 | RAIN    | REIN      | reign    | renew  | run     | ruin    |
+|    | Aryan   | Irene     | Orion    | Reno   | Rhine   | arena   |
+|    | arraign | earn      | hernia   | heroin | heroine | horn    |
+|    | iron    | irony     | rhino    | rune   | urn     | warn    |
+|    | worn    |           |          |        |         |         |
+|----+---------+-----------+----------+--------+---------+---------|
+| 43 | RAM     | RIM       | rhyme    | ream   | room    | rime    |
+|    | Rome    | Romeo     | arm      | army   | aroma   | harem   |
+|    | harm    | roam      | rum      | warm   | worm    |         |
+|----+---------+-----------+----------+--------+---------+---------|
+| 44 | REAR    | AURORA    | rare     | roar   | rower   | arrear  |
+|    | error   | harrier   | harrower | hearer | horror  | orrery  |
+|    | warrior | wearer    | worrier  |        |         |         |
+|----+---------+-----------+----------+--------+---------+---------|
+| 45 | RAIL    | RALLY     | railway  | real   | reel    | relay   |
+|    | aerial  | earl      | early    | hourly | hurl    | oral    |
+|    | oriole  | rely      | rill     | roil   | role    | roll    |
+|    | royal   | rule      | whirl    | whorl  | yearly  |         |
+|----+---------+-----------+----------+--------+---------+---------|
+| 46 | RASH    | ROACH     | rage     | ratio  | Rajah   | reach   |
+|    | Irish   | Russia    | arch     | harsh  | orgy    | rich    |
+|    | ridge   | rouge     | ruche    | rush   | rushee  | urge    |
+|    | wretch  |           |          |        |         |         |
+|----+---------+-----------+----------+--------+---------+---------|
+| 47 | RACK    | ROCK      | rake     | rag    | reek    | ring    |
+|    | airing  | arc       | argue    | ark    | ergo    | hark    |
+|    | hearing | heroic    | herring  | ragout | rig     | rogue   |
+|    | rook    | rug       | work     | wreck  |         |         |
+|----+---------+-----------+----------+--------+---------+---------|
+| 48 | REEF    | rave      | wharf    | roof   | revue   | rife    |
+|    | aerify  | arrive    | horrify  | review | rough   | rove    |
+|    | ruff    |           |          |        |         |         |
+|----+---------+-----------+----------+--------+---------+---------|
+| 49 | ROPE    | RAP       | rape     | reap   | repay   | rip     |
+|    | Arabia  | Europe    | harp     | herb   | hereby  | orb     |
+|    | rabbi   | rib       | ripe     | rob    | robe    | rub     |
+|    | ruby    | rupee     | warp     |        |         |         |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 150 160)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[b08ffaba921ccef67fceb9a32c550bdce2b78fc5]:
 :results:
-|----+-----------+------------+----------+-----------+----------+-----------|
-| 50 | LACE      | lass       | lassie   | lazy      | lasso    | lease     |
-|    | Eliza     | Lucy       | alas     | alehouse  | alias    | allies    |
-|    | also      | always     | else     | lees      | less     | lessee    |
-|    | loose     | lose       | loss     | louse     | luce     |           |
-|----+-----------+------------+----------+-----------+----------+-----------|
-| 51 | LOT       | EYELID     | lad      | lathe     | late     | lady      |
-|    | Hollywood | alight     | alit     | allied    | allot    | allowed   |
-|    | allude    | aloud      | although | elate     | elite    | halt      |
-|    | health    | helot      | hilt     | hold      | holiday  | islet     |
-|    | lath      | lead       | let      | lid       | lido     | light     |
-|    | load      | loath      | loot     | loud      | lout     | lute      |
-|    | old       | wallet     | wealth   | wild      |          |           |
-|----+-----------+------------+----------+-----------+----------+-----------|
-| 52 | LANE      | LION       | lawn     | lean      | lien     | line      |
-|    | Halloween | alien      | alone    | hellion   | loan     | loin      |
-|    | loon      | woolen     |          |           |          |           |
-|----+-----------+------------+----------+-----------+----------+-----------|
-| 53 | LIME      | lame       | lama     | lamb      | lima     | lime      |
-|    | Limey     | alum       | elm      | haulm     | helium   | helm      |
-|    | limb      | loam       | loom     |           |          |           |
-|----+-----------+------------+----------+-----------+----------+-----------|
-| 54 | LAIR      | LYRE       | layer    | lawyer    | leer     | liar      |
-|    | Holy-Year | allure     | healer   | holler    | lorry    | lower     |
-|    | lure      | oiler      | whaler   |           |          |           |
-|----+-----------+------------+----------+-----------+----------+-----------|
-| 55 | LILY      | lisle      | loyal    | lowly     | Loyola   | loll      |
-|    | Walhalla  | hallelujah | holy-oil | hula-hula | ill-will | lolly     |
-|    | lull      | lulu       | oil-well | whale-oil |          |           |
-|----+-----------+------------+----------+-----------+----------+-----------|
-| 56 | LASH      | LEECH      | latch    | leash     | liege    | ledge     |
-|    | Welsh     | allege     | hellish  | lodge     | loge     | lush      |
-|    | ullage    |            |          |           |          |           |
-|----+-----------+------------+----------+-----------+----------+-----------|
-| 57 | LAKE      | lack       | lackey   | lag       | lac      | league    |
-|    | ailing    | alike      | along    | elk       | hillock  | hollyhock |
-|    | hulk      | ilk        | leak     | leek      | leg      | lick      |
-|    | like      | lock       | loco     | log       | long     | look      |
-|    | low-key   | luck       | lug      | lung      | whaling  |           |
-|----+-----------+------------+----------+-----------+----------+-----------|
-| 58 | LEAF      | WOLF       | lava     | laugh     | leave    | life      |
-|    | alive     | aloof      | elf      | levee     | levy     | live      |
-|    | loaf      | love       | luff     | olive     | welloff  |           |
-|----+-----------+------------+----------+-----------+----------+-----------|
-| 59 | LAP       | WALLABY    | lab      | leap      | lip      | lob       |
-|    | alibi     | alp        | elbow    | elope     | help     | lobby     |
-|    | lobe      | loop       | lop      | lowboy    | wallop   | whelp     |
+|----+-----------+------------+-----------+----------+---------+-----------|
+| 50 | LACE      | Lassie     | lass      | lazy     | lasso   | lease     |
+|    | Eliza     | Lucy       | alas      | alehouse | alias   | allies    |
+|    | also      | always     | else      | lees     | less    | lessee    |
+|    | loose     | lose       | loss      | louse    | luce    |           |
+|----+-----------+------------+-----------+----------+---------+-----------|
+| 51 | LOT       | EYELID     | lad       | lathe    | late    | lady      |
+|    | Hollywood | alight     | alit      | allied   | allot   | allowed   |
+|    | allude    | aloud      | although  | elate    | elite   | halt      |
+|    | health    | helot      | hilt      | hold     | holiday | islet     |
+|    | lath      | lead       | let       | lid      | lido    | light     |
+|    | load      | loath      | loot      | loud     | lout    | lute      |
+|    | old       | wallet     | wealth    | wild     |         |           |
+|----+-----------+------------+-----------+----------+---------+-----------|
+| 52 | LANE      | LION       | lawn      | lean     | lien    | line      |
+|    | Halloween | alien      | alone     | hellion  | loan    | loin      |
+|    | loon      | woolen     |           |          |         |           |
+|----+-----------+------------+-----------+----------+---------+-----------|
+| 53 | LIME      | LLAMA      | lame      | lamb     | lima    | lime      |
+|    | Limey     | alum       | elm       | haulm    | helium  | helm      |
+|    | limb      | loam       | loom      |          |         |           |
+|----+-----------+------------+-----------+----------+---------+-----------|
+| 54 | LAIR      | LYRE       | layer     | lawyer   | leer    | liar      |
+|    | Holy-Year | allure     | healer    | holler   | lorry   | lower     |
+|    | lure      | oiler      | whaler    |          |         |           |
+|----+-----------+------------+-----------+----------+---------+-----------|
+| 55 | LILY      | OIL-WELL   | holy-oil  | Loyola   | lowly   | whale-oil |
+|    | Walhalla  | hallelujah | hula-hula | ill-will | lolly   | loyal     |
+|    | lull      | lulu       |           |          |         |           |
+|----+-----------+------------+-----------+----------+---------+-----------|
+| 56 | LASH      | LEECH      | latch     | leash    | liege   | ledge     |
+|    | Welsh     | allege     | hellish   | lodge    | loge    | lush      |
+|    | ullage    |            |           |          |         |           |
+|----+-----------+------------+-----------+----------+---------+-----------|
+| 57 | LAKE      | hollyhock  | elk       | league   | lug     | lung      |
+|    | ailing    | alike      | along     | hillock  | hulk    | ilk       |
+|    | lac       | lack       | lackey    | lag      | leak    | leek      |
+|    | leg       | lick       | like      | lock     | loco    | log       |
+|    | long      | look       | low-key   | luck     | whaling |           |
+|----+-----------+------------+-----------+----------+---------+-----------|
+| 58 | LEAF      | WOLF       | lava      | olive    | elf     | loaf      |
+|    | alive     | aloof      | laugh     | leave    | levee   | levy      |
+|    | life      | live       | love      | luff     | welloff |           |
+|----+-----------+------------+-----------+----------+---------+-----------|
+| 59 | LAP       | WALLABY    | elbow     | lobe     | lab     | loop      |
+|    | leap      | alibi      | alp       | elope    | help    | lip       |
+|    | lob       | lobby      | lop       | lowboy   | wallop  | whelp     |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 160 170)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[0ff3d0539dd2e9847c075475ddb86c00f3e1343f]:
 :results:
 |----+-------------+----------+----------+----------+---------+----------|
-| 60 | CHESS       | cheese   | chassis  | chase    | chaise  | choice   |
+| 60 | CHESS       | CHEESE   | chassis  | chase    | chaise  | choice   |
 |    | Jaycee      | Jewess   | ages     | ashes    | choose  | joyous   |
 |    | juice       | schuss   | wages    |          |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
-| 61 | JET         | judo     | cheetah  | chateau  | jade    | jetty    |
+| 61 | JET         | JUDO     | cheetah  | chateau  | jade    | jetty    |
 |    | aged        | chat     | cheat    | chit     | chute   | jot      |
 |    | jute        | shad     | shade    | shadow   | sheath  | shed     |
 |    | sheet       | shoot    | shot     | shout    | shut    | washed   |
@@ -3296,17 +3365,17 @@ caches the results).
 |    | Jane        | John     | June     | Shawnee  | chine   | join     |
 |    | shine       | shown    | shun     | widgeon  |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
-| 63 | CHIME       | chamois  | chum     | gem      | gym     | jam      |
+| 63 | CHIME       | CHAMOIS  | chum     | gem      | gym     | jam      |
 |    | Jim         | jamb     | sham     | shame    | shammy  | shim     |
 |    | shimmy      |          |          |          |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
-| 64 | CHAIR       | jar      | sherry   | washer   | usher   | cherry   |
+| 64 | CHAIR       | JAR      | sherry   | washer   | usher   | cherry   |
 |    | Hoosier     | assure   | azure    | char     | cheer   | chore    |
 |    | edger       | hosiery  | jeer     | jury     | osier   | share    |
 |    | shear       | sheer    | shire    | shore    | shower  | sure     |
 |    | wager       |          |          |          |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
-| 65 | JAIL        | chili    | jelly    | jewel    | shell   | shawl    |
+| 65 | JAIL        | CHILI    | jelly    | jewel    | shell   | shawl    |
 |  A | Chile       | July     | agile    | chill    | jolly   | jowl     |
 |    | shall       | shallow  | shill    | shoal    | shyly   | usual    |
 |----+-------------+----------+----------+----------+---------+----------|
@@ -3320,7 +3389,7 @@ caches the results).
 |    | joke        | shack    | shag     | shake    | shako   | shock    |
 |    | shuck       | washing  | watching | wishing  |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
-| 68 | CHEF        | chief    | Chevy    | sheaf    | chaff   | chive    |
+| 68 | CHEF        | CHEVY    | chief    | sheaf    | chaff   | chive    |
 |  D | Java        | Jehovah  | achieve  | chafe    | jayvee  | jiffy    |
 |    | jive        | shave    | shove    | wash-off |         |          |
 |----+-------------+----------+----------+----------+---------+----------|
@@ -3331,78 +3400,78 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 170 180)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[da128b9d471f2b7c6772aae362eb645f5f639dbf]:
 :results:
-|----+---------+-----------+--------+---------+----------+---------|
-| 70 | CASE    | GOOSE     | gas    | kiss    | ox       | eggs    |
-|  F | accuse  | acquiesce | ax     | cause   | causeway | chaos   |
-|    | cozy    | cuss      | gauze  | gaze    | guess    | guise   |
-|    | guys    | hex       | hoax   | quasi   | wax      |         |
-|----+---------+-----------+--------+---------+----------+---------|
-| 71 | CAT     | kit       | kid    | co-ed   | goat     | caddie  |
-|  G | God     | Kate      | acquit | act     | acute    | coat    |
-|    | code    | cot       | cut    | cute    | gaiety   | gait    |
-|    | gat     | gate      | gaudy  | get     | ghetto   | goad    |
-|    | good    | gout      | guide  | kite    | kitty    | quiet   |
-|    | quit    | quite     | quota  | quote   | weekday  | wicked  |
-|    | wicket  |           |        |         |          |         |
-|----+---------+-----------+--------+---------+----------+---------|
-| 72 | CAN     | GUN       | coin   | queen   | cone     | cane    |
-|  H | acne    | again     | agony  | awaken  | canoe    | coon    |
-|    | gain    | gown      | guinea | icon    | keen     | kin     |
-|    | oaken   | wagon     |        |         |          |         |
-|----+---------+-----------+--------+---------+----------+---------|
-| 73 | CAM     | COMB      | acme   | calm    | cameo    | coma    |
-|  I | come    | comma     | gam    | game    | gum      | hokum   |
-|    | oakum   | wigwam    |        |         |          |         |
-|----+---------+-----------+--------+---------+----------+---------|
-| 74 | CAR     | choir     | gear   | curry   | hiker    | hooker  |
-|  J | accrue  | acquire   | acre   | agar    | agree    | anger   |
-|    | care    | carry     | coheir | cohere  | core     | cower   |
-|    | crew    | crow      | cry    | cur     | cure     | eager   |
-|    | eagre   | ecru      | euchre | gory    | grey     | grow    |
-|    | guru    | hugger    | occur  | ogre    | okra     | quarry  |
-|    | queer   | quire     |        |         |          |         |
-|----+---------+-----------+--------+---------+----------+---------|
-| 75 | COAL    | GLUE      | coil   | eagle   | gull     | quill   |
-|  K | Gaul    | call      | claw   | clay    | clew     | clue    |
-|    | collie  | cool      | coolie | equal   | gal      | gale    |
-|    | gall    | galley    | glee   | glow    | goal     | gully   |
-|    | hackle  | haggle    | heckle | kale    | keel     | keyhole |
-|    | kill    | ogle      | quail  | ugly    | weekly   |         |
-|----+---------+-----------+--------+---------+----------+---------|
-| 76 | CAGE    | GAUGE     | cashew | gaucho  | coach    | couch   |
-|  L | cash    | catch     | cache  | cachet  | gash     | gage    |
-|    | gush    | gauche    | ketch  | kedge   | hoggish  | hogwash |
-|    | waggish |           |        |         |          |         |
-|----+---------+-----------+--------+---------+----------+---------|
-| 77 | CAKE    | caulk     | cook   | gong    | king     | cookie  |
-|  M | calk    | cock      | coke   | cacao   | cuckoo   | gag     |
-|    | gangway | gang      | going  | goo-goo | gook     | kaka    |
-|    | kayak   | khaki     | kick   | keg     | quack    | quake   |
-|    | quick   | aching    | agog   |         |          |         |
-|----+---------+-----------+--------+---------+----------+---------|
-| 78 | CUFF    | CAVE      | calf   | cafe    | coffee   | agave   |
-|  N | cough   | cove      | covey  | gaff    | give     | goof    |
-|    | guava   | guff      | guffaw | quaff   |          |         |
-|----+---------+-----------+--------+---------+----------+---------|
-| 79 | CAP     | cob       | cowboy | cab     | guppy    | cube    |
-|  O | cabby   | cape      | coop   | cop     | cope     | copy    |
-|    | cub     | cup       | gab    | gap     | gape     | hang-up |
-|    | hiccup  | keep      | occupy | okapi   | quip     | wickiup |
-|    | wicopy  |           |        |         |          |         |
+|----+---------+-----------+---------+--------+----------+---------|
+| 70 | CASE    | GOOSE     | gas     | kiss   | ox       | eggs    |
+|  F | accuse  | acquiesce | ax      | cause  | causeway | chaos   |
+|    | cozy    | cuss      | gauze   | gaze   | guess    | guise   |
+|    | guys    | hex       | hoax    | quasi  | wax      |         |
+|----+---------+-----------+---------+--------+----------+---------|
+| 71 | CAT     | GOAT      | kit     | kid    | co-ed    | caddie  |
+|  G | God     | Kate      | acquit  | act    | acute    | coat    |
+|    | code    | cot       | cut     | cute   | gaiety   | gait    |
+|    | gat     | gate      | gaudy   | get    | ghetto   | goad    |
+|    | good    | gout      | guide   | kite   | kitty    | quiet   |
+|    | quit    | quite     | quota   | quote  | weekday  | wicked  |
+|    | wicket  |           |         |        |          |         |
+|----+---------+-----------+---------+--------+----------+---------|
+| 72 | CAN     | GUN       | coin    | queen  | cone     | cane    |
+|  H | acne    | again     | agony   | awaken | canoe    | coon    |
+|    | gain    | gown      | guinea  | icon   | keen     | kin     |
+|    | oaken   | wagon     |         |        |          |         |
+|----+---------+-----------+---------+--------+----------+---------|
+| 73 | CAM     | COMB      | acme    | calm   | cameo    | coma    |
+|  I | come    | comma     | gam     | game   | gum      | hokum   |
+|    | oakum   | wigwam    |         |        |          |         |
+|----+---------+-----------+---------+--------+----------+---------|
+| 74 | CAR     | CHOIR     | gear    | curry  | hiker    | hooker  |
+|  J | accrue  | acquire   | acre    | agar   | agree    | anger   |
+|    | care    | carry     | coheir  | cohere | core     | cower   |
+|    | crew    | crow      | cry     | cur    | cure     | eager   |
+|    | eagre   | ecru      | euchre  | gory   | grey     | grow    |
+|    | guru    | hugger    | occur   | ogre   | okra     | quarry  |
+|    | queer   | quire     |         |        |          |         |
+|----+---------+-----------+---------+--------+----------+---------|
+| 75 | COAL    | GLUE      | coil    | eagle  | gull     | quill   |
+|  K | Gaul    | call      | claw    | clay   | clew     | clue    |
+|    | collie  | cool      | coolie  | equal  | gal      | gale    |
+|    | gall    | galley    | glee    | glow   | goal     | gully   |
+|    | hackle  | haggle    | heckle  | kale   | keel     | keyhole |
+|    | kill    | ogle      | quail   | ugly   | weekly   |         |
+|----+---------+-----------+---------+--------+----------+---------|
+| 76 | CAGE    | GAUGE     | cashew  | gaucho | coach    | couch   |
+|  L | cash    | catch     | cache   | cachet | gash     | gage    |
+|    | gush    | gauche    | ketch   | kedge  | hoggish  | hogwash |
+|    | waggish |           |         |        |          |         |
+|----+---------+-----------+---------+--------+----------+---------|
+| 77 | CAKE    | CAULK     | cook    | gong   | king     | cookie  |
+|  M | cock    | coke      | cacao   | cuckoo | gag      | gangway |
+|    | gang    | going     | goo-goo | gook   | kaka     | kayak   |
+|    | khaki   | kick      | keg     | quack  | quake    | quick   |
+|    | aching  | agog      |         |        |          |         |
+|----+---------+-----------+---------+--------+----------+---------|
+| 78 | CUFF    | CAVE      | calf    | cafe   | coffee   | agave   |
+|  N | cough   | cove      | covey   | gaff   | give     | goof    |
+|    | guava   | guff      | guffaw  | quaff  |          |         |
+|----+---------+-----------+---------+--------+----------+---------|
+| 79 | CAP     | COWBOY    | cob     | cab    | guppy    | cube    |
+|  O | cabby   | cape      | coop    | cop    | cope     | copy    |
+|    | cub     | cup       | gab     | gap    | gape     | hang-up |
+|    | hiccup  | keep      | occupy  | okapi  | quip     | wickiup |
+|    | wicopy  |           |         |        |          |         |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 180 190)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[38a6aafffcd07559e740d77c27278d99f8d10f76]:
 :results:
 |----+-----------+---------+----------+---------+----------+-----------|
 | 80 | FACE      | VASE    | fuse     | vise    | visa     | vice      |
@@ -3415,7 +3484,7 @@ caches the results).
 |    | feed      | fete    | feud     | fight   | fit      | food      |
 |    | off-white | ovate   | veto     | void    | vote     | waft      |
 |----+-----------+---------+----------+---------+----------+-----------|
-| 82 | FAN       | phone   | vine     | fawn    | van      | fanny     |
+| 82 | FAN       | PHONE   | vine     | fawn    | van      | fanny     |
 |  R | Vienna    | avenue  | euphony  | even    | fain     | feign     |
 |    | fen       | fin     | fine     | fun     | haven    | heaven    |
 |    | hyphen    | often   | oven     | ovine   | phony    | vain      |
@@ -3441,26 +3510,26 @@ caches the results).
 |    | offal     | oval    | phial    | vail    | valley   | value     |
 |    | veal      | vial    | vile     | volley  | vowel    |           |
 |----+-----------+---------+----------+---------+----------+-----------|
-| 86 | FISH      | fuchsia | fudge    | effigy  | phage    | voyage    |
+| 86 | FISH      | FUCHSIA | fudge    | effigy  | phage    | voyage    |
 |  V | affiche   | fetch   | fichu    | offish  | vetch    | vouch     |
 |----+-----------+---------+----------+---------+----------+-----------|
-| 87 | FIG       | fang    | fog      | fake    | Vogue    | havoc     |
+| 87 | FIG       | FANG    | fog      | fake    | Vogue    | havoc     |
 |  W | evoke     | fag     | foggy    | fogie   | having   | heaving   |
 |    | offing    | vague   | vic      | viewing | waving   | weaving   |
 |----+-----------+---------+----------+---------+----------+-----------|
-| 88 | FIFE      | fief    | five     | viva    | half-off |           |
+| 88 | FIFE      | FIEF    | five     | viva    | half-off |           |
 |  X |           |         |          |         |          |           |
 |----+-----------+---------+----------+---------+----------+-----------|
-| 89 | FOB       | fop     | veep     | VIP     | Phoebe   | phobia    |
+| 89 | FOB       | FOP     | veep     | vip     | Phoebe   | phobia    |
 |  Y | faux-pas  | fib     | half-pay |         |          |           |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 190 195)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[19338dbfd3bba19b2713546fead1ad6f612573cd]:
 :results:
 |----+---------+--------+--------+--------+---------+----------|
 | 90 | BASE    | BUS    | pizza  | bass   | booze   | boss     |
@@ -3498,11 +3567,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 195 200)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[123d8bb9aaf2eecacab81b2306175c154345ed69]:
 :results:
 |----+---------+----------+--------+---------+---------+---------|
 | 95 | BALL    | BELL     | opal   | bowl    | apple   | pillow  |
@@ -3538,11 +3607,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 200 210)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[ad991550974f86f5fd35a6f60e14172cd20fd70f]:
 :results:
 |-----+-------------+--------------+------------+--------------+-------------+----------------|
 | 100 | THESIS      | decease      | decisive   | desist       | disaster    | disease        |
@@ -3589,11 +3658,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 210 220)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[e94db9b3d93dde555149b1da9cf1c7551c37ea8d]:
 :results:
 |-----+-------------+--------------+-------------+------------+------------+-------------|
 | 110 | TIGHTS      | tedious      | toothsome   | tootsy     | deduce     | detest      |
@@ -3632,11 +3701,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 220 230)
 #+END_src
 
-#+RESULTS:
+#+RESULTS[f0fd617bbbec8f6318faadc44d58f1ea8276222f]:
 :results:
 |-----+--------------+-------------+------------+--------------+--------------+------------|
 | 120 | DANCE        | tinsel      | tenacity   | tennis       | tense        | thence     |
@@ -3681,11 +3750,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 230 240)
 #+END_src
 
-#+RESULTS:
+#+RESULTS[3adfea0565ba93646168cdc19def524f01329c66]:
 :results:
 |-----+-------------+------------+--------------+-----------------+--------------+-------------|
 | 130 | THAMES      | Thomas     | teamster     | team-song       | Thames       | theme-song  |
@@ -3729,11 +3798,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 240 245)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[a1783c1dea02425ba337a86e73595bdaeeaac2c8]:
 :results:
 |-----+-----------+-------------+------------+------------+-------------+-------------|
 | 140 | TERRACE   | tricycle    | tea-rose   | thrice     | torso       | thirst      |
@@ -3770,11 +3839,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 245 250)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[db4b580decbd2b942af34aa9282e1b01f2b472e3]:
 :results:
 |-----+-------------+------------+------------+-----------+--------------+------------|
 | 145 | TRAIL       | trial      | trawl      | thrill    | trellis      | trowel     |
@@ -3812,11 +3881,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 250 260)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[de63143e4d093106de61e1f9e31e0ef50d9a0e49]:
 :results:
 |-----+------------+------------+------------+------------+-------------+------------|
 | 150 | TELESCOPE  | tails      | tales      | tools      | tiles       | tallies    |
@@ -3860,11 +3929,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 260 270)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[be031e749f22cae72d4a092092b71f8dd95aec73]:
 :results:
 |-----+-------------+--------------+-------------+--------------+-------------+---------------|
 | 160 | DUCHESS     | tea-chest    | touchstone  | touch-system | digest      | dishes        |
@@ -3897,11 +3966,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 270 280)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[545db9a3be643d37408783f5369c5ca54003d1dd]:
 :results:
 |-----+------------+--------------+-------------+------------+-------------+----------------|
 | 170 | TAXI       | tax          | Texas       | text       | textile     | tongs          |
@@ -3943,11 +4012,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 280 290)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[ecd622a959da04100e3a5c74c393a8da9026df0f]:
 :results:
 |-----+-------------+------------+--------------+----------------+-------------+---------------|
 | 180 | DEVICE      | two-faced  | two-fisted   | two-phase      | thieves     | typhus        |
@@ -3987,11 +4056,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 290 300)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[4cfa40798fc1a56ad14d4a33102efa32fbde57b4]:
 :results:
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
 | 190 | TAPAS       | topsail      | top-sergeant | top-secret    | topside     | topsoil     |
@@ -4036,11 +4105,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 300 310)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[7cd9843c064dbbab957bb987e62056b0ad932851]:
 :results:
 |-----+--------------+---------------+----------------+--------------+----------------+---------------|
 | 200 | GNOSIS       | necessity     | nieces         | noses        | noises         | incisor       |
@@ -4082,11 +4151,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 310 320)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[a0b7efee5d9684f7718e022dd6b1dcaaccf3630f]:
 :results:
 |-----+---------------+-----------------+--------------+--------------+----------------+-------------|
 | 210 | NUDIST        | notice          | Nazi         | nowadays     | no-dice        | antacid     |
@@ -4142,11 +4211,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 320 330)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[d18e1186169e0a6d229e99f2d96b2f0d89a7742b]:
 :results:
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
 | 220 | NONCE          | nonsense       | nonuse        | nainsook      | ananas          | announce          |
@@ -4186,11 +4255,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 330 340)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[29b46b8cb964b31a5d26e3e26ba448cc5ab188fa]:
 :results:
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
 | 230 | GNOMES     | names        | namesake      | nemesis      | numismatist | animosity   |
@@ -4220,11 +4289,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 340 350)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[b8febde0461c8adfe97c39a61d075294c00c77ac]:
 :results:
 |-----+---------------+------------+-------------+-------------+---------------+-------------|
 | 240 | NURSE         | nursery    | neurosis    | nearsighted | honors        | onerous     |
@@ -4260,11 +4329,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 350 360)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[f41d7e7aed6e522ae96b7de331e1ee0f4186a2b1]:
 :results:
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
 | 250 | NELSON      | nails       | nihilist    | annals        | analyze     | awnless      |
@@ -4296,50 +4365,50 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 360   370)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[80c591730bf94b0a0077f00d26121b721f15de1a]:
 :results:
-|-----+--------------+------------+--------------+------------+--------------+-------------|
-| 260 | NATCHEZ      | nauseous   | niches       | notches    | nudges       | hinges      |
-|     | inches       | injustice  | unjust       |            |              |             |
-|-----+--------------+------------+--------------+------------+--------------+-------------|
-| 261 | UNWASHED     | nidget     | notched      | nudged     | gnashed      | enjoyed     |
-|     | inched       | one-shot   | unshod       | unshut     | initiated    |             |
-|-----+--------------+------------+--------------+------------+--------------+-------------|
-| 262 | ENGINE       | nation     | notion       | ancient    | enchant      | engineer    |
-|     | enjoin       | ingenue    | ingenious    | injunction | knee-jointed | ungentle    |
-|     | ungenerous   | unchanged  | unchained    |            |              |             |
-|-----+--------------+------------+--------------+------------+--------------+-------------|
-| 263 | NOTCHMARK    | enjoyment  | inchmeal     | unashamed  |              |             |
-|-----+--------------+------------+--------------+------------+--------------+-------------|
-| 264 | KNEE-JERK    | nature     | notcher      | nudger     | ensure       | enshrine    |
-|     | injury       | insurance  | onager       | on-shore   | unshrinkable | unsure      |
-|     | century      |            |              |            |              |             |
-|-----+--------------+------------+--------------+------------+--------------+-------------|
-| 265 | ENCHILADA    | initial    | unchallenged | unchilled  | unshielded   | unsheltered |
-|     | unusual      |            |              |            |              |             |
-|-----+--------------+------------+--------------+------------+--------------+-------------|
-| 266 | HINGE-JOINT  | unjudged   | un-Jewish    |            |              |             |
-|-----+--------------+------------+--------------+------------+--------------+-------------|
-| 267 | GNASHING     | nudging    | enjoying     | inject     | unchecked    | unshaken    |
-|     | unshackle    |            |              |            |              |             |
-|-----+--------------+------------+--------------+------------+--------------+-------------|
-| 268 | ANCHOVY      | in-a-jiffy | unshaven     | unshifted  | unshuffled   | unshoveled  |
-|     | unchivalrous | unchafable |              |            |              |             |
-|-----+--------------+------------+--------------+------------+--------------+-------------|
-| 269 | HUNCHBACK    | enjoyable  | unshapely    | unship     | unchaperoned | unwashable  |
-|     | wineshop     |            |              |            |              |             |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 260 | NATCHEZ      | nauseous   | niches    | notches      | nudges       | hinges     |
+|     | inches       | injustice  | unjust    |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 261 | UNWASHED     | nidget     | notched   | nudged       | gnashed      | enjoyed    |
+|     | inched       | one-shot   | unshod    | unshut       | initiated    |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 262 | ENGINE       | nation     | notion    | ancient      | enchant      | engineer   |
+|     | enjoin       | ingenue    | ingenious | injunction   | knee-jointed | ungentle   |
+|     | ungenerous   | unchanged  | unchained |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 263 | NOTCHMARK    | enjoyment  | inchmeal  | unashamed    |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 264 | KNEE-JERK    | nature     | notcher   | nudger       | ensure       | enshrine   |
+|     | injury       | insurance  | onager    | on-shore     | unshrinkable | unsure     |
+|     | century      |            |           |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 265 | ANGEL        | ENCHILADA  | initial   | unchallenged | unchilled    | unshielded |
+|     | unsheltered  | unusual    |           |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 266 | HINGE-JOINT  | unjudged   | un-Jewish |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 267 | GNASHING     | nudging    | enjoying  | inject       | unchecked    | unshaken   |
+|     | unshackle    |            |           |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 268 | ANCHOVY      | in-a-jiffy | unshaven  | unshifted    | unshuffled   | unshoveled |
+|     | unchivalrous | unchafable |           |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 269 | HUNCHBACK    | enjoyable  | unshapely | unship       | unchaperoned | unwashable |
+|     | wineshop     |            |           |              |              |            |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 370   380)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[85cc06a8b2bf2bd4da54c500795c0ec5e67d1df2]:
 :results:
 |-----+---------------+---------------+---------------+--------------+--------------+----------------|
 | 270 | inks          | negus         | next          | nexus        | knocks       | annex          |
@@ -4385,11 +4454,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 380   390)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[cf843172a7856b2f63fc446f9746263c36252f69]:
 :results:
 |-----+---------------+-------------+--------------+---------------+--------------+---------------|
 | 280 | naves         | novice      | nephews      | nevus         | envious      | infest        |
@@ -4431,11 +4500,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 390   400)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[801aba0054a4283959dcfc1244201c3872148672]:
 :results:
 |-----+--------------+-------------+-------------+---------------+---------------+--------------|
 | 290 | nabs         | naps        | nibs        | nips          | NBC           | nubs         |
@@ -4471,11 +4540,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 400   410)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[a2abbc5362922dd62b021762c5ce29b0697a48b4]:
 :results:
 |-----+---------------+---------------+-------------+---------------+---------------+-------------|
 | 300 | masseuse      | mesas         | masses      | misses        | misuse        | mosses      |
@@ -4515,11 +4584,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 410   420)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[5b47743b956156e1611669908c16029b0a89d2ed]:
 :results:
 |-----+-----------+------------+-------------+-------------+------------+---------------|
 | 310 | maids     | mats       | mates       | madhouse    | matzo      | meadows       |
@@ -4559,11 +4628,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 420   430)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[6c54899b707eaa226c53f2f335df6bd4558a49d5]:
 :results:
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
 | 320 | manse       | mayonnaise    | manslaughter | mainsail   | menace       | mince       |
@@ -4609,11 +4678,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 430   440)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[e3bd70610842cd84cbef678aaff32b635ae0a4e6]:
 :results:
 |-----+--------------+------------+----------------+---------------+-----------+-------------|
 | 330 | mammas       | maims      | mayhems        | memos         | memsahib  | mimes       |
@@ -4644,11 +4713,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 440   450)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[a4c834e1be3e1b36de02619543b972fc7326a950]:
 :results:
 |-----+-------------+-------------+--------------+------------+------------+------------|
 | 340 | mercenary   | mercer      | mercy        | morass     | morose     | morsel     |
@@ -4686,11 +4755,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 450   460)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[18d472d907fd6b3e101751e5631b06fb11d3c595]:
 :results:
 |-----+--------------+---------------+-------------+--------------+------------+-------------|
 | 350 | MALICE       | homeless      | maelstrom   | mills        | miles      | millisecond |
@@ -4728,11 +4797,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 460   470)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[77fe24aeae831e92de206baf4d49f11e007ce828]:
 :results:
 |-----+-------------+------------+-----------+------------+-------------+----------|
 | 360 | magistrate  | majesty    | majuscule | matches    | images      |          |
@@ -4759,11 +4828,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 470   480)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[c44c9d1cc1e53cdfb58ae1ba08018c920091073e]:
 :results:
 |-----+-------------+--------------+------------+-----------+---------------+-------------|
 | 370 | macassar    | maccus       | magazine   | maxim     | megacycle     | mikes       |
@@ -4795,11 +4864,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 480   490)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[921d89dd46edf3de0d9b3f6af4e71f78d3b75765]:
 :results:
 |-----+------------+--------------+-------------+--------------+--------------+--------------|
 | 380 | mavis      | movies       | moves       | muffs        | Mephisto     | emphasis     |
@@ -4828,11 +4897,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 490   500)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[5284a5b6c1138cd013db488db45e5119ee54e084]:
 :results:
 |-----+------------+--------------+------------+--------------+--------------+-------------|
 | 390 | maps       | mobster      | ambassador | ambuscade    | embassy      | embezzle    |
@@ -4873,11 +4942,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 500   510)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[a4e37265e9c8fe3274c0aed9a228383e64aaf547]:
 :results:
 |-----+--------------+-------------+--------------+---------------+-------------+-----------|
 | 400 | racist       | recess      | resist       | raises        | roses       | horses    |
@@ -4917,63 +4986,63 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 510   520)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[15cb0d76e35ab9a6b7630f4985b78b53996df24d]:
 :results:
-|-----+-------------+------------+------------+-------------+--------------+---------------|
-| 410 | radius      | raticide   | reduce     | righteous   | roadster     | roads         |
-|     | Rhodes      | ritzy      | arduous    | artisan     | artist       | yardstick     |
-|-----+-------------+------------+------------+-------------+--------------+---------------|
-| 411 | radiate     | rat-a-tat  | red-hot    | redoubtable | redhead      | redtop        |
-|     | redwood     | redoubt    | rotate     | rutted      | erudite      | airtight      |
-|     | aridity     | hardwood   | hardhead   | hardtop     | heredity     | irritate      |
-|     | certitude   |            |            |             |              |               |
-|-----+-------------+------------+------------+-------------+--------------+---------------|
-| 412 | rattan      | radiant    | readiness  | redness     | retain       | retinue       |
-|     | red-neck    | red-nose   | roadnet    | rotten      | ruddiness    | rudeness      |
-|     | routine     | ardent     | earthen    | harden      | hearten      | ordain        |
-|     | warden      |            |            |             |              |               |
-|-----+-------------+------------+------------+-------------+--------------+---------------|
-| 413 | radioman    | radium     | radome     | ready-made  | redeem       | roadman       |
-|     | rhythm      | rudiments  | yardman    |             |              |               |
-|-----+-------------+------------+------------+-------------+--------------+---------------|
-| 414 | radar       | rather     | reader     | raider      | redress      | reiterate     |
-|     | retard      | retire     | retort     | retrace     | retract      | retreat       |
-|     | retrieve    | return     | rider      | rioter      | rotary       | Rotarian      |
-|     | rudder      | air-to-air | ardor      | artery      | hairdresser  | hoarder       |
-|     | orator      | order      | wardrobe   | aerodrome   | writer       |               |
-|-----+-------------+------------+------------+-------------+--------------+---------------|
-| 415 | ratline     | rattle     | radial     | readily     | redial       | redolent      |
-|     | redleg      | retail     | retaliate  | retell      | riddle       | ruthless      |
-|     | airedale    | artless    | earthling  | hardly      | heartily     | heartless     |
-|     | heartland   | hurdle     | hurtle     | ordeal      | whortleberry |               |
-|-----+-------------+------------+------------+-------------+--------------+---------------|
-| 416 | radish      | radiation  | retouch    | ruttish     | artichoke    | erudition     |
-|     | hardship    | heritage   | hard-shell | irritation  | yardage      | road-show     |
-|-----+-------------+------------+------------+-------------+--------------+---------------|
-| 417 | radioactive | radiocast  | radiograph | radical     | reading      | redact        |
-|     | redcap      | red-carpet | redcoat    | red-oak     | ridicule     | riding        |
-|     | article     | articulate | earthquake | erratic     | heartache    | wording       |
-|     | writing     | surtax     |            |             |              |               |
-|-----+-------------+------------+------------+-------------+--------------+---------------|
-| 418 | radiophoto  | radio      | wave       | ratfish     | ratify       | redfin        |
-|     | reedfish    | artful     | artifact   | artificial  | heartfelt    | hors-d-oeuvre |
-|     | hurtful     | write-off  | certify    |             |              |               |
-|-----+-------------+------------+------------+-------------+--------------+---------------|
-| 419 | ratable     | rataplan   | ratproof   | redback     | redberry     | redbreast     |
-|     | redouble    | rutabaga   | air-tube   | heartbeat   | heartbreak   | hardpan       |
-|     | hartebeest  | irritable  | yardbird   | wiretap     |              |               |
+|-----+-------------+---------------+------------+-------------+--------------+-----------|
+| 410 | radius      | raticide      | reduce     | righteous   | roadster     | roads     |
+|     | Rhodes      | ritzy         | arduous    | artisan     | artist       | yardstick |
+|-----+-------------+---------------+------------+-------------+--------------+-----------|
+| 411 | radiate     | rat-a-tat     | red-hot    | redoubtable | redhead      | redtop    |
+|     | redwood     | redoubt       | rotate     | rutted      | erudite      | airtight  |
+|     | aridity     | hardwood      | hardhead   | hardtop     | heredity     | irritate  |
+|     | certitude   |               |            |             |              |           |
+|-----+-------------+---------------+------------+-------------+--------------+-----------|
+| 412 | rattan      | radiant       | readiness  | redness     | retain       | retinue   |
+|     | red-neck    | red-nose      | roadnet    | rotten      | ruddiness    | rudeness  |
+|     | routine     | ardent        | earthen    | harden      | hearten      | ordain    |
+|     | warden      |               |            |             |              |           |
+|-----+-------------+---------------+------------+-------------+--------------+-----------|
+| 413 | radioman    | radium        | radome     | ready-made  | redeem       | roadman   |
+|     | rhythm      | rudiments     | yardman    |             |              |           |
+|-----+-------------+---------------+------------+-------------+--------------+-----------|
+| 414 | radar       | rather        | reader     | raider      | redress      | reiterate |
+|     | retard      | retire        | retort     | retrace     | retract      | retreat   |
+|     | retrieve    | return        | rider      | rioter      | rotary       | Rotarian  |
+|     | rudder      | air-to-air    | ardor      | artery      | hairdresser  | hoarder   |
+|     | orator      | order         | wardrobe   | aerodrome   | writer       |           |
+|-----+-------------+---------------+------------+-------------+--------------+-----------|
+| 415 | ratline     | rattle        | radial     | readily     | redial       | redolent  |
+|     | redleg      | retail        | retaliate  | retell      | riddle       | ruthless  |
+|     | airedale    | artless       | earthling  | hardly      | heartily     | heartless |
+|     | heartland   | hurdle        | hurtle     | ordeal      | whortleberry |           |
+|-----+-------------+---------------+------------+-------------+--------------+-----------|
+| 416 | radish      | radiation     | retouch    | ruttish     | artichoke    | erudition |
+|     | hardship    | heritage      | hard-shell | irritation  | yardage      | road-show |
+|-----+-------------+---------------+------------+-------------+--------------+-----------|
+| 417 | radioactive | radiocast     | radiograph | radical     | reading      | redact    |
+|     | redcap      | red-carpet    | redcoat    | red-oak     | ridicule     | riding    |
+|     | article     | articulate    | earthquake | erratic     | heartache    | wording   |
+|     | writing     | surtax        |            |             |              |           |
+|-----+-------------+---------------+------------+-------------+--------------+-----------|
+| 418 | RADIO WAVE  | HORS-D-OEUVRE | radiophoto | ratfish     | ratify       | redfin    |
+|     | reedfish    | artful        | artifact   | artificial  | heartfelt    | hurtful   |
+|     | write-off   | certify       |            |             |              |           |
+|-----+-------------+---------------+------------+-------------+--------------+-----------|
+| 419 | ratable     | rataplan      | ratproof   | redback     | redberry     | redbreast |
+|     | redouble    | rutabaga      | air-tube   | heartbeat   | heartbreak   | hardpan   |
+|     | hartebeest  | irritable     | yardbird   | wiretap     |              |           |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 520   530)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[ab3495aead0f98a670feda6db4b3ef79480138bc]:
 :results:
 |-----+------------+-----------+------------+------------+------------+-------------|
 | 420 | rains      | rancid    | ransack    | ransom     | reigns     | reinsert    |
@@ -5011,11 +5080,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 530   540)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[89a1537eb21ed7109c093a3bd24810c7f0049c89]:
 :results:
 |-----+--------------+-------------+-----------+-----------+------------+-------------|
 | 430 | rams         | reams       | rooms     | remiss    | rhymes     | arms        |
@@ -5052,11 +5121,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 540   550)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[d174c7e8bacaf2f6a78d9735ba4dbca04a540bcc]:
 :results:
 |-----+-------------+--------------+------------+-----------+-------------+-----------|
 | 440 | rehearsal   | roars        | arrears    | errors    | horrors     | warhorse  |
@@ -5086,11 +5155,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 550   560)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[8e6082bb7b3d1aab5b6a9d74d49ed2c2c123e7e4]:
 :results:
 |-----+-------------+-----------+-------------+--------------+-----------+-----------|
 | 450 | rails       | realize   | release     | realest      | realist   | airless   |
@@ -5127,11 +5196,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 560   570)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[b12d123031ca6eeb58184d331769ac16beb0bc78]:
 :results:
 |-----+-------------+---------------+-------------+--------------+-----------+-----------|
 | 460 | rages       | ratios        | regisseur   | register     | rejoice   | riches    |
@@ -5167,11 +5236,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 570   580)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[aa2cd74a0a41a5a8ec0adc890b828d4f9873ca57]:
 :results:
 |-----+--------------+----------------+-------------+------------+-------------+------------|
 | 470 | racks        | rags           | recast      | request    | raucous     | rex        |
@@ -5213,11 +5282,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 580   590)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[4c1a11023e543b542f27c4bbb9ad849f440c52a6]:
 :results:
 |-----+------------+------------+--------------+-------------+-------------+------------|
 | 480 | refuse     | reviews    | revise       | revisit     | airwaves    | harvest    |
@@ -5251,11 +5320,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 590   600)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[32148a9c13eeba2097eda2a1825c3bf7246e7fbb]:
 :results:
 |-----+-----------+------------+-------------+-----------+-------------+----------|
 | 490 | rabies    | repast     | repose      | repost    | rebus       | robust   |
@@ -5298,11 +5367,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 600   610)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[afd3434f9dfc73a73289078f0d253fbd363d8cd3]:
 :results:
 |-----+---------------+---------------+---------------+--------------+-------------+--------------|
 | 500 | lasses        | lassoes       | leases        | lazy-Susan   | losses      | Louis-Seize  |
@@ -5335,11 +5404,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 610   620)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[c6164a8b15d22f31d2a54c99a7689ae42a447486]:
 :results:
 |-----+--------------+--------------+------------+-------------+---------------+------------|
 | 510 | lattice      | lettuce      | ladies     | lads        | lighthouse    | lotus      |
@@ -5382,11 +5451,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 620   630)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[e13dd3cefd24af1fb1eeb55075f4e21b3f4a962f]:
 :results:
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 520 | lance       | lens          | lioness     | linseed    | lonesome  | lunacy        |
@@ -5425,11 +5494,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 630   640)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[26e3f693ef18d349267f9c4f6d5d6b0551ac6aa2]:
 :results:
 |-----+-------------+---------------+---------------+-----------------+------------+-----------|
 | 530 | lambs       | limbs         | limousine     | looms           | low-mass   | almost    |
@@ -5465,11 +5534,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 640   650)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[0ed70e94da78288986021a36214e319135911ac7]:
 :results:
 |-----+-------------+-------------+---------------+-------------+-------------+-------------|
 | 540 | larceny     | liars       | lawyers       | lower-house | walrus      | wheelhorse  |
@@ -5502,11 +5571,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 650   660)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[6106a8df736f71fb301fdc4632ece6817c773f14]:
 :results:
 |-----+-------------+-------------+--------------+--------------+----------------+------------|
 | 550 | lawless     | lilies      | lowliest     | lulls        | lulus          | Allhallows |
@@ -5534,11 +5603,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 660   670)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[2f1cd8182101789d776e3f7746e48e2e99f77bb2]:
 :results:
 |-----+-------------+-------------+---------------+-------------+-------------+-------------|
 | 560 | latches     | lodges      | loges         | loggias     | legislator  | logistics   |
@@ -5567,11 +5636,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 670   680)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[c1d0027db801322cdf27e4eb96fb8ca9cf64bded]:
 :results:
 |-----+-----------------+-------------+------------+-------------+------------+------------------|
 | 570 | laxative        | laxity      | legacy     | legs        | locks      | looks            |
@@ -5612,11 +5681,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 680   690)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[ff44ada51a40160d9cdd83803f97f4876a396589]:
 :results:
 |-----+--------------+--------------+------------+-----------------+---------------+--------------|
 | 580 | laughs       | layoffs      | leaves     | levies          | lives         | lifesaver    |
@@ -5656,11 +5725,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 690   700)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[c167c8659ea0f0aff3260e6743293159d22aa1ef]:
 :results:
 |-----+-------------+----------------+--------------+------------+-------------+-----------|
 | 590 | labs        | laps           | lapse        | lips       | loops       | lopsided  |
@@ -5697,11 +5766,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 700   710)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[fbf52d5ab1a6cb6120e8779b083d481fb4e6341b]:
 :results:
 |-----+--------------+----------------+---------------+--------------+-------------+------------|
 | 600 | chases       | cheeses        | choices       | jazzist      | Jesus       | juices     |
@@ -5734,11 +5803,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 710   720)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[34325c527c864c7936d861c82d35bca3f6f73693]:
 :results:
 |-----+-------------+------------+------------+---------------+-----------+-------------|
 | 610 | chiteaus    | jets       | jetsam     | jettison      | Judas     | shades      |
@@ -5777,11 +5846,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 720   730)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[ece1875ac4969d939a6607928c12d9bd9c3ccc74]:
 :results:
 |-----+-------------+--------------+------------+--------------+------------+------------|
 | 620 | chance      | chains       | chancellor | chanson      | Chinese    | genesis    |
@@ -5821,50 +5890,50 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 730   740)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[0e5bd9f4ac5fc74e0199320c60642640ad2c7774]:
 :results:
-|-----+------------+-------------+-------------+-------------+------------+-----------|
-| 630 | chemise    | chimes      | chums       | gems        | James      | jams      |
-|     | shames     | shamus      |             |             |            |           |
-|-----+------------+-------------+-------------+-------------+------------+-----------|
-| 631 | geometry   | jammed      | jamwood     | jimdandy    | jimmyweed  | ashamed   |
-|     | age-mate   |             |             |             |            |           |
-|-----+------------+-------------+-------------+-------------+------------+-----------|
-| 632 | chimney    | chow-mein   | G-man       | Gemini      | geminate   | gymnasium |
-|     | gymnast    | shaman      | showman     | ashman      | hegemony   | hatchman  |
-|     | hush-money | wash-woman  | watchman    |             |            |           |
-|-----+------------+-------------+-------------+-------------+------------+-----------|
-| 633 | Jemima     | gym-master  | jam-maker   | show-member |            |           |
-|-----+------------+-------------+-------------+-------------+------------+-----------|
-| 634 | chimer     | chimere     | gemmary     | jammer      | shamir     | shammer   |
-|     | shamrock   | shimmer     | shomer      |             |            |           |
-|-----+------------+-------------+-------------+-------------+------------+-----------|
-| 635 | chummily   | gemlike     | gemmologist | gemmule     | gym-hall   | schmaltz  |
-|     | shameless  | Ishmael     |             |             |            |           |
-|-----+------------+-------------+-------------+-------------+------------+-----------|
-| 636 | gemmieeous | gemmation   | gym-shoe    | Jamshid     | jimjams    | shim-sham |
-|-----+------------+-------------+-------------+-------------+------------+-----------|
-| 637 | chiming    | gemming     | gimcrack    | gymkhana    | Jamaica    | jamming   |
-|     | jamoke     | shoemaker   | watchmaker  | yashmak     |            |           |
-|-----+------------+-------------+-------------+-------------+------------+-----------|
-| 638 | gem-fruit  | gemmiferous | shamefaced  | shamefast   | shameful   | sham-feed |
-|     | chamfer    | chamfron    |             |             |            |           |
-|-----+------------+-------------+-------------+-------------+------------+-----------|
-| 639 | chamber    | champagne   | champion    | champignon  | chimpanzee | chump     |
-|     | jambeau    | jambalaya   | jambone     | jam-pack    | jam-up     | jamboree  |
-|     | jumbo      | jumble      | jump        | shambles    | shampoo    |           |
+|-----+------------+------------+-------------+-------------+------------+-----------|
+| 630 | chemise    | chimes     | chums       | gems        | James      | jams      |
+|     | shames     | shamus     |             |             |            |           |
+|-----+------------+------------+-------------+-------------+------------+-----------|
+| 631 | geometry   | jammed     | jamwood     | jimdandy    | jimmyweed  | ashamed   |
+|     | age-mate   |            |             |             |            |           |
+|-----+------------+------------+-------------+-------------+------------+-----------|
+| 632 | chimney    | chow-mein  | G-man       | Gemini      | geminate   | gymnasium |
+|     | gymnast    | shaman     | showman     | ashman      | hegemony   | hatchman  |
+|     | hush-money | wash-woman | watchman    |             |            |           |
+|-----+------------+------------+-------------+-------------+------------+-----------|
+| 633 | Jemima     | gym-master | jam-maker   | show-member |            |           |
+|-----+------------+------------+-------------+-------------+------------+-----------|
+| 634 | chimer     | chimere    | gemmary     | jammer      | shamir     | shammer   |
+|     | shamrock   | shimmer    | shomer      |             |            |           |
+|-----+------------+------------+-------------+-------------+------------+-----------|
+| 635 | chummily   | gemlike    | gemmologist | gemmule     | gym-hall   | schmaltz  |
+|     | shameless  | Ishmael    |             |             |            |           |
+|-----+------------+------------+-------------+-------------+------------+-----------|
+| 636 | gemmieeous | gemmation  | gym-shoe    | Jamshid     | jimjams    | shim-sham |
+|-----+------------+------------+-------------+-------------+------------+-----------|
+| 637 | chiming    | gemming    | gimcrack    | gymkhana    | Jamaica    | jamming   |
+|     | jamoke     | shoemaker  | watchmaker  | yashmak     |            |           |
+|-----+------------+------------+-------------+-------------+------------+-----------|
+| 638 | SHAM-FRUIT | CHAMFER    | gem-fruit   | gemmiferous | shamefaced | shamefast |
+|     | shameful   | sham-feed  | chamfron    |             |            |           |
+|-----+------------+------------+-------------+-------------+------------+-----------|
+| 639 | chamber    | champagne  | champion    | champignon  | chimpanzee | chump     |
+|     | jambeau    | jambalaya  | jambone     | jam-pack    | jam-up     | jamboree  |
+|     | jumbo      | jumble     | jump        | shambles    | shampoo    |           |
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 740   750)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[f37b47eb77f0c3c914ac6d89da9efe3e06a3a68b]:
 :results:
 |-----+-----------+-------------+--------------+-------------+-----------+-------------|
 | 640 | chairs    | cherries    | chores       | gyroscope   | gyrus     | jars        |
@@ -5905,11 +5974,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 750   760)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[7ad8fefdd9c619becb70ba5b154c13fe39d9614e]:
 :results:
 |-----+-------------+-------------+------------+--------------+---------------+------------|
 | 650 | chalice     | chills      | jalousie   | jealousy     | jailhouse     | jewels     |
@@ -5944,11 +6013,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 760   770)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[567cee7a13766572111993284335c717dad74b4f]:
 :results:
 |-----+-----------------+-------------+-------------+--------------+------------+--------------|
 | 660 | cha-chas        | chiches     | chi-chis    | cicisbeo     | joy-juice  | joshes       |
@@ -5976,11 +6045,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 770   780)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[d15401a2fd83ebab2a6a948f8c44f95c7c754fe2]:
 :results:
 |-----+-----------------+-------------+-------------+--------------+------------+-------------|
 | 670 | checks          | checkstones | checkstrap  | cheeks       | chicks     | jackass     |
@@ -6023,11 +6092,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 780   790)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[7b0784668280bde1b70a73cb7a256bd554b0eaec]:
 :results:
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 680 | chafes             | chauffeuse | chefs        | chiefs      | chives     | geophysics    |
@@ -6061,11 +6130,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 790   800)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[40e8467bd5b60b1ba1a754b1d301ab1e36c1c94e]:
 :results:
 |-----+--------------+-------------+-------------+-------------+-------------+------------|
 | 690 | chaps        | chapstick   | chips       | chops       | chopsuey    | chophouse  |
@@ -6105,11 +6174,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 800   810)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[5ffbc3767ae420d71385bafc07b55154c1fe502a]:
 :results:
 |-----+--------------+---------------+-------------------+------------+----------------+-------------|
 | 700 | cases        | causes        | cusses            | gases      | gazes          | guesses     |
@@ -6155,11 +6224,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 810   820)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[a8f7a4c7bd4ed04e4702679ab0d87bcbcecbbe05]:
 :results:
 |-----+------------+--------------+-------------+-------------+---------------+---------------|
 | 710 | cats       | catsup       | catastrophe | coats       | caddies       | codes         |
@@ -6204,11 +6273,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 820   830)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[df3acb00d212aac23df00a3dbbf3bc015e167c12]:
 :results:
 |-----+---------------+--------------+---------------+------------+--------------+-------------|
 | 720 | cancel        | cancer       | coincidence   | conceal    | concede      | conceit     |
@@ -6254,11 +6323,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 830   840)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[58e9d1d3b37f784b9f0a4e7ac94154119f7ba849]:
 :results:
 |-----+---------------+-------------+------------+------------+------------+-------------|
 | 730 | cameos        | chemist     | comestible | combs      | commas     | commissary  |
@@ -6298,11 +6367,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 840   845)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[6613741de4882694d598cc2a7ee034ec55b66f4b]:
 :results:
 |-----+-----------+-----------+---------------+------------+------------+-----------|
 | 740 | caress    | coarse    | correspond    | corsage    | corset     | course    |
@@ -6342,11 +6411,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph    845 850)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[c9bf9d997653f59a6a5a6ae694e36ea3976d9c9b]:
 :results:
 |-----+-------------+------------+------------+-------------+-------------+--------------|
 | 745 | carryall    | careless   | carol      | coral       | corral      | crawl        |
@@ -6379,11 +6448,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 850   860)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[482375521f818730b674ffab0275515954f05add]:
 :results:
 |-----+-------------+------------+--------------+--------------+-------------+--------------|
 | 750 | calls       | calcium    | callous      | clasp        | class       | clause       |
@@ -6438,11 +6507,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 860   870)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[94cf09e7bda5485cb34bdc9579b193484382d759]:
 :results:
 |-----+------------+-------------+-------------+------------+--------------+------------|
 | 760 | cages      | caches      | catches     | cautious   | coaches      | couches    |
@@ -6474,11 +6543,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 870   880)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[200be07f97c2a6f040a4607f75cb7737f47e35ae]:
 :results:
 |-----+------------+----------------+----------------+--------------+--------------+-------------|
 | 770 | cakes      | caucus         | coax           | coexist      | cox          | cooks       |
@@ -6519,11 +6588,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 880   890)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[28bc1b2f2f6f88f4413315c1d23beaf727a35f11]:
 :results:
 |-----+-----------------+---------------+--------------+-----------+-------------+--------------|
 | 780 | cafes           | calves        | cavascope    | caves     | coffeehouse | coifs        |
@@ -6556,11 +6625,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 890   900)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[1c9b08f0085e815413ccb49ef18991dd9e545826]:
 :results:
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 790 | cabs        | caboose    | capacity   | capes      | capsize    | capstan     |
@@ -6600,11 +6669,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 900   910)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[da7b2faecf47653827f98479010a162d7038fb86]:
 :results:
 |-----+-------------+----------------+---------------+------------------+-----------------+--------------|
 | 800 | faces       | face-saving    | fezzes        | fusses           | phases          | physicist    |
@@ -6644,11 +6713,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 910   920)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[6dd844cdfa6a504055ca95d7fc2ba3d75a665102]:
 :results:
 |-----+------------+--------------+--------------+------------+----------------+----------------|
 | 810 | fatso      | fates        | feats        | feuds      | fights         | fetus          |
@@ -6688,11 +6757,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 920   930)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[d8d42c195bd2df7c31669fa6a442b74704fa8234]:
 :results:
 |-----+-------------+------------+------------+---------------+-------------+-------------|
 | 820 | fancy       | fence      | fiance     | finesse       | fines       | fins        |
@@ -6731,11 +6800,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 930   940)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[f1ca9931c30a6dc8228b9476c3b80522d01b95c4]:
 :results:
 |-----+------------+-----------------+----------------+--------------+-------------+-----------|
 | 830 | fames      | fameuse         | famous         | famose       | femcee      | foams     |
@@ -6767,11 +6836,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 940   950)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[930ffa4f552c7432501e4e7e2a7d66cb6c086a58]:
 :results:
 |-----+------------+--------------+-----------+------------+------------+--------------|
 | 840 | farce      | fierce       | firehouse | first      | force      | forest       |
@@ -6832,11 +6901,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 950   960)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[581b28e7a8532a248c0c2055f352d600d39b9b13]:
 :results:
 |-----+-------------+----------------+--------------+------------+-------------+-----------|
 | 850 | fallacy     | FALSE          | felicitate   | fail-safe  | fleece      | fleas     |
@@ -6889,11 +6958,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 960   970)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[d2ca2ee3e64f6cff876e8e12c75290106e94de0f]:
 :results:
 |-----+-------------+--------------+----------------+--------------+------------+-------------|
 | 860 | fascist     | fatuous      | fishes         | fish-house   | vicious    | vouchsafe   |
@@ -6931,11 +7000,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 970   980)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[e58ee8b9e499204e432307702baae6a092427fdb]:
 :results:
 |-----+------------+-------------+--------------+-------------+-------------+-------------|
 | 870 | facsimile  | fakes       | fix          | figs        | focsle      | focus       |
@@ -6977,11 +7046,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 980   990)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[7e136adf34bd98be7c5ae7a74aceb5c6eb99797f]:
 :results:
 |-----+-------------+--------------+-------------+---------------+--------------+----------------|
 | 880 | fauvism     | fives        | fivesome    | fivesome      | five-spot    | five-star      |
@@ -7014,11 +7083,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 990   1000)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[7c478412f5cf10df2103e4945b667c9ea47a108e]:
 :results:
 |-----+------------+------------+--------------+-------------+-----------+-------------|
 | 890 | fibs       | fobs       | fibster      | fops        | phoebes   | Phoebus     |
@@ -7053,11 +7122,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1000  1010)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[88e078c18a5117b5e09e89565d3ce6bfdcc22984]:
 :results:
 |-----+---------------+---------------+------------+-------------+------------+-------------|
 | 900 | paces         | passes        | pauses     | pieces      | Pisces     | possess     |
@@ -7103,11 +7172,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph  1010 1020)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[ad7b67621a4622c4f05125ec30a29f1cf7934a66]:
 :results:
 |-----+--------------+--------------+-------------+------------+-------------+------------|
 | 910 | patsy        | peau-de-soie | pedestal    | pedestrian | poetess     | pizza      |
@@ -7156,11 +7225,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1020 1030)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[e3d6bc4e8c27925baf5402db82a91520423a9b79]:
 :results:
 |-----+------------+--------------+-------------+-------------+---------------+-------------|
 | 920 | panacea    | pans         | pains       | pansy       | pence         | pencil      |
@@ -7210,11 +7279,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1030 1040)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[93c1b5de386ad0eb51eee0f0a9a1779bf7bdad36]:
 :results:
 |-----+---------------+----------------+-------------+-----------+------------+-----------|
 | 930 | palmist       | paymaster      | poems       | pomace    | pomes      | pumice    |
@@ -7252,11 +7321,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1040 1045)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[622a7c3515fcd21fb115f8e41e21c105ff805757]:
 :results:
 |-----+-------------+-----------+-----------+-------------+-------------+--------------|
 | 940 | parasite    | parasol   | parcel    | Paris       | parson      | perceive     |
@@ -7294,11 +7363,11 @@ caches the results).
 |     | bearer      | borer     | borrower  | brewer      | briar       | uproar       |
 :end:
 
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1045 1050)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[77c679776bf83a3593718e9a9441973352cf5965]:
 :results:
 |-----+------------+---------------+-------------+------------+--------------+-------------|
 | 945 | parallel   | paralyze      | parlay      | parley     | parliament   | parlor      |
@@ -7339,11 +7408,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1050 1060)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[0e19f5fd74b01eff5f2cdcf0ed43c4bb8e363b63]:
 :results:
 |-----+------------+------------+--------------+-----------+-----------+-------------|
 | 950 | palace     | pals       | place        | placebo   | placid    | plasma      |
@@ -7405,11 +7474,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1060 1070)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[fab1d74393bf72c2aad56c9a8d5d56261b483407]:
 :results:
 |-----+-------------+-------------+----------------+------------+-------------+-------------|
 | 960 | pachisi     | patches     | peaches        | pitches    | pouches     | poaches     |
@@ -7450,11 +7519,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1070 1080)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[4acd335885aad19ce769fff0171b2666b0e85206]:
 :results:
 |-----+------------+--------------+-------------+------------+------------+----------------|
 | 970 | packs      | pax          | PX          | Picasso    | pikes      | pigskin        |
@@ -7503,11 +7572,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1080 1090)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[1710c594b1a7995e48a5282be15605919cac0c72]:
 :results:
 |-----+-----------+------------+------------+------------+-------------+------------|
 | 980 | paves     | pavestone  | payoffs    | peeves     | puffs       | beefs      |
@@ -7542,11 +7611,11 @@ caches the results).
 :end:
 
 \clearpage
-#+begin_src clojure :exports results :results verbatim drawer output
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1090 1101)
 #+end_src
 
-#+RESULTS:
+#+RESULTS[8b58d361756a71cd492fc7426b399a72c59335c4]:
 :results:
 |------+--------------+------------+------------+--------------+------------+------------|
 |  990 | papacy       | papistry   | papoose    | pip-squeak   | poppies    | puppies    |

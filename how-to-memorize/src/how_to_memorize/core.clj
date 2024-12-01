@@ -1249,45 +1249,49 @@
 
            '(100079
              "SKIP"
+             "SKIPPER"
              "scab"
              "scoop"
              "scope"
              "ski-boot"
-             "icecap"
 
-             "skeptic"
-             "squib"
-             "squabble"
              "escapade"
              "escape"
              "housekeeper"
+             "icecap"
+             "skeptic"
+             "ski-boat"
+             "squabble"
+             "squib"
              )
 
            '(100080
-             "SUFISM"
-             "sophist"
-             "saves"
-             "suffice"
-             "suffuse"
+             "SAVES"
+             "CIVVIES"
              "housewives"
+             "sophist"
+             "sufism"
+             "suffice"
+
+             "suffuse"
              )
 
            '(100081
              "SEAFOOD"
-             "Soviet"
+             "SOVIET"
              "swift"
              "safe-deposit"
-             "sea-fight"
              "sift"
-
              "safety"
+
+             "sea-fight"
              "soft"
              )
 
            '(100082
              "SIPHON"
+             "SOUVENIR"
              "Savannah"
-             "souvenir"
              "sea-fan"
              "housephone"
              "suaveness"
@@ -1297,18 +1301,18 @@
 
            '(100083
              "SOPHOMORE"
+             "SEAFOAM"
              "sea-vampire"
-             "seafoam"
              "suffumigate"
              )
 
            '(100084
              "SAPPHIRE"
+             "SUFFRAGETTE"
              "safari"
              "sphere"
              "zephyr"
              "sovereign"
-             "suffragette"
 
              "cipher"
              "saffron"
@@ -1323,8 +1327,8 @@
 
            '(100085
              "ASPHALT"
+             "SOUFFLE"
              "seafowl"
-             "souffle"
              "safflower"
              "ice-floe"
              "swivel"
@@ -1338,43 +1342,47 @@
 
            '(100086
              "SAVAGE"
+             "SAWFISH"
              "icefish"
              "housewifish"
-             "sawfish"
              "sufficient"
              "safe-edge"
              )
 
            '(100087
              "ESOPHAGUS"
+             "SAFECRACKER"
              "suffocate"
              "civic"
              "safeguard"
              "saving"
-             "safe-conduct"
 
+             "safe-conduct"
              "savoy-cabbage"
              "suffix"
              )
 
            '(100088
              "SAFE-HAVEN"
+             "SAFE VAULT"
              "save-face"
              "sieve-field"
+             "save-virtue"
              )
 
            '(100089
              "SOFA-BED"
+             "SAFE BOX"
              "sieve-pit"
              "sieva-bean"
              )
 
            '(100090
              "SPACE"
+             "ASBESTOS"
              "spice"
              "spouse"
              "sea-biscuit"
-             "asbestos"
              "soupcon"
 
              "auspices"
@@ -1384,19 +1392,21 @@
 
            '(100091
              "SUBTERRANEAN"
-             "spot"
+             "SPIDERMAN"
+             "Sabbath"
+             "hospital"
+             "houseboat"
              "spade"
+
+
+             "September"
+             "scepter"
+             "soup-tureen"
              "spate"
              "speed"
              "spit"
-
-             "Sabbath"
-             "September"
-             "hospital"
-             "houseboat"
-             "scepter"
-             "soup-tureen"
              "spite"
+             "spot"
              "spout"
              "spud"
              "subdue"
@@ -1404,16 +1414,18 @@
 
            '(100092
              "SPIN"
-             "Spain"
+             "SPAIN"
              "spine"
+             "soybean"
              "spoon"
-             "span"
-             "spend"
+             "spun candy"
 
              "aspen"
              "espionage"
              "has-been"
-             "soybean"
+             "span"
+             "spend"
+             "spun gold"
              "subnormal"
              "subpoena"
              "supine"
@@ -1421,11 +1433,11 @@
 
            '(100093
              "SPAM"
-             "spume"
-             "spumoni"
+             "SPUMONI"
              "submarine"
              "submerge"
              "submontane"
+             "spume"
 
              "subminiature"
              "submit"
@@ -1433,11 +1445,12 @@
 
            '(100094
              "SPAR"
+             "soprano"
              "spear"
              "spire"
              "spare"
              "saber"
-             "zebra"
+
 
              "asparagus"
              "aspire"
@@ -1448,7 +1461,6 @@
              "separate"
              "sober"
              "sopor"
-             "soprano"
              "spark"
              "sparrow"
              "spirit"
@@ -1462,76 +1474,79 @@
              "superb"
              "supper"
              "whisper"
+             "zebra"
              )
 
            '(100095
-             "SPILL"
-             "spell"
-             "spoil"
+             "SEAPLANE"
+             "ZEPPELIN"
              "spool"
+             "spell"
              "spall"
-             "zeppelin"
+             "spill"
 
              "esplanade"
-             "seaplane"
              "sibilant"
              "sowbelly"
              "splash"
              "spleen"
              "splendid"
              "split"
+             "spoil"
              "sublime"
              "supply"
              )
 
            '(100096
-             "SUB-AGE"
-             "speech"
+             "SPEECH"
              "seepage"
              "species"
              "subject"
              "special"
+             "waspish"
 
              "auspicious"
              "seabeach"
              "spatial"
+             "sub-age"
              "subagent"
-             "waspish"
              )
 
            '(100097
-             "SAWBUCK"
-             "speak"
-             "speck"
+             "ICE-PACK"
+             "SPOCK"
+             "ice-pick"
              "spike"
              "spook"
-             "ice-pick"
+             "speck"
 
              "aspect"
              "aspic"
              "ice-bag"
-             "ice-pack"
+             "sawbuck"
+             "speak"
              "spectacle"
              "zip-code"
              )
 
            '(100098
              "SPOOF"
+             "soap-flake"
              "subway-fare"
+             "subway fire"
              "subaverage"
              "subfreezing"
-             "soap-flake"
-             "soupfin"
 
+             "soupfin"
              "spiff"
              )
 
            '(100099
              "SOAPBOX"
+             "SOAP-BUBBLE"
              "sea-poppy"
              "soapbark"
              "soapberry"
-             "soap-bubble"
              "subprincipal"
 
              "house-paper"
@@ -2422,7 +2437,7 @@
 
            '(25
              "NAIL"
-             "narwhal"
+             "NARWHAL"
              "N﻿ile"
              "inlay"
              "in-law"
@@ -2651,7 +2666,7 @@
 
            '(36
              "MATCH"
-             "mash"
+             "MASH"
              "mesh"
              "midge"
              "mush"
@@ -2666,14 +2681,14 @@
 
            '(37
              "MIKE"
-             "mug"
+             "MUG"
              "mica"
              "hammock"
              "mocha"
              "Mecca"
-             "amigo"
 
              "Mohawk"
+             "amigo"
              "amok"
              "among"
              "make"
@@ -2694,14 +2709,14 @@
 
            '(39
              "MAP"
+             "AMP"
              "hemp"
              "hump"
-             "imp"
              "ump"
              "amoeba"
 
-             "amp"
              "imbue"
+             "imp"
              "maybe"
              "mob"
              "mop"
@@ -2743,13 +2758,16 @@
            '(41
              "RAT"
              "ROAD"
+             "rod"
+             "radio"
+             "wraith"
+             "Earth"
 
              "aorta"
              "arid"
              "aright"
              "art"
              "award"
-             "earth"
              "erode"
              "errata"
              "hard"
@@ -2763,7 +2781,6 @@
              "horrid"
              "hurried"
              "hurt"
-             "radio"
              "raid"
              "rate"
              "read"
@@ -2775,7 +2792,6 @@
              "right"
              "riot"
              "rite"
-             "rod"
              "root"
              "rot"
              "route"
@@ -2795,7 +2811,7 @@
 
            '(42
              "RAIN"
-             "rein"
+             "REIN"
              "reign"
              "renew"
              "run"
@@ -2824,7 +2840,7 @@
 
            '(43
              "RAM"
-             "rim"
+             "RIM"
              "rhyme"
              "ream"
              "room"
@@ -2864,7 +2880,7 @@
 
            '(45
              "RAIL"
-             "rally"
+             "RALLY"
              "railway"
              "real"
              "reel"
@@ -2940,27 +2956,24 @@
 
            '(48
              "REEF"
-             "raffia"
-             "review"
+             "rave"
+             "wharf"
+             "roof"
              "revue"
-             "riff"
              "rife"
 
              "aerify"
              "arrive"
              "horrify"
-             "rave"
-             "rive"
-             "roof"
+             "review"
              "rough"
              "rove"
              "ruff"
-             "wharf"
              )
 
            '(49
              "ROPE"
-             "rap"
+             "RAP"
              "rape"
              "reap"
              "repay"
@@ -2985,8 +2998,8 @@
 
            '(50
              "LACE"
+             "Lassie"
              "lass"
-             "lassie"
              "lazy"
              "lasso"
              "lease"
@@ -3074,8 +3087,8 @@
 
            '(53
              "LIME"
+             "LLAMA"
              "lame"
-             "lama"
              "lamb"
              "lima"
              "lime"
@@ -3112,22 +3125,20 @@
 
            '(55
              "LILY"
-             "lisle"
-             "loyal"
-             "lowly"
+             "OIL-WELL"
+             "holy-oil"
              "Loyola"
-             "loll"
+             "lowly"
+             "whale-oil"
 
              "Walhalla"
              "hallelujah"
-             "holy-oil"
              "hula-hula"
              "ill-will"
              "lolly"
+             "loyal"
              "lull"
              "lulu"
-             "oil-well"
-             "whale-oil"
              )
 
            '(56
@@ -3149,20 +3160,22 @@
 
            '(57
              "LAKE"
-             "lack"
-             "lackey"
-             "lag"
-             "lac"
+             "hollyhock"
+             "elk"
              "league"
+             "lug"
+             "lung"
 
              "ailing"
              "alike"
              "along"
-             "elk"
              "hillock"
-             "hollyhock"
              "hulk"
              "ilk"
+             "lac"
+             "lack"
+             "lackey"
+             "lag"
              "leak"
              "leek"
              "leg"
@@ -3175,8 +3188,6 @@
              "look"
              "low-key"
              "luck"
-             "lug"
-             "lung"
              "whaling"
              )
 
@@ -3184,39 +3195,39 @@
              "LEAF"
              "WOLF"
              "lava"
-             "laugh"
-             "leave"
-             "life"
+             "olive"
+             "elf"
+             "loaf"
 
              "alive"
              "aloof"
-             "elf"
+             "laugh"
+             "leave"
              "levee"
              "levy"
+             "life"
              "live"
-             "loaf"
              "love"
              "luff"
-             "olive"
              "welloff"
              )
 
            '(59
              "LAP"
              "WALLABY"
+             "elbow"
+             "lobe"
              "lab"
+             "loop"
              "leap"
-             "lip"
-             "lob"
 
              "alibi"
              "alp"
-             "elbow"
              "elope"
              "help"
+             "lip"
+             "lob"
              "lobby"
-             "lobe"
-             "loop"
              "lop"
              "lowboy"
              "wallop"
@@ -3225,7 +3236,7 @@
 
            '(60
              "CHESS"
-             "cheese"
+             "CHEESE"
              "chassis"
              "chase"
              "chaise"
@@ -3244,7 +3255,7 @@
 
            '(61
              "JET"
-             "judo"
+             "JUDO"
              "cheetah"
              "chateau"
              "jade"
@@ -3293,7 +3304,7 @@
 
            '(63
              "CHIME"
-             "chamois"
+             "CHAMOIS"
              "chum"
              "gem"
              "gym"
@@ -3310,7 +3321,7 @@
 
            '(64
              "CHAIR"
-             "jar"
+             "JAR"
              "sherry"
              "washer"
              "usher"
@@ -3339,7 +3350,7 @@
 
            '((65 "A")
              "JAIL"
-             "chili"
+             "CHILI"
              "jelly"
              "jewel"
              "shell"
@@ -3359,7 +3370,6 @@
              "usual"
              )
 
-
            '((66 "B")
              "JUDGE"
              "HASHISH"
@@ -3376,7 +3386,6 @@
              "shush"
              "wishy-washy"
              )
-
 
            '((67 "C")
              "CHALK"
@@ -3413,8 +3422,8 @@
 
            '((68 "D")
              "CHEF"
+             "CHEVY"
              "chief"
-             "Chevy"
              "sheaf"
              "chaff"
              "chive"
@@ -3430,7 +3439,6 @@
              "shove"
              "wash-off"
              )
-
 
            '((69 "E")
              "CHIP"
@@ -3455,7 +3463,6 @@
              "ship"
              "shop"
              )
-
 
            '((70 "F")
              "CASE"
@@ -3486,10 +3493,10 @@
 
            '((71 "G")
              "CAT"
+             "GOAT"
              "kit"
              "kid"
              "co-ed"
-             "goat"
              "caddie"
 
              "God"
@@ -3569,7 +3576,7 @@
 
            '((74 "J")
              "CAR"
-             "choir"
+             "CHOIR"
              "gear"
              "curry"
              "hiker"
@@ -3673,13 +3680,12 @@
 
            '((77 "M")
              "CAKE"
-             "caulk"
+             "CAULK"
              "cook"
              "gong"
              "king"
              "cookie"
 
-             "calk"
              "cock"
              "coke"
              "cacao"
@@ -3724,8 +3730,8 @@
 
            '((79 "O")
              "CAP"
+             "COWBOY"
              "cob"
-             "cowboy"
              "cab"
              "guppy"
              "cube"
@@ -3806,7 +3812,7 @@
 
            '((82 "R")
              "FAN"
-             "phone"
+             "PHONE"
              "vine"
              "fawn"
              "van"
@@ -3937,7 +3943,7 @@
 
            '((86 "V")
              "FISH"
-             "fuchsia"
+             "FUCHSIA"
              "fudge"
              "effigy"
              "phage"
@@ -3953,7 +3959,7 @@
 
            '((87 "W")
              "FIG"
-             "fang"
+             "FANG"
              "fog"
              "fake"
              "Vogue"
@@ -3975,7 +3981,7 @@
 
            '((88 "X")
              "FIFE"
-             "fief"
+             "FIEF"
              "five"
              "viva"
              "half-off"
@@ -3983,9 +3989,9 @@
 
            '((89 "Y")
              "FOB"
-             "fop"
+             "FOP"
              "veep"
-             "VIP"
+             "vip"
              "Phoebe"
              "phobia"
 
@@ -7341,6 +7347,7 @@
              )
 
            '(265
+             "ANGEL"
              "ENCHILADA"
 
              "initial"
@@ -9150,9 +9157,10 @@
              "writing"
              "surtax")
            '(418
+             "RADIO"
+             "HORS-D-OEUVRE"
+
              "radiophoto"
-             "radio"
-             "wave"
              "ratfish"
              "ratify"
              "redfin"
@@ -9161,7 +9169,6 @@
              "artifact"
              "artificial"
              "heartfelt"
-             "hors-d-oeuvre"
              "hurtful"
              "write-off"
              "certify")
@@ -11528,13 +11535,15 @@
              "watchmaker"
              "yashmak")
            '(638
+             "SHAM-FRUIT"
+             "CHAMFER"
+
              "gem-fruit"
              "gemmiferous"
              "shamefaced"
              "shamefast"
              "shameful"
              "sham-feed"
-             "chamfer"
              "chamfron")
            '(639
              "chamber"
