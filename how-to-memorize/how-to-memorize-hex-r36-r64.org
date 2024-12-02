@@ -70,9 +70,9 @@
 #+LATEX_HEADER: \usepackage{fancyhdr}
 #+LATEX_HEADER: \pagestyle{fancyplain}
 #+LATEX_HEADER: \lhead{}
-#+LATEX_HEADER: \chead{\textbf{(c) B. Beckman +, 2023; Creative Commons Attribution-ShareAlike CC-BY-SA}}
+#+LATEX_HEADER: \chead{\textbf{(c) B. Beckman +, 2025; Creative Commons Attribution-ShareAlike CC-BY-SA}}
 #+LATEX_HEADER: \rhead{}
-#+LATEX_HEADER: \lfoot{(c) B. Beckman +, 2023; CC-BY-SA}
+#+LATEX_HEADER: \lfoot{(c) B. Beckman +, 2025; CC-BY-SA}
 #+LATEX_HEADER: \cfoot{\thepage}
 #+LATEX_HEADER: \rfoot{}
 #+LATEX_HEADER: \usepackage{lineno}
@@ -291,15 +291,15 @@ The premise of everything in this document is
 \end{premise}
 
 We'll find that we can memorize long sequences of numbers in any
-radix (base) by making up phantasmagorias. It's fun, easy, and
-empowering. It requires some effort up front, but the effort is
-incremental. It takes less than 30 minutes for anyone to learn to
-memorize shopping lists of up to 10 items effortlessly. In a
-couple of weeks, anyone can learn to memorize lists of up to 100
-items for effortless recall. That's good enough for a lifetime of
-practical application. The seriously committed can spend a few
-months learning to memorize up to 1000 items for effortless
-recall.
+radix (base) by making up phantasmagorias. I also call them
+/hallucinations/. It's fun, easy, and empowering. It requires some
+effort up front, but the effort is incremental. It takes less than
+30 minutes for anyone to learn to memorize shopping lists of up to
+10 items effortlessly. In a couple of weeks, anyone can learn to
+memorize lists of up to 100 items for effortless recall. That's
+good enough for a lifetime of practical application. The seriously
+committed can spend a few months learning to memorize up to 1000
+items for effortless recall.
 
 # JDC proposes a general theory in Section [[gut-pegs]] that
 # loosely explains the non-linear efforts for these constants, 10,
@@ -631,9 +631,27 @@ effort because I know the 2-digit peg table by heart.
 \clearpage
 * Hexadecimal: GUID & SHA-1
 <<hexadecimal>>
+
+There are several ways we might approach memorizing numbers that
+include alphabetical glyphs or letters, such as numbers in base
+16, 36, and 64. One way would be to mentally picture things that
+go along with the letters, such as an A-frame house like a ski
+chalet for A, and a honey bee for B, and so on. Feel free to
+proceed this way should you like it. I recommend, however, that we
+use the existing 2\nobreakdash-digit codes for the ASCII values of
+the letters. For example, capital A has ASCII code 65, which
+encodes as /jail/, and little A has ASCII code 97, which encodes
+as /back/. We get two phantasmagorias: a jail cell and a back, say
+the back of a prison guard, for one. We'll need the capital-uncial
+distinction for radix-64 but not for hex or radix-36.
+
+There is a price to pay for this choice: we can no longer encode
+65 as /jail/ or 97 as /back/, depending on the radix we're working
+in. We'll have to do something else for them. The examples will
+illustrate the technique.
+
 For mapping /hexits/ (hexadecimal digits), extend the table with
-the ASCII codes for A-F. We'll explain the rationale for some of
-these phantasmagorias later.
+the ASCII codes for A-F.
 
 |-----+---------+-------+----+--------------------------------------------|
 | hex | NATO    | ASCII |    | hallucination                              |
@@ -684,12 +702,15 @@ and their sound-alikes:
 |    | guys        | hex       | hoax     | quasi    | wax      |          |
 :end:
 
-Note that with this encoding, we lose the six pegs for 65
-through 70. You can't memorize a 65 in the text by picturing
-/jail/ because /jail/ means A in hex. You'll have to employ some
-other encoding or grouping of the digits. For example, seeing a
-=265A=, you might think NICHE(26), LAW(5), JAIL(A), or ANGEL(265),
-JAIL(A).
+Remember that 7 can be /ng/ in Furst's system, the one we're
+following, explaining why we get so many \ldots /ing/ words
+for 67.
+
+As noted, we lose the six pegs for 65 through 70. You can't
+memorize a 65 in the text by picturing /jail/ because /jail/ means
+A in hex. We need some other encoding or grouping of the digits.
+For example, seeing a =265A=, we might think NICHE(26), LAW(5),
+JAIL(A), or ANGEL(265), JAIL(A).
 
 \clearpage
 ** Example GUID:
@@ -713,8 +734,8 @@ whole thing, but we'll do that for practice. Start with the pegs:
 
 *Note*:
 
-- Encode 6750 as /chuckle saw/, not as 67 50 /chalk lace/.
-  /Chalk/ decodes as C, not as 67.
+- Encode 6750 as /chuckle saw/, not 67 50 /chalk lace/.
+  /Chalk/ decodes as C, not 67.
 
 In the credit-card example, we worked backwards from the
 picturesque peg /fish/ 86. Here we work backwards from the
@@ -767,21 +788,30 @@ memory), then summon middle-Eastern heavenly dreams.
 <<r36>> Radix-36 is more difficult to find "in the wild" than is
 either hex or Radix-64. I most often see it in randomly generated
 file and directory names because some file systems are not
-case-sensitive and neither is R36. R36 is also found sometimes in
-URLs for encoding queries or other data, despite the fact that
-URLs, except for the domain name, are case-sensitive. Some sites,
+case-sensitive and neither is R36. R36 is also sometimes found in
+URLs for encoding queries or other data. Despite the fact that
+URLs, except for the domain name, are case-sensitive, some sites,
 especially older ones, and even some browsers and query-generation
 machinery, don't adhere to the standard properly. Radix-64 is
-overkill in such circumstances and sucks up alternatives.
+overkill in such circumstances and sucks up alternatives but
+radix-36 is immune to the commonplace nonconformance of the
+internet.
 
 For encoding /rixits/ in R36 (or biscuits in base-36?), I use
 ASCII pegs for the capital letters beyond hex. Find their
-sound-alikes in Section [[all-pegs]]. R36 is case-insensitive, by
-design, so we only need one set of pegs. For Radix-64, we need
-both upper and lower case. The stars in the table below mark
-pegs for the lower case. They help for remembering the ASCII pair
---- upper and lower case --- but they're only pertinent for R64
-(Section [[r64]]).
+sound-alikes in Section [[all-pegs]]. Because R36 is case-insensitive,
+we need only one set of pegs. For Radix-64, we need both upper and
+lower case, so two pegs per letter.
+
+The stars in the table below mark pegs for the lower case. They
+help for remembering the ASCII pair --- upper and lower case ---
+but they're only pertinent for R64 (Section [[r64]]). The numbers in
+parentheses refer to the ordinal number of the letter in the
+alphabet: K is the eleventh letter in the alphabet, and 11 has peg
+/tot/, whom I visualize as Alice of Wonderland. Further
+associations with Hebrew keywords like /mayim/ (water) and
+/nakhash/ (snake) or with playing cards like the club
+jack are given, as explained in section [[daily-practice]].
 
 |---+----------+----+------+---------------------------------------------------|
 | G | GOLF     | 71 | cat  | on the golf cart with my twosome*                 |
@@ -807,7 +837,7 @@ pegs for the lower case. They help for remembering the ASCII pair
 | Z | ZULU     | 90 | base | an Athenian* ball-player at bat on home base      |
 |---+----------+----+------+---------------------------------------------------|
 \clearpage
-** Example Unix Time
+** Example: Unix Time
 
 I found an example here:
 
@@ -927,7 +957,7 @@ C6RD 1/Qn tXQg BV3m pUZq
 
 Pegs first, then try sound-alikes:
 
-| =C3Nz aC1l= | chalk me cuff Athenian, back chalk tea tea          |
+| =C3Nz aC1l= | chalk me cuff Athenian, back chalk tea adhesive     |
 | =ZDI1 NTE5= | base chef cam tea, cuff fare chip law               |
 | =IFi4 CpLS= | cam case diesel ray, chalk titan cage fame          |
 | =hSK/ uUux= | dowser fame coal chime, hotdog fall hotdog dance    |
@@ -939,13 +969,13 @@ Pegs first, then try sound-alikes:
 A tale of overeating:
 
 | =C3Nz aC1l= | CHALK picture, ME adjusting CUFFS, looking down my ATHENIAN nose. |
-|             | Turn my BACK, another CHALK picture; my TIE is TOO tight.         |
+|             | Turn my BACK, another CHALK picture; my TIE is flypaper ADHESIVE. |
 |             |                                                                   |
 | =ZDI1 NTE5= | On BASE, now. A CHEF flips burgers with a CAMSHAFT and brews TEA. |
 |             | COFFEE, FAIR-traded! SHOPPED WELL.                                |
 |             |                                                                   |
 | =IFi4 CpLS= | The CAMSHAFT stirs EGGS, a DAZZLING omelet, ROE and               |
-|             | JACK. I'll be a TWO-TON and KEDGE to bed: HEAVE-HIM!              |
+|             | JACK cheese. I'll be a TWO-TON and KEDGE to bed: HEAVE-HIM!       |
 |             |                                                                   |
 | =hSK/ uUux= | DESSERTS? WHIFF-EM! CALL a dentist, JIM! my TOOTHACHE             |
 |             | JIM! My TOOTHACHE FEELS like a TOOTHACHE, DUNCE!                  |
@@ -992,12 +1022,17 @@ Finally, append the site name, perhaps obfuscated:
 =2Octopu$Ha$8Leg$With0740OVERLEAF=
 
 Anyone who knows your personal salt prefix and your algorithm will
-probably break you. But bots will just see a random hash,
-different for each site you visit. They will have no idea that you
-are even using an algorithm
+break you. But bots will just see a random hash, completely
+different for each site you visit. Remember that hashes are
+supposed to be uniformly distributed. The hash of any input is
+equally likely to be anywhere in the space of hashes. There is no
+way to tell how similar two input texts $A$ and $A'$ are from
+their hashes, even if $A$ and $A'$ differ by no more than one bit.
+Bots will have no way to know that you are even using an algorithm
+to construct your passwords.
 
 \clearpage
-* Daily Practice: ASCII,  Cards, NATO, Hebrew, Dates
+* Daily Practice: ASCII, Cards, NATO, Hebrew, Dates
 <<daily-practice>>
 
 Table 1 exploits the coincidence that there are 52 glyphs in the
@@ -1014,12 +1049,13 @@ TAILLIGHTS, NIAGRA, UNASHAMED, HOTELMAN. Table 2 focuses on some
 hallucinations specifically for dates.
 
 These are for non-leap years only, so not great for computing
-day-of-the-week. I have another method for that (debugged Furst)
-in Section [[day-of-week]].
+day-of-the-week. I have another method for that (the method of
+Furst, debugged) in Section [[day-of-week]].
 
 My daily practice includes another $156==3\times{}52=2\times{}78$
 three columns of hallucinations for the 156 faces of a standard
-Tarot pack, obverse and reverse. See Section [[tarot]].
+Tarot pack, obverse and reverse. See Section [[tarot]]. These are a
+source of vivid mental imagery.
 
 I go down table 1 in my mind when I need to fall asleep. I usually
 get four or five rows before drifting off, so next time through, I
@@ -1030,39 +1066,40 @@ in Sections [[hexadecimal]], [[r36]], and [[r64]]. I include redolance (sense
 of smell) because it's helpful to my memory. It might not work for
 you.
 
-1. ALPHA --- The alpha LION (ARYEH) is in the giant, Disneyland
-   TEACUP. He is in JAIL and the jailer has her BACK turned to us.
-   Smell the dank musty odor of the jail.
+1. ALPHA --- The ALPHA LION (ARYEH) is in the giant, Disneyland
+   TEACUP. He and the teacup are in JAIL and the jailer has her
+   BACK turned to us. A female jailer, being unusual, is easier to
+   remember. Smell the dank musty odor of the jail.
 
 2. BAKER --- is serving a BEEF meal to a JUDGE, who is in full
    magistrate's dress including a powdered wig. The meal is taking
    place in the little BOOTH (BAYIT) on top of NOAH's Ark. Smell
    the food.
 
-3. CHARLIE --- is riding a CAMEL (GAMAL), looking at himself in the ME
-   (mirror) having a hell of a time tying his bow tie
+3. CHARLIE --- is riding a CAMEL (GAMAL), looking at himself in
+   the ME (3, mirror) having a hell of a time tying his bow tie
    while bouncing around on the back of the camel and smoking a
    PIPE. The camel is dragging ropes with colored sidewalk CHALK
    behind him making marks on the ground. Smell the pipe tobacco
    smoke mixed with stinky camel fur and road dust.
 
 4. DELTA --- I am pointing a flashlight (RAY) at a giant,
-   brass-and-wooden DOOR (DALET) looking for a keyhole in the rain
-   and the dark (smell mold and mildew and moss and grass and old
-   machine-oil grease on the door's hardware). I open it up and
-   there is a PhD student who never finished his THESIS so must
-   work as a CHEF. I see, hear, and smell the food he is cooking.
-   Alternatively, a laser pointer is etching the blue lines around
-   the margins of the THESIS paper (such paper with blue lines was
-   common in my day).
+   brass-and-wooden DOOR (DALET), looking for a keyhole in the
+   rain and the dark (smell mold and mildew and moss and grass and
+   old machine-oil grease on the door's hardware). I open it up
+   and there is a PhD student who never finished his THESIS so
+   must work as a CHEF. I see, hear, and smell the food he is
+   cooking. Alternatively, a laser pointer is etching the blue
+   lines around the margins of the THESIS paper (such thesis paper
+   with blue lines was common in my day).
 
 5. ECHO --- Moses is delivering the LAW on mount Sinai. A cop at
    the bottom of the hill (HAR) is holding up his hand: "stop!" In
    between his fingers there are poker CHIPS and pieces of
    Cinnamon TOAST (smell it). ECHO begins with E, which is Greek
-   Eta and looks like the letter H of /hill/ and /HAR/. /Hill/ and
-   /har/ are obvious cognates by a shift of the liquid consonants
-   /l/ and /r/. Smell the desert sands.
+   Eta and looks like the letter H of /hill/ and /HAR/. (/Hill/
+   and /har/ are obvious English-Hebrew cognates by a shift of the
+   liquid consonants /l/ and /r/.) Smell the desert sands.
 
 6. FOXTROT --- Lurch is clenching a pink (VERED) rose in his teeth
    and lantern JAW. He has an open CASE on his lap filled with a
@@ -1079,15 +1116,16 @@ you.
    vibrating as it detects the nearness of water, or gold, because
    I am going to pay my fee in gold.
 
-9. INDIA --- I am in a junkyard full of old Roll-Royce DIESEL
+9. INDIA --- I am in a junkyard full of old Rolls-Royce DIESEL
    (smell it) automobiles with their camshafts poking out of their
-   hoods (there are more Roll-Royces in India than in Britain). In
-   the cockpit of one is a pilot (TAYYAS) up to his neck in PEA
-   soup.
+   hoods (remember via the trivium that there are more
+   Rolls-Royces in India than in Britain). In the cockpit of one
+   Rolls-Royce is a pilot (TAYYAS) up to his neck in PEA soup.
 
-10. JULIET --- with her painted TOES and fingernails is leading a
-    WOOD-SAGE (druid) by the hand (YAD) to his brightly colored
-    racing CAR parked in a clearing in the woods. Smell the forest.
+10. JULIET --- with her painted TOES (10) and fingernails, is
+    leading a WOOD-SAGE (dwarf druid) by the hand (YAD) to his
+    brightly colored racing CAR parked in a clearing in the woods.
+    Smell the forest.
 
 11. KILO --- Alice of Wonderland (a TOT) comes off her throne
     (KISEH) to deliver a kilo of COAL to a troll with huge TUSKS.
@@ -1100,15 +1138,16 @@ you.
     takes a strip of ADHESIVE flypaper and dangles it into a CAGE
     to trap the flies.
 
-13. MIKE --- A pod of orca whales are flipping a Tam-o'Shanter
+13. MIKE --- A pod of orca whales are flipping a Tam-j'Shanter
     (beanie hat with a red pom-pom) in the water (MAYIM). I take a
     TEASPOON of water and drizzle it on a gigantic chocolate CAKE,
-    the size of a five-gallon cylindrical barrel. Smell the seawater.
+    the size of a five-gallon cylindrical paint barrel. Smell the
+    seawater.
 
 14. NOVEMBER --- A snake (NACHASH) is sizzling on a patch of hot
     TAR asphalt (smell it). It has neither arms nor legs, so, of
     course, it is wearing a shirt with CUFFS, plus TIGHTS instead
-    of trousers (absurdity helps the memory).
+    of trousers (absolute absurdity helps the memory).
 
 15. OSCAR --- A TEETOTALER wearing a Carrie-Nation CAP is holding
     an Oscar cinema award. A tiger with a striped TAIL is clenching a
@@ -1117,17 +1156,17 @@ you.
 
 16. PAPA --- is wiping tears from his eyes (AYIN) with a TISSUE.
     He is overcomes with emotion looking at the beautiful face of
-    Liz Taylor, whose picture is held by a giant TITAN robot.
-    Smell Liz's perfume.
+    Liz Taylor as Cleopatra, whose picture is held by a giant
+    TITAN robot. Smell Liz's perfume.
 
-17. QUEBEC --- A very FAT premier of Quebec is lying on a bed of
-    TACKS and turning his face (PANIM) to a TOTEM to pray. Smell
-    the wood and paint of the totem.
+17. QUEBEC --- A very FAT premier of Quebec is lying face-down on
+    a bed of TACKS and turning his face (PANIM) to a TOTEM to
+    pray. Smell the wood and paint of the totem.
 
 18. ROMEO --- has a sparrow (TZIPPOR) with her feet stuck in a
     patch of sticky TAFFY (smell it) on his shoulder. He brings
     her to a TATAR princess, who is being FANNED by several slave
-    girls.
+    girls (or boys!).
 
 19. SIERRA --- I finally get some FAME from publishing my first
     book, TITLED "Sierra." I celebrate with a beer pulled from a
@@ -1136,7 +1175,7 @@ you.
 20. TANGO --- A DEATHWATCH soldier with four arms and three swords
     is carrying Goliath's head (ROSH), which has a giant NOSE.
     Smell the blood. He tangos awkwardly toward a bus, where he
-    mounts the steps and pays his FARE inside.
+    mounts the steps in a palsy and pays his FARE inside.
 
 21. UNIFORM --- A skeleton (SHELED) holding a butterfly net FALLS
     into a bigger NET along with a man-sized HOT-DOG. Smell it.
@@ -1923,7 +1962,10 @@ I blogged this out in December, 2010, starting here:
 
 https://rebcabin.wordpress.com/2010/12/08/take-the-diamonds/
 
-Here is a scrape of the relevant blog posts.
+Here is a scrape of the relevant blog posts. Note that the
+encoding of the cards is totally unrelated to that in the
+[daily-practice] section. Don't get them confused, and pick only
+one if you find it difficult to store two encodings.
 
 *** Take the Diamonds
 
@@ -1968,7 +2010,6 @@ help you lock in the pegs:
 |        |       |        | candy, stuck to your fingers getting all over the card. |
 | D 9    |    19 | tap    | A beer tap spilling beer all over the card, splashing   |
 |        |       |        | on your clothes and making a smelly mess.               |
-|        |       |        |                                                         |
 
 Notice I've added smell to the associations, and even a song. We can
 really take this idea far and involve taste and touch over all the pegs,
