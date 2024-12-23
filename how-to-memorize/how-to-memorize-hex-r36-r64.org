@@ -169,6 +169,10 @@
 \clearpage
 * Change log
 
+- Revision 16
+
+  - Work a little on pegs for the 400's
+
 - Revision 15
 
   - Add caching to the org-babel code.
@@ -220,19 +224,29 @@ Any use of the first person "I," "we," and so on, in the document
 is historical and refers to Brian.
 
 The =.org= source is an org-babel program that produces a PDF
-document. It contains blocks of Clojure code. The code extracts
-strings from the file
+document. It contains blocks of Clojure code, specifically calls
+of the =babomorph= function. The code extracts strings from the
+file
 
 =src/how-to-memorize/core.clj=.
 
 If you want to change the peg words, the ordering of the words,
 the capitalization of the words, the formatting of the tables in
 the PDF document, or anything else about this code, modify that
-=core.clj= file. The results of running all the Clojure code is
-cached in the =.org= file, so if you change the Clojure code, you
-must manually run the affected blocks in the =.org= file by
-removing the =results= blocks and keyboarding =Ctrl-C Ctrl-C= with
-your cursor somewhere inside the block.
+=core.clj= file, =cider jack-in=, and evaluate code via =Ctrl-C
+Ctrl-C=. Read about Clojure, CIDER, and org-babel on the Internet.
+
+The results of running all the Clojure code is cached in the
+=.org= file lest production of the PDF take too long, executing
+dozens of =babomorph= calls. If you change the Clojure code,
+evaluate =core.clj= via =Ctrl-C Ctrl-C=, then manually run the
+affected blocks in the =.org= file by removing the =:results:=
+blocks (or, at least, the cache-hash) and keyboarding =Ctrl-C
+Ctrl-C= (same command, just in the =.org= file) with your cursor
+somewhere inside the =begin_src= or =babomorph= block. Note that
+the =babomorph= commands are off-by-one-hundred, so =(babomorph
+510 520)= builds the table for pegs 410 through 419. This is so we
+can accommodate pegs that begin with zero.
 
 To produce the PDF, you need a full \LaTeX installation, Emacs
 29.1 or later, Clojure 1.10.3 or better (see =project.clj=), and
@@ -244,7 +258,7 @@ warm up the Clojure environment. Run
 
 while visiting the =.org= file in an Emacs buffer to produce a
 =.tex= file and possibly a =.pdf= file. Something went wrong in my
-=tex= integration, so I must run
+recent =tex= integration, so I run
 
 =pdflatex -shell-escape=
 
@@ -5033,49 +5047,49 @@ caches the results).
 
 #+RESULTS[15cb0d76e35ab9a6b7630f4985b78b53996df24d]:
 :results:
-|-----+-------------+---------------+------------+-------------+--------------+-----------|
-| 410 | radius      | raticide      | reduce     | righteous   | roadster     | roads     |
-|     | Rhodes      | ritzy         | arduous    | artisan     | artist       | yardstick |
-|-----+-------------+---------------+------------+-------------+--------------+-----------|
-| 411 | radiate     | rat-a-tat     | red-hot    | redoubtable | redhead      | redtop    |
-|     | redwood     | redoubt       | rotate     | rutted      | erudite      | airtight  |
-|     | aridity     | hardwood      | hardhead   | hardtop     | heredity     | irritate  |
-|     | certitude   |               |            |             |              |           |
-|-----+-------------+---------------+------------+-------------+--------------+-----------|
-| 412 | rattan      | radiant       | readiness  | redness     | retain       | retinue   |
-|     | red-neck    | red-nose      | roadnet    | rotten      | ruddiness    | rudeness  |
-|     | routine     | ardent        | earthen    | harden      | hearten      | ordain    |
-|     | warden      |               |            |             |              |           |
-|-----+-------------+---------------+------------+-------------+--------------+-----------|
-| 413 | radioman    | radium        | radome     | ready-made  | redeem       | roadman   |
-|     | rhythm      | rudiments     | yardman    |             |              |           |
-|-----+-------------+---------------+------------+-------------+--------------+-----------|
-| 414 | radar       | rather        | reader     | raider      | redress      | reiterate |
-|     | retard      | retire        | retort     | retrace     | retract      | retreat   |
-|     | retrieve    | return        | rider      | rioter      | rotary       | Rotarian  |
-|     | rudder      | air-to-air    | ardor      | artery      | hairdresser  | hoarder   |
-|     | orator      | order         | wardrobe   | aerodrome   | writer       |           |
-|-----+-------------+---------------+------------+-------------+--------------+-----------|
-| 415 | ratline     | rattle        | radial     | readily     | redial       | redolent  |
-|     | redleg      | retail        | retaliate  | retell      | riddle       | ruthless  |
-|     | airedale    | artless       | earthling  | hardly      | heartily     | heartless |
-|     | heartland   | hurdle        | hurtle     | ordeal      | whortleberry |           |
-|-----+-------------+---------------+------------+-------------+--------------+-----------|
-| 416 | radish      | radiation     | retouch    | ruttish     | artichoke    | erudition |
-|     | hardship    | heritage      | hard-shell | irritation  | yardage      | road-show |
-|-----+-------------+---------------+------------+-------------+--------------+-----------|
-| 417 | radioactive | radiocast     | radiograph | radical     | reading      | redact    |
-|     | redcap      | red-carpet    | redcoat    | red-oak     | ridicule     | riding    |
-|     | article     | articulate    | earthquake | erratic     | heartache    | wording   |
-|     | writing     | surtax        |            |             |              |           |
-|-----+-------------+---------------+------------+-------------+--------------+-----------|
-| 418 | RADIO WAVE  | HORS-D-OEUVRE | radiophoto | ratfish     | ratify       | redfin    |
-|     | reedfish    | artful        | artifact   | artificial  | heartfelt    | hurtful   |
-|     | write-off   | certify       |            |             |              |           |
-|-----+-------------+---------------+------------+-------------+--------------+-----------|
-| 419 | ratable     | rataplan      | ratproof   | redback     | redberry     | redbreast |
-|     | redouble    | rutabaga      | air-tube   | heartbeat   | heartbreak   | hardpan   |
-|     | hartebeest  | irritable     | yardbird   | wiretap     |              |           |
+|-----+-------------+---------------+------------+--------------+------------+------------|
+| 410 | radius      | raticide      | reduce     | righteous    | roadster   | roads      |
+|     | Rhodes      | ritzy         | arduous    | artisan      | artist     | yardstick  |
+|-----+-------------+---------------+------------+--------------+------------+------------|
+| 411 | radiate     | rat-a-tat     | red-hot    | redoubtable  | redhead    | redtop     |
+|     | redwood     | redoubt       | rotate     | rutted       | erudite    | airtight   |
+|     | aridity     | hardwood      | hardhead   | hardtop      | heredity   | irritate   |
+|     | certitude   |               |            |              |            |            |
+|-----+-------------+---------------+------------+--------------+------------+------------|
+| 412 | rattan      | radiant       | readiness  | redness      | retain     | retinue    |
+|     | red-neck    | red-nose      | roadnet    | rotten       | ruddiness  | rudeness   |
+|     | routine     | ardent        | earthen    | harden       | hearten    | ordain     |
+|     | warden      |               |            |              |            |            |
+|-----+-------------+---------------+------------+--------------+------------+------------|
+| 413 | RADIOMAN    | RHYTHM        | yardman    | radome       | roadman    | radium     |
+|     | ready-made  | redeem        | rudiments  |              |            |            |
+|-----+-------------+---------------+------------+--------------+------------+------------|
+| 414 | RADAR       | RIOTER        | artery     | air-to-air   | aerodrome  | hoarder    |
+|     | Rotarian    | rather        | reader     | raider       | redress    | reiterate  |
+|     | retard      | retire        | retort     | retrace      | retract    | retreat    |
+|     | retrieve    | return        | rider      | rotary       | rudder     | ardor      |
+|     | hairdresser | orator        | order      | wardrobe     | writer     |            |
+|-----+-------------+---------------+------------+--------------+------------+------------|
+| 415 | RADIAL      | HURDLE        | retail     | redolent     | rattle     | redial     |
+|     | airedale    | artless       | earthling  | hardly       | heartily   | heartland  |
+|     | heartless   | ordeal        | ratline    | readily      | redleg     | retaliate  |
+|     | retell      | riddle        | ruthless   | whortleberry |            |            |
+|-----+-------------+---------------+------------+--------------+------------+------------|
+| 416 | RADISH      | RADIATION     | artichoke  | yardage      | road-show  | irritation |
+|     | retouch     | ruttish       | erudition  | hardship     | heritage   | hard-shell |
+|-----+-------------+---------------+------------+--------------+------------+------------|
+| 417 | RADIOACTIVE | RED-CARPET    | earthquake | radical      | redcoat    | article    |
+|     | articulate  | erratic       | heartache  | radiocast    | radiograph | reading    |
+|     | red-oak     | redact        | redcap     | ridicule     | riding     | surtax     |
+|     | wording     | writing       |            |              |            |            |
+|-----+-------------+---------------+------------+--------------+------------+------------|
+| 418 | RADIO WAVE  | HORS-D-OEUVRE | radiophoto | ratfish      | ratify     | redfin     |
+|     | reedfish    | artful        | artifact   | artificial   | heartfelt  | hurtful    |
+|     | write-off   | certify       |            |              |            |            |
+|-----+-------------+---------------+------------+--------------+------------+------------|
+| 419 | HEARTBREAK  | REDBREAST     | heartbeat  | rutabaga     | yardbird   | wiretap    |
+|     | hartebeest  | air-tube      | hardpan    | irritable    | ratable    | rataplan   |
+|     | ratproof    | redback       | redberry   | redouble     |            |            |
 :end:
 
 \clearpage
