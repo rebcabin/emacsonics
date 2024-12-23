@@ -2563,13 +2563,13 @@ every time, as Clojure caches the results).
 \clearpage
 |-----+-----------------+----------------+-------------+--------|
 | 000 | SOY SAUCE       | SASSY SAYING   | assize      |        |
-| 001 | CYST            | siesta         |             |        |
+| 001 | CYST            | SIESTA         |             |        |
 | 002 | CESSNA          | ASSASSIN       | seasoning   | season |
-| 003 | SESAME SEED BUN | ASS'S MANE     |             |        |
+| 003 | SESAME seed bun | ASS'S MANE     |             |        |
 | 004 | SCISSOR         | CAESAR         | ass's reins |        |
-| 005 | C S LEWIS       | SIZZLING STEAK |             |        |
+| 005 | C S LEWIS       | SIZZLING steak |             |        |
 | 006 | SAUSAGE         | SIOUX SAGE     |             |        |
-| 007 | SUZUKI SCOOTER  | SIZING         | siezing     |        |
+| 007 | SUZUKI scooter  | SIZING         | siezing     |        |
 | 008 | SOUSAPHONE      | ASS'S FOAL     |             |        |
 | 009 | SWISS BANK      | ASS'S BEARD    |             |        |
 
