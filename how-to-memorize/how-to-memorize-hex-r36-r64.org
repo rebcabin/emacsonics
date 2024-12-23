@@ -2546,17 +2546,19 @@ because one must pick pegs that don't collide visually with the
 ones already memorized. Picking a new peg means thinking about all
 the others picked so-far. I already have CHAIR for 64 (used all
 the time), so SEAT for 01 and THRONE for 142 are not good ideas
-because they might incorrectly recall 64 at speed.
+for me because they might incorrectly recall 64 at speed.
 
 Most of this this list (except for the double leading zeros) is
-automatically constructed from a file named /core.clj/ deeper in
+automatically constructed from a file named =core.clj= deeper in
 the directory tree of the source repository.
 
 Pick your own pegs from this list, or mark your pegs in ALL CAPS
-in the /core.clj/ file and regenerate the PDF (cider-quit,
-cider-jack-in, org-babel-execute-buffer, org-latex-export-to-pdf;
-you must start with a fresh cider-repl every time, as Clojure
-caches the results).
+in the =core.clj= file, pick four likely ones for the first line,
+sort the rest, and regenerate the PDF (=cider-quit=,
+=cider-jack-in=, =org-babel-execute-buffer=,
+=org-latex-export-to-pdf=; you must either manually evaluate
+=core.clj= via =Ctrl-C Ctrl-C= or start with a fresh cider-repl
+every time, as Clojure caches the results).
 
 \clearpage
 |-----+-----------------+----------------+-------------+--------|
