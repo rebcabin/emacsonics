@@ -5048,20 +5048,20 @@ caches the results).
 #+RESULTS[15cb0d76e35ab9a6b7630f4985b78b53996df24d]:
 :results:
 |-----+-------------+---------------+------------+--------------+------------+------------|
-| 410 | radius      | raticide      | reduce     | righteous    | roadster   | roads      |
-|     | Rhodes      | ritzy         | arduous    | artisan      | artist     | yardstick  |
+| 410 | ARTIST      | ARTISAN       | yardstick  | roadster     | Rhodes     | roads      |
+|     | radius      | raticide      | reduce     | righteous    | ritzy      | arduous    |
 |-----+-------------+---------------+------------+--------------+------------+------------|
-| 411 | radiate     | rat-a-tat     | red-hot    | redoubtable  | redhead    | redtop     |
-|     | redwood     | redoubt       | rotate     | rutted       | erudite    | airtight   |
-|     | aridity     | hardwood      | hardhead   | hardtop      | heredity   | irritate   |
-|     | certitude   |               |            |              |            |            |
+| 411 | RAT-A-TAT   | REDHEAD       | redwood    | hardtop      | erudite    | redoubt    |
+|     | airtight    | aridity       | certitude  | hardhead     | hardwood   | heredity   |
+|     | irritate    | radiate       | red-hot    | redoubtable  | redtop     | rotate     |
+|     | rutted      |               |            |              |            |            |
 |-----+-------------+---------------+------------+--------------+------------+------------|
-| 412 | rattan      | radiant       | readiness  | redness      | retain     | retinue    |
-|     | red-neck    | red-nose      | roadnet    | rotten       | ruddiness  | rudeness   |
-|     | routine     | ardent        | earthen    | harden       | hearten    | ordain     |
-|     | warden      |               |            |              |            |            |
+| 412 | RATTAN      | RED-NECK      | red-nose   | redness      | retinue    | warden     |
+|     | ardent      | earthen       | harden     | hearten      | ordain     | radiant    |
+|     | readiness   | retain        | roadnet    | rotten       | routine    | ruddiness  |
+|     | rudeness    |               |            |              |            |            |
 |-----+-------------+---------------+------------+--------------+------------+------------|
-| 413 | RADIOMAN    | RHYTHM        | yardman    | radome       | roadman    | radium     |
+| 413 | RADIUM      | RADIOMAN      | yardman    | radome       | roadman    | rhythm     |
 |     | ready-made  | redeem        | rudiments  |              |            |            |
 |-----+-------------+---------------+------------+--------------+------------+------------|
 | 414 | RADAR       | RIOTER        | artery     | air-to-air   | aerodrome  | hoarder    |
