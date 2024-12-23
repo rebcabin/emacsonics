@@ -2558,7 +2558,12 @@ sort the rest, and regenerate the PDF (=cider-quit=,
 =cider-jack-in=, =org-babel-execute-buffer=,
 =org-latex-export-to-pdf=; you must either manually evaluate
 =core.clj= via =Ctrl-C Ctrl-C= or start with a fresh cider-repl
-every time, as Clojure caches the results).
+every time, as Clojure caches the results). You may have to
+generate the PDF file manually:
+
+=pdflatex -shell-escape how-to-memorize*.tex=
+
+at least twice to regenerate cross-references correctly.
 
 \clearpage
 |-----+-----------------+----------------+-------------+--------|
