@@ -133,9 +133,9 @@
 # #+STARTUP: latexpreview inlineimages showall
 # #+STARTUP: showall
 
-#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 15
+#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 17
 #+AUTHOR: Brian Beckman with John D. Cook, Ondrej Certik
-#+DATE: 30 Nov 2024
+#+DATE: 27 July 2025
 
 #+BEGIN_SRC elisp :exports none
   (setq org-babel-python-command "python3")
@@ -168,6 +168,13 @@
 : org version: 9.6.6
 \clearpage
 * Change log
+
+This is very much a work-in-progress and nowhere near clean enough
+for publication and distribution.
+
+- Revision 17
+
+  - Introduce PAO in an appendix; Minor maintenance
 
 - Revision 16
 
@@ -223,10 +230,10 @@ the first version before enlisting John and Ondrej to contribute.
 Any use of the first person "I," "we," and so on, in the document
 is historical and refers to Brian.
 
-The =.org= source is an org-babel program that produces a PDF
-document. It contains blocks of Clojure code, specifically calls
-of the =babomorph= function. The code extracts strings from the
-file
+The PDF file is generated from =.org= source via Emacs. The org
+source contains blocks of Clojure code, specifically calls of the
+=babomorph= function, which extracts strings from the following
+Clojure file:
 
 =src/how-to-memorize/core.clj=.
 
@@ -234,19 +241,19 @@ If you want to change the peg words, the ordering of the words,
 the capitalization of the words, the formatting of the tables in
 the PDF document, or anything else about this code, modify that
 =core.clj= file, =cider jack-in=, and evaluate code via =Ctrl-C
-Ctrl-C=. Read about Clojure, CIDER, and org-babel on the Internet.
+Ctrl-C=. If you want to change other aspects of the document,
+modify the =.org= file.
 
 The results of running all the Clojure code is cached in the
-=.org= file lest production of the PDF take too long, executing
-dozens of =babomorph= calls. If you change the Clojure code,
-evaluate =core.clj= via =Ctrl-C Ctrl-C=, then manually run the
-affected blocks in the =.org= file by removing the =:results:=
-blocks (or, at least, the cache-hash) and keyboarding =Ctrl-C
-Ctrl-C= (same command, just in the =.org= file) with your cursor
-somewhere inside the =begin_src= or =babomorph= block. Note that
-the =babomorph= commands are off-by-one-hundred, so =(babomorph
-510 520)= builds the table for pegs 410 through 419. This is so we
-can accommodate pegs that begin with zero.
+=.org= file. If you change the Clojure code, evaluate =core.clj=
+via =Ctrl-C Ctrl-C=, then manually run only the affected blocks in
+the =.org= file by removing the =:results:= blocks (or, at least,
+the cache-hash) and keyboarding =Ctrl-C Ctrl-C= (same command,
+just in the =.org= file) with your cursor somewhere inside the
+=begin_src= or =babomorph= block. Note that the =babomorph=
+commands are off-by-one-hundred, so =(babomorph 510 520)= builds
+the table for pegs 410 through 419. This is so we can accommodate
+pegs that begin with zero.
 
 To produce the PDF, you need a full \LaTeX installation, Emacs
 29.1 or later, Clojure 1.10.3 or better (see =project.clj=), and
@@ -257,12 +264,13 @@ warm up the Clojure environment. Run
 =org-latex-export-to-pdf=
 
 while visiting the =.org= file in an Emacs buffer to produce a
-=.tex= file and possibly a =.pdf= file. Something went wrong in my
-recent =tex= integration, so I run
+=.tex= file and possibly a =.pdf= file.
 
-=pdflatex -shell-escape=
+Something went wrong in my recent =tex= integration, so I run
 
-manually in a side terminal after running
+=pdflatex -shell-escape how-to-memorize-hex-r36-r64.tex=
+
+twice, manually in a side terminal after running
 
 =org-latex-export-to-pdf=
 
@@ -308,12 +316,12 @@ We'll find that we can memorize long sequences of numbers in any
 radix (base) by making up phantasmagorias. I also call them
 /hallucinations/. It's fun, easy, and empowering. It requires some
 effort up front, but the effort is incremental. It takes less than
-30 minutes for anyone to learn to memorize shopping lists of up to
-10 items effortlessly. In a couple of weeks, anyone can learn to
-memorize lists of up to 100 items for effortless recall. That's
-good enough for a lifetime of practical application. The seriously
-committed can spend a few months learning to memorize up to 1000
-items for effortless recall.
+30 minutes for anyone to learn how to memorize shopping lists of
+up to 10 items effortlessly and without writing anything down. In
+a couple of weeks, anyone can learn to memorize lists of up to 100
+items effortlessly. That's good enough for a lifetime of
+practical application. The seriously committed can spend a few
+months learning to memorize up to 1110 items effortlessly.
 
 # JDC proposes a general theory in Section [[gut-pegs]] that
 # loosely explains the non-linear efforts for these constants, 10,
@@ -322,19 +330,18 @@ items for effortless recall.
 \clearpage
 * The Peg System
 
-Many memory techniques, such as the Roman Room system[fn::
-https://artofmemory.com/blog/roman-rooms/] or the
-Person-Action-Object (PAO) system [fn::
-https://artofmemory.com/blog/pao-system/], exploit phantasmagorias
+Many memory techniques, such as the Roman Room system[fn::https://artofmemory.com/blog/roman-rooms/] or the
+Person-Action-Object (PAO) system [fn::https://artofmemory.com/blog/pao-system/], exploit phantasmagorias
 by /indirect/ association to numbers or number sequences. This
-document is about the Mnemonic-Major or Peg system,[fn::
-https://forum.artofmemory.com/t/the-mnemonic-major-system-and-gregg-shorthand-have-the-same-underlying-structure/26339][fn::
+document is primarily about the Mnemonic-Major or Peg system,[fn::https://forum.artofmemory.com/t/the-mnemonic-major-system-and-gregg-shorthand-have-the-same-underlying-structure/26339][fn::
 https://en.wikipedia.org/wiki/Mnemonic_major_system] which makes
 /direct/ and permanent associations.
 
-The primary sources for the peg system are Krill[fn::
-https://folk.ntnu.no/krill/pseudonumerology.htm] and Furst.[fn::
-https://a.co/d/fv1uRmv/]
+My primary sources for the peg system are
+Krill[fn::https://folk.ntnu.no/krill/pseudonumerology.htm]
+and Furst.[fn::https://a.co/d/fv1uRmv/]. Krill calls his system
+/Pseudonumerologic-VIP/, which is a clever way of remembering the
+fundamental pegs 0123456789 by sound: SDNMRLJKVP.
 
 These methods are based on tables of
 
@@ -345,7 +352,7 @@ These methods are based on tables of
   phantasmagorically, and instantly think of the number 68. That's
   1-to-1 correspondence.
 
-- sound-alikes :: fluid, mutable list of mental-images that are
+- sound-alikes :: fluid, mutable lists of mental-images that are
   similar in their consonant sounds to the pegs and in many-to-one
   correspondence to the numbers. 68's "chef" sounds like "chief,"
   "sheaf," "Java," "chaff," amongst others. While 68 always means
@@ -435,21 +442,21 @@ for 32:
 - the peg is in all-caps and in first position; other terms in
   all-caps are recommended alternative pegs
 
-- the first line contains six preferred sound-alikes in preference
+- the first line contains preferred sound-alikes in preference
   order
 
 - the remaining sound-alikes appear in alphabetical order
 
 "MAN" is the peg: it is /equal/ to 32 in your mind. I visualize
-Superman flying out of the phone booth or arriving to Save the
-Day.
+Superman flying out of the phone booth.
 
 The Sound-Alikes help to create longer phantasmagorias from longer
-strings of numbers by devising a story. For instance, 327685 is
-Superman (32) leaping up to catch (76) a fly (85). With practice,
-one gets fast. Eran Katz often opens his lectures with a stunt
-wherein he memorizes hundreds of digits as quickly as the audience
-calls them out and his assistant writes them down.
+strings of numbers by devising a story (though see Appendix [[pao]]).
+For instance, 327685 is Superman (32) leaping up to catch (76) a
+fly (85). With practice, one gets fast. Eran Katz often opens his
+lectures with a stunt wherein he memorizes hundreds of digits as
+quickly as the audience calls them out and his assistant writes
+them down.
 
 ** Old 3-Digit System
 
@@ -496,28 +503,30 @@ have the following codes:
 
 *** TODO Exceptions
 
-/Seamless/ and /similar/ are apparent exceptions to the rule
-because they do not comprise exactly three sounds, else they would
-be, for instance, /malice/ and /mailer/, respectively. These two
-examples are inherited from Furst. Fix this.
+/Seamless/ and /similar/ are apparent exceptions in Furst's table
+to the rule because they do not comprise exactly three sounds,
+else they would be, for instance, /malice/ and /mailer/,
+respectively. These two examples are inherited from Furst. Fix
+this.
 
 *** Extra Trailing Consonant Sounds
 
-/Millenium/ encodes 352 despite the trailing /...ium/.
+/Millenium/ encodes 352 despite the trailing /...ium/. Likewise,
+trailing /...ing/ does not (usually) contribute to the encoding.
 
 *** Vowels and Weak Consonants
 
 Vowels and the weak sounds  /h/, /w/, /wh/, /y/ and so on, do
 not count. Thus, "Himalayans" is 352 because the first strong
-consonant is /m/ for 3.
+consonant is /m/ for 3 and the weak /y/ in the middle is ignored.
 
 ** TODO /Composite Pegs/: New 3-Digit System
 
 In the old system, the sounds $xyz$ for $abc$ can be
-$hxyzh\ldots$, where $h$ stands for any weak sound or, in the
+$hxhyhzh\ldots$, where $h$ stands for any weak sound or, in the
 leading position, S or Z sound, and $\ldots$ stands for anything
 at all. In the more permissive, new system (under development),
-3-digit codes are $xyh\ldots{}zh\ldots{}$. For example:
+3-digit codes are $hxhyh\ldots{}hzh\ldots{}$. For example:
 
 | 740 | Creamy Strawberry Pie     |
 | 741 | Creamy Treacle            |
@@ -543,8 +552,8 @@ and
 | 848 | Fresh-baked Vanilla Pie        |
 | 849 | Fresh-baked Blackberry Pie     |
 
-This new system can reuse $xyh\ldots$ for the first two digits of
-all pegs in a block of ten pegs and can reuse ten $zh\ldots$
+This new system can reuse $hxhyh\ldots$ for the first two digits of
+all pegs in a block of ten pegs and can reuse ten $hzh\ldots$
 across those ten pegs in multiple blocks of ten. The examples
 above may clarify this general description. /Creamy/ introduces
 all ten pegs in the 740\nobreakdash-block, and /Fresh-baked/
@@ -2512,15 +2521,113 @@ Let's try today, 21 May 2022:
 
 #+begin_verse
 2000 = 6
-22 = 1 += 0
-ly = 22/4 = 5 discarding the remainder
-May = 2 += 7 = 0
-21 = 0 += 0
+22 = + 1 = 0
+ly = + 22/4 = 5 discarding the remainder
+May = + 2 = 7 = 0
+21 = + 0 (Saturday)
 #+end_verse
 
 Today is Saturday.
 
 \clearpage
+
+** Person-Action-Object (PAO)
+<<pao>>
+
+I recently learned the PAO system and it's quickly becoming my
+favorite. Almost magically, it helps you string long
+phantasmagorias together, 6 digits---three pegs at a time. It's
+not very different from the peg system, and not much more
+difficult to devise, but it is a 3X amplifier.
+
+The PAO system associates 3 phantasmagorias to each number. You
+build up your PAO system by enhancing the pegs you already know.
+
+For example, consider these enhanced
+pegs:
+
+|     | peg  | Person       | Action  | Object         |
+|-----+------+--------------+---------+----------------|
+|  19 | tap  | CHIMP        | TAPS    | BEER           |
+| ... |      |              |         |                |
+|  29 | nap  | PUSSYCAT     | NAPS    | on the COUCH   |
+|  30 | mass | CONGREGATION | LEAVES  | CHURCH         |
+| ... |      |              |         |                |
+|  58 | leaf | BREEZE       | RUSTLES | CANADIAN-MAPLE |
+
+If you had to memorize 30291958, you can do it the old way with
+four pegs as described earlier in this document, or you can just pick
+the Person field for 30, the Action field for 29, the Object field
+for 19, the Person field for 58, and so on if there were more
+pairs. I quickly get
+
+The CONGREGATION NAPS after drinking BEER and a BREEZE rustles leaves.
+
+I might end up with the same phantasmagoria the old way, but this
+way is faster and more robust.
+
+Here are the first few rows of my PAO table. Many of these are
+very personal and will surely not work for you. Make sure the
+persons are unique amongst themselves, ditto the actions and the
+objects.
+
+My table is just an example. Fill out your own table to suit
+yourself. You'll find it very quick to do and you will love
+memorizing it because the peg are a huge help.
+
+|     | peg   | Person            | Action   | Object              |
+|-----+-------+-------------------+----------+---------------------|
+|  00 | sauce | AMELIA            | LADLES   | SPAGHETTI SAUCE     |
+|  01 | sot   | AQUALUNG          | PICKS    | a DOG END           |
+|  02 | sun   | SUN CHILD (tarot) | REVELS   | in SUNSHINE         |
+|  03 | seam  | CRIMINAL          | RUBS     | FINGERPRINTS        |
+|  04 | soar  | ALBATROSS         | TORMENTS | the ANCIENT MARINER |
+|  05 | sail  | LEO               | TRIMS    | SAILS               |
+|  06 | sash  | SHAH OF IRAN      | ASCENDS  | the DAIS            |
+|  07 | sock  | GRINCH            | DONS     | HEAD SOCK           |
+|  08 | safe  | SAFE              | CRUSHES  | WILE-E COYOTE       |
+|  09 | soup  | CODGER            | SPILLS   | SOUP                |
+
+|   | peg  | Person         | Action     | Object                  |
+|---+------+----------------+------------+-------------------------|
+| 0 | saw  | LUMBERJACK     | SAWS       | LOG                     |
+| 1 | tea  | MISS MARPLE    | POURS      | TEA                     |
+| 2 | Noah | NOAH           | COUNTS     | the ANIMALS             |
+| 3 | me   | I              | TIE        | a BOW TIE in the mirror |
+| 4 | ray  | LUKE SKYWALKER | BRANDISHES | his LIGHT SABER         |
+| 5 | law  | COP            | STOPS      | a LAND CRUISER          |
+| 6 | jaw  | LURCH          | CHEWS      | ROSE STEMS              |
+| 7 | key  | ALLADIN        | TWISTS     | KEY in rusty lock       |
+| 8 | fee  | LAWYER         | HORDES     | GOLD                    |
+| 9 | pea  | PEA            | BRUISES    | the PRINCESS            |
+
+|    | peg    | Person         | Action     | Object          |
+|----+--------+----------------+------------+-----------------|
+| 10 | toes   | DANICA         | PAINTS     | her TOENAILS    |
+| 11 | tot    | ALICE          | DESCENDS   | her THRONE      |
+| 12 | tan    | LIZ            | TANS       | her CHIN        |
+| 13 | tam    | ORCAS          | FLIP       | a TAM o'shanter |
+| 14 | tar    | TARMAC         | SIZZLES    | a SNAKE         |
+| 15 | tail   | GAS-CAP        | SNAGS      | tiger's TAIL    |
+| 16 | tissue | AL GORE        | DABS       | his TEARS       |
+| 17 | tack   | JUSTIN TRUDEAU | TACKS up   | flag of QUEBEC  |
+| 18 | taffy  | ROADRUNNER     | HIGH-STEPS | in hot TAFFY    |
+| 19 | tap    | CHIMP          | TAPS       | BEER            |
+
+|    | peg   | Person        | Action  | Object            |
+|----+-------+---------------+---------+-------------------|
+| 20 | nose  | KING DAVID    | BEHEADS | GOLIATH           |
+| 21 | net   | FISHING NET   | TRIPS   | CADET             |
+| 22 | nun   | NUN           | WALKS   | her pet CROCODILE |
+| 23 | name  | TEDDY BEARS   | LEANS   | a NAME CARD       |
+| 24 | Nero  | NERO          | PLAYS   | his FIDDLE        |
+| 25 | nail  | MAILMAN       | FLINGS  | MAIL              |
+| 26 | niche | ATHENIAN BUST | FILLS   | a NICHE           |
+| 27 | neck  | NEFERTIRI     | POSES   | for SCULPTURE     |
+| 28 | navy  | NAVY          | STEAMS  | in the OCEAN      |
+| 29 | nap   | PUSSYCAT      | NAPS    | on the COUCH      |
+
+
 * All Pegs and Sound-Alikes
 <<all-pegs>>
 
