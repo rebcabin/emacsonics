@@ -654,12 +654,18 @@ rules, and it will affect the methods for radices 16, 36, and 64.
 
 ** TODO /Composite Pegs/: New 3-Digit System
 
-In the old system, the sounds $abc$ for numerals $xyz$ can be
-$hahbhch\ldots$, where $h$ stands for any weak consonant sound or,
-in the leading position, S or Z sound, and $\ldots$ stands for
-anything at all. In the more permissive, new system (under
-development), 3-digit codes are $hahbh\ldots{}hch\ldots{}$. For
-example:
+(John's idea)
+
+It can be challenging to come up with more than 1,000 3-digit pegs
+out of the blue. Perhaps we could get to 1,000 more easily by
+combining 110 prefix pegs with 10 fixed, suffixes. For example:
+
+# In the old system, the sounds $abc$ for numerals $xyz$ can be
+# $hahbhch\ldots$, where $h$ stands for any weak consonant sound or,
+# in the leading position, S or Z sound, and $\ldots$ stands for
+# anything at all. In the more permissive, new system (under
+# development), 3-digit codes are $hahbh\ldots{}hch\ldots{}$. For
+# example:
 
 | 740 | Creamy Strawberry Pie     |
 | 741 | Creamy Treacle            |
@@ -685,13 +691,113 @@ and
 | 848 | Fresh-baked Vanilla Pie        |
 | 849 | Fresh-baked Blackberry Pie     |
 
-This new system can reuse $hahbh\ldots$ for the first two digits of
-all pegs in a block of ten pegs and can reuse ten $hch\ldots$
-across those ten pegs in multiple blocks of ten. The examples
-above may clarify this general description. /Creamy/ introduces
-all ten pegs in the 740 block, and /Fresh-baked/
-introduces all ten pegs in the 840 block. /Creamy/ and
-/Fresh-baked/ are followed by ten sorts of pie or pie filling.
+We only need the first 64 for radices.
+
+| 010 | A | Sodden Strawberry Pie     |
+| 011 | B | Sodden Treacle            |
+| 012 | C | Sodden Nougat             |
+| 013 | D | Sodden Marshmallow        |
+| 014 | E | Sodden Raspberry Pie      |
+| 015 | F | Sodden Lemon Meringue Pie |
+| 016 | G | Sodden Cherry Pie         |
+| 017 | H | Sodden Coconut Pie        |
+| 018 | I | Sodden Vanilla Pie        |
+| 019 | J | Sodden Blackberry Pie     |
+
+| 020 | K | Sun-baked Strawberry Pie     |
+| 021 | L | Sun-baked Treacle            |
+| 022 | M | Sun-baked Nougat             |
+| 023 | N | Sun-baked Marshmallow        |
+| 024 | O | Sun-baked Raspberry Pie      |
+| 025 | P | Sun-baked Lemon Meringue Pie |
+| 026 | Q | Sun-baked Cherry Pie         |
+| 027 | R | Sun-baked Coconut Pie        |
+| 028 | S | Sun-baked Vanilla Pie        |
+| 029 | Th | Sun-baked Blackberry Pie     |
+
+| 030 | U | Semi-soft Strawberry Pie     |
+| 031 | V | Semi-soft Treacle            |
+| 032 | W | Semi-soft Nougat             |
+| 033 | X | Semi-soft Marshmallow        |
+| 034 | Y | Semi-soft Raspberry Pie      |
+| 035 | Z | Semi-soft Lemon Meringue Pie |
+| 036 | a | Semi-soft Cherry Pie         |
+| 037 | b | Semi-soft Coconut Pie        |
+| 038 | c | Semi-soft Vanilla Pie        |
+| 039 | dh | Semi-soft Blackberry Pie     |
+
+| 040 | e | Sorbet and Strawberry Pie     |
+| 041 | f | Sorbet and Treacle            |
+| 042 | g | Sorbet and Nougat             |
+| 043 | h | Sorbet and Marshmallow        |
+| 044 | i | Sorbet and Raspberry Pie      |
+| 045 | j | Sorbet and Lemon Meringue Pie |
+| 046 | k | Sorbet and Cherry Pie         |
+| 047 | l | Sorbet and Coconut Pie        |
+| 048 | m | Sorbet and Vanilla Pie        |
+| 049 | nh | Sorbet and Blackberry Pie     |
+
+| 050 | o | Salad and Strawberry Pie     |
+| 051 | p | Salad and Treacle            |
+| 052 | q | Salad and Nougat             |
+| 053 | r | Salad and Marshmallow        |
+| 054 | s | Salad and Raspberry Pie      |
+| 055 | t | Salad and Lemon Meringue Pie |
+| 056 | u | Salad and Cherry Pie         |
+| 057 | v | Salad and Coconut Pie        |
+| 058 | w | Salad and Vanilla Pie        |
+| 059 | xh | Salad and Blackberry Pie     |
+
+| 060 | y | Sushi and Strawberry Pie |
+| 061 | z | Sushi and Treacle   |
+| 062 | + | Sushi and Nougat    |
+| 063 | ,/ | Sushi and Marshmallow |
+
+Here are some candidates for a hundred prefixes.
+
+| 000 | Saucy Strawberry Pie          |
+| 010 | Sodden Strawberry Pie         |
+| 020 | Sun-baked Strawberry Pie      |
+| 030 | Semi-soft Strawberry Pie      |
+| 040 | Sorbet and Strawberry Pie     |
+| 050 | Salad and Strawberry Pie      |
+| 060 | Sushi and Strawberry Pie      |
+| 070 | Saccharine and Strawberry Pie |
+| 080 | Savory Strawberry Pie         |
+| 090 | Soup and Strawberry Pie       |
+
+| 100 | Tossed Strawberry Pie          |
+| 110 | Toothy Strawberry Pie          |
+| 120 | Thin-crusted Strawberry Pie    |
+| 130 | Thumbnail Strawberry Pie       |
+| 140 | Dairy-based Strawberry Pie     |
+| 150 | Tallow-free Strawberry Pie     |
+| 160 | Dutch-chocolate Strawberry Pie |
+| 170 | Thick-crusted Strawberry Pie   |
+| 180 | Taffy-iced Strawberry Pie      |
+| 190 | Deep-dish Strawberry Pie       |
+
+| 200 | Anice-laced Strawberry Pie   |
+| 210 | Nut-covered Strawberry Pie   |
+| 220 | Non-fattening Strawberry Pie |
+| 230 | Anemic Strawberry Pie        |
+| 240 | Near-perfect Strawberry Pie  |
+| 250 | Newly-eaten Strawberry Pie   |
+| 260 | Unshared Strawberry Pie      |
+| 270 | Uncanned Strawberry Pie      |
+| 280 | Unflavored Strawberry Pie    |
+| 290 | Unboxed Strawberry Pie       |
+
+
+TODO: finish
+
+# This new system can reuse $hahbh\ldots$ for the first two digits of
+# all pegs in a block of ten pegs and can reuse ten $hch\ldots$
+# across those ten pegs in multiple blocks of ten. The examples
+# above may clarify this general description. /Creamy/ introduces
+# all ten pegs in the 740 block, and /Fresh-baked/
+# introduces all ten pegs in the 840 block. /Creamy/ and
+# /Fresh-baked/ are followed by ten sorts of pie or pie filling.
 
 ** Brian's 2-Digit-Plus List
 
