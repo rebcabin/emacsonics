@@ -156,6 +156,11 @@
   (setq org-plantuml-jar-path
       (expand-file-name "/usr/share/plantuml/plantuml.jar"))
 
+  ;; evaluate whole buffer , b b and redo all cached results
+  ;; this worked exactly once :(
+  (setq org-babel-default-header-args '((:cache . "no")))
+  ; (setq org-babel-default-header-args nil) ;; Reset to default
+
   ; (conda-env-activate "whl-meson-build")
 
   (princ (concat (format "Emacs version: %s\n" (emacs-version))
@@ -163,6 +168,30 @@
 #+END_SRC
 
 #+RESULTS:
+: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
+:  of 2023-07-29
+: org version: 9.6.6
+: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
+:  of 2023-07-29
+: org version: 9.6.6
+: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
+:  of 2023-07-29
+: org version: 9.6.6
+: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
+:  of 2023-07-29
+: org version: 9.6.6
+: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
+:  of 2023-07-29
+: org version: 9.6.6
+: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
+:  of 2023-07-29
+: org version: 9.6.6
+: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
+:  of 2023-07-29
+: org version: 9.6.6
+: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
+:  of 2023-07-29
+: org version: 9.6.6
 : Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
 :  of 2023-07-29
 : org version: 9.6.6
@@ -507,7 +536,7 @@ for 32:
   (babomorph 132 133)
 #+end_src
 
-#+RESULTS[c73f78f3ec40ebbcdf9733e33285918be30c387f]:
+#+RESULTS[e8871715efa2ffbac7cbbb6e25a5e7c6c0857190]:
 :results:
 |----+-------+---------+--------+-------+------+--------|
 | 32 | MAN   | MOON    | mane   | hymen | mine | minnow |
@@ -553,25 +582,29 @@ list for $xyz=352$:
   (babomorph 452 453)
 #+end_src
 
-#+RESULTS[feb7343cbe9fa0c01dd859afe2e0cddc49afdd38]:
+#+RESULTS[b74143594e82a2c04eaf9b6fb1ba2981c4fb4fb9]:
 :results:
-|-----+--------+------------+------------+----------+----------+----------|
-| 352 | MELON  | Himalayans | hemline    | semolina | milliner | homeland |
-|     | malign | melancholy | millennium | million  |          |          |
+|-----+--------+------------+------------+------------+----------+----------|
+| 352 | MELON  | Himalayans | hemline    | semolina   | milliner | homeland |
+|     | malign | melancholy | millennial | millennium | million  |          |
 :end:
 
-When making up pegs and sound-alikes, weak consonant sounds like
-H, WH, Y, and W are free: ignore the H in /hemline/. Use soft
+When making up pegs and sound-alikes, weak consonant sounds such as
+H, WH, Y, and W are free. For example, ignore the H in /hemline/. Use soft
 consonants at will. Vowel sounds are also free --- use as many or
-as few as you like. Ignore trailing sounds beyond the first three:
-/hemline/ and /hemlining/ both encode 352, as do /millennial/ and
-/millenium/.
+as few as you like.
 
 From this point on, when we write "sound" or "sounds," we mean
 "hard consonant sound" or "hard consonant sounds."
 
+Ignore trailing sounds beyond the first three:
+/hemline/ and /hemlining/ both encode 352, as do /millennial/ and
+/millenium/.
+
 Ignore leading S and Z sounds if the total number of sounds is
-four or more. So /semolina/ encodes 352. However, /semolina/ also
+four or more. So /semolina/ encodes 352.
+
+However, /semolina/ also
 encodes 035 by the rule about trailing sounds beyond three. This
 is a flaw in Furst's original design. Here is more about this
 problem.
@@ -595,7 +628,7 @@ seen above. However, /semolina/ also appears in Furst's table for
   (babomorph 35 36)
 #+end_src
 
-#+RESULTS[f3260c3f510a9a32f1326e2a573192e146af518d]:
+#+RESULTS[5e3196a6134f91bb4d259241e78e67df4b2e0e2f]:
 :results:
 |-----+----------+----------+----------+--------+---------+--------|
 | 035 | SAWMILL  | SMILE    | semolina | smell  | small   | simile |
@@ -619,7 +652,7 @@ table for 354:
   (babomorph 454 455)
 #+end_src
 
-#+RESULTS[0a8ad960d5ac76960d1e9603cd152fa2741c9bcd]:
+#+RESULTS[33703dee343d57c9f6b7c01b7ecc0a0619b3a75e]:
 :results:
 |-----+--------+--------+------------+------------+----------+----------|
 | 354 | molar  | miler  | malaria    | miller     | milliard | mealworm |
@@ -934,7 +967,7 @@ and their sound-alikes:
   (babomorph 165 171)
 #+end_src
 
-#+RESULTS[1054dfba4c406d977855c98e8b625e4a62532386]:
+#+RESULTS[d37d3ceb070b01bb4fecfe928f51d2d34237b452]:
 :results:
 |----+-------------+-----------+----------+----------+----------+----------|
 | 65 | JAIL        | CHILI     | jelly    | jewel    | shell    | shawl    |
@@ -1949,32 +1982,38 @@ switch slows me down even though I made the switch long, long ago.
 One way to encode hex is to map A-F to 010-015. Permanent pegs are
 in all caps.
 
-|-----+-----------+----------+----------+-----------+-----------+----------|
-| 010 | SAWDUST   | seduce   | sideways | stays     | South-Sea | assets   |
-|   A | assiduous | citizen  | cities   | hostess   |           |          |
-|-----+-----------+----------+----------+-----------+-----------+----------|
-| 011 | STATUE    | state    | steady   | sedate    | steed     | stout    |
-|   B | studio    | sit-down | astute   | estate    | hesitate  | iced-tea |
-|     | wasted    |          |          |           |           |          |
-|-----+-----------+----------+----------+-----------+-----------+----------|
-| 012 | STAIN     | sedan    | Satan    | sadden    | sodden    | sudden   |
-|   C | stand     | satin    | standard | stench    | stint     | stein    |
-|     | stone     | stun     | stunt    | sweeten   | sit-in    | Sweden   |
-|     | Estonia   | astound  | hesitant | pseudonym |           |          |
-|-----+-----------+----------+----------+-----------+-----------+----------|
-| 013 | STEAM     | sodium   | stamp    | sediment  | stem      | stomach  |
-|   D | stampede  | stamina  | stump    | esteem    | estimate  | wisdom   |
-|-----+-----------+----------+----------+-----------+-----------+----------|
-| 014 | SATYR     | Saturn   | Saturday | setter    | satire    | star     |
-|   E | stare     | steer    | stir     | store     | story     | storm    |
-|     | straw     | stream   | stroll   | sterling  | strike    | strip    |
-|     | struggle  | suitor   | swatter  | sweater   | cedar     | cider    |
-|     | astronaut | astir    | astray   | austere   | Austria   | Easter   |
-|     | history   | hysteria | oyster   | ouster    | stair     |          |
-|-----+-----------+----------+----------+-----------+-----------+----------|
-| 015 | SADDLE    | settle   | cedilla  | stale     | stall     | steal    |
-|   F | steel     | still    | stool    | style     | sadly     | hostile  |
-|-----+-----------+----------+----------+-----------+-----------+----------|
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+  (babomorph 10 16)
+#+end_src
+
+#+RESULTS[4c69c56e687a2fe05b2dd8e40e98618ed9a72876]:
+:results:
+|-----+-----------+-----------+---------+----------+----------+---------|
+| 010 | HOSTESS   | SOUTH-SEA | sweets  | cities   | assets   | stays   |
+|   A | assiduous | sideways  |         |          |          |         |
+|-----+-----------+-----------+---------+----------+----------+---------|
+| 011 | ESTATE    | STOUT     | studio  | statue   | iced-tea | wasted  |
+|   B | astute    | hesitate  | sedate  | sit-down | state    | steady  |
+|     | steed     | stud      |         |          |          |         |
+|-----+-----------+-----------+---------+----------+----------+---------|
+| 012 | STEIN     | SEDAN     | satin   | stain    | stone    | Estonia |
+|   C | Satan     | Sweden    | sadden  | sit-in   | sodden   | stand   |
+|     | stun      | sudden    | sweeten |          |          |         |
+|-----+-----------+-----------+---------+----------+----------+---------|
+| 013 | SODIUM    | STEAM     | stem    | esteem   | stoma    | stamina |
+|   D | wisdom    |           |         |          |          |         |
+|-----+-----------+-----------+---------+----------+----------+---------|
+| 014 | OYSTER    | CIDER     | cedar   | stair    | sweater  | steer   |
+|   E | Austria   | Easter    | astir   | astray   | austere  | history |
+|     | hysteria  | ouster    | satire  | satyr    | setter   | star    |
+|     | stare     | stir      | store   | story    | straw    | suitor  |
+|     | swatter   |           |         |          |          |         |
+|-----+-----------+-----------+---------+----------+----------+---------|
+| 015 | SADDLE    | STOOL     | still   | stall    | steel    | style   |
+|   F | hostile   | sadly     | settle  | stale    | steal    |         |
+:end:
+
+
 
 \newpage
 Here is the GUID, again.
@@ -2949,7 +2988,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 0 10)
 #+end_src
 
-#+RESULTS[7ecf5cbc3481e60410646e89bc93d7140a6cad17]:
+#+RESULTS[c7aea611129db7f4202727cf5ffed4f835e976ed]:
 :results:
 |----+----------+---------+----------+----------+-----------+---------|
 | 00 | SAUCE    | OASIS   | icehouse | sissy    | sass      | seesaw  |
@@ -2957,11 +2996,11 @@ at least twice to regenerate cross-references correctly.
 |    | seize    | size    |          |          |           |         |
 |----+----------+---------+----------+----------+-----------+---------|
 | 01 | SOT      | SOD     | Swede    | acid     | aside     | asset   |
-|    | city     | east    | haste    | host     | sad       | seat    |
-|    | seed     | seedy   | settee   | side     | sight     | sit     |
-|    | site     | soot    | sooth    | south    | stay      | stew    |
-|    | suede    | suet    | suit     | suite    | swat      | sweet   |
-|    | waste    | west    |          |          |           |         |
+|    | cedilla  | city    | east     | haste    | host      | sad     |
+|    | seat     | seed    | seedy    | settee   | side      | sight   |
+|    | sit      | site    | soot     | sooth    | south     | stay    |
+|    | stew     | suede   | suet     | suit     | suite     | swat    |
+|    | sweet    | waste   | west     |          |           |         |
 |----+----------+---------+----------+----------+-----------+---------|
 | 02 | SUN      | SWAN    | swine    | ozone    | sinew     | snow    |
 |    | assign   | hosanna | sane     | scene    | seen      | sign    |
@@ -3003,70 +3042,67 @@ at least twice to regenerate cross-references correctly.
   (babomorph 10 20)
 #+end_src
 
-#+RESULTS[467e25442ad914e480408d3d35c363768e576119]:
+#+RESULTS[e86c7415addcfea115c7bf1cbd65b62acd30fabb]:
 :results:
-|-----+------------+----------+-----------+------------+-----------+-----------|
-| 010 | SAWDUST    | SWEETS   | seducer   | hostess    | citizen   | cities    |
-|   A | South-Sea  | assets   | assiduous | sideways   | stays     |           |
-|-----+------------+----------+-----------+------------+-----------+-----------|
-| 011 | STATUE     | STEED    | studio    | estate     | iced-tea  | wasted    |
-|   B | astute     | hesitate | sedate    | sit-down   | state     | steady    |
-|     | stout      | stud     |           |            |           |           |
-|-----+------------+----------+-----------+------------+-----------+-----------|
-| 012 | SATAN      | STEIN    | sedan     | stain      | satin     | stone     |
-|   C | Estonia    | Sweden   | astound   | hesitant   | pseudonym | sadden    |
-|     | sit-in     | sodden   | stand     | standard   | stench    | stint     |
-|     | stun       | stunt    | sudden    | sweeten    |           |           |
-|-----+------------+----------+-----------+------------+-----------+-----------|
-| 013 | SEDIMENT   | STEAM    | sodium    | stem       | esteem    | wisdom    |
-|   D | abstemious | estimate | stamina   | stamp      | stampede  | stomach   |
-|     | stump      |          |           |            |           |           |
-|-----+------------+----------+-----------+------------+-----------+-----------|
-| 014 | SATYR      | STAR     | Saturn    | stair      | cider     | cedar     |
-|   E | Austria    | Easter   | Saturday  | astir      | astray    | astronaut |
-|     | austere    | history  | hysteria  | ouster     | oyster    | satire    |
-|     | setter     | star     | stare     | steer      | sterling  | stir      |
-|     | store      | storm    | story     | straw      | stream    | strike    |
-|     | strip      | stroll   | struggle  | suitor     | swatter   | sweater   |
-|-----+------------+----------+-----------+------------+-----------+-----------|
-| 015 | SADDLE     | STOOL    | still     | stall      | steel     | style     |
-|   F | cedilla    | hostile  | sadly     | settle     | stale     | steal     |
-|-----+------------+----------+-----------+------------+-----------+-----------|
-| 016 | STAGE      | STOOGE   | stitch    | station    | hostage   | wastage   |
-|   G | hesitation | stodgy   |           |            |           |           |
-|-----+------------+----------+-----------+------------+-----------+-----------|
-| 017 | SIDECAR    | SIDEKICK | stake     | stick      | stucco    | stock     |
-|   H | ascetic    | sciatica | setting   | stack      | stag      | stalk     |
-|     | steak      | sticky   | stigma    | stigmata   | sting     | stoic     |
-|     | stoke      | stuck    |           |            |           |           |
-|-----+------------+----------+-----------+------------+-----------+-----------|
-| 018 | STIFF      | STOVE    | staff     | stave      | stevedore | stuff     |
-|   I | sea-devil  | set-off  | wasteful  |            |           |           |
-|-----+------------+----------+-----------+------------+-----------+-----------|
-| 019 | STAB       | STEEPLE  | stub      | stoop      | staple    | steppe    |
-|   J | eastbound  | estop    | seat-belt | southbound | steep     | step      |
-|     | stipend    | stop     | stupid    | sweetbread |           |           |
+|-----+------------+-----------+---------+----------+----------+---------|
+| 010 | HOSTESS    | SOUTH-SEA | sweets  | cities   | assets   | stays   |
+|   A | assiduous  | sideways  |         |          |          |         |
+|-----+------------+-----------+---------+----------+----------+---------|
+| 011 | ESTATE     | STOUT     | studio  | statue   | iced-tea | wasted  |
+|   B | astute     | hesitate  | sedate  | sit-down | state    | steady  |
+|     | steed      | stud      |         |          |          |         |
+|-----+------------+-----------+---------+----------+----------+---------|
+| 012 | STEIN      | SEDAN     | satin   | stain    | stone    | Estonia |
+|   C | Satan      | Sweden    | sadden  | sit-in   | sodden   | stand   |
+|     | stun       | sudden    | sweeten |          |          |         |
+|-----+------------+-----------+---------+----------+----------+---------|
+| 013 | SODIUM     | STEAM     | stem    | esteem   | stoma    | stamina |
+|   D | wisdom     |           |         |          |          |         |
+|-----+------------+-----------+---------+----------+----------+---------|
+| 014 | OYSTER     | CIDER     | cedar   | stair    | sweater  | steer   |
+|   E | Austria    | Easter    | astir   | astray   | austere  | history |
+|     | hysteria   | ouster    | satire  | satyr    | setter   | star    |
+|     | stare      | stir      | store   | story    | straw    | suitor  |
+|     | swatter    |           |         |          |          |         |
+|-----+------------+-----------+---------+----------+----------+---------|
+| 015 | SADDLE     | STOOL     | still   | stall    | steel    | style   |
+|   F | hostile    | sadly     | settle  | stale    | steal    |         |
+|-----+------------+-----------+---------+----------+----------+---------|
+| 016 | STAGE      | STOOGE    | stitch  | hostage  | wastage  | stodgy  |
+|   G | hesitation |           |         |          |          |         |
+|-----+------------+-----------+---------+----------+----------+---------|
+| 017 | STUCCO     | STING     | stake   | stick    | stock    | stoke   |
+|   H | ascetic    | sciatica  | setting | stack    | stag     | stalk   |
+|     | steak      | sticky    | stoic   | stuck    |          |         |
+|-----+------------+-----------+---------+----------+----------+---------|
+| 018 | STIFF      | STOVE     | staff   | stave    | stuff    | set-off |
+|   I |            |           |         |          |          |         |
+|-----+------------+-----------+---------+----------+----------+---------|
+| 019 | STOP       | STEP      | stoop   | stub     | steppe   | estop   |
+|   J | stab       | steep     |         |          |          |         |
 :end:
+
+
 
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 20 30)
 #+end_src
 
-#+RESULTS[aac58782ba68f4820cb4a2d98d8387e950c35f43]:
+#+RESULTS[4c49c1f2957149d3786cb7206318902f11883348]:
 :results:
 |-----+-------------+------------+-----------+------------+-------------+-----------|
-| 020 | SENSE       | SUNS       | sneeze    | sinus      | seance      | sunset    |
+| 020 | SUNSET      | SEANCE     | sense     | sneeze     | SUNS        | sinus     |
 |   K | census      | easiness   | essence   | iciness    | science     | since     |
-|     | sincere     | sinister   | sinus     | snooze     |             |           |
+|     | snooze      |            |           |            |             |           |
 |-----+-------------+------------+-----------+------------+-------------+-----------|
 | 021 | SAINT       | SAND       | cent      | senate     | synod       | snot      |
-|   L | Sunday      | ascent     | assent    | sandal     | sanity      | scent     |
-|     | sent        | sentiment  | snit      | snoot      | snout       | sonata    |
-|     | sonnet      | sound      | sundae    | swindle    | zenith      |           |
+|   L | Sunday      | ascent     | assent    | sanity     | scent       | sent      |
+|     | snit        | snoot      | snout     | sonata     | sonnet      | sound     |
+|     | sundae      | zenith     |           |            |             |           |
 |-----+-------------+------------+-----------+------------+-------------+-----------|
-| 022 | SIGN-ON     | SAN JUAN   | assonance | sea-onion  | snow-knife  | synonym   |
-|   M | asinine     |            |           |            |             |           |
+| 022 | SAN JUAN    | SIGN-ON    | sea-onion | snow-knife | asinine     |           |
+|   M |             |            |           |            |             |           |
 |-----+-------------+------------+-----------+------------+-------------+-----------|
 | 023 | CINNAMON    | SNOWMOBILE | snowman   | cinema     | sea-anemone | cyanamide |
 |   N | wisenheimer |            |           |            |             |           |
@@ -3095,7 +3131,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 30 40)
 #+end_src
 
-#+RESULTS[eb9a923a1f25657119834471cfd01f10cc6f3a84]:
+#+RESULTS[473b031979605c4a01df99dea310d91457b1919b]:
 :results:
 |-----+--------------+--------------+--------------+---------------+-------------+------------|
 | 030 | SAMSON       | SIAMESE      | seamstress   | semester      | semisweet   | swimsuit   |
@@ -3136,7 +3172,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 40 50)
 #+end_src
 
-#+RESULTS[9636d4b043291df2edd68bec3a1bd8d96b011a91]:
+#+RESULTS[a84b61e3b6fc4369fab9d0a855fb0a9b7e29c88c]:
 :results:
 |-----+----------+--------------+-----------+--------------+-----------+------------|
 | 040 | SERIES   | SEA-HORSE    | sewers    | source       | Circe     | serious    |
@@ -3177,7 +3213,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 50 60)
 #+end_src
 
-#+RESULTS[5e363d38e0a98750f01bdf12374b2a46eb778a14]:
+#+RESULTS[234d4118fb1cb61f793ecf3b58393a8bfd3f491c]:
 :results:
 |-----+--------------+--------------+-------------+-----------+------------+-----------|
 | 050 | SOLSTICE     | SALSA        | slice       | solicitor | sluice     | sales     |
@@ -3220,7 +3256,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 60 70)
 #+end_src
 
-#+RESULTS[c29398e3a4f634828989e603111041bf62282467]:
+#+RESULTS[68c5428cb24e45eca85672589aaa4792fec8c6c8]:
 :results:
 |-----+--------------+------------+-------------+-------------+---------------+---------------|
 | 060 | SAGES        | SWATCHES   | sieges      | switches    | sea-chest     | sashes        |
@@ -3254,7 +3290,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 70 80)
 #+end_src
 
-#+RESULTS[64236ec329a0ec5cedcd8fe0af9fa77aee11c9d5]:
+#+RESULTS[dd11d04943b11ff72bffbcdeffa0b1f7b9923c64]:
 :results:
 |-----+----------+-------------+-------------+-----------+------------+-----------|
 | 070 | SEX      | SOCKS       | saxophone   | Saxon     | seacoast   | success   |
@@ -3299,7 +3335,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 80 90)
 #+end_src
 
-#+RESULTS[c36916b9474e4d4ba315b902fac1f335367e1cf3]:
+#+RESULTS[9d4e76dbdede9462bd589118fd78350cc39dde29]:
 :results:
 |-----+--------------+---------------+-------------+--------------+-------------+-----------|
 | 080 | SAVES        | CIVVIES       | housewives  | sophist      | sufism      | suffice   |
@@ -3335,7 +3371,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 90 100)
 #+end_src
 
-#+RESULTS[dd1a01cd06fd171cfdc390c5a16a04eec498e8a5]:
+#+RESULTS[e8815bd1b830199922cd5dcd705a36b3d2ff33d3]:
 :results:
 |-----+--------------+-------------+-------------+-------------+-------------+--------------|
 | 090 | SPACE        | ASBESTOS    | spice       | spouse      | sea-biscuit | soupcon      |
@@ -3381,7 +3417,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 100 105)
 #+end_src
 
-#+RESULTS[4495ac7b32639781ddf426ffaa075642c9d2df4c]:
+#+RESULTS[2df50619d24bffecdde27ebdb8a3a0f41797a507]:
 :results:
 |---+--------+--------+--------+-------+--------+-------|
 | 0 | SAW    | HOSE   | ice    | house | haze   | zoo   |
@@ -3426,7 +3462,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 105 110)
 #+end_src
 
-#+RESULTS[c6bdc850fe47dd200b79ba4bb3d6e1927eb4f672]:
+#+RESULTS[aa78561a42a13d8f5f8918244712a7df245e7c53]:
 :results:
 |---+---------+--------+--------+-------+---------+--------|
 | 5 | LAW     | WHALE  | ale    | awl   | aisle   | eel    |
@@ -3475,7 +3511,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 110 115)
 #+end_src
 
-#+RESULTS[bd94e130acd65202ad62b77dbb26d376623d5710]:
+#+RESULTS[b15d921928040c0bb7fb5ffa411420b768ad2a3f]:
 :results:
 |----+-------------+----------+--------+----------+--------+---------|
 | 10 | TOES        | daisy    | odds   | hothouse | idiots | deuce   |
@@ -3521,7 +3557,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 115 120)
 #+end_src
 
-#+RESULTS[af0c3857e6f82d0ff6a5e8ca85a14f8af107eaae]:
+#+RESULTS[fd273b4f7b99012b44dcee0ed6df9307fd7c4387]:
 :results:
 |----+---------+--------+----------+-----------+---------+----------|
 | 15 | TAIL    | atoll  | doll     | doily     | idol    | tally    |
@@ -3557,7 +3593,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 120 130)
 #+end_src
 
-#+RESULTS[7b0c03d7f501e0b6f9398aab217b8c3f5239af9e]:
+#+RESULTS[e9dad01561fc259a5ed371493aafecf60aea3c0a]:
 :results:
 |----+----------+----------+---------+---------+---------+----------|
 | 20 | NOSE     | anise    | noose   | niece   | ounce   | news     |
@@ -3608,7 +3644,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 130 140)
 #+end_src
 
-#+RESULTS[fe75a4c4ad29ff24bf6c9a9f9250d72ab6e7f1ae]:
+#+RESULTS[0cc255c6d2129cc3bf42b431c251627e674d9a9e]:
 :results:
 |----+---------+---------+--------+-----------+--------+---------|
 | 30 | MASS    | MOUSE   | mace   | maze      | hummus | mice    |
@@ -3658,7 +3694,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 140 150)
 #+end_src
 
-#+RESULTS[9b2e658a05cee89bf4cbb690ec23a0948cf25166]:
+#+RESULTS[2686ebfcf84ba59d78900e87321cc81aaa8d4786]:
 :results:
 |----+---------+-----------+----------+--------+---------+---------|
 | 40 | RACE    | ROSE      | racy     | raise  | rase    | raze    |
@@ -3721,7 +3757,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 150 160)
 #+end_src
 
-#+RESULTS[b08ffaba921ccef67fceb9a32c550bdce2b78fc5]:
+#+RESULTS[4ada5a1fa5090c7ace0425aad02ee131aee26d07]:
 :results:
 |----+-----------+------------+-----------+----------+---------+-----------|
 | 50 | LACE      | Lassie     | lass      | lazy     | lasso   | lease     |
@@ -3777,7 +3813,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 160 170)
 #+end_src
 
-#+RESULTS[0ff3d0539dd2e9847c075475ddb86c00f3e1343f]:
+#+RESULTS[53667ebd3e68f5e6cac4494c8b33786e400db41f]:
 :results:
 |----+-------------+----------+----------+----------+---------+----------|
 | 60 | CHESS       | CHEESE   | chassis  | chase    | chaise  | choice   |
@@ -3833,7 +3869,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 170 180)
 #+end_src
 
-#+RESULTS[da128b9d471f2b7c6772aae362eb645f5f639dbf]:
+#+RESULTS[c11772d82c05acc1c4236645c0b50f45a9ac042b]:
 :results:
 |----+---------+-----------+---------+--------+----------+---------|
 | 70 | CASE    | GOOSE     | gas     | kiss   | ox       | eggs    |
@@ -3900,7 +3936,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 180 190)
 #+end_src
 
-#+RESULTS[38a6aafffcd07559e740d77c27278d99f8d10f76]:
+#+RESULTS[f1800c9c7c5593f59b18fd852a7298d9b0db17f9]:
 :results:
 |----+-----------+---------+----------+---------+----------+-----------|
 | 80 | FACE      | VASE    | fuse     | vise    | visa     | vice      |
@@ -3958,7 +3994,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 190 195)
 #+end_src
 
-#+RESULTS[19338dbfd3bba19b2713546fead1ad6f612573cd]:
+#+RESULTS[b54da84cd8e4a44b0567524eea48b2d51043be88]:
 :results:
 |----+---------+--------+--------+--------+---------+----------|
 | 90 | BASE    | BUS    | pizza  | bass   | booze   | boss     |
@@ -4000,7 +4036,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 195 200)
 #+end_src
 
-#+RESULTS[123d8bb9aaf2eecacab81b2306175c154345ed69]:
+#+RESULTS[e6fc4c85d9a0c15a01e9bc458811a998cecdc265]:
 :results:
 |----+---------+----------+--------+---------+---------+---------|
 | 95 | BALL    | BELL     | opal   | bowl    | apple   | pillow  |
@@ -4040,50 +4076,50 @@ at least twice to regenerate cross-references correctly.
   (babomorph 200 210)
 #+end_src
 
-#+RESULTS[ad991550974f86f5fd35a6f60e14172cd20fd70f]:
+#+RESULTS[e59a5a1a377a3f12eb02c4979883dc1af6b1bbc5]:
 :results:
-|-----+-------------+--------------+------------+--------------+-------------+----------------|
-| 100 | THESIS      | decease      | decisive   | desist       | disaster    | disease        |
-|   d | disuse      | dissuasive   | daisies    | deuces       | doses       | diocese        |
-|-----+-------------+--------------+------------+--------------+-------------+----------------|
-| 101 | TOAST       | tacit        | taste      | test         | testimony   | Tuesday        |
-|   e | twist       | deceit       | decide     | deist        | destiny     | destitute      |
-|     | destruct    | distance     | distaste   | distinct     | distinguish | distract       |
-|     | distress    | distribute   | district   | distrust     | disturb     | dust           |
-|     | atheist     | attest       | audacity   | outside      |             |                |
-|-----+-------------+--------------+------------+--------------+-------------+----------------|
-| 102 | DOZEN       | decent       | descent    | design       | dishonest   | disinclined    |
-|   f | disinfect   | disinterest  | disown     | dissent      | dissonant   | dizziness      |
-|     | Whitsunday  | Docent       |            |              |             |                |
-|-----+-------------+--------------+------------+--------------+-------------+----------------|
-| 103 | TWOSOME     | theism       | deism      | decimal      | disembark   | dismay         |
-|   g | dismember   | December     | dismiss    | dismount     | dissemble   | dissimilar     |
-|     | atheism     | decimeter    | decimate   |              |             |                |
-|-----+-------------+--------------+------------+--------------+-------------+----------------|
-| 104 | DOWSER      | dicer        | thesaurus  | desert       | dessert     | deserve        |
-|   h | desire      | disarm       | disarrange | discern      | dishearten  | disorder       |
-|     | disregard   | disreputable | disroot    | dissertation | disrobe     | disrupt        |
-|     | douser      |              |            |              |             |                |
-|-----+-------------+--------------+------------+--------------+-------------+----------------|
-| 105 | DIESEL      | tassel       | dazzle     | desolate     | disillusion | dislike        |
-|   i | dislocate   | dissolve     | docile     | deciliter    | disloyal    | white-sale     |
-|-----+-------------+--------------+------------+--------------+-------------+----------------|
-| 106 | WOOD-sage   | dosage       | decision   | discharge    | dissuasion  | autosuggestion |
-|   j |             |              |            |              |             |                |
-|-----+-------------+--------------+------------+--------------+-------------+----------------|
-| 107 | TUSK        | task         | desk       | disk         | discolor    | discomfort     |
-|   k | disclose    | disconnect   | discontent | discord      | discount    | discourage     |
-|     | discourse   | discover     | discrete   | discriminate | discuss     | disgrace       |
-|     | disguise    | disgust      | disquiet   | dusk         | outskirts   | doeskin        |
-|-----+-------------+--------------+------------+--------------+-------------+----------------|
-| 108 | ADHESIVE    | tea-sieve    | theosophy  | deceive      | decipher    | disaffect      |
-|   l | disavow     | disfigure    | disfavor   | satisfaction |             |                |
-|-----+-------------+--------------+------------+--------------+-------------+----------------|
-| 109 | TEASPOON    | thespian     | toss-up    | despot       | despair     | deception      |
-|   m | decibel     | despite      | despond    | disabled     | diaspora    | disappear      |
-|     | disappoint  | disapprove   | disciple   | disobey      | dispatch    | dispense       |
-|     | dispel      | disperse     | display    | displace     | displease   | disposal       |
-|     | disposition | dissipate    |            |              |             |                |
+|-----+-------------+--------------+-------------+--------------+-------------+----------------|
+| 100 | THESIS      | decease      | decisive    | desist       | disaster    | disease        |
+|   d | disuse      | dissuasive   | daisies     | deuces       | doses       | diocese        |
+|-----+-------------+--------------+-------------+--------------+-------------+----------------|
+| 101 | TOAST       | Tuesday      | atheist     | attest       | audacity    | deceit         |
+|   e | decide      | deist        | destiny     | destitute    | destruct    | distance       |
+|     | distaste    | distinct     | distinguish | distract     | distress    | distribute     |
+|     | district    | distrust     | disturb     | dust         | outside     | sawdust        |
+|     | tacit       | taste        | test        | testimony    | twist       |                |
+|-----+-------------+--------------+-------------+--------------+-------------+----------------|
+| 102 | DOZEN       | citizen      | decent      | descent      | design      | dishonest      |
+|   f | disinclined | disinfect    | disinterest | disown       | dissent     | dissonant      |
+|     | dizziness   | Whitsunday   | Docent      |              |             |                |
+|-----+-------------+--------------+-------------+--------------+-------------+----------------|
+| 103 | TWOSOME     | theism       | deism       | decimal      | disembark   | dismay         |
+|   g | dismember   | December     | dismiss     | dismount     | dissemble   | dissimilar     |
+|     | atheism     | decimeter    | decimate    |              |             |                |
+|-----+-------------+--------------+-------------+--------------+-------------+----------------|
+| 104 | DOWSER      | dicer        | thesaurus   | desert       | dessert     | deserve        |
+|   h | desire      | disarm       | disarrange  | discern      | dishearten  | disorder       |
+|     | disregard   | disreputable | disroot     | dissertation | disrobe     | disrupt        |
+|     | douser      | seducer      |             |              |             |                |
+|-----+-------------+--------------+-------------+--------------+-------------+----------------|
+| 105 | DIESEL      | tassel       | dazzle      | desolate     | disillusion | dislike        |
+|   i | dislocate   | dissolve     | docile      | deciliter    | disloyal    | white-sale     |
+|-----+-------------+--------------+-------------+--------------+-------------+----------------|
+| 106 | WOOD-sage   | dosage       | decision    | discharge    | dissuasion  | autosuggestion |
+|   j |             |              |             |              |             |                |
+|-----+-------------+--------------+-------------+--------------+-------------+----------------|
+| 107 | TUSK        | task         | desk        | disk         | discolor    | discomfort     |
+|   k | disclose    | disconnect   | discontent  | discord      | discount    | discourage     |
+|     | discourse   | discover     | discrete    | discriminate | discuss     | disgrace       |
+|     | disguise    | disgust      | disquiet    | dusk         | outskirts   | doeskin        |
+|-----+-------------+--------------+-------------+--------------+-------------+----------------|
+| 108 | ADHESIVE    | tea-sieve    | theosophy   | deceive      | decipher    | disaffect      |
+|   l | disavow     | disfigure    | disfavor    | satisfaction |             |                |
+|-----+-------------+--------------+-------------+--------------+-------------+----------------|
+| 109 | TEASPOON    | thespian     | toss-up     | despot       | despair     | deception      |
+|   m | decibel     | despite      | despond     | disabled     | diaspora    | disappear      |
+|     | disappoint  | disapprove   | disciple    | disobey      | dispatch    | dispense       |
+|     | dispel      | disperse     | display     | displace     | displease   | disposal       |
+|     | disposition | dissipate    |             |              |             |                |
 :end:
 
 \clearpage
@@ -4091,7 +4127,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 210 220)
 #+end_src
 
-#+RESULTS[e94db9b3d93dde555149b1da9cf1c7551c37ea8d]:
+#+RESULTS[82c7752efe2fc828b6dce817c723a75b08e66cb3]:
 :results:
 |-----+-------------+--------------+-------------+------------+------------+-------------|
 | 110 | TIGHTS      | tedious      | toothsome   | tootsy     | deduce     | detest      |
@@ -4134,7 +4170,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 220 230)
 #+END_src
 
-#+RESULTS[f0fd617bbbec8f6318faadc44d58f1ea8276222f]:
+#+RESULTS[30310c622a423826462ae1007fdf30ed6433abff]:
 :results:
 |-----+--------------+-------------+------------+--------------+--------------+------------|
 | 120 | DANCE        | tinsel      | tenacity   | tennis       | tense        | thence     |
@@ -4142,19 +4178,19 @@ at least twice to regenerate cross-references correctly.
 |     | audience     | haughtiness | dynasty    | utensil      | whiteness    | witness    |
 |     | sadness      |             |            |              |              |            |
 |-----+--------------+-------------+------------+--------------+--------------+------------|
-| 121 | DOUGHNUT     | tent        | taint      | taunt        | tenth        | tendon     |
-|   y | tend         | thunder     | tint       | tender       | twenty       | TNT        |
-|     | twi-night    | tantalize   | dainty     | dandy        | denote       | dent       |
-|     | dentist      | denude      | dint       | dwindle      | attend       | authentic  |
-|     | addendum     | identical   | identify   | whodunit     | stand        | stint      |
-|     | astound      |             |            |              |              |            |
+| 121 | DOUGHNUT     | tnt         | addendum   | astound      | attend       | authentic  |
+|   y | dainty       | dandy       | denote     | dent         | dentist      | denude     |
+|     | dint         | dwindle     | hesitant   | identical    | identify     | stand      |
+|     | standard     | stint       | stunt      | taint        | tantalize    | taunt      |
+|     | tend         | tender      | tendon     | tent         | tenth        | thunder    |
+|     | tint         | twenty      | twi-night  | whodunit     |              |            |
 |-----+--------------+-------------+------------+--------------+--------------+------------|
 | 122 | ATHENIAN     | tenant      | tenon      | teeny-weeny  | denounce     | adonian    |
 |   z | hootenanny   |             |            |              |              |            |
 |-----+--------------+-------------+------------+--------------+--------------+------------|
 | 123 | TENEMENT     | thin-man    | tonometer  | town-meeting | denim        | Denmark    |
-|     | denomination | dynamo      | dynamite   | atonement    | attainment   | autonomy   |
-|     | outnumber    |             |            |              |              |            |
+|     | denomination | dynamo      | dynamite   | atonement    | attainment   | pseudonym  |
+|     | autonomy     | outnumber   |            |              |              |            |
 |-----+--------------+-------------+------------+--------------+--------------+------------|
 | 124 | TENOR        | tanner      | teener     | tenure       | thinner      | tone-arm   |
 |     | tuner        | diner       | dinner     | donor        | downright    | wet-nurse  |
@@ -4183,47 +4219,47 @@ at least twice to regenerate cross-references correctly.
   (babomorph 230 240)
 #+END_src
 
-#+RESULTS[3adfea0565ba93646168cdc19def524f01329c66]:
+#+RESULTS[70876fb396bd3022bc85631f5ec5c8295b7f8692]:
 :results:
-|-----+-------------+------------+--------------+-----------------+--------------+-------------|
-| 130 | THAMES      | Thomas     | teamster     | team-song       | Thames       | theme-song  |
-|     | damask      | damsel     | domestic     | domicile        | demise       | admissible  |
-|     | atomizer    | atmosphere | utmost       |                 |              |             |
-|-----+-------------+------------+--------------+-----------------+--------------+-------------|
-| 131 | TOMATO      | tamed      | tom-tom      | timid           | tumid        | timeout     |
-|     | thumbtack   | daymaid    | deemed       | demit           | diameter     | dumdum      |
-|     | dumbwaiter  | adamite    | admit        | automate        | odometer     | estimate    |
-|     | esteemed    |            |              |                 |              |             |
-|-----+-------------+------------+--------------+-----------------+--------------+-------------|
-| 132 | DOMINO      | T-man      | Tammany      | thiamine        | time-honored | thumbnail   |
-|     | tameness    | demand     | demeanor     | demonstrate     | demon        | diamond     |
-|     | dimension   | diminish   | dominate     | domain          | dominion     | administer  |
-|     | admonish    | autumnal   | headman      | ottoman         | stamina      | sediment    |
-|-----+-------------+------------+--------------+-----------------+--------------+-------------|
-| 133 | DEMIMONDE   | teammate   | time-money   | time-immemorial | dime-museum  | demi-magic  |
-|-----+-------------+------------+--------------+-----------------+--------------+-------------|
-| 134 | TAMER       | tamarind   | timer        | tomorrow        | tommyrot     | Tia-Maria   |
-|     | tumor       | demure     | demarche     | demarcation     | admirer      | admiral     |
-|     | stammer     | steamer    |              |                 |              |             |
-|-----+-------------+------------+--------------+-----------------+--------------+-------------|
-| 135 | TAMALE      | time-lag   | time-loan    | tumult          | timeless     | time-limit  |
-|     | timely      | time-lock  | demolish     | dimly           | dome-light   | etymologist |
-|     | oatmeal     | stimulant  |              |                 |              |             |
-|-----+-------------+------------+--------------+-----------------+--------------+-------------|
-| 136 | STEAMSHIP   | time-sheet | time-chart   | tam-o-shanter   | damage       | demijohn    |
-|     | dumb-show   | admission  | automation   | atom-age        | Edam-cheese  | estimation  |
-|-----+-------------+------------+--------------+-----------------+--------------+-------------|
-| 137 | TOMAHAWK    | tomcat     | team-captain | time-card       | timekeeper   | tommy-gun   |
-|     | tummyache   | taming     | timing       | teeming         | demagogue    | demigod     |
-|     | democrat    | atomic     | stomach      |                 |              |             |
-|-----+-------------+------------+--------------+-----------------+--------------+-------------|
-| 138 | ATOM-FORCE  | tomfool    | time-fuze    | time-value      | team-foul    | time-off    |
-|     | dumbfounded | duumvirate | hit-movie    | steamfitter     |              |             |
-|-----+-------------+------------+--------------+-----------------+--------------+-------------|
-| 139 | TOMBOY      | temper     | temperature  | temperance      | tempest      | temple      |
-|     | template    | team-play  | team-boat    | timber          | timpani      | tympan      |
-|     | tombolo     | thimble    | thump        | tumble          | damp         | dimple      |
-|     | dumbbell    | dump       | automobile   | stamp           | stump        |             |
+|-----+-------------+------------+--------------+-----------------+-------------+--------------|
+| 130 | THAMES      | Thomas     | teamster     | team-song       | Thames      | theme-song   |
+|     | damask      | damsel     | domestic     | domicile        | demise      | admissible   |
+|     | atomizer    | atmosphere | utmost       |                 |             |              |
+|-----+-------------+------------+--------------+-----------------+-------------+--------------|
+| 131 | TOMATO      | tamed      | tom-tom      | timid           | tumid       | timeout      |
+|     | thumbtack   | daymaid    | deemed       | demit           | diameter    | dumdum       |
+|     | dumbwaiter  | adamite    | admit        | automate        | odometer    | estimate     |
+|     | esteemed    |            |              |                 |             |              |
+|-----+-------------+------------+--------------+-----------------+-------------+--------------|
+| 132 | DOMINO      | T-man      | Tammany      | administer      | admonish    | autumnal     |
+|     | demand      | demeanor   | demon        | demonstrate     | diamond     | dimension    |
+|     | diminish    | domain     | dominate     | dominion        | headman     | ottoman      |
+|     | sediment    | stamina    | tameness     | thiamine        | thumbnail   | time-honored |
+|-----+-------------+------------+--------------+-----------------+-------------+--------------|
+| 133 | DEMIMONDE   | teammate   | time-money   | time-immemorial | dime-museum | demi-magic   |
+|-----+-------------+------------+--------------+-----------------+-------------+--------------|
+| 134 | TAMER       | tamarind   | timer        | tomorrow        | tommyrot    | Tia-Maria    |
+|     | tumor       | demure     | demarche     | demarcation     | admirer     | admiral      |
+|     | stammer     | steamer    |              |                 |             |              |
+|-----+-------------+------------+--------------+-----------------+-------------+--------------|
+| 135 | TAMALE      | time-lag   | time-loan    | tumult          | timeless    | time-limit   |
+|     | timely      | time-lock  | demolish     | dimly           | dome-light  | etymologist  |
+|     | oatmeal     | stimulant  |              |                 |             |              |
+|-----+-------------+------------+--------------+-----------------+-------------+--------------|
+| 136 | STEAMSHIP   | time-sheet | time-chart   | tam-o-shanter   | damage      | demijohn     |
+|     | dumb-show   | admission  | automation   | atom-age        | Edam-cheese | estimation   |
+|-----+-------------+------------+--------------+-----------------+-------------+--------------|
+| 137 | TOMAHAWK    | tomcat     | team-captain | time-card       | timekeeper  | tommy-gun    |
+|     | tummyache   | taming     | timing       | teeming         | demagogue   | demigod      |
+|     | democrat    | atomic     | stomach      |                 |             |              |
+|-----+-------------+------------+--------------+-----------------+-------------+--------------|
+| 138 | ATOM-FORCE  | tomfool    | time-fuze    | time-value      | team-foul   | time-off     |
+|     | dumbfounded | duumvirate | hit-movie    | steamfitter     |             |              |
+|-----+-------------+------------+--------------+-----------------+-------------+--------------|
+| 139 | TOMBOY      | temper     | temperature  | temperance      | tempest     | temple       |
+|     | template    | team-play  | team-boat    | timber          | timpani     | tympan       |
+|     | tombolo     | thimble    | thump        | tumble          | damp        | dimple       |
+|     | dumbbell    | dump       | automobile   | stamp           | stampede    | stump        |
 :end:
 
 \clearpage
@@ -4231,40 +4267,40 @@ at least twice to regenerate cross-references correctly.
   (babomorph 240 245)
 #+end_src
 
-#+RESULTS[a1783c1dea02425ba337a86e73595bdaeeaac2c8]:
+#+RESULTS[d184171f368dd7b0c24bb93099b143485266868a]:
 :results:
-|-----+-----------+-------------+------------+------------+-------------+-------------|
-| 140 | TERRACE   | tricycle    | tea-rose   | thrice     | torso       | thirst      |
-|     | Thursday  | trace       | throes     | tress      | trews       | truce       |
-|     | dress     | dresser     | dressing   | drizzle    | drowsy      | duress      |
-|     | address   | atrocity    | authoress  | waitress   | otherwise   | storehouse  |
-|     | stress    |             |            |            |             |             |
-|-----+-----------+-------------+------------+------------+-------------+-------------|
-| 141 | TURRET    | tart        | tardy      | territory  | tread       | treadle     |
-|     | treat     | trade       | trait      | triton     | treaty      | trident     |
-|     | trout     | truth       | turtle     | third      | thirty      | thirteen    |
-|     | thread    | threat      | throat     | thyroid    | dart        | dearth      |
-|     | diehard   | dirt        | dread      | drought    | druid       | adroit      |
-|     | authority | iterate     | outright   | yesterday  | Saturday    | start       |
-|     | strait    | straight    | stratagem  | street     | stride      | strut       |
-|     | sturdy    |             |            |            |             |             |
-|-----+-----------+-------------+------------+------------+-------------+-------------|
-| 142 | TERRAIN   | train       | trainee    | thorn      | throne      | torrent     |
-|     | trance    | translation | transport  | trench     | turn        | tourney     |
-|     | turnip    | tyrant      | darn       | drain      | drench      | dirndl      |
-|     | drink     | drown       | drunk      | dryness    | adherent    | adorn       |
-|     | attorney  | eternal     | outrun     | utterance  | astronaut   | historian   |
-|     | strain    |             |            |            |             |             |
-|-----+-----------+-------------+------------+------------+-------------+-------------|
-| 143 | DREAM     | tearoom     | term       | terminal   | thermometer | torment     |
-|     | tram      | tramp       | trampoline | tremble    | trim        | trombone    |
-|     | trumpet   | theorem     | turmoil    | diorama    | drama       | dermatology |
-|     | dram      | drome       | dormer     | dormitory  | drum        | dramamine   |
-|     | stream    | streamer    | uttermost  | watermelon | watermark   |             |
-|-----+-----------+-------------+------------+------------+-------------+-------------|
-| 144 | TERROR    | terrier     | trier      | darer      | dearer      | drawer      |
-|     | dreary    | dryer       | dry-run    | adorer     | outerwear   | waterer     |
-|     | water-rat | water-right |            |            |             |             |
+|-----+-----------+-------------+-----------+------------+-----------+-------------|
+| 140 | TERRACE   | tricycle    | tea-rose  | thrice     | torso     | thirst      |
+|     | Thursday  | trace       | throes    | tress      | trews     | truce       |
+|     | dress     | dresser     | dressing  | drizzle    | drowsy    | duress      |
+|     | address   | atrocity    | authoress | waitress   | otherwise | storehouse  |
+|     | stress    |             |           |            |           |             |
+|-----+-----------+-------------+-----------+------------+-----------+-------------|
+| 141 | TURRET    | tart        | tardy     | territory  | tread     | treadle     |
+|     | treat     | trade       | trait     | triton     | treaty    | trident     |
+|     | trout     | truth       | turtle    | third      | thirty    | thirteen    |
+|     | thread    | threat      | throat    | thyroid    | dart      | dearth      |
+|     | diehard   | dirt        | dread     | drought    | druid     | adroit      |
+|     | authority | iterate     | outright  | yesterday  | Saturday  | start       |
+|     | strait    | straight    | stratagem | street     | stride    | strut       |
+|     | sturdy    |             |           |            |           |             |
+|-----+-----------+-------------+-----------+------------+-----------+-------------|
+| 142 | TERRAIN   | Saturn      | adherent  | adorn      | astronaut | attorney    |
+|     | darn      | dirndl      | drain     | drench     | drink     | drown       |
+|     | drunk     | dryness     | eternal   | historian  | outrun    | strain      |
+|     | thorn     | throne      | torrent   | tourney    | train     | trainee     |
+|     | trance    | translation | transport | trench     | turn      | turnip      |
+|     | tyrant    | utterance   |           |            |           |             |
+|-----+-----------+-------------+-----------+------------+-----------+-------------|
+| 143 | DREAM     | dermatology | diorama   | dormer     | dormitory | dram        |
+|     | drama     | dramamine   | drome     | drum       | storm     | stream      |
+|     | streamer  | tearoom     | term      | terminal   | theorem   | thermometer |
+|     | torment   | tram        | tramp     | trampoline | tremble   | trim        |
+|     | trombone  | trumpet     | turmoil   | uttermost  | watermark | watermelon  |
+|-----+-----------+-------------+-----------+------------+-----------+-------------|
+| 144 | TERROR    | terrier     | trier     | darer      | dearer    | drawer      |
+|     | dreary    | dryer       | dry-run   | adorer     | outerwear | waterer     |
+|     | water-rat | water-right |           |            |           |             |
 :end:
 
 \clearpage
@@ -4272,7 +4308,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 245 250)
 #+end_src
 
-#+RESULTS[db4b580decbd2b942af34aa9282e1b01f2b472e3]:
+#+RESULTS[2e193eee786d446c1b53e97b0e5823e9d0954066]:
 :results:
 |-----+-------------+------------+------------+-----------+--------------+------------|
 | 145 | TRAIL       | trial      | trawl      | thrill    | trellis      | trowel     |
@@ -4314,7 +4350,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 250 260)
 #+end_src
 
-#+RESULTS[de63143e4d093106de61e1f9e31e0ef50d9a0e49]:
+#+RESULTS[dbc26c3e4d2fa66928193fe62bada525a2daf205]:
 :results:
 |-----+------------+------------+------------+------------+-------------+------------|
 | 150 | TELESCOPE  | tails      | tales      | tools      | tiles       | tallies    |
@@ -4362,7 +4398,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 260 270)
 #+end_src
 
-#+RESULTS[be031e749f22cae72d4a092092b71f8dd95aec73]:
+#+RESULTS[e44d8eb19975240c4cd47f0efb9c8de2a5324259]:
 :results:
 |-----+-------------+--------------+-------------+--------------+-------------+---------------|
 | 160 | DUCHESS     | tea-chest    | touchstone  | touch-system | digest      | dishes        |
@@ -4399,45 +4435,46 @@ at least twice to regenerate cross-references correctly.
   (babomorph 270 280)
 #+end_src
 
-#+RESULTS[545db9a3be643d37408783f5369c5ca54003d1dd]:
+#+RESULTS[1c7b28fb29f4b66e4a537bf96969dfd90bbb30f5]:
 :results:
-|-----+------------+--------------+-------------+------------+-------------+----------------|
-| 170 | TAXI       | tax          | Texas       | text       | textile     | tongs          |
-|     | things     | tea          | cozy        | decks      | dachshund   | dexterity      |
-|     | doghouse   | dogs         | attics      | ethics     | outcast     | suitcase       |
-|-----+------------+--------------+-------------+------------+-------------+----------------|
-| 171 | DOCTOR     | teakettle    | tact        | thicket    | ticktack    | ticket         |
-|     | together   | teakwood     | tag-day     | decadent   | decade      | decode         |
-|     | docket     | dictate      | decathlon   | ductile    | dogwood     | adequate       |
-|     | edict      | etiquette    | educator    |            |             |                |
-|-----+------------+--------------+-------------+------------+-------------+----------------|
-| 172 | TOUCAN     | token        | tea-wagon   | tycoon     | taken       | thicken        |
-|     | thickness  | technical    | deacon      | decanter   | dignity     | stagnant       |
-|-----+------------+--------------+-------------+------------+-------------+----------------|
-| 173 | DOCUMENT   | thingumajig  | Tecumseh    | autogamy   | decompose   | dogma          |
-|     | degum      | decamp       | day-camp    | stigma     |             |                |
-|-----+------------+--------------+-------------+------------+-------------+----------------|
-| 174 | TIGER      | ticker       | tea-garden  | dagger     | decorate    | decrease       |
-|     | decree     | decry        | degree      | degrade    | digress     | digger         |
-|     | dacron     | doggerel     | autograph   | autocar    | attacker    | outcry         |
-|     | outgrow    | stagger      | stoker      | stacker    |             |                |
-|-----+------------+--------------+-------------+------------+-------------+----------------|
-| 175 | TACKLE     | tangle       | tickle      | tingle     | tongue-lash | tag-line       |
-|     | tequila    | toggle       | dangle      | declaim    | declare     | decline        |
-|     | decal      | ducal        | stockholder |            |             |                |
-|-----+------------+--------------+-------------+------------+-------------+----------------|
-| 176 | DICTIONARY | tuck-shop    | take-issue  | dockage    | doggish     | dogwatch       |
-|     | dog-show   | eduction     | education   |            |             |                |
-|-----+------------+--------------+-------------+------------+-------------+----------------|
-| 177 | HOT-cake   | tea-cake     | tacking     | tagging    | decaying    | digging        |
-|     | dogging    | attacking    | outgoing    | sticking   | stocking    | stock-exchange |
-|-----+------------+--------------+-------------+------------+-------------+----------------|
-| 178 | TAKEOFF    | tick-off     | tick-fever  | dogface    | dogfight    | dogfish        |
-|     | dog-food   | dogfoot      | duckfooted  | hot-coffee | wedding-vow | outgiving      |
-|     | stockfish  |              |             |            |             |                |
-|-----+------------+--------------+-------------+------------+-------------+----------------|
-| 179 | STICKUP    | teacup       | take-up     | toe-cap    | dig-up      | decapitate     |
-|     | decoupage  | hiding-place | stockbroker |            |             |                |
+|-----+------------+--------------+----------------+------------+-------------+------------|
+| 170 | TAXI       | tax          | Texas          | text       | textile     | tongs      |
+|     | things     | tea          | cozy           | decks      | dachshund   | dexterity  |
+|     | doghouse   | dogs         | attics         | ethics     | outcast     | suitcase   |
+|-----+------------+--------------+----------------+------------+-------------+------------|
+| 171 | DOCTOR     | teakettle    | tact           | thicket    | ticktack    | ticket     |
+|     | together   | teakwood     | tag-day        | decadent   | decade      | decode     |
+|     | docket     | dictate      | decathlon      | ductile    | dogwood     | adequate   |
+|     | edict      | etiquette    | educator       |            |             |            |
+|-----+------------+--------------+----------------+------------+-------------+------------|
+| 172 | TOUCAN     | token        | tea-wagon      | tycoon     | taken       | thicken    |
+|     | thickness  | technical    | deacon         | decanter   | dignity     | stagnant   |
+|-----+------------+--------------+----------------+------------+-------------+------------|
+| 173 | DOCUMENT   | Tecumseh     | autogamy       | day-camp   | decamp      | decompose  |
+|     | degum      | dogma        | stigma         | stigmata   | thingumajig |            |
+|-----+------------+--------------+----------------+------------+-------------+------------|
+| 174 | TIGER      | attacker     | autocar        | autograph  | dacron      | dagger     |
+|     | decorate   | decrease     | decree         | decry      | degrade     | degree     |
+|     | digger     | digress      | doggerel       | outcry     | outgrow     | sidecar    |
+|     | stacker    | stagger      | stoker         | tea-garden | ticker      |            |
+|-----+------------+--------------+----------------+------------+-------------+------------|
+| 175 | TACKLE     | tangle       | tickle         | tingle     | tongue-lash | tag-line   |
+|     | tequila    | toggle       | dangle         | declaim    | declare     | decline    |
+|     | decal      | ducal        | stockholder    |            |             |            |
+|-----+------------+--------------+----------------+------------+-------------+------------|
+| 176 | DICTIONARY | tuck-shop    | take-issue     | dockage    | doggish     | dogwatch   |
+|     | dog-show   | eduction     | education      |            |             |            |
+|-----+------------+--------------+----------------+------------+-------------+------------|
+| 177 | HOT-cake   | attacking    | decaying       | digging    | dogging     | outgoing   |
+|     | sidekick   | sticking     | stock-exchange | stocking   | tacking     | tagging    |
+|     | tea-cake   |              |                |            |             |            |
+|-----+------------+--------------+----------------+------------+-------------+------------|
+| 178 | TAKEOFF    | tick-off     | tick-fever     | dogface    | dogfight    | dogfish    |
+|     | dog-food   | dogfoot      | duckfooted     | hot-coffee | wedding-vow | outgiving  |
+|     | stockfish  |              |                |            |             |            |
+|-----+------------+--------------+----------------+------------+-------------+------------|
+| 179 | STICKUP    | teacup       | take-up        | toe-cap    | dig-up      | decapitate |
+|     | decoupage  | hiding-place | stockbroker    |            |             |            |
 :end:
 
 \clearpage
@@ -4445,43 +4482,43 @@ at least twice to regenerate cross-references correctly.
   (babomorph 280 290)
 #+end_src
 
-#+RESULTS[ecd622a959da04100e3a5c74c393a8da9026df0f]:
+#+RESULTS[06cf8e57ae8aa66ef8259cc70584f806e5157c30]:
 :results:
-|-----+-------------+------------+--------------+----------------+-------------+---------------|
-| 180 | DEVICE      | two-faced  | two-fisted   | two-phase      | thieves     | typhus        |
-|     | deface      | devastate  | deficit      | diffuse        | divest      | dovehouse     |
-|     | advise      | edifice    | whiteface    |                |             |               |
-|-----+-------------+------------+--------------+----------------+-------------+---------------|
-| 181 | DAVID       | taffeta    | theft        | Tophet         | typhoid     | tuft          |
-|     | daft        | deft       | davit        | defeat         | daffodil    | devoid        |
-|     | devote      | devout     | diphtheria   | divide         | deviate     | diphthong     |
-|     | hotfoot     | outfit     | outvote      | stevedore      | eightfooter |               |
-|-----+-------------+------------+--------------+----------------+-------------+---------------|
-| 182 | TIFFANY     | typhoon    | toughness    | tiffin         | deafen      | defense       |
-|     | defiant     | define     | dauphin      | divan          | divine      | advent        |
-|     | advance     | advantage  |              |                |             |               |
-|-----+-------------+------------+--------------+----------------+-------------+---------------|
-| 183 | DEAFMUTE    | tea-family | tough-minded | TV-man         | defame      |               |
-|-----+-------------+------------+--------------+----------------+-------------+---------------|
-| 184 | TAVERN      | taffrail   | tovarich     | thievery       | defer       | deform        |
-|     | defraud     | defray     | devour       | diaphragm      | differ      | diver         |
-|     | diverse     | divorce    | defrost      | deaf-ear       | adverse     | advertisement |
-|-----+-------------+------------+--------------+----------------+-------------+---------------|
-| 185 | DEVIL       | tefillin   | tivoli       | tough-luck     | twofold     | toyful        |
-|     | defalcation | defile     | deflate      | develop        | duffel      | hatful        |
-|     | hateful     | outfield   | outflow      | white-elephant | youthful    | stifle        |
-|     | wistful     |            |              |                |             |               |
-|-----+-------------+------------+--------------+----------------+-------------+---------------|
-| 186 | DEVOTION    | TV-show    | thievish     | deficiency     | deviation   | dovish        |
-|     | diffusion   | division   | audiovisual  | whitefish      | hot-fudge   |               |
-|-----+-------------+------------+--------------+----------------+-------------+---------------|
-| 187 | TOUGH-guy   | de-facto   | defect       | difficult      | diving      | advocate      |
-|     | edification | staffing   | stuffing     |                |             |               |
-|-----+-------------+------------+--------------+----------------+-------------+---------------|
-| 188 | TV-fan      | two-fifths | thief-vault  | dive-off       | eighty-five | stave-off     |
-|-----+-------------+------------+--------------+----------------+-------------+---------------|
-| 189 | DIVE-bomber | taffy-pull | v            | tough-boy      | edifiable   | stovepipe     |
-|     | stove-pot   |            |              |                |             |               |
+|-----+----------------+-------------+--------------+------------+-------------+---------------|
+| 180 | DEVICE         | two-faced   | two-fisted   | two-phase  | thieves     | typhus        |
+|     | deface         | devastate   | deficit      | diffuse    | divest      | dovehouse     |
+|     | advise         | edifice     | whiteface    |            |             |               |
+|-----+----------------+-------------+--------------+------------+-------------+---------------|
+| 181 | DAVID          | taffeta     | theft        | Tophet     | typhoid     | tuft          |
+|     | daft           | deft        | davit        | defeat     | daffodil    | devoid        |
+|     | devote         | devout      | diphtheria   | divide     | deviate     | diphthong     |
+|     | hotfoot        | outfit      | outvote      | stevedore  | eightfooter |               |
+|-----+----------------+-------------+--------------+------------+-------------+---------------|
+| 182 | TIFFANY        | typhoon     | toughness    | tiffin     | deafen      | defense       |
+|     | defiant        | define      | dauphin      | divan      | divine      | advent        |
+|     | advance        | advantage   |              |            |             |               |
+|-----+----------------+-------------+--------------+------------+-------------+---------------|
+| 183 | DEAFMUTE       | tea-family  | tough-minded | TV-man     | defame      |               |
+|-----+----------------+-------------+--------------+------------+-------------+---------------|
+| 184 | TAVERN         | taffrail    | tovarich     | thievery   | defer       | deform        |
+|     | defraud        | defray      | devour       | diaphragm  | differ      | diver         |
+|     | diverse        | divorce     | defrost      | deaf-ear   | adverse     | advertisement |
+|-----+----------------+-------------+--------------+------------+-------------+---------------|
+| 185 | DEVIL          | defalcation | defile       | deflate    | develop     | duffel        |
+|     | hateful        | hatful      | outfield     | outflow    | sea-devil   | stifle        |
+|     | tefillin       | tivoli      | tough-luck   | toyful     | twofold     | wasteful      |
+|     | white-elephant | wistful     | youthful     |            |             |               |
+|-----+----------------+-------------+--------------+------------+-------------+---------------|
+| 186 | DEVOTION       | TV-show     | thievish     | deficiency | deviation   | dovish        |
+|     | diffusion      | division    | audiovisual  | whitefish  | hot-fudge   |               |
+|-----+----------------+-------------+--------------+------------+-------------+---------------|
+| 187 | TOUGH-guy      | de-facto    | defect       | difficult  | diving      | advocate      |
+|     | edification    | staffing    | stuffing     |            |             |               |
+|-----+----------------+-------------+--------------+------------+-------------+---------------|
+| 188 | TV-fan         | two-fifths  | thief-vault  | dive-off   | eighty-five | stave-off     |
+|-----+----------------+-------------+--------------+------------+-------------+---------------|
+| 189 | DIVE-bomber    | taffy-pull  | v            | tough-boy  | edifiable   | stovepipe     |
+|     | stove-pot      |             |              |            |             |               |
 :end:
 
 \clearpage
@@ -4489,7 +4526,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 290 300)
 #+end_src
 
-#+RESULTS[4cfa40798fc1a56ad14d4a33102efa32fbde57b4]:
+#+RESULTS[b426197dc708a28be2ae5cc5eb7800ea60b78bf2]:
 :results:
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
 | 190 | TAPAS       | topsail      | top-sergeant | top-secret    | topside     | topsoil     |
@@ -4502,22 +4539,23 @@ at least twice to regenerate cross-references correctly.
 |     | deputy      | adapt        | adept        | adopt         | output      | hotbed      |
 |     | outbid      | stupid       |              |               |             |             |
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
-| 192 | HATPIN      | tiepin       | topknot      | topnotch      | thighbone   | twopence    |
-|     | debenture   | deepen       | debonair     | depend        | depone      | Dubonnet    |
-|     | Ethiopian   | headpin      | outbound     | headband      |             |             |
+| 192 | HATPIN      | Dubonnet     | Ethiopian    | debenture     | debonair    | deepen      |
+|     | depend      | depone       | eastbound    | headband      | headpin     | outbound    |
+|     | stipend     | southbound   | thighbone    | tiepin        | topknot     | topnotch    |
+|     | twopence    |              |              |               |             |             |
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
 | 193 | STEPMOTHER  | topman       | topmast      | topmost       | top-milk    | topminnow   |
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
-| 194 | TYPEWRITER  | tie-bar      | tea-party    | taper         | tapir       | taproom     |
-|     | topper      | topwork      | top-round    | top-rate      | daybreak    | debar       |
-|     | depart      | dapper       | debris       | department    | deportment  | depreciate  |
-|     | depress     | deprive      | dipper       | diaper        | outboard    | outbreak    |
-|     | sideboard   | sideburns    | stubborn     |               |             |             |
+| 194 | TYPEWRITER  | dapper       | daybreak     | debar         | debris      | depart      |
+|     | department  | deportment   | depreciate   | depress       | deprive     | diaper      |
+|     | dipper      | outboard     | outbreak     | sideboard     | sideburns   | stubborn    |
+|     | sweetbread  | taper        | tapir        | taproom       | tea-party   | tie-bar     |
+|     | top-rate    | top-round    | topper       | topwork       |             |             |
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
-| 195 | TABLE       | tablet       | tableau      | tipple        | topple      | topless     |
-|     | tupelo      | two-ply      | dapple       | deplore       | diploma     | diplomat    |
-|     | double      | duplicate    | doublet      | diabolic      | audible     | edible      |
-|     | oddball     | stable       | steeple      | stipulate     |             |             |
+| 195 | TABLE       | audible      | dapple       | deplore       | diabolic    | diploma     |
+|     | diplomat    | double       | doublet      | duplicate     | edible      | oddball     |
+|     | seat-belt   | stable       | staple       | steeple       | stipulate   | tableau     |
+|     | tablet      | tipple       | topless      | topple        | tupelo      | two-ply     |
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
 | 196 | DEBAUCH     | tip-sheet    | top-sheet    | top-shelf     | two-page    | type-wash   |
 |     | adoption    | adaption     | stoppage     |               |             |             |
@@ -4538,45 +4576,45 @@ at least twice to regenerate cross-references correctly.
   (babomorph 300 310)
 #+end_src
 
-#+RESULTS[7cd9843c064dbbab957bb987e62056b0ad932851]:
+#+RESULTS[98810dd22914261740fb6ecce0521f6350f36178]:
 :results:
-|-----+--------------+---------------+----------------+--------------+----------------+---------------|
-| 200 | GNOSIS       | necessity     | nieces         | noses        | noises         | incisor       |
-|     | insist       | incessant     | unceasing      | unseasoned   | unsuspicious   | ounces        |
-|     | census       |               |                |              |                |               |
-|-----+--------------+---------------+----------------+--------------+----------------+---------------|
-| 201 | NOSTRIL      | nest          | nasty          | nicety       | nose-dive      | anesthesia    |
-|     | honest       | incident      | incite         | inside       | insight        | instant       |
-|     | instead      | instinct      | institute      | instrument   | unsatisfactory | unsteady      |
-|     | unsuitable   | gnostic       | one-step       | Wednesday    |                |               |
-|-----+--------------+---------------+----------------+--------------+----------------+---------------|
-| 202 | ENSIGN       | newshen       | nice-nelly     | niacin       | nosiness       | nuisance      |
-|     | ensnare      | incinerator   | innocent       | insane       | insensitive    | insincere     |
-|     | uneasiness   | unseen        | unsound        | unison       | unessential    |               |
-|-----+--------------+---------------+----------------+--------------+----------------+---------------|
-| 203 | INSEMINATION | newsman       | noisemaker     | news-media   | nizam          | noisome       |
-|     | enzyme       | hansom        | inasmuch       | insomnia     | in-sum         | unseemly      |
-|     | unassuming   | unsimilar     |                |              |                |               |
-|-----+--------------+---------------+----------------+--------------+----------------+---------------|
-| 204 | CENSOR       | newsreel      | newsworthy     | answer       | encircle       | incertitude   |
-|     | insert       | insurgent     | insurmountable | insurrection | uncertain      | unsworn       |
-|     | sincere      |               |                |              |                |               |
-|-----+--------------+---------------+----------------+--------------+----------------+---------------|
-| 205 | NACELLE      | nozzle        | nuzzle         | nestle       | nasal          | noiseless     |
-|     | nicely       | enslave       | insolence      | insolvent    | insulin        | insular       |
-|     | insult       | ancillary     | oneself        | unselfish    | wine-cellar    | senseless     |
-|-----+--------------+---------------+----------------+--------------+----------------+---------------|
-| 206 | NOSE-JOB     | news-agency   | incision       | ionization   | unsociable     | sensation     |
-|-----+--------------+---------------+----------------+--------------+----------------+---------------|
-| 207 | NOSE-cone    | nosegay       | encyclopedia   | honeysuckle  | inscription    | insect        |
-|     | insecure     | insignificant | unicycle       | unscrupulous | wainscot       |               |
-|-----+--------------+---------------+----------------+--------------+----------------+---------------|
-| 208 | IONOSPHERE   | news-vendor   | henceforth     | insufferable | insufficient   | once-over     |
-|     | uncivil      | unsafe        | unicef         |              |                |               |
-|-----+--------------+---------------+----------------+--------------+----------------+---------------|
-| 209 | NEWSBOY      | nosepiece     | newsprint      | no-soap      | newspaper      | inhospitable  |
-|     | inseparable  | insipid       | inspect        | inspiration  | insuperable    | insupportable |
-|     | unspent      | sensible      |                |              |                |               |
+|-----+--------------+---------------+----------------+--------------+--------------+---------------|
+| 200 | GNOSIS       | necessity     | nieces         | noses        | noises       | incisor       |
+|     | insist       | incessant     | unceasing      | unseasoned   | unsuspicious | ounces        |
+|     | census       |               |                |              |              |               |
+|-----+--------------+---------------+----------------+--------------+--------------+---------------|
+| 201 | NOSTRIL      | Wednesday     | anesthesia     | gnostic      | honest       | incident      |
+|     | incite       | inside        | insight        | instant      | instead      | instinct      |
+|     | institute    | instrument    | nasty          | nest         | nicety       | nose-dive     |
+|     | one-step     | sinister      | unsatisfactory | unsteady     | unsuitable   |               |
+|-----+--------------+---------------+----------------+--------------+--------------+---------------|
+| 202 | ENSIGN       | newshen       | nice-nelly     | niacin       | nosiness     | nuisance      |
+|     | ensnare      | incinerator   | innocent       | insane       | insensitive  | insincere     |
+|     | uneasiness   | unseen        | unsound        | unison       | unessential  |               |
+|-----+--------------+---------------+----------------+--------------+--------------+---------------|
+| 203 | INSEMINATION | newsman       | noisemaker     | news-media   | nizam        | noisome       |
+|     | enzyme       | hansom        | inasmuch       | insomnia     | in-sum       | unseemly      |
+|     | unassuming   | unsimilar     |                |              |              |               |
+|-----+--------------+---------------+----------------+--------------+--------------+---------------|
+| 204 | CENSOR       | newsreel      | newsworthy     | answer       | encircle     | incertitude   |
+|     | insert       | insurgent     | insurmountable | insurrection | uncertain    | unsworn       |
+|     | sincere      |               |                |              |              |               |
+|-----+--------------+---------------+----------------+--------------+--------------+---------------|
+| 205 | NACELLE      | nozzle        | nuzzle         | nestle       | nasal        | noiseless     |
+|     | nicely       | enslave       | insolence      | insolvent    | insulin      | insular       |
+|     | insult       | ancillary     | oneself        | unselfish    | wine-cellar  | senseless     |
+|-----+--------------+---------------+----------------+--------------+--------------+---------------|
+| 206 | NOSE-JOB     | news-agency   | incision       | ionization   | unsociable   | sensation     |
+|-----+--------------+---------------+----------------+--------------+--------------+---------------|
+| 207 | NOSE-cone    | nosegay       | encyclopedia   | honeysuckle  | inscription  | insect        |
+|     | insecure     | insignificant | unicycle       | unscrupulous | wainscot     |               |
+|-----+--------------+---------------+----------------+--------------+--------------+---------------|
+| 208 | IONOSPHERE   | news-vendor   | henceforth     | insufferable | insufficient | once-over     |
+|     | uncivil      | unsafe        | unicef         |              |              |               |
+|-----+--------------+---------------+----------------+--------------+--------------+---------------|
+| 209 | NEWSBOY      | nosepiece     | newsprint      | no-soap      | newspaper    | inhospitable  |
+|     | inseparable  | insipid       | inspect        | inspiration  | insuperable  | insupportable |
+|     | unspent      | sensible      |                |              |              |               |
 :end:
 
 \clearpage
@@ -4584,59 +4622,60 @@ at least twice to regenerate cross-references correctly.
   (babomorph 310 320)
 #+end_src
 
-#+RESULTS[a0b7efee5d9684f7718e022dd6b1dcaaccf3630f]:
+#+RESULTS[47a6bd1fef20832bd11eb609cfffd85dd6bf0771]:
 :results:
-|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
-| 210 | NUDIST        | notice          | Nazi         | nowadays     | no-dice        | antacid     |
-|     | anticipate    | antiseptic      | enthusiasm   | entice       | indecent       | indistinct  |
-|     | induce        | industry        | hind-sight   | handsaw      | undeserved     | undesirable |
-|     | undisturbed   |                 |              |              |                |             |
-|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
-| 211 | UNTIED        | nitwit          | nudity       | night-duty   | noted          | needed      |
-|     | antitrust     | annotate        | antidote     | entity       | entitle        | handed      |
-|     | haunted       | handout         | indeed       | knighthood   | undoubted      | untidy      |
-|     | united        | undated         | want-ad      |              |                |             |
-|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
-| 212 | ANTENNA       | andante         | Anthony      | antonym      | india-ink      | antiknock   |
-|     | handiness     | entwine         | inattentive  | indent       | Indian         | intend      |
-|     | intense       | intonate        | one-to-one   | undeniable   | unthankful     | wanton      |
-|     | sentence      | sentinel        | centennial   |              |                |             |
-|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
-| 213 | ANTIMATTER    | nutmeg          | nightmare    | anthem       | anadem         | anatomy     |
-|     | anathema      | antimissile     | endemic      | inadmissible | indemnify      | intimacy    |
-|     | intimidate    | handyman        | handmaiden   | handmade     | honeydew-melon | ointment    |
-|     | on-time       | onetime         | anytime      | untimely     | windmill       |             |
-|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
-| 214 | NUTTER        | network         | neither      | Netherlands  | nodder         | neutral     |
-|     | notary        | nutriment       | nitric       | nitrate      | nightrobe      | another     |
-|     | anterior      | anthracite      | anteroom     | endear       | endorse        | endure      |
-|     | enter         | entertain       | entrance     | entry        | handrail       | handwriting |
-|     | hundred       | hinterland      | interact     | interest     | interior       | intern      |
-|     | international | interval        | interview    | introduce    | under          | Unitarian   |
-|     | unit-rule     | untiring        | winter       | wonder       |                |             |
-|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
-| 215 | NOODLE        | needle          | needless     | night-owl    | new-deal       | antelope    |
-|     | anthill       | endless         | handle       | indelicate   | indolent       | indulge     |
-|     | intellect     | intelligent     | intolerable  | know-it-all  | until          | windless    |
-|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
-| 216 | SANDWICH      | nightshade      | night-watch  | notation     | nutshell       | annotation  |
-|     | antechamber   | indigenous      | indigestion  | intuition    | untouchable    | windowshade |
-|     | wantage       | window-shopping |              |              |                |             |
-|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
-| 217 | NIGHTGOWN     | nothing         | nightcap     | nautical     | nightingale    | nutcracker  |
-|     | antagonist    | antichrist      | antics       | antique      | anything       | ending      |
-|     | handicraft    | hunting         | handcuff     | handicap     | inadequate     | index       |
-|     | indigo        | indignant       | induction    | intact       | integrity      | intoxicated |
-|     | untangle      | winding         | wanting      | syndicate    |                |             |
-|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
-| 218 | NIGHTFALL     | native          | notification | endeavor     | endive         | handful     |
-|     | antiphony     | inadvisable     | indifferent  | individual   | indefinite     | undefined   |
-|     | undeveloped   | undefeated      | scientific   |              |                |             |
-|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
-| 219 | NOTEBOOK      | notable         | night-pay    | antibiotics  | antibody       | antipasto   |
-|     | antipathy     | antipode        | antipope     | handbag      | handbill       | handbook    |
-|     | handball      | inaudible       | independent  | inedible     | knee-deep      | knotty-pine |
-|     | windpipe      | sandbox         | sound-box    |              |                |             |
+|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
+| 210 | NUDIST        | notice          | Nazi         | nowadays    | no-dice     | antacid        |
+|     | anticipate    | antiseptic      | enthusiasm   | entice      | indecent    | indistinct     |
+|     | induce        | industry        | hind-sight   | handsaw     | undeserved  | undesirable    |
+|     | undisturbed   |                 |              |             |             |                |
+|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
+| 211 | UNTIED        | nitwit          | nudity       | night-duty  | noted       | needed         |
+|     | antitrust     | annotate        | antidote     | entity      | entitle     | handed         |
+|     | haunted       | handout         | indeed       | knighthood  | undoubted   | untidy         |
+|     | united        | undated         | want-ad      |             |             |                |
+|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
+| 212 | ANTENNA       | andante         | Anthony      | antonym     | india-ink   | antiknock      |
+|     | handiness     | entwine         | inattentive  | indent      | Indian      | intend         |
+|     | intense       | intonate        | one-to-one   | undeniable  | unthankful  | wanton         |
+|     | sentence      | sentinel        | centennial   |             |             |                |
+|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
+| 213 | ANTIMATTER    | anadem          | anathema     | anatomy     | anthem      | antimissile    |
+|     | anytime       | endemic         | handmade     | handmaiden  | handyman    | honeydew-melon |
+|     | inadmissible  | indemnify       | intimacy     | intimidate  | nightmare   | nutmeg         |
+|     | ointment      | on-time         | onetime      | sentiment   | untimely    | windmill       |
+|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
+| 214 | NUTTER        | network         | neither      | Netherlands | nodder      | neutral        |
+|     | notary        | nutriment       | nitric       | nitrate     | nightrobe   | another        |
+|     | anterior      | anthracite      | anteroom     | endear      | endorse     | endure         |
+|     | enter         | entertain       | entrance     | entry       | handrail    | handwriting    |
+|     | hundred       | hinterland      | interact     | interest    | interior    | intern         |
+|     | international | interval        | interview    | introduce   | under       | Unitarian      |
+|     | unit-rule     | untiring        | winter       | wonder      |             |                |
+|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
+| 215 | NOODLE        | antelope        | anthill      | endless     | handle      | indelicate     |
+|     | indolent      | indulge         | intellect    | intelligent | intolerable | know-it-all    |
+|     | needle        | needless        | new-deal     | night-owl   | sandal      | until          |
+|     | windless      |                 |              |             |             |                |
+|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
+| 216 | SANDWICH      | nightshade      | night-watch  | notation    | nutshell    | annotation     |
+|     | antechamber   | indigenous      | indigestion  | intuition   | untouchable | windowshade    |
+|     | wantage       | window-shopping |              |             |             |                |
+|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
+| 217 | NIGHTGOWN     | nothing         | nightcap     | nautical    | nightingale | nutcracker     |
+|     | antagonist    | antichrist      | antics       | antique     | anything    | ending         |
+|     | handicraft    | hunting         | handcuff     | handicap    | inadequate  | index          |
+|     | indigo        | indignant       | induction    | intact      | integrity   | intoxicated    |
+|     | untangle      | winding         | wanting      | syndicate   |             |                |
+|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
+| 218 | NIGHTFALL     | native          | notification | endeavor    | endive      | handful        |
+|     | antiphony     | inadvisable     | indifferent  | individual  | indefinite  | undefined      |
+|     | undeveloped   | undefeated      | scientific   |             |             |                |
+|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
+| 219 | NOTEBOOK      | notable         | night-pay    | antibiotics | antibody    | antipasto      |
+|     | antipathy     | antipode        | antipope     | handbag     | handbill    | handbook       |
+|     | handball      | inaudible       | independent  | inedible    | knee-deep   | knotty-pine    |
+|     | windpipe      | sandbox         | sound-box    |             |             |                |
 :end:
 
 \clearpage
@@ -4644,7 +4683,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 320 330)
 #+end_src
 
-#+RESULTS[d18e1186169e0a6d229e99f2d96b2f0d89a7742b]:
+#+RESULTS[a9563480fca39932c24636c41d5750a7a214a991]:
 :results:
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
 | 220 | NONCE          | nonsense       | nonuse        | nainsook      | ananas          | announce          |
@@ -4688,7 +4727,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 330 340)
 #+end_src
 
-#+RESULTS[29b46b8cb964b31a5d26e3e26ba448cc5ab188fa]:
+#+RESULTS[a53dcc730624969e0d59b8ffa31b04b0dc2919fc]:
 :results:
 |-----+------------+--------------+---------------+--------------+-------------+-------------|
 | 230 | GNOMES     | names        | namesake      | nemesis      | numismatist | animosity   |
@@ -4722,7 +4761,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 340 350)
 #+end_src
 
-#+RESULTS[b8febde0461c8adfe97c39a61d075294c00c77ac]:
+#+RESULTS[5a2cd9ad7c4af303ee7c457ef853017db04b4d98]:
 :results:
 |-----+---------------+------------+-------------+-------------+---------------+-------------|
 | 240 | NURSE         | nursery    | neurosis    | nearsighted | honors        | onerous     |
@@ -4762,7 +4801,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 350 360)
 #+end_src
 
-#+RESULTS[f41d7e7aed6e522ae96b7de331e1ee0f4186a2b1]:
+#+RESULTS[9decd460d71e3acdacfb0abdcd55149a0d7ef72c]:
 :results:
 |-----+-------------+-------------+-------------+---------------+-------------+--------------|
 | 250 | NELSON      | nails       | nihilist    | annals        | analyze     | awnless      |
@@ -4798,7 +4837,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 360   370)
 #+end_src
 
-#+RESULTS[80c591730bf94b0a0077f00d26121b721f15de1a]:
+#+RESULTS[d29def9ad8fb6d6b238b1e36e16b1ee739b9f3ed]:
 :results:
 |-----+--------------+------------+-----------+--------------+--------------+------------|
 | 260 | NATCHEZ      | nauseous   | niches    | notches      | nudges       | hinges     |
@@ -4837,7 +4876,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 370   380)
 #+end_src
 
-#+RESULTS[85cc06a8b2bf2bd4da54c500795c0ec5e67d1df2]:
+#+RESULTS[1df6c7b57809bd027e0013a316e90e986abb55c4]:
 :results:
 |-----+---------------+---------------+---------------+--------------+--------------+----------------|
 | 270 | inks          | negus         | next          | nexus        | knocks       | annex          |
@@ -4887,7 +4926,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 380   390)
 #+end_src
 
-#+RESULTS[cf843172a7856b2f63fc446f9746263c36252f69]:
+#+RESULTS[378e752eca0fd3eba440ae1f50f52b63c947e0a5]:
 :results:
 |-----+---------------+-------------+--------------+---------------+--------------+---------------|
 | 280 | naves         | novice      | nephews      | nevus         | envious      | infest        |
@@ -4933,7 +4972,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 390   400)
 #+end_src
 
-#+RESULTS[801aba0054a4283959dcfc1244201c3872148672]:
+#+RESULTS[57466e08362028e4db997400cb180787df311b90]:
 :results:
 |-----+--------------+-------------+-------------+---------------+---------------+--------------|
 | 290 | nabs         | naps        | nibs        | nips          | NBC           | nubs         |
@@ -4973,7 +5012,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 400   410)
 #+end_src
 
-#+RESULTS[a2abbc5362922dd62b021762c5ce29b0697a48b4]:
+#+RESULTS[cceabf2e15b5d9a1b68da40c4b65d28d2ef9abd7]:
 :results:
 |-----+---------------+---------------+-------------+---------------+---------------+-------------|
 | 300 | masseuse      | mesas         | masses      | misses        | misuse        | mosses      |
@@ -5017,7 +5056,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 410   420)
 #+end_src
 
-#+RESULTS[5b47743b956156e1611669908c16029b0a89d2ed]:
+#+RESULTS[839c895cf0fac242d15b9cb5b8e17c37d75442ea]:
 :results:
 |-----+-----------+------------+-------------+-------------+------------+---------------|
 | 310 | maids     | mats       | mates       | madhouse    | matzo      | meadows       |
@@ -5061,7 +5100,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 420   430)
 #+end_src
 
-#+RESULTS[6c54899b707eaa226c53f2f335df6bd4558a49d5]:
+#+RESULTS[c9423695d2f6e37bc814447aa92a7ad164ea8bd5]:
 :results:
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
 | 320 | manse       | mayonnaise    | manslaughter | mainsail   | menace       | mince       |
@@ -5111,7 +5150,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 430   440)
 #+end_src
 
-#+RESULTS[e3bd70610842cd84cbef678aaff32b635ae0a4e6]:
+#+RESULTS[82f2263b0aa94c4805b8c02ccb47819a3a6a84b2]:
 :results:
 |-----+--------------+------------+----------------+---------------+-----------+-------------|
 | 330 | mammas       | maims      | mayhems        | memos         | memsahib  | mimes       |
@@ -5146,7 +5185,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 440   450)
 #+end_src
 
-#+RESULTS[a4c834e1be3e1b36de02619543b972fc7326a950]:
+#+RESULTS[d86e3af90a7e4905edf3925a37cec1e99abaf875]:
 :results:
 |-----+-------------+-------------+--------------+------------+------------+------------|
 | 340 | mercenary   | mercer      | mercy        | morass     | morose     | morsel     |
@@ -5188,7 +5227,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 450   460)
 #+end_src
 
-#+RESULTS[18d472d907fd6b3e101751e5631b06fb11d3c595]:
+#+RESULTS[c2fe3a6934c7c088ed3077a0c44d84557d02284f]:
 :results:
 |-----+--------------+---------------+-------------+--------------+------------+-------------|
 | 350 | MALICE       | homeless      | maelstrom   | mills        | miles      | millisecond |
@@ -5231,7 +5270,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 460   470)
 #+end_src
 
-#+RESULTS[77fe24aeae831e92de206baf4d49f11e007ce828]:
+#+RESULTS[7675ca7d6b112c2c469870369d24a864fe3cb984]:
 :results:
 |-----+-------------+------------+-----------+------------+-------------+----------|
 | 360 | magistrate  | majesty    | majuscule | matches    | images      |          |
@@ -5262,7 +5301,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 470   480)
 #+end_src
 
-#+RESULTS[c44c9d1cc1e53cdfb58ae1ba08018c920091073e]:
+#+RESULTS[b1b34e9f6eb9d62230ba34a24030c83a53620a11]:
 :results:
 |-----+-------------+--------------+------------+-----------+---------------+-------------|
 | 370 | macassar    | maccus       | magazine   | maxim     | megacycle     | mikes       |
@@ -5298,7 +5337,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 480   490)
 #+end_src
 
-#+RESULTS[921d89dd46edf3de0d9b3f6af4e71f78d3b75765]:
+#+RESULTS[09cd126a820c934d1e501acbc877a8003d009821]:
 :results:
 |-----+------------+--------------+-------------+--------------+--------------+--------------|
 | 380 | mavis      | movies       | moves       | muffs        | Mephisto     | emphasis     |
@@ -5331,7 +5370,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 490   500)
 #+end_src
 
-#+RESULTS[5284a5b6c1138cd013db488db45e5119ee54e084]:
+#+RESULTS[f5df495a41eb47a6f2b0b98973ee1144389c4793]:
 :results:
 |-----+------------+--------------+------------+--------------+--------------+-------------|
 | 390 | maps       | mobster      | ambassador | ambuscade    | embassy      | embezzle    |
@@ -5376,7 +5415,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 500   510)
 #+end_src
 
-#+RESULTS[a4e37265e9c8fe3274c0aed9a228383e64aaf547]:
+#+RESULTS[528cf0e3c301499030bbc6b365681a65d5ba756f]:
 :results:
 |-----+--------------+-------------+--------------+---------------+-------------+-----------|
 | 400 | racist       | recess      | resist       | raises        | roses       | horses    |
@@ -5420,7 +5459,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 510   520)
 #+end_src
 
-#+RESULTS[15cb0d76e35ab9a6b7630f4985b78b53996df24d]:
+#+RESULTS[f918768ccc5b69c670a81d461443595eb25d8caa]:
 :results:
 |-----+-------------+---------------+------------+--------------+------------+------------|
 | 410 | ARTIST      | ARTISAN       | yardstick  | roadster     | Rhodes     | roads      |
@@ -5472,7 +5511,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 520   530)
 #+end_src
 
-#+RESULTS[ab3495aead0f98a670feda6db4b3ef79480138bc]:
+#+RESULTS[7ee2e2c52c02c700ae301df21d6309eaf94aecfe]:
 :results:
 |-----+------------+-----------+------------+------------+------------+-------------|
 | 420 | rains      | rancid    | ransack    | ransom     | reigns     | reinsert    |
@@ -5514,7 +5553,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 530   540)
 #+end_src
 
-#+RESULTS[89a1537eb21ed7109c093a3bd24810c7f0049c89]:
+#+RESULTS[ae780103f1633ea5b3d7abea56bef4030aed83cd]:
 :results:
 |-----+--------------+-------------+-----------+-----------+------------+-------------|
 | 430 | rams         | reams       | rooms     | remiss    | rhymes     | arms        |
@@ -5555,7 +5594,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 540   550)
 #+end_src
 
-#+RESULTS[d174c7e8bacaf2f6a78d9735ba4dbca04a540bcc]:
+#+RESULTS[38bae9d15fd3dd81c82322477abfd082ea7c55fb]:
 :results:
 |-----+-------------+--------------+------------+-----------+-------------+-----------|
 | 440 | rehearsal   | roars        | arrears    | errors    | horrors     | warhorse  |
@@ -5589,7 +5628,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 550   560)
 #+end_src
 
-#+RESULTS[8e6082bb7b3d1aab5b6a9d74d49ed2c2c123e7e4]:
+#+RESULTS[f99ac0442354775808f0b33d99268a02e626905a]:
 :results:
 |-----+-------------+-----------+-------------+--------------+-----------+-----------|
 | 450 | rails       | realize   | release     | realest      | realist   | airless   |
@@ -5630,7 +5669,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 560   570)
 #+end_src
 
-#+RESULTS[b12d123031ca6eeb58184d331769ac16beb0bc78]:
+#+RESULTS[16cf031843dd1379619e98fbe2cffbcd9ecfd264]:
 :results:
 |-----+-------------+---------------+-------------+--------------+-----------+-----------|
 | 460 | rages       | ratios        | regisseur   | register     | rejoice   | riches    |
@@ -5670,7 +5709,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 570   580)
 #+end_src
 
-#+RESULTS[aa2cd74a0a41a5a8ec0adc890b828d4f9873ca57]:
+#+RESULTS[c168311749055a4b706fca3806862b194a970070]:
 :results:
 |-----+--------------+----------------+-------------+------------+-------------+------------|
 | 470 | racks        | rags           | recast      | request    | raucous     | rex        |
@@ -5716,7 +5755,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 580   590)
 #+end_src
 
-#+RESULTS[4c1a11023e543b542f27c4bbb9ad849f440c52a6]:
+#+RESULTS[223799b2ec981ebfffb24dbab6a5ae7b8ec70654]:
 :results:
 |-----+------------+------------+--------------+-------------+-------------+------------|
 | 480 | refuse     | reviews    | revise       | revisit     | airwaves    | harvest    |
@@ -5754,7 +5793,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 590   600)
 #+end_src
 
-#+RESULTS[32148a9c13eeba2097eda2a1825c3bf7246e7fbb]:
+#+RESULTS[824618f285209c60a0791a3d308f3369c5f4af0b]:
 :results:
 |-----+-----------+------------+-------------+-----------+-------------+----------|
 | 490 | rabies    | repast     | repose      | repost    | rebus       | robust   |
@@ -5801,7 +5840,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 600   610)
 #+end_src
 
-#+RESULTS[afd3434f9dfc73a73289078f0d253fbd363d8cd3]:
+#+RESULTS[b4a50e49d592dec312b0afa14f75494c3f5f8dba]:
 :results:
 |-----+---------------+---------------+---------------+--------------+-------------+--------------|
 | 500 | lasses        | lassoes       | leases        | lazy-Susan   | losses      | Louis-Seize  |
@@ -5838,7 +5877,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 610   620)
 #+end_src
 
-#+RESULTS[c6164a8b15d22f31d2a54c99a7689ae42a447486]:
+#+RESULTS[707963eaa97fe819a3e805f44d031327a3605067]:
 :results:
 |-----+--------------+--------------+------------+-------------+---------------+------------|
 | 510 | lattice      | lettuce      | ladies     | lads        | lighthouse    | lotus      |
@@ -5885,7 +5924,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 620   630)
 #+end_src
 
-#+RESULTS[e13dd3cefd24af1fb1eeb55075f4e21b3f4a962f]:
+#+RESULTS[bdc58ba8ed2c2ad958bbe8722a870de76bc19305]:
 :results:
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 520 | lance       | lens          | lioness     | linseed    | lonesome  | lunacy        |
@@ -5928,7 +5967,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 630   640)
 #+end_src
 
-#+RESULTS[26e3f693ef18d349267f9c4f6d5d6b0551ac6aa2]:
+#+RESULTS[a5a7e548da3787fadaacea9296e783555b716df4]:
 :results:
 |-----+-------------+---------------+---------------+-----------------+------------+-----------|
 | 530 | lambs       | limbs         | limousine     | looms           | low-mass   | almost    |
@@ -5968,7 +6007,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 640   650)
 #+end_src
 
-#+RESULTS[0ed70e94da78288986021a36214e319135911ac7]:
+#+RESULTS[991287b32a5bceb664090f15965d339ef33613d5]:
 :results:
 |-----+-------------+-------------+---------------+-------------+-------------+-------------|
 | 540 | larceny     | liars       | lawyers       | lower-house | walrus      | wheelhorse  |
@@ -6005,7 +6044,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 650   660)
 #+end_src
 
-#+RESULTS[6106a8df736f71fb301fdc4632ece6817c773f14]:
+#+RESULTS[a76412248879b7e5c8830e8bd18d086338ecaeff]:
 :results:
 |-----+-------------+-------------+--------------+--------------+----------------+------------|
 | 550 | lawless     | lilies      | lowliest     | lulls        | lulus          | Allhallows |
@@ -6037,7 +6076,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 660   670)
 #+end_src
 
-#+RESULTS[2f1cd8182101789d776e3f7746e48e2e99f77bb2]:
+#+RESULTS[d1100091dc4c1571917f7208a632616759c80c6f]:
 :results:
 |-----+-------------+-------------+---------------+-------------+-------------+-------------|
 | 560 | latches     | lodges      | loges         | loggias     | legislator  | logistics   |
@@ -6070,7 +6109,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 670   680)
 #+end_src
 
-#+RESULTS[c1d0027db801322cdf27e4eb96fb8ca9cf64bded]:
+#+RESULTS[4625e0c162e77239ba5e39c52a1009d3d3d5621e]:
 :results:
 |-----+-----------------+-------------+------------+-------------+------------+------------------|
 | 570 | laxative        | laxity      | legacy     | legs        | locks      | looks            |
@@ -6115,7 +6154,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 680   690)
 #+end_src
 
-#+RESULTS[ff44ada51a40160d9cdd83803f97f4876a396589]:
+#+RESULTS[503b50eeb2dfb0715820fcbdcaf0dac5332500d6]:
 :results:
 |-----+--------------+--------------+------------+-----------------+---------------+--------------|
 | 580 | laughs       | layoffs      | leaves     | levies          | lives         | lifesaver    |
@@ -6159,7 +6198,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 690   700)
 #+end_src
 
-#+RESULTS[c167c8659ea0f0aff3260e6743293159d22aa1ef]:
+#+RESULTS[6c805e4802da09ceda14d4543a91b3f05b642ce8]:
 :results:
 |-----+-------------+----------------+--------------+------------+-------------+-----------|
 | 590 | labs        | laps           | lapse        | lips       | loops       | lopsided  |
@@ -6200,7 +6239,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 700   710)
 #+end_src
 
-#+RESULTS[fbf52d5ab1a6cb6120e8779b083d481fb4e6341b]:
+#+RESULTS[5c72cf17fca0263c8ad3284ed1d1a164f6d86f0f]:
 :results:
 |-----+--------------+----------------+---------------+--------------+-------------+------------|
 | 600 | chases       | cheeses        | choices       | jazzist      | Jesus       | juices     |
@@ -6237,7 +6276,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 710   720)
 #+end_src
 
-#+RESULTS[34325c527c864c7936d861c82d35bca3f6f73693]:
+#+RESULTS[d87768435c692bddbd4f3aee09da3cd6ad5fd163]:
 :results:
 |-----+-------------+------------+------------+---------------+-----------+-------------|
 | 610 | chiteaus    | jets       | jetsam     | jettison      | Judas     | shades      |
@@ -6280,7 +6319,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 720   730)
 #+end_src
 
-#+RESULTS[ece1875ac4969d939a6607928c12d9bd9c3ccc74]:
+#+RESULTS[dbe1743cb5429aef6c7196157c8633e65fc1561c]:
 :results:
 |-----+-------------+--------------+------------+--------------+------------+------------|
 | 620 | chance      | chains       | chancellor | chanson      | Chinese    | genesis    |
@@ -6324,7 +6363,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 730   740)
 #+end_src
 
-#+RESULTS[0e5bd9f4ac5fc74e0199320c60642640ad2c7774]:
+#+RESULTS[00f9740b20aa6ef01473708e282eb6a7349fe55f]:
 :results:
 |-----+------------+------------+-------------+-------------+------------+-----------|
 | 630 | chemise    | chimes     | chums       | gems        | James      | jams      |
@@ -6363,7 +6402,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 740   750)
 #+end_src
 
-#+RESULTS[f37b47eb77f0c3c914ac6d89da9efe3e06a3a68b]:
+#+RESULTS[33439d0bc665345cd2e3e9a9edf862d5e567f758]:
 :results:
 |-----+-----------+-------------+--------------+-------------+-----------+-------------|
 | 640 | chairs    | cherries    | chores       | gyroscope   | gyrus     | jars        |
@@ -6408,7 +6447,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 750   760)
 #+end_src
 
-#+RESULTS[7ad8fefdd9c619becb70ba5b154c13fe39d9614e]:
+#+RESULTS[e2b0299eec4db278eb97c1ea3c3b94f26aae14b7]:
 :results:
 |-----+-------------+-------------+------------+--------------+---------------+------------|
 | 650 | chalice     | chills      | jalousie   | jealousy     | jailhouse     | jewels     |
@@ -6447,7 +6486,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 760   770)
 #+end_src
 
-#+RESULTS[567cee7a13766572111993284335c717dad74b4f]:
+#+RESULTS[f441910836af48807c909275a869a39566ff6482]:
 :results:
 |-----+-----------------+-------------+-------------+--------------+------------+--------------|
 | 660 | cha-chas        | chiches     | chi-chis    | cicisbeo     | joy-juice  | joshes       |
@@ -6479,7 +6518,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 770   780)
 #+end_src
 
-#+RESULTS[d15401a2fd83ebab2a6a948f8c44f95c7c754fe2]:
+#+RESULTS[41d25ba2e140cc9f12bfca6048b6058b070808b3]:
 :results:
 |-----+-----------------+-------------+-------------+--------------+------------+-------------|
 | 670 | checks          | checkstones | checkstrap  | cheeks       | chicks     | jackass     |
@@ -6526,7 +6565,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 780   790)
 #+end_src
 
-#+RESULTS[7b0784668280bde1b70a73cb7a256bd554b0eaec]:
+#+RESULTS[8bcbf103e3ad1fc4b631ae98cd5b7a5d486ec878]:
 :results:
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 680 | chafes             | chauffeuse | chefs        | chiefs      | chives     | geophysics    |
@@ -6564,7 +6603,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 790   800)
 #+end_src
 
-#+RESULTS[40e8467bd5b60b1ba1a754b1d301ab1e36c1c94e]:
+#+RESULTS[e2d8fbfa72a9fc8f0cc2120bfd3ecb0806bf3a5d]:
 :results:
 |-----+--------------+-------------+-------------+-------------+-------------+------------|
 | 690 | chaps        | chapstick   | chips       | chops       | chopsuey    | chophouse  |
@@ -6608,7 +6647,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 800   810)
 #+end_src
 
-#+RESULTS[5ffbc3767ae420d71385bafc07b55154c1fe502a]:
+#+RESULTS[4e7d54e31b7767ebc5ba3d22335d51b82a67de3a]:
 :results:
 |-----+--------------+---------------+-------------------+------------+----------------+-------------|
 | 700 | cases        | causes        | cusses            | gases      | gazes          | guesses     |
@@ -6658,7 +6697,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 810   820)
 #+end_src
 
-#+RESULTS[a8f7a4c7bd4ed04e4702679ab0d87bcbcecbbe05]:
+#+RESULTS[75c6472e964c862766acfb73b2d954e543cbf4ca]:
 :results:
 |-----+------------+--------------+-------------+-------------+---------------+---------------|
 | 710 | cats       | catsup       | catastrophe | coats       | caddies       | codes         |
@@ -6707,7 +6746,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 820   830)
 #+end_src
 
-#+RESULTS[df3acb00d212aac23df00a3dbbf3bc015e167c12]:
+#+RESULTS[d371c63202a43cedf39b023676f773ebbb203aae]:
 :results:
 |-----+---------------+--------------+---------------+------------+--------------+-------------|
 | 720 | cancel        | cancer       | coincidence   | conceal    | concede      | conceit     |
@@ -6757,7 +6796,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 830   840)
 #+end_src
 
-#+RESULTS[58e9d1d3b37f784b9f0a4e7ac94154119f7ba849]:
+#+RESULTS[4e76ebfdba790420474c3e09c1ca276aed73352f]:
 :results:
 |-----+---------------+-------------+------------+------------+------------+-------------|
 | 730 | cameos        | chemist     | comestible | combs      | commas     | commissary  |
@@ -6801,7 +6840,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 840   845)
 #+end_src
 
-#+RESULTS[6613741de4882694d598cc2a7ee034ec55b66f4b]:
+#+RESULTS[c4c320cb0be2152860d8686bb949818a7c3659d4]:
 :results:
 |-----+-----------+-----------+---------------+------------+------------+-----------|
 | 740 | caress    | coarse    | correspond    | corsage    | corset     | course    |
@@ -6845,7 +6884,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph    845 850)
 #+end_src
 
-#+RESULTS[c9bf9d997653f59a6a5a6ae694e36ea3976d9c9b]:
+#+RESULTS[c20ead89a1d65a5d5c67f71f49cd2b9bf98f3815]:
 :results:
 |-----+-------------+------------+------------+-------------+-------------+--------------|
 | 745 | carryall    | careless   | carol      | coral       | corral      | crawl        |
@@ -6882,7 +6921,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 850   860)
 #+end_src
 
-#+RESULTS[482375521f818730b674ffab0275515954f05add]:
+#+RESULTS[948a7bcb41ded25936f21c77c5b68edbb6f55e72]:
 :results:
 |-----+-------------+------------+--------------+--------------+-------------+--------------|
 | 750 | calls       | calcium    | callous      | clasp        | class       | clause       |
@@ -6941,7 +6980,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 860   870)
 #+end_src
 
-#+RESULTS[94cf09e7bda5485cb34bdc9579b193484382d759]:
+#+RESULTS[a4754f7f3c0a0d4ef2a69adb27cd482e3125bbdb]:
 :results:
 |-----+------------+-------------+-------------+------------+--------------+------------|
 | 760 | cages      | caches      | catches     | cautious   | coaches      | couches    |
@@ -6977,7 +7016,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 870   880)
 #+end_src
 
-#+RESULTS[200be07f97c2a6f040a4607f75cb7737f47e35ae]:
+#+RESULTS[a303f93337f668a10265fb99680bee250601ae8d]:
 :results:
 |-----+------------+----------------+----------------+--------------+--------------+-------------|
 | 770 | cakes      | caucus         | coax           | coexist      | cox          | cooks       |
@@ -7022,7 +7061,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 880   890)
 #+end_src
 
-#+RESULTS[28bc1b2f2f6f88f4413315c1d23beaf727a35f11]:
+#+RESULTS[93e30891037b9c4cc6dabfb8f74181199dc0bc20]:
 :results:
 |-----+-----------------+---------------+--------------+-----------+-------------+--------------|
 | 780 | cafes           | calves        | cavascope    | caves     | coffeehouse | coifs        |
@@ -7059,7 +7098,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 890   900)
 #+end_src
 
-#+RESULTS[1c9b08f0085e815413ccb49ef18991dd9e545826]:
+#+RESULTS[e5624c36a24616db31f3789cef85c1a6413f8c63]:
 :results:
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 790 | cabs        | caboose    | capacity   | capes      | capsize    | capstan     |
@@ -7103,7 +7142,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 900   910)
 #+end_src
 
-#+RESULTS[da7b2faecf47653827f98479010a162d7038fb86]:
+#+RESULTS[8b90a6b04e6aeeedfa731512e723f918a7a8d2f1]:
 :results:
 |-----+-------------+----------------+---------------+------------------+-----------------+--------------|
 | 800 | faces       | face-saving    | fezzes        | fusses           | phases          | physicist    |
@@ -7147,7 +7186,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 910   920)
 #+end_src
 
-#+RESULTS[6dd844cdfa6a504055ca95d7fc2ba3d75a665102]:
+#+RESULTS[e01af147f0cf5448e7193d655b634a05a7c1bd1b]:
 :results:
 |-----+------------+--------------+--------------+------------+----------------+----------------|
 | 810 | fatso      | fates        | feats        | feuds      | fights         | fetus          |
@@ -7191,7 +7230,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 920   930)
 #+end_src
 
-#+RESULTS[d8d42c195bd2df7c31669fa6a442b74704fa8234]:
+#+RESULTS[6dfbc3d16cc819ca1cdaa1df6cb9672052eef8f5]:
 :results:
 |-----+-------------+------------+------------+---------------+-------------+-------------|
 | 820 | fancy       | fence      | fiance     | finesse       | fines       | fins        |
@@ -7234,7 +7273,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 930   940)
 #+end_src
 
-#+RESULTS[f1ca9931c30a6dc8228b9476c3b80522d01b95c4]:
+#+RESULTS[a88120ae6cd2498f59e5799edd36f8e90d3aaab5]:
 :results:
 |-----+------------+-----------------+----------------+--------------+-------------+-----------|
 | 830 | fames      | fameuse         | famous         | famose       | femcee      | foams     |
@@ -7270,7 +7309,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 940   950)
 #+end_src
 
-#+RESULTS[930ffa4f552c7432501e4e7e2a7d66cb6c086a58]:
+#+RESULTS[44f45770cc47f763d84687b02a25ddd3a56b19db]:
 :results:
 |-----+------------+--------------+-----------+------------+------------+--------------|
 | 840 | farce      | fierce       | firehouse | first      | force      | forest       |
@@ -7335,7 +7374,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 950   960)
 #+end_src
 
-#+RESULTS[581b28e7a8532a248c0c2055f352d600d39b9b13]:
+#+RESULTS[135789c3d46aa2e3135a0272c11c2c44160f6591]:
 :results:
 |-----+-------------+----------------+--------------+------------+-------------+-----------|
 | 850 | fallacy     | FALSE          | felicitate   | fail-safe  | fleece      | fleas     |
@@ -7392,7 +7431,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 960   970)
 #+end_src
 
-#+RESULTS[d2ca2ee3e64f6cff876e8e12c75290106e94de0f]:
+#+RESULTS[650c599ebc0bf2dd30998e230f8a5813b14b0ca1]:
 :results:
 |-----+-------------+--------------+----------------+--------------+------------+-------------|
 | 860 | fascist     | fatuous      | fishes         | fish-house   | vicious    | vouchsafe   |
@@ -7434,7 +7473,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 970   980)
 #+end_src
 
-#+RESULTS[e58ee8b9e499204e432307702baae6a092427fdb]:
+#+RESULTS[4087092a30d4263e267821b712f203f9316a3654]:
 :results:
 |-----+------------+-------------+--------------+-------------+-------------+-------------|
 | 870 | facsimile  | fakes       | fix          | figs        | focsle      | focus       |
@@ -7480,7 +7519,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 980   990)
 #+end_src
 
-#+RESULTS[7e136adf34bd98be7c5ae7a74aceb5c6eb99797f]:
+#+RESULTS[f03c458213871d8dda4b1fe9d172caee361b79f4]:
 :results:
 |-----+-------------+--------------+-------------+---------------+--------------+----------------|
 | 880 | fauvism     | fives        | fivesome    | fivesome      | five-spot    | five-star      |
@@ -7517,7 +7556,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 990   1000)
 #+end_src
 
-#+RESULTS[7c478412f5cf10df2103e4945b667c9ea47a108e]:
+#+RESULTS[67ecfe449e2395d745d62d6a328e02e1acab88de]:
 :results:
 |-----+------------+------------+--------------+-------------+-----------+-------------|
 | 890 | fibs       | fobs       | fibster      | fops        | phoebes   | Phoebus     |
@@ -7556,19 +7595,19 @@ at least twice to regenerate cross-references correctly.
 (babomorph 1000  1010)
 #+end_src
 
-#+RESULTS[88e078c18a5117b5e09e89565d3ce6bfdcc22984]:
+#+RESULTS[0d9a8554a46fd430644ed6a0d2ac05f7cba154c5]:
 :results:
 |-----+---------------+---------------+------------+-------------+------------+-------------|
 | 900 | paces         | passes        | pauses     | pieces      | Pisces     | possess     |
 |     | poses         | basis         | bosses     | buses       | apsis      | abscess     |
 |     | obsess        |               |            |             |            |             |
 |-----+---------------+---------------+------------+-------------+------------+-------------|
-| 901 | past          | paste         | pastor     | pastry      | peseta     | pest        |
-|     | piston        | pistol        | post       | positive    | postiche   | postillion  |
-|     | base-hit      | bast          | bastard    | baste       | beast      | beside      |
-|     | best          | bestow        | bistro     | boast       | boisterous | bust        |
-|     | abstain       | abstract      | apostrophe | obstacle    | obstruct   | opposite    |
-|     | upset         | upstairs      | upstart    |             |            |             |
+| 901 | abstain       | abstemious    | abstract   | apostrophe  | base-hit   | bast        |
+|     | bastard       | baste         | beast      | beside      | best       | bestow      |
+|     | bistro        | boast         | boisterous | bust        | obstacle   | obstruct    |
+|     | opposite      | past          | paste      | pastor      | pastry     | peseta      |
+|     | pest          | pistol        | piston     | positive    | post       | postiche    |
+|     | postillion    | upset         | upstairs   | upstart     |            |             |
 |-----+---------------+---------------+------------+-------------+------------+-------------|
 | 902 | peasant       | poison        | baseness   | basin       | bassinet   | bassoon     |
 |     | bison         | business      | absent     | epicene     | obeisance  | obscene     |
@@ -7606,7 +7645,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph  1010 1020)
 #+end_src
 
-#+RESULTS[ad7b67621a4622c4f05125ec30a29f1cf7934a66]:
+#+RESULTS[f25c671060e85d315909ca3ce5594b9890faebb8]:
 :results:
 |-----+--------------+--------------+-------------+------------+-------------+------------|
 | 910 | patsy        | peau-de-soie | pedestal    | pedestrian | poetess     | pizza      |
@@ -7659,7 +7698,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 1020 1030)
 #+end_src
 
-#+RESULTS[e3d6bc4e8c27925baf5402db82a91520423a9b79]:
+#+RESULTS[7947aff2110137abe8f13f6f82fa82a6f5b40890]:
 :results:
 |-----+------------+--------------+-------------+-------------+---------------+-------------|
 | 920 | panacea    | pans         | pains       | pansy       | pence         | pencil      |
@@ -7713,7 +7752,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 1030 1040)
 #+end_src
 
-#+RESULTS[93c1b5de386ad0eb51eee0f0a9a1779bf7bdad36]:
+#+RESULTS[8d283177c9abc1e7a43a465ee7ab4e62179eaa98]:
 :results:
 |-----+---------------+----------------+-------------+-----------+------------+-----------|
 | 930 | palmist       | paymaster      | poems       | pomace    | pomes      | pumice    |
@@ -7755,7 +7794,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 1040 1045)
 #+end_src
 
-#+RESULTS[622a7c3515fcd21fb115f8e41e21c105ff805757]:
+#+RESULTS[aa2b5d96fed5879759dd5751010dd69e49d844eb]:
 :results:
 |-----+-------------+-----------+-----------+-------------+-------------+--------------|
 | 940 | parasite    | parasol   | parcel    | Paris       | parson      | perceive     |
@@ -7797,7 +7836,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 1045 1050)
 #+end_src
 
-#+RESULTS[77c679776bf83a3593718e9a9441973352cf5965]:
+#+RESULTS[6f58f495e083d3da7388a0330f05e75b7432725c]:
 :results:
 |-----+------------+---------------+-------------+------------+--------------+-------------|
 | 945 | parallel   | paralyze      | parlay      | parley     | parliament   | parlor      |
@@ -7842,7 +7881,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 1050 1060)
 #+end_src
 
-#+RESULTS[0e19f5fd74b01eff5f2cdcf0ed43c4bb8e363b63]:
+#+RESULTS[e5070fca109a89ecf18460b7991c325be2c74710]:
 :results:
 |-----+------------+------------+--------------+-----------+-----------+-------------|
 | 950 | palace     | pals       | place        | placebo   | placid    | plasma      |
@@ -7908,7 +7947,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 1060 1070)
 #+end_src
 
-#+RESULTS[fab1d74393bf72c2aad56c9a8d5d56261b483407]:
+#+RESULTS[ffd595578fd906b0b5e37e304d27c926688947bf]:
 :results:
 |-----+-------------+-------------+----------------+------------+-------------+-------------|
 | 960 | pachisi     | patches     | peaches        | pitches    | pouches     | poaches     |
@@ -7953,7 +7992,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 1070 1080)
 #+end_src
 
-#+RESULTS[4acd335885aad19ce769fff0171b2666b0e85206]:
+#+RESULTS[f007bd7a871c197fd63d44bbe898d73a4bf05a09]:
 :results:
 |-----+------------+--------------+-------------+------------+------------+----------------|
 | 970 | packs      | pax          | PX          | Picasso    | pikes      | pigskin        |
@@ -8006,7 +8045,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 1080 1090)
 #+end_src
 
-#+RESULTS[1710c594b1a7995e48a5282be15605919cac0c72]:
+#+RESULTS[0785952ed93e6e57071e81ddc3234eb407544686]:
 :results:
 |-----+-----------+------------+------------+------------+-------------+------------|
 | 980 | paves     | pavestone  | payoffs    | peeves     | puffs       | beefs      |
@@ -8045,7 +8084,7 @@ at least twice to regenerate cross-references correctly.
 (babomorph 1090 1101)
 #+end_src
 
-#+RESULTS[8b58d361756a71cd492fc7426b399a72c59335c4]:
+#+RESULTS[242f72bdbee628698665bcf5671b646e178812e3]:
 :results:
 |------+--------------+------------+------------+--------------+------------+------------|
 |  990 | papacy       | papistry   | papoose    | pip-squeak   | poppies    | puppies    |
@@ -8141,6 +8180,20 @@ function that can be computed mentally:
 #+end_src
 
 #+RESULTS:
+: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-CVZSFj') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
+: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-d67kHY') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
+: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-XRJ4vj') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
+: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-7NRf74') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
+: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-SzTGNf') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
+: {'permutation': array([6, 5, 7, 9, 0, 8, 4, 2, 1, 3])}
+: {'digits': [5, 1, 9, 9, 9]}
+: {'hash': '26752'}
+: {'permutation': array([6, 5, 7, 9, 0, 8, 4, 2, 1, 3])}
+: {'digits': [5, 1, 9, 9, 9]}
+: {'hash': '26752'}
+: {'permutation': array([6, 5, 7, 9, 0, 8, 4, 2, 1, 3])}
+: {'digits': [5, 1, 9, 9, 9]}
+: {'hash': '26752'}
 
 #+begin_comment
   def fp_free_permutation(i, p, n):
