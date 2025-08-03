@@ -579,9 +579,9 @@ problem.
 *** Leading S and Z sounds
 
 Furst's tables are ambiguous for 3-digit pegs with leading 0, as
-we show in this section. It's a TODO to fix this problem.
+we show in this section. It's a major TODO to fix this problem.
 
-The general rule is:
+The first general rule is:
 
 #+begin_quote
 /Ignore leading S and Z sounds when the total number of sounds is four or more./
@@ -638,8 +638,8 @@ including the leading S or Z. Any four-or-more-sound words with
 leading S or Z sound must encode numbers that /don't/ begin with
 zero.
 
-It's a medium-sized job to fix the tables following this scheme of
-rules.
+It's a major job to fix the tables following this scheme of
+rules, and it will affect the methods for radices 16, 36, and 64.
 
 # *** Extra Trailing Consonant Sounds
 
@@ -1967,8 +1967,7 @@ v       v v     v       v       v       v       v       v      v
 - There are so many picturesque words in English that begin with S
   that we have a deep well to draw from.
 
-- The code for a letter is its numerical value in R64: $A=10,
-  O=24$, etc.
+- The code for a letter is its numerical value in R64: $A=10, O=24$, etc.
 
   - Disadvantage of this advantage: we're working on memory, not
     on evaluation, so maybe this feature isn't so interesting.
@@ -1977,7 +1976,7 @@ v       v v     v       v       v       v       v       v      v
 
 ***** Off-By-One Mental Arithmetic
 
-Notice that 24 is O, but you may remember that O is also the
+Notice that 024 is O, but you may remember that O is also the
 15-th capital glyph of the alphabet. Adding 10 for the first ten
 digits of the encoding, $15+A = 15+10 = 25$, not 24. This is an
 opportunity for error at speed. But we can deal with it.
@@ -1989,6 +1988,8 @@ encoding, getting 24. Prepend the leading $s=0$ for the radix to
 get $024$, say /sunrise/.
 
 Encode: subtract 1, add 10, i.e., add 9.
+
+Here's a slogan:
 
 */Encode: enhance nine./*
 
@@ -2113,7 +2114,7 @@ remember from 11-th grade that
 
 RAY TAN CHAT
 
-was the beginning day of the Civil War, because you burned me with
+was the beginning day of the Civil War, because you tanned me with
 a RAY gun and that ended the peace talks. April 12, 1861.
 
 ** Memorizing a Shuffled Card Pack
@@ -2124,7 +2125,7 @@ https://rebcabin.wordpress.com/2010/12/08/take-the-diamonds/
 
 Here is a scrape of the relevant blog posts. Note that the
 encoding of the cards is totally unrelated to that in the
-[daily-practice] section. Don't get them confused, and pick only
+[daily-practice] section (Section [[daily-practive]]. Don't get them confused, and pick only
 one if you find it difficult to store two encodings.
 
 *** Take the Diamonds
@@ -2173,7 +2174,7 @@ help you lock in the pegs:
 
 Notice I've added smell to the associations, and even a song. We can
 really take this idea far and involve taste and touch over all the pegs,
-and we may do that in the future -- it will be an interesting exercise.
+and we may do that in the future --- it will be an interesting exercise.
 This is one of the things that Eran Katz suggests to do in his books
 (highly recommended), and since smell works very well for my personal
 memory, I'm adding it to my permanent inventory and inviting you along
@@ -2798,9 +2799,24 @@ the directory tree of the source repository.
 
 Pick your own pegs from this list, or mark your pegs in ALL CAPS
 in the =core.clj= file, pick four likely ones for the first line,
-sort the rest, and regenerate the PDF (=cider-quit=,
-=cider-jack-in=, =org-babel-execute-buffer=,
-=org-latex-export-to-pdf=; you must either manually evaluate
+sort the rest, and regenerate the PDF
+
+#+begin_example
+visiting file core.clj
+
+cider-quit
+cider-jack-in
+org-babel-execute-buffer
+
+visiting the .org file
+
+remove :results: drawers from any tables you changed
+and Ctrl-C Ctrl-C in each babomorph block
+
+org-latex-export-to-pdf
+#+end_example
+
+you must either manually evaluate
 =core.clj= via =Ctrl-C Ctrl-C= or start with a fresh cider-repl
 every time, as Clojure caches the results). You may have to
 generate the PDF file manually:
