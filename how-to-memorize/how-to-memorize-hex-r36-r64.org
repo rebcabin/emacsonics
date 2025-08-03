@@ -750,8 +750,8 @@ to re-derive it: go down the vowel sounds, short and long, in
 order --- a, e, i, o, u --- and try sandwiching each vowel between the
 bracketing consonants --- /nan/, /nane/, /nen/, /nene/, /nin/,
 /nine/, /non/, /known/, /nun/. Eventually, you'll hit the
-right one. For the ambiguous consonant clusters like 6=/j/, /sh/,
-/ch/, you may have to try a few combinations of consonants as well.
+right one. For the ambiguous consonant clusters like 6 = J, SH,
+CH, you may have to try a few combinations of consonants as well.
 
 \clearpage
 * Credit-Card Numbers
@@ -1212,7 +1212,7 @@ These are for non-leap years only, so not great for computing
 day-of-the-week. I have another method for that (the method of
 Furst, debugged) in Section [[day-of-week]].
 
-My daily practice includes another $156==3\times{}52=2\times{}78$
+My daily practice includes another $156=3\times{}52=2\times{}78$
 three columns of phantasmagorias for the 156 faces of a standard
 Tarot pack, obverse and reverse. See Section [[tarot]]. These are a
 source of vivid mental imagery.
@@ -1898,11 +1898,11 @@ EEL or some such.
 
 Here we go, pegs, first:
 
-| =5D00E7AA=     | law tam sauce tar key toes toes           |
-| =C15C=         | tan tea tail tan                          |
-| =44A5=         | rear toes law                             |
-| =93FA=         | beam tail toes                            |
-| =A4DE6750B28A= | toes ray tam tar chalk lace tot reef toes |
+| =5D00E7AA=     | LAW TAM SAUCE TAR KEY TOES TOES           |
+| =C15C=         | TAN TEA TAIL TAN                          |
+| =44A5=         | REAR TOES LAW                             |
+| =93FA=         | BEAM TAIL TOES                            |
+| =A4DE6750B28A= | TOES RAY TAM TAR CHALK LACE TOT REEF TOES |
 
 Ignore 'ing' in the following, wherein we are assaulted by a
 Scottish traffic cop:
@@ -1916,7 +1916,7 @@ Scottish traffic cop:
 | =44A5 93FA A4= | THEN ROARING, "'TIS LOW, you BUM!                        |
 |                | 'TILL he EATS TAZER!'"                                   |
 |                |                                                          |
-| =DE6750B28A=   | "DAMN TAR! SHAKE LESS! TIGHT ENOUGH  on my TOES!"        |
+| =DE6750B28A=   | "DAMN TAR! SHAKE LESS! TIGHT ENOUGH on my TOES!"         |
 
 Method 1 produces more compact phantasmagorias and extends to higher
 radices.
