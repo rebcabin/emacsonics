@@ -158,7 +158,7 @@
 
   ;; evaluate whole buffer , b b and redo all cached results
   ;; this worked exactly once :(
-  (setq org-babel-default-header-args '((:cache . "no")))
+  ; (setq org-babel-default-header-args '((:cache . "no")))
   ; (setq org-babel-default-header-args nil) ;; Reset to default
 
   ; (conda-env-activate "whl-meson-build")
@@ -177,24 +177,7 @@
 : Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
 :  of 2023-07-29
 : org version: 9.6.6
-: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
-:  of 2023-07-29
-: org version: 9.6.6
-: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
-:  of 2023-07-29
-: org version: 9.6.6
-: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
-:  of 2023-07-29
-: org version: 9.6.6
-: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
-:  of 2023-07-29
-: org version: 9.6.6
-: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
-:  of 2023-07-29
-: org version: 9.6.6
-: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
-:  of 2023-07-29
-: org version: 9.6.6
+
 \clearpage
 * Change log
 
@@ -3367,7 +3350,7 @@ at least twice to regenerate cross-references correctly.
 :end:
 
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_ src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 90 100)
 #+end_src
 
@@ -8180,6 +8163,8 @@ function that can be computed mentally:
 #+end_src
 
 #+RESULTS:
+: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-04XANO') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
+: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-Arrsmt') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
 : __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-CVZSFj') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
 : __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-d67kHY') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
 : __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-XRJ4vj') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
