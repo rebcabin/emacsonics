@@ -3,7 +3,8 @@
   (:require [clojure.string :refer (join)])
   (:gen-class))
 
-(def lines
+;;; Consider getting rid of this variable. It is not apparently used.
+#_(def lines
   ['("01" "sad" "seed" "seedy" "seat" "side" "sight"
      "sit" "site" "settee" "soot" "sooth" "south"
      "soda" "sot" "stay" "stew" "suede" "suet"
@@ -26,8 +27,11 @@
      "such" "swatch" "switch" "assuage" "ice-age" "ice-show"
      "usage")])
 
-;;; Don't close up these lines because you want to "sort-lines" after the first
-;;; six.
+;;; Don't close up the following lines with their trailing close-parens because
+;;; you want to "sort-lines" after the first six.
+
+;;; Large numbers stand in for pegs with leading zeros. 100000 is for 00, 100001
+;;; is for 01, and so on.
 
 (def bfnd ['(100000
              "SAUCE"
@@ -223,6 +227,7 @@
              "suave"
              )
 
+           ;; 09
            '(100009
              "SOAP"
              "SPY"
@@ -246,6 +251,7 @@
              "zip"
              )
 
+           ;; 010
            '((100010 "A")
              "SAWDUST"
              "SWEETS"
@@ -1541,6 +1547,7 @@
              "spiff"
              )
 
+           ;; 099
            '(100099
              "SOAPBOX"
              "SOAP-BUBBLE"
@@ -8452,6 +8459,7 @@
              "aimless"
              "mails"
              "molest"
+             "seamless"
              )
 
            '(351
@@ -8494,6 +8502,7 @@
 
              "malign"
              "melancholy"
+             "millennial"
              "millennium"
              "million"
              )

@@ -133,9 +133,9 @@
 # #+STARTUP: latexpreview inlineimages showall
 # #+STARTUP: showall
 
-#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 17
+#+TITLE: How to Memorize Cards, GUIDs, Hashes, Public Keys, and More --- Revision 18
 #+AUTHOR: Brian Beckman with John D. Cook, Ondrej Certik
-#+DATE: 27 July 2025
+#+DATE: 2 Aug 2025
 
 #+BEGIN_SRC elisp :exports none
   (setq org-babel-python-command "python3")
@@ -170,7 +170,9 @@
 * Change log
 
 This is very much a work-in-progress and nowhere near clean enough
-for publication and distribution.
+for publication and distribution. However, it is useful, and it's
+FREE. Use at your own risk. Better yet, submit pull requests that
+fix problems or TODO items.
 
 - Revision 17
 
@@ -228,7 +230,10 @@ for publication and distribution.
 Brian is the curator and primary author of this document. He wrote
 the first version before enlisting John and Ondrej to contribute.
 Any use of the first person "I," "we," and so on, in the document
-is historical and refers to Brian.
+is historical and refers to Brian. Brian is responsible for all
+mistakes.
+
+** How to Modify this Document
 
 The PDF file is generated from =.org= source via Emacs. The org
 source contains blocks of Clojure code, specifically calls of the
@@ -240,20 +245,51 @@ Clojure file:
 If you want to change the peg words, the ordering of the words,
 the capitalization of the words, the formatting of the tables in
 the PDF document, or anything else about this code, modify that
-=core.clj= file, =cider jack-in=, and evaluate code via =Ctrl-C
-Ctrl-C=. If you want to change other aspects of the document,
-modify the =.org= file.
+=core.clj= file, =cider jack-in=, and evaluate the code via
+=Ctrl-C Ctrl-C= while visiting =core.clj=. If you want to change
+prose or other aspects of the document, modify the =.org= file
+and you won't have to bother with =core.clj=.
 
 The results of running all the Clojure code is cached in the
 =.org= file. If you change the Clojure code, evaluate =core.clj=
-via =Ctrl-C Ctrl-C=, then manually run only the affected blocks in
-the =.org= file by removing the =:results:= blocks (or, at least,
-the cache-hash) and keyboarding =Ctrl-C Ctrl-C= (same command,
-just in the =.org= file) with your cursor somewhere inside the
-=begin_src= or =babomorph= block. Note that the =babomorph=
-commands are off-by-one-hundred, so =(babomorph 510 520)= builds
-the table for pegs 410 through 419. This is so we can accommodate
-pegs that begin with zero.
+via =Ctrl-C Ctrl-C=, then manually run affected blocks in the
+=.org= file by removing the =:results:= blocks and keyboarding
+=Ctrl-C Ctrl-C= (same command, just while visiting the =.org=
+file) with your cursor somewhere inside the =begin_src= or
+=babomorph= block.
+
+For example, if you change the table for $00$ through $09$ in the
+=core.clj= file, =Ctrl-C Ctrl-C= in =core.clj=, then remove the
+results drawer and its hash on that table here in the =.org=
+file---it looks like this:
+
+#+begin_example
+#+RESULTS[7ecf5cbc3481e60410646e89bc93d7140a6cad17]:
+:results:
+|----+----------+---------+----------+----------+--------...
+| 00 | SAUCE    | OASIS   | icehouse | sissy    | sass   ...
+|    | assess   | assize  | houses   | sassy    | say-so ...
+|    | seize    | size    |          |          |        ...
+...
+:end:
+#+end_example
+
+Delete all the results through the =:end:=.
+
+Then keyboard =Ctrl-C Ctrl-C= on the babomorph block, which looks
+like this:
+
+#+begin_example
+#+begin_src clojure :cache yes :exports results :results ...
+  (babomorph 0 10)
+#+end_src
+#+end_example
+
+and you'll see the table regenerated.
+
+Note that the =babomorph= commands are off-by-one-hundred, so
+=(babomorph 510 520)= builds the table for pegs 410 through 419.
+This is so we can accommodate pegs that begin with zero.
 
 To produce the PDF, you need a full \LaTeX installation, Emacs
 29.1 or later, Clojure 1.10.3 or better (see =project.clj=), and
@@ -276,6 +312,11 @@ twice, manually in a side terminal after running
 
 but that's not a big roadblock. Your installation's of \LaTeX and
 Emacs may go more smoothly.
+
+The =.org= file contains lots of stuff that isn't output to the
+PDF file. That stuff represents either work-in-progress or
+variations on the main theme, variations that aren't good enough
+to commit to print.
 
 \clearpage
 * Introduction
@@ -313,8 +354,8 @@ The premise of everything in this document is
 \end{premise}
 
 We'll find that we can memorize long sequences of numbers in any
-radix (base) by making up phantasmagorias. I also call them
-/hallucinations/. It's fun, easy, and empowering. It requires some
+radix (base) by making up phantasmagorias, or /phants/ for short.
+It's fun, easy, and empowering. It requires some
 effort up front, but the effort is incremental. It takes less than
 30 minutes for anyone to learn how to memorize shopping lists of
 up to 10 items effortlessly and without writing anything down. In
@@ -328,20 +369,52 @@ months learning to memorize up to 1110 items effortlessly.
 # 100, 1000.
 
 \clearpage
-* The Peg System
+* The Peg System, Contrasted
 
-Many memory techniques, such as the Roman Room system[fn::https://artofmemory.com/blog/roman-rooms/] or the
-Person-Action-Object (PAO) system [fn::https://artofmemory.com/blog/pao-system/], exploit phantasmagorias
-by /indirect/ association to numbers or number sequences. This
-document is primarily about the Mnemonic-Major or Peg system,[fn::https://forum.artofmemory.com/t/the-mnemonic-major-system-and-gregg-shorthand-have-the-same-underlying-structure/26339][fn::
+This document is primarily about the Mnemonic-Major or Peg
+system,[fn::https://forum.artofmemory.com/t/the-mnemonic-major-system-and-gregg-shorthand-have-the-same-underlying-structure/26339][fn::
 https://en.wikipedia.org/wiki/Mnemonic_major_system] which makes
-/direct/ and permanent associations.
+/direct/ and permanent associations between numbers and permanent
+phantasmagorias --- the /pegs/, then temporary phantasmagorias for
+the memory task at hand. For example, in my realization of the
+Major system, 1 is always and forever the peg TEA, 2 is NOAH,
+3 is ME, and so on. To remember the temporary shopping list
+"broccoli, grapes, lettuce," I picture a big, Disneyland teacup
+overflowing with broccoli, Noah squishing grapes into his beard,
+and me in the mirror with a head of lettuce instead of my actual
+head, and so on. When I'm done with the shopping list, I mentally
+discard it, but not the pegs. I reuse the pegs later for the next
+task. The pegs are forever.
+
+The famous Roman-Room
+system[fn::https://artofmemory.com/blog/roman-rooms/], also called
+/Memory Palace/ or /Method of Loci/, assigns temporary
+phantasmagorias, for the memory task at hand, to permanent mental
+images of favorite places that you mentally visit in sequence,
+such as bedroom, bathroom, kitchen. When you want to remember the
+shopping list "broccoli, grapes, lettuce," picture the broccoli in
+the bedroom, grapes in the bathroom, lettuce in the kitchen, and
+so on. If you have a big sequence of favorite places or /loci/, as
+they're called, you can memorize big lists this way.
+
+I prefer the peg system because I don't actually have a sequence
+of favorite places that I can recall quickly and without effort.
+But I can recall the pegs quickly and without effort, so they
+do the job for me. Lots of people love the Roman-Room system
+though, and I encourage you to develop it if it works for you. In
+either case, the objective is to have a fixed sequence of mental
+images on which you can hang temporary mental images, either to
+just have a list or to make mental movies, etc.
+
+The equally famous Person-Action-Object (PAO) system
+[fn::https://artofmemory.com/blog/pao-system/] amplifies my
+realization of the Major system, as explained in Appendix [[pao]].
 
 My primary sources for the peg system are
 Krill[fn::https://folk.ntnu.no/krill/pseudonumerology.htm]
 and Furst.[fn::https://a.co/d/fv1uRmv/]. Krill calls his system
 /Pseudonumerologic-VIP/, which is a clever way of remembering the
-fundamental pegs 0123456789 by sound: SDNMRLJKVP.
+fundamental pegs 0123456789 by sound: =SDNMRLJKVP=.
 
 These methods are based on tables of
 
@@ -354,68 +427,74 @@ These methods are based on tables of
 
 - sound-alikes :: fluid, mutable lists of mental-images that are
   similar in their consonant sounds to the pegs and in many-to-one
-  correspondence to the numbers. 68's "chef" sounds like "chief,"
-  "sheaf," "Java," "chaff," amongst others. While 68 always means
-  "chef," first, a chef might not fit well into an ongoing
+  correspondence to the numbers. 68's CHEF sounds like CHIEF,
+  SHEAF, JAVA, CHAFF, amongst others. While 68 always means CHEF,
+  recalled instantly, a chef might not fit well into an ongoing
   phantasmagoria. For instance, if we're memorizing 276872, the
   pegs are NECK, CHEF, and CAN. That sequence does not invoke an
-  obvious story, so we start looking for sound-alikes. How about
-  INCA CHIEF COIN? Just picture a coin with an Inca chief embossed
-  on it, and we're done. It took a few seconds to derive INCA
-  CHIEF COIN from NECK CHEF CAN, but the other direction is
-  instantaneous. Sound-alikes are many-to-one because there are
-  many words that map to each number.
+  obvious story or mental movie, so we start looking for
+  sound-alikes. How about INCA CHIEF COIN? Just picture a coin
+  with an Inca chief embossed on it, and we're done. It took a few
+  seconds to derive INCA CHIEF COIN from NECK CHEF CAN, but the
+  other direction is almost instantaneous. Sound-alikes are
+  many-to-one because there are many words that map to each
+  number.
 
-# See Section [[all-pegs]], after the Appendices, for one complete map
-# of numbers to pegs and sound-alikes.
+The big point is this: you can instantly go from a number to a
+peg, and you can, almost instantly, go from a sound-alike to a
+number. It might take a little while to go from a peg to a
+sound-alike, but if doing so helps memorize a big list, then it's
+worth the effort.
 
-For radices beyond decimal, I choose a mapping from alphanumeric
-glyphs to ASCII because I already have the mapping memorized
-(Section [[daily-practice]]). In appendices, I show some alternative
-mappings for people who don't have ASCII memorized.
+# For radices beyond decimal, one choice is a mapping from
+# alphanumeric glyphs to ASCII because I already have the mapping
+# memorized (Section [[daily-practice]]). In appendices, I show some
+# alternative mappings if you don't have ASCII memorized.
 
 \clearpage
-* Sound-Alikes
+* Basic Pegs
 <<basic-pegs>>
 
-The pegs for the decimal digits, with some mnemonic hints, are
+The pegs for the decimal digits are the fundamental foundation for
+the entire system. All longer pegs, like CHEF for 68, are built
+up from these. Here are my basic pegs, with some mnemonic hints:
 
 |-------+------+--------------------------------------------+-----------------------|
 | digit | peg  | mnemonic                                   | sound-alike rules     |
 |-------+------+--------------------------------------------+-----------------------|
-|     0 | saw  | circular saw, sawed log; round like "0"    | s, z                  |
+|     0 | saw  | circular saw, sawed log; round like 0      | s, z                  |
 |-------+------+--------------------------------------------+-----------------------|
 |     1 | tea  | giant Disneyland teacup;                   | d, th, dh (them)      |
-|       |      | "t" looks like "1"                         |                       |
+|       |      | T looks like 1                             |                       |
 |-------+------+--------------------------------------------+-----------------------|
-|     2 | Noah | ... and the Ark; "n" has 2 legs            | ng (Krill only)       |
-|       |      | (2 = ng for Krill only, nk is always 27)   |                       |
+|     2 | Noah | ... and the Ark; N has 2 legs              | ng (Krill only ---    |
+|       |      | (2 = ng for Krill only, nk is always 27)   | "Krill" has 2 "l"s)   |
 |-------+------+--------------------------------------------+-----------------------|
 |     3 | me   | ... in the mirror tying a bow tie;         |                       |
-|       |      | "m" has 3 legs                             |                       |
+|       |      | M has 3 legs                               |                       |
 |-------+------+--------------------------------------------+-----------------------|
-|     4 | ray  | laser pointer, flashlight;                 |                       |
+|     4 | ray  | laser pointer, flashlight, light saber     |                       |
 |       |      | no simple mnemonic to 4                    |                       |
 |-------+------+--------------------------------------------+-----------------------|
 |     5 | law  | 5 fingers as the cop holds up his hand     |                       |
-|       |      | the hand is "L"-shaped as you look at it   |                       |
+|       |      | the hand is L-shaped as you look at it     |                       |
 |-------+------+--------------------------------------------+-----------------------|
-|     6 | jaw  | "6" looks like Lurch's lantern jaw         | sh, ch, zh (pleasure) |
+|     6 | jaw  | 6 looks like Lurch's lantern jaw           | sh, ch, zh (pleasure) |
 |-------+------+--------------------------------------------+-----------------------|
-|     7 | key  | "7" looks like an Allen key                | g, ng (Furst only)    |
+|     7 | key  | 7 looks like an Allen key                  | g, ng (Furst only)    |
 |       |      | (7 = ng for Furst and me, nk is always 27) |                       |
 |-------+------+--------------------------------------------+-----------------------|
-|     8 | fee  | "8" looks like a dollar sign               | f, v                  |
+|     8 | fee  | 8 looks like a dollar sign                 | f, v                  |
 |-------+------+--------------------------------------------+-----------------------|
 |     9 | pea  | The Princess and the Pea: 9 mattresses     | p, b                  |
 |-------+------+--------------------------------------------+-----------------------|
 
-Memorize this table, or one like it, by whatever means, by brute
-force if necessary. The rest of the system relies on it. If you
-don't like these specific pegs, pick some others out of the rows
-for 0 through 9 in Section [[all-pegs]]. Pick your own peg for each
-digit, make your own table, memorize it, and stick with it
-forever. NEVER, EVER CHANGE ANYTHING IN IT. Brian did that once
+Memorize this table, or one personalized to you, by whatever
+means, by brute force if necessary. The rest of the system relies
+on it. If you don't like these specific pegs, pick some others out
+of the rows for 0 through 9 in Section [[all-pegs]]. Pick your own peg
+for each digit, make your own table, memorize it, and stick with
+it forever. NEVER, EVER CHANGE ANYTHING IN IT. Brian did that once
 more than 50 years ago, and continues to regret it. This table
 must become an internal, effortless vocabulary like your native
 language.
@@ -440,34 +519,35 @@ for 32:
 */Notes on such tables/*:
 
 - the peg is in all-caps and in first position; other terms in
-  all-caps are recommended alternative pegs
+  all-caps are recommended alternative pegs; use them if they work
+  better for you
 
 - the first line contains preferred sound-alikes in preference
   order
 
 - the remaining sound-alikes appear in alphabetical order
 
-"MAN" is the peg: it is /equal/ to 32 in your mind. I visualize
-Superman flying out of the phone booth.
+MAN is the peg: it is /equal/ to 32 in your mind. I visualize
+Superman flying out of the phone booth, impossible to forget for me.
 
-The Sound-Alikes help to create longer phantasmagorias from longer
-strings of numbers by devising a story (though see Appendix [[pao]]).
-For instance, 327685 is Superman (32) leaping up to catch (76) a
-fly (85). With practice, one gets fast. Eran Katz often opens his
-lectures with a stunt wherein he memorizes hundreds of digits as
-quickly as the audience calls them out and his assistant writes
-them down.
+# The Sound-Alikes help to create longer phantasmagorias from longer
+# strings of numbers by devising a story (though see Appendix [[pao]]).
+# For instance, 327685 is Superman (32) leaping up to catch (76) a
+# fly (85). With practice, one gets fast. Eran Katz often opens his
+# lectures with a stunt wherein he memorizes hundreds of digits as
+# quickly as the audience calls them out and his assistant writes
+# them down.
 
 ** Old 3-Digit System
 
-We go to three digits in this document. That means that every
+We go up to three digits in this document. That means that every
 number from 00 through 099 and 0 through 1000 has a peg and a list
 of sound-alikes.
 
 In this old system, the peg and sound-alikes for the 3-digit
-number $abc$ is formed from 3 consonant sound alikes, $x$ for $a$,
-$y$ for $b$, and $z$ for $c$. For instance, here is the list for
-352:
+number $xyz$ are formed from 3 hard consonant sound alikes, $a$
+for $x$, $b$ for $y$, and $c$ for $z$. For instance, here is the
+list for $xyz=352$:
 
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 452 453)
@@ -480,15 +560,36 @@ $y$ for $b$, and $z$ for $c$. For instance, here is the list for
 |     | malign | melancholy | millennium | million  |          |          |
 :end:
 
-Let's explain the leading /s/ and /h/ sounds, and for the trailing sounds
-like "...ium"
+When making up pegs and sound-alikes, weak consonant sounds like
+H, WH, Y, and W are free: ignore the H in /hemline/. Use soft
+consonants at will. Vowel sounds are also free --- use as many or
+as few as you like. Ignore trailing sounds beyond the first three:
+/hemline/ and /hemlining/ both encode 352, as do /millennial/ and
+/millenium/.
+
+From this point on, when we write "sound" or "sounds," we mean
+"hard consonant sound" or "hard consonant sounds."
+
+Ignore leading S and Z sounds if the total number of sounds is
+four or more. So /semolina/ encodes 352. However, /semolina/ also
+encodes 035 by the rule about trailing sounds beyond three. This
+is a flaw in Furst's original design. Here is more about this
+problem.
 
 *** Leading S and Z sounds
 
-Leading S and Z sounds, i.e., leading zeros, do not count unless
-the total is exactly three sounds. "Semolina" does not encode 0352
-because that would be four sounds. Instead, the three digits 035
-have the following codes:
+Furst's tables are ambiguous for 3-digit pegs with leading 0, as
+we show in this section. It's a TODO to fix this problem.
+
+The general rule is:
+
+#+begin_quote
+/Ignore leading S and Z sounds when the total number of sounds is four or more./
+#+end_quote
+
+By this rule, /semolina/, which has four sounds, encodes 352, as
+seen above. However, /semolina/ also appears in Furst's table for
+035:
 
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 35 36)
@@ -501,32 +602,64 @@ have the following codes:
 |   Z | sea-mile | sea-mule | seamless | seemly | similar |        |
 :end:
 
-*** TODO Exceptions
+/Semolina/ belongs in the table for 035 by the "trailing-sounds
+rule:"
 
-/Seamless/ and /similar/ are apparent exceptions in Furst's table
-to the rule because they do not comprise exactly three sounds,
-else they would be, for instance, /malice/ and /mailer/,
-respectively. These two examples are inherited from Furst. Fix
-this.
+#+begin_quote
+/Ignore trailing sounds beyond the first three./
+#+end_quote
 
-*** Extra Trailing Consonant Sounds
+Our "Ignore leading S and Z when there are four or more sounds"
+rule is in conflict with our "Ignore trailing sounds beyond the
+first three" rule. You can also see /seamless/ and /similar/ in
+the table above for 035, but /similar/ also shows up in Furst's
+table for 354:
 
-/Millenium/ encodes 352 despite the trailing /...ium/. Likewise,
-trailing /...ing/ does not (usually) contribute to the encoding.
+#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+  (babomorph 454 455)
+#+end_src
 
-*** Vowels and Weak Consonants
+#+RESULTS[0a8ad960d5ac76960d1e9603cd152fa2741c9bcd]:
+:results:
+|-----+--------+--------+------------+------------+----------+----------|
+| 354 | molar  | miler  | malaria    | miller     | milliard | mealworm |
+|     | mailer | milord | millwright | ameliorate | similar  |          |
+:end:
 
-Vowels and the weak sounds  /h/, /w/, /wh/, /y/ and so on, do
-not count. Thus, "Himalayans" is 352 because the first strong
-consonant is /m/ for 3 and the weak /y/ in the middle is ignored.
+*** TODO Fix These Exceptions
+
+One way to fix this problem is to remove /seamless/ and /similar/
+from 035 and leave them in 350 and 354, following the "ignore
+leading S and Z when there are four or more sounds" rule.
+Generalizing, insist that all 3-digit numbers of the form $0xy$,
+with an actual leading 0 and two hard consonant sounds, $a$ and
+$b$, have pegs and sound alikes with exactly three sounds
+including the leading S or Z. Any four-or-more-sound words with
+leading S or Z sound must encode numbers that /don't/ begin with
+zero.
+
+It's a medium-sized job to fix the tables following this scheme of
+rules.
+
+# *** Extra Trailing Consonant Sounds
+
+# /Millenium/ encodes 352 despite the trailing /...ium/. Likewise,
+# trailing /...ing/ does not (usually) contribute to the encoding.
+
+# *** Vowels and Weak Consonants
+
+# Vowels and the weak sounds  H, W, WH, Y and so on, do
+# not count. Thus, /Himalayans/ is 352 because the first strong
+# consonant is M for 3 and the weak Y in the middle does not count.
 
 ** TODO /Composite Pegs/: New 3-Digit System
 
-In the old system, the sounds $xyz$ for $abc$ can be
-$hxhyhzh\ldots$, where $h$ stands for any weak sound or, in the
-leading position, S or Z sound, and $\ldots$ stands for anything
-at all. In the more permissive, new system (under development),
-3-digit codes are $hxhyh\ldots{}hzh\ldots{}$. For example:
+In the old system, the sounds $abc$ for numerals $xyz$ can be
+$hahbhch\ldots$, where $h$ stands for any weak consonant sound or,
+in the leading position, S or Z sound, and $\ldots$ stands for
+anything at all. In the more permissive, new system (under
+development), 3-digit codes are $hahbh\ldots{}hch\ldots{}$. For
+example:
 
 | 740 | Creamy Strawberry Pie     |
 | 741 | Creamy Treacle            |
@@ -552,12 +685,12 @@ and
 | 848 | Fresh-baked Vanilla Pie        |
 | 849 | Fresh-baked Blackberry Pie     |
 
-This new system can reuse $hxhyh\ldots$ for the first two digits of
-all pegs in a block of ten pegs and can reuse ten $hzh\ldots$
+This new system can reuse $hahbh\ldots$ for the first two digits of
+all pegs in a block of ten pegs and can reuse ten $hch\ldots$
 across those ten pegs in multiple blocks of ten. The examples
 above may clarify this general description. /Creamy/ introduces
-all ten pegs in the 740\nobreakdash-block, and /Fresh-baked/
-introduces all ten pegs in the 840\nobreakdash-block. /Creamy/ and
+all ten pegs in the 740 block, and /Fresh-baked/
+introduces all ten pegs in the 840 block. /Creamy/ and
 /Fresh-baked/ are followed by ten sorts of pie or pie filling.
 
 ** Brian's 2-Digit-Plus List
@@ -610,10 +743,12 @@ Brian's basic 2-digit peg list appears below, extended from 99 to
 | 127 | tank     |     |        |     |           |     |            |
 |-----+----------+-----+--------+-----+-----------+-----+------------|
 
+*** Re-Deriving a Forgotten Peg
+
 In case you find yourself forgetting a peg, there is an easy way
 to re-derive it: go down the vowel sounds, short and long, in
-order---a, e, i, o, u---and try sandwiching each vowel between the
-bracketing consonants---/nan/, /nane/, /nen/, /nene/, /nin/,
+order --- a, e, i, o, u --- and try sandwiching each vowel between the
+bracketing consonants --- /nan/, /nane/, /nen/, /nene/, /nin/,
 /nine/, /non/, /known/, /nun/. Eventually, you'll hit the
 right one. For the ambiguous consonant clusters like 6=/j/, /sh/,
 /ch/, you may have to try a few combinations of consonants as well.
@@ -641,10 +776,10 @@ There isn't an obvious narrative, here, but we get better
 by starting with "fish" (picturesque and smelly) and working
 sound-alikes backwards:
 
-| 4716 | rack DASH | Take a fishing rod off the RACK and DASH   |
-| 5752 | lake lane | down to the LAKE via our favorite LANE.    |
-| 8659 | fish LEAP | The FISH are LEAPing today, so we          |
-| 3845 | MOVE REEL | MOVE the REEL slowly (on the fishing rod). |
+| 4716 | RACK dash | Take a fishing rod off the RACK and DASH   |
+| 5752 | LAKE LANE | down to the LAKE via our favorite LANE.    |
+| 8659 | FISH leap | The FISH are LEAPing today, so we          |
+| 3845 | move reel | MOVE the REEL slowly (on the fishing rod). |
 
 I can recall this credit-card number weeks after devising the
 story, without much refreshing in between. Devising it took less
@@ -662,14 +797,14 @@ go along with the letters, such as an A-frame house like a ski
 chalet for A, and a honey bee for B, and so on. Feel free to
 proceed this way should you like it. I recommend, however, that we
 use the existing 2\nobreakdash-digit codes for the ASCII values of
-the letters. For example, capital A has ASCII code 65, which
-encodes as /jail/, and little A has ASCII code 97, which encodes
-as /back/. We get two phantasmagorias: a jail cell and a back, say
-the back of a prison guard, for one. We'll need the capital-uncial
-distinction for radix-64 but not for hex or radix-36.
+the letters. For example, capital A has ASCII code 65, with peg
+JAIL, and little A has ASCII code 97, with peg as BACK. We get two
+phantasmagorias: a jail cell and a back, say the back of a prison
+guard. We'll need the capital-uncial distinction for
+radix-64 but not for hex or radix-36.
 
 There is a price to pay for this choice: we can no longer encode
-65 as /jail/ or 97 as /back/, depending on the radix we're working
+65 as JAIL or 97 as BACK, depending on the radix we're working
 in. We'll have to do something else for them. The examples will
 illustrate the technique.
 
@@ -677,7 +812,7 @@ For mapping /hexits/ (hexadecimal digits), extend the table with
 the ASCII codes for A-F.
 
 |-----+---------+-------+----+--------------------------------------------|
-| hex | NATO    | ASCII |    | hallucination                              |
+| hex | NATO    | ASCII |    | PHANTASMAGORIA                             |
 |-----+---------+-------+----+--------------------------------------------|
 | A   | ALPHA   | JAIL  | 65 | the alpha-male lion is in jail             |
 | B   | BAKER   | JUDGE | 66 | passing judgment on the lion               |
@@ -730,7 +865,7 @@ following, explaining why we get so many \ldots /ing/ words
 for 67.
 
 As noted, we lose the six pegs for 65 through 70. You can't
-memorize a 65 in the text by picturing /jail/ because /jail/ means
+memorize a 65 in the text by picturing JAIL because JAIL means
 A in hex. We need some other encoding or grouping of the digits.
 For example, seeing a =265A=, we might think NICHE(26), LAW(5),
 JAIL(A), or ANGEL(265), JAIL(A).
@@ -757,13 +892,13 @@ whole thing, but we'll do that for practice. Start with the pegs:
 
 *Note*:
 
-- Encode 6750 as /chuckle saw/, not 67 50 /chalk lace/.
-  /Chalk/ decodes as C, not 67.
+- Encode 6750 as CHUCKLE SAW, not 67 50 CHALK LACE.
+  CHALK decodes as C, not 67.
 
 In the credit-card example, we worked backwards from the
-picturesque peg /fish/ 86. Here we work backwards from the
-seductive sound-alike /naive/ 28. The seductive emotion will make
-it easier to memorize. Hallucinate a /hell-chef sauce/, a recipe
+picturesque peg FISH 86. Here we work backwards from the
+seductive sound-alike NAIVE 28. The seductive emotion will make
+it easier to memorize. Hallucinate a HELL-CHEF SAUCE, a recipe
 for a naive victim.
 
 | =5D00 E7AA= | HELL-chef SAUCE: CHOP, HACK, and CHILL the JELLY. |
@@ -780,24 +915,24 @@ From https://onlinehashtools.com, consider the following, 160-bit
 hash: For git, it usually suffices to remember the first 8
 hexits. Let's do them all as a workout:
 
-| =A638 1B63= | jail sham-fruit tea judge chime |
-| =D532 69BA= | chef lemon jaw pea judge jail   |
-| =418E 5FB1= | artful chip law case judge tea  |
-| =BD50 3950= | judge chef wholesome pillows    |
-| =860D D679= | fishes chef chef checkup        |
+| =A638 1B63= | JAIL SHAM-FRUIT TEA JUDGE CHIME |
+| =D532 69BA= | CHEF LEMON JAW PEA JUDGE JAIL   |
+| =418E 5FB1= | ARTFUL CHIP LAW CASE JUDGE TEA  |
+| =BD50 3950= | JUDGE CHEF WHOLESOME PILLOWS    |
+| =860D D679= | FISHES CHEF CHEF CHECKUP        |
 
 *Notes*
 
-- /Chime/ for 63 is ok in hex and R36, but not ok in R64, where it
+- CHIME for 63 is ok in hex and R36, but not ok in R64, where it
   decodes as "/".
 
-- Don't encode 69 as /chip/, rather as /jaw pea/, because /chip/
+- Don't encode 69 as CHIP, rather as JAW PEA, because CHIP
   decodes as E.
 
-- An alternative to /wholesome pillows/ for 50 3950 is /lace map
-  lace/, but it's clumsy.
+- An alternative to WHOLESOME PILLOWS for 50 3950 is LACE MAP
+  LACE, but it's clumsy.
 
-Let's bribe a judge and put him to sleep with hash (puns help the
+Let's bribe a judge and put him to sleep with hashish (puns help the
 memory), then summon middle-Eastern heavenly dreams.
 
 | =A638 1B63= | with SHAWL and SHAM-FRUIT, TEA for the JUDGE, JIM. |
@@ -814,9 +949,9 @@ file and directory names because some file systems are not
 case-sensitive and neither is R36. R36 is also sometimes found in
 URLs for encoding queries or other data. Despite the fact that
 URLs, except for the domain name, are case-sensitive, some sites,
-especially older ones, and even some browsers and query-generation
-machinery, don't adhere to the standard properly. Radix-64 is
-overkill in such circumstances and sucks up alternatives but
+especially older ones, and even some browsers and
+query-generators, don't adhere to the standard properly. Radix-64
+is overkill in such circumstances and uses up alternatives, but
 radix-36 is immune to the commonplace nonconformance of the
 internet.
 
@@ -836,29 +971,31 @@ associations with Hebrew keywords like /mayim/ (water) and
 /nakhash/ (snake) or with playing cards like the club
 jack are given, as explained in section [[daily-practice]].
 
-|---+----------+----+------+---------------------------------------------------|
-| G | GOLF     | 71 | cat  | on the golf cart with my twosome*                 |
-| H | HOTEL    | 72 | can  | ashtray outside in the smoking area (smell)       |
-| I | INDIA    | 73 | cam  | diesel* Rolls-Royce in a junkyard in India        |
-| J | JULIET   | 74 | car  | Juliet walks a wood-sage* to his NASCAR* ride     |
-| K | KILO     | 75 | coal | Alice(11) gives coal to a tusked* troll           |
-| L | LIMA     | 76 | cage | containing tanned(12) beach-goers                 |
-|---+----------+----+------+---------------------------------------------------|
-| M | MIKE     | 77 | cake | an orca (Mayim:13) flips a cake on its nose       |
-| N | NOVEMBER | 78 | cuff | a snake (Nakhash:14) no arms, cuffs on shirt      |
-| O | OSCAR    | 79 | cap  | a teetotaler wearing a Carrie-Nation cap          |
-| P | PAPA     | 80 | face | Dad cries (tissue:16) at Liz Taylor's face        |
-| Q | QUEBEC   | 81 | fat  | did Pierre Trudeau get fat?                       |
-| R | ROMEO    | 82 | fan  | Romeo hands a fan to a Tatar* beauty              |
-| S | SIERRA   | 83 | fame | on stage at my book-signing, title* "Sierra"      |
-| T | TANGO    | 84 | fare | a death-watch* soldier gets on the bus            |
-| U | UNIFORM  | 85 | fall | a cadet(club jack) falls into a net(21)           |
-| V | VICTOR   | 86 | fish | the Christian symbol, nun(22), auto-da-fe*        |
-| W | WHISKEY  | 87 | fig  | a Few Figs from Thistles; reading it with a dram  |
-| X | X-RAY    | 88 | fife | Nero(24) plays the fife, dances* while Rome burns |
-| Y | YANKEE   | 89 | fob  | a watch-fob hanging from a nail(25) on a US map   |
-| Z | ZULU     | 90 | base | an Athenian* ball-player at bat on home base      |
-|---+----------+----+------+---------------------------------------------------|
+|---+----------+----+-------+---------------------------------------------------|
+|   | NATO     |    | ASCII | PHANTASMAGORIA; ASCII-pair refs marked with *     |
+|---+----------+----+-------+---------------------------------------------------|
+| G | GOLF     | 71 | cat   | on the golf cart with my twosome*                 |
+| H | HOTEL    | 72 | can   | ashtray outside in the smoking area (smell)       |
+| I | INDIA    | 73 | cam   | diesel* Rolls-Royce in a junkyard in India        |
+| J | JULIET   | 74 | car   | Juliet walks a wood-sage* to his NASCAR* ride     |
+| K | KILO     | 75 | coal  | Alice(11) gives coal to a tusked* troll           |
+| L | LIMA     | 76 | cage  | containing tanned(12) beach-goers                 |
+|---+----------+----+-------+---------------------------------------------------|
+| M | MIKE     | 77 | cake  | an orca (Mayim:13) flips a cake on its nose       |
+| N | NOVEMBER | 78 | cuff  | a snake (Nakhash:14) no arms, cuffs on shirt      |
+| O | OSCAR    | 79 | cap   | a teetotaler wearing a Carrie-Nation cap          |
+| P | PAPA     | 80 | face  | Dad cries (tissue:16) at Liz Taylor's face        |
+| Q | QUEBEC   | 81 | fat   | did Pierre Trudeau get fat?                       |
+| R | ROMEO    | 82 | fan   | Romeo hands a fan to a Tatar* beauty              |
+| S | SIERRA   | 83 | fame  | on stage at my book-signing, title* "Sierra"      |
+| T | TANGO    | 84 | fare  | a death-watch* soldier gets on the bus            |
+| U | UNIFORM  | 85 | fall  | a cadet(club jack) falls into a net(21)           |
+| V | VICTOR   | 86 | fish  | the Christian symbol, nun(22), auto-da-fe*        |
+| W | WHISKEY  | 87 | fig   | a Few Figs from Thistles; reading it with a dram  |
+| X | X-RAY    | 88 | fife  | Nero(24) plays the fife, dances* while Rome burns |
+| Y | YANKEE   | 89 | fob   | a watch-fob hanging from a nail(25) on a US map   |
+| Z | ZULU     | 90 | base  | an Athenian* ball player at bat on home base      |
+|---+----------+----+-------+---------------------------------------------------|
 \clearpage
 ** Example: Unix Time
 
@@ -872,9 +1009,9 @@ kg4cebk9
 
 Pegs, first, converting to upper-case:
 
-| =KG4= | coal cat ray     |
-| =CEB= | chalk chip judge |
-| =K9=  | coal pea         |
+| =KG4= | COAL CAT RAY     |
+| =CEB= | CHALK CHIP JUDGE |
+| =K9=  | COAL PEA         |
 
 Do some forensics on a dead pet.
 
@@ -897,10 +1034,10 @@ linux-ubuntu18.04-haswell/gcc-7.5.0/gdbm-1.19-rdt674nck5k5hbawjaywb4mv4r72osnq
 Pegs first, except cheat on pronounceable subsequences or others
 that appeal to your personal memory!
 
-| =RDT6 74NC= | REDDIT jaw key ray cuff chalk               |
-| =K5K5 HBAW= | coal law coal law, can judge jail fig       |
-| =JAYW B4MV= | JAY fig, BEFORE MOVIE (judge ray cake fish) |
-| =4R72 OSNQ= | ray fan key Noah, face fame cuff fat.       |
+| =RDT6 74NC= | REDDIT JAW KEY RAY CUFF CHALK               |
+| =K5K5 HBAW= | COAL LAW COAL LAW, CAN JUDGE JAIL FIG       |
+| =JAYW B4MV= | JAY FIG, BEFORE MOVIE (JUDGE RAY CAKE FISH) |
+| =4R72 OSNQ= | RAY FAN KEY NOAH, FACE FAME CUFF FAT.       |
 
 How about a tale of canceling on social media?
 
@@ -911,14 +1048,14 @@ How about a tale of canceling on social media?
 
 *Notes*
 
-- /Car/ for 74 is not ok because it decodes as J. Peg it as /key
-  ray/, then try sound-alikes.
+- CAR for 74 is not ok because it decodes as J. Peg it as KEY
+  RAY, then try sound-alikes.
 
-- /Fish/ is V in R36, not 86. If we had 86, peg it as /fee jaw/,
+- FISH is V in R36, not 86. If we had 86, peg it as FEE JAW,
   then try sound-alikes.
 
-- 72 can't be /can/, because that's H in R36. Peg it as /key
-  Noah/ then try sound-alikes.
+- 72 can't be CAN, because that's H in R36. Peg it as KEY
+  NOAH then try sound-alikes.
 
 \clearpage
 * Radix 64
@@ -929,7 +1066,7 @@ pegs for the upper-case ASCII codes. They help for remembering the
 ASCII pair together.
 
 |----+----------+-----+-------------+------------------------------------------------------|
-|    | NATO     |     | ASCII       | hallucination; ASCII pair refs marked with *         |
+|    | NATO     |     | ASCII       | PHANTASMAGORIA; ASCII-pair refs marked with *        |
 |----+----------+-----+-------------+------------------------------------------------------|
 | a  | alpha    |  97 | back        | the jailer* has her back turned to the lion          |
 | b  | baker    |  98 | beef        | the judge* eats a beef dinner in court               |
@@ -980,14 +1117,14 @@ C6RD 1/Qn tXQg BV3m pUZq
 
 Pegs first, then try sound-alikes:
 
-| =C3Nz aC1l= | chalk me cuff Athenian, back chalk tea adhesive     |
-| =ZDI1 NTE5= | base chef cam tea, cuff fare chip law               |
-| =IFi4 CpLS= | cam case diesel ray, chalk titan cage fame          |
-| =hSK/ uUux= | dowser fame coal chime, hotdog fall hotdog dance    |
-| =BxM3 6WwK= | judge dance cake me, jaw fig teddy-bear coal        |
-| =C6RD 1/Qn= | chalk jaw fan chef, tea chime fat tights            |
-| =tXQg BV3m= | deathwatch fife fat twosome, judge fish me teaspoon |
-| =pUZq=      | titan fall base totem                               |
+| =C3Nz aC1l= | CHALK ME CUFF ATHENIAN, BACK CHALK TEA ADHESIVE     |
+| =ZDI1 NTE5= | BASE CHEF CAM TEA, CUFF FARE CHIP LAW               |
+| =IFi4 CpLS= | CAM CASE DIESEL RAY, CHALK TITAN CAGE FAME          |
+| =hSK/ uUux= | DOWSER FAME COAL CHIME, HOTDOG FALL HOTDOG DANCE    |
+| =BxM3 6WwK= | JUDGE DANCE CAKE ME, JAW FIG TEDDY-BEAR COAL        |
+| =C6RD 1/Qn= | CHALK JAW FAN CHEF, TEA CHIME FAT TIGHTS            |
+| =tXQg BV3m= | DEATHWATCH FIFE FAT TWOSOME, JUDGE FISH ME TEASPOON |
+| =pUZq=      | TITAN FALL BASE TOTEM                               |
 
 A tale of overeating:
 
@@ -1047,7 +1184,7 @@ Finally, append the site name, perhaps obfuscated:
 Anyone who knows your personal salt prefix and your algorithm will
 break you. But bots will just see a random hash, completely
 different for each site you visit. Remember that hashes are
-supposed to be uniformly distributed. The hash of any input is
+uniformly distributed. The hash of any input is
 equally likely to be anywhere in the space of hashes. There is no
 way to tell how similar two input texts $A$ and $A'$ are from
 their hashes, even if $A$ and $A'$ differ by no more than one bit.
@@ -1064,19 +1201,19 @@ the year. There are only 22 Hebrew letters, so the last four rows
 of each 26 are empty in the Hebrew column.
 
 Table 1 is in groups of 13 corresponding to the suits of playing
-cards. Each group also contains dates in a fortuitous quarterly
+cards. Each group also contains dates in a quarterly
 month-week pattern of 5-4-4: 5 weeks in Jan, 4 in Feb, 4 in Mar,
 etc. The first days of the months are in the easy pattern 155,
 274, 263, 153. You may memorize this as a honeymoon tale of
 TAILLIGHTS, NIAGRA, UNASHAMED, HOTELMAN. Table 2 focuses on some
-hallucinations specifically for dates.
+phantasmagorias specifically for dates.
 
 These are for non-leap years only, so not great for computing
 day-of-the-week. I have another method for that (the method of
 Furst, debugged) in Section [[day-of-week]].
 
 My daily practice includes another $156==3\times{}52=2\times{}78$
-three columns of hallucinations for the 156 faces of a standard
+three columns of phantasmagorias for the 156 faces of a standard
 Tarot pack, obverse and reverse. See Section [[tarot]]. These are a
 source of vivid mental imagery.
 
@@ -1085,8 +1222,8 @@ get four or five rows before drifting off, so next time through, I
 start up where I left off. Sometimes, I recite it backwards just
 to make sure the end of the table doesn't get soft from lack of
 repetition. Here are the "mental movies," expanded from the hints
-in Sections [[hexadecimal]], [[r36]], and [[r64]]. I include redolance (sense
-of smell) because it's helpful to my memory. It might not work for
+in Sections [[hexadecimal]], [[r36]], and [[r64]]. I include sense
+of smell because it works for me. It might not work for
 you.
 
 1. ALPHA --- The ALPHA LION (ARYEH) is in the giant, Disneyland
@@ -1292,10 +1429,10 @@ you.
 | z | zulu     | Athenian    |         |             | DK    | DEC 24 | 348 |
 |---+----------+-------------+---------+-------------+-------+--------+-----|
 
-#+ATTR_LATEX: :caption Table 3: Date Hallucinations
+#+ATTR_LATEX: :caption Table 3: Date Phantasmagorias
 |---+----------+-------+-------+--------+---------------+-----+-----------|
 |   | NATO     | ASCII | SUIT  | DATE   | DATE          | DOY | DOY       |
-|   |          | HALLU | + PIP |        | HALLU         |     | HALLU     |
+|   |          | PHANT | + PIP |        | PHANT         |     | PHANT     |
 |---+----------+-------+-------+--------+---------------+-----+-----------|
 | A | ALPHA    | jail  | SA    | JAN 01 | New tie       |   1 | tie       |
 | B | BAKER    | judge | S2    | JAN 08 | New view      |   8 | view      |
@@ -1326,10 +1463,10 @@ you.
 | Z | ZULU     | base  | HK    | JUN 25 | Altar kneel   | 176 | education |
 |---+----------+-------+-------+--------+---------------+-----+-----------|
 
-#+ATTR_LATEX: :caption Table 4: Date Hallucinations (cont.)
+#+ATTR_LATEX: :caption Table 4: Date Phantasmagorias (cont.)
 |---+----------+-------------+-------+--------+------------------+-----+------------|
 |   | NATO     | ASCII       | SUIT  | DATE   | DATE             | DOY | DOY        |
-|   |          | HALLU       | + PIP |        | HALLU            |     | HALLU      |
+|   |          | PHANT       | + PIP |        | PHANT            |     | PHANT      |
 |---+----------+-------------+-------+--------+------------------+-----+------------|
 | a | alpha    | back        | CA    | JUL 02 | Summer wine      | 183 | deaf-mute  |
 | b | baker    | beef        | C2    | JUL 09 | Summer pie       | 190 | tapas      |
@@ -1649,7 +1786,7 @@ HEBREW NOW, or they use SURE TONE when coaching).
 
 \clearpage
 * APPENDICES
-** Pegs and Hallucinations
+** Pegs and Phantasmagorias
 
 I blogged out the basics of my peg method here:
 
@@ -1658,7 +1795,7 @@ https://rebcabin.wordpress.com/2010/11/21/memory-pegs/
 ** Sound-Alikes
 
 Finding a sound-alike is "computing" or "calculating" a picture
-word. For example, the peg for 37 is /mike/. Picture a microphone
+word. For example, the peg for 37 is MIKE. Picture a microphone
 in your hand and feel the electrical tingling. Adding synaesthesia
 or emotion to pegs helps my memory. It may not help other people.
 Do what is best for you!
@@ -1677,7 +1814,7 @@ To calculate some nearby picture words, I get
 
 ** Building and Revising Chains
 
-Take time building hallucinations so that ideas flow. It's bad to
+Take time building phantasmagorias so that ideas flow. It's bad to
 have a break part-way-through, causing a pause or failure in
 recall. You must be /fast/ and /accurate/. A break or even a soft
 link in a chain is cause for starting over and building a new
@@ -1756,7 +1893,7 @@ How about a pseudo-poem about wildlife:
 Another technique for hex is to exclusively use the single-word
 pegs TOES-TISSUE $[10..15]$ for the hexits $[A..F]$. For decimal
 digits that spell in 10-15, use two 1-digit pegs. For example,
-don't spell 15 as TALL; that's for F exclusively. Spell it as TOE
+don't spell 15 as TAIL; that's for F exclusively. Spell it as TOE
 EEL or some such.
 
 Here we go, pegs, first:
@@ -1781,7 +1918,7 @@ Scottish traffic cop:
 |                |                                                          |
 | =DE6750B28A=   | "DAMN TAR! SHAKE LESS! TIGHT ENOUGH  on my TOES!"        |
 
-Method 1 produces more compact hallucinations and extends to higher
+Method 1 produces more compact phantasmagorias and extends to higher
 radices.
 
 \clearpage
@@ -2638,7 +2775,7 @@ included in the headers.
 
 Items in ALL CAPS are recommended pegs: visually strong, easy to
 reconstruct by enumerating vowels, low collision potential. The
-first row in each block contains recommended alternatives in
+first row in each block contains recommended alternative pegs in
 preference order. The rest of the rows are in alphabetical order.
 
 Blocks without items in ALL CAPS do not have recommended pegs as
@@ -2737,6 +2874,7 @@ at least twice to regenerate cross-references correctly.
 |    | swab     | swap    | sweep    | swipe    | swoop     | zebu    |
 |    | zip      |         |          |          |           |         |
 :end:
+
 
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
@@ -4932,7 +5070,7 @@ at least twice to regenerate cross-references correctly.
 :results:
 |-----+--------------+---------------+-------------+--------------+------------+-------------|
 | 350 | MALICE       | homeless      | maelstrom   | mills        | miles      | millisecond |
-|     | aimless      | mails         | molest      |              |            |             |
+|     | aimless      | mails         | molest      | seamless     |            |             |
 |-----+--------------+---------------+-------------+--------------+------------+-------------|
 | 351 | MALT         | melt          | mold        | omelet       | smelt      | mulatto     |
 |     | assimilate   | emulate       | hamlet      | homiletics   | humility   | malady      |
@@ -4941,7 +5079,7 @@ at least twice to regenerate cross-references correctly.
 |     | simultaneous | smolder       | umlaut      |              |            |             |
 |-----+--------------+---------------+-------------+--------------+------------+-------------|
 | 352 | MELON        | Himalayans    | hemline     | semolina     | milliner   | homeland    |
-|     | malign       | melancholy    | millennium  | million      |            |             |
+|     | malign       | melancholy    | millennial  | millennium   | million    |             |
 |-----+--------------+---------------+-------------+--------------+------------+-------------|
 | 353 | mailman      | maim          | melamine    | millimeter   | millman    | muleman     |
 |     | mule-mark    | mealymouthed  | emolument   | small-minded |            |             |
@@ -4964,6 +5102,7 @@ at least twice to regenerate cross-references correctly.
 | 359 | mailbag      | mail-boat     | mail-pouch  | mailbox      | malleable  | melba       |
 |     | malapert     | malaprop      | mulberry    | muleback     | smallpox   |             |
 :end:
+
 
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
