@@ -3066,50 +3066,49 @@ at least twice to regenerate cross-references correctly.
 |   J | stab       | steep     |         |          |          |         |
 :end:
 
-
-
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 20 30)
 #+end_src
 
 #+RESULTS[aac58782ba68f4820cb4a2d98d8387e950c35f43]:
 :results:
-|-----+----------+-----------+-----------+------------+---------+-----------|
-| 020 | SUNSET   | SEANCE    | sense     | sneeze     | SUNS    | sinus     |
-|   K | census   | easiness  | essence   | iciness    | science | since     |
-|     | snooze   |           |           |            |         |           |
-|-----+----------+-----------+-----------+------------+---------+-----------|
-| 021 | SAINT    | SAND      | cent      | senate     | synod   | snot      |
-|   L | Sunday   | ascent    | assent    | sanity     | scent   | sent      |
-|     | snit     | snoot     | snout     | sonata     | sonnet  | sound     |
-|     | sundae   | zenith    |           |            |         |           |
-|-----+----------+-----------+-----------+------------+---------+-----------|
-| 022 | SAN JUAN | SIGN-ON   | sea-onion | snow-knife | asinine |           |
-|   M |          |           |           |            |         |           |
-|-----+----------+-----------+-----------+------------+---------+-----------|
-| 023 | CINEMA   |           |           |            |         |           |
-|   N |          |           |           |            |         |           |
-|-----+----------+-----------+-----------+------------+---------+-----------|
-| 024 | SINNER   | SONAR     | senior    | snore      | scenery | snare     |
-|   O | sneer    |           |           |            |         |           |
-|-----+----------+-----------+-----------+------------+---------+-----------|
-| 025 | SEE      | snell     | snail     |            |         |           |
-|   P |          |           |           |            |         |           |
-|-----+----------+-----------+-----------+------------+---------+-----------|
-| 026 | SIGNAGE  | SNOWSHOE  | cinch     | singe      | snatch  | snitch    |
-|   Q |          |           |           |            |         |           |
-|-----+----------+-----------+-----------+------------+---------+-----------|
-| 027 | SINK     | SYNAGOGUE | snack     | snake      | snick   | zinc      |
-|   R | cynic    | isinglass | scenic    | sea-anchor | sneak   | snug      |
-|-----+----------+-----------+-----------+------------+---------+-----------|
-| 028 | SNUFF    | SNOWFLAKE | sniff     | snafu      | sniffle | saw-knife |
-|   S | Seinfeld | sinful    |           |            |         |           |
-|-----+----------+-----------+-----------+------------+---------+-----------|
-| 029 | SNAP     | snowball  | snob      | snip       | snipe   | snoop     |
-|   T | sign-up  | snub      | sunup     | synopsis   |         |           |
+|-----+----------+------------+-----------+------------+-----------+----------|
+| 020 | SUNSET   | SEANCE     | sense     | sneeze     | SUNS      | sinus    |
+|   K | census   | easiness   | essence   | iciness    | science   | since    |
+|     | snooze   |            |           |            |           |          |
+|-----+----------+------------+-----------+------------+-----------+----------|
+| 021 | SAINT    | SAND       | cent      | senate     | synod     | snot     |
+|   L | Sunday   | ascent     | assent    | sanity     | scent     | sent     |
+|     | snit     | snoot      | snout     | sonata     | sonnet    | sound    |
+|     | sundae   | zenith     |           |            |           |          |
+|-----+----------+------------+-----------+------------+-----------+----------|
+| 022 | SAN JUAN | SIGN-ON    | sea-onion | snow-knife | asinine   |          |
+|   M |          |            |           |            |           |          |
+|-----+----------+------------+-----------+------------+-----------+----------|
+| 023 | CINEMA   |            |           |            |           |          |
+|   N |          |            |           |            |           |          |
+|-----+----------+------------+-----------+------------+-----------+----------|
+| 024 | SINNER   | SONAR      | senior    | snore      | scenery   | snare    |
+|   O | sneer    |            |           |            |           |          |
+|-----+----------+------------+-----------+------------+-----------+----------|
+| 025 | SEE      | snell      | snail     |            |           |          |
+|   P |          |            |           |            |           |          |
+|-----+----------+------------+-----------+------------+-----------+----------|
+| 026 | SIGNAGE  | SNOWSHOE   | cinch     | singe      | snatch    | snitch   |
+|   Q |          |            |           |            |           |          |
+|-----+----------+------------+-----------+------------+-----------+----------|
+| 027 | SINK     | snack      | snake     | snick      | zinc      | cynic    |
+|   R | scenic   | sea-anchor | sneak     | snug       |           |          |
+|-----+----------+------------+-----------+------------+-----------+----------|
+| 028 | SNUFF    | sniff      | snafu     | sniffle    | saw-knife | Seinfeld |
+|   S | sinful   |            |           |            |           |          |
+|-----+----------+------------+-----------+------------+-----------+----------|
+| 029 | SNAP     | snowball   | snob      | snip       | snipe     | snoop    |
+|   T | sign-up  | snub       | sunup     | synopsis   |           |          |
 :end:
+
+
 
 
 \clearpage
@@ -4907,90 +4906,93 @@ at least twice to regenerate cross-references correctly.
 
 
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 380   390)
 #+end_src
 
 #+RESULTS[cf843172a7856b2f63fc446f9746263c36252f69]:
 :results:
-|-----+---------------+-------------+--------------+---------------+--------------+---------------|
-| 280 | naves         | novice      | nephews      | nevus         | envious      | infest        |
-|     | infuse        | invest      | investigate  | invisible     | invoice      | knives        |
-|     | knaves        | unfasten    |              |               |              |               |
-|-----+---------------+-------------+--------------+---------------+--------------+---------------|
-| 281 | naphtha       | neophyte    | nifty        | no-fat        | Nevada       | inevitable    |
-|     | infidel       | invade      | innovate     | invidious     | invite       | unavoidable   |
-|     | unfadable     | unfit       |              |               |              |               |
-|-----+---------------+-------------+--------------+---------------+--------------+---------------|
-| 282 | novena        | newfound    | no-fun       | infant        | infantry     | infinite      |
-|     | invent        | inoffensive | invincible   | uneven        | uneventful   | unfinished    |
-|     | unfounded     | unwoven     |              |               |              |               |
-|-----+---------------+-------------+--------------+---------------+--------------+---------------|
-| 283 | navy-man      | November    | infamous     | one-family    | unfamiliar   |               |
-|-----+---------------+-------------+--------------+---------------+--------------+---------------|
-| 284 | nefarious     | nephritis   | nevevvr      | nouveau-riche | anniversary  | enforce       |
-|     | enfranchise   | environ     | infer        | infirm        | inform       | infringe      |
-|     | invariable    | invert      | knavery      | unfair        | unforeseen   | unforgettable |
-|     | unfortunate   | unfurnished | uniform      | universe      | university   | unvaried      |
-|     | unversed      |             |              |               |              |               |
-|-----+---------------+-------------+--------------+---------------+--------------+---------------|
-| 285 | navel         | naval       | novel        | anvil         | envelope     | infallible    |
-|     | inflame       | infield     | inflate      | inflict       | influence    | influenza     |
-|     | inflow        | invalid     | invaluable   | involuntary   | involve      | invulnerable  |
-|     | unavailable   | unfilled    | unflattering | unfold        | univalve     | unveil        |
-|-----+---------------+-------------+--------------+---------------+--------------+---------------|
-| 286 | new-fashion   | navy-ship   | novation     | envision      | inefficient  | infusion      |
-|     | infatuate     | innovation  | invasion     | knavish       | knife-edge   | unofficial    |
-|     | unfashionable |             |              |               |              |               |
-|-----+---------------+-------------+--------------+---------------+--------------+---------------|
-| 287 | navigator     | novocaine   | ineffective  | infect        | invective    | invigorate    |
-|     | invoke        | unaffected  | Univac       |               |              |               |
-|-----+---------------+-------------+--------------+---------------+--------------+---------------|
-| 288 | navy-wife     | any-five    | in-view-of   | knife-file    | unfavorable  |               |
-|-----+---------------+-------------+--------------+---------------+--------------+---------------|
-| 289 | navy-bean     | navy-brass  | enfeeble     | enviable      | unevaporated | unfabricated  |
-|     | unifiable     |             |              |               |              |               |
+|-----+---------------+-------------+-------------+---------------+--------------+---------------|
+| 280 | naves         | novice      | nephews     | nevus         | envious      | infest        |
+|     | infuse        | invest      | investigate | invisible     | invoice      | knives        |
+|     | knaves        | unfasten    |             |               |              |               |
+|-----+---------------+-------------+-------------+---------------+--------------+---------------|
+| 281 | naphtha       | neophyte    | nifty       | no-fat        | Nevada       | inevitable    |
+|     | infidel       | invade      | innovate    | invidious     | invite       | unavoidable   |
+|     | unfadable     | unfit       |             |               |              |               |
+|-----+---------------+-------------+-------------+---------------+--------------+---------------|
+| 282 | novena        | newfound    | no-fun      | infant        | infantry     | infinite      |
+|     | invent        | inoffensive | invincible  | uneven        | uneventful   | unfinished    |
+|     | unfounded     | unwoven     |             |               |              |               |
+|-----+---------------+-------------+-------------+---------------+--------------+---------------|
+| 283 | navy-man      | November    | infamous    | one-family    | unfamiliar   |               |
+|-----+---------------+-------------+-------------+---------------+--------------+---------------|
+| 284 | nefarious     | nephritis   | nevevvr     | nouveau-riche | anniversary  | enforce       |
+|     | enfranchise   | environ     | infer       | infirm        | inform       | infringe      |
+|     | invariable    | invert      | knavery     | unfair        | unforeseen   | unforgettable |
+|     | unfortunate   | unfurnished | uniform     | universe      | university   | unvaried      |
+|     | unversed      |             |             |               |              |               |
+|-----+---------------+-------------+-------------+---------------+--------------+---------------|
+| 285 | Seinfeld      | anvil       | envelope    | infallible    | infield      | inflame       |
+|     | inflate       | inflict     | inflow      | influence     | influenza    | invalid       |
+|     | invaluable    | involuntary | involve     | invulnerable  | naval        | navel         |
+|     | novel         | sinful      | sniffle     | snowflake     | unavailable  | unfilled      |
+|     | unflattering  | unfold      | univalve    | unveil        |              |               |
+|-----+---------------+-------------+-------------+---------------+--------------+---------------|
+| 286 | new-fashion   | navy-ship   | novation    | envision      | inefficient  | infusion      |
+|     | infatuate     | innovation  | invasion    | knavish       | knife-edge   | unofficial    |
+|     | unfashionable |             |             |               |              |               |
+|-----+---------------+-------------+-------------+---------------+--------------+---------------|
+| 287 | navigator     | novocaine   | ineffective | infect        | invective    | invigorate    |
+|     | invoke        | unaffected  | Univac      |               |              |               |
+|-----+---------------+-------------+-------------+---------------+--------------+---------------|
+| 288 | navy-wife     | any-five    | in-view-of  | knife-file    | unfavorable  |               |
+|-----+---------------+-------------+-------------+---------------+--------------+---------------|
+| 289 | navy-bean     | navy-brass  | enfeeble    | enviable      | unevaporated | unfabricated  |
+|     | unifiable     |             |             |               |              |               |
 :end:
 
 
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 390   400)
 #+end_src
 
 #+RESULTS[801aba0054a4283959dcfc1244201c3872148672]:
 :results:
-|-----+--------------+-------------+-------------+---------------+---------------+--------------|
-| 290 | nabs         | naps        | nibs        | nips          | NBC           | nubs         |
-|     | knapsack     | knobs       | unbiased    | unobserved    | unobscured    | unopposed    |
-|-----+--------------+-------------+-------------+---------------+---------------+--------------|
-| 291 | nobody       | no-bid      | nepotism    | Neptune       | anybody       | inapt        |
-|     | inept        | inhabit     | inhibit     | input         | knapweed      | unapt        |
-|     | unbutton     | unobtrusive | unhoped     | unpaid        | unpatriotic   | sauna-bath   |
-|-----+--------------+-------------+-------------+---------------+---------------+--------------|
-| 292 | nepenthe     | Nippon      | nubbin      | henbane       | inbound       | kneepan      |
-|     | one-by-one   | unbeknownst | unbind      | unbend        | unpin         | unopened     |
-|     | snub-nosed   |             |             |               |               |              |
-|-----+--------------+-------------+-------------+---------------+---------------+--------------|
-| 293 | napalm       | niobium     | honey-palm  | one-upmanship | wine-palm     | sunbeam      |
-|-----+--------------+-------------+-------------+---------------+---------------+--------------|
-| 294 | napper       | neighbor    | napery      | newborn       | inappreciable | inopportune  |
-|     | inebriated   | inborn      | unbearable  | unbroken      | unburden      | unparalleled |
-|     | unprepared   | unpromising | unproved    | unprovoked    | unpure        |              |
-|-----+--------------+-------------+-------------+---------------+---------------+--------------|
-| 295 | nibble       | nipple      | nebulous    | niblick       | nobleman      | nubile       |
-|     | Naples       | Napoleon    | Hannibal    | Nobel         | enable        | inability    |
-|     | inapplicable | unable      | unbelief    | unbolt        | unbalanced    | unpleasant   |
-|-----+--------------+-------------+-------------+---------------+---------------+--------------|
-| 296 | nuptials     | honey-beige | one-page    | inhibition    | unabashed     | snapshot     |
-|-----+--------------+-------------+-------------+---------------+---------------+--------------|
-| 297 | napkin       | nipping     | henpecked   | knobkerrie    | unbecoming    | unpack       |
-|     | Winnipeg     | unbuckle    |             |               |               |              |
-|-----+--------------+-------------+-------------+---------------+---------------+--------------|
-| 298 | napiform     | unpaved     | unbefitting | unbeveled     | unbehaved     | unhopeful    |
-|     | unbaffled    |             |             |               |               |              |
-|-----+--------------+-------------+-------------+---------------+---------------+--------------|
-| 299 | nabob        | nip-up      | unbiblical  | unpayable     | unpopular     | unpublished  |
+|-----+------------+--------------+-------------+---------------+---------------+--------------|
+| 290 | NBC        | knapsack     | knobs       | nabs          | naps          | nibs         |
+|     | nips       | nubs         | synopsis    | unbiased      | unobscured    | unobserved   |
+|     | unopposed  |              |             |               |               |              |
+|-----+------------+--------------+-------------+---------------+---------------+--------------|
+| 291 | nobody     | no-bid       | nepotism    | Neptune       | anybody       | inapt        |
+|     | inept      | inhabit      | inhibit     | input         | knapweed      | unapt        |
+|     | unbutton   | unobtrusive  | unhoped     | unpaid        | unpatriotic   | sauna-bath   |
+|-----+------------+--------------+-------------+---------------+---------------+--------------|
+| 292 | nepenthe   | Nippon       | nubbin      | henbane       | inbound       | kneepan      |
+|     | one-by-one | unbeknownst  | unbind      | unbend        | unpin         | unopened     |
+|     | snub-nosed |              |             |               |               |              |
+|-----+------------+--------------+-------------+---------------+---------------+--------------|
+| 293 | napalm     | niobium      | honey-palm  | one-upmanship | wine-palm     | sunbeam      |
+|-----+------------+--------------+-------------+---------------+---------------+--------------|
+| 294 | napper     | neighbor     | napery      | newborn       | inappreciable | inopportune  |
+|     | inebriated | inborn       | unbearable  | unbroken      | unburden      | unparalleled |
+|     | unprepared | unpromising  | unproved    | unprovoked    | unpure        |              |
+|-----+------------+--------------+-------------+---------------+---------------+--------------|
+| 295 | showball   | nibble       | nipple      | nebulous      | niblick       | nobleman     |
+|     | nubile     | Naples       | Napoleon    | Hannibal      | Nobel         | enable       |
+|     | inability  | inapplicable | unable      | unbelief      | unbolt        | unbalanced   |
+|     | unpleasant |              |             |               |               |              |
+|-----+------------+--------------+-------------+---------------+---------------+--------------|
+| 296 | nuptials   | honey-beige  | one-page    | inhibition    | unabashed     | snapshot     |
+|-----+------------+--------------+-------------+---------------+---------------+--------------|
+| 297 | napkin     | nipping      | henpecked   | knobkerrie    | unbecoming    | unpack       |
+|     | Winnipeg   | unbuckle     |             |               |               |              |
+|-----+------------+--------------+-------------+---------------+---------------+--------------|
+| 298 | napiform   | unpaved      | unbefitting | unbeveled     | unbehaved     | unhopeful    |
+|     | unbaffled  |              |             |               |               |              |
+|-----+------------+--------------+-------------+---------------+---------------+--------------|
+| 299 | nabob      | nip-up       | unbiblical  | unpayable     | unpopular     | unpublished  |
 :end:
 
 
@@ -6956,57 +6958,59 @@ at least twice to regenerate cross-references correctly.
 
 #+RESULTS[482375521f818730b674ffab0275515954f05add]:
 :results:
-|-----+-------------+------------+--------------+--------------+-------------+--------------|
-| 750 | calls       | calcium    | callous      | clasp        | class       | clause       |
-|     | close       | closet     | cluster      | colossus     | cholesterol | gallows      |
-|     | glass       | glaze      | glissade     | gloss        | equalize    | oculist      |
-|-----+-------------+------------+--------------+--------------+-------------+--------------|
-| 751 | cauldron    | clad       | cleat        | clod         | cloth       | cloud        |
-|     | cold        | collide    | colitis      | colt         | cult        | geld         |
-|     | gilt        | glad       | glade        | glide        | glitter     | Goliath      |
-|     | gloat       | glut       | gold         | guild        | guilt       | kilt         |
-|     | killed      | kilowatt   | quilt        | equality     | occult      | wiglet       |
-|     | escalator   |            |              |              |             |              |
-|-----+-------------+------------+--------------+--------------+-------------+--------------|
-| 752 | calendar    | call-in    | clandestine  | clean        | clench      | client       |
-|     | clinch      | clinic     | clink        | clown        | colin       | colleen      |
-|     | colon       | cologne    | colony       | coolness     | gallant     | gallon       |
-|     | glance      | gland      | glean        | glen         | kiln        | ugliness     |
-|     | esculent    |            |              |              |             |              |
-|-----+-------------+------------+--------------+--------------+-------------+--------------|
-| 753 | calamity    | calumniate | claim        | clammy       | clamor      | clamp        |
-|     | clemency    | climate    | climb        | clump        | clumsy      | column       |
-|     | culminate   | glamour    | gleam        | glimmer      | glimpse     | gloam        |
-|     | gloom       | glum       | acclaim      | acclimate    | kilometer   | schoolmaster |
-|-----+-------------+------------+--------------+--------------+-------------+--------------|
-| 754 | caller      | calorie    | chlorite     | claret       | clarify     | clarinet     |
-|     | clarion     | clear      | clergy       | clerk        | collar      | color        |
-|     | cooler      | galore     | gallery      | glare        | glory       | glowworm     |
-|     | killer      | Kilroy     | eclair       | heckler      | ocular      | ogler        |
-|     | scholar     |            |              |              |             |              |
-|-----+-------------+------------+--------------+--------------+-------------+--------------|
-| 755 | Galilean    | Galilee    | clawless     | coalhole     | coaloil     | glow-lamp    |
-|     | guileless   | keelhaul   | echolalia    | ukulele      | uglily      |              |
-|-----+-------------+------------+--------------+--------------+-------------+--------------|
-| 756 | clash       | clutch     | collage      | collation    | college     | collision    |
-|     | coolish     | galosh     | Gaulish      | glacier      | goulash     | keelage      |
-|     | killjoy     | klatch     | ecology      | English      |             |              |
-|-----+-------------+------------+--------------+--------------+-------------+--------------|
-| 757 | calculator  | calico     | calling      | clang        | claque      | click        |
-|     | cling       | cloak      | clock        | clog         | colic       | colleague    |
-|     | collect     | colloquy   | cowlick      | Gaelic       | galling     | goalkeeper   |
-|     | kilogram    | kulak      | aqualung     |              |             |              |
-|-----+-------------+------------+--------------+--------------+-------------+--------------|
-| 758 | cauliflower | clavate    | cleave       | cleft        | clever      | cliff        |
-|     | culvert     | clove      | gallivant    | glove        | golf        | gulf         |
-|     | killifish   | qualify    | oakleaf      | skillful     |             |              |
-|-----+-------------+------------+--------------+--------------+-------------+--------------|
-| 759 | calabash    | caliber    | calliope     | calaboose    | calypso     | clip         |
-|     | club        | coalpit    | collaborator | collapse     | culpable    | gallop       |
-|     | glib        | glob       | gallbladder  | globe        | goalpost    | gullible     |
-|     | gulp        | kelp       | kelpie       | kleptomaniac | eclipse     | equilibrium  |
-|     | eucalyptus  |            |              |              |             |              |
+|-----+-------------+------------+--------------+--------------+-----------+--------------|
+| 750 | calcium     | callous    | calls        | cholesterol  | clasp     | class        |
+|     | clause      | close      | closet       | cluster      | colossus  | equalize     |
+|     | gallows     | glass      | glaze        | glissade     | gloss     | isinglass    |
+|     | oculist     |            |              |              |           |              |
+|-----+-------------+------------+--------------+--------------+-----------+--------------|
+| 751 | cauldron    | clad       | cleat        | clod         | cloth     | cloud        |
+|     | cold        | collide    | colitis      | colt         | cult      | geld         |
+|     | gilt        | glad       | glade        | glide        | glitter   | Goliath      |
+|     | gloat       | glut       | gold         | guild        | guilt     | kilt         |
+|     | killed      | kilowatt   | quilt        | equality     | occult    | wiglet       |
+|     | escalator   |            |              |              |           |              |
+|-----+-------------+------------+--------------+--------------+-----------+--------------|
+| 752 | calendar    | call-in    | clandestine  | clean        | clench    | client       |
+|     | clinch      | clinic     | clink        | clown        | colin     | colleen      |
+|     | colon       | cologne    | colony       | coolness     | gallant   | gallon       |
+|     | glance      | gland      | glean        | glen         | kiln      | ugliness     |
+|     | esculent    |            |              |              |           |              |
+|-----+-------------+------------+--------------+--------------+-----------+--------------|
+| 753 | calamity    | calumniate | claim        | clammy       | clamor    | clamp        |
+|     | clemency    | climate    | climb        | clump        | clumsy    | column       |
+|     | culminate   | glamour    | gleam        | glimmer      | glimpse   | gloam        |
+|     | gloom       | glum       | acclaim      | acclimate    | kilometer | schoolmaster |
+|-----+-------------+------------+--------------+--------------+-----------+--------------|
+| 754 | caller      | calorie    | chlorite     | claret       | clarify   | clarinet     |
+|     | clarion     | clear      | clergy       | clerk        | collar    | color        |
+|     | cooler      | galore     | gallery      | glare        | glory     | glowworm     |
+|     | killer      | Kilroy     | eclair       | heckler      | ocular    | ogler        |
+|     | scholar     |            |              |              |           |              |
+|-----+-------------+------------+--------------+--------------+-----------+--------------|
+| 755 | Galilean    | Galilee    | clawless     | coalhole     | coaloil   | glow-lamp    |
+|     | guileless   | keelhaul   | echolalia    | ukulele      | uglily    |              |
+|-----+-------------+------------+--------------+--------------+-----------+--------------|
+| 756 | clash       | clutch     | collage      | collation    | college   | collision    |
+|     | coolish     | galosh     | Gaulish      | glacier      | goulash   | keelage      |
+|     | killjoy     | klatch     | ecology      | English      |           |              |
+|-----+-------------+------------+--------------+--------------+-----------+--------------|
+| 757 | calculator  | calico     | calling      | clang        | claque    | click        |
+|     | cling       | cloak      | clock        | clog         | colic     | colleague    |
+|     | collect     | colloquy   | cowlick      | Gaelic       | galling   | goalkeeper   |
+|     | kilogram    | kulak      | aqualung     |              |           |              |
+|-----+-------------+------------+--------------+--------------+-----------+--------------|
+| 758 | cauliflower | clavate    | cleave       | cleft        | clever    | cliff        |
+|     | culvert     | clove      | gallivant    | glove        | golf      | gulf         |
+|     | killifish   | qualify    | oakleaf      | skillful     |           |              |
+|-----+-------------+------------+--------------+--------------+-----------+--------------|
+| 759 | calabash    | caliber    | calliope     | calaboose    | calypso   | clip         |
+|     | club        | coalpit    | collaborator | collapse     | culpable  | gallop       |
+|     | glib        | glob       | gallbladder  | globe        | goalpost  | gullible     |
+|     | gulp        | kelp       | kelpie       | kleptomaniac | eclipse   | equilibrium  |
+|     | eucalyptus  |            |              |              |           |              |
 :end:
+
 
 
 \clearpage

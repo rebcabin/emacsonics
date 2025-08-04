@@ -570,14 +570,14 @@
 
            '((100027 "R")
              "SINK"
-             "SYNAGOGUE"
+             ;"synagogue"
              "snack"
              "snake"
              "snick"
              "zinc"
 
              "cynic"
-             "isinglass"
+             ;"isinglass"
              "scenic"
              "sea-anchor"
              "sneak"
@@ -586,19 +586,19 @@
 
            '((100028 "S")
              "SNUFF"
-             "SNOWFLAKE"
+             ;"snowflake"
              "sniff"
              "snafu"
-             "sniffle"
+             ;"sniffle"
              "saw-knife"
 
-             "Seinfeld"
-             "sinful"
+             ;"Seinfeld"
+             ;"sinful"
              )
 
            '((100029 "T")
              "SNAP"
-             "snowball"
+             ;"snowball"
              "snob"
              "snip"
              "snipe"
@@ -607,7 +607,7 @@
              "sign-up"
              "snub"
              "sunup"
-             "synopsis"
+             ;"synopsis"
              )
 
            '((100030 "U")
@@ -7701,30 +7701,35 @@
              "unvaried"
              "unversed")
            '(285
-             "navel"
-             "naval"
-             "novel"
+             "Seinfeld"
              "anvil"
              "envelope"
              "infallible"
-             "inflame"
              "infield"
+             "inflame"
              "inflate"
              "inflict"
+             "inflow"
              "influence"
              "influenza"
-             "inflow"
              "invalid"
              "invaluable"
              "involuntary"
              "involve"
              "invulnerable"
+             "naval"
+             "navel"
+             "novel"
+             "sinful"
+             "sniffle"
+             "snowflake"
              "unavailable"
              "unfilled"
              "unflattering"
              "unfold"
              "univalve"
-             "unveil")
+             "unveil"
+             )
            '(286
              "new-fashion"
              "navy-ship"
@@ -7759,18 +7764,20 @@
              "unfabricated"
              "unifiable")
            '(290
+             "NBC"
+             "knapsack"
+             "knobs"
              "nabs"
              "naps"
              "nibs"
              "nips"
-             "NBC"
              "nubs"
-             "knapsack"
-             "knobs"
+             "synopsis"
              "unbiased"
-             "unobserved"
              "unobscured"
-             "unopposed")
+             "unobserved"
+             "unopposed"
+             )
            '(291
              "nobody"
              "no-bid"
@@ -7830,6 +7837,7 @@
              "unprovoked"
              "unpure")
            '(295
+             "showball"
              "nibble"
              "nipple"
              "nebulous"
@@ -13261,9 +13269,10 @@
              "group"
              "grub")
            '(750
-             "calls"
              "calcium"
              "callous"
+             "calls"
+             "cholesterol"
              "clasp"
              "class"
              "clause"
@@ -13271,14 +13280,15 @@
              "closet"
              "cluster"
              "colossus"
-             "cholesterol"
+             "equalize"
              "gallows"
              "glass"
              "glaze"
              "glissade"
              "gloss"
-             "equalize"
-             "oculist")
+             "isinglass"
+             "oculist"
+             )
            '(751
              "cauldron"
              "clad"
