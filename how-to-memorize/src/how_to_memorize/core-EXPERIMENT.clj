@@ -59,6 +59,7 @@
              "aside"
              "asset"
 
+             "cedilla" ;; double l as soft y
              "city"
              "east"
              "haste"
@@ -251,180 +252,129 @@
              "zip"
              )
 
+           ;; Remove all words starting with S or Z and more than three hard
+           ;; consonant sounds from pegs for 3-digit numbers starting with 0.
+           ;; This change forces all 3-digit numbers starting with 0 to have
+           ;; pegs with exactly three sounds starting with S/Z and all pegs with
+           ;; more than three sounds starting with S/Z to belong to numbers that
+           ;; don't start with zero. (3 Aug 2025)
+
            ;; 010
            '((100010 "A")
-             "SAWDUST"
-             "SWEETS"
-             "seducer"
-             "hostess"
-             "citizen"
-             "cities"
+             ;"SAWDUST"
+             ;"seducer"
+             ;"citizen"
 
-             "South-Sea"
+             "HOSTESS"
+             "SOUTH-SEA"
+             "sweets"
+             "cities"
              "assets"
+             "stays"
+
              "assiduous"
              "sideways"
-             "stays"
              )
 
            '((100011 "B")
-             "STATUE"
-             "STEED"
+             "ESTATE"
+             "STOUT"
              "studio"
-             "estate"
+             "statue"
              "iced-tea"
              "wasted"
 
              "astute"
              "hesitate"
              "sedate"
-             "sedateness"
-             "sedative"
              "sit-down"
-             "stadium"
              "state"
-             "state-line"
-             "statesman"
-             "statistical"
-             "status"
-             "steadiness"
              "steady"
-             "stout"
-             "stoutness"
+             "steed"
              "stud"
-             "student"
-             "studious"
-             "stutter"
              )
 
            '((100012 "C")
-             "SATAN"
              "STEIN"
-             "sedan"
-             "stain"
+             "SEDAN"
              "satin"
+             "stain"
              "stone"
 
              "Estonia"
+             "Satan"
              "Sweden"
-             "astound"
-             "hesitant"
-             "pseudonym"
              "sadden"
-             "sadness"
-             "satanic"
-             "satisfaction"
              "sit-in"
              "sodden"
-             "stainless"
              "stand"
-             "standard"
-             "stench"
-             "stenographer"
-             "stint"
-             "stoneblind"
              "stun"
-             "stunt"
              "sudden"
              "sweeten"
+             ;"astound"
+             ;"hesitant"
+             ;"pseudonym"
+             ;"standard"
+             ;"stench"
+             ;"stint"
+             ;"stunt"
              )
 
            '((100013 "D")
-             "SEDIMENT"
+             ;"SEDIMENT"
+             "SODIUM"
              "STEAM"
-             "sodium"
              "stem"
              "esteem"
-             "wisdom"
-
-             "abstemious"
-             "estimate"
+             "stoma"
              "stamina"
-             "stammer"
-             "stamp"
-             "stampede"
-             "steamer"
-             "steamfitter"
-             "steamship"
-             "stimulant"
-             "stomach"
-             "stump"
+
+             "wisdom"
+             ;"abstemious"
+             ;"estimate"
+             ;"stamp"
+             ;"stampede"
+             ;"stomach"
+             ;"stump"
              )
 
            '((100014 "E")
-             "SATYR"
-             "STAR"
-             "Saturn"
-             "stair"
-             "cider"
+             "OYSTER"
+             "CIDER"
              "cedar"
+                                        ;"Saturn"
+             "stair"
+             "sweater"
+             "steer"
 
+                                        ;"stream"
              "Austria"
              "Easter"
-             "Saturday"
              "astir"
              "astray"
-             "astronaut"
              "austere"
-             "historian"
-             "historical"
              "history"
              "hysteria"
              "ouster"
-             "oyster"
              "satire"
+             "satyr"
              "setter"
-             "staircase"
              "star"
-             "starch"
              "stare"
-             "stark"
-             "starling"
-             "start"
-             "steer"
-             "sterile"
-             "sterling"
              "stir"
-             "stirrup"
-             "storage"
              "store"
-             "storehouse"
-             "storm"
              "story"
-             "strafe"
-             "straight"
-             "strain"
-             "strait"
-             "strap"
-             "stratagem"
              "straw"
-             "strawberry"
-             "streak"
-             "stream"
-             "streamer"
-             "street"
-             "strength"
-             "stress"
-             "stretch"
-             "strict"
-             "stride"
-             "strife"
-             "strike"
-             "string"
-             "strip"
-             "stripe"
-             "stroke"
-             "stroll"
-             "strong"
-             "structure"
-             "struggle"
-             "strut"
-             "sturdy"
-             "sturgeon"
              "suitor"
              "swatter"
-             "sweater"
-             "yesterday"
+             ;"Saturday"
+             ;"astronaut"
+             ;"sterling"
+             ;"storm"
+             ;"strike"
+             ;"strip"
+             ;"stroll"
+             ;"struggle"
              )
 
            '((100015 "F")
@@ -435,66 +385,48 @@
              "steel"
              "style"
 
-             "Stalin"
-             "Steeler"
              "hostile"
              "sadly"
              "settle"
-             "settlement"
-             "settler"
              "stale"
-             "stalemate"
              "steal"
-             "stealth"
-             "stellar"
-             "still-life"
-             "stillness"
-             "styleless"
-             "stylish"
+             ;"cedilla" ;; 01 the way I pronounce ll as soft y
              )
 
            '((100016 "G")
              "STAGE"
              "STOOGE"
              "stitch"
-             "station"
+             ;"station"
              "hostage"
              "wastage"
+             "stodgy"
 
              "hesitation"
-             "stage-fright"
-             "stage-manager"
-             "stagecoach"
-             "stagehand"
-             "staging"
-             "station"
-             "stodgy"
              )
 
            '((100017 "H")
-             "SIDECAR"
-             "SIDEKICK"
+             ;"sidecar"
+             ;"sidekick"
+             "STUCCO"
+             "STING"
              "stake"
              "stick"
-             "stucco"
              "stock"
+             "stoke"
 
              "ascetic"
              "sciatica"
              "setting"
              "stack"
              "stag"
-             "stagnant"
              "stalk"
              "steak"
              "sticky"
-             "stigma"
-             "stigmata"
-             "sting"
              "stoic"
-             "stoke"
              "stuck"
-             "suitcase"
+             ;"stigma"
+             ;"stigmata"
              )
 
            '((100018 "I")
@@ -502,41 +434,40 @@
              "STOVE"
              "staff"
              "stave"
-             "stevedore"
-
              "stuff"
-             "sea-devil"
              "set-off"
-             "wasteful"
+                                        ;"stevedore"
+             ;"sea-devil"
+             ;"wasteful"
              )
 
            '((100019 "J")
-             "STAB"
-             "STEEPLE"
-             "stub"
+             "STOP"
+             "STEP"
              "stoop"
-             "staple"
+             "stub"
              "steppe"
 
-             "eastbound"
+                                        ;"steeple"
+                                        ;"staple"
              "estop"
-             "seat-belt"
-             "southbound"
+             "stab"
              "steep"
-             "step"
-             "stipend"
-             "stop"
-             "stupid"
-             "sweetbread"
+                                        ;"eastbound"
+                                        ;"seat-belt"
+                                        ;"southbound"
+                                        ;"stipend"
+                                        ;"stupid"
+                                        ;"sweetbread"
              )
 
            '((100020 "K")
-             "SENSE"
-             "SUNS"
+             "SUNSET"
+             "SEANCE"
+             "sense"
              "sneeze"
+             "SUNS"
              "sinus"
-             "seance"
-             "sunset"
 
              "census"
              "easiness"
@@ -544,10 +475,9 @@
              "iciness"
              "science"
              "since"
-             "sincere"
-             "sinister"
-             "sinus"
              "snooze"
+             ;"sincere"
+             ;"sinister"
              )
 
            '((100021 "L")
@@ -561,11 +491,9 @@
              "Sunday"
              "ascent"
              "assent"
-             "sandal"
              "sanity"
              "scent"
              "sent"
-             "sentiment"
              "snit"
              "snoot"
              "snout"
@@ -573,30 +501,33 @@
              "sonnet"
              "sound"
              "sundae"
-             "swindle"
              "zenith"
+             ;"sandal"
+             ;"sentiment"
+             ;"swindle"
              )
 
            '((100022 "M")
-             "SIGN-ON"
              "SAN JUAN"
-             "assonance"
+             "SIGN-ON"
              "sea-onion"
              "snow-knife"
-             "synonym"
-
              "asinine"
+
+                                        ;"assonance"
+             ;"synonym"
+
              )
 
            '((100023 "N")
-             "CINNAMON"
-             "SNOWMOBILE"
-             "snowman"
-             "cinema"
-             "sea-anemone"
-             "cyanamide"
+             "CINEMA"
+             ;"cinnamon"
+             ;"snowmobile"
+             ;"snowman"
+             ;"sea-anemone"
+             ;"cyanamide"
 
-             "wisenheimer"
+             ;"wisenheimer"
              )
 
            '((100024 "O")
@@ -605,22 +536,20 @@
              "senior"
              "snore"
              "scenery"
-             "sunrise"
+             ;"sunrise"
 
              "snare"
              "sneer"
-             "snort"
-             "snarl"
-             "sonorous"
+             ;"snort"
+             ;"snarl"
+             ;"sonorous"
              )
 
            '((100025 "P")
              "SENILE"
-             "SUNLAMP"
+             ;"sunlamp"
              "snell"
              "snail"
-             "sunlight"
-             ""
              )
 
            '((100026 "Q")
@@ -629,26 +558,26 @@
              "cinch"
              "singe"
              "snatch"
-             "censure"
+             ;"censure"
 
-             "ascension"
-             "century"
-             "sensual"
+             ;"ascension"
+             ;"century"
+             ;"sensual"
              "snitch"
-             "snow-job"
-             "sunshine"
+             ;"snow-job"
+             ;"sunshine"
              )
 
            '((100027 "R")
              "SINK"
-             "SYNAGOGUE"
+             ;"synagogue"
              "snack"
              "snake"
              "snick"
              "zinc"
 
              "cynic"
-             "isinglass"
+             ;"isinglass"
              "scenic"
              "sea-anchor"
              "sneak"
@@ -657,19 +586,19 @@
 
            '((100028 "S")
              "SNUFF"
-             "SNOWFLAKE"
+             ;"snowflake"
              "sniff"
              "snafu"
-             "sniffle"
+             ;"sniffle"
              "saw-knife"
 
-             "Seinfeld"
-             "sinful"
+             ;"Seinfeld"
+             ;"sinful"
              )
 
            '((100029 "T")
              "SNAP"
-             "snowball"
+             ;"snowball"
              "snob"
              "snip"
              "snipe"
@@ -678,7 +607,7 @@
              "sign-up"
              "snub"
              "sunup"
-             "synopsis"
+             ;"synopsis"
              )
 
            '((100030 "U")
@@ -4196,6 +4125,7 @@
              "pin"
              "pone"
              "pun"
+             "subpoena"
              "weapon"
              )
 
@@ -4438,12 +4368,10 @@
            '((101 "e")
              "TOAST"
 
-             "tacit"
-             "taste"
-             "test"
-             "testimony"
              "Tuesday"
-             "twist"
+             "atheist"
+             "attest"
+             "audacity"
              "deceit"
              "decide"
              "deist"
@@ -4461,15 +4389,19 @@
              "distrust"
              "disturb"
              "dust"
-             "atheist"
-             "attest"
-             "audacity"
              "outside"
+             "sawdust"
+             "tacit"
+             "taste"
+             "test"
+             "testimony"
+             "twist"
              )
 
            '((102 "f")
              "DOZEN"
 
+             "citizen"
              "decent"
              "descent"
              "design"
@@ -4525,6 +4457,7 @@
              "disrobe"
              "disrupt"
              "douser"
+             "seducer"
 
              )
 
@@ -4594,6 +4527,8 @@
              "disavow"
              "disfigure"
              "disfavor"
+             "satisfaction"
+
              )
 
            '((109 "m")
@@ -4634,6 +4569,10 @@
              "tootsy"
              "deduce"
              "detest"
+             "statesman"
+             "status"
+             "statistical"
+             "studious"
              )
 
            '((111 "o")
@@ -4665,6 +4604,10 @@
              "detain"
              "detonate"
              "dead-end"
+             "sedateness"
+             "steadiness"
+             "stoutness"
+             "student"
              )
 
            '((113 "q")
@@ -4677,6 +4620,8 @@
              "TeDeum"
              "datum"
              "daytime"
+             "stadium"
+
              )
 
            '((114 "r")
@@ -4703,6 +4648,7 @@
              "editor"
              "headwater"
              "hot-water"
+             "stutter"
              )
 
            '((115 "s")
@@ -4722,6 +4668,7 @@
              "deadly"
              "detail"
              "thoughtless"
+             "state-line"
              )
 
            '((116 "t")
@@ -4759,6 +4706,7 @@
              "deadfall"
              "additive"
              "auditive"
+             "sedative"
              )
 
            '((119 "w")
@@ -4795,24 +4743,17 @@
              "utensil"
              "whiteness"
              "witness"
+             "sadness"
              )
 
            '((121 "y")
              "DOUGHNUT"
 
-             "tent"
-             "taint"
-             "taunt"
-             "tenth"
-             "tendon"
-             "tend"
-             "thunder"
-             "tint"
-             "tender"
-             "twenty"
-             "TNT"
-             "twi-night"
-             "tantalize"
+             "tnt"
+             "addendum"
+             "astound"
+             "attend"
+             "authentic"
              "dainty"
              "dandy"
              "denote"
@@ -4821,13 +4762,26 @@
              "denude"
              "dint"
              "dwindle"
-             "attend"
-             "authentic"
-             "addendum"
+             "hesitant"
              "identical"
              "identify"
+             "stand"
+             "standard"
+             "stint"
+             "stunt"
+             "taint"
+             "tantalize"
+             "taunt"
+             "tend"
+             "tender"
+             "tendon"
+             "tent"
+             "tenth"
+             "thunder"
+             "tint"
+             "twenty"
+             "twi-night"
              "whodunit"
-             "astound"
              )
 
            '((122 "z")
@@ -4854,6 +4808,7 @@
              "dynamite"
              "atonement"
              "attainment"
+             "pseudonym"
              "autonomy"
              "outnumber"
              )
@@ -4886,6 +4841,7 @@
              "denial"
              "downhill"
              "ethanol"
+             "stainless"
              )
 
            '(126
@@ -4903,6 +4859,7 @@
              "dungeon"
              "twinge"
              "astonish"
+             "stench"
              "attention"
              "wooden-shoe"
              )
@@ -4924,6 +4881,8 @@
              "Don-Quixote"
              "ethnic"
              "hoodwink"
+             "satanic"
+             "stenographer"
              )
 
            '(128
@@ -4952,6 +4911,7 @@
              "downpour"
              "donnybrook"
              "Danube"
+             "stoneblind"
              )
 
            '(130
@@ -5001,25 +4961,27 @@
 
              "T-man"
              "Tammany"
-             "thiamine"
-             "time-honored"
-             "thumbnail"
-             "tameness"
-             "demand"
-             "demeanor"
-             "demonstrate"
-             "demon"
-             "diamond"
-             "dimension"
-             "diminish"
-             "dominate"
-             "domain"
-             "dominion"
              "administer"
              "admonish"
              "autumnal"
+             "demand"
+             "demeanor"
+             "demon"
+             "demonstrate"
+             "diamond"
+             "dimension"
+             "diminish"
+             "domain"
+             "dominate"
+             "dominion"
              "headman"
              "ottoman"
+             "sediment"
+             "stamina"
+             "tameness"
+             "thiamine"
+             "thumbnail"
+             "time-honored"
              )
 
            '(133
@@ -5046,6 +5008,8 @@
              "demarcation"
              "admirer"
              "admiral"
+             "stammer"
+             "steamer"
              )
 
            '(135
@@ -5063,9 +5027,12 @@
              "dome-light"
              "etymologist"
              "oatmeal"
+             "stimulant"
              )
 
            '(136
+             "STEAMSHIP"
+
              "time-sheet"
              "time-chart"
              "tam-o-shanter"
@@ -5095,6 +5062,7 @@
              "demigod"
              "democrat"
              "atomic"
+             "stomach"
              )
 
            '(138
@@ -5108,6 +5076,7 @@
              "dumbfounded"
              "duumvirate"
              "hit-movie"
+             "steamfitter"
              )
 
            '(139
@@ -5133,40 +5102,64 @@
              "dumbbell"
              "dump"
              "automobile"
+             "stamp"
+             "stampede"
+             "stump"
              )
 
            '(140
              "TERRACE"
 
+             "tricycle"
+             "tea-rose"
+             "thrice"
+             "torso"
+             "thirst"
              "Thursday"
-             "address"
-             "atrocity"
-             "authoress"
+             "trace"
+             "throes"
+             "tress"
+             "trews"
+             "truce"
              "dress"
              "dresser"
              "dressing"
              "drizzle"
              "drowsy"
              "duress"
-             "otherwise"
-             "tea-rose"
-             "thirst"
-             "thrice"
-             "throes"
-             "torso"
-             "trace"
-             "tress"
-             "trews"
-             "tricycle"
-             "truce"
+             "address"
+             "atrocity"
+             "authoress"
              "waitress"
+             "otherwise"
+             "storehouse"
+             "stress"
              )
 
            '(141
              "TURRET"
 
-             "adroit"
-             "authority"
+             "tart"
+             "tardy"
+             "territory"
+             "tread"
+             "treadle"
+             "treat"
+             "trade"
+             "trait"
+             "triton"
+             "treaty"
+             "trident"
+             "trout"
+             "truth"
+             "turtle"
+             "third"
+             "thirty"
+             "thirteen"
+             "thread"
+             "threat"
+             "throat"
+             "thyroid"
              "dart"
              "dearth"
              "diehard"
@@ -5174,34 +5167,26 @@
              "dread"
              "drought"
              "druid"
+             "adroit"
+             "authority"
              "iterate"
              "outright"
-             "tardy"
-             "tart"
-             "territory"
-             "third"
-             "thirteen"
-             "thirty"
-             "thread"
-             "threat"
-             "throat"
-             "thyroid"
-             "trade"
-             "trait"
-             "tread"
-             "treadle"
-             "treat"
-             "treaty"
-             "trident"
-             "triton"
-             "trout"
-             "truth"
-             "turtle"
+             "yesterday"
+             "Saturday"
+             "start"
+             "strait"
+             "straight"
+             "stratagem"
+             "street"
+             "stride"
+             "strut"
+             "sturdy"
              )
 
            '(142
              "TERRAIN"
 
+             "Saturn"
              "adherent"
              "adorn"
              "astronaut"
@@ -5215,7 +5200,9 @@
              "drunk"
              "dryness"
              "eternal"
+             "historian"
              "outrun"
+             "strain"
              "thorn"
              "throne"
              "torrent"
@@ -5235,9 +5222,22 @@
            '(143
              "DREAM"
 
+             "dermatology"
+             "diorama"
+             "dormer"
+             "dormitory"
+             "dram"
+             "drama"
+             "dramamine"
+             "drome"
+             "drum"
+             "storm"
+             "stream"
+             "streamer"
              "tearoom"
              "term"
              "terminal"
+             "theorem"
              "thermometer"
              "torment"
              "tram"
@@ -5247,20 +5247,10 @@
              "trim"
              "trombone"
              "trumpet"
-             "theorem"
              "turmoil"
-             "diorama"
-             "drama"
-             "dermatology"
-             "dram"
-             "drome"
-             "dormer"
-             "dormitory"
-             "drum"
-             "dramamine"
              "uttermost"
-             "watermelon"
              "watermark"
+             "watermelon"
              )
 
            '(144
@@ -5302,7 +5292,11 @@
              "door-lock"
              "water-hole"
              "water-lily"
+             "starling"
              "astrologer"
+             "sterile"
+             "sterling"
+             "stroll"
              "Waterloo"
              )
 
@@ -5328,6 +5322,10 @@
              "hydrogen"
              "outrage"
              "ostrich"
+             "starch"
+             "storage"
+             "stretch"
+             "sturgeon"
              "attrition"
              )
 
@@ -5359,6 +5357,18 @@
              "drake"
              "dirk"
              "attract"
+             "staircase"
+             "stark"
+             "streak"
+             "strength"
+             "strike"
+             "strict"
+             "string"
+             "strong"
+             "structure"
+             "stroke"
+             "struggle"
+             "historical"
              )
 
            '(148
@@ -5389,6 +5399,8 @@
              "atrophy"
              "hydrophobia"
              "waterfall"
+             "strive"
+             "strafe"
              "weather-vane"
              )
 
@@ -5422,6 +5434,11 @@
              "derby"
              "adorable"
              "attribute"
+             "strap"
+             "stirrup"
+             "strawberry"
+             "strip"
+             "stripe"
              "water-boy"
              "waterproof"
              )
@@ -5473,6 +5490,7 @@
              "utility"
              "withhold"
              "outlet"
+             "stealth"
              )
 
            '(152
@@ -5492,6 +5510,8 @@
              "idleness"
              "Italian"
              "outline"
+             "stillness"
+             "Stalin"
              )
 
            '(153
@@ -5510,6 +5530,8 @@
              "head-lamp"
              "hotelman"
              "hoodlum"
+             "stalemate"
+             "settlement"
              )
 
            '(154
@@ -5527,6 +5549,9 @@
              "hotel-room"
              "idler"
              "yodeler"
+             "settler"
+             "stellar"
+             "stealer"
              )
 
            '(155
@@ -5540,6 +5565,9 @@
              "tallowless"
              "teleology"
              "Dalai-Lama"
+             "stellular"
+             "still-life"
+             "styleless"
              )
 
            '(156
@@ -5557,6 +5585,7 @@
              "dilution"
              "adulation"
              "etiology"
+             "stylish"
              )
 
            '(157
@@ -5647,6 +5676,7 @@
            '(162
              "EDITION"
 
+             "station"
              "tuition"
              "teach-in"
              "tee-joint"
@@ -5655,6 +5685,7 @@
              "addition"
              "audition"
              "outshine"
+             "stagehand"
              "hesitation"
              )
 
@@ -5665,6 +5696,7 @@
              "touchmark"
              "Dutchman"
              "attachment"
+             "stage-manager"
              )
 
            '(164
@@ -5699,6 +5731,7 @@
              )
 
            '(167
+             "STAGECOACH"
 
              "thatch-grass"
              "teaching"
@@ -5708,6 +5741,7 @@
              "deject"
              "hatcheck"
              "woodchuck"
+             "staging"
              )
 
            '(168
@@ -5719,6 +5753,7 @@
              "disheveled"
              "dishful"
              "wheat-chaff"
+             "stage-fright"
              )
 
            '(169
@@ -5751,6 +5786,7 @@
              "attics"
              "ethics"
              "outcast"
+             "suitcase"
              )
 
            '(171
@@ -5791,46 +5827,49 @@
              "deacon"
              "decanter"
              "dignity"
+             "stagnant"
              )
 
            '(173
              "DOCUMENT"
 
-             "thingumajig"
              "Tecumseh"
              "autogamy"
-             "decompose"
-             "dogma"
-             "degum"
-             "decamp"
              "day-camp"
+             "decamp"
+             "decompose"
+             "degum"
+             "dogma"
              "stigma"
+             "stigmata"
+             "thingumajig"
              )
 
            '(174
              "TIGER"
 
-             "ticker"
-             "tea-garden"
+             "attacker"
+             "autocar"
+             "autograph"
+             "dacron"
              "dagger"
              "decorate"
              "decrease"
              "decree"
              "decry"
-             "degree"
              "degrade"
-             "digress"
+             "degree"
              "digger"
-             "dacron"
+             "digress"
              "doggerel"
-             "autograph"
-             "autocar"
-             "attacker"
              "outcry"
              "outgrow"
+             "sidecar"
+             "stacker"
              "stagger"
              "stoker"
-             "stacker"
+             "tea-garden"
+             "ticker"
              )
 
            '(175
@@ -5868,17 +5907,18 @@
            '(177
              "HOT-cake"
 
-             "tea-cake"
-             "tacking"
-             "tagging"
+             "attacking"
              "decaying"
              "digging"
              "dogging"
-             "attacking"
              "outgoing"
+             "sidekick"
              "sticking"
-             "stocking"
              "stock-exchange"
+             "stocking"
+             "tacking"
+             "tagging"
+             "tea-cake"
              )
 
            '(178
@@ -5897,6 +5937,7 @@
              "outgiving"
              "stockfish"
              )
+
 
            '(179
              "STICKUP"
@@ -6009,24 +6050,26 @@
            '(185
              "DEVIL"
 
-             "tefillin"
-             "tivoli"
-             "tough-luck"
-             "twofold"
-             "toyful"
              "defalcation"
              "defile"
              "deflate"
              "develop"
              "duffel"
-             "hatful"
              "hateful"
+             "hatful"
              "outfield"
              "outflow"
-             "white-elephant"
-             "youthful"
+             "sea-devil"
              "stifle"
+             "tefillin"
+             "tivoli"
+             "tough-luck"
+             "toyful"
+             "twofold"
+             "wasteful"
+             "white-elephant"
              "wistful"
+             "youthful"
              )
 
            '(186
@@ -6129,21 +6172,24 @@
            '(192
              "HATPIN"
 
+             "Dubonnet"
+             "Ethiopian"
+             "debenture"
+             "debonair"
+             "deepen"
+             "depend"
+             "depone"
+             "eastbound"
+             "headband"
+             "headpin"
+             "outbound"
+             "stipend"
+             "southbound"
+             "thighbone"
              "tiepin"
              "topknot"
              "topnotch"
-             "thighbone"
              "twopence"
-             "debenture"
-             "deepen"
-             "debonair"
-             "depend"
-             "depone"
-             "Dubonnet"
-             "Ethiopian"
-             "headpin"
-             "outbound"
-             "headband"
              )
 
            '(193
@@ -6159,58 +6205,61 @@
            '(194
              "TYPEWRITER"
 
-             "tie-bar"
-             "tea-party"
-             "taper"
-             "tapir"
-             "taproom"
-             "topper"
-             "topwork"
-             "top-round"
-             "top-rate"
+             "dapper"
              "daybreak"
              "debar"
-             "depart"
-             "dapper"
              "debris"
+             "depart"
              "department"
              "deportment"
              "depreciate"
              "depress"
              "deprive"
-             "dipper"
              "diaper"
+             "dipper"
              "outboard"
              "outbreak"
              "sideboard"
              "sideburns"
              "stubborn"
+             "sweetbread"
+             "taper"
+             "tapir"
+             "taproom"
+             "tea-party"
+             "tie-bar"
+             "top-rate"
+             "top-round"
+             "topper"
+             "topwork"
              )
 
            '(195
              "TABLE"
 
-             "tablet"
-             "tableau"
-             "tipple"
-             "topple"
-             "topless"
-             "tupelo"
-             "two-ply"
+             "audible"
              "dapple"
              "deplore"
+             "diabolic"
              "diploma"
              "diplomat"
              "double"
-             "duplicate"
              "doublet"
-             "diabolic"
-             "audible"
+             "duplicate"
              "edible"
              "oddball"
+             "seat-belt"
              "stable"
+             "staple"
              "steeple"
              "stipulate"
+             "tableau"
+             "tablet"
+             "tipple"
+             "topless"
+             "topple"
+             "tupelo"
+             "two-ply"
              )
 
            '(196
@@ -6299,11 +6348,9 @@
            '(201
              "NOSTRIL"
 
-             "nest"
-             "nasty"
-             "nicety"
-             "nose-dive"
+             "Wednesday"
              "anesthesia"
+             "gnostic"
              "honest"
              "incident"
              "incite"
@@ -6314,12 +6361,15 @@
              "instinct"
              "institute"
              "instrument"
+             "nasty"
+             "nest"
+             "nicety"
+             "nose-dive"
+             "one-step"
+             "sinister"
              "unsatisfactory"
              "unsteady"
              "unsuitable"
-             "gnostic"
-             "one-step"
-             "Wednesday"
              )
 
            '(202
@@ -6532,26 +6582,27 @@
            '(213
              "ANTIMATTER"
 
-             "nutmeg"
-             "nightmare"
-             "anthem"
              "anadem"
-             "anatomy"
              "anathema"
+             "anatomy"
+             "anthem"
              "antimissile"
+             "anytime"
              "endemic"
+             "handmade"
+             "handmaiden"
+             "handyman"
+             "honeydew-melon"
              "inadmissible"
              "indemnify"
              "intimacy"
              "intimidate"
-             "handyman"
-             "handmaiden"
-             "handmade"
-             "honeydew-melon"
+             "nightmare"
+             "nutmeg"
              "ointment"
              "on-time"
              "onetime"
-             "anytime"
+             "sentiment"
              "untimely"
              "windmill"
              )
@@ -6603,10 +6654,6 @@
            '(215
              "NOODLE"
 
-             "needle"
-             "needless"
-             "night-owl"
-             "new-deal"
              "antelope"
              "anthill"
              "endless"
@@ -6618,6 +6665,12 @@
              "intelligent"
              "intolerable"
              "know-it-all"
+             "needle"
+             "needless"
+             "new-deal"
+             "night-owl"
+             "sandal"
+             "swindle"
              "until"
              "windless"
              )
@@ -6719,13 +6772,14 @@
            '(220
              "NONCE"
 
-             "nonsense"
-             "nonuse"
-             "nainsook"
              "ananas"
              "announce"
              "annoyance"
+             "assonance"
              "enhance"
+             "nainsook"
+             "nonsense"
+             "nonuse"
              "onions"
              "onionskin"
              "unanswered"
@@ -6764,18 +6818,19 @@
            '(223
              "NOON-MEAL"
 
-             "ninnyhammer"
-             "nonemotional"
-             "nonmetal"
-             "nonmember"
-             "nonmedical"
-             "nonmilitary"
-             "nonemergency"
              "anonymous"
              "inanimate"
-             "unanimous"
-             "unanimated"
+             "ninnyhammer"
+             "nonemergency"
+             "nonemotional"
+             "nonmedical"
+             "nonmember"
+             "nonmetal"
+             "nonmilitary"
+             "synonym"
              "synonymous"
+             "unanimated"
+             "unanimous"
              )
 
            '(224
@@ -6900,17 +6955,22 @@
            '(232
              "NEW-MOON"
 
+             "cinnamon"
+             "cyanamide"
+             "honeymoon"
+             "inhuman"
              "nominal"
              "nominee"
              "numbness"
-             "honeymoon"
-             "inhuman"
+             "pneumonia"
+             "sea-anemone"
+             "snowman"
              "unmanly"
              "unmannerly"
              "unmentionable"
              "unmindful"
              "unwomanly"
-             "pneumonia"
+             "wisenheimer"
              )
 
            '(233
@@ -7011,15 +7071,18 @@
            '(241
              "NARRATOR"
 
-             "neurotic"
-             "nard"
-             "north"
              "inarticulate"
              "inert"
              "inheritance"
              "inroad"
              "inward"
+             "nard"
+             "nerd"
+             "neurotic"
+             "north"
              "onward"
+             "snarl"
+             "snort"
              "unearth"
              "unhurt"
              "unredeemed"
@@ -7150,20 +7213,21 @@
            '(251
              "NEWLYWED"
 
-             "nailed"
              "annihilate"
              "annulled"
              "enlighten"
              "inalterable"
-             "inlet"
              "inhaled"
-             "unhealthy"
-             "unallowed"
-             "unallotted"
-             "unladylike"
-             "unload"
-             "unlit"
+             "inlet"
              "knelt"
+             "nailed"
+             "sunlight"
+             "unallotted"
+             "unallowed"
+             "unhealthy"
+             "unladylike"
+             "unlit"
+             "unload"
              )
 
            '(252
@@ -7180,6 +7244,7 @@
            '(253
              "ANNULMENT"
 
+             "sunlamp"
              "newly-made"
              "unlimited"
              "un﻿illuminated"
@@ -7291,20 +7356,22 @@
            '(262
              "ENGINE"
 
-             "nation"
-             "notion"
              "ancient"
+             "ascension"
              "enchant"
              "engineer"
              "enjoin"
-             "ingenue"
              "ingenious"
+             "ingenue"
              "injunction"
              "knee-jointed"
-             "ungentle"
-             "ungenerous"
-             "unchanged"
+             "nation"
+             "notion"
+             "sunshine"
              "unchained"
+             "unchanged"
+             "ungenerous"
+             "ungentle"
              )
 
            '(263
@@ -7318,18 +7385,19 @@
            '(264
              "KNEE-JERK"
 
+             "censure"
+             "century"
+             "enshrine"
+             "ensure"
+             "injury"
+             "insurance"
              "nature"
              "notcher"
              "nudger"
-             "ensure"
-             "enshrine"
-             "injury"
-             "insurance"
-             "onager"
              "on-shore"
+             "onager"
              "unshrinkable"
              "unsure"
-             "century"
              )
 
            '(265
@@ -7337,6 +7405,7 @@
              "ENCHILADA"
 
              "initial"
+             "sensual"
              "unchallenged"
              "unchilled"
              "unshielded"
@@ -7378,9 +7447,10 @@
              "HUNCHBACK"
 
              "enjoyable"
+             "snow-job"
+             "unchaperoned"
              "unshapely"
              "unship"
-             "unchaperoned"
              "unwashable"
              "wineshop"
              )
@@ -7631,30 +7701,35 @@
              "unvaried"
              "unversed")
            '(285
-             "navel"
-             "naval"
-             "novel"
+             "Seinfeld"
              "anvil"
              "envelope"
              "infallible"
-             "inflame"
              "infield"
+             "inflame"
              "inflate"
              "inflict"
+             "inflow"
              "influence"
              "influenza"
-             "inflow"
              "invalid"
              "invaluable"
              "involuntary"
              "involve"
              "invulnerable"
+             "naval"
+             "navel"
+             "novel"
+             "sinful"
+             "sniffle"
+             "snowflake"
              "unavailable"
              "unfilled"
              "unflattering"
              "unfold"
              "univalve"
-             "unveil")
+             "unveil"
+             )
            '(286
              "new-fashion"
              "navy-ship"
@@ -7689,18 +7764,20 @@
              "unfabricated"
              "unifiable")
            '(290
+             "NBC"
+             "knapsack"
+             "knobs"
              "nabs"
              "naps"
              "nibs"
              "nips"
-             "NBC"
              "nubs"
-             "knapsack"
-             "knobs"
+             "synopsis"
              "unbiased"
-             "unobserved"
              "unobscured"
-             "unopposed")
+             "unobserved"
+             "unopposed"
+             )
            '(291
              "nobody"
              "no-bid"
@@ -7760,6 +7837,7 @@
              "unprovoked"
              "unpure")
            '(295
+             "showball"
              "nibble"
              "nipple"
              "nebulous"
@@ -13191,9 +13269,10 @@
              "group"
              "grub")
            '(750
-             "calls"
              "calcium"
              "callous"
+             "calls"
+             "cholesterol"
              "clasp"
              "class"
              "clause"
@@ -13201,14 +13280,15 @@
              "closet"
              "cluster"
              "colossus"
-             "cholesterol"
+             "equalize"
              "gallows"
              "glass"
              "glaze"
              "glissade"
              "gloss"
-             "equalize"
-             "oculist")
+             "isinglass"
+             "oculist"
+             )
            '(751
              "cauldron"
              "clad"
@@ -15248,18 +15328,10 @@
              "abscess"
              "obsess")
            '(901
-             "past"
-             "paste"
-             "pastor"
-             "pastry"
-             "peseta"
-             "pest"
-             "piston"
-             "pistol"
-             "post"
-             "positive"
-             "postiche"
-             "postillion"
+             "abstain"
+             "abstemious"
+             "abstract"
+             "apostrophe"
              "base-hit"
              "bast"
              "bastard"
@@ -15272,15 +15344,25 @@
              "boast"
              "boisterous"
              "bust"
-             "abstain"
-             "abstract"
-             "apostrophe"
              "obstacle"
              "obstruct"
              "opposite"
+             "past"
+             "paste"
+             "pastor"
+             "pastry"
+             "peseta"
+             "pest"
+             "pistol"
+             "piston"
+             "positive"
+             "post"
+             "postiche"
+             "postillion"
              "upset"
              "upstairs"
-             "upstart")
+             "upstart"
+             )
            '(902
              "peasant"
              "poison"
@@ -17178,6 +17260,7 @@
 (defn babomorph
   "TOP-LEVEL: Process number lines into org-tables."
   [a b]
+
   (map (comp babnicate fixline) (subvec bfnd a b)))
 
 (defn -main

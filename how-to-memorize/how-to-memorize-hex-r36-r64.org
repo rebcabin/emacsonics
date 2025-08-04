@@ -156,11 +156,6 @@
   (setq org-plantuml-jar-path
       (expand-file-name "/usr/share/plantuml/plantuml.jar"))
 
-  ;; evaluate whole buffer , b b and redo all cached results
-  ;; this worked exactly once :(
-  ; (setq org-babel-default-header-args '((:cache . "no")))
-  ; (setq org-babel-default-header-args nil) ;; Reset to default
-
   ; (conda-env-activate "whl-meson-build")
 
   (princ (concat (format "Emacs version: %s\n" (emacs-version))
@@ -171,7 +166,6 @@
 : Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
 :  of 2023-07-29
 : org version: 9.6.6
-
 \clearpage
 * Change log
 
@@ -286,7 +280,7 @@ Then keyboard =Ctrl-C Ctrl-C= on the babomorph block, which looks
 like this:
 
 #+begin_example
-#+begin_src clojure :cache yes :exports results :results ...
+#+begin_src clojure :cache no :exports results :results ...
   (babomorph 0 10)
 #+end_src
 #+end_example
@@ -509,7 +503,7 @@ Make up pegs and sound-alikes for longer numbers by combining
 consonant sounds. For example, here is the peg and sound-alikes
 for 32:
 
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 132 133)
 #+end_src
 
@@ -521,7 +515,6 @@ for 32:
 |    | manna | many    | mean   | mien  | moan | money  |
 |    | omen  | woman   | yeoman |       |      |        |
 :end:
-
 
 */Notes on such tables/*:
 
@@ -556,34 +549,29 @@ number $xyz$ are formed from 3 hard consonant sound alikes, $a$
 for $x$, $b$ for $y$, and $c$ for $z$. For instance, here is the
 list for $xyz=352$:
 
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 452 453)
 #+end_src
 
 #+RESULTS[feb7343cbe9fa0c01dd859afe2e0cddc49afdd38]:
 :results:
-|-----+--------+------------+------------+------------+----------+----------|
-| 352 | MELON  | Himalayans | hemline    | semolina   | milliner | homeland |
-|     | malign | melancholy | millennial | millennium | million  |          |
+|-----+--------+------------+------------+----------+----------+----------|
+| 352 | MELON  | Himalayans | hemline    | semolina | milliner | homeland |
+|     | malign | melancholy | millennium | million  |          |          |
 :end:
 
-
-When making up pegs and sound-alikes, weak consonant sounds such as
-H, WH, Y, and W are free. For example, ignore the H in /hemline/. Use soft
+When making up pegs and sound-alikes, weak consonant sounds like
+H, WH, Y, and W are free: ignore the H in /hemline/. Use soft
 consonants at will. Vowel sounds are also free --- use as many or
-as few as you like.
+as few as you like. Ignore trailing sounds beyond the first three:
+/hemline/ and /hemlining/ both encode 352, as do /millennial/ and
+/millenium/.
 
 From this point on, when we write "sound" or "sounds," we mean
 "hard consonant sound" or "hard consonant sounds."
 
-Ignore trailing sounds beyond the first three:
-/hemline/ and /hemlining/ both encode 352, as do /millennial/ and
-/millenium/.
-
 Ignore leading S and Z sounds if the total number of sounds is
-four or more. So /semolina/ encodes 352.
-
-However, /semolina/ also
+four or more. So /semolina/ encodes 352. However, /semolina/ also
 encodes 035 by the rule about trailing sounds beyond three. This
 is a flaw in Furst's original design. Here is more about this
 problem.
@@ -595,6 +583,11 @@ we show in this section. It's a major TODO to fix this problem.
 
 The first general rule is:
 
+DONE: NEEDS WRITE UP --- GET RID OF THIS RULE
+ANYTHING BEGINNING WITH S, Z, [WHY].[SZ] ENCODES A NUMBER
+BEGINNING WITH ZERO.
+ALSO NEEDS COMPLETION IN CORE.CLJ, WHERE I STOPPED AT 173.
+
 #+begin_quote
 /Ignore leading S and Z sounds when the total number of sounds is four or more./
 #+end_quote
@@ -603,7 +596,7 @@ By this rule, /semolina/, which has four sounds, encodes 352, as
 seen above. However, /semolina/ also appears in Furst's table for
 035:
 
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 35 36)
 #+end_src
 
@@ -613,7 +606,6 @@ seen above. However, /semolina/ also appears in Furst's table for
 | 035 | SAWMILL  | SMILE    | semolina | smell  | small   | simile |
 |   Z | sea-mile | sea-mule | seamless | seemly | similar |        |
 :end:
-
 
 /Semolina/ belongs in the table for 035 by the "trailing-sounds
 rule:"
@@ -628,7 +620,7 @@ first three" rule. You can also see /seamless/ and /similar/ in
 the table above for 035, but /similar/ also shows up in Furst's
 table for 354:
 
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 454 455)
 #+end_src
 
@@ -638,7 +630,6 @@ table for 354:
 | 354 | molar  | miler  | malaria    | miller     | milliard | mealworm |
 |     | mailer | milord | millwright | ameliorate | similar  |          |
 :end:
-
 
 *** TODO Fix These Exceptions
 
@@ -944,7 +935,7 @@ the ASCII codes for A-F.
 
 and their sound-alikes:
 
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 165 171)
 #+end_src
 
@@ -979,7 +970,6 @@ and their sound-alikes:
 |    | cozy        | cuss      | gauze    | gaze     | guess    | guise    |
 |    | guys        | hex       | hoax     | quasi    | wax      |          |
 :end:
-
 
 Remember that 7 can be /ng/ in Furst's system, the one we're
 following, explaining why we get so many \ldots /ing/ words
@@ -1964,39 +1954,32 @@ switch slows me down even though I made the switch long, long ago.
 One way to encode hex is to map A-F to 010-015. Permanent pegs are
 in all caps.
 
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
-  (babomorph 10 16)
-#+end_src
-
-#+RESULTS[e51b096ba304a9aa3e4b5207be6f252e26802869]:
-:results:
-|-----+-----------+-----------+---------+----------+----------+---------|
-| 010 | HOSTESS   | SOUTH-SEA | sweets  | cities   | assets   | stays   |
-|   A | assiduous | sideways  |         |          |          |         |
-|-----+-----------+-----------+---------+----------+----------+---------|
-| 011 | ESTATE    | STOUT     | studio  | statue   | iced-tea | wasted  |
-|   B | astute    | hesitate  | sedate  | sit-down | state    | steady  |
-|     | steed     | stud      |         |          |          |         |
-|-----+-----------+-----------+---------+----------+----------+---------|
-| 012 | STEIN     | SEDAN     | satin   | stain    | stone    | Estonia |
-|   C | Satan     | Sweden    | sadden  | sit-in   | sodden   | stand   |
-|     | stun      | sudden    | sweeten |          |          |         |
-|-----+-----------+-----------+---------+----------+----------+---------|
-| 013 | SODIUM    | STEAM     | stem    | esteem   | stoma    | stamina |
-|   D | wisdom    |           |         |          |          |         |
-|-----+-----------+-----------+---------+----------+----------+---------|
-| 014 | OYSTER    | CIDER     | cedar   | stair    | sweater  | steer   |
-|   E | Austria   | Easter    | astir   | astray   | austere  | history |
-|     | hysteria  | ouster    | satire  | satyr    | setter   | star    |
-|     | stare     | stir      | store   | story    | straw    | suitor  |
-|     | swatter   |           |         |          |          |         |
-|-----+-----------+-----------+---------+----------+----------+---------|
-| 015 | SADDLE    | STOOL     | still   | stall    | steel    | style   |
-|   F | hostile   | sadly     | settle  | stale    | steal    |         |
-:end:
-
-
-
+|-----+-----------+----------+----------+-----------+-----------+----------|
+| 010 | SAWDUST   | seduce   | sideways | stays     | South-Sea | assets   |
+|   A | assiduous | citizen  | cities   | hostess   |           |          |
+|-----+-----------+----------+----------+-----------+-----------+----------|
+| 011 | STATUE    | state    | steady   | sedate    | steed     | stout    |
+|   B | studio    | sit-down | astute   | estate    | hesitate  | iced-tea |
+|     | wasted    |          |          |           |           |          |
+|-----+-----------+----------+----------+-----------+-----------+----------|
+| 012 | STAIN     | sedan    | Satan    | sadden    | sodden    | sudden   |
+|   C | stand     | satin    | standard | stench    | stint     | stein    |
+|     | stone     | stun     | stunt    | sweeten   | sit-in    | Sweden   |
+|     | Estonia   | astound  | hesitant | pseudonym |           |          |
+|-----+-----------+----------+----------+-----------+-----------+----------|
+| 013 | STEAM     | sodium   | stamp    | sediment  | stem      | stomach  |
+|   D | stampede  | stamina  | stump    | esteem    | estimate  | wisdom   |
+|-----+-----------+----------+----------+-----------+-----------+----------|
+| 014 | SATYR     | Saturn   | Saturday | setter    | satire    | star     |
+|   E | stare     | steer    | stir     | store     | story     | storm    |
+|     | straw     | stream   | stroll   | sterling  | strike    | strip    |
+|     | struggle  | suitor   | swatter  | sweater   | cedar     | cider    |
+|     | astronaut | astir    | astray   | austere   | Austria   | Easter   |
+|     | history   | hysteria | oyster   | ouster    | stair     |          |
+|-----+-----------+----------+----------+-----------+-----------+----------|
+| 015 | SADDLE    | settle   | cedilla  | stale     | stall     | steal    |
+|   F | steel     | still    | stool    | style     | sadly     | hostile  |
+|-----+-----------+----------+----------+-----------+-----------+----------|
 
 \newpage
 Here is the GUID, again.
@@ -2967,7 +2950,7 @@ at least twice to regenerate cross-references correctly.
 | 009 | SWISS BANK      | ASS'S BEARD    |             |        |
 
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 0 10)
 #+end_src
 
@@ -2979,11 +2962,11 @@ at least twice to regenerate cross-references correctly.
 |    | seize    | size    |          |          |           |         |
 |----+----------+---------+----------+----------+-----------+---------|
 | 01 | SOT      | SOD     | Swede    | acid     | aside     | asset   |
-|    | cedilla  | city    | east     | haste    | host      | sad     |
-|    | seat     | seed    | seedy    | settee   | side      | sight   |
-|    | sit      | site    | soot     | sooth    | south     | stay    |
-|    | stew     | suede   | suet     | suit     | suite     | swat    |
-|    | sweet    | waste   | west     |          |           |         |
+|    | city     | east    | haste    | host     | sad       | seat    |
+|    | seed     | seedy   | settee   | side     | sight     | sit     |
+|    | site     | soot    | sooth    | south    | stay      | stew    |
+|    | suede    | suet    | suit     | suite    | swat      | sweet   |
+|    | waste    | west    |          |          |           |         |
 |----+----------+---------+----------+----------+-----------+---------|
 | 02 | SUN      | SWAN    | swine    | ozone    | sinew     | snow    |
 |    | assign   | hosanna | sane     | scene    | seen      | sign    |
@@ -3020,50 +3003,54 @@ at least twice to regenerate cross-references correctly.
 :end:
 
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 10 20)
 #+end_src
 
 #+RESULTS[467e25442ad914e480408d3d35c363768e576119]:
 :results:
-|-----+------------+-----------+---------+----------+----------+---------|
-| 010 | HOSTESS    | SOUTH-SEA | sweets  | cities   | assets   | stays   |
-|   A | assiduous  | sideways  |         |          |          |         |
-|-----+------------+-----------+---------+----------+----------+---------|
-| 011 | ESTATE     | STOUT     | studio  | statue   | iced-tea | wasted  |
-|   B | astute     | hesitate  | sedate  | sit-down | state    | steady  |
-|     | steed      | stud      |         |          |          |         |
-|-----+------------+-----------+---------+----------+----------+---------|
-| 012 | STEIN      | SEDAN     | satin   | stain    | stone    | Estonia |
-|   C | Satan      | Sweden    | sadden  | sit-in   | sodden   | stand   |
-|     | stun       | sudden    | sweeten |          |          |         |
-|-----+------------+-----------+---------+----------+----------+---------|
-| 013 | SODIUM     | STEAM     | stem    | esteem   | stoma    | stamina |
-|   D | wisdom     |           |         |          |          |         |
-|-----+------------+-----------+---------+----------+----------+---------|
-| 014 | OYSTER     | CIDER     | cedar   | stair    | sweater  | steer   |
-|   E | Austria    | Easter    | astir   | astray   | austere  | history |
-|     | hysteria   | ouster    | satire  | satyr    | setter   | star    |
-|     | stare      | stir      | store   | story    | straw    | suitor  |
-|     | swatter    |           |         |          |          |         |
-|-----+------------+-----------+---------+----------+----------+---------|
-| 015 | SADDLE     | STOOL     | still   | stall    | steel    | style   |
-|   F | hostile    | sadly     | settle  | stale    | steal    |         |
-|-----+------------+-----------+---------+----------+----------+---------|
-| 016 | STAGE      | STOOGE    | stitch  | hostage  | wastage  | stodgy  |
-|   G | hesitation |           |         |          |          |         |
-|-----+------------+-----------+---------+----------+----------+---------|
-| 017 | STUCCO     | STING     | stake   | stick    | stock    | stoke   |
-|   H | ascetic    | sciatica  | setting | stack    | stag     | stalk   |
-|     | steak      | sticky    | stoic   | stuck    |          |         |
-|-----+------------+-----------+---------+----------+----------+---------|
-| 018 | STIFF      | STOVE     | staff   | stave    | stuff    | set-off |
-|   I |            |           |         |          |          |         |
-|-----+------------+-----------+---------+----------+----------+---------|
-| 019 | STOP       | STEP      | stoop   | stub     | steppe   | estop   |
-|   J | stab       | steep     |         |          |          |         |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 010 | SAWDUST    | SWEETS   | seducer   | hostess    | citizen   | cities    |
+|   A | South-Sea  | assets   | assiduous | sideways   | stays     |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 011 | STATUE     | STEED    | studio    | estate     | iced-tea  | wasted    |
+|   B | astute     | hesitate | sedate    | sit-down   | state     | steady    |
+|     | stout      | stud     |           |            |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 012 | SATAN      | STEIN    | sedan     | stain      | satin     | stone     |
+|   C | Estonia    | Sweden   | astound   | hesitant   | pseudonym | sadden    |
+|     | sit-in     | sodden   | stand     | standard   | stench    | stint     |
+|     | stun       | stunt    | sudden    | sweeten    |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 013 | SEDIMENT   | STEAM    | sodium    | stem       | esteem    | wisdom    |
+|   D | abstemious | estimate | stamina   | stamp      | stampede  | stomach   |
+|     | stump      |          |           |            |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 014 | SATYR      | STAR     | Saturn    | stair      | cider     | cedar     |
+|   E | Austria    | Easter   | Saturday  | astir      | astray    | astronaut |
+|     | austere    | history  | hysteria  | ouster     | oyster    | satire    |
+|     | setter     | star     | stare     | steer      | sterling  | stir      |
+|     | store      | storm    | story     | straw      | stream    | strike    |
+|     | strip      | stroll   | struggle  | suitor     | swatter   | sweater   |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 015 | SADDLE     | STOOL    | still     | stall      | steel     | style     |
+|   F | cedilla    | hostile  | sadly     | settle     | stale     | steal     |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 016 | STAGE      | STOOGE   | stitch    | station    | hostage   | wastage   |
+|   G | hesitation | stodgy   |           |            |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 017 | SIDECAR    | SIDEKICK | stake     | stick      | stucco    | stock     |
+|   H | ascetic    | sciatica | setting   | stack      | stag      | stalk     |
+|     | steak      | sticky   | stigma    | stigmata   | sting     | stoic     |
+|     | stoke      | stuck    |           |            |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 018 | STIFF      | STOVE    | staff     | stave      | stevedore | stuff     |
+|   I | sea-devil  | set-off  | wasteful  |            |           |           |
+|-----+------------+----------+-----------+------------+-----------+-----------|
+| 019 | STAB       | STEEPLE  | stub      | stoop      | staple    | steppe    |
+|   J | eastbound  | estop    | seat-belt | southbound | steep     | step      |
+|     | stipend    | stop     | stupid    | sweetbread |           |           |
 :end:
 
 \clearpage
@@ -3073,46 +3060,43 @@ at least twice to regenerate cross-references correctly.
 
 #+RESULTS[aac58782ba68f4820cb4a2d98d8387e950c35f43]:
 :results:
-|-----+----------+------------+-----------+------------+-----------+----------|
-| 020 | SUNSET   | SEANCE     | sense     | sneeze     | SUNS      | sinus    |
-|   K | census   | easiness   | essence   | iciness    | science   | since    |
-|     | snooze   |            |           |            |           |          |
-|-----+----------+------------+-----------+------------+-----------+----------|
-| 021 | SAINT    | SAND       | cent      | senate     | synod     | snot     |
-|   L | Sunday   | ascent     | assent    | sanity     | scent     | sent     |
-|     | snit     | snoot      | snout     | sonata     | sonnet    | sound    |
-|     | sundae   | zenith     |           |            |           |          |
-|-----+----------+------------+-----------+------------+-----------+----------|
-| 022 | SAN JUAN | SIGN-ON    | sea-onion | snow-knife | asinine   |          |
-|   M |          |            |           |            |           |          |
-|-----+----------+------------+-----------+------------+-----------+----------|
-| 023 | CINEMA   |            |           |            |           |          |
-|   N |          |            |           |            |           |          |
-|-----+----------+------------+-----------+------------+-----------+----------|
-| 024 | SINNER   | SONAR      | senior    | snore      | scenery   | snare    |
-|   O | sneer    |            |           |            |           |          |
-|-----+----------+------------+-----------+------------+-----------+----------|
-| 025 | SEE      | snell      | snail     |            |           |          |
-|   P |          |            |           |            |           |          |
-|-----+----------+------------+-----------+------------+-----------+----------|
-| 026 | SIGNAGE  | SNOWSHOE   | cinch     | singe      | snatch    | snitch   |
-|   Q |          |            |           |            |           |          |
-|-----+----------+------------+-----------+------------+-----------+----------|
-| 027 | SINK     | snack      | snake     | snick      | zinc      | cynic    |
-|   R | scenic   | sea-anchor | sneak     | snug       |           |          |
-|-----+----------+------------+-----------+------------+-----------+----------|
-| 028 | SNUFF    | sniff      | snafu     | sniffle    | saw-knife | Seinfeld |
-|   S | sinful   |            |           |            |           |          |
-|-----+----------+------------+-----------+------------+-----------+----------|
-| 029 | SNAP     | snowball   | snob      | snip       | snipe     | snoop    |
-|   T | sign-up  | snub       | sunup     | synopsis   |           |          |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 020 | SENSE       | SUNS       | sneeze    | sinus      | seance      | sunset    |
+|   K | census      | easiness   | essence   | iciness    | science     | since     |
+|     | sincere     | sinister   | sinus     | snooze     |             |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 021 | SAINT       | SAND       | cent      | senate     | synod       | snot      |
+|   L | Sunday      | ascent     | assent    | sandal     | sanity      | scent     |
+|     | sent        | sentiment  | snit      | snoot      | snout       | sonata    |
+|     | sonnet      | sound      | sundae    | swindle    | zenith      |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 022 | SIGN-ON     | SAN JUAN   | assonance | sea-onion  | snow-knife  | synonym   |
+|   M | asinine     |            |           |            |             |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 023 | CINNAMON    | SNOWMOBILE | snowman   | cinema     | sea-anemone | cyanamide |
+|   N | wisenheimer |            |           |            |             |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 024 | SINNER      | SONAR      | senior    | snore      | scenery     | sunrise   |
+|   O | snare       | sneer      | snort     | snarl      | sonorous    |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 025 | SEE         | SUNLAMP    | snell     | snail      | sunlight    |           |
+|   P |             |            |           |            |             |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 026 | SIGNAGE     | SNOWSHOE   | cinch     | singe      | snatch      | censure   |
+|   Q | ascension   | century    | sensual   | snitch     | snow-job    | sunshine  |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 027 | SINK        | SYNAGOGUE  | snack     | snake      | snick       | zinc      |
+|   R | cynic       | isinglass  | scenic    | sea-anchor | sneak       | snug      |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 028 | SNUFF       | SNOWFLAKE  | sniff     | snafu      | sniffle     | saw-knife |
+|   S | Seinfeld    | sinful     |           |            |             |           |
+|-----+-------------+------------+-----------+------------+-------------+-----------|
+| 029 | SNAP        | snowball   | snob      | snip       | snipe       | snoop     |
+|   T | sign-up     | snub       | sunup     | synopsis   |             |           |
 :end:
 
-
-
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 30 40)
 #+end_src
 
@@ -3152,9 +3136,8 @@ at least twice to regenerate cross-references correctly.
 |   d | assembly     | sample       | simple       | somebody      | sympathy    |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 40 50)
 #+end_src
 
@@ -3194,9 +3177,8 @@ at least twice to regenerate cross-references correctly.
 :end:
 
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 50 60)
 #+end_src
 
@@ -3238,9 +3220,8 @@ at least twice to regenerate cross-references correctly.
 |   x | celebrate    | celibacy     | slip        | slop      | slope      | slowpoke  |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 60 70)
 #+end_src
 
@@ -3273,9 +3254,8 @@ at least twice to regenerate cross-references correctly.
 | 069 | SWASHBUCKLER | SAGEBRUSH  | s-shaped    | sash-pocket | switchblade   | switch-box    |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 70 80)
 #+end_src
 
@@ -3319,9 +3299,8 @@ at least twice to regenerate cross-references correctly.
 |     | squabble | squib       |             |           |            |           |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 80 90)
 #+end_src
 
@@ -3356,15 +3335,54 @@ at least twice to regenerate cross-references correctly.
 | 089 | SOFA-BED     | SAFE BOX      | sieve-pit   | sieva-bean   |             |           |
 :end:
 
-
 \clearpage
-#+begin_ src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 90 100)
 #+end_src
 
+#+RESULTS[dd1a01cd06fd171cfdc390c5a16a04eec498e8a5]:
+:results:
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 090 | SPACE        | ASBESTOS    | spice       | spouse      | sea-biscuit | soupcon      |
+|     | auspices     | specify     | suppose     |             |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 091 | SUBTERRANEAN | SPIDERMAN   | Sabbath     | hospital    | houseboat   | spade        |
+|     | September    | scepter     | soup-tureen | spate       | speed       | spit         |
+|     | spite        | spot        | spout       | spud        | subdue      |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 092 | SPIN         | SPAIN       | spine       | soybean     | spoon       | spun candy   |
+|     | aspen        | espionage   | has-been    | span        | spend       | spun gold    |
+|     | subnormal    | subpoena    | supine      |             |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 093 | SPAM         | SPUMONI     | submarine   | submerge    | submontane  | spume        |
+|     | subminiature | submit      |             |             |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 094 | SPAR         | soprano     | spear       | spire       | spare       | saber        |
+|     | asparagus    | aspire      | aspirin     | cypress     | isobar      | osprey       |
+|     | separate     | sober       | sopor       | spark       | sparrow     | spirit       |
+|     | sport        | spray       | spread      | spree       | spring      | spry         |
+|     | super        | superb      | supper      | whisper     | zebra       |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 095 | SEAPLANE     | ZEPPELIN    | spool       | spell       | spall       | spill        |
+|     | esplanade    | sibilant    | sowbelly    | splash      | spleen      | splendid     |
+|     | split        | spoil       | sublime     | supply      |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 096 | SPEECH       | seepage     | species     | subject     | special     | waspish      |
+|     | auspicious   | seabeach    | spatial     | sub-age     | subagent    |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 097 | ICE-PACK     | SPOCK       | ice-pick    | spike       | spook       | speck        |
+|     | aspect       | aspic       | ice-bag     | sawbuck     | speak       | spectacle    |
+|     | zip-code     |             |             |             |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 098 | SPOOF        | soap-flake  | subway-fare | subway fire | subaverage  | subfreezing  |
+|     | soupfin      | spiff       |             |             |             |              |
+|-----+--------------+-------------+-------------+-------------+-------------+--------------|
+| 099 | SOAPBOX      | SOAP-BUBBLE | sea-poppy   | soapbark    | soapberry   | subprincipal |
+|     | house-paper  |             |             |             |             |              |
+:end:
 
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 100 105)
 #+end_src
 
@@ -3408,9 +3426,8 @@ at least twice to regenerate cross-references correctly.
 |   | weary  | where  | worry  | year  | yore   | your  |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 105 110)
 #+end_src
 
@@ -3458,9 +3475,8 @@ at least twice to regenerate cross-references correctly.
 |   | whoopee | wipe   |        |       |         |        |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 110 115)
 #+end_src
 
@@ -3505,9 +3521,8 @@ at least twice to regenerate cross-references correctly.
 |    | whiter      | widower  | wither |          |        |         |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 115 120)
 #+end_src
 
@@ -3542,9 +3557,8 @@ at least twice to regenerate cross-references correctly.
 |    | tape    | tepee  | top      | tube      | tup     | type     |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 120 130)
 #+end_src
 
@@ -3594,9 +3608,8 @@ at least twice to regenerate cross-references correctly.
 |    | unhappy  |          |         |         |         |          |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 130 140)
 #+end_src
 
@@ -3645,9 +3658,8 @@ at least twice to regenerate cross-references correctly.
 |    | myopia  |         |        |           |        |         |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 140 150)
 #+end_src
 
@@ -3709,9 +3721,8 @@ at least twice to regenerate cross-references correctly.
 |    | ruby    | rupee     | warp     |        |         |         |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 150 160)
 #+end_src
 
@@ -3766,9 +3777,8 @@ at least twice to regenerate cross-references correctly.
 |    | lob       | lobby      | lop       | lowboy   | wallop  | whelp     |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 160 170)
 #+end_src
 
@@ -3823,9 +3833,8 @@ at least twice to regenerate cross-references correctly.
 |    | ship        | shop     |          |          |         |          |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 170 180)
 #+end_src
 
@@ -3891,9 +3900,8 @@ at least twice to regenerate cross-references correctly.
 |    | wicopy  |           |         |        |          |         |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 180 190)
 #+end_src
 
@@ -3950,9 +3958,8 @@ at least twice to regenerate cross-references correctly.
 |  Y | faux-pas  | fib     | half-pay |         |          |           |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 190 195)
 #+end_src
 
@@ -3993,9 +4000,8 @@ at least twice to regenerate cross-references correctly.
 |    | pray    | prow   | pry    | purr   | pyre    | upper    |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 195 200)
 #+end_src
 
@@ -4034,61 +4040,59 @@ at least twice to regenerate cross-references correctly.
 |    | pop     |          |        |         |         |         |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 200 210)
 #+end_src
 
 #+RESULTS[ad991550974f86f5fd35a6f60e14172cd20fd70f]:
 :results:
-|-----+-------------+--------------+-------------+--------------+-------------+----------------|
-| 100 | THESIS      | decease      | decisive    | desist       | disaster    | disease        |
-|   d | disuse      | dissuasive   | daisies     | deuces       | doses       | diocese        |
-|-----+-------------+--------------+-------------+--------------+-------------+----------------|
-| 101 | TOAST       | Tuesday      | atheist     | attest       | audacity    | deceit         |
-|   e | decide      | deist        | destiny     | destitute    | destruct    | distance       |
-|     | distaste    | distinct     | distinguish | distract     | distress    | distribute     |
-|     | district    | distrust     | disturb     | dust         | outside     | sawdust        |
-|     | tacit       | taste        | test        | testimony    | twist       |                |
-|-----+-------------+--------------+-------------+--------------+-------------+----------------|
-| 102 | DOZEN       | citizen      | decent      | descent      | design      | dishonest      |
-|   f | disinclined | disinfect    | disinterest | disown       | dissent     | dissonant      |
-|     | dizziness   | Whitsunday   | Docent      |              |             |                |
-|-----+-------------+--------------+-------------+--------------+-------------+----------------|
-| 103 | TWOSOME     | theism       | deism       | decimal      | disembark   | dismay         |
-|   g | dismember   | December     | dismiss     | dismount     | dissemble   | dissimilar     |
-|     | atheism     | decimeter    | decimate    |              |             |                |
-|-----+-------------+--------------+-------------+--------------+-------------+----------------|
-| 104 | DOWSER      | dicer        | thesaurus   | desert       | dessert     | deserve        |
-|   h | desire      | disarm       | disarrange  | discern      | dishearten  | disorder       |
-|     | disregard   | disreputable | disroot     | dissertation | disrobe     | disrupt        |
-|     | douser      | seducer      |             |              |             |                |
-|-----+-------------+--------------+-------------+--------------+-------------+----------------|
-| 105 | DIESEL      | tassel       | dazzle      | desolate     | disillusion | dislike        |
-|   i | dislocate   | dissolve     | docile      | deciliter    | disloyal    | white-sale     |
-|-----+-------------+--------------+-------------+--------------+-------------+----------------|
-| 106 | WOOD-sage   | dosage       | decision    | discharge    | dissuasion  | autosuggestion |
-|   j |             |              |             |              |             |                |
-|-----+-------------+--------------+-------------+--------------+-------------+----------------|
-| 107 | TUSK        | task         | desk        | disk         | discolor    | discomfort     |
-|   k | disclose    | disconnect   | discontent  | discord      | discount    | discourage     |
-|     | discourse   | discover     | discrete    | discriminate | discuss     | disgrace       |
-|     | disguise    | disgust      | disquiet    | dusk         | outskirts   | doeskin        |
-|-----+-------------+--------------+-------------+--------------+-------------+----------------|
-| 108 | ADHESIVE    | tea-sieve    | theosophy   | deceive      | decipher    | disaffect      |
-|   l | disavow     | disfigure    | disfavor    | satisfaction |             |                |
-|-----+-------------+--------------+-------------+--------------+-------------+----------------|
-| 109 | TEASPOON    | thespian     | toss-up     | despot       | despair     | deception      |
-|   m | decibel     | despite      | despond     | disabled     | diaspora    | disappear      |
-|     | disappoint  | disapprove   | disciple    | disobey      | dispatch    | dispense       |
-|     | dispel      | disperse     | display     | displace     | displease   | disposal       |
-|     | disposition | dissipate    |             |              |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 100 | THESIS      | decease      | decisive   | desist       | disaster    | disease        |
+|   d | disuse      | dissuasive   | daisies    | deuces       | doses       | diocese        |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 101 | TOAST       | tacit        | taste      | test         | testimony   | Tuesday        |
+|   e | twist       | deceit       | decide     | deist        | destiny     | destitute      |
+|     | destruct    | distance     | distaste   | distinct     | distinguish | distract       |
+|     | distress    | distribute   | district   | distrust     | disturb     | dust           |
+|     | atheist     | attest       | audacity   | outside      |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 102 | DOZEN       | decent       | descent    | design       | dishonest   | disinclined    |
+|   f | disinfect   | disinterest  | disown     | dissent      | dissonant   | dizziness      |
+|     | Whitsunday  | Docent       |            |              |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 103 | TWOSOME     | theism       | deism      | decimal      | disembark   | dismay         |
+|   g | dismember   | December     | dismiss    | dismount     | dissemble   | dissimilar     |
+|     | atheism     | decimeter    | decimate   |              |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 104 | DOWSER      | dicer        | thesaurus  | desert       | dessert     | deserve        |
+|   h | desire      | disarm       | disarrange | discern      | dishearten  | disorder       |
+|     | disregard   | disreputable | disroot    | dissertation | disrobe     | disrupt        |
+|     | douser      |              |            |              |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 105 | DIESEL      | tassel       | dazzle     | desolate     | disillusion | dislike        |
+|   i | dislocate   | dissolve     | docile     | deciliter    | disloyal    | white-sale     |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 106 | WOOD-sage   | dosage       | decision   | discharge    | dissuasion  | autosuggestion |
+|   j |             |              |            |              |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 107 | TUSK        | task         | desk       | disk         | discolor    | discomfort     |
+|   k | disclose    | disconnect   | discontent | discord      | discount    | discourage     |
+|     | discourse   | discover     | discrete   | discriminate | discuss     | disgrace       |
+|     | disguise    | disgust      | disquiet   | dusk         | outskirts   | doeskin        |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 108 | ADHESIVE    | tea-sieve    | theosophy  | deceive      | decipher    | disaffect      |
+|   l | disavow     | disfigure    | disfavor   | satisfaction |             |                |
+|-----+-------------+--------------+------------+--------------+-------------+----------------|
+| 109 | TEASPOON    | thespian     | toss-up    | despot       | despair     | deception      |
+|   m | decibel     | despite      | despond    | disabled     | diaspora    | disappear      |
+|     | disappoint  | disapprove   | disciple   | disobey      | dispatch    | dispense       |
+|     | dispel      | disperse     | display    | displace     | displease   | disposal       |
+|     | disposition | dissipate    |            |              |             |                |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 210 220)
 #+end_src
 
@@ -4130,9 +4134,8 @@ at least twice to regenerate cross-references correctly.
 |   w | deadbeat    | deadpan      | deathbed    | ditty-bag  |            |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 220 230)
 #+END_src
 
@@ -4144,19 +4147,19 @@ at least twice to regenerate cross-references correctly.
 |     | audience     | haughtiness | dynasty    | utensil      | whiteness    | witness    |
 |     | sadness      |             |            |              |              |            |
 |-----+--------------+-------------+------------+--------------+--------------+------------|
-| 121 | DOUGHNUT     | tnt         | addendum   | astound      | attend       | authentic  |
-|   y | dainty       | dandy       | denote     | dent         | dentist      | denude     |
-|     | dint         | dwindle     | hesitant   | identical    | identify     | stand      |
-|     | standard     | stint       | stunt      | taint        | tantalize    | taunt      |
-|     | tend         | tender      | tendon     | tent         | tenth        | thunder    |
-|     | tint         | twenty      | twi-night  | whodunit     |              |            |
+| 121 | DOUGHNUT     | tent        | taint      | taunt        | tenth        | tendon     |
+|   y | tend         | thunder     | tint       | tender       | twenty       | TNT        |
+|     | twi-night    | tantalize   | dainty     | dandy        | denote       | dent       |
+|     | dentist      | denude      | dint       | dwindle      | attend       | authentic  |
+|     | addendum     | identical   | identify   | whodunit     | stand        | stint      |
+|     | astound      |             |            |              |              |            |
 |-----+--------------+-------------+------------+--------------+--------------+------------|
 | 122 | ATHENIAN     | tenant      | tenon      | teeny-weeny  | denounce     | adonian    |
 |   z | hootenanny   |             |            |              |              |            |
 |-----+--------------+-------------+------------+--------------+--------------+------------|
 | 123 | TENEMENT     | thin-man    | tonometer  | town-meeting | denim        | Denmark    |
-|     | denomination | dynamo      | dynamite   | atonement    | attainment   | pseudonym  |
-|     | autonomy     | outnumber   |            |              |              |            |
+|     | denomination | dynamo      | dynamite   | atonement    | attainment   | autonomy   |
+|     | outnumber    |             |            |              |              |            |
 |-----+--------------+-------------+------------+--------------+--------------+------------|
 | 124 | TENOR        | tanner      | teener     | tenure       | thinner      | tone-arm   |
 |     | tuner        | diner       | dinner     | donor        | downright    | wet-nurse  |
@@ -4180,100 +4183,97 @@ at least twice to regenerate cross-references correctly.
 |     | down-payment | downbeat    | downpour   | donnybrook   | Danube       | stoneblind |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 230 240)
 #+END_src
 
 #+RESULTS[3adfea0565ba93646168cdc19def524f01329c66]:
 :results:
-|-----+-------------+------------+--------------+-----------------+-------------+--------------|
-| 130 | THAMES      | Thomas     | teamster     | team-song       | Thames      | theme-song   |
-|     | damask      | damsel     | domestic     | domicile        | demise      | admissible   |
-|     | atomizer    | atmosphere | utmost       |                 |             |              |
-|-----+-------------+------------+--------------+-----------------+-------------+--------------|
-| 131 | TOMATO      | tamed      | tom-tom      | timid           | tumid       | timeout      |
-|     | thumbtack   | daymaid    | deemed       | demit           | diameter    | dumdum       |
-|     | dumbwaiter  | adamite    | admit        | automate        | odometer    | estimate     |
-|     | esteemed    |            |              |                 |             |              |
-|-----+-------------+------------+--------------+-----------------+-------------+--------------|
-| 132 | DOMINO      | T-man      | Tammany      | administer      | admonish    | autumnal     |
-|     | demand      | demeanor   | demon        | demonstrate     | diamond     | dimension    |
-|     | diminish    | domain     | dominate     | dominion        | headman     | ottoman      |
-|     | sediment    | stamina    | tameness     | thiamine        | thumbnail   | time-honored |
-|-----+-------------+------------+--------------+-----------------+-------------+--------------|
-| 133 | DEMIMONDE   | teammate   | time-money   | time-immemorial | dime-museum | demi-magic   |
-|-----+-------------+------------+--------------+-----------------+-------------+--------------|
-| 134 | TAMER       | tamarind   | timer        | tomorrow        | tommyrot    | Tia-Maria    |
-|     | tumor       | demure     | demarche     | demarcation     | admirer     | admiral      |
-|     | stammer     | steamer    |              |                 |             |              |
-|-----+-------------+------------+--------------+-----------------+-------------+--------------|
-| 135 | TAMALE      | time-lag   | time-loan    | tumult          | timeless    | time-limit   |
-|     | timely      | time-lock  | demolish     | dimly           | dome-light  | etymologist  |
-|     | oatmeal     | stimulant  |              |                 |             |              |
-|-----+-------------+------------+--------------+-----------------+-------------+--------------|
-| 136 | STEAMSHIP   | time-sheet | time-chart   | tam-o-shanter   | damage      | demijohn     |
-|     | dumb-show   | admission  | automation   | atom-age        | Edam-cheese | estimation   |
-|-----+-------------+------------+--------------+-----------------+-------------+--------------|
-| 137 | TOMAHAWK    | tomcat     | team-captain | time-card       | timekeeper  | tommy-gun    |
-|     | tummyache   | taming     | timing       | teeming         | demagogue   | demigod      |
-|     | democrat    | atomic     | stomach      |                 |             |              |
-|-----+-------------+------------+--------------+-----------------+-------------+--------------|
-| 138 | ATOM-FORCE  | tomfool    | time-fuze    | time-value      | team-foul   | time-off     |
-|     | dumbfounded | duumvirate | hit-movie    | steamfitter     |             |              |
-|-----+-------------+------------+--------------+-----------------+-------------+--------------|
-| 139 | TOMBOY      | temper     | temperature  | temperance      | tempest     | temple       |
-|     | template    | team-play  | team-boat    | timber          | timpani     | tympan       |
-|     | tombolo     | thimble    | thump        | tumble          | damp        | dimple       |
-|     | dumbbell    | dump       | automobile   | stamp           | stampede    | stump        |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 130 | THAMES      | Thomas     | teamster     | team-song       | Thames       | theme-song  |
+|     | damask      | damsel     | domestic     | domicile        | demise       | admissible  |
+|     | atomizer    | atmosphere | utmost       |                 |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 131 | TOMATO      | tamed      | tom-tom      | timid           | tumid        | timeout     |
+|     | thumbtack   | daymaid    | deemed       | demit           | diameter     | dumdum      |
+|     | dumbwaiter  | adamite    | admit        | automate        | odometer     | estimate    |
+|     | esteemed    |            |              |                 |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 132 | DOMINO      | T-man      | Tammany      | thiamine        | time-honored | thumbnail   |
+|     | tameness    | demand     | demeanor     | demonstrate     | demon        | diamond     |
+|     | dimension   | diminish   | dominate     | domain          | dominion     | administer  |
+|     | admonish    | autumnal   | headman      | ottoman         | stamina      | sediment    |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 133 | DEMIMONDE   | teammate   | time-money   | time-immemorial | dime-museum  | demi-magic  |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 134 | TAMER       | tamarind   | timer        | tomorrow        | tommyrot     | Tia-Maria   |
+|     | tumor       | demure     | demarche     | demarcation     | admirer      | admiral     |
+|     | stammer     | steamer    |              |                 |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 135 | TAMALE      | time-lag   | time-loan    | tumult          | timeless     | time-limit  |
+|     | timely      | time-lock  | demolish     | dimly           | dome-light   | etymologist |
+|     | oatmeal     | stimulant  |              |                 |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 136 | STEAMSHIP   | time-sheet | time-chart   | tam-o-shanter   | damage       | demijohn    |
+|     | dumb-show   | admission  | automation   | atom-age        | Edam-cheese  | estimation  |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 137 | TOMAHAWK    | tomcat     | team-captain | time-card       | timekeeper   | tommy-gun   |
+|     | tummyache   | taming     | timing       | teeming         | demagogue    | demigod     |
+|     | democrat    | atomic     | stomach      |                 |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 138 | ATOM-FORCE  | tomfool    | time-fuze    | time-value      | team-foul    | time-off    |
+|     | dumbfounded | duumvirate | hit-movie    | steamfitter     |              |             |
+|-----+-------------+------------+--------------+-----------------+--------------+-------------|
+| 139 | TOMBOY      | temper     | temperature  | temperance      | tempest      | temple      |
+|     | template    | team-play  | team-boat    | timber          | timpani      | tympan      |
+|     | tombolo     | thimble    | thump        | tumble          | damp         | dimple      |
+|     | dumbbell    | dump       | automobile   | stamp           | stump        |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 240 245)
 #+end_src
 
 #+RESULTS[a1783c1dea02425ba337a86e73595bdaeeaac2c8]:
 :results:
-|-----+-----------+-------------+-----------+------------+-----------+-------------|
-| 140 | TERRACE   | tricycle    | tea-rose  | thrice     | torso     | thirst      |
-|     | Thursday  | trace       | throes    | tress      | trews     | truce       |
-|     | dress     | dresser     | dressing  | drizzle    | drowsy    | duress      |
-|     | address   | atrocity    | authoress | waitress   | otherwise | storehouse  |
-|     | stress    |             |           |            |           |             |
-|-----+-----------+-------------+-----------+------------+-----------+-------------|
-| 141 | TURRET    | tart        | tardy     | territory  | tread     | treadle     |
-|     | treat     | trade       | trait     | triton     | treaty    | trident     |
-|     | trout     | truth       | turtle    | third      | thirty    | thirteen    |
-|     | thread    | threat      | throat    | thyroid    | dart      | dearth      |
-|     | diehard   | dirt        | dread     | drought    | druid     | adroit      |
-|     | authority | iterate     | outright  | yesterday  | Saturday  | start       |
-|     | strait    | straight    | stratagem | street     | stride    | strut       |
-|     | sturdy    |             |           |            |           |             |
-|-----+-----------+-------------+-----------+------------+-----------+-------------|
-| 142 | TERRAIN   | Saturn      | adherent  | adorn      | astronaut | attorney    |
-|     | darn      | dirndl      | drain     | drench     | drink     | drown       |
-|     | drunk     | dryness     | eternal   | historian  | outrun    | strain      |
-|     | thorn     | throne      | torrent   | tourney    | train     | trainee     |
-|     | trance    | translation | transport | trench     | turn      | turnip      |
-|     | tyrant    | utterance   |           |            |           |             |
-|-----+-----------+-------------+-----------+------------+-----------+-------------|
-| 143 | DREAM     | dermatology | diorama   | dormer     | dormitory | dram        |
-|     | drama     | dramamine   | drome     | drum       | storm     | stream      |
-|     | streamer  | tearoom     | term      | terminal   | theorem   | thermometer |
-|     | torment   | tram        | tramp     | trampoline | tremble   | trim        |
-|     | trombone  | trumpet     | turmoil   | uttermost  | watermark | watermelon  |
-|-----+-----------+-------------+-----------+------------+-----------+-------------|
-| 144 | TERROR    | terrier     | trier     | darer      | dearer    | drawer      |
-|     | dreary    | dryer       | dry-run   | adorer     | outerwear | waterer     |
-|     | water-rat | water-right |           |            |           |             |
+|-----+-----------+-------------+------------+------------+-------------+-------------|
+| 140 | TERRACE   | tricycle    | tea-rose   | thrice     | torso       | thirst      |
+|     | Thursday  | trace       | throes     | tress      | trews       | truce       |
+|     | dress     | dresser     | dressing   | drizzle    | drowsy      | duress      |
+|     | address   | atrocity    | authoress  | waitress   | otherwise   | storehouse  |
+|     | stress    |             |            |            |             |             |
+|-----+-----------+-------------+------------+------------+-------------+-------------|
+| 141 | TURRET    | tart        | tardy      | territory  | tread       | treadle     |
+|     | treat     | trade       | trait      | triton     | treaty      | trident     |
+|     | trout     | truth       | turtle     | third      | thirty      | thirteen    |
+|     | thread    | threat      | throat     | thyroid    | dart        | dearth      |
+|     | diehard   | dirt        | dread      | drought    | druid       | adroit      |
+|     | authority | iterate     | outright   | yesterday  | Saturday    | start       |
+|     | strait    | straight    | stratagem  | street     | stride      | strut       |
+|     | sturdy    |             |            |            |             |             |
+|-----+-----------+-------------+------------+------------+-------------+-------------|
+| 142 | TERRAIN   | train       | trainee    | thorn      | throne      | torrent     |
+|     | trance    | translation | transport  | trench     | turn        | tourney     |
+|     | turnip    | tyrant      | darn       | drain      | drench      | dirndl      |
+|     | drink     | drown       | drunk      | dryness    | adherent    | adorn       |
+|     | attorney  | eternal     | outrun     | utterance  | astronaut   | historian   |
+|     | strain    |             |            |            |             |             |
+|-----+-----------+-------------+------------+------------+-------------+-------------|
+| 143 | DREAM     | tearoom     | term       | terminal   | thermometer | torment     |
+|     | tram      | tramp       | trampoline | tremble    | trim        | trombone    |
+|     | trumpet   | theorem     | turmoil    | diorama    | drama       | dermatology |
+|     | dram      | drome       | dormer     | dormitory  | drum        | dramamine   |
+|     | stream    | streamer    | uttermost  | watermelon | watermark   |             |
+|-----+-----------+-------------+------------+------------+-------------+-------------|
+| 144 | TERROR    | terrier     | trier      | darer      | dearer      | drawer      |
+|     | dreary    | dryer       | dry-run    | adorer     | outerwear   | waterer     |
+|     | water-rat | water-right |            |            |             |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 245 250)
 #+end_src
 
@@ -4314,9 +4314,8 @@ at least twice to regenerate cross-references correctly.
 |     | strawberry  | strip      | stripe     | water-boy | waterproof   |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 250 260)
 #+end_src
 
@@ -4363,9 +4362,8 @@ at least twice to regenerate cross-references correctly.
 |     | dilapidate | dollop     | doll-up    | ad-lib     |             |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 260 270)
 #+end_src
 
@@ -4401,102 +4399,98 @@ at least twice to regenerate cross-references correctly.
 |     | dish-up     |              |             |              |             |               |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 270 280)
 #+end_src
 
 #+RESULTS[545db9a3be643d37408783f5369c5ca54003d1dd]:
 :results:
-|-----+------------+--------------+----------------+------------+-------------+------------|
-| 170 | TAXI       | tax          | Texas          | text       | textile     | tongs      |
-|     | things     | tea          | cozy           | decks      | dachshund   | dexterity  |
-|     | doghouse   | dogs         | attics         | ethics     | outcast     | suitcase   |
-|-----+------------+--------------+----------------+------------+-------------+------------|
-| 171 | DOCTOR     | teakettle    | tact           | thicket    | ticktack    | ticket     |
-|     | together   | teakwood     | tag-day        | decadent   | decade      | decode     |
-|     | docket     | dictate      | decathlon      | ductile    | dogwood     | adequate   |
-|     | edict      | etiquette    | educator       |            |             |            |
-|-----+------------+--------------+----------------+------------+-------------+------------|
-| 172 | TOUCAN     | token        | tea-wagon      | tycoon     | taken       | thicken    |
-|     | thickness  | technical    | deacon         | decanter   | dignity     | stagnant   |
-|-----+------------+--------------+----------------+------------+-------------+------------|
-| 173 | DOCUMENT   | Tecumseh     | autogamy       | day-camp   | decamp      | decompose  |
-|     | degum      | dogma        | stigma         | stigmata   | thingumajig |            |
-|-----+------------+--------------+----------------+------------+-------------+------------|
-| 174 | TIGER      | attacker     | autocar        | autograph  | dacron      | dagger     |
-|     | decorate   | decrease     | decree         | decry      | degrade     | degree     |
-|     | digger     | digress      | doggerel       | outcry     | outgrow     | sidecar    |
-|     | stacker    | stagger      | stoker         | tea-garden | ticker      |            |
-|-----+------------+--------------+----------------+------------+-------------+------------|
-| 175 | TACKLE     | tangle       | tickle         | tingle     | tongue-lash | tag-line   |
-|     | tequila    | toggle       | dangle         | declaim    | declare     | decline    |
-|     | decal      | ducal        | stockholder    |            |             |            |
-|-----+------------+--------------+----------------+------------+-------------+------------|
-| 176 | DICTIONARY | tuck-shop    | take-issue     | dockage    | doggish     | dogwatch   |
-|     | dog-show   | eduction     | education      |            |             |            |
-|-----+------------+--------------+----------------+------------+-------------+------------|
-| 177 | HOT-cake   | attacking    | decaying       | digging    | dogging     | outgoing   |
-|     | sidekick   | sticking     | stock-exchange | stocking   | tacking     | tagging    |
-|     | tea-cake   |              |                |            |             |            |
-|-----+------------+--------------+----------------+------------+-------------+------------|
-| 178 | TAKEOFF    | tick-off     | tick-fever     | dogface    | dogfight    | dogfish    |
-|     | dog-food   | dogfoot      | duckfooted     | hot-coffee | wedding-vow | outgiving  |
-|     | stockfish  |              |                |            |             |            |
-|-----+------------+--------------+----------------+------------+-------------+------------|
-| 179 | STICKUP    | teacup       | take-up        | toe-cap    | dig-up      | decapitate |
-|     | decoupage  | hiding-place | stockbroker    |            |             |            |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 170 | TAXI       | tax          | Texas       | text       | textile     | tongs          |
+|     | things     | tea          | cozy        | decks      | dachshund   | dexterity      |
+|     | doghouse   | dogs         | attics      | ethics     | outcast     | suitcase       |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 171 | DOCTOR     | teakettle    | tact        | thicket    | ticktack    | ticket         |
+|     | together   | teakwood     | tag-day     | decadent   | decade      | decode         |
+|     | docket     | dictate      | decathlon   | ductile    | dogwood     | adequate       |
+|     | edict      | etiquette    | educator    |            |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 172 | TOUCAN     | token        | tea-wagon   | tycoon     | taken       | thicken        |
+|     | thickness  | technical    | deacon      | decanter   | dignity     | stagnant       |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 173 | DOCUMENT   | thingumajig  | Tecumseh    | autogamy   | decompose   | dogma          |
+|     | degum      | decamp       | day-camp    | stigma     |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 174 | TIGER      | ticker       | tea-garden  | dagger     | decorate    | decrease       |
+|     | decree     | decry        | degree      | degrade    | digress     | digger         |
+|     | dacron     | doggerel     | autograph   | autocar    | attacker    | outcry         |
+|     | outgrow    | stagger      | stoker      | stacker    |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 175 | TACKLE     | tangle       | tickle      | tingle     | tongue-lash | tag-line       |
+|     | tequila    | toggle       | dangle      | declaim    | declare     | decline        |
+|     | decal      | ducal        | stockholder |            |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 176 | DICTIONARY | tuck-shop    | take-issue  | dockage    | doggish     | dogwatch       |
+|     | dog-show   | eduction     | education   |            |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 177 | HOT-cake   | tea-cake     | tacking     | tagging    | decaying    | digging        |
+|     | dogging    | attacking    | outgoing    | sticking   | stocking    | stock-exchange |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 178 | TAKEOFF    | tick-off     | tick-fever  | dogface    | dogfight    | dogfish        |
+|     | dog-food   | dogfoot      | duckfooted  | hot-coffee | wedding-vow | outgiving      |
+|     | stockfish  |              |             |            |             |                |
+|-----+------------+--------------+-------------+------------+-------------+----------------|
+| 179 | STICKUP    | teacup       | take-up     | toe-cap    | dig-up      | decapitate     |
+|     | decoupage  | hiding-place | stockbroker |            |             |                |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 280 290)
 #+end_src
 
 #+RESULTS[ecd622a959da04100e3a5c74c393a8da9026df0f]:
 :results:
-|-----+----------------+-------------+--------------+------------+-------------+---------------|
-| 180 | DEVICE         | two-faced   | two-fisted   | two-phase  | thieves     | typhus        |
-|     | deface         | devastate   | deficit      | diffuse    | divest      | dovehouse     |
-|     | advise         | edifice     | whiteface    |            |             |               |
-|-----+----------------+-------------+--------------+------------+-------------+---------------|
-| 181 | DAVID          | taffeta     | theft        | Tophet     | typhoid     | tuft          |
-|     | daft           | deft        | davit        | defeat     | daffodil    | devoid        |
-|     | devote         | devout      | diphtheria   | divide     | deviate     | diphthong     |
-|     | hotfoot        | outfit      | outvote      | stevedore  | eightfooter |               |
-|-----+----------------+-------------+--------------+------------+-------------+---------------|
-| 182 | TIFFANY        | typhoon     | toughness    | tiffin     | deafen      | defense       |
-|     | defiant        | define      | dauphin      | divan      | divine      | advent        |
-|     | advance        | advantage   |              |            |             |               |
-|-----+----------------+-------------+--------------+------------+-------------+---------------|
-| 183 | DEAFMUTE       | tea-family  | tough-minded | TV-man     | defame      |               |
-|-----+----------------+-------------+--------------+------------+-------------+---------------|
-| 184 | TAVERN         | taffrail    | tovarich     | thievery   | defer       | deform        |
-|     | defraud        | defray      | devour       | diaphragm  | differ      | diver         |
-|     | diverse        | divorce     | defrost      | deaf-ear   | adverse     | advertisement |
-|-----+----------------+-------------+--------------+------------+-------------+---------------|
-| 185 | DEVIL          | defalcation | defile       | deflate    | develop     | duffel        |
-|     | hateful        | hatful      | outfield     | outflow    | sea-devil   | stifle        |
-|     | tefillin       | tivoli      | tough-luck   | toyful     | twofold     | wasteful      |
-|     | white-elephant | wistful     | youthful     |            |             |               |
-|-----+----------------+-------------+--------------+------------+-------------+---------------|
-| 186 | DEVOTION       | TV-show     | thievish     | deficiency | deviation   | dovish        |
-|     | diffusion      | division    | audiovisual  | whitefish  | hot-fudge   |               |
-|-----+----------------+-------------+--------------+------------+-------------+---------------|
-| 187 | TOUGH-guy      | de-facto    | defect       | difficult  | diving      | advocate      |
-|     | edification    | staffing    | stuffing     |            |             |               |
-|-----+----------------+-------------+--------------+------------+-------------+---------------|
-| 188 | TV-fan         | two-fifths  | thief-vault  | dive-off   | eighty-five | stave-off     |
-|-----+----------------+-------------+--------------+------------+-------------+---------------|
-| 189 | DIVE-bomber    | taffy-pull  | v            | tough-boy  | edifiable   | stovepipe     |
-|     | stove-pot      |             |              |            |             |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 180 | DEVICE      | two-faced  | two-fisted   | two-phase      | thieves     | typhus        |
+|     | deface      | devastate  | deficit      | diffuse        | divest      | dovehouse     |
+|     | advise      | edifice    | whiteface    |                |             |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 181 | DAVID       | taffeta    | theft        | Tophet         | typhoid     | tuft          |
+|     | daft        | deft       | davit        | defeat         | daffodil    | devoid        |
+|     | devote      | devout     | diphtheria   | divide         | deviate     | diphthong     |
+|     | hotfoot     | outfit     | outvote      | stevedore      | eightfooter |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 182 | TIFFANY     | typhoon    | toughness    | tiffin         | deafen      | defense       |
+|     | defiant     | define     | dauphin      | divan          | divine      | advent        |
+|     | advance     | advantage  |              |                |             |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 183 | DEAFMUTE    | tea-family | tough-minded | TV-man         | defame      |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 184 | TAVERN      | taffrail   | tovarich     | thievery       | defer       | deform        |
+|     | defraud     | defray     | devour       | diaphragm      | differ      | diver         |
+|     | diverse     | divorce    | defrost      | deaf-ear       | adverse     | advertisement |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 185 | DEVIL       | tefillin   | tivoli       | tough-luck     | twofold     | toyful        |
+|     | defalcation | defile     | deflate      | develop        | duffel      | hatful        |
+|     | hateful     | outfield   | outflow      | white-elephant | youthful    | stifle        |
+|     | wistful     |            |              |                |             |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 186 | DEVOTION    | TV-show    | thievish     | deficiency     | deviation   | dovish        |
+|     | diffusion   | division   | audiovisual  | whitefish      | hot-fudge   |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 187 | TOUGH-guy   | de-facto   | defect       | difficult      | diving      | advocate      |
+|     | edification | staffing   | stuffing     |                |             |               |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 188 | TV-fan      | two-fifths | thief-vault  | dive-off       | eighty-five | stave-off     |
+|-----+-------------+------------+--------------+----------------+-------------+---------------|
+| 189 | DIVE-bomber | taffy-pull | v            | tough-boy      | edifiable   | stovepipe     |
+|     | stove-pot   |            |              |                |             |               |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 290 300)
 #+end_src
 
@@ -4513,23 +4507,22 @@ at least twice to regenerate cross-references correctly.
 |     | deputy      | adapt        | adept        | adopt         | output      | hotbed      |
 |     | outbid      | stupid       |              |               |             |             |
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
-| 192 | HATPIN      | Dubonnet     | Ethiopian    | debenture     | debonair    | deepen      |
-|     | depend      | depone       | eastbound    | headband      | headpin     | outbound    |
-|     | stipend     | southbound   | thighbone    | tiepin        | topknot     | topnotch    |
-|     | twopence    |              |              |               |             |             |
+| 192 | HATPIN      | tiepin       | topknot      | topnotch      | thighbone   | twopence    |
+|     | debenture   | deepen       | debonair     | depend        | depone      | Dubonnet    |
+|     | Ethiopian   | headpin      | outbound     | headband      |             |             |
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
 | 193 | STEPMOTHER  | topman       | topmast      | topmost       | top-milk    | topminnow   |
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
-| 194 | TYPEWRITER  | dapper       | daybreak     | debar         | debris      | depart      |
-|     | department  | deportment   | depreciate   | depress       | deprive     | diaper      |
-|     | dipper      | outboard     | outbreak     | sideboard     | sideburns   | stubborn    |
-|     | sweetbread  | taper        | tapir        | taproom       | tea-party   | tie-bar     |
-|     | top-rate    | top-round    | topper       | topwork       |             |             |
+| 194 | TYPEWRITER  | tie-bar      | tea-party    | taper         | tapir       | taproom     |
+|     | topper      | topwork      | top-round    | top-rate      | daybreak    | debar       |
+|     | depart      | dapper       | debris       | department    | deportment  | depreciate  |
+|     | depress     | deprive      | dipper       | diaper        | outboard    | outbreak    |
+|     | sideboard   | sideburns    | stubborn     |               |             |             |
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
-| 195 | TABLE       | audible      | dapple       | deplore       | diabolic    | diploma     |
-|     | diplomat    | double       | doublet      | duplicate     | edible      | oddball     |
-|     | seat-belt   | stable       | staple       | steeple       | stipulate   | tableau     |
-|     | tablet      | tipple       | topless      | topple        | tupelo      | two-ply     |
+| 195 | TABLE       | tablet       | tableau      | tipple        | topple      | topless     |
+|     | tupelo      | two-ply      | dapple       | deplore       | diploma     | diplomat    |
+|     | double      | duplicate    | doublet      | diabolic      | audible     | edible      |
+|     | oddball     | stable       | steeple      | stipulate     |             |             |
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
 | 196 | DEBAUCH     | tip-sheet    | top-sheet    | top-shelf     | two-page    | type-wash   |
 |     | adoption    | adaption     | stoppage     |               |             |             |
@@ -4545,126 +4538,122 @@ at least twice to regenerate cross-references correctly.
 |     | depopulate  | dope-peddler | dope-pusher  | wastepaper    | hot-pepper  |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 300 310)
 #+end_src
 
 #+RESULTS[7cd9843c064dbbab957bb987e62056b0ad932851]:
 :results:
-|-----+--------------+---------------+----------------+--------------+--------------+---------------|
-| 200 | GNOSIS       | necessity     | nieces         | noses        | noises       | incisor       |
-|     | insist       | incessant     | unceasing      | unseasoned   | unsuspicious | ounces        |
-|     | census       |               |                |              |              |               |
-|-----+--------------+---------------+----------------+--------------+--------------+---------------|
-| 201 | NOSTRIL      | Wednesday     | anesthesia     | gnostic      | honest       | incident      |
-|     | incite       | inside        | insight        | instant      | instead      | instinct      |
-|     | institute    | instrument    | nasty          | nest         | nicety       | nose-dive     |
-|     | one-step     | sinister      | unsatisfactory | unsteady     | unsuitable   |               |
-|-----+--------------+---------------+----------------+--------------+--------------+---------------|
-| 202 | ENSIGN       | newshen       | nice-nelly     | niacin       | nosiness     | nuisance      |
-|     | ensnare      | incinerator   | innocent       | insane       | insensitive  | insincere     |
-|     | uneasiness   | unseen        | unsound        | unison       | unessential  |               |
-|-----+--------------+---------------+----------------+--------------+--------------+---------------|
-| 203 | INSEMINATION | newsman       | noisemaker     | news-media   | nizam        | noisome       |
-|     | enzyme       | hansom        | inasmuch       | insomnia     | in-sum       | unseemly      |
-|     | unassuming   | unsimilar     |                |              |              |               |
-|-----+--------------+---------------+----------------+--------------+--------------+---------------|
-| 204 | CENSOR       | newsreel      | newsworthy     | answer       | encircle     | incertitude   |
-|     | insert       | insurgent     | insurmountable | insurrection | uncertain    | unsworn       |
-|     | sincere      |               |                |              |              |               |
-|-----+--------------+---------------+----------------+--------------+--------------+---------------|
-| 205 | NACELLE      | nozzle        | nuzzle         | nestle       | nasal        | noiseless     |
-|     | nicely       | enslave       | insolence      | insolvent    | insulin      | insular       |
-|     | insult       | ancillary     | oneself        | unselfish    | wine-cellar  | senseless     |
-|-----+--------------+---------------+----------------+--------------+--------------+---------------|
-| 206 | NOSE-JOB     | news-agency   | incision       | ionization   | unsociable   | sensation     |
-|-----+--------------+---------------+----------------+--------------+--------------+---------------|
-| 207 | NOSE-cone    | nosegay       | encyclopedia   | honeysuckle  | inscription  | insect        |
-|     | insecure     | insignificant | unicycle       | unscrupulous | wainscot     |               |
-|-----+--------------+---------------+----------------+--------------+--------------+---------------|
-| 208 | IONOSPHERE   | news-vendor   | henceforth     | insufferable | insufficient | once-over     |
-|     | uncivil      | unsafe        | unicef         |              |              |               |
-|-----+--------------+---------------+----------------+--------------+--------------+---------------|
-| 209 | NEWSBOY      | nosepiece     | newsprint      | no-soap      | newspaper    | inhospitable  |
-|     | inseparable  | insipid       | inspect        | inspiration  | insuperable  | insupportable |
-|     | unspent      | sensible      |                |              |              |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 200 | GNOSIS       | necessity     | nieces         | noses        | noises         | incisor       |
+|     | insist       | incessant     | unceasing      | unseasoned   | unsuspicious   | ounces        |
+|     | census       |               |                |              |                |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 201 | NOSTRIL      | nest          | nasty          | nicety       | nose-dive      | anesthesia    |
+|     | honest       | incident      | incite         | inside       | insight        | instant       |
+|     | instead      | instinct      | institute      | instrument   | unsatisfactory | unsteady      |
+|     | unsuitable   | gnostic       | one-step       | Wednesday    |                |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 202 | ENSIGN       | newshen       | nice-nelly     | niacin       | nosiness       | nuisance      |
+|     | ensnare      | incinerator   | innocent       | insane       | insensitive    | insincere     |
+|     | uneasiness   | unseen        | unsound        | unison       | unessential    |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 203 | INSEMINATION | newsman       | noisemaker     | news-media   | nizam          | noisome       |
+|     | enzyme       | hansom        | inasmuch       | insomnia     | in-sum         | unseemly      |
+|     | unassuming   | unsimilar     |                |              |                |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 204 | CENSOR       | newsreel      | newsworthy     | answer       | encircle       | incertitude   |
+|     | insert       | insurgent     | insurmountable | insurrection | uncertain      | unsworn       |
+|     | sincere      |               |                |              |                |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 205 | NACELLE      | nozzle        | nuzzle         | nestle       | nasal          | noiseless     |
+|     | nicely       | enslave       | insolence      | insolvent    | insulin        | insular       |
+|     | insult       | ancillary     | oneself        | unselfish    | wine-cellar    | senseless     |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 206 | NOSE-JOB     | news-agency   | incision       | ionization   | unsociable     | sensation     |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 207 | NOSE-cone    | nosegay       | encyclopedia   | honeysuckle  | inscription    | insect        |
+|     | insecure     | insignificant | unicycle       | unscrupulous | wainscot       |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 208 | IONOSPHERE   | news-vendor   | henceforth     | insufferable | insufficient   | once-over     |
+|     | uncivil      | unsafe        | unicef         |              |                |               |
+|-----+--------------+---------------+----------------+--------------+----------------+---------------|
+| 209 | NEWSBOY      | nosepiece     | newsprint      | no-soap      | newspaper      | inhospitable  |
+|     | inseparable  | insipid       | inspect        | inspiration  | insuperable    | insupportable |
+|     | unspent      | sensible      |                |              |                |               |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 310 320)
 #+end_src
 
 #+RESULTS[a0b7efee5d9684f7718e022dd6b1dcaaccf3630f]:
 :results:
-|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
-| 210 | NUDIST        | notice          | Nazi         | nowadays    | no-dice     | antacid        |
-|     | anticipate    | antiseptic      | enthusiasm   | entice      | indecent    | indistinct     |
-|     | induce        | industry        | hind-sight   | handsaw     | undeserved  | undesirable    |
-|     | undisturbed   |                 |              |             |             |                |
-|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
-| 211 | UNTIED        | nitwit          | nudity       | night-duty  | noted       | needed         |
-|     | antitrust     | annotate        | antidote     | entity      | entitle     | handed         |
-|     | haunted       | handout         | indeed       | knighthood  | undoubted   | untidy         |
-|     | united        | undated         | want-ad      |             |             |                |
-|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
-| 212 | ANTENNA       | andante         | Anthony      | antonym     | india-ink   | antiknock      |
-|     | handiness     | entwine         | inattentive  | indent      | Indian      | intend         |
-|     | intense       | intonate        | one-to-one   | undeniable  | unthankful  | wanton         |
-|     | sentence      | sentinel        | centennial   |             |             |                |
-|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
-| 213 | ANTIMATTER    | anadem          | anathema     | anatomy     | anthem      | antimissile    |
-|     | anytime       | endemic         | handmade     | handmaiden  | handyman    | honeydew-melon |
-|     | inadmissible  | indemnify       | intimacy     | intimidate  | nightmare   | nutmeg         |
-|     | ointment      | on-time         | onetime      | sentiment   | untimely    | windmill       |
-|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
-| 214 | NUTTER        | network         | neither      | Netherlands | nodder      | neutral        |
-|     | notary        | nutriment       | nitric       | nitrate     | nightrobe   | another        |
-|     | anterior      | anthracite      | anteroom     | endear      | endorse     | endure         |
-|     | enter         | entertain       | entrance     | entry       | handrail    | handwriting    |
-|     | hundred       | hinterland      | interact     | interest    | interior    | intern         |
-|     | international | interval        | interview    | introduce   | under       | Unitarian      |
-|     | unit-rule     | untiring        | winter       | wonder      |             |                |
-|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
-| 215 | NOODLE        | antelope        | anthill      | endless     | handle      | indelicate     |
-|     | indolent      | indulge         | intellect    | intelligent | intolerable | know-it-all    |
-|     | needle        | needless        | new-deal     | night-owl   | sandal      | swindle        |
-|     | until         | windless        |              |             |             |                |
-|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
-| 216 | SANDWICH      | nightshade      | night-watch  | notation    | nutshell    | annotation     |
-|     | antechamber   | indigenous      | indigestion  | intuition   | untouchable | windowshade    |
-|     | wantage       | window-shopping |              |             |             |                |
-|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
-| 217 | NIGHTGOWN     | nothing         | nightcap     | nautical    | nightingale | nutcracker     |
-|     | antagonist    | antichrist      | antics       | antique     | anything    | ending         |
-|     | handicraft    | hunting         | handcuff     | handicap    | inadequate  | index          |
-|     | indigo        | indignant       | induction    | intact      | integrity   | intoxicated    |
-|     | untangle      | winding         | wanting      | syndicate   |             |                |
-|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
-| 218 | NIGHTFALL     | native          | notification | endeavor    | endive      | handful        |
-|     | antiphony     | inadvisable     | indifferent  | individual  | indefinite  | undefined      |
-|     | undeveloped   | undefeated      | scientific   |             |             |                |
-|-----+---------------+-----------------+--------------+-------------+-------------+----------------|
-| 219 | NOTEBOOK      | notable         | night-pay    | antibiotics | antibody    | antipasto      |
-|     | antipathy     | antipode        | antipope     | handbag     | handbill    | handbook       |
-|     | handball      | inaudible       | independent  | inedible    | knee-deep   | knotty-pine    |
-|     | windpipe      | sandbox         | sound-box    |             |             |                |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 210 | NUDIST        | notice          | Nazi         | nowadays     | no-dice        | antacid     |
+|     | anticipate    | antiseptic      | enthusiasm   | entice       | indecent       | indistinct  |
+|     | induce        | industry        | hind-sight   | handsaw      | undeserved     | undesirable |
+|     | undisturbed   |                 |              |              |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 211 | UNTIED        | nitwit          | nudity       | night-duty   | noted          | needed      |
+|     | antitrust     | annotate        | antidote     | entity       | entitle        | handed      |
+|     | haunted       | handout         | indeed       | knighthood   | undoubted      | untidy      |
+|     | united        | undated         | want-ad      |              |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 212 | ANTENNA       | andante         | Anthony      | antonym      | india-ink      | antiknock   |
+|     | handiness     | entwine         | inattentive  | indent       | Indian         | intend      |
+|     | intense       | intonate        | one-to-one   | undeniable   | unthankful     | wanton      |
+|     | sentence      | sentinel        | centennial   |              |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 213 | ANTIMATTER    | nutmeg          | nightmare    | anthem       | anadem         | anatomy     |
+|     | anathema      | antimissile     | endemic      | inadmissible | indemnify      | intimacy    |
+|     | intimidate    | handyman        | handmaiden   | handmade     | honeydew-melon | ointment    |
+|     | on-time       | onetime         | anytime      | untimely     | windmill       |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 214 | NUTTER        | network         | neither      | Netherlands  | nodder         | neutral     |
+|     | notary        | nutriment       | nitric       | nitrate      | nightrobe      | another     |
+|     | anterior      | anthracite      | anteroom     | endear       | endorse        | endure      |
+|     | enter         | entertain       | entrance     | entry        | handrail       | handwriting |
+|     | hundred       | hinterland      | interact     | interest     | interior       | intern      |
+|     | international | interval        | interview    | introduce    | under          | Unitarian   |
+|     | unit-rule     | untiring        | winter       | wonder       |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 215 | NOODLE        | needle          | needless     | night-owl    | new-deal       | antelope    |
+|     | anthill       | endless         | handle       | indelicate   | indolent       | indulge     |
+|     | intellect     | intelligent     | intolerable  | know-it-all  | until          | windless    |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 216 | SANDWICH      | nightshade      | night-watch  | notation     | nutshell       | annotation  |
+|     | antechamber   | indigenous      | indigestion  | intuition    | untouchable    | windowshade |
+|     | wantage       | window-shopping |              |              |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 217 | NIGHTGOWN     | nothing         | nightcap     | nautical     | nightingale    | nutcracker  |
+|     | antagonist    | antichrist      | antics       | antique      | anything       | ending      |
+|     | handicraft    | hunting         | handcuff     | handicap     | inadequate     | index       |
+|     | indigo        | indignant       | induction    | intact       | integrity      | intoxicated |
+|     | untangle      | winding         | wanting      | syndicate    |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 218 | NIGHTFALL     | native          | notification | endeavor     | endive         | handful     |
+|     | antiphony     | inadvisable     | indifferent  | individual   | indefinite     | undefined   |
+|     | undeveloped   | undefeated      | scientific   |              |                |             |
+|-----+---------------+-----------------+--------------+--------------+----------------+-------------|
+| 219 | NOTEBOOK      | notable         | night-pay    | antibiotics  | antibody       | antipasto   |
+|     | antipathy     | antipode        | antipope     | handbag      | handbill       | handbook    |
+|     | handball      | inaudible       | independent  | inedible     | knee-deep      | knotty-pine |
+|     | windpipe      | sandbox         | sound-box    |              |                |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 320 330)
 #+end_src
 
 #+RESULTS[d18e1186169e0a6d229e99f2d96b2f0d89a7742b]:
 :results:
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
-| 220 | NONCE          | ananas         | announce      | annoyance     | assonance       | enhance           |
-|     | nainsook       | nonsense       | nonuse        | onions        | onionskin       | unanswered        |
+| 220 | NONCE          | nonsense       | nonuse        | nainsook      | ananas          | announce          |
+|     | annoyance      | enhance        | onions        | onionskin     | unanswered      |                   |
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
 | 221 | UNKNIT         | noontime       | ninth         | nineteen      | ninety          | nondenominational |
 |     | nontechnical   | anoint         | innuendo      | know-nothing  | unintelligible  | unintentional     |
@@ -4673,9 +4662,9 @@ at least twice to regenerate cross-references correctly.
 | 222 | NONUNION       | ninon          | no-nonsense   | nonnegotiable | nonentity       | non-owner         |
 |     | unknown        | unannounced    |               |               |                 |                   |
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
-| 223 | NOON-MEAL      | anonymous      | inanimate     | ninnyhammer   | nonemergency    | nonemotional      |
-|     | nonmedical     | nonmember      | nonmetal      | nonmilitary   | synonym         | synonymous        |
-|     | unanimated     | unanimous      |               |               |                 |                   |
+| 223 | NOON-MEAL      | ninnyhammer    | nonemotional  | nonmetal      | nonmember       | nonmedical        |
+|     | nonmilitary    | nonemergency   | anonymous     | inanimate     | unanimous       | unanimated        |
+|     | synonymous     |                |               |               |                 |                   |
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
 | 224 | NUNNERY        | nonracial      | nonradical    | onion-ring    | union-organizer | unenrolled        |
 |     | unhonored      |                |               |               |                 |                   |
@@ -4699,163 +4688,157 @@ at least twice to regenerate cross-references correctly.
 |     | nonpolitical   | union-pay      |               |               |                 |                   |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 330 340)
 #+end_src
 
 #+RESULTS[29b46b8cb964b31a5d26e3e26ba448cc5ab188fa]:
 :results:
-|-----+------------+---------------+---------------+--------------+-------------+-------------|
-| 230 | GNOMES     | names         | namesake      | nemesis      | numismatist | animosity   |
-|     | inmost     | enemies       | unmistakable  | unmask       |             |             |
-|-----+------------+---------------+---------------+--------------+-------------+-------------|
-| 231 | NOMAD      | named         | new-math      | name-dropper | animate     | enmity      |
-|     | inmate     | pneumatic     |               |              |             |             |
-|-----+------------+---------------+---------------+--------------+-------------+-------------|
-| 232 | NEW-MOON   | cinnamon      | cyanamide     | honeymoon    | inhuman     | nominal     |
-|     | nominee    | numbness      | pneumonia     | sea-anemone  | snowman     | unmanly     |
-|     | unmannerly | unmentionable | unmindful     | unwomanly    | wisenheimer |             |
-|-----+------------+---------------+---------------+--------------+-------------+-------------|
-| 233 | ANEMOMETER | name-maker    | new-member    | unmaimed     | unmemorized | unmomentous |
-|-----+------------+---------------+---------------+--------------+-------------+-------------|
-| 234 | NIMROD     | namer         | numeral       | numerology   | newmarket   | enamor      |
-|     | enumerate  | unmarred      | unmarked      | unmerciful   | unmarried   | un-American |
-|-----+------------+---------------+---------------+--------------+-------------+-------------|
-| 235 | ANIMAL     | nameless      | numbly        | enamel       | anomaly     | pneumology  |
-|-----+------------+---------------+---------------+--------------+-------------+-------------|
-| 236 | ANIMATION  | unemotional   | unimaginative | unmatched    | unmeshed    |             |
-|-----+------------+---------------+---------------+--------------+-------------+-------------|
-| 237 | WINEMAKER  | naming        | anemic        | inimical     | unmake      |             |
-|-----+------------+---------------+---------------+--------------+-------------+-------------|
-| 238 | NYMPH      | unemphatic    | unmovable     | nemophila    | unmiffed    | unmuffled   |
-|-----+------------+---------------+---------------+--------------+-------------+-------------|
-| 239 | NAMEPLATE  | nimble        | number        | unemployed   | unimportant | unimpaired  |
-|     | unimproved | unimpressive  | unambiguous   | unamiable    | unhampered  | snowmobile  |
+|-----+------------+--------------+---------------+--------------+-------------+-------------|
+| 230 | GNOMES     | names        | namesake      | nemesis      | numismatist | animosity   |
+|     | inmost     | enemies      | unmistakable  | unmask       |             |             |
+|-----+------------+--------------+---------------+--------------+-------------+-------------|
+| 231 | NOMAD      | named        | new-math      | name-dropper | animate     | enmity      |
+|     | inmate     | pneumatic    |               |              |             |             |
+|-----+------------+--------------+---------------+--------------+-------------+-------------|
+| 232 | NEW-MOON   | nominal      | nominee       | numbness     | honeymoon   | inhuman     |
+|     | unmanly    | unmannerly   | unmentionable | unmindful    | unwomanly   | pneumonia   |
+|-----+------------+--------------+---------------+--------------+-------------+-------------|
+| 233 | ANEMOMETER | name-maker   | new-member    | unmaimed     | unmemorized | unmomentous |
+|-----+------------+--------------+---------------+--------------+-------------+-------------|
+| 234 | NIMROD     | namer        | numeral       | numerology   | newmarket   | enamor      |
+|     | enumerate  | unmarred     | unmarked      | unmerciful   | unmarried   | un-American |
+|-----+------------+--------------+---------------+--------------+-------------+-------------|
+| 235 | ANIMAL     | nameless     | numbly        | enamel       | anomaly     | pneumology  |
+|-----+------------+--------------+---------------+--------------+-------------+-------------|
+| 236 | ANIMATION  | unemotional  | unimaginative | unmatched    | unmeshed    |             |
+|-----+------------+--------------+---------------+--------------+-------------+-------------|
+| 237 | WINEMAKER  | naming       | anemic        | inimical     | unmake      |             |
+|-----+------------+--------------+---------------+--------------+-------------+-------------|
+| 238 | NYMPH      | unemphatic   | unmovable     | nemophila    | unmiffed    | unmuffled   |
+|-----+------------+--------------+---------------+--------------+-------------+-------------|
+| 239 | NAMEPLATE  | nimble       | number        | unemployed   | unimportant | unimpaired  |
+|     | unimproved | unimpressive | unambiguous   | unamiable    | unhampered  | snowmobile  |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 340 350)
 #+end_src
 
 #+RESULTS[b8febde0461c8adfe97c39a61d075294c00c77ac]:
 :results:
-|-----+---------------+--------------+-------------+-------------+---------------+-------------|
-| 240 | NURSE         | nursery      | neurosis    | nearsighted | honors        | onerous     |
-|     | owners        | unrest       | unhorse     | sonorous    | sunrise       |             |
-|-----+---------------+--------------+-------------+-------------+---------------+-------------|
-| 241 | NARRATOR      | inarticulate | inert       | inheritance | inroad        | inward      |
-|     | nard          | nerd         | neurotic    | north       | onward        | snarl       |
-|     | snort         | unearth      | unhurt      | unredeemed  | unworthy      | unwritten   |
-|-----+---------------+--------------+-------------+-------------+---------------+-------------|
-| 242 | NEURON        | no-iron      | no-run      | nearness    | narrowness    | unearned    |
-|     | unworn        | unwarned     | unwarranted |             |               |             |
-|-----+---------------+--------------+-------------+-------------+---------------+-------------|
-| 243 | NORMAN        | norm         | normal      | near-miss   | Norma         | enormous    |
-|     | narrow-minded | unarmed      | innermost   |             |               |             |
-|-----+---------------+--------------+-------------+-------------+---------------+-------------|
-| 244 | HONORARY      | nearer       | narrower    | unrewarded  |               |             |
-|-----+---------------+--------------+-------------+-------------+---------------+-------------|
-| 245 | NARWHAL       | narrowly     | nearly      | New-World   | enroll        | gnarl       |
-|     | knurl         | one-reel     | unrelenting | unreliable  | unruly        | unreal      |
-|     | unroyal       | snarl        |             |             |               |             |
-|-----+---------------+--------------+-------------+-------------+---------------+-------------|
-| 246 | ENERGY        | narration    | nourishment | Norwegian   | enrage        | enrich      |
-|     | inertia       | onrush       | ownership   |             |               |             |
-|-----+---------------+--------------+-------------+-------------+---------------+-------------|
-| 247 | NARCOTICS     | nark         | Newark      | New-York    | anarchy       | on-record   |
-|     | honoring      | unrecorded   | unrequited  | unerring    | unrecoverable |             |
-|-----+---------------+--------------+-------------+-------------+---------------+-------------|
-| 248 | NIRVANA       | nerve        | no-refund   | enervate    | unravel       | unrivaled   |
-|     | unrefined     | unruffled    |             |             |               |             |
-|-----+---------------+--------------+-------------+-------------+---------------+-------------|
-| 249 | ENROBE        | nearby       | enrapt      | enwrap      | honorable     | unrepentant |
-|     | unripe        | unrippled    | unwrap      |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 240 | NURSE         | nursery    | neurosis    | nearsighted | honors        | onerous     |
+|     | owners        | unrest     | unhorse     | sonorous    | sunrise       |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 241 | NARRATOR      | neurotic   | nard        | north       | inarticulate  | inert       |
+|     | inheritance   | inroad     | inward      | onward      | unearth       | unhurt      |
+|     | unredeemed    | unworthy   | unwritten   |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 242 | NEURON        | no-iron    | no-run      | nearness    | narrowness    | unearned    |
+|     | unworn        | unwarned   | unwarranted |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 243 | NORMAN        | norm       | normal      | near-miss   | Norma         | enormous    |
+|     | narrow-minded | unarmed    | innermost   |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 244 | HONORARY      | nearer     | narrower    | unrewarded  |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 245 | NARWHAL       | narrowly   | nearly      | New-World   | enroll        | gnarl       |
+|     | knurl         | one-reel   | unrelenting | unreliable  | unruly        | unreal      |
+|     | unroyal       | snarl      |             |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 246 | ENERGY        | narration  | nourishment | Norwegian   | enrage        | enrich      |
+|     | inertia       | onrush     | ownership   |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 247 | NARCOTICS     | nark       | Newark      | New-York    | anarchy       | on-record   |
+|     | honoring      | unrecorded | unrequited  | unerring    | unrecoverable |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 248 | NIRVANA       | nerve      | no-refund   | enervate    | unravel       | unrivaled   |
+|     | unrefined     | unruffled  |             |             |               |             |
+|-----+---------------+------------+-------------+-------------+---------------+-------------|
+| 249 | ENROBE        | nearby     | enrapt      | enwrap      | honorable     | unrepentant |
+|     | unripe        | unrippled  | unwrap      |             |               |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
   (babomorph 350 360)
 #+end_src
 
 #+RESULTS[f41d7e7aed6e522ae96b7de331e1ee0f4186a2b1]:
 :results:
-|-----+-------------+-------------+-------------+-------------+---------------+--------------|
-| 250 | NELSON      | nails       | nihilist    | annals      | analyze       | awnless      |
-|     | enlist      | in-laws     | unlace      | unless      | unwholesome   |              |
-|-----+-------------+-------------+-------------+-------------+---------------+--------------|
-| 251 | NEWLYWED    | annihilate  | annulled    | enlighten   | inalterable   | inhaled      |
-|     | inlet       | knelt       | nailed      | sunlight    | unallotted    | unallowed    |
-|     | unhealthy   | unladylike  | unlit       | unload      |               |              |
-|-----+-------------+-------------+-------------+-------------+---------------+--------------|
-| 252 | ENAMEL      | nylon       | nail        | an﻿iline     | inland        | on-line      |
-|     | inalienable |             |             |             |               |              |
-|-----+-------------+-------------+-------------+-------------+---------------+--------------|
-| 253 | ANNULMENT   | sunlamp     | newly-made  | unlimited   | un﻿illuminated | unlamented   |
-|-----+-------------+-------------+-------------+-------------+---------------+--------------|
-| 254 | INHALER     | nailer      | enlargement | kneeler     | unlearned     | unalarmed    |
-|-----+-------------+-------------+-------------+-------------+---------------+--------------|
-| 255 | HONOLULU    | nailless    | nail-hole   | n﻿illy-willy | unloyal       |              |
-|-----+-------------+-------------+-------------+-------------+---------------+--------------|
-| 256 | KNOWLEDGE   | analgesic   | analogy     | ineligible  | unlatch       | unleash      |
-|-----+-------------+-------------+-------------+-------------+---------------+--------------|
-| 257 | KNEELING    | nailing     | no-luck     | new-look    | onlooker      | unlike       |
-|     | unlock      | unlucky     | unwelcome   | unwilling   | unallocated   | unlooked-for |
-|-----+-------------+-------------+-------------+-------------+---------------+--------------|
-| 258 | UNLOVED     | nail-file   | New-Left    | nullify     | analphabet    | enliven      |
-|     | in-love     | on-leave    | unlawful    | unlive      |               |              |
-|-----+-------------+-------------+-------------+-------------+---------------+--------------|
-| 259 | NAIL-POLISH | nail-biting | nail-up     | nol-pros    | analeptic     | unhelpful    |
-|     | unliable    | inhalable   | unallowable | unlabeled   | unlabored     |              |
+|-----+-------------+-------------+-------------+---------------+-------------+--------------|
+| 250 | NELSON      | nails       | nihilist    | annals        | analyze     | awnless      |
+|     | enlist      | in-laws     | unlace      | unless        | unwholesome |              |
+|-----+-------------+-------------+-------------+---------------+-------------+--------------|
+| 251 | NEWLYWED    | nailed      | annihilate  | annulled      | enlighten   | inalterable  |
+|     | inlet       | inhaled     | unhealthy   | unallowed     | unallotted  | unladylike   |
+|     | unload      | unlit       | knelt       |               |             |              |
+|-----+-------------+-------------+-------------+---------------+-------------+--------------|
+| 252 | ENAMEL      | nylon       | nail        | an﻿iline       | inland      | on-line      |
+|     | inalienable |             |             |               |             |              |
+|-----+-------------+-------------+-------------+---------------+-------------+--------------|
+| 253 | ANNULMENT   | newly-made  | unlimited   | un﻿illuminated | unlamented  |              |
+|-----+-------------+-------------+-------------+---------------+-------------+--------------|
+| 254 | INHALER     | nailer      | enlargement | kneeler       | unlearned   | unalarmed    |
+|-----+-------------+-------------+-------------+---------------+-------------+--------------|
+| 255 | HONOLULU    | nailless    | nail-hole   | n﻿illy-willy   | unloyal     |              |
+|-----+-------------+-------------+-------------+---------------+-------------+--------------|
+| 256 | KNOWLEDGE   | analgesic   | analogy     | ineligible    | unlatch     | unleash      |
+|-----+-------------+-------------+-------------+---------------+-------------+--------------|
+| 257 | KNEELING    | nailing     | no-luck     | new-look      | onlooker    | unlike       |
+|     | unlock      | unlucky     | unwelcome   | unwilling     | unallocated | unlooked-for |
+|-----+-------------+-------------+-------------+---------------+-------------+--------------|
+| 258 | UNLOVED     | nail-file   | New-Left    | nullify       | analphabet  | enliven      |
+|     | in-love     | on-leave    | unlawful    | unlive        |             |              |
+|-----+-------------+-------------+-------------+---------------+-------------+--------------|
+| 259 | NAIL-POLISH | nail-biting | nail-up     | nol-pros      | analeptic   | unhelpful    |
+|     | unliable    | inhalable   | unallowable | unlabeled     | unlabored   |              |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 360   370)
 #+end_src
 
 #+RESULTS[80c591730bf94b0a0077f00d26121b721f15de1a]:
 :results:
-|-----+--------------+-------------+------------+--------------+--------------+------------|
-| 260 | NATCHEZ      | nauseous    | niches     | notches      | nudges       | hinges     |
-|     | inches       | injustice   | unjust     |              |              |            |
-|-----+--------------+-------------+------------+--------------+--------------+------------|
-| 261 | UNWASHED     | nidget      | notched    | nudged       | gnashed      | enjoyed    |
-|     | inched       | one-shot    | unshod     | unshut       | initiated    |            |
-|-----+--------------+-------------+------------+--------------+--------------+------------|
-| 262 | ENGINE       | ancient     | ascension  | enchant      | engineer     | enjoin     |
-|     | ingenious    | ingenue     | injunction | knee-jointed | nation       | notion     |
-|     | sunshine     | unchained   | unchanged  | ungenerous   | ungentle     |            |
-|-----+--------------+-------------+------------+--------------+--------------+------------|
-| 263 | NOTCHMARK    | enjoyment   | inchmeal   | unashamed    |              |            |
-|-----+--------------+-------------+------------+--------------+--------------+------------|
-| 264 | KNEE-JERK    | censure     | century    | enshrine     | ensure       | injury     |
-|     | insurance    | nature      | notcher    | nudger       | on-shore     | onager     |
-|     | unshrinkable | unsure      |            |              |              |            |
-|-----+--------------+-------------+------------+--------------+--------------+------------|
-| 265 | ANGEL        | ENCHILADA   | initial    | sensual      | unchallenged | unchilled  |
-|     | unshielded   | unsheltered | unusual    |              |              |            |
-|-----+--------------+-------------+------------+--------------+--------------+------------|
-| 266 | HINGE-JOINT  | unjudged    | un-Jewish  |              |              |            |
-|-----+--------------+-------------+------------+--------------+--------------+------------|
-| 267 | GNASHING     | nudging     | enjoying   | inject       | unchecked    | unshaken   |
-|     | unshackle    |             |            |              |              |            |
-|-----+--------------+-------------+------------+--------------+--------------+------------|
-| 268 | ANCHOVY      | in-a-jiffy  | unshaven   | unshifted    | unshuffled   | unshoveled |
-|     | unchivalrous | unchafable  |            |              |              |            |
-|-----+--------------+-------------+------------+--------------+--------------+------------|
-| 269 | HUNCHBACK    | enjoyable   | snow-job   | unchaperoned | unshapely    | unship     |
-|     | unwashable   | wineshop    |            |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 260 | NATCHEZ      | nauseous   | niches    | notches      | nudges       | hinges     |
+|     | inches       | injustice  | unjust    |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 261 | UNWASHED     | nidget     | notched   | nudged       | gnashed      | enjoyed    |
+|     | inched       | one-shot   | unshod    | unshut       | initiated    |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 262 | ENGINE       | nation     | notion    | ancient      | enchant      | engineer   |
+|     | enjoin       | ingenue    | ingenious | injunction   | knee-jointed | ungentle   |
+|     | ungenerous   | unchanged  | unchained |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 263 | NOTCHMARK    | enjoyment  | inchmeal  | unashamed    |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 264 | KNEE-JERK    | nature     | notcher   | nudger       | ensure       | enshrine   |
+|     | injury       | insurance  | onager    | on-shore     | unshrinkable | unsure     |
+|     | century      |            |           |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 265 | ANGEL        | ENCHILADA  | initial   | unchallenged | unchilled    | unshielded |
+|     | unsheltered  | unusual    |           |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 266 | HINGE-JOINT  | unjudged   | un-Jewish |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 267 | GNASHING     | nudging    | enjoying  | inject       | unchecked    | unshaken   |
+|     | unshackle    |            |           |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 268 | ANCHOVY      | in-a-jiffy | unshaven  | unshifted    | unshuffled   | unshoveled |
+|     | unchivalrous | unchafable |           |              |              |            |
+|-----+--------------+------------+-----------+--------------+--------------+------------|
+| 269 | HUNCHBACK    | enjoyable  | unshapely | unship       | unchaperoned | unwashable |
+|     | wineshop     |            |           |              |              |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 370   380)
 #+end_src
 
@@ -4904,7 +4887,6 @@ at least twice to regenerate cross-references correctly.
 |     | knockabout    | uncouple      | unequipped    | unoccupied   |              |                |
 :end:
 
-
 \clearpage
 #+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 380   390)
@@ -4912,46 +4894,44 @@ at least twice to regenerate cross-references correctly.
 
 #+RESULTS[cf843172a7856b2f63fc446f9746263c36252f69]:
 :results:
-|-----+---------------+-------------+-------------+---------------+--------------+---------------|
-| 280 | naves         | novice      | nephews     | nevus         | envious      | infest        |
-|     | infuse        | invest      | investigate | invisible     | invoice      | knives        |
-|     | knaves        | unfasten    |             |               |              |               |
-|-----+---------------+-------------+-------------+---------------+--------------+---------------|
-| 281 | naphtha       | neophyte    | nifty       | no-fat        | Nevada       | inevitable    |
-|     | infidel       | invade      | innovate    | invidious     | invite       | unavoidable   |
-|     | unfadable     | unfit       |             |               |              |               |
-|-----+---------------+-------------+-------------+---------------+--------------+---------------|
-| 282 | novena        | newfound    | no-fun      | infant        | infantry     | infinite      |
-|     | invent        | inoffensive | invincible  | uneven        | uneventful   | unfinished    |
-|     | unfounded     | unwoven     |             |               |              |               |
-|-----+---------------+-------------+-------------+---------------+--------------+---------------|
-| 283 | navy-man      | November    | infamous    | one-family    | unfamiliar   |               |
-|-----+---------------+-------------+-------------+---------------+--------------+---------------|
-| 284 | nefarious     | nephritis   | nevevvr     | nouveau-riche | anniversary  | enforce       |
-|     | enfranchise   | environ     | infer       | infirm        | inform       | infringe      |
-|     | invariable    | invert      | knavery     | unfair        | unforeseen   | unforgettable |
-|     | unfortunate   | unfurnished | uniform     | universe      | university   | unvaried      |
-|     | unversed      |             |             |               |              |               |
-|-----+---------------+-------------+-------------+---------------+--------------+---------------|
-| 285 | Seinfeld      | anvil       | envelope    | infallible    | infield      | inflame       |
-|     | inflate       | inflict     | inflow      | influence     | influenza    | invalid       |
-|     | invaluable    | involuntary | involve     | invulnerable  | naval        | navel         |
-|     | novel         | sinful      | sniffle     | snowflake     | unavailable  | unfilled      |
-|     | unflattering  | unfold      | univalve    | unveil        |              |               |
-|-----+---------------+-------------+-------------+---------------+--------------+---------------|
-| 286 | new-fashion   | navy-ship   | novation    | envision      | inefficient  | infusion      |
-|     | infatuate     | innovation  | invasion    | knavish       | knife-edge   | unofficial    |
-|     | unfashionable |             |             |               |              |               |
-|-----+---------------+-------------+-------------+---------------+--------------+---------------|
-| 287 | navigator     | novocaine   | ineffective | infect        | invective    | invigorate    |
-|     | invoke        | unaffected  | Univac      |               |              |               |
-|-----+---------------+-------------+-------------+---------------+--------------+---------------|
-| 288 | navy-wife     | any-five    | in-view-of  | knife-file    | unfavorable  |               |
-|-----+---------------+-------------+-------------+---------------+--------------+---------------|
-| 289 | navy-bean     | navy-brass  | enfeeble    | enviable      | unevaporated | unfabricated  |
-|     | unifiable     |             |             |               |              |               |
+|-----+---------------+-------------+--------------+---------------+--------------+---------------|
+| 280 | naves         | novice      | nephews      | nevus         | envious      | infest        |
+|     | infuse        | invest      | investigate  | invisible     | invoice      | knives        |
+|     | knaves        | unfasten    |              |               |              |               |
+|-----+---------------+-------------+--------------+---------------+--------------+---------------|
+| 281 | naphtha       | neophyte    | nifty        | no-fat        | Nevada       | inevitable    |
+|     | infidel       | invade      | innovate     | invidious     | invite       | unavoidable   |
+|     | unfadable     | unfit       |              |               |              |               |
+|-----+---------------+-------------+--------------+---------------+--------------+---------------|
+| 282 | novena        | newfound    | no-fun       | infant        | infantry     | infinite      |
+|     | invent        | inoffensive | invincible   | uneven        | uneventful   | unfinished    |
+|     | unfounded     | unwoven     |              |               |              |               |
+|-----+---------------+-------------+--------------+---------------+--------------+---------------|
+| 283 | navy-man      | November    | infamous     | one-family    | unfamiliar   |               |
+|-----+---------------+-------------+--------------+---------------+--------------+---------------|
+| 284 | nefarious     | nephritis   | nevevvr      | nouveau-riche | anniversary  | enforce       |
+|     | enfranchise   | environ     | infer        | infirm        | inform       | infringe      |
+|     | invariable    | invert      | knavery      | unfair        | unforeseen   | unforgettable |
+|     | unfortunate   | unfurnished | uniform      | universe      | university   | unvaried      |
+|     | unversed      |             |              |               |              |               |
+|-----+---------------+-------------+--------------+---------------+--------------+---------------|
+| 285 | navel         | naval       | novel        | anvil         | envelope     | infallible    |
+|     | inflame       | infield     | inflate      | inflict       | influence    | influenza     |
+|     | inflow        | invalid     | invaluable   | involuntary   | involve      | invulnerable  |
+|     | unavailable   | unfilled    | unflattering | unfold        | univalve     | unveil        |
+|-----+---------------+-------------+--------------+---------------+--------------+---------------|
+| 286 | new-fashion   | navy-ship   | novation     | envision      | inefficient  | infusion      |
+|     | infatuate     | innovation  | invasion     | knavish       | knife-edge   | unofficial    |
+|     | unfashionable |             |              |               |              |               |
+|-----+---------------+-------------+--------------+---------------+--------------+---------------|
+| 287 | navigator     | novocaine   | ineffective  | infect        | invective    | invigorate    |
+|     | invoke        | unaffected  | Univac       |               |              |               |
+|-----+---------------+-------------+--------------+---------------+--------------+---------------|
+| 288 | navy-wife     | any-five    | in-view-of   | knife-file    | unfavorable  |               |
+|-----+---------------+-------------+--------------+---------------+--------------+---------------|
+| 289 | navy-bean     | navy-brass  | enfeeble     | enviable      | unevaporated | unfabricated  |
+|     | unifiable     |             |              |               |              |               |
 :end:
-
 
 \clearpage
 #+begin_src clojure :cache no :exports results :results verbatim drawer output
@@ -4960,44 +4940,41 @@ at least twice to regenerate cross-references correctly.
 
 #+RESULTS[801aba0054a4283959dcfc1244201c3872148672]:
 :results:
-|-----+------------+--------------+-------------+---------------+---------------+--------------|
-| 290 | NBC        | knapsack     | knobs       | nabs          | naps          | nibs         |
-|     | nips       | nubs         | synopsis    | unbiased      | unobscured    | unobserved   |
-|     | unopposed  |              |             |               |               |              |
-|-----+------------+--------------+-------------+---------------+---------------+--------------|
-| 291 | nobody     | no-bid       | nepotism    | Neptune       | anybody       | inapt        |
-|     | inept      | inhabit      | inhibit     | input         | knapweed      | unapt        |
-|     | unbutton   | unobtrusive  | unhoped     | unpaid        | unpatriotic   | sauna-bath   |
-|-----+------------+--------------+-------------+---------------+---------------+--------------|
-| 292 | nepenthe   | Nippon       | nubbin      | henbane       | inbound       | kneepan      |
-|     | one-by-one | unbeknownst  | unbind      | unbend        | unpin         | unopened     |
-|     | snub-nosed |              |             |               |               |              |
-|-----+------------+--------------+-------------+---------------+---------------+--------------|
-| 293 | napalm     | niobium      | honey-palm  | one-upmanship | wine-palm     | sunbeam      |
-|-----+------------+--------------+-------------+---------------+---------------+--------------|
-| 294 | napper     | neighbor     | napery      | newborn       | inappreciable | inopportune  |
-|     | inebriated | inborn       | unbearable  | unbroken      | unburden      | unparalleled |
-|     | unprepared | unpromising  | unproved    | unprovoked    | unpure        |              |
-|-----+------------+--------------+-------------+---------------+---------------+--------------|
-| 295 | showball   | nibble       | nipple      | nebulous      | niblick       | nobleman     |
-|     | nubile     | Naples       | Napoleon    | Hannibal      | Nobel         | enable       |
-|     | inability  | inapplicable | unable      | unbelief      | unbolt        | unbalanced   |
-|     | unpleasant |              |             |               |               |              |
-|-----+------------+--------------+-------------+---------------+---------------+--------------|
-| 296 | nuptials   | honey-beige  | one-page    | inhibition    | unabashed     | snapshot     |
-|-----+------------+--------------+-------------+---------------+---------------+--------------|
-| 297 | napkin     | nipping      | henpecked   | knobkerrie    | unbecoming    | unpack       |
-|     | Winnipeg   | unbuckle     |             |               |               |              |
-|-----+------------+--------------+-------------+---------------+---------------+--------------|
-| 298 | napiform   | unpaved      | unbefitting | unbeveled     | unbehaved     | unhopeful    |
-|     | unbaffled  |              |             |               |               |              |
-|-----+------------+--------------+-------------+---------------+---------------+--------------|
-| 299 | nabob      | nip-up       | unbiblical  | unpayable     | unpopular     | unpublished  |
+|-----+--------------+-------------+-------------+---------------+---------------+--------------|
+| 290 | nabs         | naps        | nibs        | nips          | NBC           | nubs         |
+|     | knapsack     | knobs       | unbiased    | unobserved    | unobscured    | unopposed    |
+|-----+--------------+-------------+-------------+---------------+---------------+--------------|
+| 291 | nobody       | no-bid      | nepotism    | Neptune       | anybody       | inapt        |
+|     | inept        | inhabit     | inhibit     | input         | knapweed      | unapt        |
+|     | unbutton     | unobtrusive | unhoped     | unpaid        | unpatriotic   | sauna-bath   |
+|-----+--------------+-------------+-------------+---------------+---------------+--------------|
+| 292 | nepenthe     | Nippon      | nubbin      | henbane       | inbound       | kneepan      |
+|     | one-by-one   | unbeknownst | unbind      | unbend        | unpin         | unopened     |
+|     | snub-nosed   |             |             |               |               |              |
+|-----+--------------+-------------+-------------+---------------+---------------+--------------|
+| 293 | napalm       | niobium     | honey-palm  | one-upmanship | wine-palm     | sunbeam      |
+|-----+--------------+-------------+-------------+---------------+---------------+--------------|
+| 294 | napper       | neighbor    | napery      | newborn       | inappreciable | inopportune  |
+|     | inebriated   | inborn      | unbearable  | unbroken      | unburden      | unparalleled |
+|     | unprepared   | unpromising | unproved    | unprovoked    | unpure        |              |
+|-----+--------------+-------------+-------------+---------------+---------------+--------------|
+| 295 | nibble       | nipple      | nebulous    | niblick       | nobleman      | nubile       |
+|     | Naples       | Napoleon    | Hannibal    | Nobel         | enable        | inability    |
+|     | inapplicable | unable      | unbelief    | unbolt        | unbalanced    | unpleasant   |
+|-----+--------------+-------------+-------------+---------------+---------------+--------------|
+| 296 | nuptials     | honey-beige | one-page    | inhibition    | unabashed     | snapshot     |
+|-----+--------------+-------------+-------------+---------------+---------------+--------------|
+| 297 | napkin       | nipping     | henpecked   | knobkerrie    | unbecoming    | unpack       |
+|     | Winnipeg     | unbuckle    |             |               |               |              |
+|-----+--------------+-------------+-------------+---------------+---------------+--------------|
+| 298 | napiform     | unpaved     | unbefitting | unbeveled     | unbehaved     | unhopeful    |
+|     | unbaffled    |             |             |               |               |              |
+|-----+--------------+-------------+-------------+---------------+---------------+--------------|
+| 299 | nabob        | nip-up      | unbiblical  | unpayable     | unpopular     | unpublished  |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 400   410)
 #+end_src
 
@@ -5040,9 +5017,8 @@ at least twice to regenerate cross-references correctly.
 |     | misprint      | homo-sapiens  | homespun    | mass-produced |               |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 410   420)
 #+end_src
 
@@ -5085,9 +5061,8 @@ at least twice to regenerate cross-references correctly.
 | 319 | meatball  | made-up    | metabolic   | mouthpiece  | mutable    | mudpie        |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 420   430)
 #+end_src
 
@@ -5136,9 +5111,8 @@ at least twice to regenerate cross-references correctly.
 |     | amenable    | hymenopteron  | omnibus      | omnipotent |              |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 430   440)
 #+end_src
 
@@ -5172,9 +5146,8 @@ at least twice to regenerate cross-references correctly.
 |     | memo-pad     | mummy-bag  | mumbo-jumbo    |               |           |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 440   450)
 #+end_src
 
@@ -5215,9 +5188,8 @@ at least twice to regenerate cross-references correctly.
 |     | moribund    | hammer-beam | hammer-blow  |            |            |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 450   460)
 #+end_src
 
@@ -5259,9 +5231,8 @@ at least twice to regenerate cross-references correctly.
 :end:
 
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 460   470)
 #+end_src
 
@@ -5291,9 +5262,8 @@ at least twice to regenerate cross-references correctly.
 | 369 | matchable   | matchbook  | matchbox  | matchboard | match-up    | mushball |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 470   480)
 #+end_src
 
@@ -5328,9 +5298,8 @@ at least twice to regenerate cross-references correctly.
 |     | hummingbird | Yom-Kippur   | amicable   |           |               |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 480   490)
 #+end_src
 
@@ -5362,9 +5331,8 @@ at least twice to regenerate cross-references correctly.
 | 389 | movable    | movie-plot   | move-up     | amphibious   | amphipod     | amphibole    |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 490   500)
 #+end_src
 
@@ -5408,9 +5376,8 @@ at least twice to regenerate cross-references correctly.
 | 399 | maypop     | mopboard     | mop-up     | humpback     | imbibe       | impubic     |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 500   510)
 #+end_src
 
@@ -5453,9 +5420,8 @@ at least twice to regenerate cross-references correctly.
 |     | responsible  | airspace    | horseback    | horsepower    | horsewhip   | irascible |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 510   520)
 #+end_src
 
@@ -5506,9 +5472,8 @@ at least twice to regenerate cross-references correctly.
 |     | ratproof    | redback       | redberry   | redouble     |            |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 520   530)
 #+end_src
 
@@ -5549,9 +5514,8 @@ at least twice to regenerate cross-references correctly.
 |     | hornblende | hornbook  | hornpipe   |            |            |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 530   540)
 #+end_src
 
@@ -5591,9 +5555,8 @@ at least twice to regenerate cross-references correctly.
 |     | rambunctious | rambutan    | armpit    | warm-up   |            |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 540   550)
 #+end_src
 
@@ -5626,9 +5589,8 @@ at least twice to regenerate cross-references correctly.
 | 449 | rarebit     | re-orbit     | roorback   | wire-rope |             |           |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 550   560)
 #+end_src
 
@@ -5668,9 +5630,8 @@ at least twice to regenerate cross-references correctly.
 |     | earlobe     | harelip   | hurly-burly | orlop        | whirlpool |           |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 560   570)
 #+end_src
 
@@ -5709,9 +5670,8 @@ at least twice to regenerate cross-references correctly.
 |     | worship     |               |             |              |           |           |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 570   580)
 #+end_src
 
@@ -5756,9 +5716,8 @@ at least twice to regenerate cross-references correctly.
 |     | rock-bottom  | rugby          | archipelago | ark-boat   | herringbone | arquebus   |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 580   590)
 #+end_src
 
@@ -5795,9 +5754,8 @@ at least twice to regenerate cross-references correctly.
 | 489 | rev-up     | reviewable | refabricate  | roofable    | rough-up    | wharf-boat |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 590   600)
 #+end_src
 
@@ -5843,9 +5801,8 @@ at least twice to regenerate cross-references correctly.
 |     | orb-web   | war-baby   |             |           |             |          |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 600   610)
 #+end_src
 
@@ -5881,9 +5838,8 @@ at least twice to regenerate cross-references correctly.
 |     | allspice      |               |               |              |             |              |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 610   620)
 #+end_src
 
@@ -5929,9 +5885,8 @@ at least twice to regenerate cross-references correctly.
 |     | let-up       | hilltop      | holdback   | hold-up     | wildebeest    |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 620   630)
 #+end_src
 
@@ -5973,9 +5928,8 @@ at least twice to regenerate cross-references correctly.
 |     | loanable    | loanblend     | alienable   |            |           |               |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 630   640)
 #+end_src
 
@@ -6014,9 +5968,8 @@ at least twice to regenerate cross-references correctly.
 |     | Olympics    | slumber       |               |                 |            |           |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 640   650)
 #+end_src
 
@@ -6052,9 +6005,8 @@ at least twice to regenerate cross-references correctly.
 |     | lyre-back   | lyrebird    |               |             |             |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 650   660)
 #+end_src
 
@@ -6085,9 +6037,8 @@ at least twice to regenerate cross-references correctly.
 | 559 | lalapalooza | lilliputian | lollipop     | lullaby      |                |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 660   670)
 #+end_src
 
@@ -6119,9 +6070,8 @@ at least twice to regenerate cross-references correctly.
 | 569 | awl-shaped  | hell-ship   | algebra       | oil-job     | oil-ship    | well-shaped |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 670   680)
 #+end_src
 
@@ -6165,9 +6115,8 @@ at least twice to regenerate cross-references correctly.
 |     | look-up         | longboat    | lugubrious | helicopter  | allocable  |                  |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 680   690)
 #+end_src
 
@@ -6210,9 +6159,8 @@ at least twice to regenerate cross-references correctly.
 |     | live-by      | live-up      | lovable    | lovebird        | love-potion   | alphabet     |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 690   700)
 #+end_src
 
@@ -6252,9 +6200,8 @@ at least twice to regenerate cross-references correctly.
 | 599 | lap-up      | leap-up        | ale-pub      | Ali-Baba   | oil-pipe    | wallpaper |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 700   710)
 #+end_src
 
@@ -6290,9 +6237,8 @@ at least twice to regenerate cross-references correctly.
 |     | jazzbow      | juice-up       | Jezebel       | shoespoon    | Josup       | Shuswap    |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 710   720)
 #+end_src
 
@@ -6334,9 +6280,8 @@ at least twice to regenerate cross-references correctly.
 |     | washed-up   | washtub    |            |               |           |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 720   730)
 #+end_src
 
@@ -6379,9 +6324,8 @@ at least twice to regenerate cross-references correctly.
 |     | shinplaster |              |            |              |            |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 730   740)
 #+end_src
 
@@ -6419,9 +6363,8 @@ at least twice to regenerate cross-references correctly.
 |     | jumbo      | jumble     | jump        | shambles    | shampoo    |           |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 740   750)
 #+end_src
 
@@ -6465,9 +6408,8 @@ at least twice to regenerate cross-references correctly.
 |     | shrapnel  | shrub       |              |             |           |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 750   760)
 #+end_src
 
@@ -6505,9 +6447,8 @@ at least twice to regenerate cross-references correctly.
 |     | julep       | shallop     | shellapple | shellback    | shellproof    | shilpit    |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 760   770)
 #+end_src
 
@@ -6538,9 +6479,8 @@ at least twice to regenerate cross-references correctly.
 |     | shoe-shop       | showshop    |             |              |            |              |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 770   780)
 #+end_src
 
@@ -6586,9 +6526,8 @@ at least twice to regenerate cross-references correctly.
 |     | shakeup         |             |             |              |            |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 780   790)
 #+end_src
 
@@ -6625,9 +6564,8 @@ at least twice to regenerate cross-references correctly.
 | 689 | chaffable          | chavibetol | achievable   | shove-up    | watch-fob  |               |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 790   800)
 #+end_src
 
@@ -6670,9 +6608,8 @@ at least twice to regenerate cross-references correctly.
 |     | sheep-pod    | shipboard   | shipbuilder | hushpuppy   |             |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 800   810)
 #+end_src
 
@@ -6721,9 +6658,8 @@ at least twice to regenerate cross-references correctly.
 |     | expire       | explain       | explore           | export     | express        | exuberant   |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 810   820)
 #+end_src
 
@@ -6771,9 +6707,8 @@ at least twice to regenerate cross-references correctly.
 |     | equitable  | October      | octopus     |             |               |               |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 820   830)
 #+end_src
 
@@ -6822,9 +6757,8 @@ at least twice to regenerate cross-references correctly.
 |     | gunpoint      | gunpowder    | queenbee      | ignoble    |              |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 830   840)
 #+end_src
 
@@ -6867,9 +6801,8 @@ at least twice to regenerate cross-references correctly.
 |     | gamble        | gambit      | gambol     | gumbo      |            |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 840   845)
 #+end_src
 
@@ -6912,9 +6845,8 @@ at least twice to regenerate cross-references correctly.
 |     | agrarian  |           |               |            |            |           |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph    845 850)
 #+end_src
 
@@ -6950,71 +6882,67 @@ at least twice to regenerate cross-references correctly.
 |     | grub        |            |            |             |             |              |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 850   860)
 #+end_src
 
 #+RESULTS[482375521f818730b674ffab0275515954f05add]:
 :results:
-|-----+-------------+------------+--------------+--------------+-----------+--------------|
-| 750 | calcium     | callous    | calls        | cholesterol  | clasp     | class        |
-|     | clause      | close      | closet       | cluster      | colossus  | equalize     |
-|     | gallows     | glass      | glaze        | glissade     | gloss     | isinglass    |
-|     | oculist     |            |              |              |           |              |
-|-----+-------------+------------+--------------+--------------+-----------+--------------|
-| 751 | cauldron    | clad       | cleat        | clod         | cloth     | cloud        |
-|     | cold        | collide    | colitis      | colt         | cult      | geld         |
-|     | gilt        | glad       | glade        | glide        | glitter   | Goliath      |
-|     | gloat       | glut       | gold         | guild        | guilt     | kilt         |
-|     | killed      | kilowatt   | quilt        | equality     | occult    | wiglet       |
-|     | escalator   |            |              |              |           |              |
-|-----+-------------+------------+--------------+--------------+-----------+--------------|
-| 752 | calendar    | call-in    | clandestine  | clean        | clench    | client       |
-|     | clinch      | clinic     | clink        | clown        | colin     | colleen      |
-|     | colon       | cologne    | colony       | coolness     | gallant   | gallon       |
-|     | glance      | gland      | glean        | glen         | kiln      | ugliness     |
-|     | esculent    |            |              |              |           |              |
-|-----+-------------+------------+--------------+--------------+-----------+--------------|
-| 753 | calamity    | calumniate | claim        | clammy       | clamor    | clamp        |
-|     | clemency    | climate    | climb        | clump        | clumsy    | column       |
-|     | culminate   | glamour    | gleam        | glimmer      | glimpse   | gloam        |
-|     | gloom       | glum       | acclaim      | acclimate    | kilometer | schoolmaster |
-|-----+-------------+------------+--------------+--------------+-----------+--------------|
-| 754 | caller      | calorie    | chlorite     | claret       | clarify   | clarinet     |
-|     | clarion     | clear      | clergy       | clerk        | collar    | color        |
-|     | cooler      | galore     | gallery      | glare        | glory     | glowworm     |
-|     | killer      | Kilroy     | eclair       | heckler      | ocular    | ogler        |
-|     | scholar     |            |              |              |           |              |
-|-----+-------------+------------+--------------+--------------+-----------+--------------|
-| 755 | Galilean    | Galilee    | clawless     | coalhole     | coaloil   | glow-lamp    |
-|     | guileless   | keelhaul   | echolalia    | ukulele      | uglily    |              |
-|-----+-------------+------------+--------------+--------------+-----------+--------------|
-| 756 | clash       | clutch     | collage      | collation    | college   | collision    |
-|     | coolish     | galosh     | Gaulish      | glacier      | goulash   | keelage      |
-|     | killjoy     | klatch     | ecology      | English      |           |              |
-|-----+-------------+------------+--------------+--------------+-----------+--------------|
-| 757 | calculator  | calico     | calling      | clang        | claque    | click        |
-|     | cling       | cloak      | clock        | clog         | colic     | colleague    |
-|     | collect     | colloquy   | cowlick      | Gaelic       | galling   | goalkeeper   |
-|     | kilogram    | kulak      | aqualung     |              |           |              |
-|-----+-------------+------------+--------------+--------------+-----------+--------------|
-| 758 | cauliflower | clavate    | cleave       | cleft        | clever    | cliff        |
-|     | culvert     | clove      | gallivant    | glove        | golf      | gulf         |
-|     | killifish   | qualify    | oakleaf      | skillful     |           |              |
-|-----+-------------+------------+--------------+--------------+-----------+--------------|
-| 759 | calabash    | caliber    | calliope     | calaboose    | calypso   | clip         |
-|     | club        | coalpit    | collaborator | collapse     | culpable  | gallop       |
-|     | glib        | glob       | gallbladder  | globe        | goalpost  | gullible     |
-|     | gulp        | kelp       | kelpie       | kleptomaniac | eclipse   | equilibrium  |
-|     | eucalyptus  |            |              |              |           |              |
+|-----+-------------+------------+--------------+--------------+-------------+--------------|
+| 750 | calls       | calcium    | callous      | clasp        | class       | clause       |
+|     | close       | closet     | cluster      | colossus     | cholesterol | gallows      |
+|     | glass       | glaze      | glissade     | gloss        | equalize    | oculist      |
+|-----+-------------+------------+--------------+--------------+-------------+--------------|
+| 751 | cauldron    | clad       | cleat        | clod         | cloth       | cloud        |
+|     | cold        | collide    | colitis      | colt         | cult        | geld         |
+|     | gilt        | glad       | glade        | glide        | glitter     | Goliath      |
+|     | gloat       | glut       | gold         | guild        | guilt       | kilt         |
+|     | killed      | kilowatt   | quilt        | equality     | occult      | wiglet       |
+|     | escalator   |            |              |              |             |              |
+|-----+-------------+------------+--------------+--------------+-------------+--------------|
+| 752 | calendar    | call-in    | clandestine  | clean        | clench      | client       |
+|     | clinch      | clinic     | clink        | clown        | colin       | colleen      |
+|     | colon       | cologne    | colony       | coolness     | gallant     | gallon       |
+|     | glance      | gland      | glean        | glen         | kiln        | ugliness     |
+|     | esculent    |            |              |              |             |              |
+|-----+-------------+------------+--------------+--------------+-------------+--------------|
+| 753 | calamity    | calumniate | claim        | clammy       | clamor      | clamp        |
+|     | clemency    | climate    | climb        | clump        | clumsy      | column       |
+|     | culminate   | glamour    | gleam        | glimmer      | glimpse     | gloam        |
+|     | gloom       | glum       | acclaim      | acclimate    | kilometer   | schoolmaster |
+|-----+-------------+------------+--------------+--------------+-------------+--------------|
+| 754 | caller      | calorie    | chlorite     | claret       | clarify     | clarinet     |
+|     | clarion     | clear      | clergy       | clerk        | collar      | color        |
+|     | cooler      | galore     | gallery      | glare        | glory       | glowworm     |
+|     | killer      | Kilroy     | eclair       | heckler      | ocular      | ogler        |
+|     | scholar     |            |              |              |             |              |
+|-----+-------------+------------+--------------+--------------+-------------+--------------|
+| 755 | Galilean    | Galilee    | clawless     | coalhole     | coaloil     | glow-lamp    |
+|     | guileless   | keelhaul   | echolalia    | ukulele      | uglily      |              |
+|-----+-------------+------------+--------------+--------------+-------------+--------------|
+| 756 | clash       | clutch     | collage      | collation    | college     | collision    |
+|     | coolish     | galosh     | Gaulish      | glacier      | goulash     | keelage      |
+|     | killjoy     | klatch     | ecology      | English      |             |              |
+|-----+-------------+------------+--------------+--------------+-------------+--------------|
+| 757 | calculator  | calico     | calling      | clang        | claque      | click        |
+|     | cling       | cloak      | clock        | clog         | colic       | colleague    |
+|     | collect     | colloquy   | cowlick      | Gaelic       | galling     | goalkeeper   |
+|     | kilogram    | kulak      | aqualung     |              |             |              |
+|-----+-------------+------------+--------------+--------------+-------------+--------------|
+| 758 | cauliflower | clavate    | cleave       | cleft        | clever      | cliff        |
+|     | culvert     | clove      | gallivant    | glove        | golf        | gulf         |
+|     | killifish   | qualify    | oakleaf      | skillful     |             |              |
+|-----+-------------+------------+--------------+--------------+-------------+--------------|
+| 759 | calabash    | caliber    | calliope     | calaboose    | calypso     | clip         |
+|     | club        | coalpit    | collaborator | collapse     | culpable    | gallop       |
+|     | glib        | glob       | gallbladder  | globe        | goalpost    | gullible     |
+|     | gulp        | kelp       | kelpie       | kleptomaniac | eclipse     | equilibrium  |
+|     | eucalyptus  |            |              |              |             |              |
 :end:
 
-
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 860   870)
 #+end_src
 
@@ -7049,9 +6977,8 @@ at least twice to regenerate cross-references correctly.
 |     | ketchup    | key-job     |             |            |              |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 870   880)
 #+end_src
 
@@ -7095,9 +7022,8 @@ at least twice to regenerate cross-references correctly.
 |     | kickup     | kakapo         | kingpin        | kookaburra   | eggcup       |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 880   890)
 #+end_src
 
@@ -7133,9 +7059,8 @@ at least twice to regenerate cross-references correctly.
 | 789 | coffeeberry     | coffeebush    | coffeepot    | cough-up  | give-up     | goofball     |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 890   900)
 #+end_src
 
@@ -7178,9 +7103,8 @@ at least twice to regenerate cross-references correctly.
 |     | cubeb       | cupbearer  | kabob      | keep-up    | key-pipe   |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 900   910)
 #+end_src
 
@@ -7223,9 +7147,8 @@ at least twice to regenerate cross-references correctly.
 |     | vesper      | vice-president | visible       | office-boy       | offspring       |              |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 910   920)
 #+end_src
 
@@ -7268,9 +7191,8 @@ at least twice to regenerate cross-references correctly.
 |     | footpace   | footpath     | footprint    | avoidable  |                |                |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 920   930)
 #+end_src
 
@@ -7312,9 +7234,8 @@ at least twice to regenerate cross-references correctly.
 |     | oven-baked  | ovenbird   |            |               |             |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 930   940)
 #+end_src
 
@@ -7349,9 +7270,8 @@ at least twice to regenerate cross-references correctly.
 |     | vimpa      | Phomopsis       | half-implied   |              |             |           |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 940   950)
 #+end_src
 
@@ -7415,9 +7335,8 @@ at least twice to regenerate cross-references correctly.
 |     | overpower  | overburden   |           |            |            |              |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 950   960)
 #+end_src
 
@@ -7473,9 +7392,8 @@ at least twice to regenerate cross-references correctly.
 |     | volplane    | voluptuous     | available    |            |             |           |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 960   970)
 #+end_src
 
@@ -7516,9 +7434,8 @@ at least twice to regenerate cross-references correctly.
 |     | off-job     | wave-shape   |                |              |            |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 970   980)
 #+end_src
 
@@ -7563,9 +7480,8 @@ at least twice to regenerate cross-references correctly.
 |     | evocable   | half-cap    | huffcap      | safekeeping |             |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 980   990)
 #+end_src
 
@@ -7601,9 +7517,8 @@ at least twice to regenerate cross-references correctly.
 |     | viviparous  |              |             |               |              |                |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 990   1000)
 #+end_src
 
@@ -7641,9 +7556,8 @@ at least twice to regenerate cross-references correctly.
 | 899 | fob-pocket | half-bib   | half-bob     | V-bob       |           |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 1000  1010)
 #+end_src
 
@@ -7654,12 +7568,12 @@ at least twice to regenerate cross-references correctly.
 |     | poses         | basis         | bosses     | buses       | apsis      | abscess     |
 |     | obsess        |               |            |             |            |             |
 |-----+---------------+---------------+------------+-------------+------------+-------------|
-| 901 | abstain       | abstemious    | abstract   | apostrophe  | base-hit   | bast        |
-|     | bastard       | baste         | beast      | beside      | best       | bestow      |
-|     | bistro        | boast         | boisterous | bust        | obstacle   | obstruct    |
-|     | opposite      | past          | paste      | pastor      | pastry     | peseta      |
-|     | pest          | pistol        | piston     | positive    | post       | postiche    |
-|     | postillion    | upset         | upstairs   | upstart     |            |             |
+| 901 | past          | paste         | pastor     | pastry      | peseta     | pest        |
+|     | piston        | pistol        | post       | positive    | postiche   | postillion  |
+|     | base-hit      | bast          | bastard    | baste       | beast      | beside      |
+|     | best          | bestow        | bistro     | boast       | boisterous | bust        |
+|     | abstain       | abstract      | apostrophe | obstacle    | obstruct   | opposite    |
+|     | upset         | upstairs      | upstart    |             |            |             |
 |-----+---------------+---------------+------------+-------------+------------+-------------|
 | 902 | peasant       | poison        | baseness   | basin       | bassinet   | bassoon     |
 |     | bison         | business      | absent     | epicene     | obeisance  | obscene     |
@@ -7692,9 +7606,8 @@ at least twice to regenerate cross-references correctly.
 |     | busybody      | upsweep       |            |             |            |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph  1010 1020)
 #+end_src
 
@@ -7746,9 +7659,8 @@ at least twice to regenerate cross-references correctly.
 |     | hospitable   |              |             |            |             |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 1020 1030)
 #+end_src
 
@@ -7801,9 +7713,8 @@ at least twice to regenerate cross-references correctly.
 |     | pinniped   | pinup        | bonapartist | bonebreaker | hobnob        | open-up     |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 1030 1040)
 #+end_src
 
@@ -7844,9 +7755,8 @@ at least twice to regenerate cross-references correctly.
 |     | bumper        |                |             |           |            |           |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 1040 1045)
 #+end_src
 
@@ -7888,8 +7798,7 @@ at least twice to regenerate cross-references correctly.
 |     | bearer      | borer     | borrower  | brewer      | briar       | uproar       |
 :end:
 
-
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 1045 1050)
 #+end_src
 
@@ -7933,9 +7842,8 @@ at least twice to regenerate cross-references correctly.
 |     | approbate  | appropriation | apropos     | hyperbole  |              |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 1050 1060)
 #+end_src
 
@@ -8000,9 +7908,8 @@ at least twice to regenerate cross-references correctly.
 |     | applepie   | epileptic  |              |           |           |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 1060 1070)
 #+end_src
 
@@ -8046,9 +7953,8 @@ at least twice to regenerate cross-references correctly.
 |     | bush-pea    | bushpig     | heebie-jeebies | hobby-shop |             |             |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 1070 1080)
 #+end_src
 
@@ -8100,9 +8006,8 @@ at least twice to regenerate cross-references correctly.
 |     | buckpot    | buck-up      | hubcap      | upkeep     |            |                |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 1080 1090)
 #+end_src
 
@@ -8140,9 +8045,8 @@ at least twice to regenerate cross-references correctly.
 |     | buffable  | buffbar    | aboveboard |            |             |            |
 :end:
 
-
 \clearpage
-#+begin_src clojure :cache yes :exports results :results verbatim drawer output
+#+begin_src clojure :cache no :exports results :results verbatim drawer output
 (babomorph 1090 1101)
 #+end_src
 
@@ -8183,7 +8087,6 @@ at least twice to regenerate cross-references correctly.
 |------+--------------+------------+------------+--------------+------------+------------|
 | 1000 | dioceses     | diseases   | disuses    |              |            |            |
 :end:
-
 
 \clearpage
 ** Picture Words from John D. Cook
