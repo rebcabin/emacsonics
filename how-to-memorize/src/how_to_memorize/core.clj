@@ -520,14 +520,14 @@
              )
 
            '((100023 "N")
-             "CINNAMON"
-             "SNOWMOBILE"
-             "snowman"
-             "cinema"
-             "sea-anemone"
-             "cyanamide"
+             "CINEMA"
+             ;"cinnamon"
+             ;"snowmobile"
+             ;"snowman"
+             ;"sea-anemone"
+             ;"cyanamide"
 
-             "wisenheimer"
+             ;"wisenheimer"
              )
 
            '((100024 "O")
@@ -536,22 +536,20 @@
              "senior"
              "snore"
              "scenery"
-             "sunrise"
+             ;"sunrise"
 
              "snare"
              "sneer"
-             "snort"
-             "snarl"
-             "sonorous"
+             ;"snort"
+             ;"snarl"
+             ;"sonorous"
              )
 
            '((100025 "P")
              "SENILE"
-             "SUNLAMP"
+             ;"sunlamp"
              "snell"
              "snail"
-             "sunlight"
-             ""
              )
 
            '((100026 "Q")
@@ -560,14 +558,14 @@
              "cinch"
              "singe"
              "snatch"
-             "censure"
+             ;"censure"
 
-             "ascension"
-             "century"
-             "sensual"
+             ;"ascension"
+             ;"century"
+             ;"sensual"
              "snitch"
-             "snow-job"
-             "sunshine"
+             ;"snow-job"
+             ;"sunshine"
              )
 
            '((100027 "R")
@@ -6957,17 +6955,22 @@
            '(232
              "NEW-MOON"
 
+             "cinnamon"
+             "cyanamide"
+             "honeymoon"
+             "inhuman"
              "nominal"
              "nominee"
              "numbness"
-             "honeymoon"
-             "inhuman"
+             "pneumonia"
+             "sea-anemone"
+             "snowman"
              "unmanly"
              "unmannerly"
              "unmentionable"
              "unmindful"
              "unwomanly"
-             "pneumonia"
+             "wisenheimer"
              )
 
            '(233
@@ -7068,15 +7071,18 @@
            '(241
              "NARRATOR"
 
-             "neurotic"
-             "nard"
-             "north"
              "inarticulate"
              "inert"
              "inheritance"
              "inroad"
              "inward"
+             "nard"
+             "nerd"
+             "neurotic"
+             "north"
              "onward"
+             "snarl"
+             "snort"
              "unearth"
              "unhurt"
              "unredeemed"
@@ -7207,20 +7213,21 @@
            '(251
              "NEWLYWED"
 
-             "nailed"
              "annihilate"
              "annulled"
              "enlighten"
              "inalterable"
-             "inlet"
              "inhaled"
-             "unhealthy"
-             "unallowed"
-             "unallotted"
-             "unladylike"
-             "unload"
-             "unlit"
+             "inlet"
              "knelt"
+             "nailed"
+             "sunlight"
+             "unallotted"
+             "unallowed"
+             "unhealthy"
+             "unladylike"
+             "unlit"
+             "unload"
              )
 
            '(252
@@ -7237,6 +7244,7 @@
            '(253
              "ANNULMENT"
 
+             "sunlamp"
              "newly-made"
              "unlimited"
              "un﻿illuminated"
@@ -7348,20 +7356,22 @@
            '(262
              "ENGINE"
 
-             "nation"
-             "notion"
              "ancient"
+             "ascension"
              "enchant"
              "engineer"
              "enjoin"
-             "ingenue"
              "ingenious"
+             "ingenue"
              "injunction"
              "knee-jointed"
-             "ungentle"
-             "ungenerous"
-             "unchanged"
+             "nation"
+             "notion"
+             "sunshine"
              "unchained"
+             "unchanged"
+             "ungenerous"
+             "ungentle"
              )
 
            '(263
@@ -7375,18 +7385,19 @@
            '(264
              "KNEE-JERK"
 
+             "censure"
+             "century"
+             "enshrine"
+             "ensure"
+             "injury"
+             "insurance"
              "nature"
              "notcher"
              "nudger"
-             "ensure"
-             "enshrine"
-             "injury"
-             "insurance"
-             "onager"
              "on-shore"
+             "onager"
              "unshrinkable"
              "unsure"
-             "century"
              )
 
            '(265
@@ -7394,6 +7405,7 @@
              "ENCHILADA"
 
              "initial"
+             "sensual"
              "unchallenged"
              "unchilled"
              "unshielded"
@@ -7435,9 +7447,10 @@
              "HUNCHBACK"
 
              "enjoyable"
+             "snow-job"
+             "unchaperoned"
              "unshapely"
              "unship"
-             "unchaperoned"
              "unwashable"
              "wineshop"
              )

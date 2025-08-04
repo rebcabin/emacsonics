@@ -171,12 +171,6 @@
 : Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
 :  of 2023-07-29
 : org version: 9.6.6
-: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
-:  of 2023-07-29
-: org version: 9.6.6
-: Emacs version: GNU Emacs 29.1 (build 1, aarch64-apple-darwin21.6.0, NS appkit-2113.60 Version 12.6.6 (Build 21G646))
-:  of 2023-07-29
-: org version: 9.6.6
 
 \clearpage
 * Change log
@@ -519,7 +513,7 @@ for 32:
   (babomorph 132 133)
 #+end_src
 
-#+RESULTS[e8871715efa2ffbac7cbbb6e25a5e7c6c0857190]:
+#+RESULTS[c73f78f3ec40ebbcdf9733e33285918be30c387f]:
 :results:
 |----+-------+---------+--------+-------+------+--------|
 | 32 | MAN   | MOON    | mane   | hymen | mine | minnow |
@@ -527,6 +521,7 @@ for 32:
 |    | manna | many    | mean   | mien  | moan | money  |
 |    | omen  | woman   | yeoman |       |      |        |
 :end:
+
 
 */Notes on such tables/*:
 
@@ -565,12 +560,13 @@ list for $xyz=352$:
   (babomorph 452 453)
 #+end_src
 
-#+RESULTS[b74143594e82a2c04eaf9b6fb1ba2981c4fb4fb9]:
+#+RESULTS[feb7343cbe9fa0c01dd859afe2e0cddc49afdd38]:
 :results:
 |-----+--------+------------+------------+------------+----------+----------|
 | 352 | MELON  | Himalayans | hemline    | semolina   | milliner | homeland |
 |     | malign | melancholy | millennial | millennium | million  |          |
 :end:
+
 
 When making up pegs and sound-alikes, weak consonant sounds such as
 H, WH, Y, and W are free. For example, ignore the H in /hemline/. Use soft
@@ -611,12 +607,13 @@ seen above. However, /semolina/ also appears in Furst's table for
   (babomorph 35 36)
 #+end_src
 
-#+RESULTS[5e3196a6134f91bb4d259241e78e67df4b2e0e2f]:
+#+RESULTS[f3260c3f510a9a32f1326e2a573192e146af518d]:
 :results:
 |-----+----------+----------+----------+--------+---------+--------|
 | 035 | SAWMILL  | SMILE    | semolina | smell  | small   | simile |
 |   Z | sea-mile | sea-mule | seamless | seemly | similar |        |
 :end:
+
 
 /Semolina/ belongs in the table for 035 by the "trailing-sounds
 rule:"
@@ -635,12 +632,13 @@ table for 354:
   (babomorph 454 455)
 #+end_src
 
-#+RESULTS[33703dee343d57c9f6b7c01b7ecc0a0619b3a75e]:
+#+RESULTS[0a8ad960d5ac76960d1e9603cd152fa2741c9bcd]:
 :results:
 |-----+--------+--------+------------+------------+----------+----------|
 | 354 | molar  | miler  | malaria    | miller     | milliard | mealworm |
 |     | mailer | milord | millwright | ameliorate | similar  |          |
 :end:
+
 
 *** TODO Fix These Exceptions
 
@@ -950,7 +948,7 @@ and their sound-alikes:
   (babomorph 165 171)
 #+end_src
 
-#+RESULTS[d37d3ceb070b01bb4fecfe928f51d2d34237b452]:
+#+RESULTS[1054dfba4c406d977855c98e8b625e4a62532386]:
 :results:
 |----+-------------+-----------+----------+----------+----------+----------|
 | 65 | JAIL        | CHILI     | jelly    | jewel    | shell    | shawl    |
@@ -981,6 +979,7 @@ and their sound-alikes:
 |    | cozy        | cuss      | gauze    | gaze     | guess    | guise    |
 |    | guys        | hex       | hoax     | quasi    | wax      |          |
 :end:
+
 
 Remember that 7 can be /ng/ in Furst's system, the one we're
 following, explaining why we get so many \ldots /ing/ words
@@ -1969,7 +1968,7 @@ in all caps.
   (babomorph 10 16)
 #+end_src
 
-#+RESULTS[4c69c56e687a2fe05b2dd8e40e98618ed9a72876]:
+#+RESULTS[e51b096ba304a9aa3e4b5207be6f252e26802869]:
 :results:
 |-----+-----------+-----------+---------+----------+----------+---------|
 | 010 | HOSTESS   | SOUTH-SEA | sweets  | cities   | assets   | stays   |
@@ -1995,6 +1994,7 @@ in all caps.
 | 015 | SADDLE    | STOOL     | still   | stall    | steel    | style   |
 |   F | hostile   | sadly     | settle  | stale    | steal    |         |
 :end:
+
 
 
 
@@ -2971,7 +2971,7 @@ at least twice to regenerate cross-references correctly.
   (babomorph 0 10)
 #+end_src
 
-#+RESULTS[c7aea611129db7f4202727cf5ffed4f835e976ed]:
+#+RESULTS[7ecf5cbc3481e60410646e89bc93d7140a6cad17]:
 :results:
 |----+----------+---------+----------+----------+-----------+---------|
 | 00 | SAUCE    | OASIS   | icehouse | sissy    | sass      | seesaw  |
@@ -3020,12 +3020,13 @@ at least twice to regenerate cross-references correctly.
 :end:
 
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 10 20)
 #+end_src
 
-#+RESULTS[e86c7415addcfea115c7bf1cbd65b62acd30fabb]:
+#+RESULTS[467e25442ad914e480408d3d35c363768e576119]:
 :results:
 |-----+------------+-----------+---------+----------+----------+---------|
 | 010 | HOSTESS    | SOUTH-SEA | sweets  | cities   | assets   | stays   |
@@ -3067,54 +3068,56 @@ at least twice to regenerate cross-references correctly.
 
 
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 20 30)
 #+end_src
 
-#+RESULTS[4c49c1f2957149d3786cb7206318902f11883348]:
+#+RESULTS[aac58782ba68f4820cb4a2d98d8387e950c35f43]:
 :results:
-|-----+-------------+------------+-----------+------------+-------------+-----------|
-| 020 | SUNSET      | SEANCE     | sense     | sneeze     | SUNS        | sinus     |
-|   K | census      | easiness   | essence   | iciness    | science     | since     |
-|     | snooze      |            |           |            |             |           |
-|-----+-------------+------------+-----------+------------+-------------+-----------|
-| 021 | SAINT       | SAND       | cent      | senate     | synod       | snot      |
-|   L | Sunday      | ascent     | assent    | sanity     | scent       | sent      |
-|     | snit        | snoot      | snout     | sonata     | sonnet      | sound     |
-|     | sundae      | zenith     |           |            |             |           |
-|-----+-------------+------------+-----------+------------+-------------+-----------|
-| 022 | SAN JUAN    | SIGN-ON    | sea-onion | snow-knife | asinine     |           |
-|   M |             |            |           |            |             |           |
-|-----+-------------+------------+-----------+------------+-------------+-----------|
-| 023 | CINNAMON    | SNOWMOBILE | snowman   | cinema     | sea-anemone | cyanamide |
-|   N | wisenheimer |            |           |            |             |           |
-|-----+-------------+------------+-----------+------------+-------------+-----------|
-| 024 | SINNER      | SONAR      | senior    | snore      | scenery     | sunrise   |
-|   O | snare       | sneer      | snort     | snarl      | sonorous    |           |
-|-----+-------------+------------+-----------+------------+-------------+-----------|
-| 025 | SEE         | SUNLAMP    | snell     | snail      | sunlight    |           |
-|   P |             |            |           |            |             |           |
-|-----+-------------+------------+-----------+------------+-------------+-----------|
-| 026 | SIGNAGE     | SNOWSHOE   | cinch     | singe      | snatch      | censure   |
-|   Q | ascension   | century    | sensual   | snitch     | snow-job    | sunshine  |
-|-----+-------------+------------+-----------+------------+-------------+-----------|
-| 027 | SINK        | SYNAGOGUE  | snack     | snake      | snick       | zinc      |
-|   R | cynic       | isinglass  | scenic    | sea-anchor | sneak       | snug      |
-|-----+-------------+------------+-----------+------------+-------------+-----------|
-| 028 | SNUFF       | SNOWFLAKE  | sniff     | snafu      | sniffle     | saw-knife |
-|   S | Seinfeld    | sinful     |           |            |             |           |
-|-----+-------------+------------+-----------+------------+-------------+-----------|
-| 029 | SNAP        | snowball   | snob      | snip       | snipe       | snoop     |
-|   T | sign-up     | snub       | sunup     | synopsis   |             |           |
+|-----+----------+-----------+-----------+------------+---------+-----------|
+| 020 | SUNSET   | SEANCE    | sense     | sneeze     | SUNS    | sinus     |
+|   K | census   | easiness  | essence   | iciness    | science | since     |
+|     | snooze   |           |           |            |         |           |
+|-----+----------+-----------+-----------+------------+---------+-----------|
+| 021 | SAINT    | SAND      | cent      | senate     | synod   | snot      |
+|   L | Sunday   | ascent    | assent    | sanity     | scent   | sent      |
+|     | snit     | snoot     | snout     | sonata     | sonnet  | sound     |
+|     | sundae   | zenith    |           |            |         |           |
+|-----+----------+-----------+-----------+------------+---------+-----------|
+| 022 | SAN JUAN | SIGN-ON   | sea-onion | snow-knife | asinine |           |
+|   M |          |           |           |            |         |           |
+|-----+----------+-----------+-----------+------------+---------+-----------|
+| 023 | CINEMA   |           |           |            |         |           |
+|   N |          |           |           |            |         |           |
+|-----+----------+-----------+-----------+------------+---------+-----------|
+| 024 | SINNER   | SONAR     | senior    | snore      | scenery | snare     |
+|   O | sneer    |           |           |            |         |           |
+|-----+----------+-----------+-----------+------------+---------+-----------|
+| 025 | SEE      | snell     | snail     |            |         |           |
+|   P |          |           |           |            |         |           |
+|-----+----------+-----------+-----------+------------+---------+-----------|
+| 026 | SIGNAGE  | SNOWSHOE  | cinch     | singe      | snatch  | snitch    |
+|   Q |          |           |           |            |         |           |
+|-----+----------+-----------+-----------+------------+---------+-----------|
+| 027 | SINK     | SYNAGOGUE | snack     | snake      | snick   | zinc      |
+|   R | cynic    | isinglass | scenic    | sea-anchor | sneak   | snug      |
+|-----+----------+-----------+-----------+------------+---------+-----------|
+| 028 | SNUFF    | SNOWFLAKE | sniff     | snafu      | sniffle | saw-knife |
+|   S | Seinfeld | sinful    |           |            |         |           |
+|-----+----------+-----------+-----------+------------+---------+-----------|
+| 029 | SNAP     | snowball  | snob      | snip       | snipe   | snoop     |
+|   T | sign-up  | snub      | sunup     | synopsis   |         |           |
 :end:
+
 
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 30 40)
 #+end_src
 
-#+RESULTS[473b031979605c4a01df99dea310d91457b1919b]:
+#+RESULTS[eb9a923a1f25657119834471cfd01f10cc6f3a84]:
 :results:
 |-----+--------------+--------------+--------------+---------------+-------------+------------|
 | 030 | SAMSON       | SIAMESE      | seamstress   | semester      | semisweet   | swimsuit   |
@@ -3150,12 +3153,13 @@ at least twice to regenerate cross-references correctly.
 |   d | assembly     | sample       | simple       | somebody      | sympathy    |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 40 50)
 #+end_src
 
-#+RESULTS[a84b61e3b6fc4369fab9d0a855fb0a9b7e29c88c]:
+#+RESULTS[9636d4b043291df2edd68bec3a1bd8d96b011a91]:
 :results:
 |-----+----------+--------------+-----------+--------------+-----------+------------|
 | 040 | SERIES   | SEA-HORSE    | sewers    | source       | Circe     | serious    |
@@ -3191,12 +3195,13 @@ at least twice to regenerate cross-references correctly.
 :end:
 
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 50 60)
 #+end_src
 
-#+RESULTS[234d4118fb1cb61f793ecf3b58393a8bfd3f491c]:
+#+RESULTS[5e363d38e0a98750f01bdf12374b2a46eb778a14]:
 :results:
 |-----+--------------+--------------+-------------+-----------+------------+-----------|
 | 050 | SOLSTICE     | SALSA        | slice       | solicitor | sluice     | sales     |
@@ -3234,12 +3239,13 @@ at least twice to regenerate cross-references correctly.
 |   x | celebrate    | celibacy     | slip        | slop      | slope      | slowpoke  |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 60 70)
 #+end_src
 
-#+RESULTS[68c5428cb24e45eca85672589aaa4792fec8c6c8]:
+#+RESULTS[c29398e3a4f634828989e603111041bf62282467]:
 :results:
 |-----+--------------+------------+-------------+-------------+---------------+---------------|
 | 060 | SAGES        | SWATCHES   | sieges      | switches    | sea-chest     | sashes        |
@@ -3268,12 +3274,13 @@ at least twice to regenerate cross-references correctly.
 | 069 | SWASHBUCKLER | SAGEBRUSH  | s-shaped    | sash-pocket | switchblade   | switch-box    |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 70 80)
 #+end_src
 
-#+RESULTS[dd11d04943b11ff72bffbcdeffa0b1f7b9923c64]:
+#+RESULTS[64236ec329a0ec5cedcd8fe0af9fa77aee11c9d5]:
 :results:
 |-----+----------+-------------+-------------+-----------+------------+-----------|
 | 070 | SEX      | SOCKS       | saxophone   | Saxon     | seacoast   | success   |
@@ -3313,12 +3320,13 @@ at least twice to regenerate cross-references correctly.
 |     | squabble | squib       |             |           |            |           |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 80 90)
 #+end_src
 
-#+RESULTS[9d4e76dbdede9462bd589118fd78350cc39dde29]:
+#+RESULTS[c36916b9474e4d4ba315b902fac1f335367e1cf3]:
 :results:
 |-----+--------------+---------------+-------------+--------------+-------------+-----------|
 | 080 | SAVES        | CIVVIES       | housewives  | sophist      | sufism      | suffice   |
@@ -3349,58 +3357,19 @@ at least twice to regenerate cross-references correctly.
 | 089 | SOFA-BED     | SAFE BOX      | sieve-pit   | sieva-bean   |             |           |
 :end:
 
+
 \clearpage
 #+begin_ src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 90 100)
 #+end_src
 
-#+RESULTS[e8815bd1b830199922cd5dcd705a36b3d2ff33d3]:
-:results:
-|-----+--------------+-------------+-------------+-------------+-------------+--------------|
-| 090 | SPACE        | ASBESTOS    | spice       | spouse      | sea-biscuit | soupcon      |
-|     | auspices     | specify     | suppose     |             |             |              |
-|-----+--------------+-------------+-------------+-------------+-------------+--------------|
-| 091 | SUBTERRANEAN | SPIDERMAN   | Sabbath     | hospital    | houseboat   | spade        |
-|     | September    | scepter     | soup-tureen | spate       | speed       | spit         |
-|     | spite        | spot        | spout       | spud        | subdue      |              |
-|-----+--------------+-------------+-------------+-------------+-------------+--------------|
-| 092 | SPIN         | SPAIN       | spine       | soybean     | spoon       | spun candy   |
-|     | aspen        | espionage   | has-been    | span        | spend       | spun gold    |
-|     | subnormal    | subpoena    | supine      |             |             |              |
-|-----+--------------+-------------+-------------+-------------+-------------+--------------|
-| 093 | SPAM         | SPUMONI     | submarine   | submerge    | submontane  | spume        |
-|     | subminiature | submit      |             |             |             |              |
-|-----+--------------+-------------+-------------+-------------+-------------+--------------|
-| 094 | SPAR         | soprano     | spear       | spire       | spare       | saber        |
-|     | asparagus    | aspire      | aspirin     | cypress     | isobar      | osprey       |
-|     | separate     | sober       | sopor       | spark       | sparrow     | spirit       |
-|     | sport        | spray       | spread      | spree       | spring      | spry         |
-|     | super        | superb      | supper      | whisper     | zebra       |              |
-|-----+--------------+-------------+-------------+-------------+-------------+--------------|
-| 095 | SEAPLANE     | ZEPPELIN    | spool       | spell       | spall       | spill        |
-|     | esplanade    | sibilant    | sowbelly    | splash      | spleen      | splendid     |
-|     | split        | spoil       | sublime     | supply      |             |              |
-|-----+--------------+-------------+-------------+-------------+-------------+--------------|
-| 096 | SPEECH       | seepage     | species     | subject     | special     | waspish      |
-|     | auspicious   | seabeach    | spatial     | sub-age     | subagent    |              |
-|-----+--------------+-------------+-------------+-------------+-------------+--------------|
-| 097 | ICE-PACK     | SPOCK       | ice-pick    | spike       | spook       | speck        |
-|     | aspect       | aspic       | ice-bag     | sawbuck     | speak       | spectacle    |
-|     | zip-code     |             |             |             |             |              |
-|-----+--------------+-------------+-------------+-------------+-------------+--------------|
-| 098 | SPOOF        | soap-flake  | subway-fare | subway fire | subaverage  | subfreezing  |
-|     | soupfin      | spiff       |             |             |             |              |
-|-----+--------------+-------------+-------------+-------------+-------------+--------------|
-| 099 | SOAPBOX      | SOAP-BUBBLE | sea-poppy   | soapbark    | soapberry   | subprincipal |
-|     | house-paper  |             |             |             |             |              |
-:end:
 
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 100 105)
 #+end_src
 
-#+RESULTS[2df50619d24bffecdde27ebdb8a3a0f41797a507]:
+#+RESULTS[4495ac7b32639781ddf426ffaa075642c9d2df4c]:
 :results:
 |---+--------+--------+--------+-------+--------+-------|
 | 0 | SAW    | HOSE   | ice    | house | haze   | zoo   |
@@ -3440,12 +3409,13 @@ at least twice to regenerate cross-references correctly.
 |   | weary  | where  | worry  | year  | yore   | your  |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 105 110)
 #+end_src
 
-#+RESULTS[aa78561a42a13d8f5f8918244712a7df245e7c53]:
+#+RESULTS[c6bdc850fe47dd200b79ba4bb3d6e1927eb4f672]:
 :results:
 |---+---------+--------+--------+-------+---------+--------|
 | 5 | LAW     | WHALE  | ale    | awl   | aisle   | eel    |
@@ -3489,12 +3459,13 @@ at least twice to regenerate cross-references correctly.
 |   | whoopee | wipe   |        |       |         |        |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 110 115)
 #+end_src
 
-#+RESULTS[b15d921928040c0bb7fb5ffa411420b768ad2a3f]:
+#+RESULTS[bd94e130acd65202ad62b77dbb26d376623d5710]:
 :results:
 |----+-------------+----------+--------+----------+--------+---------|
 | 10 | TOES        | daisy    | odds   | hothouse | idiots | deuce   |
@@ -3535,12 +3506,13 @@ at least twice to regenerate cross-references correctly.
 |    | whiter      | widower  | wither |          |        |         |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 115 120)
 #+end_src
 
-#+RESULTS[fd273b4f7b99012b44dcee0ed6df9307fd7c4387]:
+#+RESULTS[af0c3857e6f82d0ff6a5e8ca85a14f8af107eaae]:
 :results:
 |----+---------+--------+----------+-----------+---------+----------|
 | 15 | TAIL    | atoll  | doll     | doily     | idol    | tally    |
@@ -3571,12 +3543,13 @@ at least twice to regenerate cross-references correctly.
 |    | tape    | tepee  | top      | tube      | tup     | type     |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 120 130)
 #+end_src
 
-#+RESULTS[e9dad01561fc259a5ed371493aafecf60aea3c0a]:
+#+RESULTS[7b0c03d7f501e0b6f9398aab217b8c3f5239af9e]:
 :results:
 |----+----------+----------+---------+---------+---------+----------|
 | 20 | NOSE     | anise    | noose   | niece   | ounce   | news     |
@@ -3622,12 +3595,13 @@ at least twice to regenerate cross-references correctly.
 |    | unhappy  |          |         |         |         |          |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 130 140)
 #+end_src
 
-#+RESULTS[0cc255c6d2129cc3bf42b431c251627e674d9a9e]:
+#+RESULTS[fe75a4c4ad29ff24bf6c9a9f9250d72ab6e7f1ae]:
 :results:
 |----+---------+---------+--------+-----------+--------+---------|
 | 30 | MASS    | MOUSE   | mace   | maze      | hummus | mice    |
@@ -3672,12 +3646,13 @@ at least twice to regenerate cross-references correctly.
 |    | myopia  |         |        |           |        |         |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 140 150)
 #+end_src
 
-#+RESULTS[2686ebfcf84ba59d78900e87321cc81aaa8d4786]:
+#+RESULTS[9b2e658a05cee89bf4cbb690ec23a0948cf25166]:
 :results:
 |----+---------+-----------+----------+--------+---------+---------|
 | 40 | RACE    | ROSE      | racy     | raise  | rase    | raze    |
@@ -3735,12 +3710,13 @@ at least twice to regenerate cross-references correctly.
 |    | ruby    | rupee     | warp     |        |         |         |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 150 160)
 #+end_src
 
-#+RESULTS[4ada5a1fa5090c7ace0425aad02ee131aee26d07]:
+#+RESULTS[b08ffaba921ccef67fceb9a32c550bdce2b78fc5]:
 :results:
 |----+-----------+------------+-----------+----------+---------+-----------|
 | 50 | LACE      | Lassie     | lass      | lazy     | lasso   | lease     |
@@ -3791,12 +3767,13 @@ at least twice to regenerate cross-references correctly.
 |    | lob       | lobby      | lop       | lowboy   | wallop  | whelp     |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 160 170)
 #+end_src
 
-#+RESULTS[53667ebd3e68f5e6cac4494c8b33786e400db41f]:
+#+RESULTS[0ff3d0539dd2e9847c075475ddb86c00f3e1343f]:
 :results:
 |----+-------------+----------+----------+----------+---------+----------|
 | 60 | CHESS       | CHEESE   | chassis  | chase    | chaise  | choice   |
@@ -3847,12 +3824,13 @@ at least twice to regenerate cross-references correctly.
 |    | ship        | shop     |          |          |         |          |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 170 180)
 #+end_src
 
-#+RESULTS[c11772d82c05acc1c4236645c0b50f45a9ac042b]:
+#+RESULTS[da128b9d471f2b7c6772aae362eb645f5f639dbf]:
 :results:
 |----+---------+-----------+---------+--------+----------+---------|
 | 70 | CASE    | GOOSE     | gas     | kiss   | ox       | eggs    |
@@ -3914,12 +3892,13 @@ at least twice to regenerate cross-references correctly.
 |    | wicopy  |           |         |        |          |         |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 180 190)
 #+end_src
 
-#+RESULTS[f1800c9c7c5593f59b18fd852a7298d9b0db17f9]:
+#+RESULTS[38a6aafffcd07559e740d77c27278d99f8d10f76]:
 :results:
 |----+-----------+---------+----------+---------+----------+-----------|
 | 80 | FACE      | VASE    | fuse     | vise    | visa     | vice      |
@@ -3972,12 +3951,13 @@ at least twice to regenerate cross-references correctly.
 |  Y | faux-pas  | fib     | half-pay |         |          |           |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 190 195)
 #+end_src
 
-#+RESULTS[b54da84cd8e4a44b0567524eea48b2d51043be88]:
+#+RESULTS[19338dbfd3bba19b2713546fead1ad6f612573cd]:
 :results:
 |----+---------+--------+--------+--------+---------+----------|
 | 90 | BASE    | BUS    | pizza  | bass   | booze   | boss     |
@@ -4014,12 +3994,13 @@ at least twice to regenerate cross-references correctly.
 |    | pray    | prow   | pry    | purr   | pyre    | upper    |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 195 200)
 #+end_src
 
-#+RESULTS[e6fc4c85d9a0c15a01e9bc458811a998cecdc265]:
+#+RESULTS[123d8bb9aaf2eecacab81b2306175c154345ed69]:
 :results:
 |----+---------+----------+--------+---------+---------+---------|
 | 95 | BALL    | BELL     | opal   | bowl    | apple   | pillow  |
@@ -4054,12 +4035,13 @@ at least twice to regenerate cross-references correctly.
 |    | pop     |          |        |         |         |         |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 200 210)
 #+end_src
 
-#+RESULTS[e59a5a1a377a3f12eb02c4979883dc1af6b1bbc5]:
+#+RESULTS[ad991550974f86f5fd35a6f60e14172cd20fd70f]:
 :results:
 |-----+-------------+--------------+-------------+--------------+-------------+----------------|
 | 100 | THESIS      | decease      | decisive    | desist       | disaster    | disease        |
@@ -4105,12 +4087,13 @@ at least twice to regenerate cross-references correctly.
 |     | disposition | dissipate    |             |              |             |                |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 210 220)
 #+end_src
 
-#+RESULTS[82c7752efe2fc828b6dce817c723a75b08e66cb3]:
+#+RESULTS[e94db9b3d93dde555149b1da9cf1c7551c37ea8d]:
 :results:
 |-----+-------------+--------------+-------------+------------+------------+-------------|
 | 110 | TIGHTS      | tedious      | toothsome   | tootsy     | deduce     | detest      |
@@ -4148,12 +4131,13 @@ at least twice to regenerate cross-references correctly.
 |   w | deadbeat    | deadpan      | deathbed    | ditty-bag  |            |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 220 230)
 #+END_src
 
-#+RESULTS[30310c622a423826462ae1007fdf30ed6433abff]:
+#+RESULTS[f0fd617bbbec8f6318faadc44d58f1ea8276222f]:
 :results:
 |-----+--------------+-------------+------------+--------------+--------------+------------|
 | 120 | DANCE        | tinsel      | tenacity   | tennis       | tense        | thence     |
@@ -4197,12 +4181,13 @@ at least twice to regenerate cross-references correctly.
 |     | down-payment | downbeat    | downpour   | donnybrook   | Danube       | stoneblind |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 230 240)
 #+END_src
 
-#+RESULTS[70876fb396bd3022bc85631f5ec5c8295b7f8692]:
+#+RESULTS[3adfea0565ba93646168cdc19def524f01329c66]:
 :results:
 |-----+-------------+------------+--------------+-----------------+-------------+--------------|
 | 130 | THAMES      | Thomas     | teamster     | team-song       | Thames      | theme-song   |
@@ -4245,12 +4230,13 @@ at least twice to regenerate cross-references correctly.
 |     | dumbbell    | dump       | automobile   | stamp           | stampede    | stump        |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 240 245)
 #+end_src
 
-#+RESULTS[d184171f368dd7b0c24bb93099b143485266868a]:
+#+RESULTS[a1783c1dea02425ba337a86e73595bdaeeaac2c8]:
 :results:
 |-----+-----------+-------------+-----------+------------+-----------+-------------|
 | 140 | TERRACE   | tricycle    | tea-rose  | thrice     | torso     | thirst      |
@@ -4286,12 +4272,13 @@ at least twice to regenerate cross-references correctly.
 |     | water-rat | water-right |           |            |           |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 245 250)
 #+end_src
 
-#+RESULTS[2e193eee786d446c1b53e97b0e5823e9d0954066]:
+#+RESULTS[db4b580decbd2b942af34aa9282e1b01f2b472e3]:
 :results:
 |-----+-------------+------------+------------+-----------+--------------+------------|
 | 145 | TRAIL       | trial      | trawl      | thrill    | trellis      | trowel     |
@@ -4328,12 +4315,13 @@ at least twice to regenerate cross-references correctly.
 |     | strawberry  | strip      | stripe     | water-boy | waterproof   |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 250 260)
 #+end_src
 
-#+RESULTS[dbc26c3e4d2fa66928193fe62bada525a2daf205]:
+#+RESULTS[de63143e4d093106de61e1f9e31e0ef50d9a0e49]:
 :results:
 |-----+------------+------------+------------+------------+-------------+------------|
 | 150 | TELESCOPE  | tails      | tales      | tools      | tiles       | tallies    |
@@ -4376,12 +4364,13 @@ at least twice to regenerate cross-references correctly.
 |     | dilapidate | dollop     | doll-up    | ad-lib     |             |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 260 270)
 #+end_src
 
-#+RESULTS[e44d8eb19975240c4cd47f0efb9c8de2a5324259]:
+#+RESULTS[be031e749f22cae72d4a092092b71f8dd95aec73]:
 :results:
 |-----+-------------+--------------+-------------+--------------+-------------+---------------|
 | 160 | DUCHESS     | tea-chest    | touchstone  | touch-system | digest      | dishes        |
@@ -4413,12 +4402,13 @@ at least twice to regenerate cross-references correctly.
 |     | dish-up     |              |             |              |             |               |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 270 280)
 #+end_src
 
-#+RESULTS[1c7b28fb29f4b66e4a537bf96969dfd90bbb30f5]:
+#+RESULTS[545db9a3be643d37408783f5369c5ca54003d1dd]:
 :results:
 |-----+------------+--------------+----------------+------------+-------------+------------|
 | 170 | TAXI       | tax          | Texas          | text       | textile     | tongs      |
@@ -4460,12 +4450,13 @@ at least twice to regenerate cross-references correctly.
 |     | decoupage  | hiding-place | stockbroker    |            |             |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 280 290)
 #+end_src
 
-#+RESULTS[06cf8e57ae8aa66ef8259cc70584f806e5157c30]:
+#+RESULTS[ecd622a959da04100e3a5c74c393a8da9026df0f]:
 :results:
 |-----+----------------+-------------+--------------+------------+-------------+---------------|
 | 180 | DEVICE         | two-faced   | two-fisted   | two-phase  | thieves     | typhus        |
@@ -4504,12 +4495,13 @@ at least twice to regenerate cross-references correctly.
 |     | stove-pot      |             |              |            |             |               |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 290 300)
 #+end_src
 
-#+RESULTS[b426197dc708a28be2ae5cc5eb7800ea60b78bf2]:
+#+RESULTS[4cfa40798fc1a56ad14d4a33102efa32fbde57b4]:
 :results:
 |-----+-------------+--------------+--------------+---------------+-------------+-------------|
 | 190 | TAPAS       | topsail      | top-sergeant | top-secret    | topside     | topsoil     |
@@ -4554,12 +4546,13 @@ at least twice to regenerate cross-references correctly.
 |     | depopulate  | dope-peddler | dope-pusher  | wastepaper    | hot-pepper  |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 300 310)
 #+end_src
 
-#+RESULTS[98810dd22914261740fb6ecce0521f6350f36178]:
+#+RESULTS[7cd9843c064dbbab957bb987e62056b0ad932851]:
 :results:
 |-----+--------------+---------------+----------------+--------------+--------------+---------------|
 | 200 | GNOSIS       | necessity     | nieces         | noses        | noises       | incisor       |
@@ -4600,12 +4593,13 @@ at least twice to regenerate cross-references correctly.
 |     | unspent      | sensible      |                |              |              |               |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 310 320)
 #+end_src
 
-#+RESULTS[47a6bd1fef20832bd11eb609cfffd85dd6bf0771]:
+#+RESULTS[a0b7efee5d9684f7718e022dd6b1dcaaccf3630f]:
 :results:
 |-----+---------------+-----------------+--------------+-------------+-------------+----------------|
 | 210 | NUDIST        | notice          | Nazi         | nowadays    | no-dice     | antacid        |
@@ -4638,8 +4632,8 @@ at least twice to regenerate cross-references correctly.
 |-----+---------------+-----------------+--------------+-------------+-------------+----------------|
 | 215 | NOODLE        | antelope        | anthill      | endless     | handle      | indelicate     |
 |     | indolent      | indulge         | intellect    | intelligent | intolerable | know-it-all    |
-|     | needle        | needless        | new-deal     | night-owl   | sandal      | until          |
-|     | windless      |                 |              |             |             |                |
+|     | needle        | needless        | new-deal     | night-owl   | sandal      | swindle        |
+|     | until         | windless        |              |             |             |                |
 |-----+---------------+-----------------+--------------+-------------+-------------+----------------|
 | 216 | SANDWICH      | nightshade      | night-watch  | notation    | nutshell    | annotation     |
 |     | antechamber   | indigenous      | indigestion  | intuition   | untouchable | windowshade    |
@@ -4661,16 +4655,17 @@ at least twice to regenerate cross-references correctly.
 |     | windpipe      | sandbox         | sound-box    |             |             |                |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 320 330)
 #+end_src
 
-#+RESULTS[a9563480fca39932c24636c41d5750a7a214a991]:
+#+RESULTS[d18e1186169e0a6d229e99f2d96b2f0d89a7742b]:
 :results:
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
-| 220 | NONCE          | nonsense       | nonuse        | nainsook      | ananas          | announce          |
-|     | annoyance      | enhance        | onions        | onionskin     | unanswered      |                   |
+| 220 | NONCE          | ananas         | announce      | annoyance     | assonance       | enhance           |
+|     | nainsook       | nonsense       | nonuse        | onions        | onionskin       | unanswered        |
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
 | 221 | UNKNIT         | noontime       | ninth         | nineteen      | ninety          | nondenominational |
 |     | nontechnical   | anoint         | innuendo      | know-nothing  | unintelligible  | unintentional     |
@@ -4679,9 +4674,9 @@ at least twice to regenerate cross-references correctly.
 | 222 | NONUNION       | ninon          | no-nonsense   | nonnegotiable | nonentity       | non-owner         |
 |     | unknown        | unannounced    |               |               |                 |                   |
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
-| 223 | NOON-MEAL      | ninnyhammer    | nonemotional  | nonmetal      | nonmember       | nonmedical        |
-|     | nonmilitary    | nonemergency   | anonymous     | inanimate     | unanimous       | unanimated        |
-|     | synonymous     |                |               |               |                 |                   |
+| 223 | NOON-MEAL      | anonymous      | inanimate     | ninnyhammer   | nonemergency    | nonemotional      |
+|     | nonmedical     | nonmember      | nonmetal      | nonmilitary   | synonym         | synonymous        |
+|     | unanimated     | unanimous      |               |               |                 |                   |
 |-----+----------------+----------------+---------------+---------------+-----------------+-------------------|
 | 224 | NUNNERY        | nonracial      | nonradical    | onion-ring    | union-organizer | unenrolled        |
 |     | unhonored      |                |               |               |                 |                   |
@@ -4705,161 +4700,167 @@ at least twice to regenerate cross-references correctly.
 |     | nonpolitical   | union-pay      |               |               |                 |                   |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 330 340)
 #+end_src
 
-#+RESULTS[a53dcc730624969e0d59b8ffa31b04b0dc2919fc]:
+#+RESULTS[29b46b8cb964b31a5d26e3e26ba448cc5ab188fa]:
 :results:
-|-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 230 | GNOMES     | names        | namesake      | nemesis      | numismatist | animosity   |
-|     | inmost     | enemies      | unmistakable  | unmask       |             |             |
-|-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 231 | NOMAD      | named        | new-math      | name-dropper | animate     | enmity      |
-|     | inmate     | pneumatic    |               |              |             |             |
-|-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 232 | NEW-MOON   | nominal      | nominee       | numbness     | honeymoon   | inhuman     |
-|     | unmanly    | unmannerly   | unmentionable | unmindful    | unwomanly   | pneumonia   |
-|-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 233 | ANEMOMETER | name-maker   | new-member    | unmaimed     | unmemorized | unmomentous |
-|-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 234 | NIMROD     | namer        | numeral       | numerology   | newmarket   | enamor      |
-|     | enumerate  | unmarred     | unmarked      | unmerciful   | unmarried   | un-American |
-|-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 235 | ANIMAL     | nameless     | numbly        | enamel       | anomaly     | pneumology  |
-|-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 236 | ANIMATION  | unemotional  | unimaginative | unmatched    | unmeshed    |             |
-|-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 237 | WINEMAKER  | naming       | anemic        | inimical     | unmake      |             |
-|-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 238 | NYMPH      | unemphatic   | unmovable     | nemophila    | unmiffed    | unmuffled   |
-|-----+------------+--------------+---------------+--------------+-------------+-------------|
-| 239 | NAMEPLATE  | nimble       | number        | unemployed   | unimportant | unimpaired  |
-|     | unimproved | unimpressive | unambiguous   | unamiable    | unhampered  | snowmobile  |
+|-----+------------+---------------+---------------+--------------+-------------+-------------|
+| 230 | GNOMES     | names         | namesake      | nemesis      | numismatist | animosity   |
+|     | inmost     | enemies       | unmistakable  | unmask       |             |             |
+|-----+------------+---------------+---------------+--------------+-------------+-------------|
+| 231 | NOMAD      | named         | new-math      | name-dropper | animate     | enmity      |
+|     | inmate     | pneumatic     |               |              |             |             |
+|-----+------------+---------------+---------------+--------------+-------------+-------------|
+| 232 | NEW-MOON   | cinnamon      | cyanamide     | honeymoon    | inhuman     | nominal     |
+|     | nominee    | numbness      | pneumonia     | sea-anemone  | snowman     | unmanly     |
+|     | unmannerly | unmentionable | unmindful     | unwomanly    | wisenheimer |             |
+|-----+------------+---------------+---------------+--------------+-------------+-------------|
+| 233 | ANEMOMETER | name-maker    | new-member    | unmaimed     | unmemorized | unmomentous |
+|-----+------------+---------------+---------------+--------------+-------------+-------------|
+| 234 | NIMROD     | namer         | numeral       | numerology   | newmarket   | enamor      |
+|     | enumerate  | unmarred      | unmarked      | unmerciful   | unmarried   | un-American |
+|-----+------------+---------------+---------------+--------------+-------------+-------------|
+| 235 | ANIMAL     | nameless      | numbly        | enamel       | anomaly     | pneumology  |
+|-----+------------+---------------+---------------+--------------+-------------+-------------|
+| 236 | ANIMATION  | unemotional   | unimaginative | unmatched    | unmeshed    |             |
+|-----+------------+---------------+---------------+--------------+-------------+-------------|
+| 237 | WINEMAKER  | naming        | anemic        | inimical     | unmake      |             |
+|-----+------------+---------------+---------------+--------------+-------------+-------------|
+| 238 | NYMPH      | unemphatic    | unmovable     | nemophila    | unmiffed    | unmuffled   |
+|-----+------------+---------------+---------------+--------------+-------------+-------------|
+| 239 | NAMEPLATE  | nimble        | number        | unemployed   | unimportant | unimpaired  |
+|     | unimproved | unimpressive  | unambiguous   | unamiable    | unhampered  | snowmobile  |
 :end:
+
 
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 340 350)
 #+end_src
 
-#+RESULTS[5a2cd9ad7c4af303ee7c457ef853017db04b4d98]:
+#+RESULTS[b8febde0461c8adfe97c39a61d075294c00c77ac]:
 :results:
-|-----+---------------+------------+-------------+-------------+---------------+-------------|
-| 240 | NURSE         | nursery    | neurosis    | nearsighted | honors        | onerous     |
-|     | owners        | unrest     | unhorse     | sonorous    | sunrise       |             |
-|-----+---------------+------------+-------------+-------------+---------------+-------------|
-| 241 | NARRATOR      | neurotic   | nard        | north       | inarticulate  | inert       |
-|     | inheritance   | inroad     | inward      | onward      | unearth       | unhurt      |
-|     | unredeemed    | unworthy   | unwritten   |             |               |             |
-|-----+---------------+------------+-------------+-------------+---------------+-------------|
-| 242 | NEURON        | no-iron    | no-run      | nearness    | narrowness    | unearned    |
-|     | unworn        | unwarned   | unwarranted |             |               |             |
-|-----+---------------+------------+-------------+-------------+---------------+-------------|
-| 243 | NORMAN        | norm       | normal      | near-miss   | Norma         | enormous    |
-|     | narrow-minded | unarmed    | innermost   |             |               |             |
-|-----+---------------+------------+-------------+-------------+---------------+-------------|
-| 244 | HONORARY      | nearer     | narrower    | unrewarded  |               |             |
-|-----+---------------+------------+-------------+-------------+---------------+-------------|
-| 245 | NARWHAL       | narrowly   | nearly      | New-World   | enroll        | gnarl       |
-|     | knurl         | one-reel   | unrelenting | unreliable  | unruly        | unreal      |
-|     | unroyal       | snarl      |             |             |               |             |
-|-----+---------------+------------+-------------+-------------+---------------+-------------|
-| 246 | ENERGY        | narration  | nourishment | Norwegian   | enrage        | enrich      |
-|     | inertia       | onrush     | ownership   |             |               |             |
-|-----+---------------+------------+-------------+-------------+---------------+-------------|
-| 247 | NARCOTICS     | nark       | Newark      | New-York    | anarchy       | on-record   |
-|     | honoring      | unrecorded | unrequited  | unerring    | unrecoverable |             |
-|-----+---------------+------------+-------------+-------------+---------------+-------------|
-| 248 | NIRVANA       | nerve      | no-refund   | enervate    | unravel       | unrivaled   |
-|     | unrefined     | unruffled  |             |             |               |             |
-|-----+---------------+------------+-------------+-------------+---------------+-------------|
-| 249 | ENROBE        | nearby     | enrapt      | enwrap      | honorable     | unrepentant |
-|     | unripe        | unrippled  | unwrap      |             |               |             |
+|-----+---------------+--------------+-------------+-------------+---------------+-------------|
+| 240 | NURSE         | nursery      | neurosis    | nearsighted | honors        | onerous     |
+|     | owners        | unrest       | unhorse     | sonorous    | sunrise       |             |
+|-----+---------------+--------------+-------------+-------------+---------------+-------------|
+| 241 | NARRATOR      | inarticulate | inert       | inheritance | inroad        | inward      |
+|     | nard          | nerd         | neurotic    | north       | onward        | snarl       |
+|     | snort         | unearth      | unhurt      | unredeemed  | unworthy      | unwritten   |
+|-----+---------------+--------------+-------------+-------------+---------------+-------------|
+| 242 | NEURON        | no-iron      | no-run      | nearness    | narrowness    | unearned    |
+|     | unworn        | unwarned     | unwarranted |             |               |             |
+|-----+---------------+--------------+-------------+-------------+---------------+-------------|
+| 243 | NORMAN        | norm         | normal      | near-miss   | Norma         | enormous    |
+|     | narrow-minded | unarmed      | innermost   |             |               |             |
+|-----+---------------+--------------+-------------+-------------+---------------+-------------|
+| 244 | HONORARY      | nearer       | narrower    | unrewarded  |               |             |
+|-----+---------------+--------------+-------------+-------------+---------------+-------------|
+| 245 | NARWHAL       | narrowly     | nearly      | New-World   | enroll        | gnarl       |
+|     | knurl         | one-reel     | unrelenting | unreliable  | unruly        | unreal      |
+|     | unroyal       | snarl        |             |             |               |             |
+|-----+---------------+--------------+-------------+-------------+---------------+-------------|
+| 246 | ENERGY        | narration    | nourishment | Norwegian   | enrage        | enrich      |
+|     | inertia       | onrush       | ownership   |             |               |             |
+|-----+---------------+--------------+-------------+-------------+---------------+-------------|
+| 247 | NARCOTICS     | nark         | Newark      | New-York    | anarchy       | on-record   |
+|     | honoring      | unrecorded   | unrequited  | unerring    | unrecoverable |             |
+|-----+---------------+--------------+-------------+-------------+---------------+-------------|
+| 248 | NIRVANA       | nerve        | no-refund   | enervate    | unravel       | unrivaled   |
+|     | unrefined     | unruffled    |             |             |               |             |
+|-----+---------------+--------------+-------------+-------------+---------------+-------------|
+| 249 | ENROBE        | nearby       | enrapt      | enwrap      | honorable     | unrepentant |
+|     | unripe        | unrippled    | unwrap      |             |               |             |
 :end:
+
 
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
   (babomorph 350 360)
 #+end_src
 
-#+RESULTS[9decd460d71e3acdacfb0abdcd55149a0d7ef72c]:
+#+RESULTS[f41d7e7aed6e522ae96b7de331e1ee0f4186a2b1]:
 :results:
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 250 | NELSON      | nails       | nihilist    | annals        | analyze     | awnless      |
-|     | enlist      | in-laws     | unlace      | unless        | unwholesome |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 251 | NEWLYWED    | nailed      | annihilate  | annulled      | enlighten   | inalterable  |
-|     | inlet       | inhaled     | unhealthy   | unallowed     | unallotted  | unladylike   |
-|     | unload      | unlit       | knelt       |               |             |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 252 | ENAMEL      | nylon       | nail        | an﻿iline       | inland      | on-line      |
-|     | inalienable |             |             |               |             |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 253 | ANNULMENT   | newly-made  | unlimited   | un﻿illuminated | unlamented  |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 254 | INHALER     | nailer      | enlargement | kneeler       | unlearned   | unalarmed    |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 255 | HONOLULU    | nailless    | nail-hole   | n﻿illy-willy   | unloyal     |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 256 | KNOWLEDGE   | analgesic   | analogy     | ineligible    | unlatch     | unleash      |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 257 | KNEELING    | nailing     | no-luck     | new-look      | onlooker    | unlike       |
-|     | unlock      | unlucky     | unwelcome   | unwilling     | unallocated | unlooked-for |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 258 | UNLOVED     | nail-file   | New-Left    | nullify       | analphabet  | enliven      |
-|     | in-love     | on-leave    | unlawful    | unlive        |             |              |
-|-----+-------------+-------------+-------------+---------------+-------------+--------------|
-| 259 | NAIL-POLISH | nail-biting | nail-up     | nol-pros      | analeptic   | unhelpful    |
-|     | unliable    | inhalable   | unallowable | unlabeled     | unlabored   |              |
+|-----+-------------+-------------+-------------+-------------+---------------+--------------|
+| 250 | NELSON      | nails       | nihilist    | annals      | analyze       | awnless      |
+|     | enlist      | in-laws     | unlace      | unless      | unwholesome   |              |
+|-----+-------------+-------------+-------------+-------------+---------------+--------------|
+| 251 | NEWLYWED    | annihilate  | annulled    | enlighten   | inalterable   | inhaled      |
+|     | inlet       | knelt       | nailed      | sunlight    | unallotted    | unallowed    |
+|     | unhealthy   | unladylike  | unlit       | unload      |               |              |
+|-----+-------------+-------------+-------------+-------------+---------------+--------------|
+| 252 | ENAMEL      | nylon       | nail        | an﻿iline     | inland        | on-line      |
+|     | inalienable |             |             |             |               |              |
+|-----+-------------+-------------+-------------+-------------+---------------+--------------|
+| 253 | ANNULMENT   | sunlamp     | newly-made  | unlimited   | un﻿illuminated | unlamented   |
+|-----+-------------+-------------+-------------+-------------+---------------+--------------|
+| 254 | INHALER     | nailer      | enlargement | kneeler     | unlearned     | unalarmed    |
+|-----+-------------+-------------+-------------+-------------+---------------+--------------|
+| 255 | HONOLULU    | nailless    | nail-hole   | n﻿illy-willy | unloyal       |              |
+|-----+-------------+-------------+-------------+-------------+---------------+--------------|
+| 256 | KNOWLEDGE   | analgesic   | analogy     | ineligible  | unlatch       | unleash      |
+|-----+-------------+-------------+-------------+-------------+---------------+--------------|
+| 257 | KNEELING    | nailing     | no-luck     | new-look    | onlooker      | unlike       |
+|     | unlock      | unlucky     | unwelcome   | unwilling   | unallocated   | unlooked-for |
+|-----+-------------+-------------+-------------+-------------+---------------+--------------|
+| 258 | UNLOVED     | nail-file   | New-Left    | nullify     | analphabet    | enliven      |
+|     | in-love     | on-leave    | unlawful    | unlive      |               |              |
+|-----+-------------+-------------+-------------+-------------+---------------+--------------|
+| 259 | NAIL-POLISH | nail-biting | nail-up     | nol-pros    | analeptic     | unhelpful    |
+|     | unliable    | inhalable   | unallowable | unlabeled   | unlabored     |              |
 :end:
+
 
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 360   370)
 #+end_src
 
-#+RESULTS[d29def9ad8fb6d6b238b1e36e16b1ee739b9f3ed]:
+#+RESULTS[80c591730bf94b0a0077f00d26121b721f15de1a]:
 :results:
-|-----+--------------+------------+-----------+--------------+--------------+------------|
-| 260 | NATCHEZ      | nauseous   | niches    | notches      | nudges       | hinges     |
-|     | inches       | injustice  | unjust    |              |              |            |
-|-----+--------------+------------+-----------+--------------+--------------+------------|
-| 261 | UNWASHED     | nidget     | notched   | nudged       | gnashed      | enjoyed    |
-|     | inched       | one-shot   | unshod    | unshut       | initiated    |            |
-|-----+--------------+------------+-----------+--------------+--------------+------------|
-| 262 | ENGINE       | nation     | notion    | ancient      | enchant      | engineer   |
-|     | enjoin       | ingenue    | ingenious | injunction   | knee-jointed | ungentle   |
-|     | ungenerous   | unchanged  | unchained |              |              |            |
-|-----+--------------+------------+-----------+--------------+--------------+------------|
-| 263 | NOTCHMARK    | enjoyment  | inchmeal  | unashamed    |              |            |
-|-----+--------------+------------+-----------+--------------+--------------+------------|
-| 264 | KNEE-JERK    | nature     | notcher   | nudger       | ensure       | enshrine   |
-|     | injury       | insurance  | onager    | on-shore     | unshrinkable | unsure     |
-|     | century      |            |           |              |              |            |
-|-----+--------------+------------+-----------+--------------+--------------+------------|
-| 265 | ANGEL        | ENCHILADA  | initial   | unchallenged | unchilled    | unshielded |
-|     | unsheltered  | unusual    |           |              |              |            |
-|-----+--------------+------------+-----------+--------------+--------------+------------|
-| 266 | HINGE-JOINT  | unjudged   | un-Jewish |              |              |            |
-|-----+--------------+------------+-----------+--------------+--------------+------------|
-| 267 | GNASHING     | nudging    | enjoying  | inject       | unchecked    | unshaken   |
-|     | unshackle    |            |           |              |              |            |
-|-----+--------------+------------+-----------+--------------+--------------+------------|
-| 268 | ANCHOVY      | in-a-jiffy | unshaven  | unshifted    | unshuffled   | unshoveled |
-|     | unchivalrous | unchafable |           |              |              |            |
-|-----+--------------+------------+-----------+--------------+--------------+------------|
-| 269 | HUNCHBACK    | enjoyable  | unshapely | unship       | unchaperoned | unwashable |
-|     | wineshop     |            |           |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 260 | NATCHEZ      | nauseous    | niches     | notches      | nudges       | hinges     |
+|     | inches       | injustice   | unjust     |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 261 | UNWASHED     | nidget      | notched    | nudged       | gnashed      | enjoyed    |
+|     | inched       | one-shot    | unshod     | unshut       | initiated    |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 262 | ENGINE       | ancient     | ascension  | enchant      | engineer     | enjoin     |
+|     | ingenious    | ingenue     | injunction | knee-jointed | nation       | notion     |
+|     | sunshine     | unchained   | unchanged  | ungenerous   | ungentle     |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 263 | NOTCHMARK    | enjoyment   | inchmeal   | unashamed    |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 264 | KNEE-JERK    | censure     | century    | enshrine     | ensure       | injury     |
+|     | insurance    | nature      | notcher    | nudger       | on-shore     | onager     |
+|     | unshrinkable | unsure      |            |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 265 | ANGEL        | ENCHILADA   | initial    | sensual      | unchallenged | unchilled  |
+|     | unshielded   | unsheltered | unusual    |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 266 | HINGE-JOINT  | unjudged    | un-Jewish  |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 267 | GNASHING     | nudging     | enjoying   | inject       | unchecked    | unshaken   |
+|     | unshackle    |             |            |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 268 | ANCHOVY      | in-a-jiffy  | unshaven   | unshifted    | unshuffled   | unshoveled |
+|     | unchivalrous | unchafable  |            |              |              |            |
+|-----+--------------+-------------+------------+--------------+--------------+------------|
+| 269 | HUNCHBACK    | enjoyable   | snow-job   | unchaperoned | unshapely    | unship     |
+|     | unwashable   | wineshop    |            |              |              |            |
 :end:
+
 
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 370   380)
 #+end_src
 
-#+RESULTS[1df6c7b57809bd027e0013a316e90e986abb55c4]:
+#+RESULTS[85cc06a8b2bf2bd4da54c500795c0ec5e67d1df2]:
 :results:
 |-----+---------------+---------------+---------------+--------------+--------------+----------------|
 | 270 | inks          | negus         | next          | nexus        | knocks       | annex          |
@@ -4904,12 +4905,13 @@ at least twice to regenerate cross-references correctly.
 |     | knockabout    | uncouple      | unequipped    | unoccupied   |              |                |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 380   390)
 #+end_src
 
-#+RESULTS[378e752eca0fd3eba440ae1f50f52b63c947e0a5]:
+#+RESULTS[cf843172a7856b2f63fc446f9746263c36252f69]:
 :results:
 |-----+---------------+-------------+--------------+---------------+--------------+---------------|
 | 280 | naves         | novice      | nephews      | nevus         | envious      | infest        |
@@ -4950,12 +4952,13 @@ at least twice to regenerate cross-references correctly.
 |     | unifiable     |             |              |               |              |               |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 390   400)
 #+end_src
 
-#+RESULTS[57466e08362028e4db997400cb180787df311b90]:
+#+RESULTS[801aba0054a4283959dcfc1244201c3872148672]:
 :results:
 |-----+--------------+-------------+-------------+---------------+---------------+--------------|
 | 290 | nabs         | naps        | nibs        | nips          | NBC           | nubs         |
@@ -4990,12 +4993,13 @@ at least twice to regenerate cross-references correctly.
 | 299 | nabob        | nip-up      | unbiblical  | unpayable     | unpopular     | unpublished  |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 400   410)
 #+end_src
 
-#+RESULTS[cceabf2e15b5d9a1b68da40c4b65d28d2ef9abd7]:
+#+RESULTS[a2abbc5362922dd62b021762c5ce29b0697a48b4]:
 :results:
 |-----+---------------+---------------+-------------+---------------+---------------+-------------|
 | 300 | masseuse      | mesas         | masses      | misses        | misuse        | mosses      |
@@ -5034,12 +5038,13 @@ at least twice to regenerate cross-references correctly.
 |     | misprint      | homo-sapiens  | homespun    | mass-produced |               |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 410   420)
 #+end_src
 
-#+RESULTS[839c895cf0fac242d15b9cb5b8e17c37d75442ea]:
+#+RESULTS[5b47743b956156e1611669908c16029b0a89d2ed]:
 :results:
 |-----+-----------+------------+-------------+-------------+------------+---------------|
 | 310 | maids     | mats       | mates       | madhouse    | matzo      | meadows       |
@@ -5078,12 +5083,13 @@ at least twice to regenerate cross-references correctly.
 | 319 | meatball  | made-up    | metabolic   | mouthpiece  | mutable    | mudpie        |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 420   430)
 #+end_src
 
-#+RESULTS[c9423695d2f6e37bc814447aa92a7ad164ea8bd5]:
+#+RESULTS[6c54899b707eaa226c53f2f335df6bd4558a49d5]:
 :results:
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
 | 320 | manse       | mayonnaise    | manslaughter | mainsail   | menace       | mince       |
@@ -5128,12 +5134,13 @@ at least twice to regenerate cross-references correctly.
 |     | amenable    | hymenopteron  | omnibus      | omnipotent |              |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 430   440)
 #+end_src
 
-#+RESULTS[82f2263b0aa94c4805b8c02ccb47819a3a6a84b2]:
+#+RESULTS[e3bd70610842cd84cbef678aaff32b635ae0a4e6]:
 :results:
 |-----+--------------+------------+----------------+---------------+-----------+-------------|
 | 330 | mammas       | maims      | mayhems        | memos         | memsahib  | mimes       |
@@ -5163,12 +5170,13 @@ at least twice to regenerate cross-references correctly.
 |     | memo-pad     | mummy-bag  | mumbo-jumbo    |               |           |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 440   450)
 #+end_src
 
-#+RESULTS[d86e3af90a7e4905edf3925a37cec1e99abaf875]:
+#+RESULTS[a4c834e1be3e1b36de02619543b972fc7326a950]:
 :results:
 |-----+-------------+-------------+--------------+------------+------------+------------|
 | 340 | mercenary   | mercer      | mercy        | morass     | morose     | morsel     |
@@ -5205,12 +5213,13 @@ at least twice to regenerate cross-references correctly.
 |     | moribund    | hammer-beam | hammer-blow  |            |            |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 450   460)
 #+end_src
 
-#+RESULTS[c2fe3a6934c7c088ed3077a0c44d84557d02284f]:
+#+RESULTS[18d472d907fd6b3e101751e5631b06fb11d3c595]:
 :results:
 |-----+--------------+---------------+-------------+--------------+------------+-------------|
 | 350 | MALICE       | homeless      | maelstrom   | mills        | miles      | millisecond |
@@ -5248,12 +5257,13 @@ at least twice to regenerate cross-references correctly.
 :end:
 
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 460   470)
 #+end_src
 
-#+RESULTS[7675ca7d6b112c2c469870369d24a864fe3cb984]:
+#+RESULTS[77fe24aeae831e92de206baf4d49f11e007ce828]:
 :results:
 |-----+-------------+------------+-----------+------------+-------------+----------|
 | 360 | magistrate  | majesty    | majuscule | matches    | images      |          |
@@ -5279,12 +5289,13 @@ at least twice to regenerate cross-references correctly.
 | 369 | matchable   | matchbook  | matchbox  | matchboard | match-up    | mushball |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 470   480)
 #+end_src
 
-#+RESULTS[b1b34e9f6eb9d62230ba34a24030c83a53620a11]:
+#+RESULTS[c44c9d1cc1e53cdfb58ae1ba08018c920091073e]:
 :results:
 |-----+-------------+--------------+------------+-----------+---------------+-------------|
 | 370 | macassar    | maccus       | magazine   | maxim     | megacycle     | mikes       |
@@ -5315,12 +5326,13 @@ at least twice to regenerate cross-references correctly.
 |     | hummingbird | Yom-Kippur   | amicable   |           |               |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 480   490)
 #+end_src
 
-#+RESULTS[09cd126a820c934d1e501acbc877a8003d009821]:
+#+RESULTS[921d89dd46edf3de0d9b3f6af4e71f78d3b75765]:
 :results:
 |-----+------------+--------------+-------------+--------------+--------------+--------------|
 | 380 | mavis      | movies       | moves       | muffs        | Mephisto     | emphasis     |
@@ -5348,12 +5360,13 @@ at least twice to regenerate cross-references correctly.
 | 389 | movable    | movie-plot   | move-up     | amphibious   | amphipod     | amphibole    |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 490   500)
 #+end_src
 
-#+RESULTS[f5df495a41eb47a6f2b0b98973ee1144389c4793]:
+#+RESULTS[5284a5b6c1138cd013db488db45e5119ee54e084]:
 :results:
 |-----+------------+--------------+------------+--------------+--------------+-------------|
 | 390 | maps       | mobster      | ambassador | ambuscade    | embassy      | embezzle    |
@@ -5393,12 +5406,13 @@ at least twice to regenerate cross-references correctly.
 | 399 | maypop     | mopboard     | mop-up     | humpback     | imbibe       | impubic     |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 500   510)
 #+end_src
 
-#+RESULTS[528cf0e3c301499030bbc6b365681a65d5ba756f]:
+#+RESULTS[a4e37265e9c8fe3274c0aed9a228383e64aaf547]:
 :results:
 |-----+--------------+-------------+--------------+---------------+-------------+-----------|
 | 400 | racist       | recess      | resist       | raises        | roses       | horses    |
@@ -5437,12 +5451,13 @@ at least twice to regenerate cross-references correctly.
 |     | responsible  | airspace    | horseback    | horsepower    | horsewhip   | irascible |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 510   520)
 #+end_src
 
-#+RESULTS[f918768ccc5b69c670a81d461443595eb25d8caa]:
+#+RESULTS[15cb0d76e35ab9a6b7630f4985b78b53996df24d]:
 :results:
 |-----+-------------+---------------+------------+--------------+------------+------------|
 | 410 | ARTIST      | ARTISAN       | yardstick  | roadster     | Rhodes     | roads      |
@@ -5489,12 +5504,13 @@ at least twice to regenerate cross-references correctly.
 |     | ratproof    | redback       | redberry   | redouble     |            |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 520   530)
 #+end_src
 
-#+RESULTS[7ee2e2c52c02c700ae301df21d6309eaf94aecfe]:
+#+RESULTS[ab3495aead0f98a670feda6db4b3ef79480138bc]:
 :results:
 |-----+------------+-----------+------------+------------+------------+-------------|
 | 420 | rains      | rancid    | ransack    | ransom     | reigns     | reinsert    |
@@ -5531,12 +5547,13 @@ at least twice to regenerate cross-references correctly.
 |     | hornblende | hornbook  | hornpipe   |            |            |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 530   540)
 #+end_src
 
-#+RESULTS[ae780103f1633ea5b3d7abea56bef4030aed83cd]:
+#+RESULTS[89a1537eb21ed7109c093a3bd24810c7f0049c89]:
 :results:
 |-----+--------------+-------------+-----------+-----------+------------+-------------|
 | 430 | rams         | reams       | rooms     | remiss    | rhymes     | arms        |
@@ -5572,12 +5589,13 @@ at least twice to regenerate cross-references correctly.
 |     | rambunctious | rambutan    | armpit    | warm-up   |            |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 540   550)
 #+end_src
 
-#+RESULTS[38bae9d15fd3dd81c82322477abfd082ea7c55fb]:
+#+RESULTS[d174c7e8bacaf2f6a78d9735ba4dbca04a540bcc]:
 :results:
 |-----+-------------+--------------+------------+-----------+-------------+-----------|
 | 440 | rehearsal   | roars        | arrears    | errors    | horrors     | warhorse  |
@@ -5606,12 +5624,13 @@ at least twice to regenerate cross-references correctly.
 | 449 | rarebit     | re-orbit     | roorback   | wire-rope |             |           |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 550   560)
 #+end_src
 
-#+RESULTS[f99ac0442354775808f0b33d99268a02e626905a]:
+#+RESULTS[8e6082bb7b3d1aab5b6a9d74d49ed2c2c123e7e4]:
 :results:
 |-----+-------------+-----------+-------------+--------------+-----------+-----------|
 | 450 | rails       | realize   | release     | realest      | realist   | airless   |
@@ -5647,12 +5666,13 @@ at least twice to regenerate cross-references correctly.
 |     | earlobe     | harelip   | hurly-burly | orlop        | whirlpool |           |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 560   570)
 #+end_src
 
-#+RESULTS[16cf031843dd1379619e98fbe2cffbcd9ecfd264]:
+#+RESULTS[b12d123031ca6eeb58184d331769ac16beb0bc78]:
 :results:
 |-----+-------------+---------------+-------------+--------------+-----------+-----------|
 | 460 | rages       | ratios        | regisseur   | register     | rejoice   | riches    |
@@ -5687,12 +5707,13 @@ at least twice to regenerate cross-references correctly.
 |     | worship     |               |             |              |           |           |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 570   580)
 #+end_src
 
-#+RESULTS[c168311749055a4b706fca3806862b194a970070]:
+#+RESULTS[aa2cd74a0a41a5a8ec0adc890b828d4f9873ca57]:
 :results:
 |-----+--------------+----------------+-------------+------------+-------------+------------|
 | 470 | racks        | rags           | recast      | request    | raucous     | rex        |
@@ -5733,12 +5754,13 @@ at least twice to regenerate cross-references correctly.
 |     | rock-bottom  | rugby          | archipelago | ark-boat   | herringbone | arquebus   |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 580   590)
 #+end_src
 
-#+RESULTS[223799b2ec981ebfffb24dbab6a5ae7b8ec70654]:
+#+RESULTS[4c1a11023e543b542f27c4bbb9ad849f440c52a6]:
 :results:
 |-----+------------+------------+--------------+-------------+-------------+------------|
 | 480 | refuse     | reviews    | revise       | revisit     | airwaves    | harvest    |
@@ -5771,12 +5793,13 @@ at least twice to regenerate cross-references correctly.
 | 489 | rev-up     | reviewable | refabricate  | roofable    | rough-up    | wharf-boat |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 590   600)
 #+end_src
 
-#+RESULTS[824618f285209c60a0791a3d308f3369c5f4af0b]:
+#+RESULTS[32148a9c13eeba2097eda2a1825c3bf7246e7fbb]:
 :results:
 |-----+-----------+------------+-------------+-----------+-------------+----------|
 | 490 | rabies    | repast     | repose      | repost    | rebus       | robust   |
@@ -5818,12 +5841,13 @@ at least twice to regenerate cross-references correctly.
 |     | orb-web   | war-baby   |             |           |             |          |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 600   610)
 #+end_src
 
-#+RESULTS[b4a50e49d592dec312b0afa14f75494c3f5f8dba]:
+#+RESULTS[afd3434f9dfc73a73289078f0d253fbd363d8cd3]:
 :results:
 |-----+---------------+---------------+---------------+--------------+-------------+--------------|
 | 500 | lasses        | lassoes       | leases        | lazy-Susan   | losses      | Louis-Seize  |
@@ -5855,12 +5879,13 @@ at least twice to regenerate cross-references correctly.
 |     | allspice      |               |               |              |             |              |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 610   620)
 #+end_src
 
-#+RESULTS[707963eaa97fe819a3e805f44d031327a3605067]:
+#+RESULTS[c6164a8b15d22f31d2a54c99a7689ae42a447486]:
 :results:
 |-----+--------------+--------------+------------+-------------+---------------+------------|
 | 510 | lattice      | lettuce      | ladies     | lads        | lighthouse    | lotus      |
@@ -5902,12 +5927,13 @@ at least twice to regenerate cross-references correctly.
 |     | let-up       | hilltop      | holdback   | hold-up     | wildebeest    |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 620   630)
 #+end_src
 
-#+RESULTS[bdc58ba8ed2c2ad958bbe8722a870de76bc19305]:
+#+RESULTS[e13dd3cefd24af1fb1eeb55075f4e21b3f4a962f]:
 :results:
 |-----+-------------+---------------+-------------+------------+-----------+---------------|
 | 520 | lance       | lens          | lioness     | linseed    | lonesome  | lunacy        |
@@ -5945,12 +5971,13 @@ at least twice to regenerate cross-references correctly.
 |     | loanable    | loanblend     | alienable   |            |           |               |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 630   640)
 #+end_src
 
-#+RESULTS[a5a7e548da3787fadaacea9296e783555b716df4]:
+#+RESULTS[26e3f693ef18d349267f9c4f6d5d6b0551ac6aa2]:
 :results:
 |-----+-------------+---------------+---------------+-----------------+------------+-----------|
 | 530 | lambs       | limbs         | limousine     | looms           | low-mass   | almost    |
@@ -5985,12 +6012,13 @@ at least twice to regenerate cross-references correctly.
 |     | Olympics    | slumber       |               |                 |            |           |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 640   650)
 #+end_src
 
-#+RESULTS[991287b32a5bceb664090f15965d339ef33613d5]:
+#+RESULTS[0ed70e94da78288986021a36214e319135911ac7]:
 :results:
 |-----+-------------+-------------+---------------+-------------+-------------+-------------|
 | 540 | larceny     | liars       | lawyers       | lower-house | walrus      | wheelhorse  |
@@ -6022,12 +6050,13 @@ at least twice to regenerate cross-references correctly.
 |     | lyre-back   | lyrebird    |               |             |             |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 650   660)
 #+end_src
 
-#+RESULTS[a76412248879b7e5c8830e8bd18d086338ecaeff]:
+#+RESULTS[6106a8df736f71fb301fdc4632ece6817c773f14]:
 :results:
 |-----+-------------+-------------+--------------+--------------+----------------+------------|
 | 550 | lawless     | lilies      | lowliest     | lulls        | lulus          | Allhallows |
@@ -6054,12 +6083,13 @@ at least twice to regenerate cross-references correctly.
 | 559 | lalapalooza | lilliputian | lollipop     | lullaby      |                |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 660   670)
 #+end_src
 
-#+RESULTS[d1100091dc4c1571917f7208a632616759c80c6f]:
+#+RESULTS[2f1cd8182101789d776e3f7746e48e2e99f77bb2]:
 :results:
 |-----+-------------+-------------+---------------+-------------+-------------+-------------|
 | 560 | latches     | lodges      | loges         | loggias     | legislator  | logistics   |
@@ -6087,12 +6117,13 @@ at least twice to regenerate cross-references correctly.
 | 569 | awl-shaped  | hell-ship   | algebra       | oil-job     | oil-ship    | well-shaped |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 670   680)
 #+end_src
 
-#+RESULTS[4625e0c162e77239ba5e39c52a1009d3d3d5621e]:
+#+RESULTS[c1d0027db801322cdf27e4eb96fb8ca9cf64bded]:
 :results:
 |-----+-----------------+-------------+------------+-------------+------------+------------------|
 | 570 | laxative        | laxity      | legacy     | legs        | locks      | looks            |
@@ -6132,12 +6163,13 @@ at least twice to regenerate cross-references correctly.
 |     | look-up         | longboat    | lugubrious | helicopter  | allocable  |                  |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 680   690)
 #+end_src
 
-#+RESULTS[503b50eeb2dfb0715820fcbdcaf0dac5332500d6]:
+#+RESULTS[ff44ada51a40160d9cdd83803f97f4876a396589]:
 :results:
 |-----+--------------+--------------+------------+-----------------+---------------+--------------|
 | 580 | laughs       | layoffs      | leaves     | levies          | lives         | lifesaver    |
@@ -6176,12 +6208,13 @@ at least twice to regenerate cross-references correctly.
 |     | live-by      | live-up      | lovable    | lovebird        | love-potion   | alphabet     |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 690   700)
 #+end_src
 
-#+RESULTS[6c805e4802da09ceda14d4543a91b3f05b642ce8]:
+#+RESULTS[c167c8659ea0f0aff3260e6743293159d22aa1ef]:
 :results:
 |-----+-------------+----------------+--------------+------------+-------------+-----------|
 | 590 | labs        | laps           | lapse        | lips       | loops       | lopsided  |
@@ -6217,12 +6250,13 @@ at least twice to regenerate cross-references correctly.
 | 599 | lap-up      | leap-up        | ale-pub      | Ali-Baba   | oil-pipe    | wallpaper |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 700   710)
 #+end_src
 
-#+RESULTS[5c72cf17fca0263c8ad3284ed1d1a164f6d86f0f]:
+#+RESULTS[fbf52d5ab1a6cb6120e8779b083d481fb4e6341b]:
 :results:
 |-----+--------------+----------------+---------------+--------------+-------------+------------|
 | 600 | chases       | cheeses        | choices       | jazzist      | Jesus       | juices     |
@@ -6254,12 +6288,13 @@ at least twice to regenerate cross-references correctly.
 |     | jazzbow      | juice-up       | Jezebel       | shoespoon    | Josup       | Shuswap    |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 710   720)
 #+end_src
 
-#+RESULTS[d87768435c692bddbd4f3aee09da3cd6ad5fd163]:
+#+RESULTS[34325c527c864c7936d861c82d35bca3f6f73693]:
 :results:
 |-----+-------------+------------+------------+---------------+-----------+-------------|
 | 610 | chiteaus    | jets       | jetsam     | jettison      | Judas     | shades      |
@@ -6297,12 +6332,13 @@ at least twice to regenerate cross-references correctly.
 |     | washed-up   | washtub    |            |               |           |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 720   730)
 #+end_src
 
-#+RESULTS[dbe1743cb5429aef6c7196157c8633e65fc1561c]:
+#+RESULTS[ece1875ac4969d939a6607928c12d9bd9c3ccc74]:
 :results:
 |-----+-------------+--------------+------------+--------------+------------+------------|
 | 620 | chance      | chains       | chancellor | chanson      | Chinese    | genesis    |
@@ -6341,12 +6377,13 @@ at least twice to regenerate cross-references correctly.
 |     | shinplaster |              |            |              |            |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 730   740)
 #+end_src
 
-#+RESULTS[00f9740b20aa6ef01473708e282eb6a7349fe55f]:
+#+RESULTS[0e5bd9f4ac5fc74e0199320c60642640ad2c7774]:
 :results:
 |-----+------------+------------+-------------+-------------+------------+-----------|
 | 630 | chemise    | chimes     | chums       | gems        | James      | jams      |
@@ -6380,12 +6417,13 @@ at least twice to regenerate cross-references correctly.
 |     | jumbo      | jumble     | jump        | shambles    | shampoo    |           |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 740   750)
 #+end_src
 
-#+RESULTS[33439d0bc665345cd2e3e9a9edf862d5e567f758]:
+#+RESULTS[f37b47eb77f0c3c914ac6d89da9efe3e06a3a68b]:
 :results:
 |-----+-----------+-------------+--------------+-------------+-----------+-------------|
 | 640 | chairs    | cherries    | chores       | gyroscope   | gyrus     | jars        |
@@ -6425,12 +6463,13 @@ at least twice to regenerate cross-references correctly.
 |     | shrapnel  | shrub       |              |             |           |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 750   760)
 #+end_src
 
-#+RESULTS[e2b0299eec4db278eb97c1ea3c3b94f26aae14b7]:
+#+RESULTS[7ad8fefdd9c619becb70ba5b154c13fe39d9614e]:
 :results:
 |-----+-------------+-------------+------------+--------------+---------------+------------|
 | 650 | chalice     | chills      | jalousie   | jealousy     | jailhouse     | jewels     |
@@ -6464,12 +6503,13 @@ at least twice to regenerate cross-references correctly.
 |     | julep       | shallop     | shellapple | shellback    | shellproof    | shilpit    |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 760   770)
 #+end_src
 
-#+RESULTS[f441910836af48807c909275a869a39566ff6482]:
+#+RESULTS[567cee7a13766572111993284335c717dad74b4f]:
 :results:
 |-----+-----------------+-------------+-------------+--------------+------------+--------------|
 | 660 | cha-chas        | chiches     | chi-chis    | cicisbeo     | joy-juice  | joshes       |
@@ -6496,12 +6536,13 @@ at least twice to regenerate cross-references correctly.
 |     | shoe-shop       | showshop    |             |              |            |              |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 770   780)
 #+end_src
 
-#+RESULTS[41d25ba2e140cc9f12bfca6048b6058b070808b3]:
+#+RESULTS[d15401a2fd83ebab2a6a948f8c44f95c7c754fe2]:
 :results:
 |-----+-----------------+-------------+-------------+--------------+------------+-------------|
 | 670 | checks          | checkstones | checkstrap  | cheeks       | chicks     | jackass     |
@@ -6543,12 +6584,13 @@ at least twice to regenerate cross-references correctly.
 |     | shakeup         |             |             |              |            |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 780   790)
 #+end_src
 
-#+RESULTS[8bcbf103e3ad1fc4b631ae98cd5b7a5d486ec878]:
+#+RESULTS[7b0784668280bde1b70a73cb7a256bd554b0eaec]:
 :results:
 |-----+--------------------+------------+--------------+-------------+------------+---------------|
 | 680 | chafes             | chauffeuse | chefs        | chiefs      | chives     | geophysics    |
@@ -6581,12 +6623,13 @@ at least twice to regenerate cross-references correctly.
 | 689 | chaffable          | chavibetol | achievable   | shove-up    | watch-fob  |               |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 790   800)
 #+end_src
 
-#+RESULTS[e2d8fbfa72a9fc8f0cc2120bfd3ecb0806bf3a5d]:
+#+RESULTS[40e8467bd5b60b1ba1a754b1d301ab1e36c1c94e]:
 :results:
 |-----+--------------+-------------+-------------+-------------+-------------+------------|
 | 690 | chaps        | chapstick   | chips       | chops       | chopsuey    | chophouse  |
@@ -6625,12 +6668,13 @@ at least twice to regenerate cross-references correctly.
 |     | sheep-pod    | shipboard   | shipbuilder | hushpuppy   |             |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 800   810)
 #+end_src
 
-#+RESULTS[4e7d54e31b7767ebc5ba3d22335d51b82a67de3a]:
+#+RESULTS[5ffbc3767ae420d71385bafc07b55154c1fe502a]:
 :results:
 |-----+--------------+---------------+-------------------+------------+----------------+-------------|
 | 700 | cases        | causes        | cusses            | gases      | gazes          | guesses     |
@@ -6675,12 +6719,13 @@ at least twice to regenerate cross-references correctly.
 |     | expire       | explain       | explore           | export     | express        | exuberant   |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 810   820)
 #+end_src
 
-#+RESULTS[75c6472e964c862766acfb73b2d954e543cbf4ca]:
+#+RESULTS[a8f7a4c7bd4ed04e4702679ab0d87bcbcecbbe05]:
 :results:
 |-----+------------+--------------+-------------+-------------+---------------+---------------|
 | 710 | cats       | catsup       | catastrophe | coats       | caddies       | codes         |
@@ -6724,12 +6769,13 @@ at least twice to regenerate cross-references correctly.
 |     | equitable  | October      | octopus     |             |               |               |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 820   830)
 #+end_src
 
-#+RESULTS[d371c63202a43cedf39b023676f773ebbb203aae]:
+#+RESULTS[df3acb00d212aac23df00a3dbbf3bc015e167c12]:
 :results:
 |-----+---------------+--------------+---------------+------------+--------------+-------------|
 | 720 | cancel        | cancer       | coincidence   | conceal    | concede      | conceit     |
@@ -6774,12 +6820,13 @@ at least twice to regenerate cross-references correctly.
 |     | gunpoint      | gunpowder    | queenbee      | ignoble    |              |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 830   840)
 #+end_src
 
-#+RESULTS[4e76ebfdba790420474c3e09c1ca276aed73352f]:
+#+RESULTS[58e9d1d3b37f784b9f0a4e7ac94154119f7ba849]:
 :results:
 |-----+---------------+-------------+------------+------------+------------+-------------|
 | 730 | cameos        | chemist     | comestible | combs      | commas     | commissary  |
@@ -6818,12 +6865,13 @@ at least twice to regenerate cross-references correctly.
 |     | gamble        | gambit      | gambol     | gumbo      |            |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 840   845)
 #+end_src
 
-#+RESULTS[c4c320cb0be2152860d8686bb949818a7c3659d4]:
+#+RESULTS[6613741de4882694d598cc2a7ee034ec55b66f4b]:
 :results:
 |-----+-----------+-----------+---------------+------------+------------+-----------|
 | 740 | caress    | coarse    | correspond    | corsage    | corset     | course    |
@@ -6862,12 +6910,13 @@ at least twice to regenerate cross-references correctly.
 |     | agrarian  |           |               |            |            |           |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph    845 850)
 #+end_src
 
-#+RESULTS[c20ead89a1d65a5d5c67f71f49cd2b9bf98f3815]:
+#+RESULTS[c9bf9d997653f59a6a5a6ae694e36ea3976d9c9b]:
 :results:
 |-----+-------------+------------+------------+-------------+-------------+--------------|
 | 745 | carryall    | careless   | carol      | coral       | corral      | crawl        |
@@ -6899,12 +6948,13 @@ at least twice to regenerate cross-references correctly.
 |     | grub        |            |            |             |             |              |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 850   860)
 #+end_src
 
-#+RESULTS[948a7bcb41ded25936f21c77c5b68edbb6f55e72]:
+#+RESULTS[482375521f818730b674ffab0275515954f05add]:
 :results:
 |-----+-------------+------------+--------------+--------------+-------------+--------------|
 | 750 | calls       | calcium    | callous      | clasp        | class       | clause       |
@@ -6958,12 +7008,13 @@ at least twice to regenerate cross-references correctly.
 |     | eucalyptus  |            |              |              |             |              |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 860   870)
 #+end_src
 
-#+RESULTS[a4754f7f3c0a0d4ef2a69adb27cd482e3125bbdb]:
+#+RESULTS[94cf09e7bda5485cb34bdc9579b193484382d759]:
 :results:
 |-----+------------+-------------+-------------+------------+--------------+------------|
 | 760 | cages      | caches      | catches     | cautious   | coaches      | couches    |
@@ -6994,12 +7045,13 @@ at least twice to regenerate cross-references correctly.
 |     | ketchup    | key-job     |             |            |              |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 870   880)
 #+end_src
 
-#+RESULTS[a303f93337f668a10265fb99680bee250601ae8d]:
+#+RESULTS[200be07f97c2a6f040a4607f75cb7737f47e35ae]:
 :results:
 |-----+------------+----------------+----------------+--------------+--------------+-------------|
 | 770 | cakes      | caucus         | coax           | coexist      | cox          | cooks       |
@@ -7039,12 +7091,13 @@ at least twice to regenerate cross-references correctly.
 |     | kickup     | kakapo         | kingpin        | kookaburra   | eggcup       |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 880   890)
 #+end_src
 
-#+RESULTS[93e30891037b9c4cc6dabfb8f74181199dc0bc20]:
+#+RESULTS[28bc1b2f2f6f88f4413315c1d23beaf727a35f11]:
 :results:
 |-----+-----------------+---------------+--------------+-----------+-------------+--------------|
 | 780 | cafes           | calves        | cavascope    | caves     | coffeehouse | coifs        |
@@ -7076,12 +7129,13 @@ at least twice to regenerate cross-references correctly.
 | 789 | coffeeberry     | coffeebush    | coffeepot    | cough-up  | give-up     | goofball     |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 890   900)
 #+end_src
 
-#+RESULTS[e5624c36a24616db31f3789cef85c1a6413f8c63]:
+#+RESULTS[1c9b08f0085e815413ccb49ef18991dd9e545826]:
 :results:
 |-----+-------------+------------+------------+------------+------------+-------------|
 | 790 | cabs        | caboose    | capacity   | capes      | capsize    | capstan     |
@@ -7120,12 +7174,13 @@ at least twice to regenerate cross-references correctly.
 |     | cubeb       | cupbearer  | kabob      | keep-up    | key-pipe   |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 900   910)
 #+end_src
 
-#+RESULTS[8b90a6b04e6aeeedfa731512e723f918a7a8d2f1]:
+#+RESULTS[da7b2faecf47653827f98479010a162d7038fb86]:
 :results:
 |-----+-------------+----------------+---------------+------------------+-----------------+--------------|
 | 800 | faces       | face-saving    | fezzes        | fusses           | phases          | physicist    |
@@ -7164,12 +7219,13 @@ at least twice to regenerate cross-references correctly.
 |     | vesper      | vice-president | visible       | office-boy       | offspring       |              |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 910   920)
 #+end_src
 
-#+RESULTS[e01af147f0cf5448e7193d655b634a05a7c1bd1b]:
+#+RESULTS[6dd844cdfa6a504055ca95d7fc2ba3d75a665102]:
 :results:
 |-----+------------+--------------+--------------+------------+----------------+----------------|
 | 810 | fatso      | fates        | feats        | feuds      | fights         | fetus          |
@@ -7208,12 +7264,13 @@ at least twice to regenerate cross-references correctly.
 |     | footpace   | footpath     | footprint    | avoidable  |                |                |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 920   930)
 #+end_src
 
-#+RESULTS[6dfbc3d16cc819ca1cdaa1df6cb9672052eef8f5]:
+#+RESULTS[d8d42c195bd2df7c31669fa6a442b74704fa8234]:
 :results:
 |-----+-------------+------------+------------+---------------+-------------+-------------|
 | 820 | fancy       | fence      | fiance     | finesse       | fines       | fins        |
@@ -7251,12 +7308,13 @@ at least twice to regenerate cross-references correctly.
 |     | oven-baked  | ovenbird   |            |               |             |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 930   940)
 #+end_src
 
-#+RESULTS[a88120ae6cd2498f59e5799edd36f8e90d3aaab5]:
+#+RESULTS[f1ca9931c30a6dc8228b9476c3b80522d01b95c4]:
 :results:
 |-----+------------+-----------------+----------------+--------------+-------------+-----------|
 | 830 | fames      | fameuse         | famous         | famose       | femcee      | foams     |
@@ -7287,12 +7345,13 @@ at least twice to regenerate cross-references correctly.
 |     | vimpa      | Phomopsis       | half-implied   |              |             |           |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 940   950)
 #+end_src
 
-#+RESULTS[44f45770cc47f763d84687b02a25ddd3a56b19db]:
+#+RESULTS[930ffa4f552c7432501e4e7e2a7d66cb6c086a58]:
 :results:
 |-----+------------+--------------+-----------+------------+------------+--------------|
 | 840 | farce      | fierce       | firehouse | first      | force      | forest       |
@@ -7352,12 +7411,13 @@ at least twice to regenerate cross-references correctly.
 |     | overpower  | overburden   |           |            |            |              |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 950   960)
 #+end_src
 
-#+RESULTS[135789c3d46aa2e3135a0272c11c2c44160f6591]:
+#+RESULTS[581b28e7a8532a248c0c2055f352d600d39b9b13]:
 :results:
 |-----+-------------+----------------+--------------+------------+-------------+-----------|
 | 850 | fallacy     | FALSE          | felicitate   | fail-safe  | fleece      | fleas     |
@@ -7409,12 +7469,13 @@ at least twice to regenerate cross-references correctly.
 |     | volplane    | voluptuous     | available    |            |             |           |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 960   970)
 #+end_src
 
-#+RESULTS[650c599ebc0bf2dd30998e230f8a5813b14b0ca1]:
+#+RESULTS[d2ca2ee3e64f6cff876e8e12c75290106e94de0f]:
 :results:
 |-----+-------------+--------------+----------------+--------------+------------+-------------|
 | 860 | fascist     | fatuous      | fishes         | fish-house   | vicious    | vouchsafe   |
@@ -7451,12 +7512,13 @@ at least twice to regenerate cross-references correctly.
 |     | off-job     | wave-shape   |                |              |            |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 970   980)
 #+end_src
 
-#+RESULTS[4087092a30d4263e267821b712f203f9316a3654]:
+#+RESULTS[e58ee8b9e499204e432307702baae6a092427fdb]:
 :results:
 |-----+------------+-------------+--------------+-------------+-------------+-------------|
 | 870 | facsimile  | fakes       | fix          | figs        | focsle      | focus       |
@@ -7497,12 +7559,13 @@ at least twice to regenerate cross-references correctly.
 |     | evocable   | half-cap    | huffcap      | safekeeping |             |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 980   990)
 #+end_src
 
-#+RESULTS[f03c458213871d8dda4b1fe9d172caee361b79f4]:
+#+RESULTS[7e136adf34bd98be7c5ae7a74aceb5c6eb99797f]:
 :results:
 |-----+-------------+--------------+-------------+---------------+--------------+----------------|
 | 880 | fauvism     | fives        | fivesome    | fivesome      | five-spot    | five-star      |
@@ -7534,12 +7597,13 @@ at least twice to regenerate cross-references correctly.
 |     | viviparous  |              |             |               |              |                |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 990   1000)
 #+end_src
 
-#+RESULTS[67ecfe449e2395d745d62d6a328e02e1acab88de]:
+#+RESULTS[7c478412f5cf10df2103e4945b667c9ea47a108e]:
 :results:
 |-----+------------+------------+--------------+-------------+-----------+-------------|
 | 890 | fibs       | fobs       | fibster      | fops        | phoebes   | Phoebus     |
@@ -7573,12 +7637,13 @@ at least twice to regenerate cross-references correctly.
 | 899 | fob-pocket | half-bib   | half-bob     | V-bob       |           |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1000  1010)
 #+end_src
 
-#+RESULTS[0d9a8554a46fd430644ed6a0d2ac05f7cba154c5]:
+#+RESULTS[88e078c18a5117b5e09e89565d3ce6bfdcc22984]:
 :results:
 |-----+---------------+---------------+------------+-------------+------------+-------------|
 | 900 | paces         | passes        | pauses     | pieces      | Pisces     | possess     |
@@ -7623,12 +7688,13 @@ at least twice to regenerate cross-references correctly.
 |     | busybody      | upsweep       |            |             |            |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph  1010 1020)
 #+end_src
 
-#+RESULTS[f25c671060e85d315909ca3ce5594b9890faebb8]:
+#+RESULTS[ad7b67621a4622c4f05125ec30a29f1cf7934a66]:
 :results:
 |-----+--------------+--------------+-------------+------------+-------------+------------|
 | 910 | patsy        | peau-de-soie | pedestal    | pedestrian | poetess     | pizza      |
@@ -7676,12 +7742,13 @@ at least twice to regenerate cross-references correctly.
 |     | hospitable   |              |             |            |             |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1020 1030)
 #+end_src
 
-#+RESULTS[7947aff2110137abe8f13f6f82fa82a6f5b40890]:
+#+RESULTS[e3d6bc4e8c27925baf5402db82a91520423a9b79]:
 :results:
 |-----+------------+--------------+-------------+-------------+---------------+-------------|
 | 920 | panacea    | pans         | pains       | pansy       | pence         | pencil      |
@@ -7730,12 +7797,13 @@ at least twice to regenerate cross-references correctly.
 |     | pinniped   | pinup        | bonapartist | bonebreaker | hobnob        | open-up     |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1030 1040)
 #+end_src
 
-#+RESULTS[8d283177c9abc1e7a43a465ee7ab4e62179eaa98]:
+#+RESULTS[93c1b5de386ad0eb51eee0f0a9a1779bf7bdad36]:
 :results:
 |-----+---------------+----------------+-------------+-----------+------------+-----------|
 | 930 | palmist       | paymaster      | poems       | pomace    | pomes      | pumice    |
@@ -7772,12 +7840,13 @@ at least twice to regenerate cross-references correctly.
 |     | bumper        |                |             |           |            |           |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1040 1045)
 #+end_src
 
-#+RESULTS[aa2b5d96fed5879759dd5751010dd69e49d844eb]:
+#+RESULTS[622a7c3515fcd21fb115f8e41e21c105ff805757]:
 :results:
 |-----+-------------+-----------+-----------+-------------+-------------+--------------|
 | 940 | parasite    | parasol   | parcel    | Paris       | parson      | perceive     |
@@ -7815,11 +7884,12 @@ at least twice to regenerate cross-references correctly.
 |     | bearer      | borer     | borrower  | brewer      | briar       | uproar       |
 :end:
 
+
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1045 1050)
 #+end_src
 
-#+RESULTS[6f58f495e083d3da7388a0330f05e75b7432725c]:
+#+RESULTS[77c679776bf83a3593718e9a9441973352cf5965]:
 :results:
 |-----+------------+---------------+-------------+------------+--------------+-------------|
 | 945 | parallel   | paralyze      | parlay      | parley     | parliament   | parlor      |
@@ -7859,12 +7929,13 @@ at least twice to regenerate cross-references correctly.
 |     | approbate  | appropriation | apropos     | hyperbole  |              |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1050 1060)
 #+end_src
 
-#+RESULTS[e5070fca109a89ecf18460b7991c325be2c74710]:
+#+RESULTS[0e19f5fd74b01eff5f2cdcf0ed43c4bb8e363b63]:
 :results:
 |-----+------------+------------+--------------+-----------+-----------+-------------|
 | 950 | palace     | pals       | place        | placebo   | placid    | plasma      |
@@ -7925,12 +7996,13 @@ at least twice to regenerate cross-references correctly.
 |     | applepie   | epileptic  |              |           |           |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1060 1070)
 #+end_src
 
-#+RESULTS[ffd595578fd906b0b5e37e304d27c926688947bf]:
+#+RESULTS[fab1d74393bf72c2aad56c9a8d5d56261b483407]:
 :results:
 |-----+-------------+-------------+----------------+------------+-------------+-------------|
 | 960 | pachisi     | patches     | peaches        | pitches    | pouches     | poaches     |
@@ -7970,12 +8042,13 @@ at least twice to regenerate cross-references correctly.
 |     | bush-pea    | bushpig     | heebie-jeebies | hobby-shop |             |             |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1070 1080)
 #+end_src
 
-#+RESULTS[f007bd7a871c197fd63d44bbe898d73a4bf05a09]:
+#+RESULTS[4acd335885aad19ce769fff0171b2666b0e85206]:
 :results:
 |-----+------------+--------------+-------------+------------+------------+----------------|
 | 970 | packs      | pax          | PX          | Picasso    | pikes      | pigskin        |
@@ -8023,12 +8096,13 @@ at least twice to regenerate cross-references correctly.
 |     | buckpot    | buck-up      | hubcap      | upkeep     |            |                |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1080 1090)
 #+end_src
 
-#+RESULTS[0785952ed93e6e57071e81ddc3234eb407544686]:
+#+RESULTS[1710c594b1a7995e48a5282be15605919cac0c72]:
 :results:
 |-----+-----------+------------+------------+------------+-------------+------------|
 | 980 | paves     | pavestone  | payoffs    | peeves     | puffs       | beefs      |
@@ -8062,12 +8136,13 @@ at least twice to regenerate cross-references correctly.
 |     | buffable  | buffbar    | aboveboard |            |             |            |
 :end:
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 1090 1101)
 #+end_src
 
-#+RESULTS[242f72bdbee628698665bcf5671b646e178812e3]:
+#+RESULTS[8b58d361756a71cd492fc7426b399a72c59335c4]:
 :results:
 |------+--------------+------------+------------+--------------+------------+------------|
 |  990 | papacy       | papistry   | papoose    | pip-squeak   | poppies    | puppies    |
@@ -8104,6 +8179,7 @@ at least twice to regenerate cross-references correctly.
 |------+--------------+------------+------------+--------------+------------+------------|
 | 1000 | dioceses     | diseases   | disuses    |              |            |            |
 :end:
+
 
 \clearpage
 ** Picture Words from John D. Cook
@@ -8163,22 +8239,6 @@ function that can be computed mentally:
 #+end_src
 
 #+RESULTS:
-: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-04XANO') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
-: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-Arrsmt') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
-: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-CVZSFj') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
-: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-d67kHY') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
-: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-XRJ4vj') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
-: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-7NRf74') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
-: __PYTHON_EL_eval("try:\n    with open('/var/folders/cp/df32wpxn1ps8dmn6w_tydwdr0000gn/T/babel-JoH24x/python-SzTGNf') as __org_babel_python_tmpfile:\n        exec(compile(__org_babel_python_tmpfile.read(), __org_babel_python_tmpfile.name, 'exec'))\nexcept:\n    raise\nfinally:\n    print('
-: {'permutation': array([6, 5, 7, 9, 0, 8, 4, 2, 1, 3])}
-: {'digits': [5, 1, 9, 9, 9]}
-: {'hash': '26752'}
-: {'permutation': array([6, 5, 7, 9, 0, 8, 4, 2, 1, 3])}
-: {'digits': [5, 1, 9, 9, 9]}
-: {'hash': '26752'}
-: {'permutation': array([6, 5, 7, 9, 0, 8, 4, 2, 1, 3])}
-: {'digits': [5, 1, 9, 9, 9]}
-: {'hash': '26752'}
 
 #+begin_comment
   def fp_free_permutation(i, p, n):
