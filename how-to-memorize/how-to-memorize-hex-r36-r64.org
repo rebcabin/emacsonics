@@ -543,8 +543,6 @@ for 32:
 |    | omen  | woman   | yeoman |       |      |        |
 :end:
 
-
-
 */Notes on such tables/*:
 
 - the peg is in all-caps and in first position; other terms in
@@ -560,7 +558,8 @@ MAN is the peg: it is /equal/ to 32 in your mind. I visualize
 Superman flying out of the phone booth, impossible to forget for me.
 
 # The Sound-Alikes help to create longer phantasmagorias from longer
-# strings of numbers by devising a story (though see Appendix [[pao]]).
+# strings of numbers by devising a story (though see Appendix
+# [[[[pao]]]] in the PAO system).
 # For instance, 327685 is Superman (32) leaping up to catch (76) a
 # fly (85). With practice, one gets fast. Eran Katz often opens his
 # lectures with a stunt wherein he memorizes hundreds of digits as
@@ -571,9 +570,23 @@ Superman flying out of the phone booth, impossible to forget for me.
 
 We go up to three digits in this document. That means that every
 number from 00 through 099 and 0 through 1000 has a peg and a list
-of sound-alikes.
+of sound-alikes. That's 1100 pegs by my count.
 
-In this old system, the peg and sound-alikes for the 3-digit
+It is a very serious commitment to memorize 1100 pegs. My dad had
+it, and John has done it. It will take months and it must be
+refreshed frequently. I think it's more of an intellectual
+challenge than a utility for memory, especially now that I've
+adopted the PAO system (Appendix [[pao]]), which lets me easily and
+quickly come up with phantasmagorias for any triple or sextuple of
+digits base just on my 110 pegs for 0 through 9 and 00 through
+99). However, I present the 1100-peg 3-digit system for the
+adventurous mental mountaineers out there.
+
+The 3-digit system comes in an old form and a new form. The old
+form is based on Krill and Furst, like the 2-digit system. The new
+system is from John and is presented below.
+
+In the old system, the peg and sound-alikes for the 3-digit
 number, $xyz$, are formed from 3 hard consonant sound alikes, $a$
 for $x$, $b$ for $y$, and $c$ for $z$. For instance, here is the
 list for $xyz=352$:
@@ -591,16 +604,16 @@ list for $xyz=352$:
 
 
 When making up pegs and sound-alikes, weak consonant sounds like
-H, WH, Y, and W are free. For example, ignore the H in /hemline/
-and think of it as $MLN$ for $352$.
+H, WH, Y, and W are free. For example, ignore the H in HEMLINE
+and think of HEMLINE as $MLN$ for $352$.
 
 Vowel sounds are also free --- use as many or as few as you like.
 
 From this point on, when we write "sound" or "sounds," we mean
 "hard consonant sound" or "hard consonant sounds."
 
-Ignore trailing sounds beyond the first three: /millennial/ and
-/millenium/ both encode 352.
+Ignore trailing sounds beyond the first three: MILLENNIAL and
+MILLENIUM both encode 352.
 
 # Ignore leading S and Z sounds if the total number of sounds is
 # four or more. So /semolina/ encodes 352. However, /semolina/ also
@@ -611,17 +624,25 @@ Ignore trailing sounds beyond the first three: /millennial/ and
 *** Leading S and Z sounds
 
 Furst's tables are ambiguous for 3-digit pegs with leading 0.
-For example, in his original, /semolina/ appears under both 352
+For example, in his original, SEMOLINA appears under both 352
 and 035. We can't have any ambiguity, however, so in our tables,
 a leading S or Z sound encodes a number that begins with a 0.
+
+TODO it is an arduous process to correct Furst's tables to move
+all words with leading S or Z sounds into the tables for numbers
+with leading zeros. As of Nov 2025, it's done through 360. I
+(Brian) will complete the process as time permits. For now, be
+tolerant and interpret any words with leading S or Z sounds,
+perhaps with leading soft constants and vowels, as belonging to
+numbers with leading zeros.
 
 
 ** TODO /Composite Pegs/: New 3-Digit System
 
 (John's idea)
 
-It can be challenging to come up with more than 1,000 3-digit pegs
-out of the blue. Perhaps we could get to 1,000 more easily by
+It can be challenging to come up with more than 1100 3-digit pegs
+out of the blue. Perhaps we could get to 1100 more easily by
 combining 110 prefix pegs with 10 fixed, suffixes. For example:
 
 # In the old system, the sounds $abc$ for numerals $xyz$ can be
@@ -2763,17 +2784,17 @@ Today is Saturday.
 <<PAO>>
 <<pao>>
 
-I recently learned the PAO system and it's quickly becoming my
-favorite. Almost magically, it helps you string long
-phantasmagorias together, 6 digits---three pegs at a time. It's
-not very different from the peg system, and not much more
-difficult to devise, but it is a 3X amplifier.
+I recently learned the PAO---Person, Action, Object---system and
+it's quickly becoming my favorite. Almost magically, it helps you
+string long phantasmagorias together, 6 digits---three pegs---at a
+time. It's built right on top of the peg system and it is a 3X
+amplifier.
 
-The PAO system associates 3 phantasmagorias to each number. You
-build up your PAO system by enhancing the pegs you already know.
+The PAO system associates 3 phantasmagorias in a little mini-movie
+to each number. You build up your PAO system by enhancing and
+stringing together the pegs you already know.
 
-For example, consider these enhanced
-pegs:
+For example, consider these enhanced pegs:
 
 |     | peg  | Person       | Action  | Object         |
 |-----+------+--------------+---------+----------------|
@@ -2784,25 +2805,56 @@ pegs:
 | ... |      |              |         |                |
 |  58 | leaf | BREEZE       | RUSTLES | CANADIAN-MAPLE |
 
+Now, just from these, There are 64 different mini-movies you can
+make up:
+
+192929 CHIMP NAPS on the COUCH
+192930 CHIMP NAPS at CHURCH
+...
+293019 PUSSYCAT LEAVES the BEER
+...
+301958 CONGREGATION TAPS CANADIAN MAPLE syrup
+
+and so on.
+
+I had a document numbered 30291958 the other day. I needed to
+remember this number because I needed to refer to the document, by
+number, in some other places. Without memory training, I would
+have had to write it down, or copy-paste it to Notepad, or some
+such annoying, time-consuming, distracting paper-cut of an
+activity. Instead, I just created a mental movie.
+
 If you had to memorize 30291958, you can do it the old way with
-four pegs as described earlier in this document, or you can just pick
+four pegs as described earlier in this book, or you can just pick
 the Person field for 30, the Action field for 29, the Object field
 for 19, the Person field for 58, and so on if there were more
 pairs. I quickly get
 
-The CONGREGATION NAPS after drinking BEER and a BREEZE rustles leaves.
+The CONGREGATION NAPS after drinking BEER and a BREEZE rustles
+leaves.
 
-I might end up with the same phantasmagoria the old way, but this
-way is faster and more robust.
+I might end up with the same mental movie the old way, but this
+way is faster and more robust. How about 40331626? DALE EARNHARDT
+ROLLS EYEBALLS into a NICHE. How do I get DALE EARNHARDT? 40 is
+RACE, and my PAO for RACE is DALE EARNHARDT CLIMBS into the window
+of his famous #3 RACE CAR. 33 is MAMA, and my PAO is MAMA ROLLS
+DOUGH (with a rolling pin). 16 is TISSUE, and my PAO is ALL GORE
+DABS TEARS from his eyes with a tissue, as he weeps about global
+warming. 26 is just NICHE, so I didn't invoke PAO for the last two
+digits.
 
-Here are the first few rows of my PAO table. Many of these are
-very personal and will surely not work for you. Make sure the
-persons are unique amongst themselves, ditto the actions and the
-objects.
+Knowing my pegs, it was actually almost too easy to come up with
+my PAO system. The downside for you, the reader, is that my PAO is
+even more personalized than my pegs. That fact makes it easy for
+me to remember, but more difficult to teach. But I'll give it a go
+anyway.
+
+The key to building your own PAO is to make make sure the persons
+are unique amongst themselves, ditto the actions and the objects.
 
 My table is just an example. Fill out your own table to suit
 yourself. You'll find it very quick to do and you will love
-memorizing it because the peg are a huge help.
+memorizing it because the pegs are a huge help.
 
 |     | peg   | Person            | Action   | Object              |
 |-----+-------+-------------------+----------+---------------------|
@@ -2830,6 +2882,19 @@ memorizing it because the peg are a huge help.
 | 8 | fee  | LAWYER         | HORDES     | GOLD                    |
 | 9 | pea  | PEA            | BRUISES    | the PRINCESS            |
 
+Why do you need these single-digit entries? Here's one
+application: phone numbers, at least in the US, come in 3-3-4
+patterns. To remember 258-876-5309 (this is a complete fake: an
+unassigned area code and the number from the old pop song that
+everyone knows), I might do
+
+NOAH STOPS a shower of GOLD, his LAWYER TWISTS ROSE STEMS, a
+BARTENDER (53) SPILLS (09) a drink.
+
+The only thing you didn't see from above is
+
+53, BARTENDER SQUEEZES *LIME* into a bottle of Corona beer.
+
 |    | peg    | Person         | Action     | Object          |
 |----+--------+----------------+------------+-----------------|
 | 10 | toes   | DANICA         | PAINTS     | her TOENAILS    |
@@ -2855,6 +2920,10 @@ memorizing it because the peg are a huge help.
 | 27 | neck  | NEFERTIRI     | POSES   | for SCULPTURE     |
 | 28 | navy  | NAVY          | STEAMS  | in the OCEAN      |
 | 29 | nap   | PUSSYCAT      | NAPS    | on the COUCH      |
+
+It would be a lengthy and uninstructive process to explain how I
+came up with all these. Suffice it to say that /they work for me/
+and you can make some that work for you!
 
 
 * All Pegs and Sound-Alikes
@@ -3106,40 +3175,43 @@ at least twice to regenerate cross-references correctly.
 
 #+RESULTS[eb9a923a1f25657119834471cfd01f10cc6f3a84]:
 :results:
-|-----+--------------+--------------+--------------+---------------+-------------+---------------|
-| 030 | SAMSON       | SIAMESE      | seamstress   | semester      | semisweet   | swimsuit      |
-|   U | osmosis      | sea-mouse    | semicircle   |               |             |               |
-|-----+--------------+--------------+--------------+---------------+-------------+---------------|
-| 031 | CEMETERY     | SMITH        | Semite       | housemaid     | smut        | summit        |
-|   V | assumed      | smite        | smooth       | something     | sometimes   | summed        |
-|     | symmetric    | symmetry     |              |               |             |               |
-|-----+--------------+--------------+--------------+---------------+-------------+---------------|
-| 032 | SALMON       | CEMENT       | seaman       | semen         | seminary    | yes-man       |
-|   W | Seminole     | awesomeness  | iceman       | sameness      | semantics   | somnolent     |
-|     | summon       | wise-man     | wise-woman   |               |             |               |
-|-----+--------------+--------------+--------------+---------------+-------------+---------------|
-| 033 | OSMIUM       | SEMI-MONTHLY | semi-mundane | same make     | same model  | same month    |
-|   X | Summum Bonum | same man     | same mood    | semi-material | semi-member | semimemorable |
-|     | semi-metal   | semi-mobile  | semi-moist   | semimonthly   | semi-motile | semi-motor    |
-|-----+--------------+--------------+--------------+---------------+-------------+---------------|
-| 034 | SAMURAI      | SWIMMER      | summer       | simmer        | smear       | summary       |
-|   Y | smart        | smirk        |              |               |             |               |
-|-----+--------------+--------------+--------------+---------------+-------------+---------------|
-| 035 | SAWMILL      | SMILE        | semolina     | smell         | small       | simile        |
-|   Z | sea-mile     | sea-mule     | seamless     | seemly        | similar     |               |
-|-----+--------------+--------------+--------------+---------------+-------------+---------------|
-| 036 | SMASH        | SMOOCH       | smudge       | smidgen       | so-much     |               |
-|   a |              |              |              |               |             |               |
-|-----+--------------+--------------+--------------+---------------+-------------+---------------|
-| 037 | SMACK        | SMOKE        | sumac        | smuggler      | seeming     | swimming      |
-|   b |              |              |              |               |             |               |
-|-----+--------------+--------------+--------------+---------------+-------------+---------------|
-| 038 | SEMAPHORE    | SAMOVAR      | symphony     | semifinal     | semiformal  |               |
-|   c |              |              |              |               |             |               |
-|-----+--------------+--------------+--------------+---------------+-------------+---------------|
-| 039 | CYMBAL       | SAMBA        | somber       | symbol        | zombie      | swamp         |
-|   d | assembly     | sample       | simple       | somebody      | sympathy    |               |
+|-----+--------------+--------------+--------------+---------------+--------------+---------------|
+| 030 | SAMSON       | SIAMESE      | seamstress   | semester      | semisweet    | swimsuit      |
+|   U | osmosis      | sea-mouse    | semicircle   |               |              |               |
+|-----+--------------+--------------+--------------+---------------+--------------+---------------|
+| 031 | CEMETERY     | SMITH        | Semite       | housemaid     | smut         | summit        |
+|   V | assumed      | smite        | smooth       | something     | sometimes    | summed        |
+|     | symmetric    | symmetry     |              |               |              |               |
+|-----+--------------+--------------+--------------+---------------+--------------+---------------|
+| 032 | SALMON       | CEMENT       | seaman       | semen         | seminary     | yes-man       |
+|   W | Seminole     | awesomeness  | iceman       | sameness      | semantics    | somnolent     |
+|     | summon       | wise-man     | wise-woman   |               |              |               |
+|-----+--------------+--------------+--------------+---------------+--------------+---------------|
+| 033 | OSMIUM       | SEMI-MONTHLY | semi-mundane | same make     | same model   | same month    |
+|   X | Summum Bonum | same man     | same mood    | semi-material | semi-member  | semimemorable |
+|     | semi-metal   | semi-mobile  | semi-moist   | semimonthly   | semi-motile  | semi-motor    |
+|-----+--------------+--------------+--------------+---------------+--------------+---------------|
+| 034 | SAMURAI      | SWIMMER      | summer       | simmer        | smear        | summary       |
+|   Y | smart        | smirk        |              |               |              |               |
+|-----+--------------+--------------+--------------+---------------+--------------+---------------|
+| 035 | SAWMILL      | SMILE        | semolina     | smell         | small        | simile        |
+|   Z | sea-mile     | sea-mule     | seamless     | seemly        | similar      | smelt         |
+|     | assimilate   | simulate     | simultaneous | smolder       | small-minded | smallpox      |
+|-----+--------------+--------------+--------------+---------------+--------------+---------------|
+| 036 | SMASH        | SMOOCH       | smudge       | smidgen       | so-much      |               |
+|   a |              |              |              |               |              |               |
+|-----+--------------+--------------+--------------+---------------+--------------+---------------|
+| 037 | SMACK        | SMOKE        | sumac        | smuggler      | seeming      | swimming      |
+|   b |              |              |              |               |              |               |
+|-----+--------------+--------------+--------------+---------------+--------------+---------------|
+| 038 | SEMAPHORE    | SAMOVAR      | symphony     | semifinal     | semiformal   |               |
+|   c |              |              |              |               |              |               |
+|-----+--------------+--------------+--------------+---------------+--------------+---------------|
+| 039 | CYMBAL       | SAMBA        | somber       | symbol        | zombie       | swamp         |
+|   d | assembly     | sample       | simple       | somebody      | sympathy     |               |
 :end:
+
+
 
 
 \clearpage
@@ -3674,6 +3746,7 @@ at least twice to regenerate cross-references correctly.
 |    | imbue   | imp     | maybe  | mob       | mop    | mope    |
 |    | myopia  |         |        |           |        |         |
 :end:
+
 
 
 \clearpage
@@ -5101,11 +5174,11 @@ at least twice to regenerate cross-references correctly.
 |     | monster     | monsoon       | municipal    | amnesty    | emancipate   | immense     |
 |     | ominous     |               |              |            |              |             |
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
-| 321 | mint        | maintain      | Manhattan    | manhood    | mandate      | mantle      |
-|     | man-trap    | maundy        | meantime     | man-eater  | mend         | mental      |
-|     | mentor      | mind          | minute       | Monday     | monitor      | monotonous  |
-|     | month       | mountain      | mandolin     | minidress  | amend        | amenity     |
-|     | amount      | emanate       | humanity     | immunity   | womanhood    | cement      |
+| 321 | amend       | amenity       | amount       | emanate    | humanity     | immunity    |
+|     | maintain    | man-eater     | man-trap     | mandate    | mandolin     | Manhattan   |
+|     | manhood     | mantle        | maundy       | meantime   | mend         | mental      |
+|     | mentor      | mind          | minidress    | mint       | minute       | Monday      |
+|     | monitor     | monotonous    | month        | mountain   | womanhood    |             |
 |-----+-------------+---------------+--------------+------------+--------------+-------------|
 | 322 | minion      | manana        | manhandle    | meningitis | Mennonite    | manhunt     |
 |     | mononuclear | mononucleosis | amanuensis   | eminent    | imminent     |             |
@@ -5137,6 +5210,7 @@ at least twice to regenerate cross-references correctly.
 |     | money-belt  | monoplane     | monopoly     | moonbeam   | moon-blind   | myna-bird   |
 |     | amenable    | hymenopteron  | omnibus      | omnipotent |              |             |
 :end:
+
 
 
 \clearpage
@@ -5174,7 +5248,6 @@ at least twice to regenerate cross-references correctly.
 |     | memo-pad     | mummy-bag  | mumbo-jumbo    |            |           |            |
 :end:
 
-
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 440   450)
@@ -5208,7 +5281,7 @@ at least twice to regenerate cross-references correctly.
 |-----+-------------+-------------+--------------+------------+------------+------------|
 | 347 | mark        | market      | marigold     | maracas    | marksman   | marquess   |
 |     | mercantile  | miracle     | mercury      | morgue     | marque     | America    |
-|     | homework    | smirk       |              |            |            |            |
+|     | homework    |             |              |            |            |            |
 |-----+-------------+-------------+--------------+------------+------------+------------|
 | 348 | marrowfat   | marvel      | moreover     | MIRV       | morphine   | murphy-bed |
 |     | Morpheus    | Moravia     |              |            |            |            |
@@ -5218,6 +5291,7 @@ at least twice to regenerate cross-references correctly.
 :end:
 
 
+
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 450   460)
@@ -5225,40 +5299,41 @@ at least twice to regenerate cross-references correctly.
 
 #+RESULTS[18d472d907fd6b3e101751e5631b06fb11d3c595]:
 :results:
-|-----+--------------+---------------+-------------+--------------+------------+-------------|
-| 350 | MALICE       | homeless      | maelstrom   | mills        | miles      | millisecond |
-|     | aimless      | mails         | molest      | seamless     |            |             |
-|-----+--------------+---------------+-------------+--------------+------------+-------------|
-| 351 | MALT         | melt          | mold        | omelet       | smelt      | mulatto     |
-|     | assimilate   | emulate       | hamlet      | homiletics   | humility   | malady      |
-|     | mallet       | meld          | melodrama   | melody       | milady     | mild        |
-|     | military     | millet        | muleteer    | multiple     | multitude  | simulate    |
-|     | simultaneous | smolder       | umlaut      |              |            |             |
-|-----+--------------+---------------+-------------+--------------+------------+-------------|
-| 352 | MELON        | Himalayans    | hemline     | semolina     | milliner   | homeland    |
-|     | malign       | melancholy    | millennial  | millennium   | million    |             |
-|-----+--------------+---------------+-------------+--------------+------------+-------------|
-| 353 | mailman      | maim          | melamine    | millimeter   | millman    | muleman     |
-|     | mule-mark    | mealymouthed  | emolument   | small-minded |            |             |
-|-----+--------------+---------------+-------------+--------------+------------+-------------|
-| 354 | molar        | miler         | malaria     | miller       | milliard   | mealworm    |
-|     | mailer       | milord        | millwright  | ameliorate   | similar    |             |
-|-----+--------------+---------------+-------------+--------------+------------+-------------|
-| 355 | may-lily     | molehill      | milliliter  | mill-wheel   | melilot    |             |
-|-----+--------------+---------------+-------------+--------------+------------+-------------|
-| 356 | militia      | malicious     | mileage     | maladjusted  | millage    | mulch       |
-|     | mulish       | emulsion      | humiliation | homology     |            |             |
-|-----+--------------+---------------+-------------+--------------+------------+-------------|
-| 357 | malcontent   | mailing       | malignant   | malkin       | milk       | milligram   |
-|     | mollycoddle  | molecule      | Malaga      | amalgamate   | hemlock    | homologous  |
-|-----+--------------+---------------+-------------+--------------+------------+-------------|
-| 358 | mellophone   | malevolent    | malefactor  | malfeasance  | malformed  | malfunction |
-|     | mellifluous  | milee-feuille | millefleurs | millfeed     | millefiore | mule-foot   |
-|     | mollify      | homelife      |             |              |            |             |
-|-----+--------------+---------------+-------------+--------------+------------+-------------|
-| 359 | mailbag      | mail-boat     | mail-pouch  | mailbox      | malleable  | melba       |
-|     | malapert     | malaprop      | mulberry    | muleback     | smallpox   |             |
+|-----+-------------+---------------+-------------+-------------+------------+-------------|
+| 350 | MALICE      | homeless      | maelstrom   | mills       | miles      | millisecond |
+|     | aimless     | mails         | molest      |             |            |             |
+|-----+-------------+---------------+-------------+-------------+------------+-------------|
+| 351 | MALT        | melt          | mold        | omelet      | mulatto    | emulate     |
+|     | hamlet      | homiletics    | humility    | malady      | mallet     | meld        |
+|     | melodrama   | melody        | milady      | mild        | military   | millet      |
+|     | muleteer    | multiple      | multitude   | umlaut      |            |             |
+|-----+-------------+---------------+-------------+-------------+------------+-------------|
+| 352 | MELON       | Himalayans    | hemline     | milliner    | homeland   | malign      |
+|     | melancholy  | millennial    | millennium  | million     |            |             |
+|-----+-------------+---------------+-------------+-------------+------------+-------------|
+| 353 | mailman     | maim          | melamine    | millimeter  | millman    | muleman     |
+|     | mule-mark   | mealymouthed  | emolument   |             |            |             |
+|-----+-------------+---------------+-------------+-------------+------------+-------------|
+| 354 | molar       | miler         | malaria     | miller      | milliard   | mealworm    |
+|     | mailer      | milord        | millwright  | ameliorate  |            |             |
+|-----+-------------+---------------+-------------+-------------+------------+-------------|
+| 355 | may-lily    | molehill      | milliliter  | mill-wheel  | melilot    |             |
+|-----+-------------+---------------+-------------+-------------+------------+-------------|
+| 356 | militia     | malicious     | mileage     | maladjusted | millage    | mulch       |
+|     | mulish      | emulsion      | humiliation | homology    |            |             |
+|-----+-------------+---------------+-------------+-------------+------------+-------------|
+| 357 | malcontent  | mailing       | malignant   | malkin      | milk       | milligram   |
+|     | mollycoddle | molecule      | Malaga      | amalgamate  | hemlock    | homologous  |
+|-----+-------------+---------------+-------------+-------------+------------+-------------|
+| 358 | mellophone  | malevolent    | malefactor  | malfeasance | malformed  | malfunction |
+|     | mellifluous | milee-feuille | millefleurs | millfeed    | millefiore | mule-foot   |
+|     | mollify     | homelife      |             |             |            |             |
+|-----+-------------+---------------+-------------+-------------+------------+-------------|
+| 359 | mailbag     | mail-boat     | mail-pouch  | mailbox     | malleable  | melba       |
+|     | malapert    | malaprop      | mulberry    | muleback    |            |             |
 :end:
+
+
 
 
 

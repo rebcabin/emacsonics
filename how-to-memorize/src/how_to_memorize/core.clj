@@ -826,7 +826,13 @@
              "seamless"
              "seemly"
              "similar"
-             ;; "assimilate"
+             "smelt"
+             "assimilate"
+             "simulate"
+             "simultaneous"
+             "smolder"
+             "small-minded"
+             "smallpox"
              )
 
            '((100036 "a")
@@ -8117,36 +8123,36 @@
              "immense"
              "ominous")
            '(321
-             "mint"
-             "maintain"
-             "Manhattan"
-             "manhood"
-             "mandate"
-             "mantle"
-             "man-trap"
-             "maundy"
-             "meantime"
-             "man-eater"
-             "mend"
-             "mental"
-             "mentor"
-             "mind"
-             "minute"
-             "Monday"
-             "monitor"
-             "monotonous"
-             "month"
-             "mountain"
-             "mandolin"
-             "minidress"
              "amend"
              "amenity"
              "amount"
              "emanate"
              "humanity"
              "immunity"
+             "maintain"
+             "man-eater"
+             "man-trap"
+             "mandate"
+             "mandolin"
+             "Manhattan"
+             "manhood"
+             "mantle"
+             "maundy"
+             "meantime"
+             "mend"
+             "mental"
+             "mentor"
+             "mind"
+             "minidress"
+             "mint"
+             "minute"
+             "Monday"
+             "monitor"
+             "monotonous"
+             "month"
+             "mountain"
              "womanhood"
-             "cement")
+             )
            '(322
              "minion"
              "manana"
@@ -8466,7 +8472,7 @@
              "marque"
              "America"
              "homework"
-             "smirk")
+             )
            '(348
              "marrowfat"
              "marvel"
@@ -8498,7 +8504,6 @@
              "aimless"
              "mails"
              "molest"
-             "seamless"
              )
 
            '(351
@@ -8506,10 +8511,8 @@
              "melt"
              "mold"
              "omelet"
-             "smelt"
              "mulatto"
 
-             "assimilate"
              "emulate"
              "hamlet"
              "homiletics"
@@ -8526,16 +8529,12 @@
              "muleteer"
              "multiple"
              "multitude"
-             "simulate"
-             "simultaneous"
-             "smolder"
              "umlaut"
              )
            '(352
              "MELON"
              "Himalayans"
              "hemline"
-             "semolina"
              "milliner"
              "homeland"
 
@@ -8555,7 +8554,7 @@
              "mule-mark"
              "mealymouthed"
              "emolument"
-             "small-minded")
+             )
            '(354
              "molar"
              "miler"
@@ -8567,8 +8566,14 @@
              "milord"
              "millwright"
              "ameliorate"
-             "similar")
-           '(355 "may-lily" "molehill" "milliliter" "mill-wheel" "melilot")
+             )
+           '(355
+             "may-lily"
+             "molehill"
+             "milliliter"
+             "mill-wheel"
+             "melilot"
+             )
            '(356
              "militia"
              "malicious"
@@ -8579,7 +8584,8 @@
              "mulish"
              "emulsion"
              "humiliation"
-             "homology")
+             "homology"
+             )
            '(357
              "malcontent"
              "mailing"
@@ -8592,7 +8598,8 @@
              "Malaga"
              "amalgamate"
              "hemlock"
-             "homologous")
+             "homologous"
+             )
            '(358
              "mellophone"
              "malevolent"
@@ -8607,7 +8614,8 @@
              "millefiore"
              "mule-foot"
              "mollify"
-             "homelife")
+             "homelife"
+             )
            '(359
              "mailbag"
              "mail-boat"
@@ -8619,8 +8627,14 @@
              "malaprop"
              "mulberry"
              "muleback"
-             "smallpox")
-           '(360 "magistrate" "majesty" "majuscule" "matches" "images")
+             )
+           '(360
+             "magistrate"
+             "majesty"
+             "majuscule"
+             "matches"
+             "images"
+             )
            '(361 "machete" "matchwood" "mashed" "midget" "meshed" "emaciate")
            '(362
              "machine"
