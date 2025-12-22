@@ -839,6 +839,9 @@
              "SMASH"
              "SMOOCH"
              "smudge"
+             "smuggle"
+             "smuggler"
+             "semigloss"
              "smidgen"
              "so-much")
 
@@ -855,7 +858,9 @@
              "SAMOVAR"
              "symphony"
              "semifinal"
-             "semiformal")
+             "semiformal"
+             "semiofficial"
+             )
 
            '((100039 "d")
              "CYMBAL"
@@ -8635,7 +8640,14 @@
              "matches"
              "images"
              )
-           '(361 "machete" "matchwood" "mashed" "midget" "meshed" "emaciate")
+           '(361
+             "machete"
+             "matchwood"
+             "mashed"
+             "midget"
+             "meshed"
+             "emaciate"
+             )
            '(362
              "machine"
              "mission"
@@ -8645,8 +8657,14 @@
              "emotion"
              "imagination"
              "homogenous"
-             "omission")
-           '(363 "matchmaker" "matchmark" "mishmash" "mushmelon" "MGM")
+             "omission"
+             )
+           '(363
+             "matchmaker"
+             "matchmark"
+             "mishmash"
+             "mushmelon"
+             "MGM")
            '(364
              "major"
              "majority"
@@ -8666,9 +8684,19 @@
              "matchlock"
              "matchholder"
              "mutual")
-           '(366 "magician" "muchacha")
-           '(367 "magic" "mashing" "meshing" "matching" "Michigan")
-           '(368 "midge-fly" "home-chef" "semishift")
+           '(366
+             "magician"
+             "muchacha")
+           '(367
+             "magic"
+             "mashing"
+             "meshing"
+             "matching"
+             "Michigan")
+           '(368
+             "midge-fly"
+             "home-chef"
+             )
            '(369
              "matchable"
              "matchbook"
@@ -8709,7 +8737,12 @@
              "magnolia"
              "mechanic"
              "mackinaw")
-           '(373 "magma" "mugwump" "homecoming" "home-game" "homogamy")
+           '(373
+             "magma"
+             "mugwump"
+             "homecoming"
+             "home-game"
+             "homogamy")
            '(374
              "macaroon"
              "mackerel"
@@ -8733,12 +8766,18 @@
              "Mogul"
              "Michael"
              "meekly"
-             "amical"
              "immaculate"
-             "semigloss"
-             "smuggle")
-           '(376 "makeshift" "mug-shot" "mawkish")
-           '(377 "making" "mocking" "mugging" "mucking" "smacking" "smoking")
+             )
+           '(376
+             "makeshift"
+             "mug-shot"
+             "mawkish")
+           '(377
+             "making"
+             "mocking"
+             "mugging"
+             "mucking"
+             )
            '(378
              "megaphone"
              "make-off"
@@ -8775,19 +8814,24 @@
              "amphetamine"
              "amphitheater"
              "emphatic")
-           '(382 "muffin" "home" "phone" "homophony" "home-fun" "semifinal")
-           '(383 "moviemaker" "moveman" "movement" "amphima-cer" "amphimixis")
+           '(382
+             "maven"
+             "muffin"
+             "homophony"
+             )
+           '(383
+             "moviemaker"
+             "movement"
+             )
            '(384
-             "Mayfair"
+             "MAYFAIR"
+             "AMPHORA"
              "mover"
              "maverick"
-             "amphora"
              "hamfare"
              "whomever"
-             "samovar"
-             "mavourneen"
              "myophore"
-             "semaphore")
+             )
            '(385
              "mayflower"
              "mayfly"
@@ -8796,16 +8840,31 @@
              "muffler"
              "hemophiliac"
              "homefelt")
-           '(386 "mayfish" "movie-show" "home-voyage" "semiofficial")
-           '(387 "maffick" "moviegoer" "moving" "movie-camera" "home-viewing")
-           '(388 "movie-fan" "Mafia-family" "move-off" "move-over")
+           '(386
+             "mayfish"
+             "movie-show"
+             "home-voyage"
+             )
+           '(387
+             "moviegoer"
+             "moving"
+             "movie-camera"
+             "home-viewing"
+             )
+           '(388
+             "movie-fan"
+             "Mafia-family"
+             "move-off"
+             "move-over"
+             )
            '(389
-             "movable"
+             "AMPHIBIOUS"
+             "MOVABLE"
+             "amphibole"
              "movie-plot"
              "move-up"
-             "amphibious"
              "amphipod"
-             "amphibole")
+             )
            '(390
              "maps"
              "mobster"

@@ -195,7 +195,7 @@ fix problems or TODO items.
 
 - Revision 12
 
-  - Rework the 3-digit pegs; adding new technique.
+  - Simplify the 3-digit pegs; adding new technique.
 
 - Revision 11
 
@@ -575,12 +575,12 @@ of sound-alikes. That's 1100 pegs by my count.
 It is a very serious commitment to memorize 1100 pegs. My dad had
 it, and John has done it. It will take months and it must be
 refreshed frequently. I think it's more of an intellectual
-challenge than a utility for memory, especially now that I've
-adopted the PAO system (Appendix [[pao]]), which lets me easily and
-quickly come up with phantasmagorias for any triple or sextuple of
-digits base just on my 110 pegs for 0 through 9 and 00 through
-99). However, I present the 1100-peg 3-digit system for the
-adventurous mental mountaineers out there.
+challenge than a utility for memory, especially compared against
+the PAO system (Appendix [[pao]]), which lets me easily and quickly
+come up with phantasmagorias for any triple or sextuple of digits
+base just on my 110 pegs for 0 through 9 and 00 through 99).
+However, I present the 1100-peg 3-digit system for the adventurous
+mental mountaineers out there.
 
 The 3-digit system comes in an old form and a new form. The old
 form is based on Krill and Furst, like the 2-digit system. The new
@@ -625,8 +625,15 @@ MILLENIUM both encode 352.
 
 Furst's tables are ambiguous for 3-digit pegs with leading 0.
 For example, in his original, SEMOLINA appears under both 352
-and 035. We can't have any ambiguity, however, so in our tables,
+and 035. We can't have ambiguity, however, so in our tables,
 a leading S or Z sound encodes a number that begins with a 0.
+
+Parenthetically, there is an alternative:
+/if the number of sounds is four or more, then ignore the leading S or Z./
+SEMOLINA
+would be 352 under this rule. We found, however, that this is too
+cumbersome in practice. So we back off of that and commit to
+fixing Furst's tables.
 
 TODO it is an arduous process to correct Furst's tables to move
 all words with leading S or Z sounds into the tables for numbers
@@ -641,9 +648,9 @@ numbers with leading zeros.
 
 (John's idea)
 
-It can be challenging to come up with more than 1100 3-digit pegs
-out of the blue. Perhaps we could get to 1100 more easily by
-combining 110 prefix pegs with 10 fixed, suffixes. For example:
+It can be challenging to come up with 1100 3-digit pegs out of the
+blue. Perhaps we could get to 1100 more easily by combining 110
+prefix pegs with 10 fixed, suffixes. For example:
 
 # In the old system, the sounds $abc$ for numerals $xyz$ can be
 # $hahbhch\ldots$, where $h$ stands for any weak consonant sound or,
@@ -876,6 +883,16 @@ I can recall this credit-card number weeks after devising the
 story, without much refreshing in between. Devising it took less
 than a minute. I memorized it while devising it without extra
 effort because I know the 2-digit peg table by heart.
+
+In PAO, I'd break it up like this
+
+| 471657 | My friend YAIR DABS a lego-model ISLAND with a tissue |
+| 528659 | 6 OF CUPS (tarot) DISTRIBUTES LAPs (??)               |
+|   3845 | BARBRA STREISAND SIGNALS detonation of an H-Bomb      |
+
+It's debatable whether that's easier to remember than the fish
+story, but it doesn't require thinking. PAO doesn't use
+sound-alikes.
 
 \clearpage
 * Hexadecimal: GUID & SHA-1
@@ -1703,8 +1720,10 @@ Here is a defunct version with a sound-alike movie:
 * Tarot
 <<tarot>>
 
-Tarot cards have vivid imagery and powerful, emotional,
-words, great for memory.
+Tarot cards have vivid imagery and powerful, emotional, words,
+great for memory. If you subscribe to the spiritual or arcane
+meanings of the cards, all the better for memory. But they're
+great as a Memory Palace even if you think all that is hooey.
 
 There are 78 Tarot cards in a standard Rider-Waite pack. That's
 not divisible by 52, but if we consider the reverse images
@@ -1712,8 +1731,9 @@ not divisible by 52, but if we consider the reverse images
 cartomancers do, then we have 156 image-word combinations, and
 that is divisible by 52. Thus, we get an additional three columns
 of picture words for daily practice ([[daily-practice]]), where we
-associate them with standard playing cards, the NATO alphabet, the
-ASCII codes, weeks of the year, day of the year, and Hebrew words.
+associate tarot cards with standard playing cards, the NATO
+alphabet, the ASCII codes, weeks of the year, day of the year, and
+Hebrew words, most of which have 52 realizations.
 
 The Tarot suits are wands, clubs, swords, and pentacles, obviously
 related to the suits of a standard pack, but different enough that
@@ -1721,7 +1741,9 @@ we'll just keep those two sets of suits distinct in our minds.
 There are 14 cards in each suit, but only 22 trumps, aka majors.
 Let's take the Knights out of each suit and append them to the
 majors so that the minor suits have 13 cards each, including three
-court cards --- page (like "jack"), queen, and king.
+court cards --- page (like "jack"), queen, and king. We want
+clusters of 13 because 13 divides 52 --- we get four clusters for
+each of the three runs of 52 items.
 
  #+begin_comment
  |-----+--------+------+------------+-------+---------------+-------+------------------+-------+-----------------+----------+-------------+---------+--------+------|
@@ -1855,13 +1877,14 @@ court cards --- page (like "jack"), queen, and king.
 \clearpage
 * People's names
 
-Take the name, convert to a number using the usual rules. Memorize the number
-as usual using the memorization technique. When recalling, you can use
-pinfruit.com or other means, enter the number and it will print all
-possibilities. There will be more than one, but usually you will remember at
-this point which one is the correct one. And if not, all the other ones are
-soundalike, so you will not make a big mistake, which is much better than not
-knowing the name at all.
+Take the name, convert to a number using the usual rules. Memorize
+the number as usual using the memorization technique. When
+recalling, you can use pinfruit.com or other means, enter the
+number and it will print all possibilities. There will be more
+than one, but usually you will remember at this point which one is
+the correct one. And if not, all the other ones are sound-alike,
+so you will not make a big mistake. Either way, it is much better
+than not knowing the name at all.
 
 Examples.
 
@@ -1871,9 +1894,10 @@ Brian -> 942 -> Brian, Brain, Bryan, Brown (memorize, e.g., as /hebrew now/)
 
 Ondrej -> 214 -> Andrew, Andrea, Andrei (memorize, e.g., as /winter/)
 
-Pick words and create a movie related to something that you know about the
-person (for example they like WINTER sports like hockey, or they are learning
-HEBREW NOW, or they use SURE TONE when coaching).
+Pick words and create a movie related to something that you know
+about the person (for example they like WINTER sports like hockey,
+or they are learning HEBREW NOW, or they use SURE TONE when
+singing).
 
 
 \clearpage
@@ -3198,13 +3222,13 @@ at least twice to regenerate cross-references correctly.
 |   Z | sea-mile     | sea-mule     | seamless     | seemly        | similar      | smelt         |
 |     | assimilate   | simulate     | simultaneous | smolder       | small-minded | smallpox      |
 |-----+--------------+--------------+--------------+---------------+--------------+---------------|
-| 036 | SMASH        | SMOOCH       | smudge       | smidgen       | so-much      |               |
-|   a |              |              |              |               |              |               |
+| 036 | SMASH        | SMOOCH       | smudge       | smuggle       | smuggler     | semigloss     |
+|   a | smidgen      | so-much      |              |               |              |               |
 |-----+--------------+--------------+--------------+---------------+--------------+---------------|
 | 037 | SMACK        | SMOKE        | sumac        | smuggler      | seeming      | swimming      |
 |   b |              |              |              |               |              |               |
 |-----+--------------+--------------+--------------+---------------+--------------+---------------|
-| 038 | SEMAPHORE    | SAMOVAR      | symphony     | semifinal     | semiformal   |               |
+| 038 | SEMAPHORE    | SAMOVAR      | symphony     | semifinal     | semiformal   | semiofficial  |
 |   c |              |              |              |               |              |               |
 |-----+--------------+--------------+--------------+---------------+--------------+---------------|
 | 039 | CYMBAL       | SAMBA        | somber       | symbol        | zombie       | swamp         |
@@ -5333,10 +5357,6 @@ at least twice to regenerate cross-references correctly.
 |     | malapert    | malaprop      | mulberry    | muleback    |            |             |
 :end:
 
-
-
-
-
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
 (babomorph 460   470)
@@ -5363,11 +5383,10 @@ at least twice to regenerate cross-references correctly.
 |-----+-------------+------------+-----------+------------+-------------+----------|
 | 367 | magic       | mashing    | meshing   | matching   | Michigan    |          |
 |-----+-------------+------------+-----------+------------+-------------+----------|
-| 368 | midge-fly   | home-chef  | semishift |            |             |          |
+| 368 | midge-fly   | home-chef  |           |            |             |          |
 |-----+-------------+------------+-----------+------------+-------------+----------|
 | 369 | matchable   | matchbook  | matchbox  | matchboard | match-up    | mushball |
 :end:
-
 
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
@@ -5393,18 +5412,17 @@ at least twice to regenerate cross-references correctly.
 |     | immigrant   | homecraft    | homegrown  |           |               |             |
 |-----+-------------+--------------+------------+-----------+---------------+-------------|
 | 375 | mackle      | mangle       | mingle     | Mogul     | Michael       | meekly      |
-|     | amical      | immaculate   | semigloss  | smuggle   |               |             |
+|     | immaculate  |              |            |           |               |             |
 |-----+-------------+--------------+------------+-----------+---------------+-------------|
 | 376 | makeshift   | mug-shot     | mawkish    |           |               |             |
 |-----+-------------+--------------+------------+-----------+---------------+-------------|
-| 377 | making      | mocking      | mugging    | mucking   | smacking      | smoking     |
+| 377 | making      | mocking      | mugging    | mucking   |               |             |
 |-----+-------------+--------------+------------+-----------+---------------+-------------|
 | 378 | megaphone   | make-off     | makefast   | make-over | Machiavellian | mugful      |
 |-----+-------------+--------------+------------+-----------+---------------+-------------|
 | 379 | magpie      | make-believe | makeup     | Maccabee  | megapolis     | mock-up     |
 |     | hummingbird | Yom-Kippur   | amicable   |           |               |             |
 :end:
-
 
 \clearpage
 #+begin_src clojure :cache yes :exports results :results verbatim drawer output
@@ -5413,31 +5431,32 @@ at least twice to regenerate cross-references correctly.
 
 #+RESULTS[921d89dd46edf3de0d9b3f6af4e71f78d3b75765]:
 :results:
-|-----+------------+--------------+-------------+--------------+--------------+--------------|
-| 380 | mavis      | movies       | moves       | muffs        | Mephisto     | emphasis     |
-|     | emphysema  | ham-fisted   | home        | office       |              |              |
-|-----+------------+--------------+-------------+--------------+--------------+--------------|
-| 381 | moviedom   | moved        | miffed      | mufti        | amphetamine  | amphitheater |
-|     | emphatic   |              |             |              |              |              |
-|-----+------------+--------------+-------------+--------------+--------------+--------------|
-| 382 | muffin     | home         | phone       | homophony    | home-fun     | semifinal    |
-|-----+------------+--------------+-------------+--------------+--------------+--------------|
-| 383 | moviemaker | moveman      | movement    | amphima-cer  | amphimixis   |              |
-|-----+------------+--------------+-------------+--------------+--------------+--------------|
-| 384 | Mayfair    | mover        | maverick    | amphora      | hamfare      | whomever     |
-|     | samovar    | mavourneen   | myophore    | semaphore    |              |              |
-|-----+------------+--------------+-------------+--------------+--------------+--------------|
-| 385 | mayflower  | mayfly       | movieland   | moveless     | muffler      | hemophiliac  |
-|     | homefelt   |              |             |              |              |              |
-|-----+------------+--------------+-------------+--------------+--------------+--------------|
-| 386 | mayfish    | movie-show   | home-voyage | semiofficial |              |              |
-|-----+------------+--------------+-------------+--------------+--------------+--------------|
-| 387 | maffick    | moviegoer    | moving      | movie-camera | home-viewing |              |
-|-----+------------+--------------+-------------+--------------+--------------+--------------|
-| 388 | movie-fan  | Mafia-family | move-off    | move-over    |              |              |
-|-----+------------+--------------+-------------+--------------+--------------+--------------|
-| 389 | movable    | movie-plot   | move-up     | amphibious   | amphipod     | amphibole    |
+|-----+------------+--------------+--------------+--------------+-------------+--------------|
+| 380 | mavis      | movies       | moves        | muffs        | Mephisto    | emphasis     |
+|     | emphysema  | ham-fisted   | home         | office       |             |              |
+|-----+------------+--------------+--------------+--------------+-------------+--------------|
+| 381 | moviedom   | moved        | miffed       | mufti        | amphetamine | amphitheater |
+|     | emphatic   |              |              |              |             |              |
+|-----+------------+--------------+--------------+--------------+-------------+--------------|
+| 382 | maven      | muffin       | homophony    |              |             |              |
+|-----+------------+--------------+--------------+--------------+-------------+--------------|
+| 383 | moviemaker | movement     |              |              |             |              |
+|-----+------------+--------------+--------------+--------------+-------------+--------------|
+| 384 | MAYFAIR    | AMPHORA      | mover        | maverick     | hamfare     | whomever     |
+|     | myophore   |              |              |              |             |              |
+|-----+------------+--------------+--------------+--------------+-------------+--------------|
+| 385 | mayflower  | mayfly       | movieland    | moveless     | muffler     | hemophiliac  |
+|     | homefelt   |              |              |              |             |              |
+|-----+------------+--------------+--------------+--------------+-------------+--------------|
+| 386 | mayfish    | movie-show   | home-voyage  |              |             |              |
+|-----+------------+--------------+--------------+--------------+-------------+--------------|
+| 387 | moviegoer  | moving       | movie-camera | home-viewing |             |              |
+|-----+------------+--------------+--------------+--------------+-------------+--------------|
+| 388 | movie-fan  | Mafia-family | move-off     | move-over    |             |              |
+|-----+------------+--------------+--------------+--------------+-------------+--------------|
+| 389 | movable    | movie-plot   | move-up      | amphibious   | amphipod    | amphibole    |
 :end:
+
 
 
 \clearpage
